@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import Qt
-from Login import Ui_MainWindow
+from Signup import Ui_MainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -13,18 +13,14 @@ class MainWindow(QMainWindow):
         self.setStyleSheet("""
             /* Central widget styling */
             QWidget#centralwidget {
-                width: 646px;
-                height: 827px;
-                flex-shrink: 0;
-                border-radius: 50px;
-                background: var(--0-Off-White, #FAF9F6);
+                background-color: #FAF9F6;
             }
 
             /* Label styling */
             QLabel#label {
                 color: #000;
                 font-family: Inter;
-                font-size: 48px;
+                font-size: 30px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
@@ -33,7 +29,7 @@ class MainWindow(QMainWindow):
             QLabel#label_2 {
                 color: #CD4662;
                 font-family: Inter;
-                font-size: 10px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
@@ -42,7 +38,7 @@ class MainWindow(QMainWindow):
             QLabel#label_3 {
                 color: green;
                 font-family: Inter;
-                font-size: 10px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
@@ -51,6 +47,7 @@ class MainWindow(QMainWindow):
             /* Push button styling */
             QPushButton#pushButton {
                 background-color: #CD4662;
+                color: #FFF;
                 text-align: center;
                 font-family: Inter;
                 font-size: 15px;
@@ -69,6 +66,7 @@ class MainWindow(QMainWindow):
                 height: 80px;
                 flex-shrink: 0;
                 border-bottom: 3px solid #000;
+                background-color: #FAF9F6
             }
             
             QLineEdit#lineEdit_2 {
@@ -76,6 +74,15 @@ class MainWindow(QMainWindow):
                 height: 80px;
                 flex-shrink: 0;
                 border-bottom: 3px solid #000;
+                background-color: #FAF9F6
+            }
+                           
+            QLineEdit#lineEdit_3 {
+                width: 500px;
+                height: 80px;
+                flex-shrink: 0;
+                border-bottom: 3px solid #000;
+                background-color: #FAF9F6
             }
 
             /* MenuBar styling */

@@ -5,9 +5,19 @@ from PySide6.QtCore import *
 from app.db.database import *
 from app.template.register import *
 
+from logintest.Loginrun import *
+
+#-------------------------Run the folder app#-------------------------
 class Main(LoginWindow):
     def __init__(self):
         super().__init__()
+#-------------------------Run the folder app#-------------------------
+
+#-------------------------Run the folder logintest#-------------------------
+# class Main(MainWindow):
+#     def __init__(self):
+#         super().__init__()
+#-------------------------Run the folder logintest#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")
