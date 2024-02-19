@@ -5,7 +5,7 @@ from PySide6.QtCore import *
 from app.db.database import *
 from app.template.register import *
 
-from logintest.Loginrun import *
+from app.logintest.Loginrun import *
 
 #-------------------------Run the folder app#-------------------------
 class Main(LoginWindow):
