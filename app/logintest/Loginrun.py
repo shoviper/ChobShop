@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from .Login import *
@@ -58,7 +58,7 @@ class LoginWindow(QMainWindow):
                 font-style: bold;
                 font-weight: 700;
                 line-height: normal;
-                margin-right: 350px;
+                margin-right: 400px;
             }
                            
             QPushButton#signfornoaccbutton:hover {
@@ -73,7 +73,7 @@ class LoginWindow(QMainWindow):
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                margin-left: 280px;
+                margin-left: 310px;
             }
 
             /* Push button styling */
@@ -90,7 +90,7 @@ class LoginWindow(QMainWindow):
             }
 
             QPushButton#loginbutton:hover {
-                background-color: #0056b3;
+                background-color: #AEC289;
             }
 
             /* LineEdit styling */
@@ -130,7 +130,6 @@ class LoginWindow(QMainWindow):
         """)
         
         self.display_image()
-        # self.ui.pushButton.clicked.connect(self.open_signup_window)
         self.ui.loginbutton.clicked.connect(self.login_window) # login button clicked
         self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window) # login button clicked
 
@@ -163,6 +162,7 @@ class LoginWindow(QMainWindow):
         if login(username, password):
             print("Login Successful")
             # self.open_homepage()
+            self.show_success("Login successful, welcome")
             self.open_signup_window()
             
         else:
@@ -170,6 +170,23 @@ class LoginWindow(QMainWindow):
             self.ui.username.clear()
             self.ui.password.clear()
             # self.open_signup_window()
+            self.show_error("Login failed, please try again")
+
+    def show_success(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText(message)
+        msg.setWindowTitle("Login Succesful")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
+
+    def show_error(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Warning)
+        msg.setText(message)
+        msg.setWindowTitle("Login Error")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
             
 
 if __name__ == "__main__":

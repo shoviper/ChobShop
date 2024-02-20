@@ -60,7 +60,7 @@ class SignupWindow(QMainWindow):
                 font-style: bold;
                 font-weight: 700;
                 line-height: normal;
-                margin-right: 350px;
+                margin-right: 400px;
             }
                            
             QPushButton#logforhaveaccbutton:hover {
