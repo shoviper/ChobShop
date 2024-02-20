@@ -63,6 +63,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         self.lineEdit_2.setGeometry(QRect(73, 401, 500, 80))
         self.lineEdit_2.setPlaceholderText("Password")
+        # self.lineEdit_2.setEchoMode(QLineEdit.Password)
 
         #right widget
         self.widget_2 = QWidget(self.centralwidget)

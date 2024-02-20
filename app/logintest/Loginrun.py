@@ -11,7 +11,6 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # Apply CSS styles
         self.setStyleSheet("""
             /* Central widget styling */
             QWidget#centralwidget {
@@ -59,7 +58,7 @@ class MainWindow(QMainWindow):
             }
             
             QLabel#label_5 {
-                color: #000;
+                color: #CD4662;
                 text-align: center;
                 font-family: Inter;
                 font-size: 18px;
@@ -102,6 +101,10 @@ class MainWindow(QMainWindow):
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
+                           
+            QCheckBox#checkBox {
+                color: #CD4662;
+            }
 
             /* MenuBar styling */
             QMenuBar#menubar {
@@ -118,11 +121,9 @@ class MainWindow(QMainWindow):
         self.display_image()
 
     def display_image(self):
-        # Load the image
         image_path = "pic/loginpic.png"
         pixmap = QPixmap(image_path)
 
-        # Create a QLabel to display the image
         label = QLabel(self.ui.widget_2)
         label.setPixmap(pixmap)
         label.setGeometry(0, 0, 947, 827)
