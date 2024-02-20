@@ -2,8 +2,9 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
-# from .Signup import Ui_MainWindow
-from Signup import *
+from .Signup import *
+# from Login import *
+from app.logintest.Loginrun import *
 
 class SignupWindow(QMainWindow):
     def __init__(self):
@@ -49,13 +50,14 @@ class SignupWindow(QMainWindow):
                 margin-left: 75px;
             }
                            
-            QLabel#label_3 {
+            QPushButton#pushButton2 {
                 color: #AEC289;
                 font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
+                margin-right: 350px;
             }
             
             QLabel#label_5 {
@@ -128,7 +130,7 @@ class SignupWindow(QMainWindow):
             }
         """)
         self.display_image()
-        self.ui.label_3.mousePressEvent = self.open_login_window
+        self.ui.pushButton_2.clicked.connect(self.open_login_window)
 
     def display_image(self):
         image_path = "pic/loginpic.png"
@@ -139,8 +141,11 @@ class SignupWindow(QMainWindow):
         label.setGeometry(0, 0, 947, 827)
         label.setScaledContents(True)
 
-    def open_login_window(self, event):
-        pass
+    def open_login_window(self):
+        print("hi")
+        self.login = LoginWindow()
+        self.login.show()
+        self.hide()
         
 
 if __name__ == "__main__":

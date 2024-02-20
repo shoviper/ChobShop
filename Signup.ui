@@ -13,9 +13,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
@@ -36,7 +33,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sign in</string>
+      <string>Sign up</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
@@ -49,7 +46,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sign in</string>
+      <string>Sign up</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -65,14 +62,14 @@
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>Don't have an account?</string>
+      <string>Already have an account?</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>140</y>
+       <y>220</y>
        <width>481</width>
        <height>21</height>
       </rect>
@@ -88,30 +85,14 @@
       </rect>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QLineEdit" name="lineEdit_3">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>330</y>
-       <width>78</width>
-       <height>61</height>
+       <x>20</x>
+       <y>140</y>
+       <width>481</width>
+       <height>21</height>
       </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>330</y>
-       <width>101</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Log in as Admin</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
@@ -124,7 +105,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sign up</string>
+      <string>Sign in</string>
      </property>
     </widget>
    </widget>

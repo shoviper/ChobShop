@@ -48,8 +48,8 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QRect(80, 748, 493, 38))
 
         #leftright label
-        self.label_3 = QLabel(self.widget)
-        self.label_3.setObjectName(u"label_3")
+        self.label_3 = QPushButton(self.widget)
+        self.label_3.setObjectName(u"pushButton2")
         self.label_3.setGeometry(QRect(80 * 5, 748, 493, 38))
 
         #username
