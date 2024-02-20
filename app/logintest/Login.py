@@ -83,7 +83,6 @@ class Ui_MainWindow(object):
         self.picture.setGeometry(QRect(0, 0, 893, 549))
         #----------------------------------------right widget#----------------------------------------
 
-
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.menubar = QMenuBar(MainWindow)

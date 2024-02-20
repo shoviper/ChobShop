@@ -24,59 +24,64 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1920, 1080)
+
+        #main widget
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
 
-        #left widget
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(127, 127, 646, 827))
+        #----------------------------------------left widget#----------------------------------------
+        #container
+        self.leftcontainer = QWidget(self.centralwidget)
+        self.leftcontainer.setObjectName(u"leftcontainer")
+        self.leftcontainer.setGeometry(QRect(127, 127, 646, 827))
+        #signup label name
+        self.signuplabel = QLabel(self.leftcontainer)
+        self.signuplabel.setObjectName(u"signuplabel")
+        self.signuplabel.setGeometry(QRect(73, 36, 500, 95))
+        #signup button
+        self.signupbutton = QPushButton(self.leftcontainer)
+        self.signupbutton.setObjectName(u"signupbutton")
+        self.signupbutton.setGeometry(QRect(73, 620, 500, 80))
+        #already have account label name
+        self.haveacclabel = QLabel(self.leftcontainer)
+        self.haveacclabel.setObjectName(u"haveacclabel")
+        self.haveacclabel.setGeometry(QRect(80, 748, 493, 38))
+        #go to log in page for no account
+        self.logforhaveaccbutton = QPushButton(self.leftcontainer)
+        self.logforhaveaccbutton.setObjectName(u"logforhaveaccbutton")
+        self.logforhaveaccbutton.setGeometry(QRect(80 * 5, 748, 493, 38))
+        #email textbox
+        self.email = QLineEdit(self.leftcontainer)
+        self.email.setObjectName(u"email")
+        self.email.setGeometry(QRect(73, 319, 500, 80))
+        self.email.setPlaceholderText("Email")
+        #password textbox
+        self.password = QLineEdit(self.leftcontainer)
+        self.password.setObjectName(u"password")
+        self.password.setGeometry(QRect(73, 449, 500, 80))
+        self.password.setPlaceholderText("Password")
+        self.password.setEchoMode(QLineEdit.Password)
+        #username
+        self.username = QLineEdit(self.leftcontainer)
+        self.username.setObjectName(u"username")
+        self.username.setGeometry(QRect(73, 190, 500, 80))
+        self.username.setPlaceholderText("Username")
+        #----------------------------------------left widget#----------------------------------------
 
-        self.label = QLabel(self.widget)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(73, 36, 500, 95))
 
-        self.pushButton = QPushButton(self.widget)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(73, 620, 500, 80))
-
-        self.label_2 = QLabel(self.widget)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(80, 748, 493, 38))
-
-        self.label_3 = QPushButton(self.widget)
-        self.label_3.setObjectName(u"pushButton2")
-        self.label_3.setGeometry(QRect(80 * 5, 748, 493, 38))
-        
-        # Email
-        self.lineEdit = QLineEdit(self.widget)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setGeometry(QRect(73, 319, 500, 80))
-        self.lineEdit.setPlaceholderText("Email")
-        
-        # Password
-        self.lineEdit_2 = QLineEdit(self.widget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(73, 449, 500, 80))
-        self.lineEdit_2.setPlaceholderText("Password")
-        # self.lineEdit_2.setEchoMode(QLineEdit.Password)
-        
-        # Username
-        self.lineEdit_3 = QLineEdit(self.widget)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(73, 190, 500, 80))
-        self.lineEdit_3.setPlaceholderText("Username")
-
-        self.widget_2 = QWidget(self.centralwidget)
-        self.widget_2.setObjectName(u"widget_2")
-        self.widget_2.setGeometry(QRect(900, 127, 893, 827))
-
-        self.widget_3 = QWidget(self.widget_2)
-        self.widget_3.setObjectName(u"widget_3")
-        self.widget_3.setGeometry(QRect(0, 0, 893, 549))
-
+        #----------------------------------------right widget#----------------------------------------
+        #container
+        self.rightcontainer = QWidget(self.centralwidget)
+        self.rightcontainer.setObjectName(u"rightcontainer")
+        self.rightcontainer.setGeometry(QRect(900, 127, 893, 827))
+        #picture
+        self.picture = QWidget(self.rightcontainer)
+        self.picture.setObjectName(u"picture")
+        self.picture.setGeometry(QRect(0, 0, 893, 549))
+        #----------------------------------------right widget#----------------------------------------
 
         MainWindow.setCentralWidget(self.centralwidget)
+        
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 1920, 22))
@@ -92,9 +97,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Already have an account?", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.signuplabel.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
+        self.signupbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
+        self.haveacclabel.setText(QCoreApplication.translate("MainWindow", u"Already have an account?", None))
+        self.logforhaveaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
     # retranslateUi
 

@@ -51,13 +51,18 @@ class LoginWindow(QMainWindow):
             }
                            
             QPushButton#signfornoaccbutton {
+                border: none;
                 color: #AEC289;
                 font-family: Inter;
                 font-size: 20px;
-                font-style: normal;
+                font-style: bold;
                 font-weight: 700;
                 line-height: normal;
                 margin-right: 350px;
+            }
+                           
+            QPushButton#signfornoaccbutton:hover {
+                color: #CD4662;
             }
             
             QLabel#adminlabel {

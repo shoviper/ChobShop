@@ -21,18 +21,18 @@ class SignupWindow(QMainWindow):
                 background-color: #FAF9F6;
             }
                            
-            QWidget#widget {
+            QWidget#leftcontainer {
                 background-color: #FAF9F6;
             }
                            
-            QWidget#widget_2 {
+            QWidget#rightcontainer {
                 background-color: #E1E3E7;
                 margin-left: 27px;
                 border-radius: 25px;
             }
 
             /* Label styling */
-            QLabel#label {
+            QLabel#signuplabel {
                 color: #000;
                 font-family: Inter;
                 font-size: 48px;
@@ -41,7 +41,7 @@ class SignupWindow(QMainWindow):
                 line-height: normal;
             }
                            
-            QLabel#label_2 {
+            QLabel#haveacclabel {
                 color: #CD4662;
                 text-align: center;
                 font-family: Inter;
@@ -52,7 +52,7 @@ class SignupWindow(QMainWindow):
                 margin-left: 75px;
             }
                            
-            QPushButton#pushButton2 {
+            QPushButton#logforhaveaccbutton {
                 border: none;
                 color: #AEC289;
                 font-family: Inter;
@@ -63,23 +63,12 @@ class SignupWindow(QMainWindow):
                 margin-right: 350px;
             }
                            
-            QPushButton#pushButton2:hover {
+            QPushButton#logforhaveaccbutton:hover {
                 color: #CD4662;
-            }
-            
-            QLabel#label_5 {
-                color: #CD4662;
-                text-align: center;
-                font-family: Inter;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                margin-left: 280px;
             }
 
             /* Push button styling */
-            QPushButton#pushButton {
+            QPushButton#signupbutton {
                 background-color: #CD4662;
                 color: #FFF;
                 text-align: center;
@@ -91,12 +80,12 @@ class SignupWindow(QMainWindow):
                 border-radius: 15px;
             }
 
-            QPushButton#pushButton:hover {
+            QPushButton#signupbutton:hover {
                 background-color: #AEC289;
             }
 
             /* LineEdit styling */
-            QLineEdit#lineEdit {
+            QLineEdit#username {
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
@@ -105,7 +94,7 @@ class SignupWindow(QMainWindow):
                 background-color: #FAF9F6;
             }
             
-            QLineEdit#lineEdit_2 {
+            QLineEdit#password {
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
@@ -114,17 +103,13 @@ class SignupWindow(QMainWindow):
                 background-color: #FAF9F6;
             }
             
-            QLineEdit#lineEdit_3 {
+            QLineEdit#email {
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
                 border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
-            }
-                           
-            QCheckBox#checkBox {
-                color: #CD4662;
             }
 
             /* MenuBar styling */
@@ -142,14 +127,14 @@ class SignupWindow(QMainWindow):
         """)
         
         self.display_image()
-        self.ui.pushButton.clicked.connect(self.register_check)
-        self.ui.label_3.clicked.connect(self.open_login_window)
+        self.ui.signupbutton.clicked.connect(self.register_check)
+        self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window)
 
     def display_image(self):
         image_path = "app/assets/images/loginpic.png"
         pixmap = QPixmap(image_path)
 
-        label = QLabel(self.ui.widget_2)
+        label = QLabel(self.ui.rightcontainer)
         label.setPixmap(pixmap)
         label.setGeometry(0, 0, 947, 827)
         label.setScaledContents(True)
@@ -162,9 +147,9 @@ class SignupWindow(QMainWindow):
 
     
     def register_check(self):
-        username = self.ui.lineEdit_3.text()
-        email = self.ui.lineEdit.text()
-        password = self.ui.lineEdit_2.text()
+        username = self.ui.username.text()
+        email = self.ui.email.text()
+        password = self.ui.password.text()
         
         if register(username, email, password):
             print("User registered successfully")
