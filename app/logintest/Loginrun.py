@@ -4,10 +4,11 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 # from logintest.Login import *
 from .Login import Ui_MainWindow
+# from Login import *
 
-class MainWindow(QMainWindow):
+class LoginWindow(QMainWindow):
     def __init__(self):
-        super().__init__()
+        super(LoginWindow,self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -131,6 +132,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = LoginWindow()
     window.show()
     sys.exit(app.exec())

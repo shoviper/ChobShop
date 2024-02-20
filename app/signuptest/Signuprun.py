@@ -2,11 +2,12 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
-from .Signup import Ui_MainWindow
+# from .Signup import Ui_MainWindow
+from Signup import *
 
-class MainWindow(QMainWindow):
+class SignupWindow(QMainWindow):
     def __init__(self):
-        super().__init__()
+        super(SignupWindow,self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -127,6 +128,7 @@ class MainWindow(QMainWindow):
             }
         """)
         self.display_image()
+        self.ui.label_3.mousePressEvent = self.open_login_window
 
     def display_image(self):
         image_path = "pic/loginpic.png"
@@ -136,10 +138,13 @@ class MainWindow(QMainWindow):
         label.setPixmap(pixmap)
         label.setGeometry(0, 0, 947, 827)
         label.setScaledContents(True)
+
+    def open_login_window(self, event):
+        pass
         
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = SignupWindow()
     window.show()
     sys.exit(app.exec())

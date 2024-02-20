@@ -16,13 +16,13 @@ from app.signuptest.Signuprun import *
 #-------------------------Run the folder app#-------------------------
 
 #-------------------------Run the folder logintest#-------------------------
-# class Main(MainWindow):
+# class Main(LoginWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder logintest#-------------------------
         
 #-------------------------Run the folder signuptest#-------------------------
-class Main(MainWindow):
+class Main(SignupWindow):
     def __init__(self):
         super().__init__()
 #-------------------------Run the folder signuptest#-------------------------
