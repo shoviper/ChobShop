@@ -53,13 +53,18 @@ class SignupWindow(QMainWindow):
             }
                            
             QPushButton#pushButton2 {
+                border: none;
                 color: #AEC289;
                 font-family: Inter;
                 font-size: 20px;
-                font-style: normal;
+                font-style: bold;
                 font-weight: 700;
                 line-height: normal;
                 margin-right: 350px;
+            }
+                           
+            QPushButton#pushButton2:hover {
+                color: #CD4662;
             }
             
             QLabel#label_5 {
@@ -83,11 +88,11 @@ class SignupWindow(QMainWindow):
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                border-radius: 25px;
+                border-radius: 15px;
             }
 
             QPushButton#pushButton:hover {
-                background-color: #0056b3;
+                background-color: #AEC289;
             }
 
             /* LineEdit styling */
@@ -95,6 +100,7 @@ class SignupWindow(QMainWindow):
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
+                border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
@@ -103,6 +109,7 @@ class SignupWindow(QMainWindow):
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
+                border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
@@ -111,6 +118,7 @@ class SignupWindow(QMainWindow):
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
+                border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
@@ -122,6 +130,7 @@ class SignupWindow(QMainWindow):
             /* MenuBar styling */
             QMenuBar#menubar {
                 background-color: #ffffff;
+                border: none;
                 border-bottom: 1px solid #cccccc;
             }
 
@@ -137,7 +146,7 @@ class SignupWindow(QMainWindow):
         self.ui.label_3.clicked.connect(self.open_login_window)
 
     def display_image(self):
-        image_path = "pic/loginpic.png"
+        image_path = "app/assets/images/loginpic.png"
         pixmap = QPixmap(image_path)
 
         label = QLabel(self.ui.widget_2)
