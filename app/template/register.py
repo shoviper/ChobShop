@@ -11,91 +11,91 @@ from app.logintest.Login import Ui_MainWindow
 # acc = root
 # conn = Connection()
 
-class LoginWindow(QMainWindow):
+class Register(QMainWindow):
     def __init__(self):
-        super(LoginWindow, self).__init__()
+        super(Register, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
         self.ui.pushButton.clicked.connect(self.login_window)
         # self.ui.signUpButton.clicked.connect(self.register_window)
 
-        self.setStyleSheet("""
-            /* Central widget styling */
-            QWidget#centralwidget {
-                background-color: #f0f0f0;
-            }
+        # self.setStyleSheet("""
+        #     /* Central widget styling */
+        #     QWidget#centralwidget {
+        #         background-color: #f0f0f0;
+        #     }
 
-            /* Label styling */
-            QLabel#login_label {
-                color: #000;
-                font-family: Inter;
-                font-size: 25px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
+        #     /* Label styling */
+        #     QLabel#login_label {
+        #         color: #000;
+        #         font-family: Inter;
+        #         font-size: 25px;
+        #         font-style: normal;
+        #         font-weight: 700;
+        #         line-height: normal;
+        #     }
                            
-            QLabel#label_2 {
-                color: #CD4662;
-                font-family: Inter;
-                font-size: 10px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
+        #     QLabel#label_2 {
+        #         color: #CD4662;
+        #         font-family: Inter;
+        #         font-size: 10px;
+        #         font-style: normal;
+        #         font-weight: 700;
+        #         line-height: normal;
+        #     }
                            
-            QLabel#label_3 {
-                color: green;
-                font-family: Inter;
-                font-size: 10px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
+        #     QLabel#label_3 {
+        #         color: green;
+        #         font-family: Inter;
+        #         font-size: 10px;
+        #         font-style: normal;
+        #         font-weight: 700;
+        #         line-height: normal;
+        #     }
 
-            /* Push button styling */
-            QPushButton#pushButton {
-                background-color: #CD4662;
-                text-align: center;
-                font-family: Inter;
-                font-size: 15px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
+        #     /* Push button styling */
+        #     QPushButton#pushButton {
+        #         background-color: #CD4662;
+        #         text-align: center;
+        #         font-family: Inter;
+        #         font-size: 15px;
+        #         font-style: normal;
+        #         font-weight: 700;
+        #         line-height: normal;
+        #     }
 
-            QPushButton#pushButton:hover {
-                background-color: #0056b3;
-            }
+        #     QPushButton#pushButton:hover {
+        #         background-color: #0056b3;
+        #     }
 
-            /* LineEdit styling */
-            QLineEdit#username_edit {
-                width: 500px;
-                height: 30px;
-                flex-shrink: 0;
-                border-bottom: 3px solid #000;
-            }
+        #     /* LineEdit styling */
+        #     QLineEdit#username_edit {
+        #         width: 500px;
+        #         height: 30px;
+        #         flex-shrink: 0;
+        #         border-bottom: 3px solid #000;
+        #     }
             
-            QLineEdit#password_edit {
-                width: 500px;
-                height: 30px;
-                flex-shrink: 0;
-                border-bottom: 3px solid #000;
-            }
+        #     QLineEdit#password_edit {
+        #         width: 500px;
+        #         height: 30px;
+        #         flex-shrink: 0;
+        #         border-bottom: 3px solid #000;
+        #     }
 
-            /* MenuBar styling */
-            QMenuBar#menubar {
-                background-color: #ffffff;
-                border-bottom: 1px solid #cccccc;
-            }
+        #     /* MenuBar styling */
+        #     QMenuBar#menubar {
+        #         background-color: #ffffff;
+        #         border-bottom: 1px solid #cccccc;
+        #     }
 
-            /* StatusBar styling */
-            QStatusBar#statusbar {
-                background-color: #ffffff;
-                border-top: 1px solid #cccccc;
-            }
-        """)
+        #     /* StatusBar styling */
+        #     QStatusBar#statusbar {
+        #         background-color: #ffffff;
+        #         border-top: 1px solid #cccccc;
+        #     }
+        # """)
         
     def register_window(self):
         username = self.ui.username_edit.text()
@@ -119,7 +119,7 @@ class LoginWindow(QMainWindow):
             
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = LoginWindow()
+    window = Register()
     window.show()
     sys.exit(app.exec_())
         

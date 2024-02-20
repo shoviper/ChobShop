@@ -4,7 +4,8 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from .Signup import *
 # from Login import *
-from app.logintest.Loginrun import *
+# from app.logintest.Loginrun import *
+from app.db.database import *
 
 class SignupWindow(QMainWindow):
     def __init__(self):
@@ -129,8 +130,9 @@ class SignupWindow(QMainWindow):
                 border-top: 1px solid #cccccc;
             }
         """)
+        
         self.display_image()
-        self.ui.pushButton_2.clicked.connect(self.open_login_window)
+        self.ui.pushButton.clicked.connect(self.register_check)
 
     def display_image(self):
         image_path = "pic/loginpic.png"
@@ -142,11 +144,23 @@ class SignupWindow(QMainWindow):
         label.setScaledContents(True)
 
     def open_login_window(self):
-        print("hi")
+        self.close()
+        from app.logintest.Loginrun import LoginWindow
         self.login = LoginWindow()
         self.login.show()
-        self.hide()
+
+    
+    def register_check(self):
+        username = self.ui.lineEdit_3.text()
+        email = self.ui.lineEdit.text()
+        password = self.ui.lineEdit_2.text()
         
+        if register(username, email, password):
+            print("User registered successfully")
+            print_database_contents(username)
+            self.open_login_window()
+        else:
+            print("User registration failed")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -47,18 +47,21 @@ class Ui_MainWindow(object):
         self.label_3 = QPushButton(self.widget)
         self.label_3.setObjectName(u"pushButton2")
         self.label_3.setGeometry(QRect(80 * 5, 748, 493, 38))
-
+        
+        # Email
         self.lineEdit = QLineEdit(self.widget)
         self.lineEdit.setObjectName(u"lineEdit")
         self.lineEdit.setGeometry(QRect(73, 319, 500, 80))
         self.lineEdit.setPlaceholderText("Email")
-
+        
+        # Password
         self.lineEdit_2 = QLineEdit(self.widget)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         self.lineEdit_2.setGeometry(QRect(73, 449, 500, 80))
         self.lineEdit_2.setPlaceholderText("Password")
         # self.lineEdit_2.setEchoMode(QLineEdit.Password)
         
+        # Username
         self.lineEdit_3 = QLineEdit(self.widget)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
         self.lineEdit_3.setGeometry(QRect(73, 190, 500, 80))

@@ -9,19 +9,21 @@ from app.logintest.Loginrun import *
 
 from app.signuptest.Signuprun import *
 
-#-------------------------Run the folder app#-------------------------
+#-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
 #         super().__init__()
-#-------------------------Run the folder app#-------------------------
+#-------------------------Run the folder template#-------------------------
 
 #-------------------------Run the folder logintest#-------------------------
+# For running LoginWindow
 # class Main(LoginWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder logintest#-------------------------
         
-#-------------------------Run the folder signuptest#-------------------------
+#-------------------------Run the folder signuptest#------------------------
+# For running SignupWindow
 class Main(SignupWindow):
     def __init__(self):
         super().__init__()

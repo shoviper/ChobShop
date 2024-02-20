@@ -21,7 +21,7 @@ def register(username, email, password):
         # print("User already exists")
         if username in root.customerUsers:
             print("Username already exists")
-            print_database_contents(username)
+            # print_database_contents(username)
         return False
     else:
         user = Customer(username, email, password)
@@ -30,7 +30,7 @@ def register(username, email, password):
         return True
     
 def login(username, password):
-    if password is None or (username is None and """email is None"""):
+    if password is None or (username is None):
         if password is None:
             print("Password is None")
         return False

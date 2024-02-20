@@ -4,7 +4,8 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from .Login import *
 # from Login import *
-from app.signuptest.Signuprun import *
+# from app.signuptest.Signuprun import *
+from app.db.database import *
 
 class LoginWindow(QMainWindow):
     def __init__(self):
@@ -120,8 +121,10 @@ class LoginWindow(QMainWindow):
                 border-top: 1px solid #cccccc;
             }
         """)
+        
         self.display_image()
-        self.ui.pushButton.clicked.connect(self.open_signup_window)
+        # self.ui.pushButton.clicked.connect(self.open_signup_window)
+        self.ui.pushButton.clicked.connect(self.login_window) # login button clicked
 
     def display_image(self):
         image_path = "pic/loginpic.png"
@@ -133,9 +136,38 @@ class LoginWindow(QMainWindow):
         label.setScaledContents(True)
     
     def open_signup_window(self):
-        self.signin = SignupWindow()
-        self.signin.show()
-        self.hide()
+        # self.signin = SignupWindow()
+        # self.signin.show()
+        # self.hide()
+        
+        self.close()
+        from app.signuptest.Signuprun import SignupWindow
+        self.signup_window = SignupWindow()
+        self.signup_window.show()
+
+        
+    def open_homepage(self):
+        # from loginProgram import Login
+        # self.close()
+        # self.login_window = Login()
+        # self.login_window.show()
+        pass
+        
+    def login_window(self):
+        username = self.ui.lineEdit.text()
+        password = self.ui.lineEdit_2.text()
+        if login(username, password):
+            print("Login Successful")
+            # self.close()
+            # self.open_homepage()
+            self.open_signup_window()
+            
+        else:
+            print("Login Failed")
+            self.ui.lineEdit.clear()
+            self.ui.lineEdit_2.clear()
+            # self.open_signup_window()
+            
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
