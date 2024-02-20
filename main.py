@@ -17,16 +17,16 @@ from app.signuptest.Signuprun import *
 
 #-------------------------Run the folder logintest#-------------------------
 # For running LoginWindow
-# class Main(LoginWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(LoginWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder logintest#-------------------------
         
 #-------------------------Run the folder signuptest#------------------------
 # For running SignupWindow
-class Main(SignupWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(SignupWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder signuptest#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):

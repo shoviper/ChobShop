@@ -19,18 +19,18 @@ class LoginWindow(QMainWindow):
                 background-color: #FAF9F6;
             }
                            
-            QWidget#widget {
+            QWidget#leftcontainer {
                 background-color: #FAF9F6;
             }
                            
-            QWidget#widget_2 {
+            QWidget#rightcontainer {
                 background-color: #E1E3E7;
                 margin-left: 27px;
                 border-radius: 25px;
             }
 
             /* Label styling */
-            QLabel#label {
+            QLabel#loginlabel {
                 color: #000;
                 font-family: Inter;
                 font-size: 48px;
@@ -39,7 +39,7 @@ class LoginWindow(QMainWindow):
                 line-height: normal;
             }
                            
-            QLabel#label_2 {
+            QLabel#noacclabel {
                 color: #CD4662;
                 text-align: center;
                 font-family: Inter;
@@ -50,7 +50,7 @@ class LoginWindow(QMainWindow):
                 margin-left: 100px;
             }
                            
-            QPushButton#pushButton2 {
+            QPushButton#signfornoaccbutton {
                 color: #AEC289;
                 font-family: Inter;
                 font-size: 20px;
@@ -60,7 +60,7 @@ class LoginWindow(QMainWindow):
                 margin-right: 350px;
             }
             
-            QLabel#label_5 {
+            QLabel#adminlabel {
                 color: #CD4662;
                 text-align: center;
                 font-family: Inter;
@@ -72,7 +72,7 @@ class LoginWindow(QMainWindow):
             }
 
             /* Push button styling */
-            QPushButton#pushButton {
+            QPushButton#loginbutton {
                 background-color: #CD4662;
                 color: #FFF;
                 text-align: center;
@@ -84,12 +84,12 @@ class LoginWindow(QMainWindow):
                 border-radius: 25px;
             }
 
-            QPushButton#pushButton:hover {
+            QPushButton#loginbutton:hover {
                 background-color: #0056b3;
             }
 
             /* LineEdit styling */
-            QLineEdit#lineEdit {
+            QLineEdit#username {
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
@@ -97,7 +97,7 @@ class LoginWindow(QMainWindow):
                 background-color: #FAF9F6;
             }
             
-            QLineEdit#lineEdit_2 {
+            QLineEdit#password {
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
@@ -105,7 +105,7 @@ class LoginWindow(QMainWindow):
                 background-color: #FAF9F6;
             }
                            
-            QCheckBox#checkBox {
+            QCheckBox#checkbox {
                 color: #CD4662;
             }
 
@@ -124,26 +124,23 @@ class LoginWindow(QMainWindow):
         
         self.display_image()
         # self.ui.pushButton.clicked.connect(self.open_signup_window)
-        self.ui.pushButton.clicked.connect(self.login_window) # login button clicked
+        self.ui.loginbutton.clicked.connect(self.login_window) # login button clicked
+        self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window) # login button clicked
 
     def display_image(self):
         image_path = "pic/loginpic.png"
         pixmap = QPixmap(image_path)
 
-        label = QLabel(self.ui.widget_2)
+        label = QLabel(self.ui.rightcontainer)
         label.setPixmap(pixmap)
         label.setGeometry(0, 0, 947, 827)
         label.setScaledContents(True)
     
     def open_signup_window(self):
-        # self.signin = SignupWindow()
-        # self.signin.show()
-        # self.hide()
-        
         self.close()
         from app.signuptest.Signuprun import SignupWindow
-        self.signup_window = SignupWindow()
-        self.signup_window.show()
+        self.signup = SignupWindow()
+        self.signup.show()
 
         
     def open_homepage(self):
@@ -154,18 +151,17 @@ class LoginWindow(QMainWindow):
         pass
         
     def login_window(self):
-        username = self.ui.lineEdit.text()
-        password = self.ui.lineEdit_2.text()
+        username = self.ui.username.text()
+        password = self.ui.password.text()
         if login(username, password):
             print("Login Successful")
-            # self.close()
             # self.open_homepage()
             self.open_signup_window()
             
         else:
             print("Login Failed")
-            self.ui.lineEdit.clear()
-            self.ui.lineEdit_2.clear()
+            self.ui.username.clear()
+            self.ui.password.clear()
             # self.open_signup_window()
             
 

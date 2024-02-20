@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from .Signup import *
+# from Signup import *
 # from Login import *
 # from app.logintest.Loginrun import *
 from app.db.database import *
@@ -133,6 +134,7 @@ class SignupWindow(QMainWindow):
         
         self.display_image()
         self.ui.pushButton.clicked.connect(self.register_check)
+        self.ui.label_3.clicked.connect(self.open_login_window)
 
     def display_image(self):
         image_path = "pic/loginpic.png"

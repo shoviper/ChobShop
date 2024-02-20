@@ -24,63 +24,65 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1920, 1080)
+
+        #main widget
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         
-        #left widget
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(127, 127, 646, 827))
+        #----------------------------------------left widget#----------------------------------------
+        #container
+        self.leftcontainer = QWidget(self.centralwidget)
+        self.leftcontainer.setObjectName(u"leftcontainer")
+        self.leftcontainer.setGeometry(QRect(127, 127, 646, 827))
+        #login label name
+        self.loginlabel = QLabel(self.leftcontainer)
+        self.loginlabel.setObjectName(u"loginlabel")
+        self.loginlabel.setGeometry(QRect(73, 36, 500, 95))
+        #login button
+        self.loginbutton = QPushButton(self.leftcontainer)
+        self.loginbutton.setObjectName(u"loginbutton")
+        self.loginbutton.setGeometry(QRect(73, 620, 500, 80))
+        #no account label name
+        self.noacclabel = QLabel(self.leftcontainer)
+        self.noacclabel.setObjectName(u"noacclabel")
+        self.noacclabel.setGeometry(QRect(80, 748, 493, 38))
+        #go to sign up page for no account
+        self.signfornoaccbutton = QPushButton(self.leftcontainer)
+        self.signfornoaccbutton.setObjectName(u"signfornoaccbutton")
+        self.signfornoaccbutton.setGeometry(QRect(80 * 5, 748, 493, 38))
+        #username textbox
+        self.username = QLineEdit(self.leftcontainer)
+        self.username.setObjectName(u"username")
+        self.username.setGeometry(QRect(73, 214, 500, 80))
+        self.username.setPlaceholderText("Username or Email address")
+        #password textbox
+        self.password = QLineEdit(self.leftcontainer)
+        self.password.setObjectName(u"password")
+        self.password.setGeometry(QRect(73, 401, 500, 80))
+        self.password.setPlaceholderText("Password")
+        self.password.setEchoMode(QLineEdit.Password)
+        #checkbox for admin
+        self.checkbox = QCheckBox(self.leftcontainer)
+        self.checkbox.setObjectName(u"checkbox")
+        self.checkbox.setGeometry(QRect(547, 507, 26, 26))
+        #log in as admin label name
+        self.adminlabel = QLabel(self.leftcontainer)
+        self.adminlabel.setObjectName(u"adminlabel")
+        self.adminlabel.setGeometry(QRect(73, 507, 454, 26))
+        #----------------------------------------left widget#----------------------------------------
 
-        #left label
-        self.label = QLabel(self.widget)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(73, 36, 500, 95))
 
-        #left button
-        self.pushButton = QPushButton(self.widget)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(73, 620, 500, 80))
-        
-        #leftleft label
-        self.label_2 = QLabel(self.widget)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(80, 748, 493, 38))
+        #----------------------------------------right widget#----------------------------------------
+        #container
+        self.rightcontainer = QWidget(self.centralwidget)
+        self.rightcontainer.setObjectName(u"rightcontainer")
+        self.rightcontainer.setGeometry(QRect(900, 127, 893, 827))
+        #picture
+        self.picture = QWidget(self.rightcontainer)
+        self.picture.setObjectName(u"picture")
+        self.picture.setGeometry(QRect(0, 0, 893, 549))
+        #----------------------------------------right widget#----------------------------------------
 
-        #leftright label
-        self.label_3 = QPushButton(self.widget)
-        self.label_3.setObjectName(u"pushButton2")
-        self.label_3.setGeometry(QRect(80 * 5, 748, 493, 38))
-
-        #username
-        self.lineEdit = QLineEdit(self.widget)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setGeometry(QRect(73, 214, 500, 80))
-        self.lineEdit.setPlaceholderText("Username or Email address")
-
-        #password
-        self.lineEdit_2 = QLineEdit(self.widget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(73, 401, 500, 80))
-        self.lineEdit_2.setPlaceholderText("Password")
-        # self.lineEdit_2.setEchoMode(QLineEdit.Password)
-
-        #right widget
-        self.widget_2 = QWidget(self.centralwidget)
-        self.widget_2.setObjectName(u"widget_2")
-        self.widget_2.setGeometry(QRect(900, 127, 893, 827))
-
-        #rightabove widget
-        self.widget_3 = QWidget(self.widget_2)
-        self.widget_3.setObjectName(u"widget_3")
-        self.widget_3.setGeometry(QRect(0, 0, 893, 549))
-
-        self.checkBox = QCheckBox(self.widget)
-        self.checkBox.setObjectName(u"checkBox")
-        self.checkBox.setGeometry(QRect(547, 507, 26, 26))
-        self.label_5 = QLabel(self.widget)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(73, 507, 454, 26))
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -99,11 +101,11 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Don't have an account?", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
-        self.checkBox.setText("")
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Log in as Admin", None))
+        self.loginlabel.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.loginbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.noacclabel.setText(QCoreApplication.translate("MainWindow", u"Don't have an account?", None))
+        self.signfornoaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
+        self.checkbox.setText("")
+        self.adminlabel.setText(QCoreApplication.translate("MainWindow", u"Log in as Admin", None))
     # retranslateUi
 
