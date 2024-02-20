@@ -57,6 +57,7 @@ class LoginWindow(QMainWindow):
                 font-size: 20px;
                 font-style: bold;
                 font-weight: 700;
+                border: none;
                 line-height: normal;
                 margin-right: 400px;
             }
