@@ -93,6 +93,7 @@ class LoginWindow(QMainWindow):
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
+                border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
@@ -101,6 +102,7 @@ class LoginWindow(QMainWindow):
                 font-size: 24px;
                 width: 500px;
                 height: 80px;
+                border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
@@ -127,7 +129,7 @@ class LoginWindow(QMainWindow):
         self.ui.pushButton.clicked.connect(self.login_window) # login button clicked
 
     def display_image(self):
-        image_path = "pic/loginpic.png"
+        image_path = "app/assets/images/loginpic.png"
         pixmap = QPixmap(image_path)
 
         label = QLabel(self.ui.widget_2)
