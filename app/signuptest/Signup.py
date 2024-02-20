@@ -95,6 +95,6 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Already have an account?", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
     # retranslateUi
 

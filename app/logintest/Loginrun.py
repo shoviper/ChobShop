@@ -54,8 +54,9 @@ class LoginWindow(QMainWindow):
                 color: #AEC289;
                 font-family: Inter;
                 font-size: 20px;
-                font-style: normal;
+                font-style: bold;
                 font-weight: 700;
+                border: none;
                 line-height: normal;
                 margin-right: 350px;
             }

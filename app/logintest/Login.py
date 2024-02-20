@@ -101,8 +101,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.loginlabel.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
-        self.loginbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.loginlabel.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
+        self.loginbutton.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
         self.noacclabel.setText(QCoreApplication.translate("MainWindow", u"Don't have an account?", None))
         self.signfornoaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.checkbox.setText("")
