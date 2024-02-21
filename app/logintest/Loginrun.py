@@ -72,7 +72,7 @@ class LoginWindow(QMainWindow):
                 font-family: Inter;
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 400;
                 line-height: normal;
                 margin-left: 310px;
             }
@@ -115,6 +115,21 @@ class LoginWindow(QMainWindow):
                            
             QCheckBox#checkbox {
                 color: #CD4662;
+            }
+                           
+            QCheckBox#checkbox::indicator {
+                border-radius: 3px;
+                background-color: #F4DBDB;
+                width: 26px;
+                height: 26px;
+                border: none;
+            }
+
+            QCheckBox#checkbox::indicator:checked {
+                background-color: #CD4662;
+            }
+            QCheckBox#checkbox::indicator:unchecked {
+                background-color: #F4DBDB;
             }
 
             /* MenuBar styling */
