@@ -19,9 +19,9 @@ from app.homepagetest.Homepagerun import *
 
 #-------------------------Run the folder logintest#-------------------------
 # For running LoginWindow
-class Main(LoginWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(LoginWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder logintest#-------------------------
         
 #-------------------------Run the folder signuptest#------------------------
@@ -33,9 +33,9 @@ class Main(LoginWindow):
 
 #-------------------------Run the folder homepagetest#------------------------
 # For running HomepageWindow
-# class Main(HomepageWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(HomepageWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder homepagetest#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
