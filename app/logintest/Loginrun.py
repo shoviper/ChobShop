@@ -155,7 +155,6 @@ class LoginWindow(QMainWindow):
         from app.homepagetest.Homepagerun import HomepageWindow
         self.login_window = HomepageWindow()
         self.login_window.show()
-        pass
         
     def login_window(self):
         username = self.ui.username.text()
