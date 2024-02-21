@@ -21,7 +21,7 @@ class HomepageWindow(QMainWindow):
                 text-align: center;
                 color: #000000;
             }
-            QWidget#menu{
+            QWidget#menu, QWidget#main, QWidget#scrollarea, QWidget#scrollAreaWidgetContents{
                 background-color: #FAF9F6;
             }
             QPushButton#homebutton{
@@ -89,7 +89,7 @@ class HomepageWindow(QMainWindow):
             }
             QLineEdit#search{
                 border-radius: 50px;
-                background-color: #fff;
+                background-color: #EDEDED;
                 color: #CD4662;
                 font-family: Suwannaphum;
                 font-size: 24px;
