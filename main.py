@@ -9,6 +9,8 @@ from app.logintest.Loginrun import *
 
 from app.signuptest.Signuprun import *
 
+from app.homepagetest.Homepagerun import *
+
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
@@ -28,6 +30,13 @@ class Main(LoginWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder signuptest#-------------------------
+
+#-------------------------Run the folder homepagetest#------------------------
+# For running HomepageWindow
+# class Main(HomepageWindow):
+#     def __init__(self):
+#         super().__init__()
+#-------------------------Run the folder homepagetest#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")

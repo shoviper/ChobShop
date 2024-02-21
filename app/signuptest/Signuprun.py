@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from .Signup import *
@@ -154,9 +154,27 @@ class SignupWindow(QMainWindow):
         if register(username, email, password):
             print("User registered successfully")
             print_database_contents(username)
+            self.show_success("User registered successfully")
             self.open_login_window()
         else:
             print("User registration failed")
+            self.show_error("User registration failed")
+
+    def show_success(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText(message)
+        msg.setWindowTitle("Login Succesful")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
+
+    def show_error(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Warning)
+        msg.setText(message)
+        msg.setWindowTitle("Login Error")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

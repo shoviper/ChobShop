@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
         #----------------------------------------right widget#----------------------------------------
 
         MainWindow.setCentralWidget(self.centralwidget)
-        
+
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 1920, 22))
@@ -97,16 +97,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-<<<<<<< HEAD
         self.signuplabel.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.signupbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.haveacclabel.setText(QCoreApplication.translate("MainWindow", u"Already have an account?", None))
         self.logforhaveaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
-=======
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Already have an account?", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
->>>>>>> 29c573862955d8e70ee85b469088afadeae4a0ac
     # retranslateUi
 

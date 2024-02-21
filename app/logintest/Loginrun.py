@@ -151,10 +151,10 @@ class LoginWindow(QMainWindow):
 
         
     def open_homepage(self):
-        # from loginProgram import Login
-        # self.close()
-        # self.login_window = Login()
-        # self.login_window.show()
+        self.close()
+        from app.homepagetest.Homepagerun import HomepageWindow
+        self.login_window = HomepageWindow()
+        self.login_window.show()
         pass
         
     def login_window(self):
@@ -162,9 +162,8 @@ class LoginWindow(QMainWindow):
         password = self.ui.password.text()
         if login(username, password):
             print("Login Successful")
-            # self.open_homepage()
             self.show_success("Login successful, welcome")
-            self.open_signup_window()
+            self.open_homepage()
             
         else:
             print("Login Failed")
