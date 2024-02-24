@@ -26,16 +26,16 @@ from app.template.homepage.Homepagerun import *
         
 #-------------------------Run the folder signuptest#------------------------
 # For running SignupWindow
-class Main(SignupWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(SignupWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder signuptest#-------------------------
 
 #-------------------------Run the folder homepagetest#------------------------
 # For running HomepageWindow
-# class Main(HomepageWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(HomepageWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder homepagetest#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
