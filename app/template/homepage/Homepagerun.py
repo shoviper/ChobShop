@@ -2,7 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide6.QtGui import QPixmap
 # from Homepage import Ui_MainWindow
-from .Homepage1 import *
+from .Homepage import *
 # from .Homepagdsadse import *
 
 class HomepageWindow(QMainWindow):

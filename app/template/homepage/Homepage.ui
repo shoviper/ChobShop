@@ -297,7 +297,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-191</y>
+          <y>-1877</y>
           <width>1510</width>
           <height>5018</height>
          </rect>
@@ -540,7 +540,187 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
              <string notr="true">border-radius: 10px;
                 background: #D9D9D9;</string>
             </property>
-            <widget class="QPushButton" name="pic1_2">
+            <widget class="QPushButton" name="pic3">
+             <property name="geometry">
+              <rect>
+               <x>43</x>
+               <y>43</y>
+               <width>295</width>
+               <height>295</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FFF;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="container4" native="true">
+            <property name="geometry">
+             <rect>
+              <x>58</x>
+              <y>1228</y>
+              <width>381</width>
+              <height>502</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+            </property>
+            <widget class="QPushButton" name="pic4">
+             <property name="geometry">
+              <rect>
+               <x>43</x>
+               <y>43</y>
+               <width>295</width>
+               <height>295</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FFF;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="container5" native="true">
+            <property name="geometry">
+             <rect>
+              <x>582</x>
+              <y>1228</y>
+              <width>381</width>
+              <height>502</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+            </property>
+            <widget class="QPushButton" name="pic5">
+             <property name="geometry">
+              <rect>
+               <x>43</x>
+               <y>43</y>
+               <width>295</width>
+               <height>295</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FFF;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="container6" native="true">
+            <property name="geometry">
+             <rect>
+              <x>1107</x>
+              <y>1228</y>
+              <width>381</width>
+              <height>502</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+            </property>
+            <widget class="QPushButton" name="pic6">
+             <property name="geometry">
+              <rect>
+               <x>43</x>
+               <y>43</y>
+               <width>295</width>
+               <height>295</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FFF;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="container7" native="true">
+            <property name="geometry">
+             <rect>
+              <x>58</x>
+              <y>1793</y>
+              <width>381</width>
+              <height>502</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+            </property>
+            <widget class="QPushButton" name="pic7">
+             <property name="geometry">
+              <rect>
+               <x>43</x>
+               <y>43</y>
+               <width>295</width>
+               <height>295</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FFF;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="container8" native="true">
+            <property name="geometry">
+             <rect>
+              <x>582</x>
+              <y>1793</y>
+              <width>381</width>
+              <height>502</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+            </property>
+            <widget class="QPushButton" name="pic8">
+             <property name="geometry">
+              <rect>
+               <x>43</x>
+               <y>43</y>
+               <width>295</width>
+               <height>295</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FFF;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="container9" native="true">
+            <property name="geometry">
+             <rect>
+              <x>1107</x>
+              <y>1793</y>
+              <width>381</width>
+              <height>502</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+            </property>
+            <widget class="QPushButton" name="pic9">
              <property name="geometry">
               <rect>
                <x>43</x>
