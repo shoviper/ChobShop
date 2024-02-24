@@ -2,17 +2,19 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
-from .Login import *
+from .Signup import *
+# from Signup import *
 # from Login import *
-# from app.signuptest.Signuprun import *
+# from app.logintest.Loginrun import *
 from app.db.database import *
 
-class LoginWindow(QMainWindow):
+class SignupWindow(QMainWindow):
     def __init__(self):
-        super(LoginWindow,self).__init__()
+        super(SignupWindow,self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        # Apply CSS styles
         self.setStyleSheet("""
             /* Central widget styling */
             QWidget#centralwidget {
@@ -30,7 +32,7 @@ class LoginWindow(QMainWindow):
             }
 
             /* Label styling */
-            QLabel#loginlabel {
+            QLabel#signuplabel {
                 color: #000;
                 font-family: Inter;
                 font-size: 48px;
@@ -39,7 +41,7 @@ class LoginWindow(QMainWindow):
                 line-height: normal;
             }
                            
-            QLabel#noacclabel {
+            QLabel#haveacclabel {
                 color: #CD4662;
                 text-align: center;
                 font-family: Inter;
@@ -47,38 +49,26 @@ class LoginWindow(QMainWindow):
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                margin-left: 100px;
+                margin-left: 75px;
             }
                            
-            QPushButton#signfornoaccbutton {
+            QPushButton#logforhaveaccbutton {
                 border: none;
                 color: #AEC289;
                 font-family: Inter;
                 font-size: 20px;
                 font-style: bold;
                 font-weight: 700;
-                border: none;
                 line-height: normal;
                 margin-right: 400px;
             }
                            
-            QPushButton#signfornoaccbutton:hover {
+            QPushButton#logforhaveaccbutton:hover {
                 color: #CD4662;
-            }
-            
-            QLabel#adminlabel {
-                color: #CD4662;
-                text-align: center;
-                font-family: Inter;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                margin-left: 310px;
             }
 
             /* Push button styling */
-            QPushButton#loginbutton {
+            QPushButton#signupbutton {
                 background-color: #CD4662;
                 color: #FFF;
                 text-align: center;
@@ -87,10 +77,10 @@ class LoginWindow(QMainWindow):
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                border-radius: 25px;
+                border-radius: 15px;
             }
 
-            QPushButton#loginbutton:hover {
+            QPushButton#signupbutton:hover {
                 background-color: #AEC289;
             }
 
@@ -112,29 +102,20 @@ class LoginWindow(QMainWindow):
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
-                           
-            QCheckBox#checkbox {
-                color: #CD4662;
-            }
-                           
-            QCheckBox#checkbox::indicator {
-                border-radius: 3px;
-                background-color: #F4DBDB;
-                width: 26px;
-                height: 26px;
+            
+            QLineEdit#email {
+                font-size: 24px;
+                width: 500px;
+                height: 80px;
                 border: none;
-            }
-
-            QCheckBox#checkbox::indicator:checked {
-                background-color: #CD4662;
-            }
-            QCheckBox#checkbox::indicator:unchecked {
-                background-color: #F4DBDB;
+                border-bottom: 3px solid #000;
+                background-color: #FAF9F6;
             }
 
             /* MenuBar styling */
             QMenuBar#menubar {
                 background-color: #ffffff;
+                border: none;
                 border-bottom: 1px solid #cccccc;
             }
 
@@ -146,8 +127,8 @@ class LoginWindow(QMainWindow):
         """)
         
         self.display_image()
-        self.ui.loginbutton.clicked.connect(self.login_window) # login button clicked
-        self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window) # login button clicked
+        self.ui.signupbutton.clicked.connect(self.register_check)
+        self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window)
 
     def display_image(self):
         image_path = "app/assets/images/loginpic.png"
@@ -157,34 +138,27 @@ class LoginWindow(QMainWindow):
         label.setPixmap(pixmap)
         label.setGeometry(0, 0, 947, 827)
         label.setScaledContents(True)
-    
-    def open_signup_window(self):
-        self.close()
-        from app.signuptest.Signuprun import SignupWindow
-        self.signup = SignupWindow()
-        self.signup.show()
 
-        
-    def open_homepage(self):
+    def open_login_window(self):
         self.close()
-        from app.homepagetest.Homepagerun import HomepageWindow
-        self.login_window = HomepageWindow()
-        self.login_window.show()
-        
-    def login_window(self):
+        from app.template.login.Loginrun import LoginWindow
+        self.login = LoginWindow()
+        self.login.show()
+
+    
+    def register_check(self):
         username = self.ui.username.text()
+        email = self.ui.email.text()
         password = self.ui.password.text()
-        if login(username, password):
-            print("Login Successful")
-            self.show_success("Login successful, welcome")
-            self.open_homepage()
-            
+        
+        if register(username, email, password):
+            print("User registered successfully")
+            print_database_contents(username)
+            self.show_success("User registered successfully")
+            self.open_login_window()
         else:
-            print("Login Failed")
-            self.ui.username.clear()
-            self.ui.password.clear()
-            # self.open_signup_window()
-            self.show_error("Login failed, please try again")
+            print("User registration failed")
+            self.show_error("User registration failed")
 
     def show_success(self, message):
         msg = QMessageBox()
@@ -201,10 +175,13 @@ class LoginWindow(QMainWindow):
         msg.setWindowTitle("Login Error")
         msg.setStandardButtons(QMessageBox.Ok)
         msg.exec()
-            
+
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_Return:
+            self.register_check()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = LoginWindow()
+    window = SignupWindow()
     window.show()
     sys.exit(app.exec())

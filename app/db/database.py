@@ -29,7 +29,7 @@ def register(username, email, password):
         transaction.commit()
         return True
     
-def login(username, password):
+def login(username, password, admin=False):
     if password is None or (username is None):
         if password is None:
             print("Password is None")
@@ -37,9 +37,9 @@ def login(username, password):
     
     user = None
     if username is not None:
-        if username in root.customerUsers:
+        if username in root.customerUsers and not admin:
             user = root.customerUsers[username]
-        elif username in root.adminUsers:
+        elif username in root.adminUsers and admin:
             user = root.adminUsers[username]
     # elif email is not None:
     #     if email in root.customerUsers:

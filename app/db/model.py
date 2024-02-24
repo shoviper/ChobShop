@@ -97,6 +97,7 @@ class Customer(GeneralUser):
         self.reviews = BTrees.OOBTree.BTree()
         self.address = None
         self.phone = None
+        self.admin = False
 
     def add_to_cart(self, product, quantity):
         if product in self.cart:

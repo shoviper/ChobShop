@@ -88,7 +88,7 @@ class HomepageWindow(QMainWindow):
                 border: None;
             }
             QLineEdit#search{
-                border-radius: 50px;
+                border-radius: 27%;
                 background-color: #EDEDED;
                 color: #CD4662;
                 font-family: Suwannaphum;
@@ -187,7 +187,7 @@ class HomepageWindow(QMainWindow):
         self.ui.cartbutton.setIcon(cartpixmap)
 
     def back_to_login(self):
-        from app.logintest.Loginrun import LoginWindow
+        from app.template.login.Loginrun import LoginWindow
         self.login = LoginWindow()
         self.show_goodbye("Log out successful, See you again")
         self.close()

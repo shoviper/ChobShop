@@ -3,13 +3,13 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 
 from app.db.database import *
-from app.template.register import *
+# from app.template.register import *
 
-from app.logintest.Loginrun import *
+from app.template.login.Loginrun import *
 
-from app.signuptest.Signuprun import *
+from app.template.signup.Signuprun import *
 
-from app.homepagetest.Homepagerun import *
+from app.template.homepage.Homepagerun import *
 
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
@@ -26,16 +26,16 @@ from app.homepagetest.Homepagerun import *
         
 #-------------------------Run the folder signuptest#------------------------
 # For running SignupWindow
-# class Main(SignupWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(SignupWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder signuptest#-------------------------
 
 #-------------------------Run the folder homepagetest#------------------------
 # For running HomepageWindow
-class Main(HomepageWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(HomepageWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder homepagetest#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
