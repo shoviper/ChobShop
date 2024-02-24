@@ -11,6 +11,16 @@ class HomepageWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        self.setStyleSheet("""
+                            QPushButton {
+                                background-color: #FFFFFF;
+                                border: black;
+                            }
+                           
+                            QPushButton:hover {
+                                background-color: #F4DBDB;
+                            }
+        """)
 
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.set_button_icon()
@@ -35,15 +45,15 @@ class HomepageWindow(QMainWindow):
         self.ui.profile.setIconSize(profileicon)
 
         cartpixmap = QPixmap("app/assets/images/cart.png")
-        carticon = self.ui.cartbutton_2.sizeHint()
+        carticon = self.ui.cartbutton.sizeHint()
         carticon.setHeight(40)
         carticon.setWidth(40)
-        self.ui.cartbutton_2.setIconSize(carticon)
+        self.ui.cartbutton.setIconSize(carticon)
 
         self.ui.settingsbutton.setIcon(setpixmap)
         self.ui.exitbutton.setIcon(exitpixmap)
         self.ui.profile.setIcon(profilepixmap)
-        self.ui.cartbutton_2.setIcon(cartpixmap)
+        self.ui.cartbutton.setIcon(cartpixmap)
 
     def back_to_login(self):
         from app.template.login.Loginrun import LoginWindow
