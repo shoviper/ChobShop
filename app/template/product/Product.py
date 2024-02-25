@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
     QVBoxLayout, QWidget)
-import all_rc
+import app.assets.sourceimg.all
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -33,20 +33,20 @@ class Ui_MainWindow(object):
         self.menu.setGeometry(QRect(0, 0, 373, 1080))
         self.menu.setStyleSheet(u"background-color: #FAF9F6;\n"
 "box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);")
-        self.label_2 = QLabel(self.menu)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(45, 68, 285, 77))
-        self.label_2.setStyleSheet(u"font-family: Supermercado;\n"
+        self.label = QLabel(self.menu)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(45, 68, 285, 77))
+        self.label.setStyleSheet(u"font-family: Supermercado;\n"
 "                font-size: 64px;\n"
 "                font-weight: 400;\n"
 "                line-height: 77px;\n"
 "                letter-spacing: 0em;\n"
 "                text-align: center;\n"
 "                color: #000000;")
-        self.homebutton_2 = QPushButton(self.menu)
-        self.homebutton_2.setObjectName(u"homebutton_2")
-        self.homebutton_2.setGeometry(QRect(54, 211, 265, 94))
-        self.homebutton_2.setStyleSheet(u"font-family: Suwannaphum;\n"
+        self.homebutton = QPushButton(self.menu)
+        self.homebutton.setObjectName(u"homebutton")
+        self.homebutton.setGeometry(QRect(54, 211, 265, 94))
+        self.homebutton.setStyleSheet(u"font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-weight: 700;\n"
 "                line-height: 43px;\n"
@@ -56,10 +56,10 @@ class Ui_MainWindow(object):
 "                background-color: #AEC289;\n"
 "                border-radius: 10px;\n"
 "")
-        self.favbutton_2 = QPushButton(self.menu)
-        self.favbutton_2.setObjectName(u"favbutton_2")
-        self.favbutton_2.setGeometry(QRect(54, 371, 265, 94))
-        self.favbutton_2.setStyleSheet(u"color: #000;\n"
+        self.favbutton = QPushButton(self.menu)
+        self.favbutton.setObjectName(u"favbutton")
+        self.favbutton.setGeometry(QRect(54, 371, 265, 94))
+        self.favbutton.setStyleSheet(u"color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -68,10 +68,10 @@ class Ui_MainWindow(object):
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
 "")
-        self.orderbutton_2 = QPushButton(self.menu)
-        self.orderbutton_2.setObjectName(u"orderbutton_2")
-        self.orderbutton_2.setGeometry(QRect(54, 531, 265, 94))
-        self.orderbutton_2.setStyleSheet(u"color: #000;\n"
+        self.orderbutton = QPushButton(self.menu)
+        self.orderbutton.setObjectName(u"orderbutton")
+        self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
+        self.orderbutton.setStyleSheet(u"color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -79,10 +79,10 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;")
-        self.messbutton_2 = QPushButton(self.menu)
-        self.messbutton_2.setObjectName(u"messbutton_2")
-        self.messbutton_2.setGeometry(QRect(54, 691, 265, 94))
-        self.messbutton_2.setStyleSheet(u"color: #000;\n"
+        self.messbutton = QPushButton(self.menu)
+        self.messbutton.setObjectName(u"messbutton")
+        self.messbutton.setGeometry(QRect(54, 691, 265, 94))
+        self.messbutton.setStyleSheet(u"color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -90,15 +90,15 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;")
-        self.settingsbutton_2 = QPushButton(self.menu)
-        self.settingsbutton_2.setObjectName(u"settingsbutton_2")
-        self.settingsbutton_2.setGeometry(QRect(119, 930, 68, 48))
-        self.settingsbutton_2.setStyleSheet(u"image: url(:/setting/settings.png);\n"
+        self.settingsbutton = QPushButton(self.menu)
+        self.settingsbutton.setObjectName(u"settingsbutton")
+        self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))
+        self.settingsbutton.setStyleSheet(u"image: url(:/setting/settings.png);\n"
 "border: none;")
-        self.exitbutton_2 = QPushButton(self.menu)
-        self.exitbutton_2.setObjectName(u"exitbutton_2")
-        self.exitbutton_2.setGeometry(QRect(187, 930, 68, 48))
-        self.exitbutton_2.setStyleSheet(u"image: url(:/exit/images/exit.png);\n"
+        self.exitbutton = QPushButton(self.menu)
+        self.exitbutton.setObjectName(u"exitbutton")
+        self.exitbutton.setGeometry(QRect(187, 930, 68, 48))
+        self.exitbutton.setStyleSheet(u"image: url(:/exit/images/exit.png);\n"
 "border: none;")
         self.searchcontainer = QWidget(self.centralwidget)
         self.searchcontainer.setObjectName(u"searchcontainer")
@@ -151,7 +151,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1510, 2518))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -218, 1510, 2518))
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.frame = QFrame(self.scrollAreaWidgetContents)
@@ -247,13 +247,13 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"ChobShop", None))
-        self.homebutton_2.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.favbutton_2.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))
-        self.orderbutton_2.setText(QCoreApplication.translate("MainWindow", u"My Orders", None))
-        self.messbutton_2.setText(QCoreApplication.translate("MainWindow", u"Messages", None))
-        self.settingsbutton_2.setText("")
-        self.exitbutton_2.setText("")
+        self.label.setText(QCoreApplication.translate("MainWindow", u"ChobShop", None))
+        self.homebutton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.favbutton.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))
+        self.orderbutton.setText(QCoreApplication.translate("MainWindow", u"My Orders", None))
+        self.messbutton.setText(QCoreApplication.translate("MainWindow", u"Messages", None))
+        self.settingsbutton.setText("")
+        self.exitbutton.setText("")
         self.searchbox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search..", None))
         self.profilebutton.setText("")
         self.cartbutton.setText("")

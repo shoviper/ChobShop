@@ -37,9 +37,9 @@ from app.template.product.Productrun import *
 
 #-------------------------Run the folder homepage#------------------------
 # For running HomepageWindow
-# class Main(HomepageWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(HomepageWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder homepage#-------------------------
 
 #-------------------------Run the folder favorite#------------------------
@@ -51,9 +51,9 @@ from app.template.product.Productrun import *
 
 #-------------------------Run the folder product#------------------------
 # For running ProductWindow
-class Main(ProductWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(ProductWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder product#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):

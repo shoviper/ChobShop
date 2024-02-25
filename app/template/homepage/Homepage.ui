@@ -321,7 +321,7 @@ border: none;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="stylelabbutton">
             <property name="geometry">
              <rect>
               <x>58</x>

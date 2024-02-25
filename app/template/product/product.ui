@@ -30,7 +30,7 @@
      <string notr="true">background-color: #FAF9F6;
 box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
     </property>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>45</x>
@@ -52,7 +52,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       <string>ChobShop</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="homebutton_2">
+    <widget class="QPushButton" name="homebutton">
      <property name="geometry">
       <rect>
        <x>54</x>
@@ -77,7 +77,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       <string>Home</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="favbutton_2">
+    <widget class="QPushButton" name="favbutton">
      <property name="geometry">
       <rect>
        <x>54</x>
@@ -101,7 +101,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       <string>Favorites</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="orderbutton_2">
+    <widget class="QPushButton" name="orderbutton">
      <property name="geometry">
       <rect>
        <x>54</x>
@@ -124,7 +124,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       <string>My Orders</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="messbutton_2">
+    <widget class="QPushButton" name="messbutton">
      <property name="geometry">
       <rect>
        <x>54</x>
@@ -147,7 +147,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       <string>Messages</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="settingsbutton_2">
+    <widget class="QPushButton" name="settingsbutton">
      <property name="geometry">
       <rect>
        <x>119</x>
@@ -164,7 +164,7 @@ border: none;</string>
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="exitbutton_2">
+    <widget class="QPushButton" name="exitbutton">
      <property name="geometry">
       <rect>
        <x>187</x>
@@ -307,7 +307,7 @@ border: none;</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-218</y>
           <width>1510</width>
           <height>2518</height>
          </rect>

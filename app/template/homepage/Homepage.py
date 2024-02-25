@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
     QVBoxLayout, QWidget)
-import all_rc
+import app.assets.sourceimg.all
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -157,10 +157,10 @@ class Ui_MainWindow(object):
         self.frame.setMinimumSize(QSize(0, 5000))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.pushButton = QPushButton(self.frame)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(58, 0, 1421, 335))
-        self.pushButton.setStyleSheet(u"color: #FFF;\n"
+        self.stylelabbutton = QPushButton(self.frame)
+        self.stylelabbutton.setObjectName(u"stylelabbutton")
+        self.stylelabbutton.setGeometry(QRect(58, 0, 1421, 335))
+        self.stylelabbutton.setStyleSheet(u"color: #FFF;\n"
 "                text-align: center;\n"
 "                font-family: Supermercado;\n"
 "                font-size: 96px;\n"
@@ -343,7 +343,7 @@ class Ui_MainWindow(object):
         self.profilebutton.setText("")
         self.cartbutton.setText("")
         self.signinsignoutbutton.setText(QCoreApplication.translate("MainWindow", u"Sign In", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Style lab", None))
+        self.stylelabbutton.setText(QCoreApplication.translate("MainWindow", u"Style lab", None))
         self.newarrivalbutton.setText(QCoreApplication.translate("MainWindow", u"New Arrival", None))
         self.onsalebutton.setText(QCoreApplication.translate("MainWindow", u"On Sales", None))
         self.buyagainbutton.setText(QCoreApplication.translate("MainWindow", u"Buy Again", None))
