@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>../images/loginpic.png</file>
+    <file>../images/exit.png</file>
+    <file>../images/profile.png</file>
+    <file>../images/settings.png</file>
+    <file>../images/cart.png</file>
+  </qresource>
+</RCC>

@@ -46,14 +46,13 @@ class Ui_MainWindow(object):
         self.homebutton = QPushButton(self.menu)
         self.homebutton.setObjectName(u"homebutton")
         self.homebutton.setGeometry(QRect(54, 211, 265, 94))
-        self.homebutton.setStyleSheet(u"font-family: Suwannaphum;\n"
+        self.homebutton.setStyleSheet(u"color: #000;\n"
+"                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
-"                font-weight: 700;\n"
-"                line-height: 43px;\n"
-"                letter-spacing: 0em;\n"
-"                text-align: middle;\n"
-"                color: #ffffff;\n"
-"                background-color: #AEC289;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
 "")
         self.favbutton = QPushButton(self.menu)
@@ -93,12 +92,12 @@ class Ui_MainWindow(object):
         self.settingsbutton = QPushButton(self.menu)
         self.settingsbutton.setObjectName(u"settingsbutton")
         self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))
-        self.settingsbutton.setStyleSheet(u"image: url(:/setting/settings.png);\n"
+        self.settingsbutton.setStyleSheet(u"image: url(:/pic/images/settings.png);\n"
 "border: none;")
         self.exitbutton = QPushButton(self.menu)
         self.exitbutton.setObjectName(u"exitbutton")
         self.exitbutton.setGeometry(QRect(187, 930, 68, 48))
-        self.exitbutton.setStyleSheet(u"image: url(:/exit/images/exit.png);\n"
+        self.exitbutton.setStyleSheet(u"image: url(:/pic/images/exit.png);\n"
 "border: none;")
         self.searchcontainer = QWidget(self.centralwidget)
         self.searchcontainer.setObjectName(u"searchcontainer")
@@ -118,12 +117,12 @@ class Ui_MainWindow(object):
         self.profilebutton = QPushButton(self.searchcontainer)
         self.profilebutton.setObjectName(u"profilebutton")
         self.profilebutton.setGeometry(QRect(1292, 78, 68, 48))
-        self.profilebutton.setStyleSheet(u"image: url(:/profile/images/profile.png);\n"
+        self.profilebutton.setStyleSheet(u"image: url(:/pic/images/profile.png);\n"
 "border: none;")
         self.cartbutton = QPushButton(self.searchcontainer)
         self.cartbutton.setObjectName(u"cartbutton")
         self.cartbutton.setGeometry(QRect(1186, 78, 68, 48))
-        self.cartbutton.setStyleSheet(u"image: url(:/cart/images/cart.png);\n"
+        self.cartbutton.setStyleSheet(u"image: url(:/pic/images/cart.png);\n"
 "border: none;")
         self.signinsignoutbutton = QPushButton(self.searchcontainer)
         self.signinsignoutbutton.setObjectName(u"signinsignoutbutton")
@@ -145,11 +144,12 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.scrollArea = QScrollArea(self.main)
         self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setStyleSheet(u"background-color: #FAF9F6;")
+        self.scrollArea.setStyleSheet(u"background-color: #FAF9F6;\n"
+"border: none;")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1510, 5018))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1512, 5018))
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.frame = QFrame(self.scrollAreaWidgetContents)

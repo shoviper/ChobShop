@@ -12,6 +12,7 @@ class HomepageWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.ui.exitbutton.clicked.connect(self.back_to_login)
+        self.ui.favbutton.clicked.connect(self.go_to_favorite)
         # self.set_button_icon()
 
     # def set_button_icon(self):
@@ -50,7 +51,11 @@ class HomepageWindow(QMainWindow):
         self.show_goodbye("Log out successful, See you again")
         self.close()
         self.login.show()
-
+    def go_to_favorite(self):
+        from app.template.favorite.Favoriterun import FavoriteWindow
+        self.fav = FavoriteWindow()
+        self.close()
+        self.fav.show()
     def show_goodbye(self, message):
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)

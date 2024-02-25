@@ -62,14 +62,13 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font-family: Suwannaphum;
+      <string notr="true">color: #000;
+                font-family: Suwannaphum;
                 font-size: 24px;
-                font-weight: 700;
-                line-height: 43px;
-                letter-spacing: 0em;
-                text-align: middle;
-                color: #ffffff;
-                background-color: #AEC289;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                background-color: #E1E3E7;
                 border-radius: 10px;
 </string>
      </property>
@@ -157,7 +156,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/setting/settings.png);
+      <string notr="true">image: url(:/pic/images/settings.png);
 border: none;</string>
      </property>
      <property name="text">
@@ -174,7 +173,7 @@ border: none;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/exit/images/exit.png);
+      <string notr="true">image: url(:/pic/images/exit.png);
 border: none;</string>
      </property>
      <property name="text">
@@ -227,7 +226,7 @@ border: none;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/profile/images/profile.png);
+      <string notr="true">image: url(:/pic/images/profile.png);
 border: none;</string>
      </property>
      <property name="text">
@@ -244,7 +243,7 @@ border: none;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/cart/images/cart.png);
+      <string notr="true">image: url(:/pic/images/cart.png);
 border: none;</string>
      </property>
      <property name="text">
@@ -292,7 +291,8 @@ border: none;</string>
      <item>
       <widget class="QScrollArea" name="scrollArea">
        <property name="styleSheet">
-        <string notr="true">background-color: #FAF9F6;</string>
+        <string notr="true">background-color: #FAF9F6;
+border:none;</string>
        </property>
        <property name="widgetResizable">
         <bool>true</bool>
@@ -302,7 +302,7 @@ border: none;</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1510</width>
+          <width>1512</width>
           <height>5018</height>
          </rect>
         </property>
@@ -753,6 +753,7 @@ border: none;</string>
  </widget>
  <resources>
   <include location="../../assets/sourceimg/all.qrc"/>
+  <include location="../../assets/sourceimg/newall.qrc"/>
  </resources>
  <connections/>
 </ui>
