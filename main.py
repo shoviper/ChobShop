@@ -11,32 +11,41 @@ from app.template.signup.Signuprun import *
 
 from app.template.homepage.Homepagerun import *
 
+from app.template.favorite.Favoriterun import *
+
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder template#-------------------------
 
-#-------------------------Run the folder logintest#-------------------------
+#-------------------------Run the folder login#-------------------------
 # For running LoginWindow
 # class Main(LoginWindow):
 #     def __init__(self):
 #         super().__init__()
-#-------------------------Run the folder logintest#-------------------------
+#-------------------------Run the folder login#-------------------------
         
-#-------------------------Run the folder signuptest#------------------------
+#-------------------------Run the folder signup#------------------------
 # For running SignupWindow
 # class Main(SignupWindow):
 #     def __init__(self):
 #         super().__init__()
-#-------------------------Run the folder signuptest#-------------------------
+#-------------------------Run the folder signup#-------------------------
 
-#-------------------------Run the folder homepagetest#------------------------
+#-------------------------Run the folder homepage#------------------------
 # For running HomepageWindow
-class Main(HomepageWindow):
+# class Main(HomepageWindow):
+#     def __init__(self):
+#         super().__init__()
+#-------------------------Run the folder homepage#-------------------------
+
+#-------------------------Run the folder favorite#------------------------
+# For running FavoriteWindow
+class Main(FavoriteWindow):
     def __init__(self):
         super().__init__()
-#-------------------------Run the folder homepagetest#-------------------------
+#-------------------------Run the folder favorite#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")

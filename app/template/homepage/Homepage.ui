@@ -195,7 +195,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
     <widget class="QLineEdit" name="searchbox">
      <property name="geometry">
       <rect>
-       <x>67</x>
+       <x>76</x>
        <y>78</y>
        <width>1076</width>
        <height>57</height>
@@ -231,7 +231,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="cartbutton_2">
+    <widget class="QPushButton" name="cartbutton">
      <property name="geometry">
       <rect>
        <x>1186</x>
@@ -297,7 +297,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-1877</y>
+          <y>0</y>
           <width>1510</width>
           <height>5018</height>
          </rect>
@@ -341,7 +341,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
              <string>Style lab</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="newarrivalbutton">
             <property name="geometry">
              <rect>
               <x>58</x>
@@ -367,7 +367,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
              <string>New Arrival</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="onsalebutton">
             <property name="geometry">
              <rect>
               <x>1206</x>
@@ -393,7 +393,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
              <string>On Sales</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="buyagainbutton">
             <property name="geometry">
              <rect>
               <x>440</x>
@@ -419,7 +419,7 @@ box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
              <string>Buy Again</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="bestsellbutton">
             <property name="geometry">
              <rect>
               <x>822</x>
