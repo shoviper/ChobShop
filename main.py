@@ -23,9 +23,9 @@ from app.template.product.Productrun import *
 
 #-------------------------Run the folder login#-------------------------
 # For running LoginWindow
-class Main(LoginWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(LoginWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder login#-------------------------
         
 #-------------------------Run the folder signup#------------------------
@@ -44,9 +44,9 @@ class Main(LoginWindow):
 
 #-------------------------Run the folder favorite#------------------------
 # For running FavoriteWindow
-# class Main(FavoriteWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(FavoriteWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder favorite#-------------------------
 
 #-------------------------Run the folder product#------------------------
