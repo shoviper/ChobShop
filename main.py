@@ -37,16 +37,16 @@ from app.template.product.Productrun import *
 
 #-------------------------Run the folder homepage#------------------------
 # For running HomepageWindow
-# class Main(HomepageWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(HomepageWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder homepage#-------------------------
 
 #-------------------------Run the folder favorite#------------------------
 # For running FavoriteWindow
-class Main(FavoriteWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(FavoriteWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder favorite#-------------------------
 
 #-------------------------Run the folder product#------------------------

@@ -31,8 +31,7 @@ class Ui_MainWindow(object):
         self.menu.setObjectName(u"menu")
         self.menu.setEnabled(False)
         self.menu.setGeometry(QRect(0, 0, 373, 1080))
-        self.menu.setStyleSheet(u"background-color: #FAF9F6;\n"
-"box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);")
+        self.menu.setStyleSheet(u"background-color: #FAF9F6;\n")
         self.label = QLabel(self.menu)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(45, 68, 285, 77))
@@ -113,7 +112,8 @@ class Ui_MainWindow(object):
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
-"                line-height: normal;")
+"                line-height: normal;\n"
+"                padding-left: 20px;")
         self.profilebutton = QPushButton(self.searchcontainer)
         self.profilebutton.setObjectName(u"profilebutton")
         self.profilebutton.setGeometry(QRect(1292, 78, 68, 48))
@@ -172,6 +172,7 @@ class Ui_MainWindow(object):
         self.newarrivalbutton = QPushButton(self.frame)
         self.newarrivalbutton.setObjectName(u"newarrivalbutton")
         self.newarrivalbutton.setGeometry(QRect(58, 398, 282, 64))
+        self.newarrivalbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.newarrivalbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -186,6 +187,7 @@ class Ui_MainWindow(object):
         self.onsalebutton = QPushButton(self.frame)
         self.onsalebutton.setObjectName(u"onsalebutton")
         self.onsalebutton.setGeometry(QRect(1206, 398, 282, 64))
+        self.onsalebutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.onsalebutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -200,6 +202,7 @@ class Ui_MainWindow(object):
         self.buyagainbutton = QPushButton(self.frame)
         self.buyagainbutton.setObjectName(u"buyagainbutton")
         self.buyagainbutton.setGeometry(QRect(440, 398, 282, 64))
+        self.buyagainbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.buyagainbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -214,6 +217,7 @@ class Ui_MainWindow(object):
         self.bestsellbutton = QPushButton(self.frame)
         self.bestsellbutton.setObjectName(u"bestsellbutton")
         self.bestsellbutton.setGeometry(QRect(822, 398, 282, 64))
+        self.bestsellbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.bestsellbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
