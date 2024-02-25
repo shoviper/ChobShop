@@ -2,12 +2,12 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide6.QtGui import QPixmap
 # from Homepage import Ui_MainWindow
-from .Homepage import *
+from .Product import *
 # from .Homepagdsadse import *
 
-class HomepageWindow(QMainWindow):
+class ProductWindow(QMainWindow):
     def __init__(self):
-        super(HomepageWindow, self).__init__()
+        super(ProductWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -61,6 +61,6 @@ class HomepageWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = HomepageWindow()
+    window = ProductWindow()
     window.show()
     sys.exit(app.exec())

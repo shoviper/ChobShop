@@ -13,6 +13,8 @@ from app.template.homepage.Homepagerun import *
 
 from app.template.favorite.Favoriterun import *
 
+from app.template.product.Productrun import *
+
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
@@ -42,10 +44,17 @@ from app.template.favorite.Favoriterun import *
 
 #-------------------------Run the folder favorite#------------------------
 # For running FavoriteWindow
-class Main(FavoriteWindow):
+# class Main(FavoriteWindow):
+#     def __init__(self):
+#         super().__init__()
+#-------------------------Run the folder favorite#-------------------------
+
+#-------------------------Run the folder product#------------------------
+# For running ProductWindow
+class Main(ProductWindow):
     def __init__(self):
         super().__init__()
-#-------------------------Run the folder favorite#-------------------------
+#-------------------------Run the folder product#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")

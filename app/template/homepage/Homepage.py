@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
     QVBoxLayout, QWidget)
+import all_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -92,11 +93,13 @@ class Ui_MainWindow(object):
         self.settingsbutton = QPushButton(self.menu)
         self.settingsbutton.setObjectName(u"settingsbutton")
         self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))
-        self.settingsbutton.setStyleSheet(u"")
+        self.settingsbutton.setStyleSheet(u"image: url(:/setting/settings.png);\n"
+"border: none;")
         self.exitbutton = QPushButton(self.menu)
         self.exitbutton.setObjectName(u"exitbutton")
         self.exitbutton.setGeometry(QRect(187, 930, 68, 48))
-        self.exitbutton.setStyleSheet(u"")
+        self.exitbutton.setStyleSheet(u"image: url(:/exit/images/exit.png);\n"
+"border: none;")
         self.searchcontainer = QWidget(self.centralwidget)
         self.searchcontainer.setObjectName(u"searchcontainer")
         self.searchcontainer.setGeometry(QRect(373, 0, 1547, 161))
@@ -112,14 +115,16 @@ class Ui_MainWindow(object):
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
 "                line-height: normal;")
-        self.profile = QPushButton(self.searchcontainer)
-        self.profile.setObjectName(u"profile")
-        self.profile.setGeometry(QRect(1292, 78, 68, 48))
-        self.profile.setStyleSheet(u"")
+        self.profilebutton = QPushButton(self.searchcontainer)
+        self.profilebutton.setObjectName(u"profilebutton")
+        self.profilebutton.setGeometry(QRect(1292, 78, 68, 48))
+        self.profilebutton.setStyleSheet(u"image: url(:/profile/images/profile.png);\n"
+"border: none;")
         self.cartbutton = QPushButton(self.searchcontainer)
         self.cartbutton.setObjectName(u"cartbutton")
         self.cartbutton.setGeometry(QRect(1186, 78, 68, 48))
-        self.cartbutton.setStyleSheet(u"")
+        self.cartbutton.setStyleSheet(u"image: url(:/cart/images/cart.png);\n"
+"border: none;")
         self.signinsignoutbutton = QPushButton(self.searchcontainer)
         self.signinsignoutbutton.setObjectName(u"signinsignoutbutton")
         self.signinsignoutbutton.setGeometry(QRect(1384, 78, 113, 58))
@@ -335,7 +340,7 @@ class Ui_MainWindow(object):
         self.settingsbutton.setText("")
         self.exitbutton.setText("")
         self.searchbox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search..", None))
-        self.profile.setText("")
+        self.profilebutton.setText("")
         self.cartbutton.setText("")
         self.signinsignoutbutton.setText(QCoreApplication.translate("MainWindow", u"Sign In", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Style lab", None))
