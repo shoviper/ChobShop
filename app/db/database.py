@@ -15,6 +15,8 @@ if not hasattr(root, 'adminUsers'):
     root.adminUsers = BTree()
 if not hasattr(root, 'customerUsers'):
     root.customerUsers = BTree()
+if not hasattr(root, 'LoggedInUser'):
+    root.LoggedInUser = LoggedInUser(None)
 
 def register(username, email, password):
     if username in root.customerUsers or email in root.customerUsers:
@@ -34,24 +36,34 @@ def login(username, password, admin=False):
         if password is None:
             print("Password is None")
         return False
-    
+    if username.find('@') != -1:
+        email = username
+        username = None
     user = None
     if username is not None:
         if username in root.customerUsers and not admin:
             user = root.customerUsers[username]
         elif username in root.adminUsers and admin:
             user = root.adminUsers[username]
-    # elif email is not None:
-    #     if email in root.customerUsers:
-    #         user = root.customerUsers[email]
-    #     elif email in root.adminUsers:
-    #         user = root.adminUsers[email]
+    elif email is not None:
+        if email in root.customerUsers and not admin:
+            user = root.customerUsers[email]
+        elif email in root.adminUsers and admin:
+            user = root.adminUsers[email]
     
     if user and user.password == password:
+        root.LoggedInUser = LoggedInUser(user)
+        root.LoggedInUser.logged_in = True
         return True
     else:
         return False
     
+def logout(username):
+    if username in root.customerUsers or username in root.adminUsers:
+        root.LoggedInUser.logged_in = False
+    else:
+        return False
+    return True
 
 def print_database_contents(username):
     print("General Users:")

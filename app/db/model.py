@@ -95,8 +95,6 @@ class Customer(GeneralUser):
         self.cart = BTrees.OOBTree.BTree()
         self.orders = BTrees.OOBTree.BTree()
         self.reviews = BTrees.OOBTree.BTree()
-        self.address = None
-        self.phone = None
         self.admin = False
 
     def add_to_cart(self, product, quantity):
@@ -140,7 +138,21 @@ class Customer(GeneralUser):
     
     def __str__(self) -> str:
         return f"username: {self.username}, email: {self.email}, name: {self.name}, surname: {self.surname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
+
+class LoggedInUser(persistent.Persistent):
+    def __init__(self, user=None) -> None:
+        self.user = user
+        self.logged_in = False
+
+    def toJSON(self):
+        return {
+            "user": self.user,
+            "logged_in": self.logged_in
+        }
     
+    def __str__(self) -> str:
+        return f"user: {self.user}, logged_in: {self.logged_in}"
+
 class Order(persistent.Persistent):
     def __init__(self, products, total) -> None:
         self.products = products
@@ -170,8 +182,8 @@ class Order(persistent.Persistent):
     
 class Category(persistent.Persistent):
     def __init__(self, product, category) -> None:
-        self.product = [product]
         self.category = category
+        self.product = product
 
     def toJSON(self):
         return {

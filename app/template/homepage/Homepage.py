@@ -45,15 +45,14 @@ class Ui_MainWindow(object):
         self.homebutton = QPushButton(self.menu)
         self.homebutton.setObjectName(u"homebutton")
         self.homebutton.setGeometry(QRect(54, 211, 265, 94))
-        self.homebutton.setStyleSheet(u"color: #000;\n"
+        self.homebutton.setStyleSheet(u"color: white;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
 "                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;\n"
-"")
+"                background-color: #AEC289;\n"
+"                border-radius: 10px;\n")
         self.favbutton = QPushButton(self.menu)
         self.favbutton.setObjectName(u"favbutton")
         self.favbutton.setGeometry(QRect(54, 371, 265, 94))
@@ -64,8 +63,7 @@ class Ui_MainWindow(object):
 "                font-weight: 400;\n"
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
-"                border-radius: 10px;\n"
-"")
+"                border-radius: 10px;\n")
         self.orderbutton = QPushButton(self.menu)
         self.orderbutton.setObjectName(u"orderbutton")
         self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
