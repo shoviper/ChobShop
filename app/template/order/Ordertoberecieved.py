@@ -449,7 +449,8 @@ class Ui_MainWindow(object):
         self.homebutton = QPushButton(self.widget)
         self.homebutton.setObjectName(u"homebutton")
         self.homebutton.setGeometry(QRect(54, 211, 265, 94))
-        self.homebutton.setStyleSheet(u"color: #000;\n"
+        self.homebutton.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -457,11 +458,17 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #AEC289;\n"
+"                color: #FAF9F6;\n"
+"            }\n"
 "")
         self.favbutton = QPushButton(self.widget)
         self.favbutton.setObjectName(u"favbutton")
         self.favbutton.setGeometry(QRect(54, 371, 265, 94))
-        self.favbutton.setStyleSheet(u"color: #000;\n"
+        self.favbutton.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -469,11 +476,17 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #AEC289;\n"
+"                color: #FAF9F6;\n"
+"            }\n"
 "")
         self.orderbutton = QPushButton(self.widget)
         self.orderbutton.setObjectName(u"orderbutton")
         self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
-        self.orderbutton.setStyleSheet(u"color: #000;\n"
+        self.orderbutton.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -481,11 +494,17 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #AEC289;\n"
+"                color: #FAF9F6;\n"
+"            }\n"
 "")
         self.messbutton = QPushButton(self.widget)
         self.messbutton.setObjectName(u"messbutton")
         self.messbutton.setGeometry(QRect(54, 691, 265, 94))
-        self.messbutton.setStyleSheet(u"color: #000;\n"
+        self.messbutton.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -493,6 +512,11 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #AEC289;\n"
+"                color: #FAF9F6;\n"
+"            }\n"
 "")
         self.settingsbutton = QPushButton(self.widget)
         self.settingsbutton.setObjectName(u"settingsbutton")

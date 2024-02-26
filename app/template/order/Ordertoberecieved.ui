@@ -1057,7 +1057,8 @@ line-height: normal;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -1065,6 +1066,11 @@ line-height: normal;</string>
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }
 </string>
      </property>
      <property name="text">
@@ -1081,7 +1087,8 @@ line-height: normal;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -1089,6 +1096,11 @@ line-height: normal;</string>
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }
 </string>
      </property>
      <property name="text">
@@ -1105,7 +1117,8 @@ line-height: normal;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -1113,6 +1126,11 @@ line-height: normal;</string>
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }
 </string>
      </property>
      <property name="text">
@@ -1129,7 +1147,8 @@ line-height: normal;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -1137,6 +1156,11 @@ line-height: normal;</string>
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }
 </string>
      </property>
      <property name="text">

@@ -656,7 +656,8 @@ QPushButton:hover {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -664,7 +665,11 @@ QPushButton:hover {
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
-</string>
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }</string>
      </property>
      <property name="text">
       <string>Favorites</string>
@@ -680,7 +685,8 @@ QPushButton:hover {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -688,7 +694,11 @@ QPushButton:hover {
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
-</string>
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }</string>
      </property>
      <property name="text">
       <string>My Orders</string>
@@ -704,7 +714,8 @@ QPushButton:hover {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #000;
+      <string notr="true">QPushButton{
+	color: #000;
                 font-family: Suwannaphum;
                 font-size: 24px;
                 font-style: normal;
@@ -712,7 +723,11 @@ QPushButton:hover {
                 line-height: normal;
                 background-color: #E1E3E7;
                 border-radius: 10px;
-</string>
+}
+QPushButton:hover {
+                background-color: #AEC289;
+                color: #FAF9F6;
+            }</string>
      </property>
      <property name="text">
       <string>Messages</string>
