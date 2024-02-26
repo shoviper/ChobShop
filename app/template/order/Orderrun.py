@@ -2,13 +2,15 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide6.QtGui import QPixmap
 # from Homepage import Ui_MainWindow
-from .Homepage import *
+# from .Ordertoberecieved import *
+# from .Ordertobeshipped import *
+from .Ordercompleted import *
 from app.db.database import *
 # from .Homepagdsadse import *
 
-class HomepageWindow(QMainWindow):
+class OrderWindow(QMainWindow):
     def __init__(self):
-        super(HomepageWindow, self).__init__()
+        super(OrderWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -20,20 +22,21 @@ class HomepageWindow(QMainWindow):
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
-        self.ui.orderbutton.clicked.connect(self.go_to_order)
-        
-    def go_to_order(self):
-        from app.template.order.Orderrun import OrderWindow
-        self.order = OrderWindow()
-        self.close()
-        self.order.show()
+        self.ui.homebutton.clicked.connect(self.go_to_homepage)
 
+        
     def back_to_login(self):
         from app.template.login.Loginrun import LoginWindow
         self.login = LoginWindow()
         # self.show_goodbye("Log out successful, See you again")
         self.close()
         self.login.show()
+
+    def go_to_homepage(self):
+        from app.template.homepage.Homepagerun import HomepageWindow
+        self.home = HomepageWindow()
+        self.close()
+        self.home.show()
 
     def go_to_favorite(self):
         from app.template.favorite.Favoriterun import FavoriteWindow
@@ -51,6 +54,6 @@ class HomepageWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = HomepageWindow()
+    window = OrderWindow()
     window.show()
     sys.exit(app.exec())

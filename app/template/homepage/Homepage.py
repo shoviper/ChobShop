@@ -27,75 +27,6 @@ class Ui_MainWindow(object):
         MainWindow.resize(1920, 1080)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.menu = QWidget(self.centralwidget)
-        self.menu.setObjectName(u"menu")
-        self.menu.setEnabled(False)
-        self.menu.setGeometry(QRect(0, 0, 373, 1080))
-        self.menu.setStyleSheet(u"background-color: #FAF9F6;\n")
-        self.label = QLabel(self.menu)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(45, 68, 285, 77))
-        self.label.setStyleSheet(u"font-family: Supermercado;\n"
-"                font-size: 64px;\n"
-"                font-weight: 400;\n"
-"                line-height: 77px;\n"
-"                letter-spacing: 0em;\n"
-"                text-align: center;\n"
-"                color: #000000;")
-        self.homebutton = QPushButton(self.menu)
-        self.homebutton.setObjectName(u"homebutton")
-        self.homebutton.setGeometry(QRect(54, 211, 265, 94))
-        self.homebutton.setStyleSheet(u"color: white;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 24px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"                background-color: #AEC289;\n"
-"                border-radius: 10px;\n")
-        self.favbutton = QPushButton(self.menu)
-        self.favbutton.setObjectName(u"favbutton")
-        self.favbutton.setGeometry(QRect(54, 371, 265, 94))
-        self.favbutton.setStyleSheet(u"color: #000;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 24px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;\n")
-        self.orderbutton = QPushButton(self.menu)
-        self.orderbutton.setObjectName(u"orderbutton")
-        self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
-        self.orderbutton.setStyleSheet(u"color: #000;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 24px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;")
-        self.messbutton = QPushButton(self.menu)
-        self.messbutton.setObjectName(u"messbutton")
-        self.messbutton.setGeometry(QRect(54, 691, 265, 94))
-        self.messbutton.setStyleSheet(u"color: #000;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 24px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;")
-        self.settingsbutton = QPushButton(self.menu)
-        self.settingsbutton.setObjectName(u"settingsbutton")
-        self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))
-        self.settingsbutton.setStyleSheet(u"image: url(:/pic/images/settings.png);\n"
-"border: none;")
-        self.exitbutton = QPushButton(self.menu)
-        self.exitbutton.setObjectName(u"exitbutton")
-        self.exitbutton.setGeometry(QRect(187, 930, 68, 48))
-        self.exitbutton.setStyleSheet(u"image: url(:/pic/images/exit.png);\n"
-"border: none;")
         self.searchcontainer = QWidget(self.centralwidget)
         self.searchcontainer.setObjectName(u"searchcontainer")
         self.searchcontainer.setGeometry(QRect(373, 0, 1547, 161))
@@ -110,8 +41,7 @@ class Ui_MainWindow(object):
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
-"                line-height: normal;\n"
-"                padding-left: 20px;")
+"                line-height: normal;")
         self.profilebutton = QPushButton(self.searchcontainer)
         self.profilebutton.setObjectName(u"profilebutton")
         self.profilebutton.setGeometry(QRect(1292, 78, 68, 48))
@@ -170,7 +100,6 @@ class Ui_MainWindow(object):
         self.newarrivalbutton = QPushButton(self.frame)
         self.newarrivalbutton.setObjectName(u"newarrivalbutton")
         self.newarrivalbutton.setGeometry(QRect(58, 398, 282, 64))
-        self.newarrivalbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.newarrivalbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -185,7 +114,6 @@ class Ui_MainWindow(object):
         self.onsalebutton = QPushButton(self.frame)
         self.onsalebutton.setObjectName(u"onsalebutton")
         self.onsalebutton.setGeometry(QRect(1206, 398, 282, 64))
-        self.onsalebutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.onsalebutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -200,7 +128,6 @@ class Ui_MainWindow(object):
         self.buyagainbutton = QPushButton(self.frame)
         self.buyagainbutton.setObjectName(u"buyagainbutton")
         self.buyagainbutton.setGeometry(QRect(440, 398, 282, 64))
-        self.buyagainbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.buyagainbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -215,7 +142,6 @@ class Ui_MainWindow(object):
         self.bestsellbutton = QPushButton(self.frame)
         self.bestsellbutton.setObjectName(u"bestsellbutton")
         self.bestsellbutton.setGeometry(QRect(822, 398, 282, 64))
-        self.bestsellbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.bestsellbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -325,6 +251,78 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.scrollArea)
 
+        self.widget = QWidget(self.centralwidget)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(0, 0, 373, 1080))
+        self.widget.setStyleSheet(u"background-color: #FAF9F6;")
+        self.label = QLabel(self.widget)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(45, 68, 285, 77))
+        self.label.setStyleSheet(u"font-family: Supermercado;\n"
+"                font-size: 64px;\n"
+"                font-weight: 400;\n"
+"                line-height: 77px;\n"
+"                letter-spacing: 0em;\n"
+"                text-align: center;\n"
+"                color: #000000;")
+        self.homebutton = QPushButton(self.widget)
+        self.homebutton.setObjectName(u"homebutton")
+        self.homebutton.setGeometry(QRect(54, 211, 265, 94))
+        self.homebutton.setStyleSheet(u"color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 24px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"")
+        self.favbutton = QPushButton(self.widget)
+        self.favbutton.setObjectName(u"favbutton")
+        self.favbutton.setGeometry(QRect(54, 371, 265, 94))
+        self.favbutton.setStyleSheet(u"color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 24px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"")
+        self.orderbutton = QPushButton(self.widget)
+        self.orderbutton.setObjectName(u"orderbutton")
+        self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
+        self.orderbutton.setStyleSheet(u"color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 24px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"")
+        self.messbutton = QPushButton(self.widget)
+        self.messbutton.setObjectName(u"messbutton")
+        self.messbutton.setGeometry(QRect(54, 691, 265, 94))
+        self.messbutton.setStyleSheet(u"color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 24px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"")
+        self.settingsbutton = QPushButton(self.widget)
+        self.settingsbutton.setObjectName(u"settingsbutton")
+        self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))
+        self.settingsbutton.setStyleSheet(u"image: url(:/pic/images/settings.png);\n"
+"border: none;")
+        self.exitbutton = QPushButton(self.widget)
+        self.exitbutton.setObjectName(u"exitbutton")
+        self.exitbutton.setGeometry(QRect(187, 930, 68, 48))
+        self.exitbutton.setStyleSheet(u"image: url(:/pic/images/exit.png);\n"
+"border: none;")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -334,13 +332,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"ChobShop", None))
-        self.homebutton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.favbutton.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))
-        self.orderbutton.setText(QCoreApplication.translate("MainWindow", u"My Orders", None))
-        self.messbutton.setText(QCoreApplication.translate("MainWindow", u"Messages", None))
-        self.settingsbutton.setText("")
-        self.exitbutton.setText("")
         self.searchbox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search..", None))
         self.profilebutton.setText("")
         self.cartbutton.setText("")
@@ -360,5 +351,12 @@ class Ui_MainWindow(object):
         self.pic7.setText("")
         self.pic8.setText("")
         self.pic9.setText("")
+        self.label.setText(QCoreApplication.translate("MainWindow", u"ChopShop", None))
+        self.homebutton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.favbutton.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))
+        self.orderbutton.setText(QCoreApplication.translate("MainWindow", u"My Orders", None))
+        self.messbutton.setText(QCoreApplication.translate("MainWindow", u"Messages", None))
+        self.settingsbutton.setText("")
+        self.exitbutton.setText("")
     # retranslateUi
 

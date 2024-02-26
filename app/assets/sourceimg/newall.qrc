@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../images/baht.png</file>
+    <file>../images/star.png</file>
     <file>../images/loginpic.png</file>
     <file>../images/exit.png</file>
     <file>../images/profile.png</file>

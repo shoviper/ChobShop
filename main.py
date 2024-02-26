@@ -15,6 +15,8 @@ from app.template.favorite.Favoriterun import *
 
 from app.template.product.Productrun import *
 
+from app.template.order.Orderrun import *
+
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
@@ -55,6 +57,13 @@ class Main(HomepageWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder product#-------------------------
+        
+#-------------------------Run the folder order#------------------------
+# For running OrderWindow
+# class Main(OrderWindow):
+#     def __init__(self):
+#         super().__init__()
+#-------------------------Run the folder order#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")
