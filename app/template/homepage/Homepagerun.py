@@ -14,14 +14,14 @@ class HomepageWindow(QMainWindow):
 
         if root.LoggedInUser.logged_in == False:
             self.ui.signinsignoutbutton.setText("Log in")
-        else:
+        else:   
             self.ui.signinsignoutbutton.setText(root.LoggedInUser.user.username)
 
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
-        
+
     def go_to_order(self):
         from app.template.order.Orderrun import OrderWindow
         self.order = OrderWindow()

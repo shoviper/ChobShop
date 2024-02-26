@@ -268,7 +268,8 @@ class Ui_MainWindow(object):
         self.homebutton = QPushButton(self.widget)
         self.homebutton.setObjectName(u"homebutton")
         self.homebutton.setGeometry(QRect(54, 211, 265, 94))
-        self.homebutton.setStyleSheet(u"color: #000;\n"
+        self.homebutton.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
@@ -276,6 +277,11 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #AEC289;\n"
+"                color: #FAF9F6;\n"
+"            }\n"
 "")
         self.favbutton = QPushButton(self.widget)
         self.favbutton.setObjectName(u"favbutton")
