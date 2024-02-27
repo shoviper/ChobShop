@@ -80,6 +80,12 @@ class Ui_MainWindow(object):
         self.picture.setGeometry(QRect(0, 0, 893, 549))
         #----------------------------------------right widget#----------------------------------------
 
+        #----------------------------------------central widget#----------------------------------------
+        self.home = QPushButton(self.centralwidget)
+        self.home.setObjectName(u"home")
+        self.home.setGeometry(QRect(50, 50, 172, 33))
+        #----------------------------------------central widget#----------------------------------------
+
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.menubar = QMenuBar(MainWindow)
@@ -101,5 +107,6 @@ class Ui_MainWindow(object):
         self.signupbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.haveacclabel.setText(QCoreApplication.translate("MainWindow", u"Already have an account?", None))
         self.logforhaveaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.home.setText(QCoreApplication.translate("MainWindow", u"< Home", None))
     # retranslateUi
 

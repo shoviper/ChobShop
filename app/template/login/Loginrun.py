@@ -131,23 +131,26 @@ class LoginWindow(QMainWindow):
             QCheckBox#checkbox::indicator:unchecked {
                 background-color: #F4DBDB;
             }
-
-            /* MenuBar styling */
-            QMenuBar#menubar {
-                background-color: #ffffff;
-                border-bottom: 1px solid #cccccc;
+                           
+            QPushButton#home {
+               color: #CD4662;
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border: none;
+            }
+            QPushButton#home:hover {
+               color: #AEC289;
             }
 
-            /* StatusBar styling */
-            QStatusBar#statusbar {
-                background-color: #ffffff;
-                border-top: 1px solid #cccccc;
-            }
         """)
         
         self.display_image()
         self.ui.loginbutton.clicked.connect(self.login_window) # login button clicked
         self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window) # login button clicked
+        self.ui.home.clicked.connect(self.go_to_homepage)
 
     def display_image(self):
         image_path = "app/assets/images/loginpic.png"
@@ -163,6 +166,12 @@ class LoginWindow(QMainWindow):
         from app.template.signup.Signuprun import SignupWindow
         self.signup = SignupWindow()
         self.signup.show()
+
+    def go_to_homepage(self):
+        from app.template.homepage.Homepagerun import HomepageWindow
+        self.home = HomepageWindow()
+        self.close()
+        self.home.show()
 
         
     def open_homepage(self):

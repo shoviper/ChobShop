@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
     QStackedWidget, QVBoxLayout, QWidget)
-
+import app.assets.sourceimg.all
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -76,11 +76,11 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setEnabled(True)
         self.stackedWidget.setStyleSheet(u"background-color: #FAF9F6;")
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.scrollArea = QScrollArea(self.page)
+        self.page1home = QWidget()
+        self.page1home.setObjectName(u"page1home")
+        self.scrollArea = QScrollArea(self.page1home)
         self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setGeometry(QRect(0, 0, 1521, 921))
+        self.scrollArea.setGeometry(QRect(0, 0, 1511, 883))
         self.scrollArea.setStyleSheet(u"QScrollArea {\n"
 "	border: none;\n"
 "}\n"
@@ -104,12 +104,12 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1506, 2000))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1496, 2000))
         self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 2000))
         self.frame = QFrame(self.scrollAreaWidgetContents)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(-1, -1, 1531, 2500))
-        self.frame.setMinimumSize(QSize(1531, 1080))
+        self.frame.setGeometry(QRect(0, -10, 1531, 2500))
+        self.frame.setMinimumSize(QSize(0, 1080))
         self.frame.setStyleSheet(u"border: none;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -246,18 +246,138 @@ class Ui_MainWindow(object):
         self.picproduct3_5.setGeometry(QRect(43, 43, 295, 295))
         self.picproduct3_5.setStyleSheet(u"background-color: #FFF;")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.stackedWidget.addWidget(self.page)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.stackedWidget.addWidget(self.page_2)
+        self.stackedWidget.addWidget(self.page1home)
+        self.page2fav = QWidget()
+        self.page2fav.setObjectName(u"page2fav")
+        self.verticalLayout_2 = QVBoxLayout(self.page2fav)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.scrollArea_2 = QScrollArea(self.page2fav)
+        self.scrollArea_2.setObjectName(u"scrollArea_2")
+        self.scrollArea_2.setStyleSheet(u"border: none;")
+        self.scrollArea_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_2 = QWidget()
+        self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 1494, 2518))
+        self.verticalLayout_3 = QVBoxLayout(self.scrollAreaWidgetContents_2)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.frame_2 = QFrame(self.scrollAreaWidgetContents_2)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setMinimumSize(QSize(0, 2500))
+        self.frame_2.setStyleSheet(u"")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.favoritelabel = QLabel(self.frame_2)
+        self.favoritelabel.setObjectName(u"favoritelabel")
+        self.favoritelabel.setGeometry(QRect(58, 0, 190, 72))
+        self.favoritelabel.setStyleSheet(u"color: #545454;\n"
+"                text-align: center;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 40px;\n"
+"                font-style: normal;\n"
+"                font-weight: 700;\n"
+"                line-height: normal;")
+        self.container1 = QWidget(self.frame_2)
+        self.container1.setObjectName(u"container1")
+        self.container1.setGeometry(QRect(58, 132, 381, 502))
+        self.container1.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic1 = QPushButton(self.container1)
+        self.pic1.setObjectName(u"pic1")
+        self.pic1.setGeometry(QRect(43, 43, 295, 295))
+        self.pic1.setStyleSheet(u"background-color: #FFF;")
+        self.container2 = QWidget(self.frame_2)
+        self.container2.setObjectName(u"container2")
+        self.container2.setGeometry(QRect(582, 132, 381, 502))
+        self.container2.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic2 = QPushButton(self.container2)
+        self.pic2.setObjectName(u"pic2")
+        self.pic2.setGeometry(QRect(43, 43, 295, 295))
+        self.pic2.setStyleSheet(u"background-color: #FFF;")
+        self.container3 = QWidget(self.frame_2)
+        self.container3.setObjectName(u"container3")
+        self.container3.setGeometry(QRect(1107, 132, 381, 502))
+        self.container3.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic3 = QPushButton(self.container3)
+        self.pic3.setObjectName(u"pic3")
+        self.pic3.setGeometry(QRect(43, 43, 295, 295))
+        self.pic3.setStyleSheet(u"background-color: #FFF;")
+        self.container4 = QWidget(self.frame_2)
+        self.container4.setObjectName(u"container4")
+        self.container4.setGeometry(QRect(58, 697, 381, 502))
+        self.container4.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic4 = QPushButton(self.container4)
+        self.pic4.setObjectName(u"pic4")
+        self.pic4.setGeometry(QRect(43, 43, 295, 295))
+        self.pic4.setStyleSheet(u"background-color: #FFF;")
+        self.container5 = QWidget(self.frame_2)
+        self.container5.setObjectName(u"container5")
+        self.container5.setGeometry(QRect(582, 697, 381, 502))
+        self.container5.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic5 = QPushButton(self.container5)
+        self.pic5.setObjectName(u"pic5")
+        self.pic5.setGeometry(QRect(43, 43, 295, 295))
+        self.pic5.setStyleSheet(u"background-color: #FFF;")
+        self.container6 = QWidget(self.frame_2)
+        self.container6.setObjectName(u"container6")
+        self.container6.setGeometry(QRect(1107, 697, 381, 502))
+        self.container6.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic6 = QPushButton(self.container6)
+        self.pic6.setObjectName(u"pic6")
+        self.pic6.setGeometry(QRect(43, 43, 295, 295))
+        self.pic6.setStyleSheet(u"background-color: #FFF;")
+        self.container7 = QWidget(self.frame_2)
+        self.container7.setObjectName(u"container7")
+        self.container7.setGeometry(QRect(58, 1262, 381, 502))
+        self.container7.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic7 = QPushButton(self.container7)
+        self.pic7.setObjectName(u"pic7")
+        self.pic7.setGeometry(QRect(43, 43, 295, 295))
+        self.pic7.setStyleSheet(u"background-color: #FFF;")
+        self.container8 = QWidget(self.frame_2)
+        self.container8.setObjectName(u"container8")
+        self.container8.setGeometry(QRect(582, 1262, 381, 502))
+        self.container8.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic8 = QPushButton(self.container8)
+        self.pic8.setObjectName(u"pic8")
+        self.pic8.setGeometry(QRect(43, 43, 295, 295))
+        self.pic8.setStyleSheet(u"background-color: #FFF;")
+        self.container9 = QWidget(self.frame_2)
+        self.container9.setObjectName(u"container9")
+        self.container9.setGeometry(QRect(1107, 1262, 381, 502))
+        self.container9.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.pic9 = QPushButton(self.container9)
+        self.pic9.setObjectName(u"pic9")
+        self.pic9.setGeometry(QRect(43, 43, 295, 295))
+        self.pic9.setStyleSheet(u"background-color: #FFF;")
+
+        self.verticalLayout_3.addWidget(self.frame_2)
+
+        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
+
+        self.verticalLayout_2.addWidget(self.scrollArea_2)
+
+        self.stackedWidget.addWidget(self.page2fav)
+        self.page3order = QWidget()
+        self.page3order.setObjectName(u"page3order")
+        self.verticalLayout_4 = QVBoxLayout(self.page3order)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.stackedWidget.addWidget(self.page3order)
 
         self.verticalLayout.addWidget(self.stackedWidget)
 
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(0, 0, 373, 1080))
-        self.widget.setStyleSheet(u"background-color: #FAF9F6;")
-        self.label = QLabel(self.widget)
+        self.menu = QWidget(self.centralwidget)
+        self.menu.setObjectName(u"menu")
+        self.menu.setGeometry(QRect(0, 0, 373, 1080))
+        self.menu.setStyleSheet(u"background-color: #FAF9F6;")
+        self.label = QLabel(self.menu)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(45, 68, 285, 77))
         self.label.setStyleSheet(u"font-family: Supermercado;\n"
@@ -267,7 +387,7 @@ class Ui_MainWindow(object):
 "                letter-spacing: 0em;\n"
 "                text-align: center;\n"
 "                color: #000000;")
-        self.homebutton = QPushButton(self.widget)
+        self.homebutton = QPushButton(self.menu)
         self.homebutton.setObjectName(u"homebutton")
         self.homebutton.setGeometry(QRect(54, 211, 265, 94))
         self.homebutton.setStyleSheet(u"QPushButton{\n"
@@ -287,7 +407,7 @@ class Ui_MainWindow(object):
 "")
         self.homebutton.setCheckable(True)
         self.homebutton.setAutoExclusive(True)
-        self.favbutton = QPushButton(self.widget)
+        self.favbutton = QPushButton(self.menu)
         self.favbutton.setObjectName(u"favbutton")
         self.favbutton.setGeometry(QRect(54, 371, 265, 94))
         self.favbutton.setStyleSheet(u"QPushButton{\n"
@@ -306,7 +426,7 @@ class Ui_MainWindow(object):
 "            }")
         self.favbutton.setCheckable(True)
         self.favbutton.setAutoExclusive(True)
-        self.orderbutton = QPushButton(self.widget)
+        self.orderbutton = QPushButton(self.menu)
         self.orderbutton.setObjectName(u"orderbutton")
         self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
         self.orderbutton.setStyleSheet(u"QPushButton{\n"
@@ -325,7 +445,7 @@ class Ui_MainWindow(object):
 "            }")
         self.orderbutton.setCheckable(True)
         self.orderbutton.setAutoExclusive(True)
-        self.messbutton = QPushButton(self.widget)
+        self.messbutton = QPushButton(self.menu)
         self.messbutton.setObjectName(u"messbutton")
         self.messbutton.setGeometry(QRect(54, 691, 265, 94))
         self.messbutton.setStyleSheet(u"QPushButton{\n"
@@ -344,12 +464,12 @@ class Ui_MainWindow(object):
 "            }")
         self.messbutton.setCheckable(True)
         self.messbutton.setAutoExclusive(True)
-        self.settingsbutton = QPushButton(self.widget)
+        self.settingsbutton = QPushButton(self.menu)
         self.settingsbutton.setObjectName(u"settingsbutton")
         self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))
         self.settingsbutton.setStyleSheet(u"image: url(:/pic/images/settings.png);\n"
 "border: none;")
-        self.exitbutton = QPushButton(self.widget)
+        self.exitbutton = QPushButton(self.menu)
         self.exitbutton.setObjectName(u"exitbutton")
         self.exitbutton.setGeometry(QRect(187, 930, 68, 48))
         self.exitbutton.setStyleSheet(u"image: url(:/pic/images/exit.png);\n"
@@ -357,6 +477,9 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+
+        self.stackedWidget.setCurrentIndex(0)
+
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -379,6 +502,16 @@ class Ui_MainWindow(object):
         self.picproduct2_5.setText("")
         self.picproduct1_5.setText("")
         self.picproduct3_5.setText("")
+        self.favoritelabel.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))
+        self.pic1.setText("")
+        self.pic2.setText("")
+        self.pic3.setText("")
+        self.pic4.setText("")
+        self.pic5.setText("")
+        self.pic6.setText("")
+        self.pic7.setText("")
+        self.pic8.setText("")
+        self.pic9.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"ChopShop", None))
         self.homebutton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.favbutton.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))

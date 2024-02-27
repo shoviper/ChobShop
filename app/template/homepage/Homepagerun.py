@@ -73,7 +73,7 @@ class HomepageWindow(QMainWindow):
 
     def go_to_home(self):
         from app.template.homepage.Homepagerun import HomepageWindow
-        self.ui.stackedWidget.setCurrentWidget(self.ui.page)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page1home)
         self.ui.homebutton.setStyleSheet(active_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
@@ -81,7 +81,7 @@ class HomepageWindow(QMainWindow):
 
     def go_to_favorite(self):
         from app.template.favorite.Favoriterun import FavoriteWindow
-        self.ui.stackedWidget.setCurrentWidget(self.ui.page_2)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page2fav)
         
         self.ui.homebutton.setStyleSheet(inactive_button_style)
         self.ui.favbutton.setStyleSheet(active_button_style)

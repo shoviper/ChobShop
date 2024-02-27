@@ -111,6 +111,18 @@ class SignupWindow(QMainWindow):
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;
             }
+            QPushButton#home {
+               color: #CD4662;
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border: none;
+            }
+            QPushButton#home:hover {
+               color: #AEC289;
+            }
 
             /* MenuBar styling */
             QMenuBar#menubar {
@@ -129,6 +141,13 @@ class SignupWindow(QMainWindow):
         self.display_image()
         self.ui.signupbutton.clicked.connect(self.register_check)
         self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window)
+        self.ui.home.clicked.connect(self.go_to_homepage)
+
+    def go_to_homepage(self):
+        from app.template.homepage.Homepagerun import HomepageWindow
+        self.home = HomepageWindow()
+        self.close()
+        self.home.show()
 
     def display_image(self):
         image_path = "app/assets/images/loginpic.png"

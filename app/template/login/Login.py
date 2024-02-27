@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QLabel, QLineEdit,
-    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
-    QStatusBar, QWidget)
+    QMainWindow, QPushButton, QSizePolicy, QWidget)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -83,15 +83,14 @@ class Ui_MainWindow(object):
         self.picture.setGeometry(QRect(0, 0, 893, 549))
         #----------------------------------------right widget#----------------------------------------
 
-        MainWindow.setCentralWidget(self.centralwidget)
+        #----------------------------------------central widget#----------------------------------------
+        self.home = QPushButton(self.centralwidget)
+        self.home.setObjectName(u"home")
+        self.home.setGeometry(QRect(50, 50, 172, 33))
+        #----------------------------------------central widget#----------------------------------------
 
-        self.menubar = QMenuBar(MainWindow)
-        self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1920, 22))
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QStatusBar(MainWindow)
-        self.statusbar.setObjectName(u"statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+
+        MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
 
@@ -106,5 +105,6 @@ class Ui_MainWindow(object):
         self.signfornoaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.checkbox.setText("")
         self.adminlabel.setText(QCoreApplication.translate("MainWindow", u"Log in as Admin", None))
+        self.home.setText(QCoreApplication.translate("MainWindow", u"< Home", None))
     # retranslateUi
 
