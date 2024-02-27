@@ -164,12 +164,19 @@ class SignupWindow(QMainWindow):
         self.login = LoginWindow()
         self.login.show()
 
-    
+
     def register_check(self):
         username = self.ui.username.text()
         email = self.ui.email.text()
         password = self.ui.password.text()
-        
+#-------------------------------------------------------------
+        # admin = False
+        # if self.ui.checkbox.isChecked():
+        #     admin = True
+        #     registerAsAdmin(username, email, password)
+        #     printAdminContent(username)
+        #     self.show_success("User registered as Admin successfully")
+#-------------------------------------------------------------
         if register(username, email, password):
             print("User registered successfully")
             print_database_contents(username)
@@ -178,6 +185,7 @@ class SignupWindow(QMainWindow):
         else:
             print("User registration failed")
             self.show_error("User registration failed")
+
 
     def show_success(self, message):
         msg = QMessageBox()
