@@ -6,6 +6,41 @@ from .Homepage import *
 from app.db.database import *
 # from .Homepagdsadse import *
 
+active_button_style = """
+    QPushButton {
+        color: #FAF9F6;
+        font-family: Suwannaphum;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: #AEC289;
+        border-radius: 10px;
+    }
+    QPushButton:hover {
+        background-color: #F4DBDB;
+        color: black;
+    }
+"""
+
+inactive_button_style = """
+    QPushButton {
+        color: #000;
+        font-family: Suwannaphum;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: #E1E3E7;
+        border-radius: 10px;
+    }
+    QPushButton:hover {
+        background-color: #F4DBDB;
+        color: black;
+    }
+"""
+
+
 class HomepageWindow(QMainWindow):
     def __init__(self):
         super(HomepageWindow, self).__init__()
@@ -19,7 +54,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
-        self.ui.favbutton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_2))
+        self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
 
     def go_to_order(self):
@@ -37,9 +72,19 @@ class HomepageWindow(QMainWindow):
 
     def go_to_favorite(self):
         from app.template.favorite.Favoriterun import FavoriteWindow
-        self.fav = FavoriteWindow()
-        self.close()
-        self.fav.show()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_2)
+
+        favbutton_style = self.ui.favbutton.styleSheet()
+
+    def go_to_favorite(self):
+        from app.template.favorite.Favoriterun import FavoriteWindow
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_2)
+        
+        self.ui.homebutton.setStyleSheet(inactive_button_style)
+        self.ui.favbutton.setStyleSheet(active_button_style)
+        print(active_button_style)
+        self.ui.orderbutton.setStyleSheet(inactive_button_style)
+        self.ui.messbutton.setStyleSheet(inactive_button_style)
         
     def show_goodbye(self, message):
         msg = QMessageBox()
