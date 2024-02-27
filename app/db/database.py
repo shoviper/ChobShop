@@ -31,6 +31,22 @@ def register(username, email, password):
         transaction.commit()
         return True
     
+#-------------------Admin Register------------------------
+#-------------------Not yet tested
+def registerAsAdmin(username, email, password):
+    if username in root.adminUsers or email in root.adminUsers:
+        # print("User already exists")
+        if username in root.adminUsers:
+            print("Username already exists")
+            # print_database_contents(username)
+        return False
+    else:
+        user = Admin(username, email, password)
+        root.adminUsers[username] = user
+        transaction.commit()
+        return True
+#-------------------------------------------------------------
+    
 def login(username, password, admin=False):
     if password is None or (username is None):
         if password is None:
@@ -65,6 +81,7 @@ def logout(username):
         return False
     return True
 
+
 def print_database_contents(username):
     print("General Users:")
     # for user in root.customerUsers[username]:
@@ -81,6 +98,23 @@ def print_database_contents(username):
         print(f"Admin: {user.admin}")
         print(f"Cart: {user.cart}")
         print(f"Orders: {user.orders}")
+        
+#-------------------------------------------------------------
+def printAdminContent(username):
+    print("Admin Users:")
+    if username in root.adminUsers:
+        user = root.adminUsers[username]
+        print(f"Username: {user.username}")
+        print(f"Password: {user.password}")
+        print(f"Email: {user.email}")
+        print(f"Name: {user.name}")
+        print(f"Surname: {user.surname}")
+        print(f"Address: {user.address}")
+        print(f"Phone: {user.phone}")
+        print(f"Admin: {user.admin}")
+        print(f"Cart: {user.cart}")
+        print(f"Orders: {user.orders}")    
+#-------------------------------------------------------------
 
 # class Connection():
 # storage = ZODB.FileStorage.FileStorage('app/db/mydata.fs')

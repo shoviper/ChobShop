@@ -30,12 +30,38 @@ class SignupWindow(QMainWindow):
         self.close()
         self.home.show()
 
+<<<<<<< HEAD
     
+=======
+    def display_image(self):
+        image_path = "app/assets/images/loginpic.png"
+        pixmap = QPixmap(image_path)
+
+        label = QLabel(self.ui.rightcontainer)
+        label.setPixmap(pixmap)
+        label.setGeometry(0, 0, 947, 827)
+        label.setScaledContents(True)
+
+    def open_login_window(self):
+        self.close()
+        from app.template.login.Loginrun import LoginWindow
+        self.login = LoginWindow()
+        self.login.show()
+
+
+>>>>>>> e62c11795f86ac88b7a2639683897ce35e25da10
     def register_check(self):
         username = self.ui.username.text()
         email = self.ui.email.text()
         password = self.ui.password.text()
-        
+#-------------------------------------------------------------
+        # admin = False
+        # if self.ui.checkbox.isChecked():
+        #     admin = True
+        #     registerAsAdmin(username, email, password)
+        #     printAdminContent(username)
+        #     self.show_success("User registered as Admin successfully")
+#-------------------------------------------------------------
         if register(username, email, password):
             print("User registered successfully")
             print_database_contents(username)
@@ -44,6 +70,7 @@ class SignupWindow(QMainWindow):
         else:
             print("User registration failed")
             self.show_error("User registration failed")
+
 
     def show_success(self, message):
         msg = QMessageBox()
