@@ -133,7 +133,7 @@ border: none;</string>
         <string notr="true">background-color: #FAF9F6;</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="page1home">
         <widget class="QScrollArea" name="scrollArea">
@@ -577,7 +577,7 @@ QScrollBar::handle:vertical:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>85</width>
+              <width>1496</width>
               <height>2518</height>
              </rect>
             </property>
