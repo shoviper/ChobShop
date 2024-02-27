@@ -14,134 +14,236 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget" native="true">
+   <property name="styleSheet">
+    <string notr="true">background-color: #FAF9F6;</string>
+   </property>
+   <widget class="QWidget" name="rightcontainer" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>521</width>
-      <height>601</height>
+      <x>900</x>
+      <y>127</y>
+      <width>893</width>
+      <height>827</height>
      </rect>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>481</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Sign up</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>400</y>
-       <width>481</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Sign up</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>500</y>
-       <width>241</width>
-       <height>81</height>
+       <x>-40</x>
+       <y>0</y>
+       <width>970</width>
+       <height>827</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">image: url(:/pic/images/loginpic.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="homebutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>172</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+               color: #CD4662;
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border: none;
+            }
+            QPushButton:hover {
+               color: #AEC289;
+            }</string>
+    </property>
+    <property name="text">
+     <string>&lt; Home</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="leftcontainer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>127</x>
+      <y>127</y>
+      <width>646</width>
+      <height>827</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #FAF9F6;</string>
+    </property>
+    <widget class="QLabel" name="signuplabel">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>36</y>
+       <width>500</width>
+       <height>95</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #000;
+                font-family: Inter;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;</string>
+     </property>
+     <property name="text">
+      <string>Sign up</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signupbutton">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>620</y>
+       <width>500</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+                background-color: #CD4662;
+                color: #FFF;
+                text-align: center;
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                border-radius: 25px;
+            }
+
+            QPushButton:hover {
+                background-color: #AEC289;
+            }</string>
+     </property>
+     <property name="text">
+      <string>Sign up</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logforhaveaccbutton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>748</y>
+       <width>493</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #CD4662;
+                text-align: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-left: 80px;</string>
      </property>
      <property name="text">
       <string>Already have an account?</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLineEdit" name="username">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>500</y>
-       <width>211</width>
-       <height>81</height>
+       <x>73</x>
+       <y>190</y>
+       <width>500</width>
+       <height>80</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 24px;
+                width: 500px;
+                height: 80px;
+                border: none;
+                border-bottom: 3px solid #000;
+                background-color: #FAF9F6;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>449</y>
+       <width>500</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 24px;
+                width: 500px;
+                height: 80px;
+                border: none;
+                border-bottom: 3px solid #000;
+                background-color: #FAF9F6;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signfornoaccbutton">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>748</y>
+       <width>80</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+                border: none;
+                color: #AEC289;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: bold;
+                font-weight: 700;
+                border: none;
+                line-height: normal;
+            }
+                           
+            QPushButton:hover {
+                color: #CD4662;
+            }</string>
      </property>
      <property name="text">
-      <string>Sign in</string>
+      <string>Log in</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="email">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>220</y>
-       <width>481</width>
-       <height>21</height>
+       <x>73</x>
+       <y>319</y>
+       <width>500</width>
+       <height>80</height>
       </rect>
      </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>290</y>
-       <width>481</width>
-       <height>21</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>140</y>
-       <width>481</width>
-       <height>21</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widget_2" native="true">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>10</y>
-      <width>681</width>
-      <height>601</height>
-     </rect>
-    </property>
-    <widget class="QWidget" name="widget_3" native="true">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>681</width>
-       <height>601</height>
-      </rect>
+     <property name="styleSheet">
+      <string notr="true">font-size: 24px;
+                width: 500px;
+                height: 80px;
+                border: none;
+                border-bottom: 3px solid #000;
+                background-color: #FAF9F6;</string>
      </property>
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1920</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../assets/sourceimg/newall.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../images/chopshop.png</file>
     <file>../images/baht.png</file>
     <file>../images/star.png</file>
     <file>../images/loginpic.png</file>

@@ -13,156 +13,22 @@ class SignupWindow(QMainWindow):
         super(SignupWindow,self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
-        # Apply CSS styles
-        self.setStyleSheet("""
-            /* Central widget styling */
-            QWidget#centralwidget {
-                background-color: #FAF9F6;
-            }
-                           
-            QWidget#leftcontainer {
-                background-color: #FAF9F6;
-            }
-                           
-            QWidget#rightcontainer {
-                background-color: #E1E3E7;
-                margin-left: 27px;
-                border-radius: 25px;
-            }
-
-            /* Label styling */
-            QLabel#signuplabel {
-                color: #000;
-                font-family: Inter;
-                font-size: 48px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
-                           
-            QLabel#haveacclabel {
-                color: #CD4662;
-                text-align: center;
-                font-family: Inter;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                margin-left: 75px;
-            }
-                           
-            QPushButton#logforhaveaccbutton {
-                border: none;
-                color: #AEC289;
-                font-family: Inter;
-                font-size: 20px;
-                font-style: bold;
-                font-weight: 700;
-                line-height: normal;
-                margin-right: 400px;
-            }
-                           
-            QPushButton#logforhaveaccbutton:hover {
-                color: #CD4662;
-            }
-
-            /* Push button styling */
-            QPushButton#signupbutton {
-                background-color: #CD4662;
-                color: #FFF;
-                text-align: center;
-                font-family: Inter;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                border-radius: 15px;
-            }
-
-            QPushButton#signupbutton:hover {
-                background-color: #AEC289;
-            }
-
-            /* LineEdit styling */
-            QLineEdit#username {
-                font-size: 24px;
-                width: 500px;
-                height: 80px;
-                border: none;
-                border-bottom: 3px solid #000;
-                background-color: #FAF9F6;
-            }
-            
-            QLineEdit#password {
-                font-size: 24px;
-                width: 500px;
-                height: 80px;
-                border: none;
-                border-bottom: 3px solid #000;
-                background-color: #FAF9F6;
-            }
-            
-            QLineEdit#email {
-                font-size: 24px;
-                width: 500px;
-                height: 80px;
-                border: none;
-                border-bottom: 3px solid #000;
-                background-color: #FAF9F6;
-            }
-            QPushButton#home {
-               color: #CD4662;
-                font-family: Inter;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                border: none;
-            }
-            QPushButton#home:hover {
-               color: #AEC289;
-            }
-
-            /* MenuBar styling */
-            QMenuBar#menubar {
-                background-color: #ffffff;
-                border: none;
-                border-bottom: 1px solid #cccccc;
-            }
-
-            /* StatusBar styling */
-            QStatusBar#statusbar {
-                background-color: #ffffff;
-                border-top: 1px solid #cccccc;
-            }
-        """)
         
-        self.display_image()
         self.ui.signupbutton.clicked.connect(self.register_check)
-        self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window)
-        self.ui.home.clicked.connect(self.go_to_homepage)
+        self.ui.signfornoaccbutton.clicked.connect(self.open_login_window)
+        self.ui.homebutton.clicked.connect(self.go_to_homepage)
+
+    def open_login_window(self):
+        from app.template.login.Loginrun import LoginWindow
+        self.Login = LoginWindow()
+        self.close()
+        self.Login.show()
 
     def go_to_homepage(self):
         from app.template.homepage.Homepagerun import HomepageWindow
         self.home = HomepageWindow()
         self.close()
         self.home.show()
-
-    def display_image(self):
-        image_path = "app/assets/images/loginpic.png"
-        pixmap = QPixmap(image_path)
-
-        label = QLabel(self.ui.rightcontainer)
-        label.setPixmap(pixmap)
-        label.setGeometry(0, 0, 947, 827)
-        label.setScaledContents(True)
-
-    def open_login_window(self):
-        self.close()
-        from app.template.login.Loginrun import LoginWindow
-        self.login = LoginWindow()
-        self.login.show()
 
     
     def register_check(self):
