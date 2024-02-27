@@ -152,16 +152,14 @@ class Ui_MainWindow(object):
 "            QPushButton:hover {\n"
 "               color: #AEC289;\n"
 "            }")
-        self.rightcontainer = QWidget(self.centralwidget)
-        self.rightcontainer.setObjectName(u"rightcontainer")
-        self.rightcontainer.setGeometry(QRect(900, 127, 893, 827))
-        self.rightcontainer.setStyleSheet(u"border-radius: 20px;\n"
-"background: #E1E3E7;")
-        self.label = QLabel(self.rightcontainer)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(-40, 0, 970, 827))
-        self.label.setStyleSheet(u"image: url(:/pic/images/loginpic.png);")
+        self.pic = QLabel(self.centralwidget)
+        self.pic.setObjectName(u"pic")
+        self.pic.setGeometry(QRect(0, 0, 1920, 1080))
+        self.pic.setStyleSheet(u"image: url(:/pic/images/realchop.png);")
         MainWindow.setCentralWidget(self.centralwidget)
+        self.pic.raise_()
+        self.leftcontainer.raise_()
+        self.homebutton.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -173,10 +171,13 @@ class Ui_MainWindow(object):
         self.loginlabel.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
         self.loginbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
         self.noacclabel.setText(QCoreApplication.translate("MainWindow", u"Don't have an account?", None))
+        self.username.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Username or Email address", None))
+        self.password.setText("")
+        self.password.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.checkbox.setText("")
         self.adminlabel.setText(QCoreApplication.translate("MainWindow", u"Log in as Admin", None))
         self.signfornoaccbutton.setText(QCoreApplication.translate("MainWindow", u"Sign up", None))
         self.homebutton.setText(QCoreApplication.translate("MainWindow", u"< Home", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"d", None))
+        self.pic.setText(QCoreApplication.translate("MainWindow", u"0", None))
     # retranslateUi
 

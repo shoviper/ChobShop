@@ -32,16 +32,16 @@ from app.template.order.Orderrun import *
         
 #-------------------------Run the folder signup#------------------------
 # For running SignupWindow
-# class Main(SignupWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(SignupWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder signup#-------------------------
 
 #-------------------------Run the folder homepage#------------------------
 # For running HomepageWindow
-class Main(HomepageWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(HomepageWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder homepage#-------------------------
 
 #-------------------------Run the folder favorite#------------------------

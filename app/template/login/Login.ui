@@ -123,6 +123,9 @@
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;</string>
      </property>
+     <property name="placeholderText">
+      <string>Username or Email address</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="password">
      <property name="geometry">
@@ -140,6 +143,12 @@
                 border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkbox">
@@ -255,36 +264,25 @@
      <string>&lt; Home</string>
     </property>
    </widget>
-   <widget class="QWidget" name="rightcontainer" native="true">
+   <widget class="QLabel" name="pic">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>127</y>
-      <width>893</width>
-      <height>827</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius: 20px;
-background: #E1E3E7;</string>
+     <string notr="true">image: url(:/pic/images/realchop.png);</string>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>-40</x>
-       <y>0</y>
-       <width>970</width>
-       <height>827</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/pic/images/loginpic.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
+    <property name="text">
+     <string>0</string>
+    </property>
    </widget>
+   <zorder>pic</zorder>
+   <zorder>leftcontainer</zorder>
+   <zorder>homebutton</zorder>
   </widget>
  </widget>
  <resources>

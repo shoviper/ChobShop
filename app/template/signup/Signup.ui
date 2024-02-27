@@ -17,32 +17,6 @@
    <property name="styleSheet">
     <string notr="true">background-color: #FAF9F6;</string>
    </property>
-   <widget class="QWidget" name="rightcontainer" native="true">
-    <property name="geometry">
-     <rect>
-      <x>900</x>
-      <y>127</y>
-      <width>893</width>
-      <height>827</height>
-     </rect>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>-40</x>
-       <y>0</y>
-       <width>970</width>
-       <height>827</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/pic/images/loginpic.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </widget>
    <widget class="QPushButton" name="homebutton">
     <property name="geometry">
      <rect>
@@ -173,6 +147,9 @@
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;</string>
      </property>
+     <property name="placeholderText">
+      <string>Username</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="password">
      <property name="geometry">
@@ -190,6 +167,9 @@
                 border: none;
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
      </property>
     </widget>
     <widget class="QPushButton" name="signfornoaccbutton">
@@ -238,8 +218,30 @@
                 border-bottom: 3px solid #000;
                 background-color: #FAF9F6;</string>
      </property>
+     <property name="placeholderText">
+      <string>Email</string>
+     </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="pic">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/pic/images/realchop.png);</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <zorder>pic</zorder>
+   <zorder>homebutton</zorder>
+   <zorder>leftcontainer</zorder>
   </widget>
  </widget>
  <resources>

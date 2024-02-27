@@ -133,7 +133,7 @@ border: none;</string>
         <string notr="true">background-color: #FAF9F6;</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="page1home">
         <widget class="QScrollArea" name="scrollArea">
@@ -577,7 +577,7 @@ QScrollBar::handle:vertical:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>1496</width>
+              <width>85</width>
               <height>2518</height>
              </rect>
             </property>
@@ -900,37 +900,7 @@ QScrollBar::handle:vertical:hover {
         </layout>
        </widget>
        <widget class="QWidget" name="page3order">
-        <layout class="QVBoxLayout" name="verticalLayout_4">
-         <item>
-          <widget class="QTabWidget" name="tabWidget">
-           <property name="styleSheet">
-            <string notr="true">color: #CD4662;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-border: none;
-width: 476px;
-height: 71px;</string>
-           </property>
-           <property name="currentIndex">
-            <number>0</number>
-           </property>
-           <widget class="QWidget" name="tab">
-            <attribute name="title">
-             <string>Tab 1</string>
-            </attribute>
-           </widget>
-           <widget class="QWidget" name="tab_2">
-            <attribute name="title">
-             <string>Tab 2</string>
-            </attribute>
-           </widget>
-          </widget>
-         </item>
-        </layout>
+        <layout class="QVBoxLayout" name="verticalLayout_4"/>
        </widget>
       </widget>
      </item>

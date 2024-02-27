@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from .Signup import *
+# from .test import *
 # from Signup import *
 # from Login import *
 # from app.logintest.Loginrun import *
@@ -20,6 +21,7 @@ class SignupWindow(QMainWindow):
 
     def open_login_window(self):
         from app.template.login.Loginrun import LoginWindow
+        # self.ui.stackedWidget.setCurrentWidget(self.ui.page1login)
         self.Login = LoginWindow()
         self.close()
         self.Login.show()
@@ -30,26 +32,7 @@ class SignupWindow(QMainWindow):
         self.close()
         self.home.show()
 
-<<<<<<< HEAD
     
-=======
-    def display_image(self):
-        image_path = "app/assets/images/loginpic.png"
-        pixmap = QPixmap(image_path)
-
-        label = QLabel(self.ui.rightcontainer)
-        label.setPixmap(pixmap)
-        label.setGeometry(0, 0, 947, 827)
-        label.setScaledContents(True)
-
-    def open_login_window(self):
-        self.close()
-        from app.template.login.Loginrun import LoginWindow
-        self.login = LoginWindow()
-        self.login.show()
-
-
->>>>>>> e62c11795f86ac88b7a2639683897ce35e25da10
     def register_check(self):
         username = self.ui.username.text()
         email = self.ui.email.text()
