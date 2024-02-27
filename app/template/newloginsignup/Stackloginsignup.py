@@ -219,6 +219,15 @@ class Ui_MainWindow(object):
 "                border: none;\n"
 "                border-bottom: 3px solid #000;\n"
 "                background-color: #FAF9F6;")
+        self.email = QLineEdit(self.leftcontainer_2)
+        self.email.setObjectName(u"email")
+        self.email.setGeometry(QRect(73, 319, 500, 80))
+        self.email.setStyleSheet(u"font-size: 24px;\n"
+"                width: 500px;\n"
+"                height: 80px;\n"
+"                border: none;\n"
+"                border-bottom: 3px solid #000;\n"
+"                background-color: #FAF9F6;")
         self.password_2 = QLineEdit(self.leftcontainer_2)
         self.password_2.setObjectName(u"password_2")
         self.password_2.setGeometry(QRect(73, 449, 500, 80))
@@ -245,15 +254,6 @@ class Ui_MainWindow(object):
 "            QPushButton:hover {\n"
 "                color: #CD4662;\n"
 "            }")
-        self.email = QLineEdit(self.leftcontainer_2)
-        self.email.setObjectName(u"email")
-        self.email.setGeometry(QRect(73, 319, 500, 80))
-        self.email.setStyleSheet(u"font-size: 24px;\n"
-"                width: 500px;\n"
-"                height: 80px;\n"
-"                border: none;\n"
-"                border-bottom: 3px solid #000;\n"
-"                background-color: #FAF9F6;")
         self.stackedWidget.addWidget(self.page2signup)
         MainWindow.setCentralWidget(self.centralwidget)
 
