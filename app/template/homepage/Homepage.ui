@@ -14,7 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-<<<<<<< HEAD
    <widget class="QWidget" name="searchcontainer" native="true">
     <property name="geometry">
      <rect>
@@ -908,9 +907,6 @@ QScrollBar::handle:vertical:hover {
     </layout>
    </widget>
    <widget class="QWidget" name="menu" native="true">
-=======
-   <widget class="QStackedWidget" name="stackedWidget_main">
->>>>>>> d41f15e010135688ab68d1c15a972dc2f81f7a95
     <property name="geometry">
      <rect>
       <x>0</x>

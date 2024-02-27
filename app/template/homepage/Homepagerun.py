@@ -65,9 +65,15 @@ class HomepageWindow(QMainWindow):
         self.close()
         self.order.show()
 
+    # def back_to_login(self):
+    #     from app.template.newloginsignup.newlogsignrun import StackLoginSignup
+    #     self.login = StackLoginSignup()
+    #     # self.show_goodbye("Log out successful, See you again")
+    #     self.close()
+    #     self.login.show()
     def back_to_login(self):
-        from app.template.newloginsignup.newlogsignrun import StackLoginSignup
-        self.login = StackLoginSignup()
+        from app.template.login.Loginrun import LoginWindow
+        self.login = LoginWindow()
         # self.show_goodbye("Log out successful, See you again")
         self.close()
         self.login.show()
@@ -92,6 +98,10 @@ class HomepageWindow(QMainWindow):
 
     def go_to_editprofile(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.editprofile_page)
+        # from app.template.profile.profilerun import Profile
+        # self.profile = Profile()
+        # self.close()
+        # self.profile.show()
         
     def show_goodbye(self, message):
         msg = QMessageBox()

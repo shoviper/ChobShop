@@ -19,6 +19,9 @@ from app.template.order.Orderrun import *
 
 from app.template.newloginsignup.newlogsignrun import *
 
+from app.template.profile.profilerun import *
+from app.template.profile.profileeditrun import *
+
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
@@ -73,6 +76,17 @@ class Main(HomepageWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder stackwidgetsigninsignout#-------------------------
+        
+#-------------------------Run the folder profile#------------------------
+# For running profile
+# class Main(Profile):
+#     def __init__(self):
+#         super().__init__()
+# For running profileEdit
+# class Main(ProfileEdit):
+#     def __init__(self):
+#         super().__init__()
+#-------------------------Run the folder profile#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")

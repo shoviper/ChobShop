@@ -13,175 +13,136 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FAF9F6;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="menu" native="true">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
+   <widget class="QPushButton" name="backbutton">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>373</width>
-      <height>1080</height>
+      <x>47</x>
+      <y>48</y>
+      <width>21</width>
+      <height>39</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #FAF9F6;
-box-shadow: 2px 0px 40px 2px rgba(0,0,0,0.25);</string>
+color: #CD4662;
+font-size: 39px;
+border: none;
+</string>
     </property>
-    <widget class="QLabel" name="label">
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="usernamecontainer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>68</y>
+      <width>1782</width>
+      <height>266</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #FAF9F6;</string>
+    </property>
+    <widget class="QLabel" name="picprofile">
      <property name="geometry">
       <rect>
-       <x>45</x>
-       <y>68</y>
-       <width>285</width>
-       <height>77</height>
+       <x>33</x>
+       <y>0</y>
+       <width>212</width>
+       <height>212</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font-family: Supermercado;
-                font-size: 64px;
-                font-weight: 400;
-                line-height: 77px;
-                letter-spacing: 0em;
-                text-align: center;
-                color: #000000;</string>
-     </property>
-     <property name="text">
-      <string>ChobShop</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="homebutton">
-     <property name="geometry">
-      <rect>
-       <x>54</x>
-       <y>211</y>
-       <width>265</width>
-       <height>94</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font-family: Suwannaphum;
-                font-size: 24px;
-                font-weight: 700;
-                line-height: 43px;
-                letter-spacing: 0em;
-                text-align: middle;
-                color: #ffffff;
-                background-color: #AEC289;
-                border-radius: 10px;
-</string>
-     </property>
-     <property name="text">
-      <string>Home</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="favbutton">
-     <property name="geometry">
-      <rect>
-       <x>54</x>
-       <y>371</y>
-       <width>265</width>
-       <height>94</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: #000;
-                font-family: Suwannaphum;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                background-color: #E1E3E7;
-                border-radius: 10px;
-</string>
-     </property>
-     <property name="text">
-      <string>Favorites</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="orderbutton">
-     <property name="geometry">
-      <rect>
-       <x>54</x>
-       <y>531</y>
-       <width>265</width>
-       <height>94</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: #000;
-                font-family: Suwannaphum;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                background-color: #E1E3E7;
-                border-radius: 10px;</string>
-     </property>
-     <property name="text">
-      <string>My Orders</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="messbutton">
-     <property name="geometry">
-      <rect>
-       <x>54</x>
-       <y>691</y>
-       <width>265</width>
-       <height>94</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: #000;
-                font-family: Suwannaphum;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                background-color: #E1E3E7;
-                border-radius: 10px;</string>
-     </property>
-     <property name="text">
-      <string>Messages</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="settingsbutton">
-     <property name="geometry">
-      <rect>
-       <x>119</x>
-       <y>930</y>
-       <width>68</width>
-       <height>48</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">image: url(:/pic/images/profile.png);
+image: url(:/pic/images/profile.png);
+background-color: #CD4662;
+border-radius: 50%;</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="exitbutton">
+    <widget class="QLabel" name="usernamelabel">
      <property name="geometry">
       <rect>
-       <x>187</x>
-       <y>930</y>
-       <width>68</width>
-       <height>48</height>
+       <x>332</x>
+       <y>0</y>
+       <width>1449</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="favlabel">
+     <property name="geometry">
+      <rect>
+       <x>332</x>
+       <y>71</y>
+       <width>1449</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #AEC289;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+     </property>
+     <property name="text">
+      <string>3 Favorites</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="editprofilebutton">
+     <property name="geometry">
+      <rect>
+       <x>332</x>
+       <y>141</y>
+       <width>1449</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #CD4662;
+font-family: Suwannaphum;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border: none;
+margin-right: 1275px;
+</string>
+     </property>
+     <property name="text">
+      <string>Edit Profile</string>
+     </property>
+     <property name="default">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../assets/sourceimg/newall.qrc"/>
+ </resources>
  <connections/>
 </ui>

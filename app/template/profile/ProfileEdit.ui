@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1921</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FAF9F6;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="container" native="true">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>87</y>
+      <width>1782</width>
+      <height>942</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="picprofile">
+     <property name="geometry">
+      <rect>
+       <x>49</x>
+       <y>0</y>
+       <width>250</width>
+       <height>250</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/pic/images/profile.png);
+background-color: #CD4662;
+border-radius: 50%;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameprofile">
+     <property name="geometry">
+      <rect>
+       <x>49</x>
+       <y>286</y>
+       <width>250</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+     </property>
+     <property name="text">
+      <string>User1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="textboxcontainer" native="true">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>0</y>
+       <width>1354</width>
+       <height>906</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 20px;
+background: #F4DBDB;
+box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);</string>
+     </property>
+     <widget class="QLabel" name="editprofilelabel">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>54</y>
+        <width>244</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Edit profile</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="usernamelabel">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>143</y>
+        <width>244</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="firstnamelabel">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>308</y>
+        <width>244</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>First name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lastnamelabel">
+      <property name="geometry">
+       <rect>
+        <x>722</x>
+        <y>308</y>
+        <width>277</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Last name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="genderlabel">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>473</y>
+        <width>244</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="birthdaylabel">
+      <property name="geometry">
+       <rect>
+        <x>721</x>
+        <y>473</y>
+        <width>244</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Birthday</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="phonelabel">
+      <property name="geometry">
+       <rect>
+        <x>64</x>
+        <y>638</y>
+        <width>244</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Phone</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="emaillabel">
+      <property name="geometry">
+       <rect>
+        <x>722</x>
+        <y>638</y>
+        <width>244</width>
+        <height>57</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="username">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>200</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>User1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="firstname">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>365</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>None</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lastname">
+      <property name="geometry">
+       <rect>
+        <x>722</x>
+        <y>365</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>None</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="gender">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>530</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>None</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="birthday">
+      <property name="geometry">
+       <rect>
+        <x>722</x>
+        <y>530</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>None</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="phone">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>695</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>None</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="email">
+      <property name="geometry">
+       <rect>
+        <x>722</x>
+        <y>695</y>
+        <width>569</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="placeholderText">
+       <string>User1@gmail.com</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="savechangebutton">
+      <property name="geometry">
+       <rect>
+        <x>974</x>
+        <y>803</y>
+        <width>317</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFF;
+background: #AEC289;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Save changes</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="backbutton">
+    <property name="geometry">
+     <rect>
+      <x>47</x>
+      <y>48</y>
+      <width>21</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #FAF9F6;
+color: #CD4662;
+font-size: 39px;
+border: none;
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../assets/sourceimg/newall.qrc"/>
+ </resources>
+ <connections/>
+</ui>
