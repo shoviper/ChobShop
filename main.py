@@ -41,9 +41,9 @@ from app.template.newloginsignup.newlogsignrun import *
 
 #-------------------------Run the folder homepage#------------------------
 # For running HomepageWindow
-# class Main(HomepageWindow):
-#     def __init__(self):
-#         super().__init__()
+class Main(HomepageWindow):
+    def __init__(self):
+        super().__init__()
 #-------------------------Run the folder homepage#-------------------------
 
 #-------------------------Run the folder favorite#------------------------
@@ -69,9 +69,9 @@ from app.template.newloginsignup.newlogsignrun import *
 
 #-------------------------Run the folder stackwidgetsigninsignout#------------------------
 # For running stackwidgetsigninsignout
-class Main(StackLoginSignup):
-    def __init__(self):
-        super().__init__()
+# class Main(StackLoginSignup):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder stackwidgetsigninsignout#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):

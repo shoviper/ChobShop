@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'testloginsignup.ui'
+## Form generated from reading UI file 'Stackloginsignup.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.0
 ##
@@ -18,7 +18,6 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QStackedWidget,
     QWidget)
-import app.assets.sourceimg.all
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -270,8 +269,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.homebutton.setText(QCoreApplication.translate("MainWindow", u"< Home", None))
         self.label.setText("")
-        self.loginlabel.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
-        self.loginbutton.setText(QCoreApplication.translate("MainWindow", u"Sign in", None))
+        self.loginlabel.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
+        self.loginbutton.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
         self.noacclabel.setText(QCoreApplication.translate("MainWindow", u"Don't have an account?", None))
         self.username.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Username or Email address", None))
         self.password.setText("")

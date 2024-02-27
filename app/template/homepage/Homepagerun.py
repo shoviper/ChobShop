@@ -51,6 +51,7 @@ class HomepageWindow(QMainWindow):
             self.ui.signinsignoutbutton.setText("Log in")
         else:   
             self.ui.signinsignoutbutton.setText(root.LoggedInUser.user.username)
+            self.ui.profilebutton.clicked.connect(self.go_to_editprofile)
 
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
@@ -65,8 +66,8 @@ class HomepageWindow(QMainWindow):
         self.order.show()
 
     def back_to_login(self):
-        from app.template.newloginsignup.newlogsignrun import Test
-        self.login = Test()
+        from app.template.newloginsignup.newlogsignrun import StackLoginSignup
+        self.login = StackLoginSignup()
         # self.show_goodbye("Log out successful, See you again")
         self.close()
         self.login.show()
@@ -88,6 +89,9 @@ class HomepageWindow(QMainWindow):
         print(active_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
+
+    def go_to_editprofile(self):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.editprofile_page)
         
     def show_goodbye(self, message):
         msg = QMessageBox()
