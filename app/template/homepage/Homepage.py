@@ -17,8 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
-    QVBoxLayout, QWidget)
-import app.assets.sourceimg.all
+    QStackedWidget, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -41,7 +40,9 @@ class Ui_MainWindow(object):
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
-"                line-height: normal;")
+"                line-height: normal;\n"
+"		 padding-left: 20px;\n"
+"")
         self.profilebutton = QPushButton(self.searchcontainer)
         self.profilebutton.setObjectName(u"profilebutton")
         self.profilebutton.setGeometry(QRect(1292, 78, 68, 48))
@@ -70,24 +71,50 @@ class Ui_MainWindow(object):
         self.main.setStyleSheet(u"background-color: #FAF9F6;")
         self.verticalLayout = QVBoxLayout(self.main)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.scrollArea = QScrollArea(self.main)
+        self.stackedWidget = QStackedWidget(self.main)
+        self.stackedWidget.setObjectName(u"stackedWidget")
+        self.stackedWidget.setEnabled(True)
+        self.stackedWidget.setStyleSheet(u"background-color: #FAF9F6;")
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.scrollArea = QScrollArea(self.page)
         self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setStyleSheet(u"background-color: #FAF9F6;\n"
-"border:none;")
+        self.scrollArea.setGeometry(QRect(0, 0, 1521, 921))
+        self.scrollArea.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1512, 5018))
-        self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1506, 5000))
+        self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 5000))
         self.frame = QFrame(self.scrollAreaWidgetContents)
         self.frame.setObjectName(u"frame")
-        self.frame.setMinimumSize(QSize(0, 5000))
+        self.frame.setGeometry(QRect(-1, -1, 1531, 5000))
+        self.frame.setMinimumSize(QSize(1531, 5000))
+        self.frame.setStyleSheet(u"border: none;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.stylelabbutton = QPushButton(self.frame)
         self.stylelabbutton.setObjectName(u"stylelabbutton")
-        self.stylelabbutton.setGeometry(QRect(58, 0, 1421, 335))
+        self.stylelabbutton.setGeometry(QRect(70, 30, 1421, 335))
         self.stylelabbutton.setStyleSheet(u"color: #FFF;\n"
 "                text-align: center;\n"
 "                font-family: Supermercado;\n"
@@ -97,23 +124,9 @@ class Ui_MainWindow(object):
 "                line-height: normal;\n"
 "                border-radius: 10px;\n"
 "                background-color: #CD4662;")
-        self.newarrivalbutton = QPushButton(self.frame)
-        self.newarrivalbutton.setObjectName(u"newarrivalbutton")
-        self.newarrivalbutton.setGeometry(QRect(58, 398, 282, 64))
-        self.newarrivalbutton.setStyleSheet(u"border-radius: 10px;\n"
-"                border: 2px solid #000;\n"
-"                opacity: 0.2;\n"
-"                background-color: #F7F2EB;\n"
-"                color: #545454;\n"
-"                text-align: center;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 32px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;")
         self.onsalebutton = QPushButton(self.frame)
         self.onsalebutton.setObjectName(u"onsalebutton")
-        self.onsalebutton.setGeometry(QRect(1206, 398, 282, 64))
+        self.onsalebutton.setGeometry(QRect(1210, 420, 282, 64))
         self.onsalebutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -127,7 +140,7 @@ class Ui_MainWindow(object):
 "                line-height: normal;")
         self.buyagainbutton = QPushButton(self.frame)
         self.buyagainbutton.setObjectName(u"buyagainbutton")
-        self.buyagainbutton.setGeometry(QRect(440, 398, 282, 64))
+        self.buyagainbutton.setGeometry(QRect(450, 420, 282, 64))
         self.buyagainbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -141,7 +154,7 @@ class Ui_MainWindow(object):
 "                line-height: normal;")
         self.bestsellbutton = QPushButton(self.frame)
         self.bestsellbutton.setObjectName(u"bestsellbutton")
-        self.bestsellbutton.setGeometry(QRect(822, 398, 282, 64))
+        self.bestsellbutton.setGeometry(QRect(830, 420, 282, 64))
         self.bestsellbutton.setStyleSheet(u"border-radius: 10px;\n"
 "                border: 2px solid #000;\n"
 "                opacity: 0.2;\n"
@@ -153,9 +166,50 @@ class Ui_MainWindow(object):
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
 "                line-height: normal;")
+        self.newarrivalbutton = QPushButton(self.frame)
+        self.newarrivalbutton.setObjectName(u"newarrivalbutton")
+        self.newarrivalbutton.setGeometry(QRect(70, 420, 282, 64))
+        self.newarrivalbutton.setStyleSheet(u"border-radius: 10px;\n"
+"                border: 2px solid #000;\n"
+"                opacity: 0.2;\n"
+"                background-color: #F7F2EB;\n"
+"                color: #545454;\n"
+"                text-align: center;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 32px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;")
+        self.product_3 = QWidget(self.frame)
+        self.product_3.setObjectName(u"product_3")
+        self.product_3.setGeometry(QRect(1100, 670, 381, 502))
+        self.product_3.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.picproduct3 = QPushButton(self.product_3)
+        self.picproduct3.setObjectName(u"picproduct3")
+        self.picproduct3.setGeometry(QRect(43, 43, 295, 295))
+        self.picproduct3.setStyleSheet(u"background-color: #FFF;")
+        self.product_2 = QWidget(self.frame)
+        self.product_2.setObjectName(u"product_2")
+        self.product_2.setGeometry(QRect(580, 670, 381, 502))
+        self.product_2.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.picproduct2 = QPushButton(self.product_2)
+        self.picproduct2.setObjectName(u"picproduct2")
+        self.picproduct2.setGeometry(QRect(43, 43, 295, 295))
+        self.picproduct2.setStyleSheet(u"background-color: #FFF;")
+        self.product_1 = QWidget(self.frame)
+        self.product_1.setObjectName(u"product_1")
+        self.product_1.setGeometry(QRect(70, 670, 381, 502))
+        self.product_1.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;")
+        self.picproduct1 = QPushButton(self.product_1)
+        self.picproduct1.setObjectName(u"picproduct1")
+        self.picproduct1.setGeometry(QRect(43, 43, 295, 295))
+        self.picproduct1.setStyleSheet(u"background-color: #FFF;")
         self.suggestlabel = QLabel(self.frame)
         self.suggestlabel.setObjectName(u"suggestlabel")
-        self.suggestlabel.setGeometry(QRect(58, 528, 250, 72))
+        self.suggestlabel.setGeometry(QRect(70, 540, 250, 72))
         self.suggestlabel.setStyleSheet(u"color: #545454;\n"
 "                text-align: center;\n"
 "                font-family: Suwannaphum;\n"
@@ -163,93 +217,40 @@ class Ui_MainWindow(object):
 "                font-style: normal;\n"
 "                font-weight: 700;\n"
 "                line-height: normal;")
-        self.container1 = QWidget(self.frame)
-        self.container1.setObjectName(u"container1")
-        self.container1.setGeometry(QRect(58, 663, 381, 502))
-        self.container1.setStyleSheet(u"border-radius: 10px;\n"
+        self.product_6 = QWidget(self.frame)
+        self.product_6.setObjectName(u"product_6")
+        self.product_6.setGeometry(QRect(590, 1260, 381, 502))
+        self.product_6.setStyleSheet(u"border-radius: 10px;\n"
 "                background: #D9D9D9;")
-        self.pic1 = QPushButton(self.container1)
-        self.pic1.setObjectName(u"pic1")
-        self.pic1.setGeometry(QRect(43, 43, 295, 295))
-        self.pic1.setStyleSheet(u"background-color: #FFF;")
-        self.container2 = QWidget(self.frame)
-        self.container2.setObjectName(u"container2")
-        self.container2.setGeometry(QRect(582, 663, 381, 502))
-        self.container2.setStyleSheet(u"border-radius: 10px;\n"
+        self.picproduct2_5 = QPushButton(self.product_6)
+        self.picproduct2_5.setObjectName(u"picproduct2_5")
+        self.picproduct2_5.setGeometry(QRect(43, 43, 295, 295))
+        self.picproduct2_5.setStyleSheet(u"background-color: #FFF;")
+        self.product_5 = QWidget(self.frame)
+        self.product_5.setObjectName(u"product_5")
+        self.product_5.setGeometry(QRect(80, 1260, 381, 502))
+        self.product_5.setStyleSheet(u"border-radius: 10px;\n"
 "                background: #D9D9D9;")
-        self.pic2 = QPushButton(self.container2)
-        self.pic2.setObjectName(u"pic2")
-        self.pic2.setGeometry(QRect(43, 43, 295, 295))
-        self.pic2.setStyleSheet(u"background-color: #FFF;")
-        self.container3 = QWidget(self.frame)
-        self.container3.setObjectName(u"container3")
-        self.container3.setGeometry(QRect(1107, 663, 381, 502))
-        self.container3.setStyleSheet(u"border-radius: 10px;\n"
+        self.picproduct1_5 = QPushButton(self.product_5)
+        self.picproduct1_5.setObjectName(u"picproduct1_5")
+        self.picproduct1_5.setGeometry(QRect(43, 43, 295, 295))
+        self.picproduct1_5.setStyleSheet(u"background-color: #FFF;")
+        self.product_4 = QWidget(self.frame)
+        self.product_4.setObjectName(u"product_4")
+        self.product_4.setGeometry(QRect(1110, 1260, 381, 502))
+        self.product_4.setStyleSheet(u"border-radius: 10px;\n"
 "                background: #D9D9D9;")
-        self.pic3 = QPushButton(self.container3)
-        self.pic3.setObjectName(u"pic3")
-        self.pic3.setGeometry(QRect(43, 43, 295, 295))
-        self.pic3.setStyleSheet(u"background-color: #FFF;")
-        self.container4 = QWidget(self.frame)
-        self.container4.setObjectName(u"container4")
-        self.container4.setGeometry(QRect(58, 1228, 381, 502))
-        self.container4.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;")
-        self.pic4 = QPushButton(self.container4)
-        self.pic4.setObjectName(u"pic4")
-        self.pic4.setGeometry(QRect(43, 43, 295, 295))
-        self.pic4.setStyleSheet(u"background-color: #FFF;")
-        self.container5 = QWidget(self.frame)
-        self.container5.setObjectName(u"container5")
-        self.container5.setGeometry(QRect(582, 1228, 381, 502))
-        self.container5.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;")
-        self.pic5 = QPushButton(self.container5)
-        self.pic5.setObjectName(u"pic5")
-        self.pic5.setGeometry(QRect(43, 43, 295, 295))
-        self.pic5.setStyleSheet(u"background-color: #FFF;")
-        self.container6 = QWidget(self.frame)
-        self.container6.setObjectName(u"container6")
-        self.container6.setGeometry(QRect(1107, 1228, 381, 502))
-        self.container6.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;")
-        self.pic6 = QPushButton(self.container6)
-        self.pic6.setObjectName(u"pic6")
-        self.pic6.setGeometry(QRect(43, 43, 295, 295))
-        self.pic6.setStyleSheet(u"background-color: #FFF;")
-        self.container7 = QWidget(self.frame)
-        self.container7.setObjectName(u"container7")
-        self.container7.setGeometry(QRect(58, 1793, 381, 502))
-        self.container7.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;")
-        self.pic7 = QPushButton(self.container7)
-        self.pic7.setObjectName(u"pic7")
-        self.pic7.setGeometry(QRect(43, 43, 295, 295))
-        self.pic7.setStyleSheet(u"background-color: #FFF;")
-        self.container8 = QWidget(self.frame)
-        self.container8.setObjectName(u"container8")
-        self.container8.setGeometry(QRect(582, 1793, 381, 502))
-        self.container8.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;")
-        self.pic8 = QPushButton(self.container8)
-        self.pic8.setObjectName(u"pic8")
-        self.pic8.setGeometry(QRect(43, 43, 295, 295))
-        self.pic8.setStyleSheet(u"background-color: #FFF;")
-        self.container9 = QWidget(self.frame)
-        self.container9.setObjectName(u"container9")
-        self.container9.setGeometry(QRect(1107, 1793, 381, 502))
-        self.container9.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;")
-        self.pic9 = QPushButton(self.container9)
-        self.pic9.setObjectName(u"pic9")
-        self.pic9.setGeometry(QRect(43, 43, 295, 295))
-        self.pic9.setStyleSheet(u"background-color: #FFF;")
-
-        self.verticalLayout_2.addWidget(self.frame)
-
+        self.picproduct3_5 = QPushButton(self.product_4)
+        self.picproduct3_5.setObjectName(u"picproduct3_5")
+        self.picproduct3_5.setGeometry(QRect(43, 43, 295, 295))
+        self.picproduct3_5.setStyleSheet(u"background-color: #FFF;")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.stackedWidget.addWidget(self.page)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.stackedWidget.addWidget(self.page_2)
 
-        self.verticalLayout.addWidget(self.scrollArea)
+        self.verticalLayout.addWidget(self.stackedWidget)
 
         self.widget = QWidget(self.centralwidget)
         self.widget.setObjectName(u"widget")
@@ -269,18 +270,18 @@ class Ui_MainWindow(object):
         self.homebutton.setObjectName(u"homebutton")
         self.homebutton.setGeometry(QRect(54, 211, 265, 94))
         self.homebutton.setStyleSheet(u"QPushButton{\n"
-"	color: #000;\n"
+"	color: #FAF9F6;\n"
 "                font-family: Suwannaphum;\n"
 "                font-size: 24px;\n"
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
 "                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
+"                background-color: #AEC289;\n"
 "                border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover {\n"
-"                background-color: #AEC289;\n"
-"                color: #FAF9F6;\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
 "            }\n"
 "")
         self.favbutton = QPushButton(self.widget)
@@ -297,8 +298,8 @@ class Ui_MainWindow(object):
 "                border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover {\n"
-"                background-color: #AEC289;\n"
-"                color: #FAF9F6;\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
 "            }")
         self.orderbutton = QPushButton(self.widget)
         self.orderbutton.setObjectName(u"orderbutton")
@@ -314,8 +315,8 @@ class Ui_MainWindow(object):
 "                border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover {\n"
-"                background-color: #AEC289;\n"
-"                color: #FAF9F6;\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
 "            }")
         self.messbutton = QPushButton(self.widget)
         self.messbutton.setObjectName(u"messbutton")
@@ -331,8 +332,8 @@ class Ui_MainWindow(object):
 "                border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover {\n"
-"                background-color: #AEC289;\n"
-"                color: #FAF9F6;\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
 "            }")
         self.settingsbutton = QPushButton(self.widget)
         self.settingsbutton.setObjectName(u"settingsbutton")
@@ -358,20 +359,17 @@ class Ui_MainWindow(object):
         self.cartbutton.setText("")
         self.signinsignoutbutton.setText(QCoreApplication.translate("MainWindow", u"Sign In", None))
         self.stylelabbutton.setText(QCoreApplication.translate("MainWindow", u"Style lab", None))
-        self.newarrivalbutton.setText(QCoreApplication.translate("MainWindow", u"New Arrival", None))
         self.onsalebutton.setText(QCoreApplication.translate("MainWindow", u"On Sales", None))
         self.buyagainbutton.setText(QCoreApplication.translate("MainWindow", u"Buy Again", None))
         self.bestsellbutton.setText(QCoreApplication.translate("MainWindow", u"Best Selling", None))
+        self.newarrivalbutton.setText(QCoreApplication.translate("MainWindow", u"New Arrival", None))
+        self.picproduct3.setText("")
+        self.picproduct2.setText("")
+        self.picproduct1.setText("")
         self.suggestlabel.setText(QCoreApplication.translate("MainWindow", u"Suggestions", None))
-        self.pic1.setText("")
-        self.pic2.setText("")
-        self.pic3.setText("")
-        self.pic4.setText("")
-        self.pic5.setText("")
-        self.pic6.setText("")
-        self.pic7.setText("")
-        self.pic8.setText("")
-        self.pic9.setText("")
+        self.picproduct2_5.setText("")
+        self.picproduct1_5.setText("")
+        self.picproduct3_5.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"ChopShop", None))
         self.homebutton.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.favbutton.setText(QCoreApplication.translate("MainWindow", u"Favorites", None))

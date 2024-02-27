@@ -19,7 +19,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
-        self.ui.favbutton.clicked.connect(self.go_to_favorite)
+        self.ui.favbutton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_2))
         self.ui.orderbutton.clicked.connect(self.go_to_order)
 
     def go_to_order(self):
