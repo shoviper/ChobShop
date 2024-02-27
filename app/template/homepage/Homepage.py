@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
 "                font-style: normal;\n"
 "                font-weight: 400;\n"
 "                line-height: normal;\n"
-"		 padding-left: 20px;\n"
+"				padding-left: 20px;\n"
 "")
         self.profilebutton = QPushButton(self.searchcontainer)
         self.profilebutton.setObjectName(u"profilebutton")
@@ -64,7 +64,8 @@ class Ui_MainWindow(object):
 "                font-weight: 400;\n"
 "                line-height: normal;\n"
 "                border: none;\n"
-"                margin-bottom: 15px;")
+"                margin-bottom: 15px;\n"
+"				text-align: center;")
         self.main = QWidget(self.centralwidget)
         self.main.setObjectName(u"main")
         self.main.setGeometry(QRect(373, 161, 1547, 919))
@@ -103,12 +104,12 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1506, 5000))
-        self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 5000))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1506, 2000))
+        self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 2000))
         self.frame = QFrame(self.scrollAreaWidgetContents)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(-1, -1, 1531, 5000))
-        self.frame.setMinimumSize(QSize(1531, 5000))
+        self.frame.setGeometry(QRect(-1, -1, 1531, 2500))
+        self.frame.setMinimumSize(QSize(1531, 1080))
         self.frame.setStyleSheet(u"border: none;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -284,6 +285,8 @@ class Ui_MainWindow(object):
 "                color: black;\n"
 "            }\n"
 "")
+        self.homebutton.setCheckable(True)
+        self.homebutton.setAutoExclusive(True)
         self.favbutton = QPushButton(self.widget)
         self.favbutton.setObjectName(u"favbutton")
         self.favbutton.setGeometry(QRect(54, 371, 265, 94))
@@ -301,6 +304,8 @@ class Ui_MainWindow(object):
 "                background-color: #F4DBDB;\n"
 "                color: black;\n"
 "            }")
+        self.favbutton.setCheckable(True)
+        self.favbutton.setAutoExclusive(True)
         self.orderbutton = QPushButton(self.widget)
         self.orderbutton.setObjectName(u"orderbutton")
         self.orderbutton.setGeometry(QRect(54, 531, 265, 94))
@@ -318,6 +323,8 @@ class Ui_MainWindow(object):
 "                background-color: #F4DBDB;\n"
 "                color: black;\n"
 "            }")
+        self.orderbutton.setCheckable(True)
+        self.orderbutton.setAutoExclusive(True)
         self.messbutton = QPushButton(self.widget)
         self.messbutton.setObjectName(u"messbutton")
         self.messbutton.setGeometry(QRect(54, 691, 265, 94))
@@ -335,6 +342,8 @@ class Ui_MainWindow(object):
 "                background-color: #F4DBDB;\n"
 "                color: black;\n"
 "            }")
+        self.messbutton.setCheckable(True)
+        self.messbutton.setAutoExclusive(True)
         self.settingsbutton = QPushButton(self.widget)
         self.settingsbutton.setObjectName(u"settingsbutton")
         self.settingsbutton.setGeometry(QRect(119, 930, 68, 48))

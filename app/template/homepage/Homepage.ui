@@ -103,7 +103,8 @@ border: none;</string>
                 font-weight: 400;
                 line-height: normal;
                 border: none;
-                margin-bottom: 15px;</string>
+                margin-bottom: 15px;
+				text-align: center;</string>
      </property>
      <property name="text">
       <string>Sign In</string>
@@ -172,13 +173,13 @@ QScrollBar::handle:vertical:hover {
             <x>0</x>
             <y>0</y>
             <width>1506</width>
-            <height>5000</height>
+            <height>2000</height>
            </rect>
           </property>
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>5000</height>
+            <height>2000</height>
            </size>
           </property>
           <widget class="QFrame" name="frame">
@@ -187,13 +188,13 @@ QScrollBar::handle:vertical:hover {
              <x>-1</x>
              <y>-1</y>
              <width>1531</width>
-             <height>5000</height>
+             <height>2500</height>
             </rect>
            </property>
            <property name="minimumSize">
             <size>
              <width>1531</width>
-             <height>5000</height>
+             <height>1080</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -607,6 +608,12 @@ QPushButton:hover {
      <property name="text">
       <string>Home</string>
      </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QPushButton" name="favbutton">
      <property name="geometry">
@@ -635,6 +642,12 @@ QPushButton:hover {
      </property>
      <property name="text">
       <string>Favorites</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="orderbutton">
@@ -665,6 +678,12 @@ QPushButton:hover {
      <property name="text">
       <string>My Orders</string>
      </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QPushButton" name="messbutton">
      <property name="geometry">
@@ -693,6 +712,12 @@ QPushButton:hover {
      </property>
      <property name="text">
       <string>Messages</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="settingsbutton">

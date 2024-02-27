@@ -54,6 +54,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
+        self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
 
@@ -70,11 +71,13 @@ class HomepageWindow(QMainWindow):
         self.close()
         self.login.show()
 
-    def go_to_favorite(self):
-        from app.template.favorite.Favoriterun import FavoriteWindow
-        self.ui.stackedWidget.setCurrentWidget(self.ui.page_2)
-
-        favbutton_style = self.ui.favbutton.styleSheet()
+    def go_to_home(self):
+        from app.template.homepage.Homepagerun import HomepageWindow
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page)
+        self.ui.homebutton.setStyleSheet(active_button_style)
+        self.ui.favbutton.setStyleSheet(inactive_button_style)
+        self.ui.orderbutton.setStyleSheet(inactive_button_style)
+        self.ui.messbutton.setStyleSheet(inactive_button_style)
 
     def go_to_favorite(self):
         from app.template.favorite.Favoriterun import FavoriteWindow
