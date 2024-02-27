@@ -82,6 +82,19 @@ def logout(username):
     return True
 
 
+def print_all_users():
+    print("Users:")
+    for user in root.customerUsers.values():
+        print("--------------------------------")
+        print(f"Username: {user.username}")
+        print(f"Email: {user.email}")
+        print(f"Name: {user.name}")
+        print(f"Surname: {user.surname}")
+        print(f"Address: {user.address}")
+        print(f"Phone: {user.phone}")
+        print(f"Admin: {user.admin}")
+
+
 def print_database_contents(username):
     print("General Users:")
     # for user in root.customerUsers[username]:

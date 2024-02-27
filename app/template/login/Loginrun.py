@@ -30,7 +30,7 @@ class LoginWindow(QMainWindow):
         self.close()
         self.home.show()
 
-        
+
 
     def open_homepage(self):
         self.close()

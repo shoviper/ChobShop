@@ -31,9 +31,14 @@ class StackLoginSignup(QMainWindow):
 
     
     def register_check(self):
-        username = self.ui.username.text()
+        print("Register button clicked")
+        username = self.ui.username_2.text()
         email = self.ui.email.text()
-        password = self.ui.password.text()
+        password = self.ui.password_2.text()
+        
+        if username == "" or email == "" or password == "":
+            self.show_error("Please fill in all fields")
+            return
 #-------------------------------------------------------------
         # admin = False
         # if self.ui.checkbox.isChecked():
@@ -55,12 +60,18 @@ class StackLoginSignup(QMainWindow):
         print("Login button clicked")
         username = self.ui.username.text()
         password = self.ui.password.text()
+        
+        if username == "" or password == "":
+            self.show_error("Please fill in all fields")
+            return
+        
         admin = False
         if self.ui.checkbox.isChecked():
             admin = True
         if login(username, password, admin):
             print("Login Successful")
             self.show_success("Login successful, welcome")
+            # print_all_users()
             self.go_to_homepage()
         else:
             print("Login Failed")

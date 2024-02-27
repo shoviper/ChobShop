@@ -49,11 +49,13 @@ class HomepageWindow(QMainWindow):
 
         if root.LoggedInUser.logged_in == False:
             self.ui.signinsignoutbutton.setText("Log in")
+            self.ui.profilebutton.clicked.connect(self.show_error("Please log in to view profile"))
+            self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
         else:   
             self.ui.signinsignoutbutton.setText(root.LoggedInUser.user.username)
             self.ui.profilebutton.clicked.connect(self.go_to_editprofile)
-
-        self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
+            self.ui.signinsignoutbutton.clicked.connect(self.go_to_editprofile)
+            
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
@@ -98,6 +100,14 @@ class HomepageWindow(QMainWindow):
         msg.setIcon(QMessageBox.Information)
         msg.setText(message)
         msg.setWindowTitle("Login Succesful")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
+    
+    def show_error(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Warning)
+        msg.setText(message)
+        msg.setWindowTitle("Login Error")
         msg.setStandardButtons(QMessageBox.Ok)
         msg.exec()
 
