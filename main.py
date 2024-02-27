@@ -17,6 +17,8 @@ from app.template.product.Productrun import *
 
 from app.template.order.Orderrun import *
 
+from app.template.newloginsignup.newlogsignrun import *
+
 #-------------------------Run the folder template#-------------------------
 # class Main(LoginWindow):
 #     def __init__(self):
@@ -32,9 +34,9 @@ from app.template.order.Orderrun import *
         
 #-------------------------Run the folder signup#------------------------
 # For running SignupWindow
-class Main(SignupWindow):
-    def __init__(self):
-        super().__init__()
+# class Main(SignupWindow):
+#     def __init__(self):
+#         super().__init__()
 #-------------------------Run the folder signup#-------------------------
 
 #-------------------------Run the folder homepage#------------------------
@@ -64,6 +66,13 @@ class Main(SignupWindow):
 #     def __init__(self):
 #         super().__init__()
 #-------------------------Run the folder order#-------------------------
+
+#-------------------------Run the folder stackwidgetsigninsignout#------------------------
+# For running stackwidgetsigninsignout
+class Main(StackLoginSignup):
+    def __init__(self):
+        super().__init__()
+#-------------------------Run the folder stackwidgetsigninsignout#-------------------------
 
 # if acc.register("username", "email@example.com", "password"):
 #     print("User registered successfully")

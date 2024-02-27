@@ -65,8 +65,8 @@ class HomepageWindow(QMainWindow):
         self.order.show()
 
     def back_to_login(self):
-        from app.template.login.Loginrun import LoginWindow
-        self.login = LoginWindow()
+        from app.template.newloginsignup.newlogsignrun import Test
+        self.login = Test()
         # self.show_goodbye("Log out successful, See you again")
         self.close()
         self.login.show()
