@@ -46,6 +46,7 @@ class HomepageWindow(QMainWindow):
         super(HomepageWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+<<<<<<< Updated upstream
 
         if root.LoggedInUser.logged_in == False:
             self.ui.signinsignoutbutton.setText("Log in")
@@ -54,16 +55,59 @@ class HomepageWindow(QMainWindow):
             self.ui.profilebutton.clicked.connect(self.go_to_editprofile)
 
         self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
+=======
+        
+>>>>>>> Stashed changes
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
 
+<<<<<<< Updated upstream
     def go_to_order(self):
         from app.template.order.Orderrun import OrderWindow
         self.order = OrderWindow()
         self.close()
         self.order.show()
+=======
+    def applyHoverEffect(self):
+        # Define the style sheet for the hover effect
+        hover_style = """
+            QPushButton#homebutton:hover {
+                background-color: #BEC977; /* Change to the desired hover color */
+            }
+        """
+        self.ui.homebutton.setStyleSheet(hover_style)
+    def set_button_icon(self):
+        setpixmap = QPixmap("app/assets/images/settings.png")
+        seticon = self.ui.settingsbutton.sizeHint()
+        seticon.setHeight(40)
+        seticon.setWidth(40)
+        self.ui.settingsbutton.setIconSize(seticon)
+        
+        exitpixmap = QPixmap("app/assets/images/exit.png")
+        exiticon = self.ui.exitbutton.sizeHint()
+        exiticon.setHeight(40)
+        exiticon.setWidth(40)
+        self.ui.exitbutton.setIconSize(exiticon)
+
+        profilepixmap = QPixmap("app/assets/images/profile.png")
+        profileicon = self.ui.profile.sizeHint()
+        profileicon.setHeight(40)
+        profileicon.setWidth(40)
+        self.ui.profile.setIconSize(profileicon)
+
+        cartpixmap = QPixmap("app/assets/images/cart.png")
+        carticon = self.ui.cartbutton_2.sizeHint()
+        carticon.setHeight(40)
+        carticon.setWidth(40)
+        self.ui.cartbutton_2.setIconSize(carticon)
+
+        self.ui.settingsbutton.setIcon(setpixmap)
+        self.ui.exitbutton.setIcon(exitpixmap)
+        self.ui.profile.setIcon(profilepixmap)
+        self.ui.cartbutton_2.setIcon(cartpixmap)
+>>>>>>> Stashed changes
 
     # def back_to_login(self):
     #     from app.template.newloginsignup.newlogsignrun import StackLoginSignup
