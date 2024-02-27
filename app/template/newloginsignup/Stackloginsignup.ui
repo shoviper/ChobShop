@@ -117,7 +117,7 @@ background: #E1E3E7;</string>
                 line-height: normal;</string>
        </property>
        <property name="text">
-        <string>Sign in</string>
+        <string>Log in</string>
        </property>
       </widget>
       <widget class="QPushButton" name="loginbutton">
@@ -147,7 +147,7 @@ background: #E1E3E7;</string>
             }</string>
        </property>
        <property name="text">
-        <string>Sign in</string>
+        <string>Log in</string>
        </property>
       </widget>
       <widget class="QLabel" name="noacclabel">
@@ -489,8 +489,6 @@ background: #E1E3E7;</string>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="../assets/sourceimg/newall.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

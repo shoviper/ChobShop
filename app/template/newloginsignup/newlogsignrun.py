@@ -13,7 +13,7 @@ class StackLoginSignup(QMainWindow):
         
         self.ui.signupbutton.clicked.connect(self.register_check)
         self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window)
-        self.ui.loginbutton.clicked.connect(self.login_window)
+        self.ui.loginbutton.clicked.connect(self.login_check)
         self.ui.signfornoaccbutton_2.clicked.connect(self.open_login_window)
         self.ui.homebutton.clicked.connect(self.go_to_homepage)
 
@@ -51,7 +51,8 @@ class StackLoginSignup(QMainWindow):
             print("User registration failed")
             self.show_error("User registration failed")
 
-    def login_window(self):
+    def login_check(self):
+        print("Login button clicked")
         username = self.ui.username.text()
         password = self.ui.password.text()
         admin = False
@@ -61,12 +62,10 @@ class StackLoginSignup(QMainWindow):
             print("Login Successful")
             self.show_success("Login successful, welcome")
             self.go_to_homepage()
-            
         else:
             print("Login Failed")
             self.ui.username.clear()
             self.ui.password.clear()
-            # self.open_signup_window()
             self.show_error("Login failed, please try again")
 
     def show_success(self, message):
