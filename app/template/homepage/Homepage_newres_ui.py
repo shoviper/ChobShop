@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
     QLineEdit, QPushButton, QScrollArea, QSizePolicy,
     QStackedWidget, QVBoxLayout, QWidget)
-# import realpicforuse_rc
+import app.assets.realsourceimg.real
 
 class Ui_Main(object):
     def setupUi(self, Main):
