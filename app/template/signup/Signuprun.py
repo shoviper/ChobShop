@@ -2,7 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
-from .Signup import *
+from ..login.Login_Signup_ui import *
 # from .test import *
 # from Signup import *
 # from Login import *
@@ -12,11 +12,11 @@ from app.db.database import *
 class SignupWindow(QMainWindow):
     def __init__(self):
         super(SignupWindow,self).__init__()
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_Login_Signup()
         self.ui.setupUi(self)
         
         self.ui.signupbutton.clicked.connect(self.register_check)
-        self.ui.signfornoaccbutton.clicked.connect(self.open_login_window)
+        self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window)
         self.ui.homebutton.clicked.connect(self.go_to_homepage)
 
     def open_login_window(self):
@@ -34,9 +34,9 @@ class SignupWindow(QMainWindow):
 
     
     def register_check(self):
-        username = self.ui.username.text()
-        email = self.ui.email.text()
-        password = self.ui.password.text()
+        username = self.ui.username_signup.text()
+        email = self.ui.email_signup.text()
+        password = self.ui.password_signup.text()
 #-------------------------------------------------------------
         # admin = False
         # if self.ui.checkbox.isChecked():

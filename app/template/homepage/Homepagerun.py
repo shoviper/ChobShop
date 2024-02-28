@@ -52,9 +52,10 @@ class HomepageWindow(QMainWindow):
             self.ui.profilebutton.clicked.connect(lambda: self.show_error("Please log in to view profile"))
             self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         else:   
+            print(root.LoggedInUser.user.username)
             self.ui.loginsignoutbutton.setText(root.LoggedInUser.user.username)
-            self.ui.profilebutton.clicked.connect(self.go_to_editprofile)
-            self.ui.loginsignoutbutton.clicked.connect(self.go_to_editprofile)
+            self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
+            self.ui.loginsignoutbutton.clicked.connect(self.go_to_userprofile)
             
 
         self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
@@ -100,8 +101,8 @@ class HomepageWindow(QMainWindow):
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
 
-    def go_to_editprofile(self):
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.editprofile_page)
+    def go_to_userprofile(self):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.userprofile)
         # from app.template.profile.profilerun import Profile
         # self.profile = Profile()
         # self.close()

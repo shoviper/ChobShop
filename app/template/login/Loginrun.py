@@ -2,7 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
-from .Login import *
+from .Login_Signup_ui import *
 # from Login import *
 # from app.signuptest.Signuprun import *
 from app.db.database import *
@@ -10,7 +10,7 @@ from app.db.database import *
 class LoginWindow(QMainWindow):
     def __init__(self):
         super(LoginWindow,self).__init__()
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_Login_Signup()
         self.ui.setupUi(self)
         
         self.ui.loginbutton.clicked.connect(self.login_window) 
@@ -30,8 +30,6 @@ class LoginWindow(QMainWindow):
         self.close()
         self.home.show()
 
-
-
     def open_homepage(self):
         self.close()
         from app.template.homepage.Homepagerun import HomepageWindow
@@ -39,10 +37,10 @@ class LoginWindow(QMainWindow):
         self.login_window.show()
         
     def login_window(self):
-        username = self.ui.username.text()
-        password = self.ui.password.text()
+        username = self.ui.username_login.text()
+        password = self.ui.password_login.text()
         admin = False
-        if self.ui.checkbox.isChecked():
+        if self.ui.admincheckbox.isChecked():
             admin = True
         if login(username, password, admin):
             print("Login Successful")
@@ -51,8 +49,8 @@ class LoginWindow(QMainWindow):
             
         else:
             print("Login Failed")
-            self.ui.username.clear()
-            self.ui.password.clear()
+            self.ui.username_login.clear()
+            self.ui.password_login.clear()
             # self.open_signup_window()
             self.show_error("Login failed, please try again")
 
