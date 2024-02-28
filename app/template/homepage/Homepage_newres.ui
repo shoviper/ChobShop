@@ -1161,7 +1161,271 @@ border-radius: 0px;</string>
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="userprofile"/>
+   <widget class="QWidget" name="userprofile">
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>1281</width>
+       <height>721</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QScrollArea" name="scrollArea_userprofile">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1277</width>
+           <height>717</height>
+          </rect>
+         </property>
+         <widget class="QFrame" name="frame_userprofile">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1281</width>
+            <height>721</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="homebutton_userprofile">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>40</y>
+             <width>21</width>
+             <height>33</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+               color: #CD4662;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border: none;
+            }
+            QPushButton:hover {
+               color: #AEC289;
+            }</string>
+           </property>
+           <property name="text">
+            <string>&lt;</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../../assets/images/newres/arrow_pink.png</normaloff>../../assets/images/newres/arrow_pink.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="openshopbutton">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>290</y>
+             <width>1118</width>
+             <height>76</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background-color: #F4DBDB;
+	color: #000;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: #AEC289;
+	color: white;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>    Open Your Shop</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../../assets/images/newres/openyourshop.png</normaloff>../../assets/images/newres/openyourshop.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>42</width>
+             <height>34</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QLabel" name="usernamelabel_userprofile">
+           <property name="geometry">
+            <rect>
+             <x>236</x>
+             <y>100</y>
+             <width>181</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+           </property>
+           <property name="text">
+            <string>Username</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="favlabel">
+           <property name="geometry">
+            <rect>
+             <x>236</x>
+             <y>140</y>
+             <width>91</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #AEC289;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+           </property>
+           <property name="text">
+            <string>3 Favorites</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="picprofile">
+           <property name="geometry">
+            <rect>
+             <x>91</x>
+             <y>100</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #CD4662;
+border-radius: 50%;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="Line" name="editprofileline">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>240</y>
+             <width>1118</width>
+             <height>3</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 3px solid #CD4662;</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QSplitter" name="splitter">
+           <property name="geometry">
+            <rect>
+             <x>236</x>
+             <y>170</y>
+             <width>951</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QPushButton" name="editprofilebutton_2">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border: none;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	color: #CD4662;
+	text-align: left;
+}</string>
+            </property>
+            <property name="text">
+             <string>Edit Profile</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="editprofilebutton_1">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../assets/images/newres/rightarrow_pink.png</normaloff>../../assets/images/newres/rightarrow_pink.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>

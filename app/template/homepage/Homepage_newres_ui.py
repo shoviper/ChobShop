@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
     QLineEdit, QPushButton, QScrollArea, QSizePolicy,
-    QStackedWidget, QWidget)
+    QSplitter, QStackedWidget, QWidget)
 
 class Ui_Main(object):
     def setupUi(self, Main):
@@ -523,6 +523,130 @@ class Ui_Main(object):
         self.stackedWidget.addWidget(self.main)
         self.userprofile = QWidget()
         self.userprofile.setObjectName(u"userprofile")
+        self.gridLayoutWidget_2 = QWidget(self.userprofile)
+        self.gridLayoutWidget_2.setObjectName(u"gridLayoutWidget_2")
+        self.gridLayoutWidget_2.setGeometry(QRect(-1, -1, 1281, 721))
+        self.gridLayout_2 = QGridLayout(self.gridLayoutWidget_2)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.scrollArea_userprofile = QScrollArea(self.gridLayoutWidget_2)
+        self.scrollArea_userprofile.setObjectName(u"scrollArea_userprofile")
+        self.scrollArea_userprofile.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_3 = QWidget()
+        self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1277, 717))
+        self.frame_userprofile = QFrame(self.scrollAreaWidgetContents_3)
+        self.frame_userprofile.setObjectName(u"frame_userprofile")
+        self.frame_userprofile.setGeometry(QRect(0, 0, 1281, 721))
+        self.frame_userprofile.setFrameShape(QFrame.StyledPanel)
+        self.frame_userprofile.setFrameShadow(QFrame.Raised)
+        self.homebutton_userprofile = QPushButton(self.frame_userprofile)
+        self.homebutton_userprofile.setObjectName(u"homebutton_userprofile")
+        self.homebutton_userprofile.setGeometry(QRect(40, 40, 21, 33))
+        self.homebutton_userprofile.setCursor(QCursor(Qt.PointingHandCursor))
+        self.homebutton_userprofile.setStyleSheet(u"QPushButton {\n"
+"               color: #CD4662;\n"
+"                font-family: Inter;\n"
+"                font-size: 20px;\n"
+"                font-style: normal;\n"
+"                font-weight: 500;\n"
+"                line-height: normal;\n"
+"                border: none;\n"
+"            }\n"
+"            QPushButton:hover {\n"
+"               color: #AEC289;\n"
+"            }")
+        icon8 = QIcon()
+        icon8.addFile(u"../../assets/images/newres/arrow_pink.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.homebutton_userprofile.setIcon(icon8)
+        self.homebutton_userprofile.setIconSize(QSize(20, 20))
+        self.openshopbutton = QPushButton(self.frame_userprofile)
+        self.openshopbutton.setObjectName(u"openshopbutton")
+        self.openshopbutton.setGeometry(QRect(70, 290, 1118, 76))
+        self.openshopbutton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.openshopbutton.setStyleSheet(u"QPushButton {\n"
+"	background-color: #F4DBDB;\n"
+"	color: #000;\n"
+"	text-align: center;\n"
+"	font-family: Suwannaphum;\n"
+"	font-size: 20px;\n"
+"	font-style: normal;\n"
+"	font-weight: 700;\n"
+"	line-height: normal;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: #AEC289;\n"
+"	color: white;\n"
+"}\n"
+"")
+        icon9 = QIcon()
+        icon9.addFile(u"../../assets/images/newres/openyourshop.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.openshopbutton.setIcon(icon9)
+        self.openshopbutton.setIconSize(QSize(42, 34))
+        self.usernamelabel_userprofile = QLabel(self.frame_userprofile)
+        self.usernamelabel_userprofile.setObjectName(u"usernamelabel_userprofile")
+        self.usernamelabel_userprofile.setGeometry(QRect(236, 100, 181, 31))
+        self.usernamelabel_userprofile.setStyleSheet(u"color: #000;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 32px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.favlabel = QLabel(self.frame_userprofile)
+        self.favlabel.setObjectName(u"favlabel")
+        self.favlabel.setGeometry(QRect(236, 140, 91, 20))
+        self.favlabel.setStyleSheet(u"color: #AEC289;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.picprofile = QLabel(self.frame_userprofile)
+        self.picprofile.setObjectName(u"picprofile")
+        self.picprofile.setGeometry(QRect(91, 100, 100, 100))
+        self.picprofile.setCursor(QCursor(Qt.PointingHandCursor))
+        self.picprofile.setStyleSheet(u"background-color: #CD4662;\n"
+"border-radius: 50%;")
+        self.editprofileline = QFrame(self.frame_userprofile)
+        self.editprofileline.setObjectName(u"editprofileline")
+        self.editprofileline.setGeometry(QRect(70, 240, 1118, 3))
+        self.editprofileline.setStyleSheet(u"border: 3px solid #CD4662;")
+        self.editprofileline.setFrameShape(QFrame.HLine)
+        self.editprofileline.setFrameShadow(QFrame.Sunken)
+        self.splitter = QSplitter(self.frame_userprofile)
+        self.splitter.setObjectName(u"splitter")
+        self.splitter.setGeometry(QRect(236, 170, 951, 25))
+        self.splitter.setCursor(QCursor(Qt.PointingHandCursor))
+        self.splitter.setOrientation(Qt.Horizontal)
+        self.editprofilebutton_2 = QPushButton(self.splitter)
+        self.editprofilebutton_2.setObjectName(u"editprofilebutton_2")
+        self.editprofilebutton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.editprofilebutton_2.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"	font-size: 20px;\n"
+"	font-style: normal;\n"
+"	font-weight: 400;\n"
+"	line-height: normal;\n"
+"	color: #CD4662;\n"
+"	text-align: left;\n"
+"}")
+        self.splitter.addWidget(self.editprofilebutton_2)
+        self.editprofilebutton_1 = QPushButton(self.splitter)
+        self.editprofilebutton_1.setObjectName(u"editprofilebutton_1")
+        self.editprofilebutton_1.setStyleSheet(u"QPushButton {\n"
+"	border: none;\n"
+"}")
+        icon10 = QIcon()
+        icon10.addFile(u"../../assets/images/newres/rightarrow_pink.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.editprofilebutton_1.setIcon(icon10)
+        self.editprofilebutton_1.setIconSize(QSize(20, 20))
+        self.splitter.addWidget(self.editprofilebutton_1)
+        self.scrollArea_userprofile.setWidget(self.scrollAreaWidgetContents_3)
+
+        self.gridLayout_2.addWidget(self.scrollArea_userprofile, 0, 0, 1, 1)
+
         self.stackedWidget.addWidget(self.userprofile)
 
         self.retranslateUi(Main)
@@ -562,5 +686,12 @@ class Ui_Main(object):
         self.picproduct1_13.setText("")
         self.picproduct1_14.setText("")
         self.suggestlabel_2.setText(QCoreApplication.translate("Main", u"Favorites", None))
+        self.homebutton_userprofile.setText(QCoreApplication.translate("Main", u"<", None))
+        self.openshopbutton.setText(QCoreApplication.translate("Main", u"    Open Your Shop", None))
+        self.usernamelabel_userprofile.setText(QCoreApplication.translate("Main", u"Username", None))
+        self.favlabel.setText(QCoreApplication.translate("Main", u"3 Favorites", None))
+        self.picprofile.setText("")
+        self.editprofilebutton_2.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
+        self.editprofilebutton_1.setText("")
     # retranslateUi
 
