@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QWidget" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FAF9F6;</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>1281</width>
+     <height>721</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="main">
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>251</width>
+       <height>721</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QWidget" name="navbar" native="true">
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #FAF9F6;</string>
+        </property>
+        <widget class="QLabel" name="Logolabel">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>40</y>
+           <width>191</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: Supermercado;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: normalpx;
+                text-align: center;
+                color: #000000;</string>
+         </property>
+         <property name="text">
+          <string>ChopShop</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="homebutton">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>130</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #FAF9F6;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #AEC289;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }
+</string>
+         </property>
+         <property name="text">
+          <string>Home</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="favbutton">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>240</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #000;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #E1E3E7;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+         </property>
+         <property name="text">
+          <string>Favorites</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="orderbutton">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>350</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #000;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #E1E3E7;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+         </property>
+         <property name="text">
+          <string>My Orders</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="messbutton">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>460</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #000;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #E1E3E7;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+         </property>
+         <property name="text">
+          <string>Messages</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="settingbutton">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>630</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../assets/images/newres/settings.png</normaloff>../../assets/images/newres/settings.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="exitbutton">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>630</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(://assets/newres/exitbutton.png);
+border: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../assets/images/newres/exitbutton.png</normaloff>../../assets/images/newres/exitbutton.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>27</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="searchcontainer" native="true">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>0</y>
+       <width>1031</width>
+       <height>109</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAF9F6;</string>
+     </property>
+     <widget class="QLineEdit" name="searchbox">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>684</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">				border-radius: 15px;
+                background-color: #EDEDED;
+                color: #CD4662;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+				padding-left: 20px;
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Search..</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loginsignoutbutton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>50</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                border: none;
+				text-align: center;</string>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cartbutton">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>50</y>
+        <width>34</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../assets/images/newres/cart.png</normaloff>../../assets/images/newres/cart.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>34</width>
+        <height>31</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="profilebutton">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>50</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../assets/images/newres/profile.png</normaloff>../../assets/images/newres/profile.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>31</width>
+        <height>31</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_main">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>110</y>
+       <width>1031</width>
+       <height>611</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="homepage">
+      <widget class="QScrollArea" name="scrollArea_homepage">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>1021</width>
+         <height>611</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-380</y>
+          <width>1006</width>
+          <height>1000</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>1000</height>
+         </size>
+        </property>
+        <widget class="QFrame" name="frame_homepage">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1031</width>
+           <height>1000</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>1000</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="stylelabbutton">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>20</y>
+            <width>911</width>
+            <height>221</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #FFF;
+                text-align: center;
+                font-family: Supermercado;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                border-radius: 10px;
+                background-color: #CD4662;</string>
+          </property>
+          <property name="text">
+           <string>Style Lab</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="newarrivalbutton">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>290</y>
+            <width>179</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 10px;
+                border: 1px solid #000;
+                opacity: 0.1;
+                background-color: #F7F2EB;
+                color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+}
+QPushButton:hover {
+                background-color: #FAF9F6;
+}</string>
+          </property>
+          <property name="text">
+           <string>New Arrival</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../assets/images/newres/newarrival.png</normaloff>../../assets/images/newres/newarrival.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>17</width>
+            <height>18</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="onsalesbutton">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>290</y>
+            <width>179</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 10px;
+                border: 1px solid #000;
+                opacity: 0.1;
+                background-color: #F7F2EB;
+                color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+}
+QPushButton:hover {
+                background-color: #FAF9F6;
+}</string>
+          </property>
+          <property name="text">
+           <string>On Sales</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../assets/images/newres/onsales.png</normaloff>../../assets/images/newres/onsales.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buyagainbutton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>290</y>
+            <width>179</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 10px;
+                border: 1px solid #000;
+                opacity: 0.1;
+                background-color: #F7F2EB;
+                color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+}
+QPushButton:hover {
+                background-color: #FAF9F6;
+}</string>
+          </property>
+          <property name="text">
+           <string>Buy Again</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../assets/images/newres/buyagain.png</normaloff>../../assets/images/newres/buyagain.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>18</width>
+            <height>18</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="bestsellingbutton">
+          <property name="geometry">
+           <rect>
+            <x>790</x>
+            <y>290</y>
+            <width>179</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 10px;
+                border: 1px solid #000;
+                opacity: 0.1;
+                background-color: #F7F2EB;
+                color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+}
+QPushButton:hover {
+                background-color: #FAF9F6;
+}</string>
+          </property>
+          <property name="text">
+           <string>Best Selling</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../assets/images/newres/bestselling.png</normaloff>../../assets/images/newres/bestselling.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>18</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QLabel" name="suggestlabel">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>390</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;</string>
+          </property>
+          <property name="text">
+           <string>Suggestions</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="product_1" native="true">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>500</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_2" native="true">
+          <property name="geometry">
+           <rect>
+            <x>720</x>
+            <y>500</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_3" native="true">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>500</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_5">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_6" native="true">
+          <property name="geometry">
+           <rect>
+            <x>720</x>
+            <y>900</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_11">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_5" native="true">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>900</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>900</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_9">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="favpage">
+      <property name="styleSheet">
+       <string notr="true">favpage</string>
+      </property>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>1021</width>
+         <height>611</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1006</width>
+          <height>1000</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>1000</height>
+         </size>
+        </property>
+        <widget class="QFrame" name="frame">
+         <property name="geometry">
+          <rect>
+           <x>-1</x>
+           <y>-1</y>
+           <width>1031</width>
+           <height>611</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="product_7" native="true">
+          <property name="geometry">
+           <rect>
+            <x>720</x>
+            <y>520</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_12">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_8" native="true">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>120</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_6">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_9" native="true">
+          <property name="geometry">
+           <rect>
+            <x>720</x>
+            <y>120</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_7">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_10" native="true">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>120</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_8">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_11" native="true">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>520</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_13">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="product_12" native="true">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>520</y>
+            <width>251</width>
+            <height>320</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;
+                background: #D9D9D9;</string>
+          </property>
+          <widget class="QPushButton" name="picproduct1_14">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>191</width>
+             <height>188</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="suggestlabel_2">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;</string>
+          </property>
+          <property name="text">
+           <string>Favorites</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="userprofile"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

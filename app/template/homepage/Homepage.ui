@@ -133,7 +133,7 @@ border: none;</string>
         <string notr="true">background-color: #FAF9F6;</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="page1home">
         <widget class="QScrollArea" name="scrollArea">
@@ -577,7 +577,7 @@ QScrollBar::handle:vertical:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>1496</width>
+              <width>85</width>
               <height>2518</height>
              </rect>
             </property>
@@ -915,7 +915,15 @@ QScrollBar::handle:vertical:hover {
       <height>1081</height>
      </rect>
     </property>
-    <widget class="QWidget" name="main_page">
+    <widget class="QWidget" name="main_page" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1919</width>
+       <height>1081</height>
+      </rect>
+     </property>
      <widget class="QWidget" name="menu" native="true">
       <property name="geometry">
        <rect>
@@ -1683,7 +1691,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>67</width>
+             <width>85</width>
              <height>2518</height>
             </rect>
            </property>
@@ -2010,7 +2018,16 @@ QScrollBar::handle:vertical:hover {
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="editprofile_page"/>
+    <widget class="QWidget" name="editprofile_page" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

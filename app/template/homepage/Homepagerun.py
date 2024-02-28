@@ -2,17 +2,17 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide6.QtGui import QPixmap
 # from Homepage import Ui_MainWindow
-from .Homepage import *
+from .Homepage_newres_ui import *
 from app.db.database import *
 # from .Homepagdsadse import *
 
 active_button_style = """
-    QPushButton {
+    QPushButton{
         color: #FAF9F6;
         font-family: Suwannaphum;
-        font-size: 24px;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         line-height: normal;
         background-color: #AEC289;
         border-radius: 10px;
@@ -24,12 +24,12 @@ active_button_style = """
 """
 
 inactive_button_style = """
-    QPushButton {
+    QPushButton{
         color: #000;
         font-family: Suwannaphum;
-        font-size: 24px;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         line-height: normal;
         background-color: #E1E3E7;
         border-radius: 10px;
@@ -44,20 +44,20 @@ inactive_button_style = """
 class HomepageWindow(QMainWindow):
     def __init__(self):
         super(HomepageWindow, self).__init__()
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_Main()
         self.ui.setupUi(self)
 
         if root.LoggedInUser.logged_in == False:
-            self.ui.signinsignoutbutton.setText("Log in")
-            self.ui.profilebutton.clicked.connect(self.show_error("Please log in to view profile"))
-            self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
+            self.ui.loginsignoutbutton.setText("Log in")
+            self.ui.profilebutton.clicked.connect(lambda: self.show_error("Please log in to view profile"))
+            self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         else:   
-            self.ui.signinsignoutbutton.setText(root.LoggedInUser.user.username)
+            self.ui.loginsignoutbutton.setText(root.LoggedInUser.user.username)
             self.ui.profilebutton.clicked.connect(self.go_to_editprofile)
-            self.ui.signinsignoutbutton.clicked.connect(self.go_to_editprofile)
+            self.ui.loginsignoutbutton.clicked.connect(self.go_to_editprofile)
             
 
-        self.ui.signinsignoutbutton.clicked.connect(self.back_to_login)
+        self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
@@ -84,7 +84,7 @@ class HomepageWindow(QMainWindow):
 
     def go_to_home(self):
         from app.template.homepage.Homepagerun import HomepageWindow
-        self.ui.stackedWidget.setCurrentWidget(self.ui.page1home)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
         self.ui.homebutton.setStyleSheet(active_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
@@ -92,7 +92,7 @@ class HomepageWindow(QMainWindow):
 
     def go_to_favorite(self):
         from app.template.favorite.Favoriterun import FavoriteWindow
-        self.ui.stackedWidget.setCurrentWidget(self.ui.page2fav)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.favpage)
         
         self.ui.homebutton.setStyleSheet(inactive_button_style)
         self.ui.favbutton.setStyleSheet(active_button_style)
