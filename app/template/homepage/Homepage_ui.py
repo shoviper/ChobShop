@@ -18,8 +18,6 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
     QStackedWidget, QVBoxLayout, QWidget)
-import newall_rc
-import newall_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
