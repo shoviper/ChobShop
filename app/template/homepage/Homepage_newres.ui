@@ -25,6 +25,10 @@
      <height>721</height>
     </rect>
    </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="orderpage"/>
    <widget class="QWidget" name="main">
     <widget class="QWidget" name="gridLayoutWidget">
      <property name="geometry">
@@ -443,7 +447,7 @@ QScrollBar::handle:vertical:hover {
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-380</y>
+          <y>0</y>
           <width>1006</width>
           <height>1000</height>
          </rect>
