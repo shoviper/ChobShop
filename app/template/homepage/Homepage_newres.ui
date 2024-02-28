@@ -28,7 +28,818 @@
    <property name="currentIndex">
     <number>1</number>
    </property>
-   <widget class="QWidget" name="orderpage"/>
+   <widget class="QWidget" name="orderpage">
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>251</width>
+       <height>721</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QWidget" name="navbar_2" native="true">
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #FAF9F6;</string>
+        </property>
+        <widget class="QLabel" name="Logolabel_4">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>40</y>
+           <width>191</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: Supermercado;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: normalpx;
+                text-align: center;
+                color: #000000;</string>
+         </property>
+         <property name="text">
+          <string>ChopShop</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="homebutton_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>130</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #FAF9F6;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #AEC289;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }
+</string>
+         </property>
+         <property name="text">
+          <string>Home</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="favbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>240</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #000;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #E1E3E7;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+         </property>
+         <property name="text">
+          <string>Favorites</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="orderbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>350</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #000;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #E1E3E7;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+         </property>
+         <property name="text">
+          <string>My Orders</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="messbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>460</y>
+           <width>171</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: #000;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                background-color: #E1E3E7;
+                border-radius: 10px;
+}
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+         </property>
+         <property name="text">
+          <string>Messages</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="settingbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>630</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+image: url(:/pic/realimages/settingpic.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="exitbutton_4">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>630</y>
+           <width>41</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/pic/realimages/exitpic.png);
+border: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>27</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="searchcontainer_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>0</y>
+       <width>1031</width>
+       <height>109</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAF9F6;</string>
+     </property>
+     <widget class="QLineEdit" name="searchbox_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>684</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">				border-radius: 15px;
+                background-color: #EDEDED;
+                color: #CD4662;
+                font-family: Suwannaphum;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+				padding-left: 20px;
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Search..</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loginsignoutbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>50</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                border: none;
+				text-align: center;</string>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cartbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>50</y>
+        <width>34</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+image: url(:/pic/realimages/cartpic.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>34</width>
+        <height>31</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="profilebutton_2">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>50</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+image: url(:/pic/realimages/profilepic.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>31</width>
+        <height>31</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ordernavcontainer" native="true">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>109</y>
+       <width>1031</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAF9F6;</string>
+     </property>
+     <widget class="QLabel" name="reviewlabel">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>15</y>
+        <width>150</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+      </property>
+      <property name="text">
+       <string>Reviews</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tobeshipbutton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>85</y>
+        <width>320</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: none;
+}
+QPushButton:hover{
+	color: #CD4662;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>To be shipped</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="toberecievebutton">
+      <property name="geometry">
+       <rect>
+        <x>382</x>
+        <y>85</y>
+        <width>320</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: none;
+}
+QPushButton:hover{
+	color: #CD4662;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>To be recieved</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="completebutton">
+      <property name="geometry">
+       <rect>
+        <x>704</x>
+        <y>85</y>
+        <width>320</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: none;
+}
+QPushButton:hover{
+	color: #CD4662;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Completed</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_order">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>248</y>
+       <width>1031</width>
+       <height>472</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAF9F6;</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tobeshippage">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QScrollArea" name="scrollArea_ship">
+         <property name="styleSheet">
+          <string notr="true">background-color: #FAF9F6;</string>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>994</width>
+            <height>1018</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QFrame" name="frame_ship">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>1000</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #FAF9F6;</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_3">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>0</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutordership1">
+               <item row="0" column="0">
+                <widget class="QWidget" name="ordership1" native="true">
+                 <widget class="QLabel" name="label_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>230</x>
+                    <y>80</y>
+                    <width>441</width>
+                    <height>121</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>Testship</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_4">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>320</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutordership2">
+               <item row="0" column="0">
+                <widget class="QWidget" name="ordership2" native="true"/>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_5">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>640</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutordership3">
+               <item row="0" column="0">
+                <widget class="QWidget" name="ordership3" native="true"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tobereceivepage">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QScrollArea" name="scrollArea_receive">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_receive">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>994</width>
+            <height>1018</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QFrame" name="frame_receive">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>1000</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_6">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>0</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutorderreceive1">
+               <item row="0" column="0">
+                <widget class="QWidget" name="orderreceive1" native="true">
+                 <widget class="QLabel" name="label">
+                  <property name="geometry">
+                   <rect>
+                    <x>260</x>
+                    <y>100</y>
+                    <width>441</width>
+                    <height>121</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>Testreceive</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_8">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>320</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutorderreceive2">
+               <item row="0" column="0">
+                <widget class="QWidget" name="orderreceive2" native="true"/>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_9">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>640</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutorderreceive3">
+               <item row="0" column="0">
+                <widget class="QWidget" name="orderreceive3" native="true"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="completepage">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QScrollArea" name="scrollArea_complete">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_complete">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>994</width>
+            <height>1018</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QFrame" name="frame_complete">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>1000</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_7">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>0</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutordercomplete1">
+               <item row="0" column="0">
+                <widget class="QWidget" name="ordercomplete1" native="true">
+                 <widget class="QLabel" name="label_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>230</x>
+                    <y>80</y>
+                    <width>441</width>
+                    <height>121</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>Testcomplete</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_10">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>320</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutordercomplete2">
+               <item row="0" column="0">
+                <widget class="QWidget" name="ordercomplete2" native="true"/>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="gridLayoutWidget_11">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>640</y>
+                <width>931</width>
+                <height>321</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutordercomplete3">
+               <item row="0" column="0">
+                <widget class="QWidget" name="ordercomplete3" native="true"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <zorder>stackedWidget_order</zorder>
+    <zorder>ordernavcontainer</zorder>
+    <zorder>searchcontainer_2</zorder>
+    <zorder>gridLayoutWidget_2</zorder>
+   </widget>
    <widget class="QWidget" name="main">
     <widget class="QWidget" name="gridLayoutWidget">
      <property name="geometry">
@@ -223,14 +1034,11 @@ QPushButton:hover {
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">border: none;</string>
+          <string notr="true">image: url(:/pic/realimages/settingpic.png);
+border: none;</string>
          </property>
          <property name="text">
           <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../assets/images/newres/settings.png</normaloff>../../assets/images/newres/settings.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -252,15 +1060,11 @@ QPushButton:hover {
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">image: url(://assets/newres/exitbutton.png);
+          <string notr="true">image: url(:/pic/realimages/exitpic.png);
 border: none;</string>
          </property>
          <property name="text">
           <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../assets/images/newres/exitbutton.png</normaloff>../../assets/images/newres/exitbutton.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -353,14 +1157,11 @@ border: none;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">border: none;</string>
+       <string notr="true">image: url(:/pic/realimages/cartpic.png);
+border: none;</string>
       </property>
       <property name="text">
        <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../../assets/images/newres/cart.png</normaloff>../../assets/images/newres/cart.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -382,14 +1183,11 @@ border: none;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">border: none;</string>
+       <string notr="true">image: url(:/pic/realimages/profilepic.png);
+border: none;</string>
       </property>
       <property name="text">
        <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../../assets/images/newres/profile.png</normaloff>../../assets/images/newres/profile.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -1161,273 +1959,11 @@ border-radius: 0px;</string>
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="userprofile">
-    <widget class="QWidget" name="gridLayoutWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>-1</x>
-       <y>-1</y>
-       <width>1281</width>
-       <height>721</height>
-      </rect>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
-       <widget class="QScrollArea" name="scrollArea_userprofile">
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents_3">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>1277</width>
-           <height>717</height>
-          </rect>
-         </property>
-         <widget class="QFrame" name="frame_userprofile">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>1281</width>
-            <height>721</height>
-           </rect>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <widget class="QPushButton" name="homebutton_userprofile">
-           <property name="geometry">
-            <rect>
-             <x>40</x>
-             <y>40</y>
-             <width>21</width>
-             <height>33</height>
-            </rect>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-               color: #CD4662;
-                font-family: Inter;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                border: none;
-            }
-            QPushButton:hover {
-               color: #AEC289;
-            }</string>
-           </property>
-           <property name="text">
-            <string>&lt;</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>../../assets/images/newres/arrow_pink.png</normaloff>../../assets/images/newres/arrow_pink.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="openshopbutton">
-           <property name="geometry">
-            <rect>
-             <x>70</x>
-             <y>290</y>
-             <width>1118</width>
-             <height>76</height>
-            </rect>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background-color: #F4DBDB;
-	color: #000;
-	text-align: center;
-	font-family: Suwannaphum;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	border-radius: 10px;
-}
-
-QPushButton:hover {
-	background-color: #AEC289;
-	color: white;
-}
-</string>
-           </property>
-           <property name="text">
-            <string>    Open Your Shop</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>../../assets/images/newres/openyourshop.png</normaloff>../../assets/images/newres/openyourshop.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>42</width>
-             <height>34</height>
-            </size>
-           </property>
-          </widget>
-          <widget class="QLabel" name="usernamelabel_userprofile">
-           <property name="geometry">
-            <rect>
-             <x>236</x>
-             <y>100</y>
-             <width>181</width>
-             <height>31</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: #000;
-font-family: Suwannaphum;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-           </property>
-           <property name="text">
-            <string>Username</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="favlabel">
-           <property name="geometry">
-            <rect>
-             <x>236</x>
-             <y>140</y>
-             <width>91</width>
-             <height>20</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: #AEC289;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-           </property>
-           <property name="text">
-            <string>3 Favorites</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="picprofile">
-           <property name="geometry">
-            <rect>
-             <x>91</x>
-             <y>100</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: #CD4662;
-border-radius: 50%;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-          <widget class="Line" name="editprofileline">
-           <property name="geometry">
-            <rect>
-             <x>70</x>
-             <y>240</y>
-             <width>1118</width>
-             <height>3</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 3px solid #CD4662;</string>
-           </property>
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-          <widget class="QSplitter" name="splitter">
-           <property name="geometry">
-            <rect>
-             <x>236</x>
-             <y>170</y>
-             <width>951</width>
-             <height>25</height>
-            </rect>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <widget class="QPushButton" name="editprofilebutton_2">
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	border: none;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	color: #CD4662;
-	text-align: left;
-}</string>
-            </property>
-            <property name="text">
-             <string>Edit Profile</string>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="editprofilebutton_1">
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	border: none;
-}</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>../../assets/images/newres/rightarrow_pink.png</normaloff>../../assets/images/newres/rightarrow_pink.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </widget>
-          </widget>
-         </widget>
-        </widget>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
+   <widget class="QWidget" name="userprofile"/>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../assets/realsourceimg/realpicforuse.qrc"/>
+ </resources>
  <connections/>
 </ui>

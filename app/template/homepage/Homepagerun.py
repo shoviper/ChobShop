@@ -40,6 +40,39 @@ inactive_button_style = """
     }
 """
 
+#order
+inactive_orderbutton_style = """
+    QPushButton{
+    color: #545454;
+    text-align: center;
+    font-family: Suwannaphum;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+}
+QPushButton:hover{
+	color: #CD4662;
+}
+"""
+
+active_orderbutton_style = """
+    QPushButton{
+    color: #CD4662;
+    text-align: center;
+    font-family: Suwannaphum;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+}
+QPushButton:hover{
+	color: yellow;
+}
+"""
+
 
 class HomepageWindow(QMainWindow):
     def __init__(self):
@@ -57,12 +90,32 @@ class HomepageWindow(QMainWindow):
             self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
             self.ui.loginsignoutbutton.clicked.connect(self.go_to_userprofile)
             
-
+        #stackmain
         self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
+
+        #stackorder
+        self.ui.loginsignoutbutton_2.clicked.connect(self.back_to_login)
+        self.ui.exitbutton_4.clicked.connect(self.back_to_login)
+        self.ui.homebutton_4.clicked.connect(self.go_to_home2)
+        self.ui.favbutton_4.clicked.connect(self.go_to_favorite2)
+        self.ui.orderbutton_4.clicked.connect(self.go_to_order)
+
+        #orderpage
+        self.ui.tobeshipbutton.clicked.connect(self.go_to_order_ship)
+        self.ui.toberecievebutton.clicked.connect(self.go_to_order_receive)
+        self.ui.completebutton.clicked.connect(self.go_to_order_complete)
+
+
+    def go_to_home2(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+
+    def go_to_favorite2(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.favpage)
+
 
     def go_to_order(self):
         from app.template.order.Orderrun import OrderWindow
@@ -76,6 +129,7 @@ class HomepageWindow(QMainWindow):
     #     # self.show_goodbye("Log out successful, See you again")
     #     self.close()
     #     self.login.show()
+    
     def back_to_login(self):
         from app.template.login.Loginrun import LoginWindow
         self.login = LoginWindow()
@@ -107,6 +161,27 @@ class HomepageWindow(QMainWindow):
         # self.profile = Profile()
         # self.close()
         # self.profile.show()
+    def go_to_order(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.orderpage)
+        self.ui.homebutton_4.setStyleSheet(inactive_button_style)
+        self.ui.favbutton_4.setStyleSheet(inactive_button_style)
+        self.ui.orderbutton_4.setStyleSheet(active_button_style)
+        self.ui.messbutton_4.setStyleSheet(inactive_button_style)
+    def go_to_order_ship(self):
+        self.ui.stackedWidget_order.setCurrentWidget(self.ui.tobeshippage)
+        self.ui.tobeshipbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.toberecievebutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completebutton.setStyleSheet(inactive_orderbutton_style)
+    def go_to_order_receive(self):
+        self.ui.stackedWidget_order.setCurrentWidget(self.ui.tobereceivepage)
+        self.ui.tobeshipbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.toberecievebutton.setStyleSheet(active_orderbutton_style)
+        self.ui.completebutton.setStyleSheet(inactive_orderbutton_style)
+    def go_to_order_complete(self):
+        self.ui.stackedWidget_order.setCurrentWidget(self.ui.completepage)
+        self.ui.tobeshipbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.toberecievebutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completebutton.setStyleSheet(active_orderbutton_style)
         
     def show_goodbye(self, message):
         msg = QMessageBox()
