@@ -139,6 +139,39 @@ margin-right: 1275px;
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="openshopbutton">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>385</y>
+      <width>1782</width>
+      <height>114</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open Your Shop</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="myordercontainer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>550</y>
+      <width>1782</width>
+      <height>237</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="favcontainer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>787</y>
+      <width>1782</width>
+      <height>691</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
