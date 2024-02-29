@@ -18,7 +18,6 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QFrame, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QStackedWidget,
     QVBoxLayout, QWidget)
-import app.assets.realsourceimg.real
 
 class Ui_Login_Signup(object):
     def setupUi(self, Login_Signup):

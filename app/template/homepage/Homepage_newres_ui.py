@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
     QLineEdit, QPushButton, QScrollArea, QSizePolicy,
     QStackedWidget, QVBoxLayout, QWidget)
+
 import app.assets.realsourceimg.real
 
 class Ui_Main(object):
@@ -267,11 +268,30 @@ class Ui_Main(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.scrollArea_ship = QScrollArea(self.tobeshippage)
         self.scrollArea_ship.setObjectName(u"scrollArea_ship")
-        self.scrollArea_ship.setStyleSheet(u"background-color: #FAF9F6;")
+        self.scrollArea_ship.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
         self.scrollArea_ship.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 994, 1018))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 998, 1018))
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.frame_ship = QFrame(self.scrollAreaWidgetContents_3)
@@ -331,10 +351,30 @@ class Ui_Main(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.scrollArea_receive = QScrollArea(self.tobereceivepage)
         self.scrollArea_receive.setObjectName(u"scrollArea_receive")
+        self.scrollArea_receive.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
         self.scrollArea_receive.setWidgetResizable(True)
         self.scrollAreaWidgetContents_receive = QWidget()
         self.scrollAreaWidgetContents_receive.setObjectName(u"scrollAreaWidgetContents_receive")
-        self.scrollAreaWidgetContents_receive.setGeometry(QRect(0, 0, 994, 1018))
+        self.scrollAreaWidgetContents_receive.setGeometry(QRect(0, 0, 998, 1018))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents_receive)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.frame_receive = QFrame(self.scrollAreaWidgetContents_receive)
@@ -393,10 +433,30 @@ class Ui_Main(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.scrollArea_complete = QScrollArea(self.completepage)
         self.scrollArea_complete.setObjectName(u"scrollArea_complete")
+        self.scrollArea_complete.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
         self.scrollArea_complete.setWidgetResizable(True)
         self.scrollAreaWidgetContents_complete = QWidget()
         self.scrollAreaWidgetContents_complete.setObjectName(u"scrollAreaWidgetContents_complete")
-        self.scrollAreaWidgetContents_complete.setGeometry(QRect(0, 0, 994, 1018))
+        self.scrollAreaWidgetContents_complete.setGeometry(QRect(0, 0, 998, 1018))
         self.verticalLayout_6 = QVBoxLayout(self.scrollAreaWidgetContents_complete)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.frame_complete = QFrame(self.scrollAreaWidgetContents_complete)
@@ -937,6 +997,204 @@ class Ui_Main(object):
 "                line-height: normal;")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents_2)
         self.stackedWidget_main.addWidget(self.favpage)
+        self.myorderspage = QWidget()
+        self.myorderspage.setObjectName(u"myorderspage")
+        self.myordersnavcontainer = QWidget(self.myorderspage)
+        self.myordersnavcontainer.setObjectName(u"myordersnavcontainer")
+        self.myordersnavcontainer.setGeometry(QRect(0, 0, 1031, 139))
+        self.myordersnavcontainer.setStyleSheet(u"background-color: #FAF9F6;")
+        self.myorderslabel = QLabel(self.myordersnavcontainer)
+        self.myorderslabel.setObjectName(u"myorderslabel")
+        self.myorderslabel.setGeometry(QRect(60, 0, 150, 51))
+        self.myorderslabel.setStyleSheet(u"color: #545454;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 32px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.tobeshippedbutton = QPushButton(self.myordersnavcontainer)
+        self.tobeshippedbutton.setObjectName(u"tobeshippedbutton")
+        self.tobeshippedbutton.setGeometry(QRect(60, 85, 320, 50))
+        self.tobeshippedbutton.setStyleSheet(u"QPushButton{\n"
+"	color: #CD4662;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;\n"
+"border: none;\n"
+"border-bottom: 3px solid #CD4662;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #F4DBDB;\n"
+"	color: #545454;\n"
+"border: none;\n"
+"}\n"
+"\n"
+"")
+        self.toberecievedbutton = QPushButton(self.myordersnavcontainer)
+        self.toberecievedbutton.setObjectName(u"toberecievedbutton")
+        self.toberecievedbutton.setGeometry(QRect(382, 85, 320, 50))
+        self.toberecievedbutton.setStyleSheet(u"QPushButton{\n"
+"	color: #545454;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;\n"
+"border: none;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #F4DBDB;\n"
+"	color: #545454;\n"
+"}\n"
+"\n"
+"")
+        self.completedbutton = QPushButton(self.myordersnavcontainer)
+        self.completedbutton.setObjectName(u"completedbutton")
+        self.completedbutton.setGeometry(QRect(704, 85, 320, 50))
+        self.completedbutton.setStyleSheet(u"QPushButton{\n"
+"	color: #545454;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;\n"
+"border: none;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #F4DBDB;\n"
+"	color: #545454;\n"
+"}")
+        self.stackedWidget_myorders = QStackedWidget(self.myorderspage)
+        self.stackedWidget_myorders.setObjectName(u"stackedWidget_myorders")
+        self.stackedWidget_myorders.setGeometry(QRect(0, 140, 1031, 471))
+        self.stackedWidget_myorders.setStyleSheet(u"border: none;")
+        self.tobeshippedpage = QWidget()
+        self.tobeshippedpage.setObjectName(u"tobeshippedpage")
+        self.scrollArea_tobeshipped = QScrollArea(self.tobeshippedpage)
+        self.scrollArea_tobeshipped.setObjectName(u"scrollArea_tobeshipped")
+        self.scrollArea_tobeshipped.setGeometry(QRect(0, 0, 1031, 471))
+        self.scrollArea_tobeshipped.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_tobeshipped.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_tobeshipped = QWidget()
+        self.scrollAreaWidgetContents_tobeshipped.setObjectName(u"scrollAreaWidgetContents_tobeshipped")
+        self.scrollAreaWidgetContents_tobeshipped.setGeometry(QRect(0, 0, 1016, 500))
+        self.scrollAreaWidgetContents_tobeshipped.setMinimumSize(QSize(0, 500))
+        self.frame_tobeshipped = QFrame(self.scrollAreaWidgetContents_tobeshipped)
+        self.frame_tobeshipped.setObjectName(u"frame_tobeshipped")
+        self.frame_tobeshipped.setGeometry(QRect(0, 0, 1031, 471))
+        self.frame_tobeshipped.setFrameShape(QFrame.StyledPanel)
+        self.frame_tobeshipped.setFrameShadow(QFrame.Raised)
+        self.tobeshippedlabel = QLabel(self.frame_tobeshipped)
+        self.tobeshippedlabel.setObjectName(u"tobeshippedlabel")
+        self.tobeshippedlabel.setGeometry(QRect(470, 180, 211, 111))
+        self.scrollArea_tobeshipped.setWidget(self.scrollAreaWidgetContents_tobeshipped)
+        self.stackedWidget_myorders.addWidget(self.tobeshippedpage)
+        self.toberecievedpage = QWidget()
+        self.toberecievedpage.setObjectName(u"toberecievedpage")
+        self.scrollArea_toberecieved = QScrollArea(self.toberecievedpage)
+        self.scrollArea_toberecieved.setObjectName(u"scrollArea_toberecieved")
+        self.scrollArea_toberecieved.setGeometry(QRect(0, 0, 1031, 471))
+        self.scrollArea_toberecieved.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_toberecieved.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_toberecieved = QWidget()
+        self.scrollAreaWidgetContents_toberecieved.setObjectName(u"scrollAreaWidgetContents_toberecieved")
+        self.scrollAreaWidgetContents_toberecieved.setGeometry(QRect(0, 0, 1016, 500))
+        self.scrollAreaWidgetContents_toberecieved.setMinimumSize(QSize(0, 500))
+        self.frame_toberecieved = QFrame(self.scrollAreaWidgetContents_toberecieved)
+        self.frame_toberecieved.setObjectName(u"frame_toberecieved")
+        self.frame_toberecieved.setGeometry(QRect(0, 0, 1031, 471))
+        self.frame_toberecieved.setFrameShape(QFrame.StyledPanel)
+        self.frame_toberecieved.setFrameShadow(QFrame.Raised)
+        self.toberecievedlabel = QLabel(self.frame_toberecieved)
+        self.toberecievedlabel.setObjectName(u"toberecievedlabel")
+        self.toberecievedlabel.setGeometry(QRect(470, 180, 211, 111))
+        self.scrollArea_toberecieved.setWidget(self.scrollAreaWidgetContents_toberecieved)
+        self.stackedWidget_myorders.addWidget(self.toberecievedpage)
+        self.completedpage = QWidget()
+        self.completedpage.setObjectName(u"completedpage")
+        self.scrollArea_completed = QScrollArea(self.completedpage)
+        self.scrollArea_completed.setObjectName(u"scrollArea_completed")
+        self.scrollArea_completed.setGeometry(QRect(0, 0, 1031, 471))
+        self.scrollArea_completed.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_completed.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_completed = QWidget()
+        self.scrollAreaWidgetContents_completed.setObjectName(u"scrollAreaWidgetContents_completed")
+        self.scrollAreaWidgetContents_completed.setGeometry(QRect(0, 0, 1016, 500))
+        self.scrollAreaWidgetContents_completed.setMinimumSize(QSize(0, 500))
+        self.frame_completed = QFrame(self.scrollAreaWidgetContents_completed)
+        self.frame_completed.setObjectName(u"frame_completed")
+        self.frame_completed.setGeometry(QRect(0, 0, 1031, 471))
+        self.frame_completed.setFrameShape(QFrame.StyledPanel)
+        self.frame_completed.setFrameShadow(QFrame.Raised)
+        self.completedlabel = QLabel(self.frame_completed)
+        self.completedlabel.setObjectName(u"completedlabel")
+        self.completedlabel.setGeometry(QRect(470, 180, 211, 111))
+        self.scrollArea_completed.setWidget(self.scrollAreaWidgetContents_completed)
+        self.stackedWidget_myorders.addWidget(self.completedpage)
+        self.stackedWidget_main.addWidget(self.myorderspage)
         self.stackedWidget.addWidget(self.main)
         self.userprofile = QWidget()
         self.userprofile.setObjectName(u"userprofile")
@@ -1001,5 +1259,12 @@ class Ui_Main(object):
         self.picproduct1_13.setText("")
         self.picproduct1_14.setText("")
         self.suggestlabel_2.setText(QCoreApplication.translate("Main", u"Favorites", None))
+        self.myorderslabel.setText(QCoreApplication.translate("Main", u"Reviews", None))
+        self.tobeshippedbutton.setText(QCoreApplication.translate("Main", u"To be shipped", None))
+        self.toberecievedbutton.setText(QCoreApplication.translate("Main", u"To be recieved", None))
+        self.completedbutton.setText(QCoreApplication.translate("Main", u"Completed", None))
+        self.tobeshippedlabel.setText(QCoreApplication.translate("Main", u"to be shipped", None))
+        self.toberecievedlabel.setText(QCoreApplication.translate("Main", u"to be recieved", None))
+        self.completedlabel.setText(QCoreApplication.translate("Main", u"completed", None))
     # retranslateUi
 
