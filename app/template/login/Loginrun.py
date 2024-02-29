@@ -14,15 +14,15 @@ class LoginWindow(QMainWindow):
         self.ui.setupUi(self)
         
         self.ui.loginbutton.clicked.connect(self.login_window) 
-        self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window) 
+        self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window)
+        self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window) 
         self.ui.homebutton.clicked.connect(self.go_to_homepage)
 
     
     def open_signup_window(self):
-        self.close()
-        from app.template.signup.Signuprun import SignupWindow
-        self.signup = SignupWindow()
-        self.signup.show()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Signuppage)
+    def open_login_window(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Loginpage)
 
     def go_to_homepage(self):
         from app.template.homepage.Homepagerun import HomepageWindow

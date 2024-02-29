@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../realimages/backhomoe.png</file>
+    <file>../realimages/realchop.png</file>
     <file>../realimages/cartpic.png</file>
     <file>../realimages/exitpic.png</file>
     <file>../realimages/profilepic.png</file>

@@ -22,11 +22,12 @@
      <height>721</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/pic/realimages/realchop.png);
+background-color: #FAF9F6;</string>
+   </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>../../assets/images/newres/signup_bg.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -53,14 +54,11 @@
             }
             QPushButton:hover {
                color: #AEC289;
-            }</string>
+            }
+</string>
    </property>
    <property name="text">
-    <string>   Home</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../../assets/images/newres/arrow_pink.png</normaloff>../../assets/images/newres/arrow_pink.png</iconset>
+    <string>&lt;   Home</string>
    </property>
    <property name="iconSize">
     <size>
@@ -504,6 +502,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../assets/realsourceimg/realpicforuse.qrc"/>
+ </resources>
  <connections/>
 </ui>

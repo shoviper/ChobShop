@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QFrame, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QStackedWidget,
     QVBoxLayout, QWidget)
+import app.assets.realsourceimg.real
 
 class Ui_Login_Signup(object):
     def setupUi(self, Login_Signup):
@@ -27,7 +28,8 @@ class Ui_Login_Signup(object):
         self.backgroundlabel = QLabel(Login_Signup)
         self.backgroundlabel.setObjectName(u"backgroundlabel")
         self.backgroundlabel.setGeometry(QRect(0, 0, 1291, 721))
-        self.backgroundlabel.setPixmap(QPixmap(u"../../assets/images/newres/signup_bg.png"))
+        self.backgroundlabel.setStyleSheet(u"image: url(:/pic/realimages/realchop.png);\n"
+"background-color: #FAF9F6;")
         self.backgroundlabel.setScaledContents(True)
         self.homebutton = QPushButton(Login_Signup)
         self.homebutton.setObjectName(u"homebutton")
@@ -43,10 +45,8 @@ class Ui_Login_Signup(object):
 "            }\n"
 "            QPushButton:hover {\n"
 "               color: #AEC289;\n"
-"            }")
-        icon = QIcon()
-        icon.addFile(u"../../assets/images/newres/arrow_pink.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.homebutton.setIcon(icon)
+"            }\n"
+"")
         self.homebutton.setIconSize(QSize(20, 20))
         self.verticalLayoutWidget = QWidget(Login_Signup)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
@@ -269,13 +269,16 @@ class Ui_Login_Signup(object):
 
         self.retranslateUi(Login_Signup)
 
+        self.stackedWidget.setCurrentIndex(0)
+
+
         QMetaObject.connectSlotsByName(Login_Signup)
     # setupUi
 
     def retranslateUi(self, Login_Signup):
         Login_Signup.setWindowTitle(QCoreApplication.translate("Login_Signup", u"Form", None))
         self.backgroundlabel.setText("")
-        self.homebutton.setText(QCoreApplication.translate("Login_Signup", u"   Home", None))
+        self.homebutton.setText(QCoreApplication.translate("Login_Signup", u"<   Home", None))
         self.signuplabel.setText(QCoreApplication.translate("Login_Signup", u"Login", None))
         self.username_login.setPlaceholderText(QCoreApplication.translate("Login_Signup", u"Username or Email", None))
         self.password_login.setPlaceholderText(QCoreApplication.translate("Login_Signup", u"Password", None))
