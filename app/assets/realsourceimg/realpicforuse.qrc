@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../images/newres/toberecieved.png</file>
+    <file>../images/newres/completed.png</file>
+    <file>../images/newres/tobeshipped.png</file>
+    <file>../images/newres/profile.png</file>
     <file>../realimages/backhomoe.png</file>
     <file>../realimages/realchop.png</file>
     <file>../realimages/cartpic.png</file>

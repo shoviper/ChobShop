@@ -109,6 +109,16 @@ class HomepageWindow(QMainWindow):
         self.ui.toberecievedbutton.clicked.connect(self.go_to_order_receive)
         self.ui.completedbutton.clicked.connect(self.go_to_order_complete)
 
+        #editprofile
+        self.ui.backbutton_2.clicked.connect(self.go_to_userprofile)
+
+        #profile
+        self.ui.editprofilebutton.clicked.connect(self.go_to_usereditprofile)
+        self.ui.backbutton.clicked.connect(self.go_to_home)
+        self.ui.tobeshipbutton.clicked.connect(self.go_to_order)
+        self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive)
+        self.ui.completebutton.clicked.connect(self.go_to_order_complete)
+
     def back_to_login(self):
         from app.template.login.Loginrun import LoginWindow
         self.login = LoginWindow()
@@ -146,6 +156,9 @@ class HomepageWindow(QMainWindow):
         # self.profile = Profile()
         # self.close()
         # self.profile.show()
+    def go_to_usereditprofile(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.editprofile)
+
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
         self.ui.homebutton.setStyleSheet(inactive_button_style)
