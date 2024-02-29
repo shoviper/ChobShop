@@ -530,7 +530,26 @@ QPushButton:hover{
        <item>
         <widget class="QScrollArea" name="scrollArea_ship">
          <property name="styleSheet">
-          <string notr="true">background-color: #FAF9F6;</string>
+          <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
          </property>
          <property name="widgetResizable">
           <bool>true</bool>
@@ -540,7 +559,7 @@ QPushButton:hover{
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>994</width>
+            <width>998</width>
             <height>1018</height>
            </rect>
           </property>
@@ -636,6 +655,28 @@ QPushButton:hover{
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QScrollArea" name="scrollArea_receive">
+         <property name="styleSheet">
+          <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -644,7 +685,7 @@ QPushButton:hover{
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>994</width>
+            <width>998</width>
             <height>1018</height>
            </rect>
           </property>
@@ -737,6 +778,28 @@ QPushButton:hover{
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
         <widget class="QScrollArea" name="scrollArea_complete">
+         <property name="styleSheet">
+          <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -745,7 +808,7 @@ QPushButton:hover{
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>994</width>
+            <width>998</width>
             <height>1018</height>
            </rect>
           </property>
@@ -1952,6 +2015,395 @@ border-radius: 0px;</string>
           <property name="text">
            <string>Favorites</string>
           </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="myorderspage">
+      <widget class="QWidget" name="myordersnavcontainer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1031</width>
+         <height>139</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAF9F6;</string>
+       </property>
+       <widget class="QLabel" name="myorderslabel">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>0</y>
+          <width>150</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Reviews</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tobeshippedbutton">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>85</y>
+          <width>320</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	color: #CD4662;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: none;
+border-bottom: 3px solid #CD4662;
+}
+QPushButton:hover{
+	background-color: #F4DBDB;
+	color: #545454;
+border: none;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>To be shipped</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toberecievedbutton">
+        <property name="geometry">
+         <rect>
+          <x>382</x>
+          <y>85</y>
+          <width>320</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: none;
+}
+QPushButton:hover{
+	background-color: #F4DBDB;
+	color: #545454;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>To be recieved</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="completedbutton">
+        <property name="geometry">
+         <rect>
+          <x>704</x>
+          <y>85</y>
+          <width>320</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	color: #545454;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border: none;
+}
+QPushButton:hover{
+	background-color: #F4DBDB;
+	color: #545454;
+}</string>
+        </property>
+        <property name="text">
+         <string>Completed</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget_myorders">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>140</y>
+         <width>1031</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <widget class="QWidget" name="tobeshippedpage">
+        <widget class="QScrollArea" name="scrollArea_tobeshipped">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1031</width>
+           <height>471</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_tobeshipped">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1016</width>
+            <height>500</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>500</height>
+           </size>
+          </property>
+          <widget class="QFrame" name="frame_tobeshipped">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1031</width>
+             <height>471</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="tobeshippedlabel">
+            <property name="geometry">
+             <rect>
+              <x>470</x>
+              <y>180</y>
+              <width>211</width>
+              <height>111</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>to be shipped</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="toberecievedpage">
+        <widget class="QScrollArea" name="scrollArea_toberecieved">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1031</width>
+           <height>471</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_toberecieved">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1016</width>
+            <height>500</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>500</height>
+           </size>
+          </property>
+          <widget class="QFrame" name="frame_toberecieved">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1031</width>
+             <height>471</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="toberecievedlabel">
+            <property name="geometry">
+             <rect>
+              <x>470</x>
+              <y>180</y>
+              <width>211</width>
+              <height>111</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>to be recieved</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="completedpage">
+        <widget class="QScrollArea" name="scrollArea_completed">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1031</width>
+           <height>471</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_completed">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1016</width>
+            <height>500</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>500</height>
+           </size>
+          </property>
+          <widget class="QFrame" name="frame_completed">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1031</width>
+             <height>471</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="completedlabel">
+            <property name="geometry">
+             <rect>
+              <x>470</x>
+              <y>180</y>
+              <width>211</width>
+              <height>111</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>completed</string>
+            </property>
+           </widget>
+          </widget>
          </widget>
         </widget>
        </widget>
