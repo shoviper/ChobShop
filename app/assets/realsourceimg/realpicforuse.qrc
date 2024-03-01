@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../images/newres/bestselling.png</file>
+    <file>../images/newres/buyagain.png</file>
+    <file>../images/newres/newarrival.png</file>
+    <file>../images/newres/onsales.png</file>
+    <file>../images/newres/openyourshop.png</file>
     <file>../images/newres/toberecieved.png</file>
     <file>../images/newres/completed.png</file>
     <file>../images/newres/tobeshipped.png</file>

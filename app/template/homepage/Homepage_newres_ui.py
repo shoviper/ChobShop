@@ -259,9 +259,6 @@ class Ui_Main(object):
 "QPushButton:hover {\n"
 "                background-color: #FAF9F6;\n"
 "}")
-        icon = QIcon()
-        icon.addFile(u"../../assets/images/newres/newarrival.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.newarrivalbutton.setIcon(icon)
         self.newarrivalbutton.setIconSize(QSize(17, 18))
         self.onsalesbutton = QPushButton(self.frame_homepage)
         self.onsalesbutton.setObjectName(u"onsalesbutton")
@@ -282,9 +279,6 @@ class Ui_Main(object):
 "QPushButton:hover {\n"
 "                background-color: #FAF9F6;\n"
 "}")
-        icon1 = QIcon()
-        icon1.addFile(u"../../assets/images/newres/onsales.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.onsalesbutton.setIcon(icon1)
         self.onsalesbutton.setIconSize(QSize(22, 22))
         self.buyagainbutton = QPushButton(self.frame_homepage)
         self.buyagainbutton.setObjectName(u"buyagainbutton")
@@ -305,9 +299,6 @@ class Ui_Main(object):
 "QPushButton:hover {\n"
 "                background-color: #FAF9F6;\n"
 "}")
-        icon2 = QIcon()
-        icon2.addFile(u"../../assets/images/newres/buyagain.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.buyagainbutton.setIcon(icon2)
         self.buyagainbutton.setIconSize(QSize(18, 18))
         self.bestsellingbutton = QPushButton(self.frame_homepage)
         self.bestsellingbutton.setObjectName(u"bestsellingbutton")
@@ -328,9 +319,6 @@ class Ui_Main(object):
 "QPushButton:hover {\n"
 "                background-color: #FAF9F6;\n"
 "}")
-        icon3 = QIcon()
-        icon3.addFile(u"../../assets/images/newres/bestselling.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bestsellingbutton.setIcon(icon3)
         self.bestsellingbutton.setIconSize(QSize(18, 20))
         self.suggestlabel = QLabel(self.frame_homepage)
         self.suggestlabel.setObjectName(u"suggestlabel")
@@ -402,6 +390,30 @@ class Ui_Main(object):
         self.picproduct1_9.setGeometry(QRect(30, 30, 191, 188))
         self.picproduct1_9.setStyleSheet(u"background-color: #FFF;\n"
 "border-radius: 0px;")
+        self.newarrivalpic = QLabel(self.frame_homepage)
+        self.newarrivalpic.setObjectName(u"newarrivalpic")
+        self.newarrivalpic.setGeometry(QRect(75, 300, 20, 20))
+        self.newarrivalpic.setStyleSheet(u"border: none;\n"
+"background: none;\n"
+"image: url(:/pic/images/newres/newarrival.png);")
+        self.onsalepic = QLabel(self.frame_homepage)
+        self.onsalepic.setObjectName(u"onsalepic")
+        self.onsalepic.setGeometry(QRect(325, 300, 20, 20))
+        self.onsalepic.setStyleSheet(u"border: none;\n"
+"background: none;\n"
+"image: url(:/pic/images/newres/onsales.png);")
+        self.buyafainpic = QLabel(self.frame_homepage)
+        self.buyafainpic.setObjectName(u"buyafainpic")
+        self.buyafainpic.setGeometry(QRect(570, 300, 20, 20))
+        self.buyafainpic.setStyleSheet(u"border: none;\n"
+"background: none;\n"
+"image: url(:/pic/images/newres/buyagain.png);")
+        self.bestsellpic = QLabel(self.frame_homepage)
+        self.bestsellpic.setObjectName(u"bestsellpic")
+        self.bestsellpic.setGeometry(QRect(805, 300, 20, 20))
+        self.bestsellpic.setStyleSheet(u"border: none;\n"
+"background: none;\n"
+"image: url(:/pic/images/newres/bestselling.png);")
         self.scrollArea_homepage.setWidget(self.scrollAreaWidgetContents)
         self.stackedWidget_main.addWidget(self.homepage)
         self.favpage = QWidget()
@@ -520,7 +532,7 @@ class Ui_Main(object):
         self.myordersnavcontainer.setStyleSheet(u"background-color: #FAF9F6;")
         self.myorderslabel = QLabel(self.myordersnavcontainer)
         self.myorderslabel.setObjectName(u"myorderslabel")
-        self.myorderslabel.setGeometry(QRect(60, 0, 150, 51))
+        self.myorderslabel.setGeometry(QRect(60, 0, 180, 51))
         self.myorderslabel.setStyleSheet(u"color: #545454;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -798,7 +810,7 @@ class Ui_Main(object):
 "image: url(:/pic/realimages/backhomoe.png);")
         self.myordercontainer = QWidget(self.frame_userprofile)
         self.myordercontainer.setObjectName(u"myordercontainer")
-        self.myordercontainer.setGeometry(QRect(42, 347, 1140, 157))
+        self.myordercontainer.setGeometry(QRect(50, 347, 1140, 157))
         self.myordercontainer.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
 "background: #FAF9F6;\n"
 "")
@@ -893,7 +905,6 @@ class Ui_Main(object):
         self.openshopbutton.setGeometry(QRect(42, 252, 1140, 65))
         self.openshopbutton.setStyleSheet(u"border-radius: 10px;\n"
 "background: #F4DBDB;\n"
-"box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);\n"
 "color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -901,6 +912,12 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
+        self.openshoppic = QLabel(self.frame_userprofile)
+        self.openshoppic.setObjectName(u"openshoppic")
+        self.openshoppic.setGeometry(QRect(490, 252, 49, 65))
+        self.openshoppic.setStyleSheet(u"image: url(:/pic/images/newres/openyourshop.png);\n"
+"border: none;\n"
+"background: none;")
 
         self.verticalLayout_2.addWidget(self.frame_userprofile)
 
@@ -1168,6 +1185,10 @@ class Ui_Main(object):
         self.picproduct1_11.setText("")
         self.picproduct1_10.setText("")
         self.picproduct1_9.setText("")
+        self.newarrivalpic.setText("")
+        self.onsalepic.setText("")
+        self.buyafainpic.setText("")
+        self.bestsellpic.setText("")
         self.picproduct1_12.setText("")
         self.picproduct1_6.setText("")
         self.picproduct1_7.setText("")
@@ -1175,7 +1196,7 @@ class Ui_Main(object):
         self.picproduct1_13.setText("")
         self.picproduct1_14.setText("")
         self.suggestlabel_2.setText(QCoreApplication.translate("Main", u"Favorites", None))
-        self.myorderslabel.setText(QCoreApplication.translate("Main", u"Reviews", None))
+        self.myorderslabel.setText(QCoreApplication.translate("Main", u"My Orders", None))
         self.tobeshippedbutton.setText(QCoreApplication.translate("Main", u"To be shipped", None))
         self.toberecievedbutton.setText(QCoreApplication.translate("Main", u"To be recieved", None))
         self.completedbutton.setText(QCoreApplication.translate("Main", u"Completed", None))
@@ -1197,6 +1218,7 @@ class Ui_Main(object):
         self.picproduct1_19.setText("")
         self.pushButton.setText(QCoreApplication.translate("Main", u"View all Favorites >", None))
         self.openshopbutton.setText(QCoreApplication.translate("Main", u"Open Your Shop", None))
+        self.openshoppic.setText("")
         self.editlabel.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel.setText(QCoreApplication.translate("Main", u"Username", None))
         self.fisrtlabel.setText(QCoreApplication.translate("Main", u"First name", None))
