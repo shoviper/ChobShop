@@ -5,6 +5,7 @@ from PySide6.QtGui import QPixmap
 from .Homepage_newres_ui import *
 from app.template.order.Orderrun import *
 from app.db.database import *
+from app.backend.customerUser.editprofile import *
 # from .Homepagdsadse import *
 
 # import app.assets.realsourceimg.real
@@ -166,12 +167,29 @@ class HomepageWindow(QMainWindow):
         self.ui.editnameprofile.setText(root.LoggedInUser.user.username.title())
         self.ui.userbox.setText(root.LoggedInUser.user.username.title())
         self.ui.firstnamebox.setText(root.LoggedInUser.user.name)
-        self.ui.lastnamebox.setText(root.LoggedInUser.user.surname)
+        self.ui.lastnamebox.setText(root.LoggedInUser.user.lastname)
         self.ui.genderbox.setText(root.LoggedInUser.user.gender)
         self.ui.birthdaydateEdit.setDate(root.LoggedInUser.user.birthday)
         self.ui.emailbox.setText(root.LoggedInUser.user.email)
         self.ui.phonebox.setText(root.LoggedInUser.user.phone)
+
         self.ui.stackedWidget.setCurrentWidget(self.ui.editprofile)
+        self.ui.savechangebutton_2.clicked.connect(self.save_editprofile)
+
+    def save_editprofile(self):
+        print("save edit profile")
+        newusername = self.ui.userbox.text()
+        username = self.ui.editnameprofile.text()
+        firstname = self.ui.firstnamebox.text()
+        lastname = self.ui.lastnamebox.text()
+        gender = self.ui.genderbox.text()
+        birthday = self.ui.birthdaydateEdit.date()
+        email = self.ui.emailbox.text()
+        phone = self.ui.phonebox.text()
+
+        if editProfile(username, newusername, firstname, lastname, gender, birthday, email, phone):
+            self.show_success("Edit Profile successful")
+            self.go_to_userprofile()
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)

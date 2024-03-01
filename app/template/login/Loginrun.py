@@ -12,16 +12,19 @@ class LoginWindow(QMainWindow):
         super(LoginWindow,self).__init__()
         self.ui = Ui_Login_Signup()
         self.ui.setupUi(self)
-        
-        self.ui.loginbutton.clicked.connect(self.login_window) 
+         
         self.ui.signfornoaccbutton.clicked.connect(self.open_signup_window)
         self.ui.logforhaveaccbutton.clicked.connect(self.open_login_window) 
         self.ui.homebutton.clicked.connect(self.go_to_homepage)
+        self.ui.signupbutton.clicked.connect(self.signup_window)
+        self.ui.loginbutton.clicked.connect(self.login_window)
 
-    
     def open_signup_window(self):
+        print("open Signup Window")
         self.ui.stackedWidget.setCurrentWidget(self.ui.Signuppage)
+
     def open_login_window(self):
+        print("open Login Window")
         self.ui.stackedWidget.setCurrentWidget(self.ui.Loginpage)
 
     def go_to_homepage(self):
@@ -33,16 +36,21 @@ class LoginWindow(QMainWindow):
     def open_homepage(self):
         self.close()
         from app.template.homepage.Homepagerun import HomepageWindow
-        self.login_window = HomepageWindow()
-        self.login_window.show()
+        self.homepagewindow = HomepageWindow()
+        self.homepagewindow.show()
         
-    def login_window(self):
-        username = self.ui.username_login.text()
-        password = self.ui.password_login.text()
+    def login_window(self, log="login"):
+        print("Logging in")
+        if log == "login":
+            self.username = self.ui.username_login.text()
+            self.password = self.ui.password_login.text()
+        else:
+            self.username = self.ui.username_signup.text()
+            self.password = self.ui.password_signup.text()
         admin = False
         if self.ui.admincheckbox.isChecked():
             admin = True
-        if login(username, password, admin):
+        if login(self.username, self.password, admin):
             print("Login Successful")
             self.show_success("Login successful, welcome")
             self.open_homepage()
@@ -53,6 +61,23 @@ class LoginWindow(QMainWindow):
             self.ui.password_login.clear()
             # self.open_signup_window()
             self.show_error("Login failed, please try again")
+
+    def signup_window(self):
+        print("Signing up")
+        username = self.ui.username_signup.text()
+        email = self.ui.email_signup.text()
+        password = self.ui.password_signup.text()
+        if register(username, email, password):
+            print("Signup Successful")
+            self.show_success("Signup successful, welcome")
+            self.login_window("signup")
+            self.open_homepage()
+        else:
+            print("Signup Failed")
+            self.ui.username_signup.clear()
+            self.ui.email_signup.clear()
+            self.ui.password_signup.clear()
+            self.show_error("Signup failed, please try again")
 
     def show_success(self, message):
         msg = QMessageBox()
@@ -73,7 +98,6 @@ class LoginWindow(QMainWindow):
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_Return:
             self.login_window()
-            
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

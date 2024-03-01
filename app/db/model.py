@@ -58,6 +58,7 @@ class GeneralUser(persistent.Persistent):
         self.username = username
         self.email = email
         self.password = password
+        self.gender = None
         self.name = None
         self.lastname = None
         self.address = None
@@ -70,7 +71,7 @@ class GeneralUser(persistent.Persistent):
             "username": self.username,
             "email": self.email,
             "name": self.name,
-            "lastname": self.surname,
+            "lastname": self.lastname,
             "address": self.address,
             "birthday": self.birthday,
             "phone": self.phone,
@@ -78,14 +79,14 @@ class GeneralUser(persistent.Persistent):
         }
     
     def __str__(self) -> str:
-        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.surname}, address: {self.address}, birthday: {self.birthday}, phone: {self.phone}, admin: {self.admin}"
+        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, birthday: {self.birthday}, phone: {self.phone}, admin: {self.admin}"
 
 class Admin(GeneralUser):
     def __init__(self, username, shopname, name, lastname, description, address, email, phone, password) -> None:
         super().__init__(username, email, password)
         self.shopname = shopname
         self.name = name
-        self.surname = lastname
+        self.lastname = lastname
         self.description = description
         self.address = address
         self.phone = phone
@@ -96,7 +97,7 @@ class Admin(GeneralUser):
             "username": self.username,
             "shopname": self.shopname,
             "name": self.name,
-            "surname": self.surname,
+            "lastname": self.lastname,
             "description": self.description,
             "address": self.address,
             "phone": self.phone,
@@ -145,7 +146,7 @@ class Customer(GeneralUser):
             "username": self.username,
             "email": self.email,
             "name": self.name,
-            "surname": self.surname,
+            "lastname": self.lastname,
             "address": self.address,
             "phone": self.phone,
             "admin": self.admin,
@@ -154,7 +155,7 @@ class Customer(GeneralUser):
         }
     
     def __str__(self) -> str:
-        return f"username: {self.username}, email: {self.email}, name: {self.name}, surname: {self.surname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
+        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
 
 class LoggedInUser(persistent.Persistent):
     def __init__(self, user=None) -> None:
