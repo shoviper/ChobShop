@@ -19,6 +19,8 @@ from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QScrollArea, QSizePolicy,
     QStackedWidget, QVBoxLayout, QWidget)
 
+# import app.assets.realsourceimg.real
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():

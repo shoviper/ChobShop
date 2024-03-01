@@ -33,15 +33,14 @@ def register(username, email, password):
     
 #-------------------Admin Register------------------------
 #-------------------Not yet tested
-def registerAsAdmin(username, email, password):
-    if username in root.adminUsers or email in root.adminUsers:
+def registerAdmin(username, shopname, name, lastname, description, address, email, phone, password):
+    if shopname in root.adminUsers:
         # print("User already exists")
-        if username in root.adminUsers:
-            print("Username already exists")
-            # print_database_contents(username)
+        if shopname in root.adminUsers:
+            print("Shop's name already exists")
         return False
     else:
-        user = Admin(username, email, password)
+        user = Admin(username, shopname, name, lastname, description, address, email, phone, password)
         root.adminUsers[username] = user
         transaction.commit()
         return True

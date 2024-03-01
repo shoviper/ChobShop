@@ -98,7 +98,6 @@ class HomepageWindow(QMainWindow):
             self.ui.loginsignoutbutton.clicked.connect(self.go_to_userprofile)
             
         #stackmain
-        self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         self.ui.exitbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
@@ -120,11 +119,18 @@ class HomepageWindow(QMainWindow):
         self.ui.completebutton.clicked.connect(self.go_to_order_complete)
 
     def back_to_login(self):
-        from app.template.login.Loginrun import LoginWindow
-        self.login = LoginWindow()
-        # self.show_goodbye("Log out successful, See you again")
-        self.close()
-        self.login.show()
+        print(root.LoggedInUser.logged_in)
+        if root.LoggedInUser.logged_in == True:
+            if self.show_yes_no("Are you sure you want to log out?") == QMessageBox.Yes:
+                from app.template.login.Loginrun import LoginWindow
+                self.login = LoginWindow()
+                self.close()
+                self.login.show()
+        else:
+            from app.template.login.Loginrun import LoginWindow
+            self.login = LoginWindow()
+            self.close()
+            self.login.show()
     
     # def back_to_login(self):
     #     from app.template.login.Loginrun import LoginWindow
@@ -134,7 +140,8 @@ class HomepageWindow(QMainWindow):
     #     self.login.show()
 
     def go_to_home(self):
-        from app.template.homepage.Homepagerun import HomepageWindow
+        print("go to home")
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
         self.ui.homebutton.setStyleSheet(active_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
@@ -142,7 +149,7 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton.setStyleSheet(inactive_button_style)
 
     def go_to_favorite(self):
-        from app.template.favorite.Favoriterun import FavoriteWindow
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.favpage)
         
         self.ui.homebutton.setStyleSheet(inactive_button_style)
@@ -151,12 +158,19 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton.setStyleSheet(inactive_button_style)
 
     def go_to_userprofile(self):
+        print("go to profile")
         self.ui.stackedWidget.setCurrentWidget(self.ui.userprofile)
-        # from app.template.profile.profilerun import Profile
-        # self.profile = Profile()
-        # self.close()
-        # self.profile.show()
+        self.ui.usernamelabel.setText(root.LoggedInUser.user.username.title())
+
     def go_to_usereditprofile(self):
+        self.ui.editnameprofile.setText(root.LoggedInUser.user.username.title())
+        self.ui.userbox.setText(root.LoggedInUser.user.username.title())
+        self.ui.firstnamebox.setText(root.LoggedInUser.user.name)
+        self.ui.lastnamebox.setText(root.LoggedInUser.user.surname)
+        self.ui.genderbox.setText(root.LoggedInUser.user.gender)
+        self.ui.birthdaydateEdit.setDate(root.LoggedInUser.user.birthday)
+        self.ui.emailbox.setText(root.LoggedInUser.user.email)
+        self.ui.phonebox.setText(root.LoggedInUser.user.phone)
         self.ui.stackedWidget.setCurrentWidget(self.ui.editprofile)
 
     def go_to_order(self):
@@ -177,11 +191,21 @@ class HomepageWindow(QMainWindow):
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
+
     def go_to_order_complete(self):
         self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+
+    def show_yes_no(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Question)
+        msg.setText(message)
+        msg.setWindowTitle("Log out")
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        msg.exec()
+        return msg.result()
         
     def show_goodbye(self, message):
         msg = QMessageBox()

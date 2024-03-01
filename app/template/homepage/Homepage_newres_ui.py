@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
-    QLineEdit, QPushButton, QScrollArea, QSizePolicy,
-    QStackedWidget, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QDateEdit, QFrame, QGridLayout,
+    QLabel, QLineEdit, QPushButton, QScrollArea,
+    QSizePolicy, QStackedWidget, QVBoxLayout, QWidget)
 import app.assets.realsourceimg.real
 
 class Ui_Main(object):
@@ -763,16 +763,15 @@ class Ui_Main(object):
         self.frame_userprofile.setFrameShadow(QFrame.Raised)
         self.profilecontainer = QWidget(self.frame_userprofile)
         self.profilecontainer.setObjectName(u"profilecontainer")
-        self.profilecontainer.setGeometry(QRect(42, 42, 1140, 180))
+        self.profilecontainer.setGeometry(QRect(42, 42, 1151, 180))
         self.profilecontainer.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
 "background: #FAF9F6;")
         self.profilepic = QLabel(self.profilecontainer)
         self.profilepic.setObjectName(u"profilepic")
         self.profilepic.setGeometry(QRect(30, 0, 140, 140))
         self.profilepic.setStyleSheet(u"border: none;\n"
-"border-radius: 50%;\n"
-"background: #cd4662;\n"
-"image: url(:/pic/images/newres/profile.png);")
+"border-radius: 70px;\n"
+"background: #cd4662;")
         self.usernamelabel = QLabel(self.profilecontainer)
         self.usernamelabel.setObjectName(u"usernamelabel")
         self.usernamelabel.setGeometry(QRect(250, 0, 151, 41))
@@ -795,22 +794,23 @@ class Ui_Main(object):
 "line-height: normal;")
         self.editprofilebutton = QPushButton(self.profilecontainer)
         self.editprofilebutton.setObjectName(u"editprofilebutton")
-        self.editprofilebutton.setGeometry(QRect(250, 90, 111, 41))
+        self.editprofilebutton.setGeometry(QRect(250, 90, 131, 41))
         self.editprofilebutton.setStyleSheet(u"border: none;\n"
 "color: #CD4662;\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"text-align: left;")
         self.backbutton = QPushButton(self.frame_userprofile)
         self.backbutton.setObjectName(u"backbutton")
-        self.backbutton.setGeometry(QRect(2, 22, 20, 20))
+        self.backbutton.setGeometry(QRect(0, 10, 20, 31))
         self.backbutton.setStyleSheet(u"border: none;\n"
 "image: url(:/pic/realimages/backhomoe.png);")
         self.myordercontainer = QWidget(self.frame_userprofile)
         self.myordercontainer.setObjectName(u"myordercontainer")
-        self.myordercontainer.setGeometry(QRect(50, 347, 1140, 157))
+        self.myordercontainer.setGeometry(QRect(40, 350, 1151, 157))
         self.myordercontainer.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
 "background: #FAF9F6;\n"
 "")
@@ -842,7 +842,7 @@ class Ui_Main(object):
 "border: none;")
         self.favcontainer = QWidget(self.frame_userprofile)
         self.favcontainer.setObjectName(u"favcontainer")
-        self.favcontainer.setGeometry(QRect(42, 534, 1140, 440))
+        self.favcontainer.setGeometry(QRect(42, 534, 1151, 440))
         self.favcontainer.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
 "background: #FAF9F6;")
         self.product_13 = QWidget(self.favcontainer)
@@ -891,7 +891,7 @@ class Ui_Main(object):
 "border-radius: 0px;")
         self.pushButton = QPushButton(self.favcontainer)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(980, 0, 121, 24))
+        self.pushButton.setGeometry(QRect(1020, 0, 121, 24))
         self.pushButton.setStyleSheet(u"color:  #CD4662;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -902,7 +902,7 @@ class Ui_Main(object):
 "border: none;")
         self.openshopbutton = QPushButton(self.frame_userprofile)
         self.openshopbutton.setObjectName(u"openshopbutton")
-        self.openshopbutton.setGeometry(QRect(42, 252, 1140, 65))
+        self.openshopbutton.setGeometry(QRect(42, 252, 1151, 65))
         self.openshopbutton.setStyleSheet(u"border-radius: 10px;\n"
 "background: #F4DBDB;\n"
 "color: #000;\n"
@@ -914,7 +914,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.openshoppic = QLabel(self.frame_userprofile)
         self.openshoppic.setObjectName(u"openshoppic")
-        self.openshoppic.setGeometry(QRect(490, 252, 49, 65))
+        self.openshoppic.setGeometry(QRect(520, 252, 49, 65))
         self.openshoppic.setStyleSheet(u"image: url(:/pic/images/newres/openyourshop.png);\n"
 "border: none;\n"
 "background: none;")
@@ -1021,7 +1021,7 @@ class Ui_Main(object):
         self.userbox = QLineEdit(self.textboxeditcontainer)
         self.userbox.setObjectName(u"userbox")
         self.userbox.setGeometry(QRect(43, 150, 341, 31))
-        self.userbox.setStyleSheet(u"border-radius: 10px;\n"
+        self.userbox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -1029,11 +1029,12 @@ class Ui_Main(object):
 "font-size: 16px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"padding: 0 5px;")
         self.firstnamebox = QLineEdit(self.textboxeditcontainer)
         self.firstnamebox.setObjectName(u"firstnamebox")
         self.firstnamebox.setGeometry(QRect(43, 250, 341, 31))
-        self.firstnamebox.setStyleSheet(u"border-radius: 10px;\n"
+        self.firstnamebox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -1041,11 +1042,12 @@ class Ui_Main(object):
 "font-size: 16px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"padding: 0 5px;")
         self.genderbox = QLineEdit(self.textboxeditcontainer)
         self.genderbox.setObjectName(u"genderbox")
         self.genderbox.setGeometry(QRect(43, 350, 341, 31))
-        self.genderbox.setStyleSheet(u"border-radius: 10px;\n"
+        self.genderbox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -1053,11 +1055,12 @@ class Ui_Main(object):
 "font-size: 16px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"padding: 0 5px;")
         self.phonebox = QLineEdit(self.textboxeditcontainer)
         self.phonebox.setObjectName(u"phonebox")
         self.phonebox.setGeometry(QRect(43, 450, 341, 31))
-        self.phonebox.setStyleSheet(u"border-radius: 10px;\n"
+        self.phonebox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -1065,11 +1068,12 @@ class Ui_Main(object):
 "font-size: 16px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"padding: 0 5px;")
         self.lastnamebox = QLineEdit(self.textboxeditcontainer)
         self.lastnamebox.setObjectName(u"lastnamebox")
         self.lastnamebox.setGeometry(QRect(450, 250, 341, 31))
-        self.lastnamebox.setStyleSheet(u"border-radius: 10px;\n"
+        self.lastnamebox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -1077,23 +1081,12 @@ class Ui_Main(object):
 "font-size: 16px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
-        self.birthdaybox = QLineEdit(self.textboxeditcontainer)
-        self.birthdaybox.setObjectName(u"birthdaybox")
-        self.birthdaybox.setGeometry(QRect(450, 350, 341, 31))
-        self.birthdaybox.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"padding: 0 5px;")
         self.emailbox = QLineEdit(self.textboxeditcontainer)
         self.emailbox.setObjectName(u"emailbox")
         self.emailbox.setGeometry(QRect(450, 450, 341, 31))
-        self.emailbox.setStyleSheet(u"border-radius: 10px;\n"
+        self.emailbox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -1101,7 +1094,8 @@ class Ui_Main(object):
 "font-size: 16px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
-"line-height: normal;")
+"line-height: normal;\n"
+"padding: 0 5px;")
         self.savechangebutton_2 = QPushButton(self.textboxeditcontainer)
         self.savechangebutton_2.setObjectName(u"savechangebutton_2")
         self.savechangebutton_2.setGeometry(QRect(590, 530, 201, 41))
@@ -1109,7 +1103,7 @@ class Ui_Main(object):
 "background: #AEC289;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;\n"
@@ -1121,18 +1115,52 @@ class Ui_Main(object):
 "background: #cd4662;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;\n"
 "border-radius: 10px;")
+        self.birthdaydateEdit = QDateEdit(self.textboxeditcontainer)
+        self.birthdaydateEdit.setObjectName(u"birthdaydateEdit")
+        self.birthdaydateEdit.setGeometry(QRect(450, 350, 341, 31))
+        self.birthdaydateEdit.setStyleSheet(u"QDateTimeEdit {\n"
+"	background-color: #F4F2EF; \n"
+"	font-size: 16px;\n"
+"	border: 2px solid #CD4662; \n"
+"	padding: 5px;\n"
+"	border-radius: 5px; \n"
+"}\n"
+"QDateTimeEdit::down-button, QDateTimeEdit::up-button {\n"
+"	width: 20px; \n"
+"	height: 13px;\n"
+"	background-color: #F4F2EF; \n"
+"	border: 2px solid #CD4662; \n"
+"	font-size: 16px;\n"
+"}\n"
+"QDateTimeEdit::down-button {\n"
+"	subcontrol-origin: border;\n"
+"	subcontrol-position: bottom right;\n"
+"}\n"
+"\n"
+"QDateTimeEdit::up-button {\n"
+"	subcontrol-origin: border;\n"
+"	subcontrol-position: top right;\n"
+"}\n"
+"    \n"
+"QDateTimeEdit::down-button:pressed, QDateTimeEdit::up-button:pressed {\n"
+"	background-color: #CD4662;\n"
+"}\n"
+"    \n"
+"QDateTimeEdit::down-arrow, QDateTimeEdit::up-arrow {\n"
+"	image: url(arrow.png); \n"
+"}")
+        self.birthdaydateEdit.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
         self.editprofilepic = QLabel(self.editprofilecontainer)
         self.editprofilepic.setObjectName(u"editprofilepic")
-        self.editprofilepic.setGeometry(QRect(40, 0, 165, 165))
+        self.editprofilepic.setGeometry(QRect(40, 0, 160, 160))
         self.editprofilepic.setStyleSheet(u"border: none;\n"
-"border-radius: 50%;\n"
-"background: #cd4662;\n"
-"image: url(:/pic/images/newres/profile.png);")
+"border-radius: 80px;\n"
+"background: #cd4662;")
         self.editnameprofile = QLabel(self.editprofilecontainer)
         self.editnameprofile.setObjectName(u"editnameprofile")
         self.editnameprofile.setGeometry(QRect(40, 190, 165, 41))
@@ -1146,7 +1174,7 @@ class Ui_Main(object):
         self.editnameprofile.setAlignment(Qt.AlignCenter)
         self.backbutton_2 = QPushButton(self.editprofile)
         self.backbutton_2.setObjectName(u"backbutton_2")
-        self.backbutton_2.setGeometry(QRect(20, 40, 20, 20))
+        self.backbutton_2.setGeometry(QRect(20, 30, 20, 31))
         self.backbutton_2.setStyleSheet(u"border: none;\n"
 "image: url(:/pic/realimages/backhomoe.png);")
         self.stackedWidget.addWidget(self.editprofile)
@@ -1216,8 +1244,8 @@ class Ui_Main(object):
         self.favlabel.setText(QCoreApplication.translate("Main", u"Favorites", None))
         self.picproduct1_18.setText("")
         self.picproduct1_19.setText("")
-        self.pushButton.setText(QCoreApplication.translate("Main", u"View all Favorites >", None))
-        self.openshopbutton.setText(QCoreApplication.translate("Main", u"Open Your Shop", None))
+        self.pushButton.setText(QCoreApplication.translate("Main", u"View all Favorites    >", None))
+        self.openshopbutton.setText(QCoreApplication.translate("Main", u"           Open Your Shop", None))
         self.openshoppic.setText("")
         self.editlabel.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel.setText(QCoreApplication.translate("Main", u"Username", None))
@@ -1228,14 +1256,17 @@ class Ui_Main(object):
         self.pholabel.setText(QCoreApplication.translate("Main", u"Phone", None))
         self.emaillabel_2.setText(QCoreApplication.translate("Main", u"Email", None))
         self.userbox.setText("")
-        self.userbox.setPlaceholderText(QCoreApplication.translate("Main", u"User1", None))
+        self.userbox.setPlaceholderText(QCoreApplication.translate("Main", u"Username", None))
         self.firstnamebox.setText("")
-        self.firstnamebox.setPlaceholderText(QCoreApplication.translate("Main", u"None", None))
-        self.genderbox.setPlaceholderText(QCoreApplication.translate("Main", u"None", None))
-        self.phonebox.setPlaceholderText(QCoreApplication.translate("Main", u"None", None))
-        self.lastnamebox.setPlaceholderText(QCoreApplication.translate("Main", u"None", None))
-        self.birthdaybox.setPlaceholderText(QCoreApplication.translate("Main", u"None", None))
-        self.emailbox.setPlaceholderText(QCoreApplication.translate("Main", u"user1@gmail.com", None))
+        self.firstnamebox.setPlaceholderText(QCoreApplication.translate("Main", u"First name", None))
+        self.genderbox.setText("")
+        self.genderbox.setPlaceholderText(QCoreApplication.translate("Main", u"Gender", None))
+        self.phonebox.setText("")
+        self.phonebox.setPlaceholderText(QCoreApplication.translate("Main", u"Phone", None))
+        self.lastnamebox.setText("")
+        self.lastnamebox.setPlaceholderText(QCoreApplication.translate("Main", u"Last name", None))
+        self.emailbox.setText("")
+        self.emailbox.setPlaceholderText(QCoreApplication.translate("Main", u"Email", None))
         self.savechangebutton_2.setText(QCoreApplication.translate("Main", u"Save changes", None))
         self.deleteaccbutton.setText(QCoreApplication.translate("Main", u"Delete account", None))
         self.editprofilepic.setText("")

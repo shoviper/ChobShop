@@ -59,8 +59,9 @@ class GeneralUser(persistent.Persistent):
         self.email = email
         self.password = password
         self.name = None
-        self.surname = None
+        self.lastname = None
         self.address = None
+        self.birthday = None
         self.phone = None
         self.admin = False
 
@@ -69,22 +70,38 @@ class GeneralUser(persistent.Persistent):
             "username": self.username,
             "email": self.email,
             "name": self.name,
-            "surname": self.surname,
+            "lastname": self.surname,
             "address": self.address,
+            "birthday": self.birthday,
             "phone": self.phone,
             "admin": self.admin
         }
     
     def __str__(self) -> str:
-        return f"username: {self.username}, email: {self.email}, name: {self.name}, surname: {self.surname}, address: {self.address},phone: {self.phone}, admin: {self.admin}"
+        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.surname}, address: {self.address}, birthday: {self.birthday}, phone: {self.phone}, admin: {self.admin}"
 
 class Admin(GeneralUser):
-    def __init__(self, username, email, password) -> None:
+    def __init__(self, username, shopname, name, lastname, description, address, email, phone, password) -> None:
         super().__init__(username, email, password)
+        self.shopname = shopname
+        self.name = name
+        self.surname = lastname
+        self.description = description
+        self.address = address
+        self.phone = phone
         self.admin = True
 
     def toJSON(self):
-        return super().toJSON()
+        return {
+            "username": self.username,
+            "shopname": self.shopname,
+            "name": self.name,
+            "surname": self.surname,
+            "description": self.description,
+            "address": self.address,
+            "phone": self.phone,
+            "admin": self.admin
+        }
     
     def __str__(self) -> str:
         return super().__str__()
