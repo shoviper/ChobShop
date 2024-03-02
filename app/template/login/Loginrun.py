@@ -67,9 +67,9 @@ class LoginWindow(QMainWindow):
 
         if login(username, password, admin):
             print("Login Successful")
-            print_database_contents("top")
+            # print_database_contents("top")
             self.show_success("Login successful, welcome")
-            print_all_users()
+            # print_all_users()
             self.open_homepage()
             
         else:

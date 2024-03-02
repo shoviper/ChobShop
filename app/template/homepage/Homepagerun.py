@@ -87,6 +87,8 @@ class HomepageWindow(QMainWindow):
         super(HomepageWindow, self).__init__()
         self.ui = Ui_Main()
         self.ui.setupUi(self)
+        # print("root.LoggedInUser.logged_in: ", root.LoggedInUser)
+        # print("root.LoggedInUser.user.username: ", root.LoggedInUser.user.username)
 
         if root.LoggedInUser.logged_in == False:
             self.ui.loginsignoutbutton.setText("Log in")
@@ -118,18 +120,22 @@ class HomepageWindow(QMainWindow):
         self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive)
         self.ui.completebutton.clicked.connect(self.go_to_order_complete)
 
+    #Log out function
     def back_to_login(self):
         if root.LoggedInUser.logged_in == True:
             if self.show_yes_no("Are you sure you want to log out?") == QMessageBox.Yes:
                 logout(root.LoggedInUser.user.username)
+                # print("root.LoggedInUser.user.username: ", root.LoggedInUser.user.username)
                 from app.template.login.Loginrun import LoginWindow
                 self.login = LoginWindow()
+                print("root.LoggedInUser.logged_in: ", root.LoggedInUser.logged_in)
                 root.LoggedInUser.logged_in = False
                 self.close()
                 self.login.show()
         else:
             from app.template.login.Loginrun import LoginWindow
             self.login = LoginWindow()
+            print("back_to_login else root.LoggedInUser.logged_in: ", root.LoggedInUser.logged_in)
             self.close()
             self.login.show()
     

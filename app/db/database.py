@@ -81,9 +81,11 @@ def logout(username):
     if username in root.LoggedInUser.user.username:
         root.LoggedInUser.logged_in = False
         root.LoggedInUser.user = None
+        transaction.commit()
+        print(root.LoggedInUser)
+        return True
     else:
         return False
-    return True
 
 
 def print_all_users():
