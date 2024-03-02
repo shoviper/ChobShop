@@ -72,6 +72,7 @@ def login(username, password, admin=False):
     if user and user.password == password:
         root.LoggedInUser = LoggedInUser(user)
         root.LoggedInUser.logged_in = True
+        transaction.commit()
         return True
     else:
         return False
