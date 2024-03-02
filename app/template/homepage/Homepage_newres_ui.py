@@ -926,6 +926,240 @@ class Ui_Main(object):
         self.verticalLayout.addWidget(self.scrollArea_userprofile)
 
         self.stackedWidget.addWidget(self.userprofile)
+        self.adminwidget = QWidget()
+        self.adminwidget.setObjectName(u"adminwidget")
+        self.gridLayoutWidget_2 = QWidget(self.adminwidget)
+        self.gridLayoutWidget_2.setObjectName(u"gridLayoutWidget_2")
+        self.gridLayoutWidget_2.setGeometry(QRect(-1, -1, 1281, 721))
+        self.gridLayout_adminwidget = QGridLayout(self.gridLayoutWidget_2)
+        self.gridLayout_adminwidget.setObjectName(u"gridLayout_adminwidget")
+        self.gridLayout_adminwidget.setContentsMargins(0, 0, 0, 0)
+        self.stackedWidget_adminwidget = QStackedWidget(self.gridLayoutWidget_2)
+        self.stackedWidget_adminwidget.setObjectName(u"stackedWidget_adminwidget")
+        self.adminregisterpage = QWidget()
+        self.adminregisterpage.setObjectName(u"adminregisterpage")
+        self.backbutton_adminregister = QPushButton(self.adminregisterpage)
+        self.backbutton_adminregister.setObjectName(u"backbutton_adminregister")
+        self.backbutton_adminregister.setGeometry(QRect(20, 30, 20, 31))
+        self.backbutton_adminregister.setStyleSheet(u"border: none;\n"
+"image: url(:/pic/realimages/backhomoe.png);")
+        self.adminregistercontainer = QWidget(self.adminregisterpage)
+        self.adminregistercontainer.setObjectName(u"adminregistercontainer")
+        self.adminregistercontainer.setGeometry(QRect(60, 60, 1160, 630))
+        self.adminregistercontainer.setStyleSheet(u"background: #FAF9F6;")
+        self.textboxeditcontainer_2 = QWidget(self.adminregistercontainer)
+        self.textboxeditcontainer_2.setObjectName(u"textboxeditcontainer_2")
+        self.textboxeditcontainer_2.setGeometry(QRect(300, 0, 830, 600))
+        self.textboxeditcontainer_2.setStyleSheet(u"border-radius: 20px;\n"
+"background: #F4DBDB;")
+        self.shopregisterationlabel = QLabel(self.textboxeditcontainer_2)
+        self.shopregisterationlabel.setObjectName(u"shopregisterationlabel")
+        self.shopregisterationlabel.setGeometry(QRect(43, 34, 281, 51))
+        self.shopregisterationlabel.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.shopnamelabel = QLabel(self.textboxeditcontainer_2)
+        self.shopnamelabel.setObjectName(u"shopnamelabel")
+        self.shopnamelabel.setGeometry(QRect(43, 100, 141, 31))
+        self.shopnamelabel.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.fisrtnamelabel_admin = QLabel(self.textboxeditcontainer_2)
+        self.fisrtnamelabel_admin.setObjectName(u"fisrtnamelabel_admin")
+        self.fisrtnamelabel_admin.setGeometry(QRect(43, 200, 121, 31))
+        self.fisrtnamelabel_admin.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.lastnamelabel_admin = QLabel(self.textboxeditcontainer_2)
+        self.lastnamelabel_admin.setObjectName(u"lastnamelabel_admin")
+        self.lastnamelabel_admin.setGeometry(QRect(40, 300, 121, 31))
+        self.lastnamelabel_admin.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addresslabel_admin = QLabel(self.textboxeditcontainer_2)
+        self.addresslabel_admin.setObjectName(u"addresslabel_admin")
+        self.addresslabel_admin.setGeometry(QRect(450, 250, 121, 31))
+        self.addresslabel_admin.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.phonelabel_admin = QLabel(self.textboxeditcontainer_2)
+        self.phonelabel_admin.setObjectName(u"phonelabel_admin")
+        self.phonelabel_admin.setGeometry(QRect(43, 400, 121, 31))
+        self.phonelabel_admin.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.emaillabel_admin = QLabel(self.textboxeditcontainer_2)
+        self.emaillabel_admin.setObjectName(u"emaillabel_admin")
+        self.emaillabel_admin.setGeometry(QRect(450, 400, 121, 31))
+        self.emaillabel_admin.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.shopnamebox = QLineEdit(self.textboxeditcontainer_2)
+        self.shopnamebox.setObjectName(u"shopnamebox")
+        self.shopnamebox.setGeometry(QRect(43, 150, 341, 31))
+        self.shopnamebox.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.firstnamebox_admin = QLineEdit(self.textboxeditcontainer_2)
+        self.firstnamebox_admin.setObjectName(u"firstnamebox_admin")
+        self.firstnamebox_admin.setGeometry(QRect(43, 250, 341, 31))
+        self.firstnamebox_admin.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.phonebox_admin = QLineEdit(self.textboxeditcontainer_2)
+        self.phonebox_admin.setObjectName(u"phonebox_admin")
+        self.phonebox_admin.setGeometry(QRect(43, 450, 341, 31))
+        self.phonebox_admin.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.lastnamebox_admin = QLineEdit(self.textboxeditcontainer_2)
+        self.lastnamebox_admin.setObjectName(u"lastnamebox_admin")
+        self.lastnamebox_admin.setGeometry(QRect(40, 350, 341, 31))
+        self.lastnamebox_admin.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.emailbox_admin = QLineEdit(self.textboxeditcontainer_2)
+        self.emailbox_admin.setObjectName(u"emailbox_admin")
+        self.emailbox_admin.setGeometry(QRect(450, 450, 341, 31))
+        self.emailbox_admin.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.adminregisterbutton = QPushButton(self.textboxeditcontainer_2)
+        self.adminregisterbutton.setObjectName(u"adminregisterbutton")
+        self.adminregisterbutton.setGeometry(QRect(590, 530, 201, 41))
+        self.adminregisterbutton.setStyleSheet(u"color: #FFF;\n"
+"background: #AEC289;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border-radius: 10px;")
+        self.descriptionbox_admin = QLineEdit(self.textboxeditcontainer_2)
+        self.descriptionbox_admin.setObjectName(u"descriptionbox_admin")
+        self.descriptionbox_admin.setGeometry(QRect(450, 150, 341, 81))
+        self.descriptionbox_admin.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.shopdescriptionlabel = QLabel(self.textboxeditcontainer_2)
+        self.shopdescriptionlabel.setObjectName(u"shopdescriptionlabel")
+        self.shopdescriptionlabel.setGeometry(QRect(450, 100, 141, 31))
+        self.shopdescriptionlabel.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addressbox_admin = QLineEdit(self.textboxeditcontainer_2)
+        self.addressbox_admin.setObjectName(u"addressbox_admin")
+        self.addressbox_admin.setGeometry(QRect(450, 300, 341, 81))
+        self.addressbox_admin.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.editshoppic = QLabel(self.adminregistercontainer)
+        self.editshoppic.setObjectName(u"editshoppic")
+        self.editshoppic.setGeometry(QRect(40, 0, 160, 160))
+        self.editshoppic.setStyleSheet(u"border: none;\n"
+"border-radius: 80px;\n"
+"background: #cd4662;")
+        self.shoplogolabel = QLabel(self.adminregistercontainer)
+        self.shoplogolabel.setObjectName(u"shoplogolabel")
+        self.shoplogolabel.setGeometry(QRect(40, 190, 171, 41))
+        self.shoplogolabel.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.shoplogolabel.setAlignment(Qt.AlignCenter)
+        self.stackedWidget_adminwidget.addWidget(self.adminregisterpage)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.stackedWidget_adminwidget.addWidget(self.page_2)
+
+        self.gridLayout_adminwidget.addWidget(self.stackedWidget_adminwidget, 0, 0, 1, 1)
+
+        self.stackedWidget.addWidget(self.adminwidget)
         self.editprofile = QWidget()
         self.editprofile.setObjectName(u"editprofile")
         self.editprofile.setStyleSheet(u"background: #FAF9F6;")
@@ -1247,6 +1481,32 @@ class Ui_Main(object):
         self.pushButton.setText(QCoreApplication.translate("Main", u"View all Favorites    >", None))
         self.openshopbutton.setText(QCoreApplication.translate("Main", u"           Open Your Shop", None))
         self.openshoppic.setText("")
+        self.backbutton_adminregister.setText("")
+        self.shopregisterationlabel.setText(QCoreApplication.translate("Main", u"Shop Registeration", None))
+        self.shopnamelabel.setText(QCoreApplication.translate("Main", u"Shop's name", None))
+        self.fisrtnamelabel_admin.setText(QCoreApplication.translate("Main", u"First name", None))
+        self.lastnamelabel_admin.setText(QCoreApplication.translate("Main", u"Last name", None))
+        self.addresslabel_admin.setText(QCoreApplication.translate("Main", u"Address", None))
+        self.phonelabel_admin.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.emaillabel_admin.setText(QCoreApplication.translate("Main", u"Email", None))
+        self.shopnamebox.setText("")
+        self.shopnamebox.setPlaceholderText(QCoreApplication.translate("Main", u"Shop's name", None))
+        self.firstnamebox_admin.setText("")
+        self.firstnamebox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"First name", None))
+        self.phonebox_admin.setText("")
+        self.phonebox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Phone", None))
+        self.lastnamebox_admin.setText("")
+        self.lastnamebox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Last name", None))
+        self.emailbox_admin.setText("")
+        self.emailbox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Email", None))
+        self.adminregisterbutton.setText(QCoreApplication.translate("Main", u"Register", None))
+        self.descriptionbox_admin.setText("")
+        self.descriptionbox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Description", None))
+        self.shopdescriptionlabel.setText(QCoreApplication.translate("Main", u"Description", None))
+        self.addressbox_admin.setText("")
+        self.addressbox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Address", None))
+        self.editshoppic.setText("")
+        self.shoplogolabel.setText(QCoreApplication.translate("Main", u"Shop's Logo", None))
         self.editlabel.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel.setText(QCoreApplication.translate("Main", u"Username", None))
         self.fisrtlabel.setText(QCoreApplication.translate("Main", u"First name", None))

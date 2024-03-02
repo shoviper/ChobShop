@@ -42,6 +42,7 @@ def registerAdmin(username, shopname, name, lastname, description, address, emai
     else:
         user = Admin(username, shopname, name, lastname, description, address, email, phone, password)
         root.adminUsers[username] = user
+        root.customerUsers[username].admin = True
         transaction.commit()
         return True
 #-------------------------------------------------------------
@@ -76,16 +77,19 @@ def login(username, password, admin=False):
         return False
     
 def logout(username):
-    if username in root.customerUsers or username in root.adminUsers:
+    print(root.LoggedInUser.user.username)
+    if username in root.LoggedInUser.user.username:
         root.LoggedInUser.logged_in = False
+        root.LoggedInUser.user = None
     else:
         return False
     return True
 
 
 def print_all_users():
-    print("Users:")
+    print(len(root.adminUsers))
     for user in root.customerUsers.values():
+        print("Users:")
         print("--------------------------------")
         print(f"Username: {user.username}")
         print(f"Email: {user.email}")
@@ -94,6 +98,8 @@ def print_all_users():
         print(f"Address: {user.address}")
         print(f"Phone: {user.phone}")
         print(f"Admin: {user.admin}")
+        print(f"password: {user.password}")
+        print("--------------------------------")
 
 
 def print_database_contents(username):

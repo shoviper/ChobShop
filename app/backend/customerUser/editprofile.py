@@ -11,7 +11,6 @@ def editProfile(username, newusername=None, name=None, lastname=None, gender=Non
         print("username not in root.customerUsers:")
         return False
     user = root.customerUsers[username]
-    print("user.key: ", user.key)
     print("username: ", username)
     print("newusername: ", newusername)
     print(root.LoggedInUser.user.username)

@@ -2062,6 +2062,510 @@ background: none;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="adminwidget">
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>1281</width>
+       <height>721</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_adminwidget">
+      <item row="0" column="0">
+       <widget class="QStackedWidget" name="stackedWidget_adminwidget">
+        <widget class="QWidget" name="adminregisterpage">
+         <widget class="QPushButton" name="backbutton_adminregister">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>20</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="adminregistercontainer" native="true">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>60</y>
+            <width>1160</width>
+            <height>630</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #FAF9F6;</string>
+          </property>
+          <widget class="QWidget" name="textboxeditcontainer_2" native="true">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>0</y>
+             <width>830</width>
+             <height>600</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 20px;
+background: #F4DBDB;</string>
+           </property>
+           <widget class="QLabel" name="shopregisterationlabel">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>34</y>
+              <width>281</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Shop Registeration</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="shopnamelabel">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>100</y>
+              <width>141</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Shop's name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="fisrtnamelabel_admin">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>200</y>
+              <width>121</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>First name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lastnamelabel_admin">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>300</y>
+              <width>121</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Last name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="addresslabel_admin">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>250</y>
+              <width>121</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Address</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="phonelabel_admin">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>400</y>
+              <width>121</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Phone</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="emaillabel_admin">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>400</y>
+              <width>121</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="shopnamebox">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>150</y>
+              <width>341</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Shop's name</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="firstnamebox_admin">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>250</y>
+              <width>341</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>First name</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="phonebox_admin">
+            <property name="geometry">
+             <rect>
+              <x>43</x>
+              <y>450</y>
+              <width>341</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Phone</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lastnamebox_admin">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>350</y>
+              <width>341</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Last name</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="emailbox_admin">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>450</y>
+              <width>341</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Email</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="adminregisterbutton">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>530</y>
+              <width>201</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #FFF;
+background: #AEC289;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Register</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="descriptionbox_admin">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>150</y>
+              <width>341</width>
+              <height>81</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Description</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="shopdescriptionlabel">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>100</y>
+              <width>141</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>Description</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="addressbox_admin">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>300</y>
+              <width>341</width>
+              <height>81</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Address</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QLabel" name="editshoppic">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>0</y>
+             <width>160</width>
+             <height>160</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: none;
+border-radius: 80px;
+background: #cd4662;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="shoplogolabel">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>190</y>
+             <width>171</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+           </property>
+           <property name="text">
+            <string>Shop's Logo</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_2"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
    <widget class="QWidget" name="editprofile">
     <property name="styleSheet">
      <string notr="true">background: #FAF9F6;</string>

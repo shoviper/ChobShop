@@ -93,7 +93,6 @@ class HomepageWindow(QMainWindow):
             self.ui.profilebutton.clicked.connect(lambda: self.show_error("Please log in to view profile"))
             self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         else:   
-            print(root.LoggedInUser.user.username.title())
             self.ui.loginsignoutbutton.setText(root.LoggedInUser.user.username)
             self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
             self.ui.loginsignoutbutton.clicked.connect(self.go_to_userprofile)
@@ -120,9 +119,9 @@ class HomepageWindow(QMainWindow):
         self.ui.completebutton.clicked.connect(self.go_to_order_complete)
 
     def back_to_login(self):
-        print(root.LoggedInUser.logged_in)
         if root.LoggedInUser.logged_in == True:
             if self.show_yes_no("Are you sure you want to log out?") == QMessageBox.Yes:
+                logout(root.LoggedInUser.user.username)
                 from app.template.login.Loginrun import LoginWindow
                 self.login = LoginWindow()
                 root.LoggedInUser.logged_in = False
@@ -164,6 +163,33 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.userprofile)
         # self.ui.usernamelabel.setText(root.LoggedInUser.user.username.title())
         self.ui.usernamelabel.setText(root.LoggedInUser.user.username)
+        self.ui.openshopbutton.clicked.connect(self.go_to_adminregister)
+
+    def go_to_adminregister(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.adminwidget)
+        self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminregisterpage)
+        self.ui.backbutton_adminregister.clicked.connect(self.go_to_userprofile)
+
+        self.ui.adminregisterbutton.clicked.connect(self.admin_register)
+
+    def admin_register(self):
+        print("Registering as admin")
+        username = root.LoggedInUser.user.username
+        password = root.LoggedInUser.user.password
+        shopname = self.ui.shopnamebox.text()
+        firstname = self.ui.firstnamebox_admin.text()
+        lastname = self.ui.lastnamebox_admin.text()
+        description = self.ui.descriptionbox_admin.text()
+        address = self.ui.addressbox_admin.text()
+        email = self.ui.emailbox_admin.text()
+        phone = self.ui.phonebox_admin.text()
+        if registerAdmin(username, shopname, firstname, lastname, description, address, email, phone, password):
+            print("Admin registered successfully")
+            self.show_success("Admin registered successfully")
+            self.go_to_home()
+        else:
+            print("Admin registration failed")
+            self.show_error("Admin registration failed")
 
     def go_to_usereditprofile(self):
         print("go to edit profile")
