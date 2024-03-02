@@ -41,16 +41,31 @@ class LoginWindow(QMainWindow):
         
     def login_window(self, log="login"):
         print("Logging in")
-        if log == "login":
-            self.username = self.ui.username_login.text()
-            self.password = self.ui.password_login.text()
-        else:
-            self.username = self.ui.username_signup.text()
-            self.password = self.ui.password_signup.text()
+        print(log)
         admin = False
         if self.ui.admincheckbox.isChecked():
             admin = True
-        if login(self.username, self.password, admin):
+            
+        if log != "login":
+            username = self.ui.username_signup.text()
+            password = self.ui.password_signup.text()
+            if login(username, password, admin):
+                print("Login Successful")
+                # self.show_success("Login successful, welcome")
+                self.open_homepage()
+                return  
+            
+        username = self.ui.username_login.text()
+        password = self.ui.password_login.text()
+        
+        print("Username login: ", username)
+        print("Password login: ", password)
+        
+        print("username_login login: ", self.ui.username_login.text())
+        print(self.ui.username_login.text())
+        print("password_login login: ", self.ui.password_login.text())
+
+        if login(username, password, admin):
             print("Login Successful")
             self.show_success("Login successful, welcome")
             self.open_homepage()
@@ -67,6 +82,11 @@ class LoginWindow(QMainWindow):
         username = self.ui.username_signup.text()
         email = self.ui.email_signup.text()
         password = self.ui.password_signup.text()
+        
+        print("Username Signup: ", username)
+        print("Email Signup: ", email)
+        print("Password Signup: ", password)
+        
         if register(username, email, password):
             print("Signup Successful")
             self.show_success("Signup successful, welcome")
@@ -77,7 +97,7 @@ class LoginWindow(QMainWindow):
             self.ui.username_signup.clear()
             self.ui.email_signup.clear()
             self.ui.password_signup.clear()
-            self.show_error("Signup failed, please try again")
+            self.show_error("Username or Email already exists")
 
     def show_success(self, message):
         msg = QMessageBox()

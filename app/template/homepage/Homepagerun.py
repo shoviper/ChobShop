@@ -125,6 +125,7 @@ class HomepageWindow(QMainWindow):
             if self.show_yes_no("Are you sure you want to log out?") == QMessageBox.Yes:
                 from app.template.login.Loginrun import LoginWindow
                 self.login = LoginWindow()
+                root.LoggedInUser.logged_in = False
                 self.close()
                 self.login.show()
         else:
