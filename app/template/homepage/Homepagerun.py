@@ -162,11 +162,15 @@ class HomepageWindow(QMainWindow):
     def go_to_userprofile(self):
         print("go to profile")
         self.ui.stackedWidget.setCurrentWidget(self.ui.userprofile)
-        self.ui.usernamelabel.setText(root.LoggedInUser.user.username.title())
+        # self.ui.usernamelabel.setText(root.LoggedInUser.user.username.title())
+        self.ui.usernamelabel.setText(root.LoggedInUser.user.username)
 
     def go_to_usereditprofile(self):
-        self.ui.editnameprofile.setText(root.LoggedInUser.user.username.title())
-        self.ui.userbox.setText(root.LoggedInUser.user.username.title())
+        print("go to edit profile")
+        # self.ui.editnameprofile.setText(root.LoggedInUser.user.username.title())
+        self.ui.editnameprofile.setText(root.LoggedInUser.user.username)
+        # self.ui.userbox.setText(root.LoggedInUser.user.username.title())
+        self.ui.userbox.setText(root.LoggedInUser.user.username)
         self.ui.firstnamebox.setText(root.LoggedInUser.user.name)
         self.ui.lastnamebox.setText(root.LoggedInUser.user.lastname)
         self.ui.genderbox.setText(root.LoggedInUser.user.gender)
@@ -176,6 +180,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.stackedWidget.setCurrentWidget(self.ui.editprofile)
         self.ui.savechangebutton_2.clicked.connect(self.save_editprofile)
+        self.ui.deleteaccbutton.clicked.connect(self.delete_profile)
 
     def save_editprofile(self):
         print("save edit profile")
@@ -190,7 +195,35 @@ class HomepageWindow(QMainWindow):
 
         if editProfile(username, newusername, firstname, lastname, gender, birthday, email, phone):
             self.show_success("Edit Profile successful")
+            print_all_users()
             self.go_to_userprofile()
+        else:
+            self.show_error("Edit Profile failed")
+            # self.ui.editnameprofile.setText(root.LoggedInUser.user.username.title())
+            self.ui.editnameprofile.setText(root.LoggedInUser.user.username)
+            # self.ui.userbox.setText(root.LoggedInUser.user.username.title())
+            self.ui.userbox.setText(root.LoggedInUser.user.username)
+            self.ui.firstnamebox.setText(root.LoggedInUser.user.name)
+            self.ui.lastnamebox.setText(root.LoggedInUser.user.lastname)
+            self.ui.genderbox.setText(root.LoggedInUser.user.gender)
+            self.ui.birthdaydateEdit.setDate(root.LoggedInUser.user.birthday)
+            self.ui.emailbox.setText(root.LoggedInUser.user.email)
+            self.ui.phonebox.setText(root.LoggedInUser.user.phone)
+    
+    def delete_profile(self):
+        print("deleting profile")
+        user = root.LoggedInUser.user.username
+        if deleteProfile(user):
+            self.show_goodbye("Delete Profile successful, Goodbye")
+            # print_all_users()
+            # self.back_to_login()
+            from app.template.login.Loginrun import LoginWindow
+            self.login = LoginWindow()
+            root.LoggedInUser.logged_in = False
+            self.close()
+            self.login.show()
+        else:
+            self.show_error("Delete Profile failed")
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
@@ -217,6 +250,14 @@ class HomepageWindow(QMainWindow):
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
 
+    def show_success(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText(message)
+        msg.setWindowTitle("Login Succesful")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
+    
     def show_yes_no(self, message):
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Question)

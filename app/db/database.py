@@ -57,7 +57,9 @@ def login(username, password, admin=False):
     user = None
     if username is not None:
         if username in root.customerUsers and not admin:
+            print("username: ", username)
             user = root.customerUsers[username]
+            print("user: ", user)
         elif username in root.adminUsers and admin:
             user = root.adminUsers[username]
     elif email is not None:
@@ -110,6 +112,8 @@ def print_database_contents(username):
         print(f"Admin: {user.admin}")
         print(f"Cart: {user.cart}")
         print(f"Orders: {user.orders}")
+    else:
+        print("No user name: ", username)
         
 #-------------------------------------------------------------
 def printAdminContent(username):
