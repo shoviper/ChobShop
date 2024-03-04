@@ -245,17 +245,19 @@ class HomepageWindow(QMainWindow):
     def delete_profile(self):
         print("deleting profile")
         user = root.LoggedInUser.user.username
-        if deleteProfile(user):
-            self.show_goodbye("Delete Profile successful, Goodbye")
-            # print_all_users()
-            # self.back_to_login()
-            from app.template.login.Loginrun import LoginWindow
-            self.login = LoginWindow()
-            root.LoggedInUser.logged_in = False
-            self.close()
-            self.login.show()
-        else:
-            self.show_error("Delete Profile failed")
+        if self.show_yes_no("Are you sure?") == QMessageBox.Yes:
+            if deleteProfile(user):
+                self.show_goodbye("Delete Profile successful, Goodbye")
+                # print_all_users()
+                # self.back_to_login()
+                from app.template.login.Loginrun import LoginWindow
+                self.login = LoginWindow()
+                root.LoggedInUser.logged_in = False
+                transaction.commit()
+                self.close()
+                self.login.show()
+            else:
+                self.show_error("Delete Profile failed")
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
