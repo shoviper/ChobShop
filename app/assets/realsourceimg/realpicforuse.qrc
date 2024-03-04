@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../images/newres/rightarrow_pink.png</file>
     <file>../images/newres/bestselling.png</file>
     <file>../images/newres/buyagain.png</file>
     <file>../images/newres/newarrival.png</file>
