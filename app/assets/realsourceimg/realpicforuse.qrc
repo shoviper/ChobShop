@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../images/star.png</file>
+    <file>../images/baht.png</file>
     <file>../images/newres/rightarrow_pink.png</file>
     <file>../images/newres/bestselling.png</file>
     <file>../images/newres/buyagain.png</file>
