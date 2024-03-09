@@ -94,7 +94,7 @@ class HomepageWindow(QMainWindow):
             self.ui.loginsignoutbutton.setText("Log in")
             self.ui.profilebutton.clicked.connect(lambda: self.show_error("Please log in to view profile"))
             self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
-        else:   
+        else:
             self.ui.loginsignoutbutton.setText(root.LoggedInUser.user.username)
             self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
             self.ui.loginsignoutbutton.clicked.connect(self.go_to_userprofile)
@@ -177,6 +177,17 @@ class HomepageWindow(QMainWindow):
         self.ui.backbutton_adminregister.clicked.connect(self.go_to_userprofile)
 
         self.ui.adminregisterbutton.clicked.connect(self.admin_register)
+        
+        user = root.LoggedInUser.user.username
+        if user in root.adminUsers:
+            self.ui.adminregisterbutton.setText("Edit Shop's Profile")
+            self.ui.shopnamebox.setText(root.adminUsers[user].shopname)
+            self.ui.firstnamebox_admin.setText(root.adminUsers[user].name)
+            self.ui.lastnamebox_admin.setText(root.adminUsers[user].lastname)
+            self.ui.descriptionbox_admin.setText(root.adminUsers[user].description)
+            self.ui.addressbox_admin.setText(root.adminUsers[user].address)
+            self.ui.emailbox_admin.setText(root.adminUsers[user].email)
+            self.ui.phonebox_admin.setText(root.adminUsers[user].phone)
 
     def admin_register(self):
         print("Registering as admin")
@@ -245,17 +256,19 @@ class HomepageWindow(QMainWindow):
     def delete_profile(self):
         print("deleting profile")
         user = root.LoggedInUser.user.username
-        if deleteProfile(user):
-            self.show_goodbye("Delete Profile successful, Goodbye")
-            # print_all_users()
-            # self.back_to_login()
-            from app.template.login.Loginrun import LoginWindow
-            self.login = LoginWindow()
-            root.LoggedInUser.logged_in = False
-            self.close()
-            self.login.show()
-        else:
-            self.show_error("Delete Profile failed")
+        if self.show_yes_no("Are you sure?") == QMessageBox.Yes:
+            if deleteProfile(user):
+                self.show_goodbye("Delete Profile successful, Goodbye")
+                # print_all_users()
+                # self.back_to_login()
+                from app.template.login.Loginrun import LoginWindow
+                self.login = LoginWindow()
+                root.LoggedInUser.logged_in = False
+                transaction.commit()
+                self.close()
+                self.login.show()
+            else:
+                self.show_error("Delete Profile failed")
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
@@ -314,6 +327,7 @@ class HomepageWindow(QMainWindow):
         msg.setWindowTitle("Login Error")
         msg.setStandardButtons(QMessageBox.Ok)
         msg.exec()
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

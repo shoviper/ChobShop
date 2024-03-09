@@ -178,6 +178,15 @@ class Ui_Login_Signup(object):
         self.frame_signup.setStyleSheet(u"background-color: rgb(250, 249, 246);")
         self.frame_signup.setFrameShape(QFrame.StyledPanel)
         self.frame_signup.setFrameShadow(QFrame.Raised)
+        self.username_signup = QLineEdit(self.frame_signup)
+        self.username_signup.setObjectName(u"username_signup")
+        self.username_signup.setGeometry(QRect(0, 110, 431, 61))
+        self.username_signup.setStyleSheet(u"font-size: 20px;\n"
+"                width: 500px;\n"
+"                height: 80px;\n"
+"                border: none;\n"
+"                border-bottom: 2px solid #000;\n"
+"                background-color: #FAF9F6;")
         self.email_signup = QLineEdit(self.frame_signup)
         self.email_signup.setObjectName(u"email_signup")
         self.email_signup.setGeometry(QRect(0, 200, 431, 61))
@@ -252,15 +261,6 @@ class Ui_Login_Signup(object):
 "                font-style: normal;\n"
 "                font-weight: 700;\n"
 "                line-height: normal;")
-        self.username_signup = QLineEdit(self.frame_signup)
-        self.username_signup.setObjectName(u"username_signup")
-        self.username_signup.setGeometry(QRect(0, 110, 431, 61))
-        self.username_signup.setStyleSheet(u"font-size: 20px;\n"
-"                width: 500px;\n"
-"                height: 80px;\n"
-"                border: none;\n"
-"                border-bottom: 2px solid #000;\n"
-"                background-color: #FAF9F6;")
         self.stackedWidget.addWidget(self.Signuppage)
 
         self.verticalLayout.addWidget(self.stackedWidget)
