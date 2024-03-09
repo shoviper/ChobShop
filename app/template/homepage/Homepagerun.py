@@ -121,6 +121,9 @@ class HomepageWindow(QMainWindow):
         self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive)
         self.ui.completebutton.clicked.connect(self.go_to_order_complete)
 
+        #cart
+        self.ui.cartbutton.clicked.connect(self.go_to_cart)
+
     #Log out function
     def back_to_login(self):
         if root.LoggedInUser.logged_in == True:
@@ -288,6 +291,9 @@ class HomepageWindow(QMainWindow):
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+
+    def go_to_cart(self):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.cartpage)
 
     def show_success(self, message):
         msg = QMessageBox()

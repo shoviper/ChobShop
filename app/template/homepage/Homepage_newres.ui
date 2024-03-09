@@ -398,7 +398,7 @@ border: none;</string>
       <string notr="true">background-color: #FAF9F6;</string>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="homepage">
       <widget class="QScrollArea" name="scrollArea_homepage">
@@ -4095,7 +4095,7 @@ border: none;</string>
       <string notr="true">background: #FAF9F6</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="allproductpage">
       <widget class="QWidget" name="myordersnavcontainer_2" native="true">
