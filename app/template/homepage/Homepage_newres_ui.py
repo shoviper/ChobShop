@@ -59,7 +59,7 @@ class Ui_Main(object):
 "                font-family: Suwannaphum;\n"
 "                font-size: 16px;\n"
 "                font-style: normal;\n"
-"                font-weight: 500;\n"
+"                font-weight: 400;\n"
 "                line-height: normal;\n"
 "                background-color: #AEC289;\n"
 "                border-radius: 10px;\n"
@@ -79,7 +79,7 @@ class Ui_Main(object):
 "                font-family: Suwannaphum;\n"
 "                font-size: 16px;\n"
 "                font-style: normal;\n"
-"                font-weight: 500;\n"
+"                font-weight: 400;\n"
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
@@ -98,7 +98,7 @@ class Ui_Main(object):
 "                font-family: Suwannaphum;\n"
 "                font-size: 16px;\n"
 "                font-style: normal;\n"
-"                font-weight: 500;\n"
+"                font-weight: 400;\n"
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
@@ -117,7 +117,7 @@ class Ui_Main(object):
 "                font-family: Suwannaphum;\n"
 "                font-size: 16px;\n"
 "                font-style: normal;\n"
-"                font-weight: 500;\n"
+"                font-weight: 400;\n"
 "                line-height: normal;\n"
 "                background-color: #E1E3E7;\n"
 "                border-radius: 10px;\n"
@@ -649,7 +649,7 @@ class Ui_Main(object):
         self.suggestlabel_2.setStyleSheet(u"color: #545454;\n"
 "                text-align: center;\n"
 "                font-family: Suwannaphum;\n"
-"                font-size: 32px;\n"
+"                font-size: 24px;\n"
 "                font-style: normal;\n"
 "                font-weight: 700;\n"
 "                line-height: normal;")
@@ -663,11 +663,11 @@ class Ui_Main(object):
         self.myordersnavcontainer.setStyleSheet(u"background-color: #FAF9F6;")
         self.myorderslabel = QLabel(self.myordersnavcontainer)
         self.myorderslabel.setObjectName(u"myorderslabel")
-        self.myorderslabel.setGeometry(QRect(60, 0, 180, 51))
+        self.myorderslabel.setGeometry(QRect(60, 10, 180, 31))
         self.myorderslabel.setStyleSheet(u"color: #545454;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 32px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
@@ -769,7 +769,7 @@ class Ui_Main(object):
         self.frame_tobeshipped.setFrameShadow(QFrame.Raised)
         self.shipordercontainer = QWidget(self.frame_tobeshipped)
         self.shipordercontainer.setObjectName(u"shipordercontainer")
-        self.shipordercontainer.setGeometry(QRect(41, 0, 912, 269))
+        self.shipordercontainer.setGeometry(QRect(60, 40, 912, 269))
         self.shipordercontainer.setStyleSheet(u"border-bottom: 1px solid #CD4662;\n"
 "background: #FAF9F6;\n"
 "")
@@ -1141,7 +1141,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage.setWidgetResizable(True)
         self.scrollAreaWidgetContents_9 = QWidget()
         self.scrollAreaWidgetContents_9.setObjectName(u"scrollAreaWidgetContents_9")
-        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 998, 1218))
+        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 67, 1218))
         self.verticalLayout_12 = QVBoxLayout(self.scrollAreaWidgetContents_9)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.frame_productviewpage = QFrame(self.scrollAreaWidgetContents_9)
@@ -1331,1045 +1331,6 @@ class Ui_Main(object):
 
         self.stackedWidget_main.addWidget(self.productviewpage)
         self.stackedWidget.addWidget(self.main)
-        self.adminproductpage = QWidget()
-        self.adminproductpage.setObjectName(u"adminproductpage")
-        self.navbar_2 = QWidget(self.adminproductpage)
-        self.navbar_2.setObjectName(u"navbar_2")
-        self.navbar_2.setGeometry(QRect(0, 0, 249, 719))
-        self.navbar_2.setCursor(QCursor(Qt.ArrowCursor))
-        self.navbar_2.setStyleSheet(u"background-color: #FAF9F6;")
-        self.Logolabel_2 = QLabel(self.navbar_2)
-        self.Logolabel_2.setObjectName(u"Logolabel_2")
-        self.Logolabel_2.setGeometry(QRect(30, 40, 191, 51))
-        self.Logolabel_2.setStyleSheet(u"font-family: Supermercado;\n"
-"                font-size: 36px;\n"
-"                font-weight: 700;\n"
-"                line-height: normalpx;\n"
-"                text-align: center;\n"
-"                color: #000000;")
-        self.homebutton_2 = QPushButton(self.navbar_2)
-        self.homebutton_2.setObjectName(u"homebutton_2")
-        self.homebutton_2.setGeometry(QRect(40, 130, 171, 67))
-        self.homebutton_2.setStyleSheet(u"QPushButton{\n"
-"	color: #FAF9F6;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 16px;\n"
-"                font-style: normal;\n"
-"                font-weight: 500;\n"
-"                line-height: normal;\n"
-"                background-color: #AEC289;\n"
-"                border-radius: 10px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"                background-color: #F4DBDB;\n"
-"                color: black;\n"
-"            }\n"
-"")
-        self.homebutton_2.setCheckable(True)
-        self.homebutton_2.setAutoExclusive(True)
-        self.orderstatusbutton = QPushButton(self.navbar_2)
-        self.orderstatusbutton.setObjectName(u"orderstatusbutton")
-        self.orderstatusbutton.setGeometry(QRect(40, 240, 171, 67))
-        self.orderstatusbutton.setStyleSheet(u"QPushButton{\n"
-"	color: #000;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 16px;\n"
-"                font-style: normal;\n"
-"                font-weight: 500;\n"
-"                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"                background-color: #F4DBDB;\n"
-"                color: black;\n"
-"            }")
-        self.orderstatusbutton.setCheckable(True)
-        self.orderstatusbutton.setAutoExclusive(True)
-        self.orderproductbutton = QPushButton(self.navbar_2)
-        self.orderproductbutton.setObjectName(u"orderproductbutton")
-        self.orderproductbutton.setGeometry(QRect(40, 350, 171, 67))
-        self.orderproductbutton.setStyleSheet(u"QPushButton{\n"
-"	color: #000;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 16px;\n"
-"                font-style: normal;\n"
-"                font-weight: 500;\n"
-"                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"                background-color: #F4DBDB;\n"
-"                color: black;\n"
-"            }")
-        self.orderproductbutton.setCheckable(True)
-        self.orderproductbutton.setAutoExclusive(True)
-        self.messbutton_2 = QPushButton(self.navbar_2)
-        self.messbutton_2.setObjectName(u"messbutton_2")
-        self.messbutton_2.setGeometry(QRect(40, 460, 171, 67))
-        self.messbutton_2.setStyleSheet(u"QPushButton{\n"
-"	color: #000;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 16px;\n"
-"                font-style: normal;\n"
-"                font-weight: 500;\n"
-"                line-height: normal;\n"
-"                background-color: #E1E3E7;\n"
-"                border-radius: 10px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"                background-color: #F4DBDB;\n"
-"                color: black;\n"
-"            }")
-        self.messbutton_2.setCheckable(True)
-        self.messbutton_2.setAutoExclusive(True)
-        self.settingbutton_2 = QPushButton(self.navbar_2)
-        self.settingbutton_2.setObjectName(u"settingbutton_2")
-        self.settingbutton_2.setGeometry(QRect(70, 630, 30, 30))
-        self.settingbutton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.settingbutton_2.setStyleSheet(u"image: url(:/pic/realimages/settingpic.png);\n"
-"border: none;")
-        self.settingbutton_2.setIconSize(QSize(30, 30))
-        self.exitbutton_2 = QPushButton(self.navbar_2)
-        self.exitbutton_2.setObjectName(u"exitbutton_2")
-        self.exitbutton_2.setGeometry(QRect(140, 630, 27, 27))
-        self.exitbutton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.exitbutton_2.setStyleSheet(u"image: url(:/pic/realimages/exitpic.png);\n"
-"border: none;")
-        self.exitbutton_2.setIconSize(QSize(27, 27))
-        self.exitbutton_2.setFlat(False)
-        self.searchcontainer_2 = QWidget(self.adminproductpage)
-        self.searchcontainer_2.setObjectName(u"searchcontainer_2")
-        self.searchcontainer_2.setGeometry(QRect(250, 0, 1031, 109))
-        self.searchcontainer_2.setStyleSheet(u"background-color: #FAF9F6;")
-        self.searchbox_2 = QLineEdit(self.searchcontainer_2)
-        self.searchbox_2.setObjectName(u"searchbox_2")
-        self.searchbox_2.setGeometry(QRect(60, 50, 684, 31))
-        self.searchbox_2.setStyleSheet(u"				border-radius: 15px;\n"
-"                background-color: #EDEDED;\n"
-"                color: #CD4662;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 16px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"				padding-left: 20px;\n"
-"")
-        self.loginsignoutbutton_2 = QPushButton(self.searchcontainer_2)
-        self.loginsignoutbutton_2.setObjectName(u"loginsignoutbutton_2")
-        self.loginsignoutbutton_2.setGeometry(QRect(900, 50, 71, 31))
-        self.loginsignoutbutton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.loginsignoutbutton_2.setStyleSheet(u"color: #000;\n"
-"                text-align: center;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 20px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"                border: none;\n"
-"				text-align: center;")
-        self.cartbutton_2 = QPushButton(self.searchcontainer_2)
-        self.cartbutton_2.setObjectName(u"cartbutton_2")
-        self.cartbutton_2.setGeometry(QRect(770, 50, 34, 31))
-        self.cartbutton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.cartbutton_2.setStyleSheet(u"image: url(:/pic/realimages/cartpic.png);\n"
-"border: none;")
-        self.cartbutton_2.setIconSize(QSize(34, 31))
-        self.profilebutton_2 = QPushButton(self.searchcontainer_2)
-        self.profilebutton_2.setObjectName(u"profilebutton_2")
-        self.profilebutton_2.setGeometry(QRect(840, 50, 31, 31))
-        self.profilebutton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.profilebutton_2.setStyleSheet(u"image: url(:/pic/realimages/profilepic.png);\n"
-"border: none;")
-        self.profilebutton_2.setIconSize(QSize(31, 31))
-        self.stackedWidget_product = QStackedWidget(self.adminproductpage)
-        self.stackedWidget_product.setObjectName(u"stackedWidget_product")
-        self.stackedWidget_product.setGeometry(QRect(250, 110, 1031, 611))
-        self.stackedWidget_product.setStyleSheet(u"background: #FAF9F6")
-        self.allproductpage = QWidget()
-        self.allproductpage.setObjectName(u"allproductpage")
-        self.myordersnavcontainer_2 = QWidget(self.allproductpage)
-        self.myordersnavcontainer_2.setObjectName(u"myordersnavcontainer_2")
-        self.myordersnavcontainer_2.setGeometry(QRect(0, 0, 1031, 139))
-        self.myordersnavcontainer_2.setStyleSheet(u"background-color: #FAF9F6;")
-        self.productlabel = QLabel(self.myordersnavcontainer_2)
-        self.productlabel.setObjectName(u"productlabel")
-        self.productlabel.setGeometry(QRect(60, 0, 180, 51))
-        self.productlabel.setStyleSheet(u"color: #545454;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 32px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.allproductbutton = QPushButton(self.myordersnavcontainer_2)
-        self.allproductbutton.setObjectName(u"allproductbutton")
-        self.allproductbutton.setGeometry(QRect(60, 85, 480, 50))
-        self.allproductbutton.setStyleSheet(u"QPushButton{\n"
-"	color: #CD4662;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;\n"
-"border: none;\n"
-"border-bottom: 3px solid #CD4662;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: #F4DBDB;\n"
-"	color: #545454;\n"
-"border: none;\n"
-"}\n"
-"\n"
-"")
-        self.producttypesbutton = QPushButton(self.myordersnavcontainer_2)
-        self.producttypesbutton.setObjectName(u"producttypesbutton")
-        self.producttypesbutton.setGeometry(QRect(542, 85, 480, 50))
-        self.producttypesbutton.setStyleSheet(u"QPushButton{\n"
-"	color: #545454;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;\n"
-"border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: #F4DBDB;\n"
-"	color: #545454;\n"
-"}\n"
-"\n"
-"")
-        self.stackedWidget_allandtype = QStackedWidget(self.allproductpage)
-        self.stackedWidget_allandtype.setObjectName(u"stackedWidget_allandtype")
-        self.stackedWidget_allandtype.setGeometry(QRect(0, 140, 1031, 471))
-        self.allproductpage_2 = QWidget()
-        self.allproductpage_2.setObjectName(u"allproductpage_2")
-        self.verticalLayout_5 = QVBoxLayout(self.allproductpage_2)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.scrollArea_allproduct = QScrollArea(self.allproductpage_2)
-        self.scrollArea_allproduct.setObjectName(u"scrollArea_allproduct")
-        self.scrollArea_allproduct.setStyleSheet(u"QScrollArea {\n"
-"	border: none;\n"
-"}\n"
-"\n"
-"QScrollBar:vertical {\n"
-"	border: none;\n"
-"	background-color: #FAF9F6;\n"
-"	width: 15px;\n"
-"	border-radius: 7px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"	background-color: #E1E3E7;\n"
-"	border-radius: 7px;\n"
-"	min-height: 30px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"	background-color: #F4DBDB;\n"
-"}")
-        self.scrollArea_allproduct.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_5 = QWidget()
-        self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 998, 1518))
-        self.verticalLayout_6 = QVBoxLayout(self.scrollAreaWidgetContents_5)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.frame_allproduct = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_allproduct.setObjectName(u"frame_allproduct")
-        self.frame_allproduct.setMinimumSize(QSize(0, 1500))
-        self.frame_allproduct.setFrameShape(QFrame.StyledPanel)
-        self.frame_allproduct.setFrameShadow(QFrame.Raised)
-        self.product_33 = QWidget(self.frame_allproduct)
-        self.product_33.setObjectName(u"product_33")
-        self.product_33.setGeometry(QRect(59, 45, 251, 320))
-        self.product_33.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_35 = QPushButton(self.product_33)
-        self.picproduct1_35.setObjectName(u"picproduct1_35")
-        self.picproduct1_35.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_35.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_29 = QWidget(self.frame_allproduct)
-        self.product_29.setObjectName(u"product_29")
-        self.product_29.setGeometry(QRect(728, 402, 251, 320))
-        self.product_29.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_30 = QPushButton(self.product_29)
-        self.picproduct1_30.setObjectName(u"picproduct1_30")
-        self.picproduct1_30.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_30.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_31 = QWidget(self.frame_allproduct)
-        self.product_31.setObjectName(u"product_31")
-        self.product_31.setGeometry(QRect(393, 45, 251, 320))
-        self.product_31.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_33 = QPushButton(self.product_31)
-        self.picproduct1_33.setObjectName(u"picproduct1_33")
-        self.picproduct1_33.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_33.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_30 = QWidget(self.frame_allproduct)
-        self.product_30.setObjectName(u"product_30")
-        self.product_30.setGeometry(QRect(728, 45, 251, 320))
-        self.product_30.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_32 = QPushButton(self.product_30)
-        self.picproduct1_32.setObjectName(u"picproduct1_32")
-        self.picproduct1_32.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_32.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_32 = QWidget(self.frame_allproduct)
-        self.product_32.setObjectName(u"product_32")
-        self.product_32.setGeometry(QRect(393, 402, 251, 320))
-        self.product_32.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_34 = QPushButton(self.product_32)
-        self.picproduct1_34.setObjectName(u"picproduct1_34")
-        self.picproduct1_34.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_34.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_26 = QWidget(self.frame_allproduct)
-        self.product_26.setObjectName(u"product_26")
-        self.product_26.setGeometry(QRect(59, 402, 251, 320))
-        self.product_26.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_31 = QPushButton(self.product_26)
-        self.picproduct1_31.setObjectName(u"picproduct1_31")
-        self.picproduct1_31.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_31.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.gotoaddproductpagebutton = QPushButton(self.frame_allproduct)
-        self.gotoaddproductpagebutton.setObjectName(u"gotoaddproductpagebutton")
-        self.gotoaddproductpagebutton.setGeometry(QRect(810, 360, 100, 50))
-        self.gotoaddproductpagebutton.setStyleSheet(u"background: yellow;\n"
-"border: none;")
-
-        self.verticalLayout_6.addWidget(self.frame_allproduct)
-
-        self.scrollArea_allproduct.setWidget(self.scrollAreaWidgetContents_5)
-
-        self.verticalLayout_5.addWidget(self.scrollArea_allproduct)
-
-        self.stackedWidget_allandtype.addWidget(self.allproductpage_2)
-        self.producttypepage_2 = QWidget()
-        self.producttypepage_2.setObjectName(u"producttypepage_2")
-        self.verticalLayout_7 = QVBoxLayout(self.producttypepage_2)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.scrollArea_producttype = QScrollArea(self.producttypepage_2)
-        self.scrollArea_producttype.setObjectName(u"scrollArea_producttype")
-        self.scrollArea_producttype.setStyleSheet(u"QScrollArea {\n"
-"	border: none;\n"
-"}\n"
-"\n"
-"QScrollBar:vertical {\n"
-"	border: none;\n"
-"	background-color: #FAF9F6;\n"
-"	width: 15px;\n"
-"	border-radius: 7px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"	background-color: #E1E3E7;\n"
-"	border-radius: 7px;\n"
-"	min-height: 30px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"	background-color: #F4DBDB;\n"
-"}")
-        self.scrollArea_producttype.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_7 = QWidget()
-        self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 998, 1518))
-        self.verticalLayout_8 = QVBoxLayout(self.scrollAreaWidgetContents_7)
-        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.frame_producttype = QFrame(self.scrollAreaWidgetContents_7)
-        self.frame_producttype.setObjectName(u"frame_producttype")
-        self.frame_producttype.setMinimumSize(QSize(0, 1500))
-        self.frame_producttype.setFrameShape(QFrame.StyledPanel)
-        self.frame_producttype.setFrameShadow(QFrame.Raised)
-        self.topwearwidget = QWidget(self.frame_producttype)
-        self.topwearwidget.setObjectName(u"topwearwidget")
-        self.topwearwidget.setGeometry(QRect(59, 55, 852, 99))
-        self.topwearwidget.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #F4DBDB;\n"
-"background: #FAF9F6;")
-        self.topwearpic = QLabel(self.topwearwidget)
-        self.topwearpic.setObjectName(u"topwearpic")
-        self.topwearpic.setGeometry(QRect(25, 20, 60, 60))
-        self.topwearpic.setStyleSheet(u"image: url(:/pic/images/newres/profile.png);\n"
-"border: none;")
-        self.topwearlabel = QLabel(self.topwearwidget)
-        self.topwearlabel.setObjectName(u"topwearlabel")
-        self.topwearlabel.setGeometry(QRect(109, 8, 263, 81))
-        self.topwearlabel.setStyleSheet(u"color: #000;\n"
-"border: none;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.topwearnum = QLabel(self.topwearwidget)
-        self.topwearnum.setObjectName(u"topwearnum")
-        self.topwearnum.setGeometry(QRect(580, 8, 169, 81))
-        self.topwearnum.setStyleSheet(u"color: #545454;\n"
-"text-align: right;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.topwearnum.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.topwearbutton = QPushButton(self.topwearwidget)
-        self.topwearbutton.setObjectName(u"topwearbutton")
-        self.topwearbutton.setGeometry(QRect(780, 40, 31, 21))
-        self.topwearbutton.setStyleSheet(u"image: url(:/pic/images/newres/rightarrow_pink.png);\n"
-"border: none;")
-        self.bottomwidget = QWidget(self.frame_producttype)
-        self.bottomwidget.setObjectName(u"bottomwidget")
-        self.bottomwidget.setGeometry(QRect(59, 179, 852, 99))
-        self.bottomwidget.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #F4DBDB;\n"
-"background: #FAF9F6;\n"
-"")
-        self.bottomwearpic = QLabel(self.bottomwidget)
-        self.bottomwearpic.setObjectName(u"bottomwearpic")
-        self.bottomwearpic.setGeometry(QRect(25, 20, 60, 60))
-        self.bottomwearpic.setStyleSheet(u"image: url(:/pic/images/newres/profile.png);\n"
-"border: none;")
-        self.bottomwearlabel = QLabel(self.bottomwidget)
-        self.bottomwearlabel.setObjectName(u"bottomwearlabel")
-        self.bottomwearlabel.setGeometry(QRect(109, 8, 263, 81))
-        self.bottomwearlabel.setStyleSheet(u"color: #000;\n"
-"border: none;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.bottomwearnum = QLabel(self.bottomwidget)
-        self.bottomwearnum.setObjectName(u"bottomwearnum")
-        self.bottomwearnum.setGeometry(QRect(580, 8, 169, 81))
-        self.bottomwearnum.setStyleSheet(u"color: #545454;\n"
-"text-align: right;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.bottomwearnum.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.bottmwearbutton = QPushButton(self.bottomwidget)
-        self.bottmwearbutton.setObjectName(u"bottmwearbutton")
-        self.bottmwearbutton.setGeometry(QRect(780, 40, 31, 21))
-        self.bottmwearbutton.setStyleSheet(u"image: url(:/pic/images/newres/rightarrow_pink.png);\n"
-"border: none;")
-        self.footwearwidget = QWidget(self.frame_producttype)
-        self.footwearwidget.setObjectName(u"footwearwidget")
-        self.footwearwidget.setGeometry(QRect(59, 303, 852, 99))
-        self.footwearwidget.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #F4DBDB;\n"
-"background: #FAF9F6;\n"
-"")
-        self.footwearpic = QLabel(self.footwearwidget)
-        self.footwearpic.setObjectName(u"footwearpic")
-        self.footwearpic.setGeometry(QRect(25, 20, 60, 60))
-        self.footwearpic.setStyleSheet(u"image: url(:/pic/images/newres/profile.png);\n"
-"border: none;")
-        self.footwearlabel = QLabel(self.footwearwidget)
-        self.footwearlabel.setObjectName(u"footwearlabel")
-        self.footwearlabel.setGeometry(QRect(109, 8, 263, 81))
-        self.footwearlabel.setStyleSheet(u"color: #000;\n"
-"border: none;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.footwearnum = QLabel(self.footwearwidget)
-        self.footwearnum.setObjectName(u"footwearnum")
-        self.footwearnum.setGeometry(QRect(580, 8, 169, 81))
-        self.footwearnum.setStyleSheet(u"color: #545454;\n"
-"text-align: right;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.footwearnum.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.footwearbutton = QPushButton(self.footwearwidget)
-        self.footwearbutton.setObjectName(u"footwearbutton")
-        self.footwearbutton.setGeometry(QRect(780, 40, 31, 21))
-        self.footwearbutton.setStyleSheet(u"image: url(:/pic/images/newres/rightarrow_pink.png);\n"
-"border: none;")
-
-        self.verticalLayout_8.addWidget(self.frame_producttype)
-
-        self.scrollArea_producttype.setWidget(self.scrollAreaWidgetContents_7)
-
-        self.verticalLayout_7.addWidget(self.scrollArea_producttype)
-
-        self.stackedWidget_allandtype.addWidget(self.producttypepage_2)
-        self.stackedWidget_product.addWidget(self.allproductpage)
-        self.addproductpage = QWidget()
-        self.addproductpage.setObjectName(u"addproductpage")
-        self.verticalLayout_13 = QVBoxLayout(self.addproductpage)
-        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.scrollArea_addproduct = QScrollArea(self.addproductpage)
-        self.scrollArea_addproduct.setObjectName(u"scrollArea_addproduct")
-        self.scrollArea_addproduct.setStyleSheet(u"QScrollArea {\n"
-"	border: none;\n"
-"}\n"
-"\n"
-"QScrollBar:vertical {\n"
-"	border: none;\n"
-"	background-color: #FAF9F6;\n"
-"	width: 15px;\n"
-"	border-radius: 7px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"	background-color: #E1E3E7;\n"
-"	border-radius: 7px;\n"
-"	min-height: 30px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"	background-color: #F4DBDB;\n"
-"}")
-        self.scrollArea_addproduct.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_6 = QWidget()
-        self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 998, 1218))
-        self.verticalLayout_14 = QVBoxLayout(self.scrollAreaWidgetContents_6)
-        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.frame_addproduct = QFrame(self.scrollAreaWidgetContents_6)
-        self.frame_addproduct.setObjectName(u"frame_addproduct")
-        self.frame_addproduct.setMinimumSize(QSize(0, 1200))
-        self.frame_addproduct.setStyleSheet(u"background: #FAF9F6")
-        self.frame_addproduct.setFrameShape(QFrame.StyledPanel)
-        self.frame_addproduct.setFrameShadow(QFrame.Raised)
-        self.addproductlabel = QLabel(self.frame_addproduct)
-        self.addproductlabel.setObjectName(u"addproductlabel")
-        self.addproductlabel.setGeometry(QRect(42, 24, 220, 21))
-        self.addproductlabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.addimageproductcontainer = QWidget(self.frame_addproduct)
-        self.addimageproductcontainer.setObjectName(u"addimageproductcontainer")
-        self.addimageproductcontainer.setGeometry(QRect(24, 75, 910, 251))
-        self.addimageproductcontainer.setStyleSheet(u"")
-        self.horizontalLayout = QHBoxLayout(self.addimageproductcontainer)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.scrollArea_addimageproduct = QScrollArea(self.addimageproductcontainer)
-        self.scrollArea_addimageproduct.setObjectName(u"scrollArea_addimageproduct")
-        self.scrollArea_addimageproduct.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_10 = QWidget()
-        self.scrollAreaWidgetContents_10.setObjectName(u"scrollAreaWidgetContents_10")
-        self.scrollAreaWidgetContents_10.setGeometry(QRect(0, 0, 1218, 216))
-        self.horizontalLayout_2 = QHBoxLayout(self.scrollAreaWidgetContents_10)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.frame_addimageproduct = QFrame(self.scrollAreaWidgetContents_10)
-        self.frame_addimageproduct.setObjectName(u"frame_addimageproduct")
-        self.frame_addimageproduct.setMinimumSize(QSize(1200, 0))
-        self.frame_addimageproduct.setFrameShape(QFrame.StyledPanel)
-        self.frame_addimageproduct.setFrameShadow(QFrame.Raised)
-        self.addproductimagelabel = QLabel(self.frame_addimageproduct)
-        self.addproductimagelabel.setObjectName(u"addproductimagelabel")
-        self.addproductimagelabel.setGeometry(QRect(0, 0, 220, 31))
-        self.addproductimagelabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addimagebutton = QPushButton(self.frame_addimageproduct)
-        self.addimagebutton.setObjectName(u"addimagebutton")
-        self.addimagebutton.setGeometry(QRect(0, 45, 151, 151))
-        self.addimagebutton.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-        self.addimagebutton_2 = QPushButton(self.frame_addimageproduct)
-        self.addimagebutton_2.setObjectName(u"addimagebutton_2")
-        self.addimagebutton_2.setGeometry(QRect(201, 45, 151, 151))
-        self.addimagebutton_2.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-        self.addimagebutton_3 = QPushButton(self.frame_addimageproduct)
-        self.addimagebutton_3.setObjectName(u"addimagebutton_3")
-        self.addimagebutton_3.setGeometry(QRect(402, 45, 151, 151))
-        self.addimagebutton_3.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-        self.addimagebutton_4 = QPushButton(self.frame_addimageproduct)
-        self.addimagebutton_4.setObjectName(u"addimagebutton_4")
-        self.addimagebutton_4.setGeometry(QRect(603, 45, 151, 151))
-        self.addimagebutton_4.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-        self.addimagebutton_5 = QPushButton(self.frame_addimageproduct)
-        self.addimagebutton_5.setObjectName(u"addimagebutton_5")
-        self.addimagebutton_5.setGeometry(QRect(804, 45, 151, 151))
-        self.addimagebutton_5.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-        self.addimagebutton_6 = QPushButton(self.frame_addimageproduct)
-        self.addimagebutton_6.setObjectName(u"addimagebutton_6")
-        self.addimagebutton_6.setGeometry(QRect(1005, 45, 151, 151))
-        self.addimagebutton_6.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-
-        self.horizontalLayout_2.addWidget(self.frame_addimageproduct)
-
-        self.scrollArea_addimageproduct.setWidget(self.scrollAreaWidgetContents_10)
-
-        self.horizontalLayout.addWidget(self.scrollArea_addimageproduct)
-
-        self.addproductnamelabel = QLabel(self.frame_addproduct)
-        self.addproductnamelabel.setObjectName(u"addproductnamelabel")
-        self.addproductnamelabel.setGeometry(QRect(42, 347, 220, 21))
-        self.addproductnamelabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductdescriptionlabel = QLabel(self.frame_addproduct)
-        self.addproductdescriptionlabel.setObjectName(u"addproductdescriptionlabel")
-        self.addproductdescriptionlabel.setGeometry(QRect(42, 443, 220, 31))
-        self.addproductdescriptionlabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductpricelabel = QLabel(self.frame_addproduct)
-        self.addproductpricelabel.setObjectName(u"addproductpricelabel")
-        self.addproductpricelabel.setGeometry(QRect(42, 623, 220, 21))
-        self.addproductpricelabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductsizelabel = QLabel(self.frame_addproduct)
-        self.addproductsizelabel.setObjectName(u"addproductsizelabel")
-        self.addproductsizelabel.setGeometry(QRect(42, 719, 220, 21))
-        self.addproductsizelabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductoptionlabel = QLabel(self.frame_addproduct)
-        self.addproductoptionlabel.setObjectName(u"addproductoptionlabel")
-        self.addproductoptionlabel.setGeometry(QRect(42, 815, 220, 31))
-        self.addproductoptionlabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductstocklabel = QLabel(self.frame_addproduct)
-        self.addproductstocklabel.setObjectName(u"addproductstocklabel")
-        self.addproductstocklabel.setGeometry(QRect(42, 921, 220, 21))
-        self.addproductstocklabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductnametextbox = QLineEdit(self.frame_addproduct)
-        self.addproductnametextbox.setObjectName(u"addproductnametextbox")
-        self.addproductnametextbox.setGeometry(QRect(42, 382, 910, 33))
-        self.addproductnametextbox.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
-"")
-        self.addproductdescriptiontextbox = QLineEdit(self.frame_addproduct)
-        self.addproductdescriptiontextbox.setObjectName(u"addproductdescriptiontextbox")
-        self.addproductdescriptiontextbox.setGeometry(QRect(42, 488, 910, 107))
-        self.addproductdescriptiontextbox.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
-"")
-        self.addproductpricetextbox = QLineEdit(self.frame_addproduct)
-        self.addproductpricetextbox.setObjectName(u"addproductpricetextbox")
-        self.addproductpricetextbox.setGeometry(QRect(42, 658, 910, 33))
-        self.addproductpricetextbox.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
-"")
-        self.addproductstocktextbox = QLineEdit(self.frame_addproduct)
-        self.addproductstocktextbox.setObjectName(u"addproductstocktextbox")
-        self.addproductstocktextbox.setGeometry(QRect(42, 956, 910, 33))
-        self.addproductstocktextbox.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
-"")
-        self.addsizeproductbutton = QPushButton(self.frame_addproduct)
-        self.addsizeproductbutton.setObjectName(u"addsizeproductbutton")
-        self.addsizeproductbutton.setGeometry(QRect(42, 754, 108, 33))
-        self.addsizeproductbutton.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;")
-        self.addoptionsproductbutton = QPushButton(self.frame_addproduct)
-        self.addoptionsproductbutton.setObjectName(u"addoptionsproductbutton")
-        self.addoptionsproductbutton.setGeometry(QRect(42, 860, 108, 33))
-        self.addoptionsproductbutton.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;")
-        self.canceladdproductbutton = QPushButton(self.frame_addproduct)
-        self.canceladdproductbutton.setObjectName(u"canceladdproductbutton")
-        self.canceladdproductbutton.setGeometry(QRect(498, 1017, 157, 49))
-        self.canceladdproductbutton.setStyleSheet(u"border-radius: 5px;\n"
-"background: #AEC289;\n"
-"color: #FFF;\n"
-"\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addproductbutton = QPushButton(self.frame_addproduct)
-        self.addproductbutton.setObjectName(u"addproductbutton")
-        self.addproductbutton.setGeometry(QRect(706, 1017, 204, 49))
-        self.addproductbutton.setStyleSheet(u"border-radius: 5px;\n"
-"background: #CD4662;\n"
-"color: #FFF;\n"
-"\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-
-        self.verticalLayout_14.addWidget(self.frame_addproduct)
-
-        self.scrollArea_addproduct.setWidget(self.scrollAreaWidgetContents_6)
-
-        self.verticalLayout_13.addWidget(self.scrollArea_addproduct)
-
-        self.stackedWidget_product.addWidget(self.addproductpage)
-        self.adminhomepage = QWidget()
-        self.adminhomepage.setObjectName(u"adminhomepage")
-        self.verticalLayout_9 = QVBoxLayout(self.adminhomepage)
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.scrollArea_adminhomepage = QScrollArea(self.adminhomepage)
-        self.scrollArea_adminhomepage.setObjectName(u"scrollArea_adminhomepage")
-        self.scrollArea_adminhomepage.setStyleSheet(u"QScrollArea {\n"
-"	border: none;\n"
-"}\n"
-"\n"
-"QScrollBar:vertical {\n"
-"	border: none;\n"
-"	background-color: #FAF9F6;\n"
-"	width: 15px;\n"
-"	border-radius: 7px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"	background-color: #E1E3E7;\n"
-"	border-radius: 7px;\n"
-"	min-height: 30px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"	background-color: #F4DBDB;\n"
-"}")
-        self.scrollArea_adminhomepage.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_8 = QWidget()
-        self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 998, 1338))
-        self.verticalLayout_10 = QVBoxLayout(self.scrollAreaWidgetContents_8)
-        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.frame_adminhomepage = QFrame(self.scrollAreaWidgetContents_8)
-        self.frame_adminhomepage.setObjectName(u"frame_adminhomepage")
-        self.frame_adminhomepage.setMinimumSize(QSize(0, 1320))
-        self.frame_adminhomepage.setFrameShape(QFrame.StyledPanel)
-        self.frame_adminhomepage.setFrameShadow(QFrame.Raised)
-        self.adminhomepagecontainer = QWidget(self.frame_adminhomepage)
-        self.adminhomepagecontainer.setObjectName(u"adminhomepagecontainer")
-        self.adminhomepagecontainer.setGeometry(QRect(31, 24, 913, 221))
-        self.adminhomepagecontainer.setStyleSheet(u"border-radius: 10px;\n"
-"background: #F4F2EF;")
-        self.profilepic_2 = QLabel(self.adminhomepagecontainer)
-        self.profilepic_2.setObjectName(u"profilepic_2")
-        self.profilepic_2.setGeometry(QRect(47, 40, 129, 129))
-        self.profilepic_2.setStyleSheet(u"border: none;\n"
-"border-radius: 70px;\n"
-"background: #cd4662;")
-        self.usernamelabel_2 = QLabel(self.adminhomepagecontainer)
-        self.usernamelabel_2.setObjectName(u"usernamelabel_2")
-        self.usernamelabel_2.setGeometry(QRect(213, 93, 171, 41))
-        self.usernamelabel_2.setStyleSheet(u"border: none;\n"
-"color: #000;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 32px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.numreview = QLabel(self.adminhomepagecontainer)
-        self.numreview.setObjectName(u"numreview")
-        self.numreview.setGeometry(QRect(480, 50, 49, 16))
-        self.numreview.setStyleSheet(u"color: #CD4662;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.numreview.setAlignment(Qt.AlignCenter)
-        self.review = QLabel(self.adminhomepagecontainer)
-        self.review.setObjectName(u"review")
-        self.review.setGeometry(QRect(560, 50, 61, 16))
-        self.review.setStyleSheet(u"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.numproduct = QLabel(self.adminhomepagecontainer)
-        self.numproduct.setObjectName(u"numproduct")
-        self.numproduct.setGeometry(QRect(480, 140, 49, 16))
-        self.numproduct.setStyleSheet(u"color: #CD4662;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.numproduct.setAlignment(Qt.AlignCenter)
-        self.product = QLabel(self.adminhomepagecontainer)
-        self.product.setObjectName(u"product")
-        self.product.setGeometry(QRect(560, 140, 61, 16))
-        self.product.setStyleSheet(u"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.numsold = QLabel(self.adminhomepagecontainer)
-        self.numsold.setObjectName(u"numsold")
-        self.numsold.setGeometry(QRect(700, 50, 49, 16))
-        self.numsold.setStyleSheet(u"color: #CD4662;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.numsold.setAlignment(Qt.AlignCenter)
-        self.yearregis = QLabel(self.adminhomepagecontainer)
-        self.yearregis.setObjectName(u"yearregis")
-        self.yearregis.setGeometry(QRect(760, 140, 141, 16))
-        self.yearregis.setStyleSheet(u"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.yearregis.setAlignment(Qt.AlignCenter)
-        self.sold = QLabel(self.adminhomepagecontainer)
-        self.sold.setObjectName(u"sold")
-        self.sold.setGeometry(QRect(780, 50, 49, 16))
-        self.sold.setStyleSheet(u"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.sold.setAlignment(Qt.AlignCenter)
-        self.numyearregis = QLabel(self.adminhomepagecontainer)
-        self.numyearregis.setObjectName(u"numyearregis")
-        self.numyearregis.setGeometry(QRect(700, 140, 49, 16))
-        self.numyearregis.setStyleSheet(u"color: #CD4662;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.numyearregis.setAlignment(Qt.AlignCenter)
-        self.orderstatuscontainer = QWidget(self.frame_adminhomepage)
-        self.orderstatuscontainer.setObjectName(u"orderstatuscontainer")
-        self.orderstatuscontainer.setGeometry(QRect(31, 278, 913, 157))
-        self.orderstatuscontainer.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
-"background: #FAF9F6;\n"
-"")
-        self.orderstatuslabel = QLabel(self.orderstatuscontainer)
-        self.orderstatuslabel.setObjectName(u"orderstatuslabel")
-        self.orderstatuslabel.setGeometry(QRect(0, 0, 161, 25))
-        self.orderstatuslabel.setStyleSheet(u"color: #000;\n"
-"border: none;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.admintobeshipbutton = QPushButton(self.orderstatuscontainer)
-        self.admintobeshipbutton.setObjectName(u"admintobeshipbutton")
-        self.admintobeshipbutton.setGeometry(QRect(100, 40, 90, 90))
-        self.admintobeshipbutton.setStyleSheet(u"image: url(:/pic/images/newres/tobeshipped.png);\n"
-"border: none;")
-        self.admincancelbutton = QPushButton(self.orderstatuscontainer)
-        self.admincancelbutton.setObjectName(u"admincancelbutton")
-        self.admincancelbutton.setGeometry(QRect(300, 40, 90, 90))
-        self.admincancelbutton.setStyleSheet(u"image: url(:/pic/images/newres/toberecieved.png);\n"
-"border: none;")
-        self.admincompletebutton = QPushButton(self.orderstatuscontainer)
-        self.admincompletebutton.setObjectName(u"admincompletebutton")
-        self.admincompletebutton.setGeometry(QRect(500, 40, 90, 90))
-        self.admincompletebutton.setStyleSheet(u"image: url(:/pic/images/newres/completed.png);\n"
-"border: none;")
-        self.adminreviewbutton = QPushButton(self.orderstatuscontainer)
-        self.adminreviewbutton.setObjectName(u"adminreviewbutton")
-        self.adminreviewbutton.setGeometry(QRect(700, 40, 90, 90))
-        self.adminreviewbutton.setStyleSheet(u"image: url(:/pic/images/newres/completed.png);\n"
-"border: none;")
-        self.orderstatusbutton_2 = QPushButton(self.orderstatuscontainer)
-        self.orderstatusbutton_2.setObjectName(u"orderstatusbutton_2")
-        self.orderstatusbutton_2.setGeometry(QRect(730, 0, 181, 24))
-        self.orderstatusbutton_2.setStyleSheet(u"color:  #CD4662;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-        self.productcontainer = QWidget(self.frame_adminhomepage)
-        self.productcontainer.setObjectName(u"productcontainer")
-        self.productcontainer.setGeometry(QRect(31, 468, 913, 800))
-        self.productcontainer.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
-"background: #FAF9F6;")
-        self.product_16 = QWidget(self.productcontainer)
-        self.product_16.setObjectName(u"product_16")
-        self.product_16.setGeometry(QRect(30, 70, 251, 320))
-        self.product_16.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_16 = QPushButton(self.product_16)
-        self.picproduct1_16.setObjectName(u"picproduct1_16")
-        self.picproduct1_16.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_16.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.favlabel_2 = QLabel(self.productcontainer)
-        self.favlabel_2.setObjectName(u"favlabel_2")
-        self.favlabel_2.setGeometry(QRect(0, 0, 111, 25))
-        self.favlabel_2.setStyleSheet(u"color: #000;\n"
-"border: none;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.product_17 = QWidget(self.productcontainer)
-        self.product_17.setObjectName(u"product_17")
-        self.product_17.setGeometry(QRect(333, 70, 251, 320))
-        self.product_17.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_20 = QPushButton(self.product_17)
-        self.picproduct1_20.setObjectName(u"picproduct1_20")
-        self.picproduct1_20.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_20.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_18 = QWidget(self.productcontainer)
-        self.product_18.setObjectName(u"product_18")
-        self.product_18.setGeometry(QRect(637, 70, 251, 320))
-        self.product_18.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_21 = QPushButton(self.product_18)
-        self.picproduct1_21.setObjectName(u"picproduct1_21")
-        self.picproduct1_21.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_21.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_19 = QWidget(self.productcontainer)
-        self.product_19.setObjectName(u"product_19")
-        self.product_19.setGeometry(QRect(637, 440, 251, 320))
-        self.product_19.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_22 = QPushButton(self.product_19)
-        self.picproduct1_22.setObjectName(u"picproduct1_22")
-        self.picproduct1_22.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_22.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_20 = QWidget(self.productcontainer)
-        self.product_20.setObjectName(u"product_20")
-        self.product_20.setGeometry(QRect(333, 440, 251, 320))
-        self.product_20.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_23 = QPushButton(self.product_20)
-        self.picproduct1_23.setObjectName(u"picproduct1_23")
-        self.picproduct1_23.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_23.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.product_21 = QWidget(self.productcontainer)
-        self.product_21.setObjectName(u"product_21")
-        self.product_21.setGeometry(QRect(30, 440, 251, 320))
-        self.product_21.setStyleSheet(u"border-radius: 10px;\n"
-"                background: #D9D9D9;\n"
-"border:none;")
-        self.picproduct1_17 = QPushButton(self.product_21)
-        self.picproduct1_17.setObjectName(u"picproduct1_17")
-        self.picproduct1_17.setGeometry(QRect(30, 30, 191, 188))
-        self.picproduct1_17.setStyleSheet(u"background-color: #FFF;\n"
-"border-radius: 0px;")
-        self.viewallproductbutton = QPushButton(self.productcontainer)
-        self.viewallproductbutton.setObjectName(u"viewallproductbutton")
-        self.viewallproductbutton.setGeometry(QRect(750, 0, 161, 24))
-        self.viewallproductbutton.setStyleSheet(u"color:  #CD4662;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"border: none;")
-
-        self.verticalLayout_10.addWidget(self.frame_adminhomepage)
-
-        self.scrollArea_adminhomepage.setWidget(self.scrollAreaWidgetContents_8)
-
-        self.verticalLayout_9.addWidget(self.scrollArea_adminhomepage)
-
-        self.stackedWidget_product.addWidget(self.adminhomepage)
-        self.stackedWidget.addWidget(self.adminproductpage)
         self.userprofile = QWidget()
         self.userprofile.setObjectName(u"userprofile")
         self.verticalLayout = QVBoxLayout(self.userprofile)
@@ -2800,9 +1761,1062 @@ class Ui_Main(object):
 "line-height: normal;")
         self.shoplogolabel.setAlignment(Qt.AlignCenter)
         self.stackedWidget_adminwidget.addWidget(self.adminregisterpage)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.stackedWidget_adminwidget.addWidget(self.page_2)
+        self.adminmain = QWidget()
+        self.adminmain.setObjectName(u"adminmain")
+        self.searchcontainer_3 = QWidget(self.adminmain)
+        self.searchcontainer_3.setObjectName(u"searchcontainer_3")
+        self.searchcontainer_3.setGeometry(QRect(250, 0, 1031, 109))
+        self.searchcontainer_3.setStyleSheet(u"background-color: #FAF9F6;")
+        self.searchbox_3 = QLineEdit(self.searchcontainer_3)
+        self.searchbox_3.setObjectName(u"searchbox_3")
+        self.searchbox_3.setGeometry(QRect(50, 50, 746, 31))
+        self.searchbox_3.setStyleSheet(u"				border-radius: 15px;\n"
+"                background-color: #EDEDED;\n"
+"                color: #CD4662;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 16px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"				padding-left: 20px;\n"
+"")
+        self.loginsignoutbutton_3 = QPushButton(self.searchcontainer_3)
+        self.loginsignoutbutton_3.setObjectName(u"loginsignoutbutton_3")
+        self.loginsignoutbutton_3.setGeometry(QRect(900, 50, 71, 31))
+        self.loginsignoutbutton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.loginsignoutbutton_3.setStyleSheet(u"color: #000;\n"
+"                text-align: center;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 20px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                border: none;\n"
+"				text-align: center;")
+        self.profilebutton_3 = QPushButton(self.searchcontainer_3)
+        self.profilebutton_3.setObjectName(u"profilebutton_3")
+        self.profilebutton_3.setGeometry(QRect(840, 50, 31, 31))
+        self.profilebutton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.profilebutton_3.setStyleSheet(u"image: url(:/pic/realimages/profilepic.png);\n"
+"border: none;")
+        self.profilebutton_3.setIconSize(QSize(31, 31))
+        self.navbar_3 = QWidget(self.adminmain)
+        self.navbar_3.setObjectName(u"navbar_3")
+        self.navbar_3.setGeometry(QRect(0, 0, 249, 719))
+        self.navbar_3.setCursor(QCursor(Qt.ArrowCursor))
+        self.navbar_3.setStyleSheet(u"background-color: #FAF9F6;")
+        self.Logolabel_3 = QLabel(self.navbar_3)
+        self.Logolabel_3.setObjectName(u"Logolabel_3")
+        self.Logolabel_3.setGeometry(QRect(30, 40, 191, 51))
+        self.Logolabel_3.setStyleSheet(u"font-family: Supermercado;\n"
+"                font-size: 36px;\n"
+"                font-weight: 700;\n"
+"                line-height: normalpx;\n"
+"                text-align: center;\n"
+"                color: #000000;")
+        self.homebutton_3 = QPushButton(self.navbar_3)
+        self.homebutton_3.setObjectName(u"homebutton_3")
+        self.homebutton_3.setGeometry(QRect(40, 130, 171, 67))
+        self.homebutton_3.setStyleSheet(u"QPushButton{\n"
+"	color: #FAF9F6;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 16px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #AEC289;\n"
+"                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
+"            }\n"
+"")
+        self.homebutton_3.setCheckable(True)
+        self.homebutton_3.setAutoExclusive(True)
+        self.orderstatusbutton_3 = QPushButton(self.navbar_3)
+        self.orderstatusbutton_3.setObjectName(u"orderstatusbutton_3")
+        self.orderstatusbutton_3.setGeometry(QRect(40, 240, 171, 67))
+        self.orderstatusbutton_3.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 16px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
+"            }")
+        self.orderstatusbutton_3.setCheckable(True)
+        self.orderstatusbutton_3.setAutoExclusive(True)
+        self.orderproductbutton_2 = QPushButton(self.navbar_3)
+        self.orderproductbutton_2.setObjectName(u"orderproductbutton_2")
+        self.orderproductbutton_2.setGeometry(QRect(40, 350, 171, 67))
+        self.orderproductbutton_2.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 16px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
+"            }")
+        self.orderproductbutton_2.setCheckable(True)
+        self.orderproductbutton_2.setAutoExclusive(True)
+        self.messbutton_3 = QPushButton(self.navbar_3)
+        self.messbutton_3.setObjectName(u"messbutton_3")
+        self.messbutton_3.setGeometry(QRect(40, 460, 171, 67))
+        self.messbutton_3.setStyleSheet(u"QPushButton{\n"
+"	color: #000;\n"
+"                font-family: Suwannaphum;\n"
+"                font-size: 16px;\n"
+"                font-style: normal;\n"
+"                font-weight: 400;\n"
+"                line-height: normal;\n"
+"                background-color: #E1E3E7;\n"
+"                border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"                background-color: #F4DBDB;\n"
+"                color: black;\n"
+"            }")
+        self.messbutton_3.setCheckable(True)
+        self.messbutton_3.setAutoExclusive(True)
+        self.settingbutton_3 = QPushButton(self.navbar_3)
+        self.settingbutton_3.setObjectName(u"settingbutton_3")
+        self.settingbutton_3.setGeometry(QRect(70, 630, 30, 30))
+        self.settingbutton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.settingbutton_3.setStyleSheet(u"image: url(:/pic/realimages/settingpic.png);\n"
+"border: none;")
+        self.settingbutton_3.setIconSize(QSize(30, 30))
+        self.exitbutton_3 = QPushButton(self.navbar_3)
+        self.exitbutton_3.setObjectName(u"exitbutton_3")
+        self.exitbutton_3.setGeometry(QRect(140, 630, 27, 27))
+        self.exitbutton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exitbutton_3.setStyleSheet(u"image: url(:/pic/realimages/exitpic.png);\n"
+"border: none;")
+        self.exitbutton_3.setIconSize(QSize(27, 27))
+        self.exitbutton_3.setFlat(False)
+        self.stackedWidget_adminmain = QStackedWidget(self.adminmain)
+        self.stackedWidget_adminmain.setObjectName(u"stackedWidget_adminmain")
+        self.stackedWidget_adminmain.setGeometry(QRect(250, 110, 1031, 611))
+        self.adminhomepage_2 = QWidget()
+        self.adminhomepage_2.setObjectName(u"adminhomepage_2")
+        self.scrollArea_adminhomepage_2 = QScrollArea(self.adminhomepage_2)
+        self.scrollArea_adminhomepage_2.setObjectName(u"scrollArea_adminhomepage_2")
+        self.scrollArea_adminhomepage_2.setGeometry(QRect(0, 0, 1021, 611))
+        self.scrollArea_adminhomepage_2.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_adminhomepage_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_11 = QWidget()
+        self.scrollAreaWidgetContents_11.setObjectName(u"scrollAreaWidgetContents_11")
+        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1338))
+        self.verticalLayout_15 = QVBoxLayout(self.scrollAreaWidgetContents_11)
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.frame_adminhomepage_2 = QFrame(self.scrollAreaWidgetContents_11)
+        self.frame_adminhomepage_2.setObjectName(u"frame_adminhomepage_2")
+        self.frame_adminhomepage_2.setMinimumSize(QSize(0, 1320))
+        self.frame_adminhomepage_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_adminhomepage_2.setFrameShadow(QFrame.Raised)
+        self.adminhomepagecontainer_2 = QWidget(self.frame_adminhomepage_2)
+        self.adminhomepagecontainer_2.setObjectName(u"adminhomepagecontainer_2")
+        self.adminhomepagecontainer_2.setGeometry(QRect(40, 24, 913, 221))
+        self.adminhomepagecontainer_2.setStyleSheet(u"border-radius: 10px;\n"
+"background: #F4F2EF;")
+        self.profilepic_3 = QLabel(self.adminhomepagecontainer_2)
+        self.profilepic_3.setObjectName(u"profilepic_3")
+        self.profilepic_3.setGeometry(QRect(47, 50, 130, 130))
+        self.profilepic_3.setStyleSheet(u"border: none;\n"
+"border-radius: 65px;\n"
+"background: #cd4662;")
+        self.usernamelabel_3 = QLabel(self.adminhomepagecontainer_2)
+        self.usernamelabel_3.setObjectName(u"usernamelabel_3")
+        self.usernamelabel_3.setGeometry(QRect(213, 93, 171, 41))
+        self.usernamelabel_3.setStyleSheet(u"border: none;\n"
+"color: #000;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 32px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.numreview_2 = QLabel(self.adminhomepagecontainer_2)
+        self.numreview_2.setObjectName(u"numreview_2")
+        self.numreview_2.setGeometry(QRect(480, 50, 49, 16))
+        self.numreview_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numreview_2.setAlignment(Qt.AlignCenter)
+        self.review_2 = QLabel(self.adminhomepagecontainer_2)
+        self.review_2.setObjectName(u"review_2")
+        self.review_2.setGeometry(QRect(560, 50, 61, 16))
+        self.review_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numproduct_2 = QLabel(self.adminhomepagecontainer_2)
+        self.numproduct_2.setObjectName(u"numproduct_2")
+        self.numproduct_2.setGeometry(QRect(480, 140, 49, 16))
+        self.numproduct_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numproduct_2.setAlignment(Qt.AlignCenter)
+        self.product_22 = QLabel(self.adminhomepagecontainer_2)
+        self.product_22.setObjectName(u"product_22")
+        self.product_22.setGeometry(QRect(560, 140, 61, 16))
+        self.product_22.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numsold_2 = QLabel(self.adminhomepagecontainer_2)
+        self.numsold_2.setObjectName(u"numsold_2")
+        self.numsold_2.setGeometry(QRect(680, 50, 49, 16))
+        self.numsold_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numsold_2.setAlignment(Qt.AlignCenter)
+        self.yearregis_2 = QLabel(self.adminhomepagecontainer_2)
+        self.yearregis_2.setObjectName(u"yearregis_2")
+        self.yearregis_2.setGeometry(QRect(760, 140, 121, 16))
+        self.yearregis_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.yearregis_2.setAlignment(Qt.AlignCenter)
+        self.sold_2 = QLabel(self.adminhomepagecontainer_2)
+        self.sold_2.setObjectName(u"sold_2")
+        self.sold_2.setGeometry(QRect(750, 50, 49, 16))
+        self.sold_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.sold_2.setAlignment(Qt.AlignCenter)
+        self.numyearregis_2 = QLabel(self.adminhomepagecontainer_2)
+        self.numyearregis_2.setObjectName(u"numyearregis_2")
+        self.numyearregis_2.setGeometry(QRect(680, 140, 49, 16))
+        self.numyearregis_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numyearregis_2.setAlignment(Qt.AlignCenter)
+        self.orderstatuscontainer_2 = QWidget(self.frame_adminhomepage_2)
+        self.orderstatuscontainer_2.setObjectName(u"orderstatuscontainer_2")
+        self.orderstatuscontainer_2.setGeometry(QRect(40, 280, 913, 157))
+        self.orderstatuscontainer_2.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
+"background: #FAF9F6;\n"
+"")
+        self.orderstatuslabel_2 = QLabel(self.orderstatuscontainer_2)
+        self.orderstatuslabel_2.setObjectName(u"orderstatuslabel_2")
+        self.orderstatuslabel_2.setGeometry(QRect(0, 0, 161, 25))
+        self.orderstatuslabel_2.setStyleSheet(u"color: #000;\n"
+"border: none;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.admintobeshipbutton_2 = QPushButton(self.orderstatuscontainer_2)
+        self.admintobeshipbutton_2.setObjectName(u"admintobeshipbutton_2")
+        self.admintobeshipbutton_2.setGeometry(QRect(100, 40, 90, 90))
+        self.admintobeshipbutton_2.setStyleSheet(u"image: url(:/pic/images/newres/tobeshipped.png);\n"
+"border: none;")
+        self.admincancelbutton_2 = QPushButton(self.orderstatuscontainer_2)
+        self.admincancelbutton_2.setObjectName(u"admincancelbutton_2")
+        self.admincancelbutton_2.setGeometry(QRect(300, 40, 90, 90))
+        self.admincancelbutton_2.setStyleSheet(u"image: url(:/pic/images/newres/toberecieved.png);\n"
+"border: none;")
+        self.admincompletebutton_2 = QPushButton(self.orderstatuscontainer_2)
+        self.admincompletebutton_2.setObjectName(u"admincompletebutton_2")
+        self.admincompletebutton_2.setGeometry(QRect(500, 40, 90, 90))
+        self.admincompletebutton_2.setStyleSheet(u"image: url(:/pic/images/newres/completed.png);\n"
+"border: none;")
+        self.adminreviewbutton_2 = QPushButton(self.orderstatuscontainer_2)
+        self.adminreviewbutton_2.setObjectName(u"adminreviewbutton_2")
+        self.adminreviewbutton_2.setGeometry(QRect(700, 40, 90, 90))
+        self.adminreviewbutton_2.setStyleSheet(u"image: url(:/pic/images/newres/completed.png);\n"
+"border: none;")
+        self.orderstatusbutton_4 = QPushButton(self.orderstatuscontainer_2)
+        self.orderstatusbutton_4.setObjectName(u"orderstatusbutton_4")
+        self.orderstatusbutton_4.setGeometry(QRect(730, 0, 181, 24))
+        self.orderstatusbutton_4.setStyleSheet(u"color:  #CD4662;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.productcontainer_3 = QWidget(self.frame_adminhomepage_2)
+        self.productcontainer_3.setObjectName(u"productcontainer_3")
+        self.productcontainer_3.setGeometry(QRect(40, 470, 913, 800))
+        self.productcontainer_3.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
+"background: #FAF9F6;")
+        self.product_23 = QWidget(self.productcontainer_3)
+        self.product_23.setObjectName(u"product_23")
+        self.product_23.setGeometry(QRect(30, 70, 251, 320))
+        self.product_23.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_24 = QPushButton(self.product_23)
+        self.picproduct1_24.setObjectName(u"picproduct1_24")
+        self.picproduct1_24.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_24.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.favlabel_3 = QLabel(self.productcontainer_3)
+        self.favlabel_3.setObjectName(u"favlabel_3")
+        self.favlabel_3.setGeometry(QRect(0, 0, 111, 25))
+        self.favlabel_3.setStyleSheet(u"color: #000;\n"
+"border: none;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.product_24 = QWidget(self.productcontainer_3)
+        self.product_24.setObjectName(u"product_24")
+        self.product_24.setGeometry(QRect(333, 70, 251, 320))
+        self.product_24.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_25 = QPushButton(self.product_24)
+        self.picproduct1_25.setObjectName(u"picproduct1_25")
+        self.picproduct1_25.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_25.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_25 = QWidget(self.productcontainer_3)
+        self.product_25.setObjectName(u"product_25")
+        self.product_25.setGeometry(QRect(637, 70, 251, 320))
+        self.product_25.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_26 = QPushButton(self.product_25)
+        self.picproduct1_26.setObjectName(u"picproduct1_26")
+        self.picproduct1_26.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_26.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_27 = QWidget(self.productcontainer_3)
+        self.product_27.setObjectName(u"product_27")
+        self.product_27.setGeometry(QRect(637, 440, 251, 320))
+        self.product_27.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_27 = QPushButton(self.product_27)
+        self.picproduct1_27.setObjectName(u"picproduct1_27")
+        self.picproduct1_27.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_27.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_28 = QWidget(self.productcontainer_3)
+        self.product_28.setObjectName(u"product_28")
+        self.product_28.setGeometry(QRect(333, 440, 251, 320))
+        self.product_28.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_28 = QPushButton(self.product_28)
+        self.picproduct1_28.setObjectName(u"picproduct1_28")
+        self.picproduct1_28.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_28.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_34 = QWidget(self.productcontainer_3)
+        self.product_34.setObjectName(u"product_34")
+        self.product_34.setGeometry(QRect(30, 440, 251, 320))
+        self.product_34.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_29 = QPushButton(self.product_34)
+        self.picproduct1_29.setObjectName(u"picproduct1_29")
+        self.picproduct1_29.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_29.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.viewallproductbutton_2 = QPushButton(self.productcontainer_3)
+        self.viewallproductbutton_2.setObjectName(u"viewallproductbutton_2")
+        self.viewallproductbutton_2.setGeometry(QRect(750, 0, 161, 24))
+        self.viewallproductbutton_2.setStyleSheet(u"color:  #CD4662;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+
+        self.verticalLayout_15.addWidget(self.frame_adminhomepage_2)
+
+        self.scrollArea_adminhomepage_2.setWidget(self.scrollAreaWidgetContents_11)
+        self.stackedWidget_adminmain.addWidget(self.adminhomepage_2)
+        self.adminproductspage = QWidget()
+        self.adminproductspage.setObjectName(u"adminproductspage")
+        self.stackedWidget_adminproducts = QStackedWidget(self.adminproductspage)
+        self.stackedWidget_adminproducts.setObjectName(u"stackedWidget_adminproducts")
+        self.stackedWidget_adminproducts.setGeometry(QRect(0, 0, 1031, 611))
+        self.stackedWidget_adminproducts.setStyleSheet(u"background: #FAF9F6")
+        self.adminproductspage_alltypes = QWidget()
+        self.adminproductspage_alltypes.setObjectName(u"adminproductspage_alltypes")
+        self.adminproductcontainernav = QWidget(self.adminproductspage_alltypes)
+        self.adminproductcontainernav.setObjectName(u"adminproductcontainernav")
+        self.adminproductcontainernav.setGeometry(QRect(0, 0, 1031, 139))
+        self.adminproductcontainernav.setStyleSheet(u"background-color: #FAF9F6;")
+        self.productlabel_3 = QLabel(self.adminproductcontainernav)
+        self.productlabel_3.setObjectName(u"productlabel_3")
+        self.productlabel_3.setGeometry(QRect(50, 0, 180, 51))
+        self.productlabel_3.setStyleSheet(u"color: #545454;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.allproductbutton_3 = QPushButton(self.adminproductcontainernav)
+        self.allproductbutton_3.setObjectName(u"allproductbutton_3")
+        self.allproductbutton_3.setGeometry(QRect(50, 90, 455, 50))
+        self.allproductbutton_3.setStyleSheet(u"QPushButton{\n"
+"	color: #CD4662;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;\n"
+"border: none;\n"
+"border-bottom: 3px solid #CD4662;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #F4DBDB;\n"
+"	color: #545454;\n"
+"border: none;\n"
+"}\n"
+"\n"
+"")
+        self.producttypesbutton_3 = QPushButton(self.adminproductcontainernav)
+        self.producttypesbutton_3.setObjectName(u"producttypesbutton_3")
+        self.producttypesbutton_3.setGeometry(QRect(510, 90, 455, 50))
+        self.producttypesbutton_3.setStyleSheet(u"QPushButton{\n"
+"	color: #545454;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;\n"
+"border: none;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #F4DBDB;\n"
+"	color: #545454;\n"
+"}\n"
+"\n"
+"")
+        self.stackedWidget_allandtype = QStackedWidget(self.adminproductspage_alltypes)
+        self.stackedWidget_allandtype.setObjectName(u"stackedWidget_allandtype")
+        self.stackedWidget_allandtype.setGeometry(QRect(0, 140, 1031, 471))
+        self.adminallproductpage = QWidget()
+        self.adminallproductpage.setObjectName(u"adminallproductpage")
+        self.verticalLayout_24 = QVBoxLayout(self.adminallproductpage)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.scrollArea_allproduct_3 = QScrollArea(self.adminallproductpage)
+        self.scrollArea_allproduct_3.setObjectName(u"scrollArea_allproduct_3")
+        self.scrollArea_allproduct_3.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_allproduct_3.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_17 = QWidget()
+        self.scrollAreaWidgetContents_17.setObjectName(u"scrollAreaWidgetContents_17")
+        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 998, 1518))
+        self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents_17)
+        self.verticalLayout_25.setObjectName(u"verticalLayout_25")
+        self.frame_allproduct_3 = QFrame(self.scrollAreaWidgetContents_17)
+        self.frame_allproduct_3.setObjectName(u"frame_allproduct_3")
+        self.frame_allproduct_3.setMinimumSize(QSize(0, 1500))
+        self.frame_allproduct_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_allproduct_3.setFrameShadow(QFrame.Raised)
+        self.product_48 = QWidget(self.frame_allproduct_3)
+        self.product_48.setObjectName(u"product_48")
+        self.product_48.setGeometry(QRect(26, 43, 251, 320))
+        self.product_48.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_48 = QPushButton(self.product_48)
+        self.picproduct1_48.setObjectName(u"picproduct1_48")
+        self.picproduct1_48.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_48.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_49 = QWidget(self.frame_allproduct_3)
+        self.product_49.setObjectName(u"product_49")
+        self.product_49.setGeometry(QRect(695, 400, 251, 320))
+        self.product_49.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_49 = QPushButton(self.product_49)
+        self.picproduct1_49.setObjectName(u"picproduct1_49")
+        self.picproduct1_49.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_49.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_50 = QWidget(self.frame_allproduct_3)
+        self.product_50.setObjectName(u"product_50")
+        self.product_50.setGeometry(QRect(360, 43, 251, 320))
+        self.product_50.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_50 = QPushButton(self.product_50)
+        self.picproduct1_50.setObjectName(u"picproduct1_50")
+        self.picproduct1_50.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_50.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_51 = QWidget(self.frame_allproduct_3)
+        self.product_51.setObjectName(u"product_51")
+        self.product_51.setGeometry(QRect(695, 43, 251, 320))
+        self.product_51.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_51 = QPushButton(self.product_51)
+        self.picproduct1_51.setObjectName(u"picproduct1_51")
+        self.picproduct1_51.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_51.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_52 = QWidget(self.frame_allproduct_3)
+        self.product_52.setObjectName(u"product_52")
+        self.product_52.setGeometry(QRect(360, 400, 251, 320))
+        self.product_52.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_52 = QPushButton(self.product_52)
+        self.picproduct1_52.setObjectName(u"picproduct1_52")
+        self.picproduct1_52.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_52.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.product_53 = QWidget(self.frame_allproduct_3)
+        self.product_53.setObjectName(u"product_53")
+        self.product_53.setGeometry(QRect(26, 400, 251, 320))
+        self.product_53.setStyleSheet(u"border-radius: 10px;\n"
+"                background: #D9D9D9;\n"
+"border:none;")
+        self.picproduct1_53 = QPushButton(self.product_53)
+        self.picproduct1_53.setObjectName(u"picproduct1_53")
+        self.picproduct1_53.setGeometry(QRect(30, 30, 191, 188))
+        self.picproduct1_53.setStyleSheet(u"background-color: #FFF;\n"
+"border-radius: 0px;")
+        self.gotoaddproductpagebutton_3 = QPushButton(self.frame_allproduct_3)
+        self.gotoaddproductpagebutton_3.setObjectName(u"gotoaddproductpagebutton_3")
+        self.gotoaddproductpagebutton_3.setGeometry(QRect(840, 310, 100, 100))
+        self.gotoaddproductpagebutton_3.setStyleSheet(u"background: #CD4662;\n"
+"border: none;\n"
+"border-radius: 50px;\n"
+"font-size: 60px;\n"
+"color: white;")
+
+        self.verticalLayout_25.addWidget(self.frame_allproduct_3)
+
+        self.scrollArea_allproduct_3.setWidget(self.scrollAreaWidgetContents_17)
+
+        self.verticalLayout_24.addWidget(self.scrollArea_allproduct_3)
+
+        self.stackedWidget_allandtype.addWidget(self.adminallproductpage)
+        self.adminproducttypespage = QWidget()
+        self.adminproducttypespage.setObjectName(u"adminproducttypespage")
+        self.verticalLayout_26 = QVBoxLayout(self.adminproducttypespage)
+        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.scrollArea_producttype_3 = QScrollArea(self.adminproducttypespage)
+        self.scrollArea_producttype_3.setObjectName(u"scrollArea_producttype_3")
+        self.scrollArea_producttype_3.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_producttype_3.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_18 = QWidget()
+        self.scrollAreaWidgetContents_18.setObjectName(u"scrollAreaWidgetContents_18")
+        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 998, 1518))
+        self.verticalLayout_27 = QVBoxLayout(self.scrollAreaWidgetContents_18)
+        self.verticalLayout_27.setObjectName(u"verticalLayout_27")
+        self.frame_producttype_3 = QFrame(self.scrollAreaWidgetContents_18)
+        self.frame_producttype_3.setObjectName(u"frame_producttype_3")
+        self.frame_producttype_3.setMinimumSize(QSize(0, 1500))
+        self.frame_producttype_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_producttype_3.setFrameShadow(QFrame.Raised)
+        self.topwearwidget_3 = QWidget(self.frame_producttype_3)
+        self.topwearwidget_3.setObjectName(u"topwearwidget_3")
+        self.topwearwidget_3.setGeometry(QRect(30, 52, 911, 99))
+        self.topwearwidget_3.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #F4DBDB;\n"
+"background: #FAF9F6;")
+        self.topwearpic_3 = QLabel(self.topwearwidget_3)
+        self.topwearpic_3.setObjectName(u"topwearpic_3")
+        self.topwearpic_3.setGeometry(QRect(25, 20, 60, 60))
+        self.topwearpic_3.setStyleSheet(u"image: url(:/pic/images/newres/profile.png);\n"
+"border: none;")
+        self.topwearlabel_3 = QLabel(self.topwearwidget_3)
+        self.topwearlabel_3.setObjectName(u"topwearlabel_3")
+        self.topwearlabel_3.setGeometry(QRect(120, 8, 263, 81))
+        self.topwearlabel_3.setStyleSheet(u"color: #000;\n"
+"border: none;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.topwearnum_3 = QLabel(self.topwearwidget_3)
+        self.topwearnum_3.setObjectName(u"topwearnum_3")
+        self.topwearnum_3.setGeometry(QRect(660, 8, 169, 81))
+        self.topwearnum_3.setStyleSheet(u"color: #545454;\n"
+"text-align: right;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.topwearnum_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.topwearbutton_3 = QPushButton(self.topwearwidget_3)
+        self.topwearbutton_3.setObjectName(u"topwearbutton_3")
+        self.topwearbutton_3.setGeometry(QRect(860, 40, 31, 21))
+        self.topwearbutton_3.setStyleSheet(u"image: url(:/pic/images/newres/rightarrow_pink.png);\n"
+"border: none;")
+        self.bottomwidget_3 = QWidget(self.frame_producttype_3)
+        self.bottomwidget_3.setObjectName(u"bottomwidget_3")
+        self.bottomwidget_3.setGeometry(QRect(30, 176, 911, 99))
+        self.bottomwidget_3.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #F4DBDB;\n"
+"background: #FAF9F6;\n"
+"")
+        self.bottomwearpic_3 = QLabel(self.bottomwidget_3)
+        self.bottomwearpic_3.setObjectName(u"bottomwearpic_3")
+        self.bottomwearpic_3.setGeometry(QRect(25, 20, 60, 60))
+        self.bottomwearpic_3.setStyleSheet(u"image: url(:/pic/images/newres/profile.png);\n"
+"border: none;")
+        self.bottomwearlabel_3 = QLabel(self.bottomwidget_3)
+        self.bottomwearlabel_3.setObjectName(u"bottomwearlabel_3")
+        self.bottomwearlabel_3.setGeometry(QRect(120, 8, 263, 81))
+        self.bottomwearlabel_3.setStyleSheet(u"color: #000;\n"
+"border: none;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.bottomwearnum_3 = QLabel(self.bottomwidget_3)
+        self.bottomwearnum_3.setObjectName(u"bottomwearnum_3")
+        self.bottomwearnum_3.setGeometry(QRect(660, 8, 169, 81))
+        self.bottomwearnum_3.setStyleSheet(u"color: #545454;\n"
+"text-align: right;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.bottomwearnum_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.bottmwearbutton_3 = QPushButton(self.bottomwidget_3)
+        self.bottmwearbutton_3.setObjectName(u"bottmwearbutton_3")
+        self.bottmwearbutton_3.setGeometry(QRect(860, 40, 31, 21))
+        self.bottmwearbutton_3.setStyleSheet(u"image: url(:/pic/images/newres/rightarrow_pink.png);\n"
+"border: none;")
+        self.footwearwidget_3 = QWidget(self.frame_producttype_3)
+        self.footwearwidget_3.setObjectName(u"footwearwidget_3")
+        self.footwearwidget_3.setGeometry(QRect(30, 300, 911, 99))
+        self.footwearwidget_3.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #F4DBDB;\n"
+"background: #FAF9F6;\n"
+"")
+        self.footwearpic_3 = QLabel(self.footwearwidget_3)
+        self.footwearpic_3.setObjectName(u"footwearpic_3")
+        self.footwearpic_3.setGeometry(QRect(25, 20, 60, 60))
+        self.footwearpic_3.setStyleSheet(u"image: url(:/pic/images/newres/profile.png);\n"
+"border: none;")
+        self.footwearlabel_3 = QLabel(self.footwearwidget_3)
+        self.footwearlabel_3.setObjectName(u"footwearlabel_3")
+        self.footwearlabel_3.setGeometry(QRect(120, 8, 263, 81))
+        self.footwearlabel_3.setStyleSheet(u"color: #000;\n"
+"border: none;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.footwearnum_3 = QLabel(self.footwearwidget_3)
+        self.footwearnum_3.setObjectName(u"footwearnum_3")
+        self.footwearnum_3.setGeometry(QRect(660, 8, 169, 81))
+        self.footwearnum_3.setStyleSheet(u"color: #545454;\n"
+"text-align: right;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.footwearnum_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.footwearbutton_3 = QPushButton(self.footwearwidget_3)
+        self.footwearbutton_3.setObjectName(u"footwearbutton_3")
+        self.footwearbutton_3.setGeometry(QRect(860, 40, 31, 21))
+        self.footwearbutton_3.setStyleSheet(u"image: url(:/pic/images/newres/rightarrow_pink.png);\n"
+"border: none;")
+
+        self.verticalLayout_27.addWidget(self.frame_producttype_3)
+
+        self.scrollArea_producttype_3.setWidget(self.scrollAreaWidgetContents_18)
+
+        self.verticalLayout_26.addWidget(self.scrollArea_producttype_3)
+
+        self.stackedWidget_allandtype.addWidget(self.adminproducttypespage)
+        self.stackedWidget_adminproducts.addWidget(self.adminproductspage_alltypes)
+        self.adminaddproductpage = QWidget()
+        self.adminaddproductpage.setObjectName(u"adminaddproductpage")
+        self.verticalLayout_28 = QVBoxLayout(self.adminaddproductpage)
+        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
+        self.scrollArea_addproduct_3 = QScrollArea(self.adminaddproductpage)
+        self.scrollArea_addproduct_3.setObjectName(u"scrollArea_addproduct_3")
+        self.scrollArea_addproduct_3.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_addproduct_3.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_19 = QWidget()
+        self.scrollAreaWidgetContents_19.setObjectName(u"scrollAreaWidgetContents_19")
+        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 998, 1218))
+        self.verticalLayout_29 = QVBoxLayout(self.scrollAreaWidgetContents_19)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.frame_addproduct_3 = QFrame(self.scrollAreaWidgetContents_19)
+        self.frame_addproduct_3.setObjectName(u"frame_addproduct_3")
+        self.frame_addproduct_3.setMinimumSize(QSize(0, 1200))
+        self.frame_addproduct_3.setStyleSheet(u"background: #FAF9F6")
+        self.frame_addproduct_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_addproduct_3.setFrameShadow(QFrame.Raised)
+        self.addproductlabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductlabel_3.setObjectName(u"addproductlabel_3")
+        self.addproductlabel_3.setGeometry(QRect(40, 0, 201, 21))
+        self.addproductlabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.addimageproductcontainer_3 = QWidget(self.frame_addproduct_3)
+        self.addimageproductcontainer_3.setObjectName(u"addimageproductcontainer_3")
+        self.addimageproductcontainer_3.setGeometry(QRect(24, 75, 910, 251))
+        self.addimageproductcontainer_3.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	height: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-width: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.horizontalLayout_5 = QHBoxLayout(self.addimageproductcontainer_3)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.scrollArea_addimageproduct_3 = QScrollArea(self.addimageproductcontainer_3)
+        self.scrollArea_addimageproduct_3.setObjectName(u"scrollArea_addimageproduct_3")
+        self.scrollArea_addimageproduct_3.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_20 = QWidget()
+        self.scrollAreaWidgetContents_20.setObjectName(u"scrollAreaWidgetContents_20")
+        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1218, 218))
+        self.horizontalLayout_6 = QHBoxLayout(self.scrollAreaWidgetContents_20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.frame_addimageproduct_3 = QFrame(self.scrollAreaWidgetContents_20)
+        self.frame_addimageproduct_3.setObjectName(u"frame_addimageproduct_3")
+        self.frame_addimageproduct_3.setMinimumSize(QSize(1200, 0))
+        self.frame_addimageproduct_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_addimageproduct_3.setFrameShadow(QFrame.Raised)
+        self.addproductimagelabel_3 = QLabel(self.frame_addimageproduct_3)
+        self.addproductimagelabel_3.setObjectName(u"addproductimagelabel_3")
+        self.addproductimagelabel_3.setGeometry(QRect(0, 0, 220, 31))
+        self.addproductimagelabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addimagebutton_13 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_13.setObjectName(u"addimagebutton_13")
+        self.addimagebutton_13.setGeometry(QRect(0, 45, 151, 151))
+        self.addimagebutton_13.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
+"font-size: 46px;\n"
+"background: #FAF9F6;\n"
+"color: #D9D9D9;")
+        self.addimagebutton_14 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_14.setObjectName(u"addimagebutton_14")
+        self.addimagebutton_14.setGeometry(QRect(201, 45, 151, 151))
+        self.addimagebutton_14.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
+"font-size: 46px;\n"
+"background: #FAF9F6;\n"
+"color: #D9D9D9;")
+        self.addimagebutton_15 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_15.setObjectName(u"addimagebutton_15")
+        self.addimagebutton_15.setGeometry(QRect(402, 45, 151, 151))
+        self.addimagebutton_15.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
+"font-size: 46px;\n"
+"background: #FAF9F6;\n"
+"color: #D9D9D9;")
+        self.addimagebutton_16 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_16.setObjectName(u"addimagebutton_16")
+        self.addimagebutton_16.setGeometry(QRect(603, 45, 151, 151))
+        self.addimagebutton_16.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
+"font-size: 46px;\n"
+"background: #FAF9F6;\n"
+"color: #D9D9D9;")
+        self.addimagebutton_17 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_17.setObjectName(u"addimagebutton_17")
+        self.addimagebutton_17.setGeometry(QRect(804, 45, 151, 151))
+        self.addimagebutton_17.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
+"font-size: 46px;\n"
+"background: #FAF9F6;\n"
+"color: #D9D9D9;")
+        self.addimagebutton_18 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_18.setObjectName(u"addimagebutton_18")
+        self.addimagebutton_18.setGeometry(QRect(1005, 45, 151, 151))
+        self.addimagebutton_18.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
+"font-size: 46px;\n"
+"background: #FAF9F6;\n"
+"color: #D9D9D9;")
+
+        self.horizontalLayout_6.addWidget(self.frame_addimageproduct_3)
+
+        self.scrollArea_addimageproduct_3.setWidget(self.scrollAreaWidgetContents_20)
+
+        self.horizontalLayout_5.addWidget(self.scrollArea_addimageproduct_3)
+
+        self.addproductnamelabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductnamelabel_3.setObjectName(u"addproductnamelabel_3")
+        self.addproductnamelabel_3.setGeometry(QRect(42, 347, 220, 21))
+        self.addproductnamelabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductdescriptionlabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductdescriptionlabel_3.setObjectName(u"addproductdescriptionlabel_3")
+        self.addproductdescriptionlabel_3.setGeometry(QRect(42, 443, 220, 31))
+        self.addproductdescriptionlabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductpricelabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductpricelabel_3.setObjectName(u"addproductpricelabel_3")
+        self.addproductpricelabel_3.setGeometry(QRect(42, 623, 220, 21))
+        self.addproductpricelabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductsizelabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductsizelabel_3.setObjectName(u"addproductsizelabel_3")
+        self.addproductsizelabel_3.setGeometry(QRect(42, 719, 220, 21))
+        self.addproductsizelabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductoptionlabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductoptionlabel_3.setObjectName(u"addproductoptionlabel_3")
+        self.addproductoptionlabel_3.setGeometry(QRect(42, 815, 220, 31))
+        self.addproductoptionlabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductstocklabel_3 = QLabel(self.frame_addproduct_3)
+        self.addproductstocklabel_3.setObjectName(u"addproductstocklabel_3")
+        self.addproductstocklabel_3.setGeometry(QRect(42, 921, 220, 21))
+        self.addproductstocklabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductnametextbox_3 = QLineEdit(self.frame_addproduct_3)
+        self.addproductnametextbox_3.setObjectName(u"addproductnametextbox_3")
+        self.addproductnametextbox_3.setGeometry(QRect(42, 382, 910, 33))
+        self.addproductnametextbox_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #F7F2EB;\n"
+"")
+        self.addproductdescriptiontextbox_3 = QLineEdit(self.frame_addproduct_3)
+        self.addproductdescriptiontextbox_3.setObjectName(u"addproductdescriptiontextbox_3")
+        self.addproductdescriptiontextbox_3.setGeometry(QRect(42, 488, 910, 107))
+        self.addproductdescriptiontextbox_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #F7F2EB;\n"
+"")
+        self.addproductpricetextbox_3 = QLineEdit(self.frame_addproduct_3)
+        self.addproductpricetextbox_3.setObjectName(u"addproductpricetextbox_3")
+        self.addproductpricetextbox_3.setGeometry(QRect(42, 658, 910, 33))
+        self.addproductpricetextbox_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #F7F2EB;\n"
+"")
+        self.addproductstocktextbox_3 = QLineEdit(self.frame_addproduct_3)
+        self.addproductstocktextbox_3.setObjectName(u"addproductstocktextbox_3")
+        self.addproductstocktextbox_3.setGeometry(QRect(42, 956, 910, 33))
+        self.addproductstocktextbox_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #F7F2EB;\n"
+"")
+        self.addsizeproductbutton_3 = QPushButton(self.frame_addproduct_3)
+        self.addsizeproductbutton_3.setObjectName(u"addsizeproductbutton_3")
+        self.addsizeproductbutton_3.setGeometry(QRect(42, 754, 108, 33))
+        self.addsizeproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #F7F2EB;")
+        self.addoptionsproductbutton_3 = QPushButton(self.frame_addproduct_3)
+        self.addoptionsproductbutton_3.setObjectName(u"addoptionsproductbutton_3")
+        self.addoptionsproductbutton_3.setGeometry(QRect(42, 860, 108, 33))
+        self.addoptionsproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #F7F2EB;")
+        self.canceladdproductbutton_3 = QPushButton(self.frame_addproduct_3)
+        self.canceladdproductbutton_3.setObjectName(u"canceladdproductbutton_3")
+        self.canceladdproductbutton_3.setGeometry(QRect(498, 1017, 157, 49))
+        self.canceladdproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #AEC289;\n"
+"color: #FFF;\n"
+"\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.addproductbutton_3 = QPushButton(self.frame_addproduct_3)
+        self.addproductbutton_3.setObjectName(u"addproductbutton_3")
+        self.addproductbutton_3.setGeometry(QRect(706, 1017, 204, 49))
+        self.addproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
+"background: #CD4662;\n"
+"color: #FFF;\n"
+"\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+
+        self.verticalLayout_29.addWidget(self.frame_addproduct_3)
+
+        self.scrollArea_addproduct_3.setWidget(self.scrollAreaWidgetContents_19)
+
+        self.verticalLayout_28.addWidget(self.scrollArea_addproduct_3)
+
+        self.stackedWidget_adminproducts.addWidget(self.adminaddproductpage)
+        self.stackedWidget_adminmain.addWidget(self.adminproductspage)
+        self.stackedWidget_adminwidget.addWidget(self.adminmain)
 
         self.gridLayout_adminwidget.addWidget(self.stackedWidget_adminwidget, 0, 0, 1, 1)
 
@@ -3062,10 +3076,10 @@ class Ui_Main(object):
 
         self.retranslateUi(Main)
 
-        self.stackedWidget.setCurrentIndex(1)
-        self.stackedWidget_main.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget_main.setCurrentIndex(0)
         self.stackedWidget_myorders.setCurrentIndex(0)
-        self.stackedWidget_product.setCurrentIndex(1)
+        self.stackedWidget_adminproducts.setCurrentIndex(0)
         self.stackedWidget_allandtype.setCurrentIndex(0)
 
 
@@ -3167,81 +3181,6 @@ class Ui_Main(object):
         self.numberofsold.setText(QCoreApplication.translate("Main", u"480 Sold", None))
         self.currencypic.setText("")
         self.productprice.setText(QCoreApplication.translate("Main", u"100", None))
-        self.Logolabel_2.setText(QCoreApplication.translate("Main", u"ChopShop", None))
-        self.homebutton_2.setText(QCoreApplication.translate("Main", u"Home", None))
-        self.orderstatusbutton.setText(QCoreApplication.translate("Main", u"Order Status", None))
-        self.orderproductbutton.setText(QCoreApplication.translate("Main", u"Products", None))
-        self.messbutton_2.setText(QCoreApplication.translate("Main", u"Messages", None))
-        self.settingbutton_2.setText("")
-        self.exitbutton_2.setText("")
-        self.searchbox_2.setPlaceholderText(QCoreApplication.translate("Main", u"Search..", None))
-        self.loginsignoutbutton_2.setText(QCoreApplication.translate("Main", u"Log In", None))
-        self.cartbutton_2.setText("")
-        self.profilebutton_2.setText("")
-        self.productlabel.setText(QCoreApplication.translate("Main", u"Products", None))
-        self.allproductbutton.setText(QCoreApplication.translate("Main", u"All Products", None))
-        self.producttypesbutton.setText(QCoreApplication.translate("Main", u"Product Types", None))
-        self.picproduct1_35.setText("")
-        self.picproduct1_30.setText("")
-        self.picproduct1_33.setText("")
-        self.picproduct1_32.setText("")
-        self.picproduct1_34.setText("")
-        self.picproduct1_31.setText("")
-        self.gotoaddproductpagebutton.setText(QCoreApplication.translate("Main", u"PushButton", None))
-        self.topwearpic.setText("")
-        self.topwearlabel.setText(QCoreApplication.translate("Main", u"Tops", None))
-        self.topwearnum.setText(QCoreApplication.translate("Main", u"20", None))
-        self.topwearbutton.setText("")
-        self.bottomwearpic.setText("")
-        self.bottomwearlabel.setText(QCoreApplication.translate("Main", u"Bottoms", None))
-        self.bottomwearnum.setText(QCoreApplication.translate("Main", u"30", None))
-        self.bottmwearbutton.setText("")
-        self.footwearpic.setText("")
-        self.footwearlabel.setText(QCoreApplication.translate("Main", u"Foot Wears", None))
-        self.footwearnum.setText(QCoreApplication.translate("Main", u"40", None))
-        self.footwearbutton.setText("")
-        self.addproductlabel.setText(QCoreApplication.translate("Main", u"Add Product", None))
-        self.addproductimagelabel.setText(QCoreApplication.translate("Main", u"Product's Images", None))
-        self.addimagebutton.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addimagebutton_2.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addimagebutton_3.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addimagebutton_4.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addimagebutton_5.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addimagebutton_6.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addproductnamelabel.setText(QCoreApplication.translate("Main", u"Product's Name", None))
-        self.addproductdescriptionlabel.setText(QCoreApplication.translate("Main", u"Description", None))
-        self.addproductpricelabel.setText(QCoreApplication.translate("Main", u"Price", None))
-        self.addproductsizelabel.setText(QCoreApplication.translate("Main", u"Size", None))
-        self.addproductoptionlabel.setText(QCoreApplication.translate("Main", u"Options", None))
-        self.addproductstocklabel.setText(QCoreApplication.translate("Main", u"Stock", None))
-        self.addsizeproductbutton.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addoptionsproductbutton.setText(QCoreApplication.translate("Main", u"+", None))
-        self.canceladdproductbutton.setText(QCoreApplication.translate("Main", u"Cancel", None))
-        self.addproductbutton.setText(QCoreApplication.translate("Main", u"Add Product", None))
-        self.profilepic_2.setText("")
-        self.usernamelabel_2.setText(QCoreApplication.translate("Main", u"Username", None))
-        self.numreview.setText(QCoreApplication.translate("Main", u"4/5", None))
-        self.review.setText(QCoreApplication.translate("Main", u"Reviews", None))
-        self.numproduct.setText(QCoreApplication.translate("Main", u"1000", None))
-        self.product.setText(QCoreApplication.translate("Main", u"Products", None))
-        self.numsold.setText(QCoreApplication.translate("Main", u"30000", None))
-        self.yearregis.setText(QCoreApplication.translate("Main", u"Years Registered", None))
-        self.sold.setText(QCoreApplication.translate("Main", u"Sold", None))
-        self.numyearregis.setText(QCoreApplication.translate("Main", u"2", None))
-        self.orderstatuslabel.setText(QCoreApplication.translate("Main", u"Order Status", None))
-        self.admintobeshipbutton.setText("")
-        self.admincancelbutton.setText("")
-        self.admincompletebutton.setText("")
-        self.adminreviewbutton.setText("")
-        self.orderstatusbutton_2.setText(QCoreApplication.translate("Main", u"View all order status    >", None))
-        self.picproduct1_16.setText("")
-        self.favlabel_2.setText(QCoreApplication.translate("Main", u"Products", None))
-        self.picproduct1_20.setText("")
-        self.picproduct1_21.setText("")
-        self.picproduct1_22.setText("")
-        self.picproduct1_23.setText("")
-        self.picproduct1_17.setText("")
-        self.viewallproductbutton.setText(QCoreApplication.translate("Main", u"View all Products    >", None))
         self.profilepic.setText("")
         self.usernamelabel.setText(QCoreApplication.translate("Main", u"Username", None))
         self.favloriteabel.setText(QCoreApplication.translate("Main", u"3 Favorites", None))
@@ -3284,6 +3223,80 @@ class Ui_Main(object):
         self.addressbox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Address", None))
         self.editshoppic.setText("")
         self.shoplogolabel.setText(QCoreApplication.translate("Main", u"Shop's Logo", None))
+        self.searchbox_3.setPlaceholderText(QCoreApplication.translate("Main", u"Search..", None))
+        self.loginsignoutbutton_3.setText(QCoreApplication.translate("Main", u"Log In", None))
+        self.profilebutton_3.setText("")
+        self.Logolabel_3.setText(QCoreApplication.translate("Main", u"ChopShop", None))
+        self.homebutton_3.setText(QCoreApplication.translate("Main", u"Home", None))
+        self.orderstatusbutton_3.setText(QCoreApplication.translate("Main", u"Order Status", None))
+        self.orderproductbutton_2.setText(QCoreApplication.translate("Main", u"Products", None))
+        self.messbutton_3.setText(QCoreApplication.translate("Main", u"Messages", None))
+        self.settingbutton_3.setText("")
+        self.exitbutton_3.setText("")
+        self.profilepic_3.setText("")
+        self.usernamelabel_3.setText(QCoreApplication.translate("Main", u"Username", None))
+        self.numreview_2.setText(QCoreApplication.translate("Main", u"4/5", None))
+        self.review_2.setText(QCoreApplication.translate("Main", u"Reviews", None))
+        self.numproduct_2.setText(QCoreApplication.translate("Main", u"1000", None))
+        self.product_22.setText(QCoreApplication.translate("Main", u"Products", None))
+        self.numsold_2.setText(QCoreApplication.translate("Main", u"30000", None))
+        self.yearregis_2.setText(QCoreApplication.translate("Main", u"Years Registered", None))
+        self.sold_2.setText(QCoreApplication.translate("Main", u"Sold", None))
+        self.numyearregis_2.setText(QCoreApplication.translate("Main", u"2", None))
+        self.orderstatuslabel_2.setText(QCoreApplication.translate("Main", u"Order Status", None))
+        self.admintobeshipbutton_2.setText("")
+        self.admincancelbutton_2.setText("")
+        self.admincompletebutton_2.setText("")
+        self.adminreviewbutton_2.setText("")
+        self.orderstatusbutton_4.setText(QCoreApplication.translate("Main", u"View all order status    >", None))
+        self.picproduct1_24.setText("")
+        self.favlabel_3.setText(QCoreApplication.translate("Main", u"Products", None))
+        self.picproduct1_25.setText("")
+        self.picproduct1_26.setText("")
+        self.picproduct1_27.setText("")
+        self.picproduct1_28.setText("")
+        self.picproduct1_29.setText("")
+        self.viewallproductbutton_2.setText(QCoreApplication.translate("Main", u"View all Products    >", None))
+        self.productlabel_3.setText(QCoreApplication.translate("Main", u"Products", None))
+        self.allproductbutton_3.setText(QCoreApplication.translate("Main", u"All Products", None))
+        self.producttypesbutton_3.setText(QCoreApplication.translate("Main", u"Product Types", None))
+        self.picproduct1_48.setText("")
+        self.picproduct1_49.setText("")
+        self.picproduct1_50.setText("")
+        self.picproduct1_51.setText("")
+        self.picproduct1_52.setText("")
+        self.picproduct1_53.setText("")
+        self.gotoaddproductpagebutton_3.setText(QCoreApplication.translate("Main", u"+", None))
+        self.topwearpic_3.setText("")
+        self.topwearlabel_3.setText(QCoreApplication.translate("Main", u"Tops", None))
+        self.topwearnum_3.setText(QCoreApplication.translate("Main", u"20", None))
+        self.topwearbutton_3.setText("")
+        self.bottomwearpic_3.setText("")
+        self.bottomwearlabel_3.setText(QCoreApplication.translate("Main", u"Bottoms", None))
+        self.bottomwearnum_3.setText(QCoreApplication.translate("Main", u"30", None))
+        self.bottmwearbutton_3.setText("")
+        self.footwearpic_3.setText("")
+        self.footwearlabel_3.setText(QCoreApplication.translate("Main", u"Foot Wears", None))
+        self.footwearnum_3.setText(QCoreApplication.translate("Main", u"40", None))
+        self.footwearbutton_3.setText("")
+        self.addproductlabel_3.setText(QCoreApplication.translate("Main", u"Add Product", None))
+        self.addproductimagelabel_3.setText(QCoreApplication.translate("Main", u"Product's Images", None))
+        self.addimagebutton_13.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton_14.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton_15.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton_16.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton_17.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton_18.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addproductnamelabel_3.setText(QCoreApplication.translate("Main", u"Product's Name", None))
+        self.addproductdescriptionlabel_3.setText(QCoreApplication.translate("Main", u"Description", None))
+        self.addproductpricelabel_3.setText(QCoreApplication.translate("Main", u"Price", None))
+        self.addproductsizelabel_3.setText(QCoreApplication.translate("Main", u"Size", None))
+        self.addproductoptionlabel_3.setText(QCoreApplication.translate("Main", u"Options", None))
+        self.addproductstocklabel_3.setText(QCoreApplication.translate("Main", u"Stock", None))
+        self.addsizeproductbutton_3.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addoptionsproductbutton_3.setText(QCoreApplication.translate("Main", u"+", None))
+        self.canceladdproductbutton_3.setText(QCoreApplication.translate("Main", u"Cancel", None))
+        self.addproductbutton_3.setText(QCoreApplication.translate("Main", u"Add Product", None))
         self.editlabel.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel.setText(QCoreApplication.translate("Main", u"Username", None))
         self.fisrtlabel.setText(QCoreApplication.translate("Main", u"First name", None))

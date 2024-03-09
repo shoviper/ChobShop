@@ -6,6 +6,7 @@ from .Homepage_newres_ui import *
 from app.template.order.Orderrun import *
 from app.db.database import *
 from app.backend.customerUser.editprofile import *
+from app.backend.adminUser.openshop import *
 # from .Homepagdsadse import *
 
 # import app.assets.realsourceimg.real
@@ -173,21 +174,14 @@ class HomepageWindow(QMainWindow):
 
     def go_to_adminregister(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.adminwidget)
-        self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminregisterpage)
-        self.ui.backbutton_adminregister.clicked.connect(self.go_to_userprofile)
 
-        self.ui.adminregisterbutton.clicked.connect(self.admin_register)
+        if openshop():
+            self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminmain)
+        else:
+            self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminregisterpage)
+            self.ui.backbutton_adminregister.clicked.connect(self.go_to_userprofile)
+            self.ui.adminregisterbutton.clicked.connect(self.admin_register)
         
-        user = root.LoggedInUser.user.username
-        if user in root.adminUsers:
-            self.ui.adminregisterbutton.setText("Edit Shop's Profile")
-            self.ui.shopnamebox.setText(root.adminUsers[user].shopname)
-            self.ui.firstnamebox_admin.setText(root.adminUsers[user].name)
-            self.ui.lastnamebox_admin.setText(root.adminUsers[user].lastname)
-            self.ui.descriptionbox_admin.setText(root.adminUsers[user].description)
-            self.ui.addressbox_admin.setText(root.adminUsers[user].address)
-            self.ui.emailbox_admin.setText(root.adminUsers[user].email)
-            self.ui.phonebox_admin.setText(root.adminUsers[user].phone)
 
     def admin_register(self):
         print("Registering as admin")
