@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
+    <width>1672</width>
     <height>1080</height>
    </rect>
   </property>
@@ -306,8 +306,8 @@ border: none;</string>
    <widget class="QWidget" name="main" native="true">
     <property name="geometry">
      <rect>
-      <x>373</x>
-      <y>161</y>
+      <x>570</x>
+      <y>170</y>
       <width>1547</width>
       <height>919</height>
      </rect>
@@ -329,7 +329,7 @@ border: none;</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-839</y>
           <width>1512</width>
           <height>2518</height>
          </rect>
@@ -800,10 +800,10 @@ line-height: normal;</string>
            <widget class="QWidget" name="widget_2" native="true">
             <property name="geometry">
              <rect>
-              <x>90</x>
-              <y>930</y>
-              <width>1322</width>
-              <height>533</height>
+              <x>70</x>
+              <y>910</y>
+              <width>791</width>
+              <height>421</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -843,7 +843,7 @@ background-color: #D9D9D9;</string>
               <string notr="true">color: #000;
 border: none;
 font-family: Suwannaphum;
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
@@ -857,8 +857,8 @@ line-height: normal;</string>
               <rect>
                <x>71</x>
                <y>59</y>
-               <width>27</width>
-               <height>27</height>
+               <width>21</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -874,8 +874,8 @@ border: none;</string>
               <rect>
                <x>98</x>
                <y>59</y>
-               <width>27</width>
-               <height>27</height>
+               <width>21</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -891,8 +891,8 @@ border: none;</string>
               <rect>
                <x>126</x>
                <y>59</y>
-               <width>27</width>
-               <height>27</height>
+               <width>21</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -908,8 +908,8 @@ border: none;</string>
               <rect>
                <x>154</x>
                <y>59</y>
-               <width>27</width>
-               <height>27</height>
+               <width>21</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -925,8 +925,8 @@ border: none;</string>
               <rect>
                <x>182</x>
                <y>59</y>
-               <width>27</width>
-               <height>27</height>
+               <width>21</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -941,7 +941,7 @@ border: none;</string>
              <property name="geometry">
               <rect>
                <x>71</x>
-               <y>126</y>
+               <y>100</y>
                <width>390</width>
                <height>39</height>
               </rect>
@@ -950,7 +950,7 @@ border: none;</string>
               <string notr="true">border: none;
 color: #BFBFBF;
 font-family: Suwannaphum;
-font-size: 20px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
@@ -963,7 +963,7 @@ line-height: normal;</string>
              <property name="geometry">
               <rect>
                <x>71</x>
-               <y>165</y>
+               <y>140</y>
                <width>390</width>
                <height>39</height>
               </rect>
@@ -972,7 +972,7 @@ line-height: normal;</string>
               <string notr="true">border: none;
 color: #000;
 font-family: Suwannaphum;
-font-size: 20px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
@@ -985,9 +985,9 @@ line-height: normal;</string>
              <property name="geometry">
               <rect>
                <x>71</x>
-               <y>229</y>
-               <width>215</width>
-               <height>217</height>
+               <y>199</y>
+               <width>151</width>
+               <height>151</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -1001,10 +1001,10 @@ border: none;</string>
             <widget class="QPushButton" name="reviewpic2">
              <property name="geometry">
               <rect>
-               <x>361</x>
-               <y>229</y>
-               <width>215</width>
-               <height>217</height>
+               <x>261</x>
+               <y>199</y>
+               <width>151</width>
+               <height>151</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -1019,15 +1019,15 @@ border: none;</string>
              <property name="geometry">
               <rect>
                <x>71</x>
-               <y>471</y>
+               <y>385</y>
                <width>390</width>
-               <height>51</height>
+               <height>21</height>
               </rect>
              </property>
              <property name="styleSheet">
               <string notr="true">color: #BFBFBF;
 font-family: Suwannaphum;
-font-size: 20px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1042,15 +1042,15 @@ border: none;</string>
             <property name="geometry">
              <rect>
               <x>70</x>
-              <y>816</y>
-              <width>343</width>
-              <height>40</height>
+              <y>870</y>
+              <width>111</width>
+              <height>16</height>
              </rect>
             </property>
             <property name="styleSheet">
              <string notr="true">color: #000;
 font-family: Suwannaphum;
-font-size: 36px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
