@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide6.QtGui import QPixmap
 # from Homepage import Ui_MainWindow
 # from .Homepage_newres_ui import *
-from .realhomepage import *
+from .realhomepage_ui import *
 from app.template.order.Orderrun import *
 from app.db.database import *
 from app.backend.customerUser.editprofile import *
@@ -176,36 +176,6 @@ class HomepageWindow(QMainWindow):
         self.ui.usernamelabel.setText(root.LoggedInUser.user.username)
         self.ui.openshopbutton.clicked.connect(self.go_to_adminregister)
 
-    def go_to_adminregister(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.adminwidget)
-
-        if openshop():
-            self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminmain)
-        else:
-            self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminregisterpage)
-            self.ui.backbutton_adminregister.clicked.connect(self.go_to_userprofile)
-            self.ui.adminregisterbutton.clicked.connect(self.admin_register)
-        
-
-    def admin_register(self):
-        print("Registering as admin")
-        username = root.LoggedInUser.user.username
-        password = root.LoggedInUser.user.password
-        shopname = self.ui.shopnamebox.text()
-        firstname = self.ui.firstnamebox_admin.text()
-        lastname = self.ui.lastnamebox_admin.text()
-        description = self.ui.descriptionbox_admin.text()
-        address = self.ui.addressbox_admin.text()
-        email = self.ui.emailbox_admin.text()
-        phone = self.ui.phonebox_admin.text()
-        if registerAdmin(username, shopname, firstname, lastname, description, address, email, phone, password):
-            print("Admin registered successfully")
-            self.show_success("Admin registered successfully")
-            self.go_to_home()
-        else:
-            print("Admin registration failed")
-            self.show_error("Admin registration failed")
-
     def go_to_usereditprofile(self):
         print("go to edit profile")
         # self.ui.editnameprofile.setText(root.LoggedInUser.user.username.title())
@@ -267,6 +237,70 @@ class HomepageWindow(QMainWindow):
                 self.login.show()
             else:
                 self.show_error("Delete Profile failed")
+
+
+    def go_to_adminregister(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.adminwidget)
+
+        if openshop():
+            self.go_to_homepage_admin()
+        else:
+            self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminregisterpage)
+            self.ui.backbutton_adminregister.clicked.connect(self.go_to_userprofile)
+            self.ui.adminregisterbutton.clicked.connect(self.admin_register)
+        
+    def admin_register(self):
+        print("Registering as admin")
+        username = root.LoggedInUser.user.username
+        password = root.LoggedInUser.user.password
+        shopname = self.ui.shopnamebox.text()
+        firstname = self.ui.firstnamebox_admin.text()
+        lastname = self.ui.lastnamebox_admin.text()
+        description = self.ui.descriptionbox_admin.text()
+        address = self.ui.addressbox_admin.text()
+        email = self.ui.emailbox_admin.text()
+        phone = self.ui.phonebox_admin.text()
+        if registerAdmin(username, shopname, firstname, lastname, description, address, email, phone, password):
+            print("Admin registered successfully")
+            self.show_success("Admin registered successfully")
+            self.go_to_home()
+        else:
+            print("Admin registration failed")
+            self.show_error("Admin registration failed")
+
+    def go_to_homepage_admin(self):
+        changeLoggedinUser(root.LoggedInUser.user.username)
+        self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminmain)
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.homepage_admin)
+        self.ui.shopnamelabel_admin.setText(root.LoggedInUser.user.shopname)
+        self.ui.loginsignoutbutton_admin.setText(root.LoggedInUser.user.username)
+        
+        self.ui.homebutton_admin.setStyleSheet(active_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+
+        self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
+
+        self.ui.addproduct_admin.clicked.connect(self.go_to_addproduct_admin)
+
+    def go_to_productspage_admin(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
+        self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.alltypesproductspage_admin)
+        self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminallproductpage)
+        
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(active_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+
+        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
+
+    def go_to_addproduct_admin(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
+        self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.addproductpage_admin)
+
+        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)

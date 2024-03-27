@@ -11,3 +11,8 @@ def openshop():
         return False
     else:
         return True
+    
+def changeLoggedinUser(username):
+    root.LoggedInUser.user = root.adminUsers[username]
+    transaction.commit()
+    return True

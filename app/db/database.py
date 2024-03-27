@@ -4,7 +4,7 @@ import transaction
 from BTrees.OOBTree import BTree
 from .model import *
 
-storage = ZODB.FileStorage.FileStorage('app/db/mydata.fs')
+storage = ZODB.FileStorage.FileStorage('db/mydata.fs')
 db = ZODB.DB(storage)
 connection = db.open()
 root = connection.root()
