@@ -7,7 +7,8 @@ from .realhomepage_ui import *
 from app.template.order.Orderrun import *
 from app.db.database import *
 from app.backend.customerUser.editprofile import *
-from app.backend.adminUser.openshop import *
+from app.backend.adminUser.adminmain import *
+from app.backend.adminUser.products_admin import *
 # from .Homepagdsadse import *
 
 # import app.assets.realsourceimg.real
@@ -301,6 +302,19 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.addproductpage_admin)
 
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
+
+        self.ui.addproductbutton.clicked.connect(self.add_product)
+        self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
+
+    def add_product(self):
+        productname = self.ui.addproductnametextbox.text()
+        description = self.ui.addproductdescriptiontextbox.toPlainText()
+        price = self.ui.addproductpricespinbox.value()
+        sizes = ["S", "M", "L", "XL"]
+        options = ["Red", "Blue", "Green"]
+        stock = self.ui.addproductstockspinbox.value()
+        categories = ["men", "top"]
+        addproduct(productname, description, price, sizes, options, stock, categories)
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)

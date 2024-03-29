@@ -3,31 +3,37 @@ import datetime
 import BTrees.OOBTree
 
 class Product(persistent.Persistent):
-    def __init__(self, name, price, description, category, stock) -> None:
+    def __init__(self, id, name, description, price, sizes, options, stock, categories) -> None:
+        self.id = id
         self.name = name
-        self.price = price
         self.description = description
-        self.category = category
+        self.price = price
+        self.sizes = sizes
+        self.options = options
         self.stock = stock
+        self.categories = categories
         self.sold = 0
-        self.reviews = BTrees.OOBTree.BTree()
+        self.reviews = []
+        self.publishedDate = datetime.datetime.now()
 
     def add_review(self, review):
         self.reviews[datetime.datetime.now()] = review
 
     def toJSON(self):
         return {
+            "id": self.id,
             "name": self.name,
             "price": self.price,
             "description": self.description,
             "category": self.category,
             "stock": self.stock,
             "sold": self.sold,
-            "reviews": self.reviews
+            "reviews": self.reviews,
+            "publishedDate": self.publishedDate
         }
     
     def __str__(self) -> str:
-        return f"name: {self.name}, price: {self.price}, description: {self.description}, category: {self.category}, stock: {self.stock}, sold: {self.sold}, reviews: {self.reviews}"
+        return f"id: {self.id}, name: {self.name}, price: {self.price}, description: {self.description}, categories: {self.categories}, stock: {self.stock}, sold: {self.sold}, reviews: {self.reviews}\n"
     
 class Cart(persistent.Persistent):
     def __init__(self, products) -> None:
@@ -90,7 +96,15 @@ class Admin(GeneralUser):
         self.description = description
         self.address = address
         self.phone = phone
+        self.products = {}
         self.admin = True
+
+    def add_product(self, product):
+        self.products[product.id] = product
+
+    def remove_product(self, product):
+        if product in self.products:
+            del self.products[product.id]
 
     def toJSON(self):
         return {
@@ -100,6 +114,7 @@ class Admin(GeneralUser):
             "lastname": self.lastname,
             "description": self.description,
             "address": self.address,
+            "email": self.email,
             "phone": self.phone,
             "admin": self.admin
         }
@@ -110,9 +125,10 @@ class Admin(GeneralUser):
 class Customer(GeneralUser):
     def __init__(self, username, email, password) -> None:
         super().__init__(username, email, password)
-        self.cart = BTrees.OOBTree.BTree()
-        self.orders = BTrees.OOBTree.BTree()
-        self.reviews = BTrees.OOBTree.BTree()
+        self.favorites = []
+        self.cart = []
+        self.orders = []
+        self.reviews = None
         self.admin = False
 
     def add_to_cart(self, product, quantity):
@@ -128,12 +144,12 @@ class Customer(GeneralUser):
             else:
                 del self.cart[product]
 
-    def add_to_wishlist(self, product):
-        self.wishlist[product] = datetime.datetime.now()
+    def add_to_fav(self, product):
+        self.favorites.append(product)
 
-    def remove_from_wishlist(self, product):
-        if product in self.wishlist:
-            del self.wishlist[product]
+    def remove_from_fav(self, product):
+        if product in self.favorites:
+            self.favorites.remove(product)
 
     def add_review(self, product, review):
         self.reviews[product] = review

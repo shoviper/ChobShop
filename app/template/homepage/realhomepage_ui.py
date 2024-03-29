@@ -15,10 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QDateEdit, QFrame, QGridLayout,
-    QHBoxLayout, QLabel, QLineEdit, QPushButton,
-    QScrollArea, QSizePolicy, QStackedWidget, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
+    QGridLayout, QHBoxLayout, QLabel, QLineEdit,
+    QPlainTextEdit, QPushButton, QScrollArea, QSizePolicy,
+    QSpinBox, QStackedWidget, QVBoxLayout, QWidget)
+
 import app.assets.realsourceimg.real
 
 class Ui_Main(object):
@@ -2888,7 +2889,7 @@ class Ui_Main(object):
         self.scrollArea_addproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_19 = QWidget()
         self.scrollAreaWidgetContents_19.setObjectName(u"scrollAreaWidgetContents_19")
-        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 998, 1218))
+        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, -625, 998, 1218))
         self.verticalLayout_29 = QVBoxLayout(self.scrollAreaWidgetContents_19)
         self.verticalLayout_29.setObjectName(u"verticalLayout_29")
         self.frame_addproduct_3 = QFrame(self.scrollAreaWidgetContents_19)
@@ -2897,10 +2898,10 @@ class Ui_Main(object):
         self.frame_addproduct_3.setStyleSheet(u"background: #FAF9F6")
         self.frame_addproduct_3.setFrameShape(QFrame.StyledPanel)
         self.frame_addproduct_3.setFrameShadow(QFrame.Raised)
-        self.addproductlabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductlabel_3.setObjectName(u"addproductlabel_3")
-        self.addproductlabel_3.setGeometry(QRect(40, 0, 201, 21))
-        self.addproductlabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductlabel = QLabel(self.frame_addproduct_3)
+        self.addproductlabel.setObjectName(u"addproductlabel")
+        self.addproductlabel.setGeometry(QRect(40, 0, 201, 21))
+        self.addproductlabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
@@ -2937,7 +2938,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_20 = QWidget()
         self.scrollAreaWidgetContents_20.setObjectName(u"scrollAreaWidgetContents_20")
-        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1218, 218))
+        self.scrollAreaWidgetContents_20.setGeometry(QRect(-326, 0, 1218, 218))
         self.horizontalLayout_6 = QHBoxLayout(self.scrollAreaWidgetContents_20)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.frame_addimageproduct_3 = QFrame(self.scrollAreaWidgetContents_20)
@@ -2955,48 +2956,90 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addimagebutton_13 = QPushButton(self.frame_addimageproduct_3)
-        self.addimagebutton_13.setObjectName(u"addimagebutton_13")
-        self.addimagebutton_13.setGeometry(QRect(0, 45, 151, 151))
-        self.addimagebutton_13.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
-        self.addimagebutton_14 = QPushButton(self.frame_addimageproduct_3)
-        self.addimagebutton_14.setObjectName(u"addimagebutton_14")
-        self.addimagebutton_14.setGeometry(QRect(201, 45, 151, 151))
-        self.addimagebutton_14.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
+        self.addimagebutton = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton.setObjectName(u"addimagebutton")
+        self.addimagebutton.setGeometry(QRect(0, 45, 151, 151))
+        self.addimagebutton.setStyleSheet(u"QPushButton {\n"
+"	border: 3px dashed #D9D9D9;\n"
+"	font-size: 46px;\n"
+"	background: #FAF9F6;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
+        self.addimagebutton_2 = QPushButton(self.frame_addimageproduct_3)
+        self.addimagebutton_2.setObjectName(u"addimagebutton_2")
+        self.addimagebutton_2.setGeometry(QRect(201, 45, 151, 151))
+        self.addimagebutton_2.setStyleSheet(u"QPushButton {\n"
+"	border: 3px dashed #D9D9D9;\n"
+"	font-size: 46px;\n"
+"	background: #FAF9F6;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
         self.addimagebutton_15 = QPushButton(self.frame_addimageproduct_3)
         self.addimagebutton_15.setObjectName(u"addimagebutton_15")
         self.addimagebutton_15.setGeometry(QRect(402, 45, 151, 151))
-        self.addimagebutton_15.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
+        self.addimagebutton_15.setStyleSheet(u"QPushButton {\n"
+"	border: 3px dashed #D9D9D9;\n"
+"	font-size: 46px;\n"
+"	background: #FAF9F6;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
         self.addimagebutton_16 = QPushButton(self.frame_addimageproduct_3)
         self.addimagebutton_16.setObjectName(u"addimagebutton_16")
         self.addimagebutton_16.setGeometry(QRect(603, 45, 151, 151))
-        self.addimagebutton_16.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
+        self.addimagebutton_16.setStyleSheet(u"QPushButton {\n"
+"	border: 3px dashed #D9D9D9;\n"
+"	font-size: 46px;\n"
+"	background: #FAF9F6;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
         self.addimagebutton_17 = QPushButton(self.frame_addimageproduct_3)
         self.addimagebutton_17.setObjectName(u"addimagebutton_17")
         self.addimagebutton_17.setGeometry(QRect(804, 45, 151, 151))
-        self.addimagebutton_17.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
+        self.addimagebutton_17.setStyleSheet(u"QPushButton {\n"
+"	border: 3px dashed #D9D9D9;\n"
+"	font-size: 46px;\n"
+"	background: #FAF9F6;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
         self.addimagebutton_18 = QPushButton(self.frame_addimageproduct_3)
         self.addimagebutton_18.setObjectName(u"addimagebutton_18")
         self.addimagebutton_18.setGeometry(QRect(1005, 45, 151, 151))
-        self.addimagebutton_18.setStyleSheet(u"border: 3px dashed #D9D9D9;\n"
-"font-size: 46px;\n"
-"background: #FAF9F6;\n"
-"color: #D9D9D9;")
+        self.addimagebutton_18.setStyleSheet(u"QPushButton {\n"
+"	border: 3px dashed #D9D9D9;\n"
+"	font-size: 46px;\n"
+"	background: #FAF9F6;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
 
         self.horizontalLayout_6.addWidget(self.frame_addimageproduct_3)
 
@@ -3004,126 +3047,218 @@ class Ui_Main(object):
 
         self.horizontalLayout_5.addWidget(self.scrollArea_addimageproduct_3)
 
-        self.addproductnamelabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductnamelabel_3.setObjectName(u"addproductnamelabel_3")
-        self.addproductnamelabel_3.setGeometry(QRect(42, 347, 220, 21))
-        self.addproductnamelabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductnamelabel = QLabel(self.frame_addproduct_3)
+        self.addproductnamelabel.setObjectName(u"addproductnamelabel")
+        self.addproductnamelabel.setGeometry(QRect(42, 347, 220, 21))
+        self.addproductnamelabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductdescriptionlabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductdescriptionlabel_3.setObjectName(u"addproductdescriptionlabel_3")
-        self.addproductdescriptionlabel_3.setGeometry(QRect(42, 443, 220, 31))
-        self.addproductdescriptionlabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductdescriptionlabel = QLabel(self.frame_addproduct_3)
+        self.addproductdescriptionlabel.setObjectName(u"addproductdescriptionlabel")
+        self.addproductdescriptionlabel.setGeometry(QRect(42, 443, 220, 31))
+        self.addproductdescriptionlabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductpricelabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductpricelabel_3.setObjectName(u"addproductpricelabel_3")
-        self.addproductpricelabel_3.setGeometry(QRect(42, 623, 220, 21))
-        self.addproductpricelabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductpricelabel = QLabel(self.frame_addproduct_3)
+        self.addproductpricelabel.setObjectName(u"addproductpricelabel")
+        self.addproductpricelabel.setGeometry(QRect(42, 623, 220, 21))
+        self.addproductpricelabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductsizelabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductsizelabel_3.setObjectName(u"addproductsizelabel_3")
-        self.addproductsizelabel_3.setGeometry(QRect(42, 719, 220, 21))
-        self.addproductsizelabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductsizelabel = QLabel(self.frame_addproduct_3)
+        self.addproductsizelabel.setObjectName(u"addproductsizelabel")
+        self.addproductsizelabel.setGeometry(QRect(42, 719, 220, 21))
+        self.addproductsizelabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductoptionlabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductoptionlabel_3.setObjectName(u"addproductoptionlabel_3")
-        self.addproductoptionlabel_3.setGeometry(QRect(42, 815, 220, 31))
-        self.addproductoptionlabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductoptionlabel = QLabel(self.frame_addproduct_3)
+        self.addproductoptionlabel.setObjectName(u"addproductoptionlabel")
+        self.addproductoptionlabel.setGeometry(QRect(42, 815, 220, 31))
+        self.addproductoptionlabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductstocklabel_3 = QLabel(self.frame_addproduct_3)
-        self.addproductstocklabel_3.setObjectName(u"addproductstocklabel_3")
-        self.addproductstocklabel_3.setGeometry(QRect(42, 921, 220, 21))
-        self.addproductstocklabel_3.setStyleSheet(u"color: #000;\n"
+        self.addproductstocklabel = QLabel(self.frame_addproduct_3)
+        self.addproductstocklabel.setObjectName(u"addproductstocklabel")
+        self.addproductstocklabel.setGeometry(QRect(42, 921, 220, 21))
+        self.addproductstocklabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductnametextbox_3 = QLineEdit(self.frame_addproduct_3)
-        self.addproductnametextbox_3.setObjectName(u"addproductnametextbox_3")
-        self.addproductnametextbox_3.setGeometry(QRect(42, 382, 910, 33))
-        self.addproductnametextbox_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
+        self.addproductnametextbox = QLineEdit(self.frame_addproduct_3)
+        self.addproductnametextbox.setObjectName(u"addproductnametextbox")
+        self.addproductnametextbox.setGeometry(QRect(42, 382, 910, 38))
+        self.addproductnametextbox.setStyleSheet(u"border-radius: 5px;\n"
+"background: #EDEDED;\n"
+"padding: 5px;\n"
+"font-size: 16px;\n"
 "")
-        self.addproductdescriptiontextbox_3 = QLineEdit(self.frame_addproduct_3)
-        self.addproductdescriptiontextbox_3.setObjectName(u"addproductdescriptiontextbox_3")
-        self.addproductdescriptiontextbox_3.setGeometry(QRect(42, 488, 910, 107))
-        self.addproductdescriptiontextbox_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
+        self.addsizeproductbutton = QPushButton(self.frame_addproduct_3)
+        self.addsizeproductbutton.setObjectName(u"addsizeproductbutton")
+        self.addsizeproductbutton.setGeometry(QRect(42, 754, 108, 38))
+        self.addsizeproductbutton.setStyleSheet(u"QPushButton {\n"
+"	border-style: dashed;\n"
+"	border-width: 2px;\n"
+"	border-color: #D9D9D9;\n"
+"	background: none;\n"
+"	font-size: 16px;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
+        self.addoptionsproductbutton = QPushButton(self.frame_addproduct_3)
+        self.addoptionsproductbutton.setObjectName(u"addoptionsproductbutton")
+        self.addoptionsproductbutton.setGeometry(QRect(42, 860, 108, 38))
+        self.addoptionsproductbutton.setStyleSheet(u"QPushButton {\n"
+"	border-style: dashed;\n"
+"	border-width: 2px;\n"
+"	border-color: #D9D9D9;\n"
+"	background: none;\n"
+"	font-size: 16px;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
+        self.canceladdproductbutton = QPushButton(self.frame_addproduct_3)
+        self.canceladdproductbutton.setObjectName(u"canceladdproductbutton")
+        self.canceladdproductbutton.setGeometry(QRect(498, 1140, 157, 49))
+        self.canceladdproductbutton.setStyleSheet(u"QPushButton {	\n"
+"	border-radius: 5px;\n"
+"	background: #AEC289;\n"
+"	color: #FFF;\n"
+"	text-align: center;\n"
+"	font-family: Suwannaphum;\n"
+"	font-size: 20px;\n"
+"	font-style: normal;\n"
+"	font-weight: 400;\n"
+"	line-height: normal;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background: #F4DBDB;\n"
+"	color: #545454;\n"
+"}")
+        self.addproductbutton = QPushButton(self.frame_addproduct_3)
+        self.addproductbutton.setObjectName(u"addproductbutton")
+        self.addproductbutton.setGeometry(QRect(706, 1140, 204, 49))
+        self.addproductbutton.setStyleSheet(u"QPushButton {\n"
+"	border-radius: 5px;\n"
+"	background: #CD4662;\n"
+"	color: #FFF;\n"
+"	text-align: center;\n"
+"	font-family: Suwannaphum;\n"
+"	font-size: 20px;\n"
+"	font-style: normal;\n"
+"	font-weight: 400;\n"
+"	line-height: normal;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background: #F4DBDB;\n"
+"	color: #545454;\n"
+"}")
+        self.addproductdescriptiontextbox = QPlainTextEdit(self.frame_addproduct_3)
+        self.addproductdescriptiontextbox.setObjectName(u"addproductdescriptiontextbox")
+        self.addproductdescriptiontextbox.setGeometry(QRect(40, 490, 911, 114))
+        self.addproductdescriptiontextbox.setStyleSheet(u"border-radius: 5px;\n"
+"background: #EDEDED;\n"
+"padding: 5px;\n"
+"font-size: 16px;\n"
 "")
-        self.addproductpricetextbox_3 = QLineEdit(self.frame_addproduct_3)
-        self.addproductpricetextbox_3.setObjectName(u"addproductpricetextbox_3")
-        self.addproductpricetextbox_3.setGeometry(QRect(42, 658, 910, 33))
-        self.addproductpricetextbox_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
-"")
-        self.addproductstocktextbox_3 = QLineEdit(self.frame_addproduct_3)
-        self.addproductstocktextbox_3.setObjectName(u"addproductstocktextbox_3")
-        self.addproductstocktextbox_3.setGeometry(QRect(42, 956, 910, 33))
-        self.addproductstocktextbox_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;\n"
-"")
-        self.addsizeproductbutton_3 = QPushButton(self.frame_addproduct_3)
-        self.addsizeproductbutton_3.setObjectName(u"addsizeproductbutton_3")
-        self.addsizeproductbutton_3.setGeometry(QRect(42, 754, 108, 33))
-        self.addsizeproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;")
-        self.addoptionsproductbutton_3 = QPushButton(self.frame_addproduct_3)
-        self.addoptionsproductbutton_3.setObjectName(u"addoptionsproductbutton_3")
-        self.addoptionsproductbutton_3.setGeometry(QRect(42, 860, 108, 33))
-        self.addoptionsproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #F7F2EB;")
-        self.canceladdproductbutton_3 = QPushButton(self.frame_addproduct_3)
-        self.canceladdproductbutton_3.setObjectName(u"canceladdproductbutton_3")
-        self.canceladdproductbutton_3.setGeometry(QRect(498, 1017, 157, 49))
-        self.canceladdproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #AEC289;\n"
-"color: #FFF;\n"
+        self.addproductpricespinbox = QSpinBox(self.frame_addproduct_3)
+        self.addproductpricespinbox.setObjectName(u"addproductpricespinbox")
+        self.addproductpricespinbox.setGeometry(QRect(40, 660, 281, 38))
+        self.addproductpricespinbox.setStyleSheet(u"QSpinBox {\n"
+"	border-radius: 5px;\n"
+"	background: #EDEDED;\n"
+"	padding: 5px;\n"
+"	font-size: 16px;\n"
+"}\n"
+"QSpinBox::up-button {\n"
+"	color: #F4DBDB;\n"
+"}")
+        self.addproductpricespinbox.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+        self.addproductpricespinbox.setMinimum(1)
+        self.addproductpricespinbox.setMaximum(10000)
+        self.addproductstockspinbox = QSpinBox(self.frame_addproduct_3)
+        self.addproductstockspinbox.setObjectName(u"addproductstockspinbox")
+        self.addproductstockspinbox.setGeometry(QRect(40, 960, 281, 38))
+        self.addproductstockspinbox.setStyleSheet(u"QSpinBox {\n"
+"	border-radius: 5px;\n"
+"	background: #EDEDED;\n"
+"	padding: 5px;\n"
+"	font-size: 16px;\n"
+"}\n"
+"QSpinBox::up-button {\n"
+"	color: #F4DBDB;\n"
+"}")
+        self.addproductstockspinbox.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+        self.addproductstockspinbox.setMinimum(1)
+        self.addproductstockspinbox.setMaximum(1000000)
+        self.addproductscategorieslabel = QLabel(self.frame_addproduct_3)
+        self.addproductscategorieslabel.setObjectName(u"addproductscategorieslabel")
+        self.addproductscategorieslabel.setGeometry(QRect(42, 1020, 220, 31))
+        self.addproductscategorieslabel.setStyleSheet(u"color: #000;\n"
 "\n"
-"text-align: center;\n"
 "font-family: Suwannaphum;\n"
 "font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.addproductbutton_3 = QPushButton(self.frame_addproduct_3)
-        self.addproductbutton_3.setObjectName(u"addproductbutton_3")
-        self.addproductbutton_3.setGeometry(QRect(706, 1017, 204, 49))
-        self.addproductbutton_3.setStyleSheet(u"border-radius: 5px;\n"
-"background: #CD4662;\n"
-"color: #FFF;\n"
-"\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
+        self.addcategoriesproductcombobox = QComboBox(self.frame_addproduct_3)
+        self.addcategoriesproductcombobox.setObjectName(u"addcategoriesproductcombobox")
+        self.addcategoriesproductcombobox.setGeometry(QRect(40, 1067, 108, 38))
+        self.addcategoriesproductcombobox.setStyleSheet(u"QComboBox {\n"
+"	border-radius: 5px;\n"
+"	background: #EDEDED;\n"
+"	padding: 5px;\n"
+"	font-size: 16px;\n"
+"}\n"
+"QComboBox::down-button {\n"
+"	color: #F4DBDB;\n"
+"}")
+        self.addcategoriesproductbutton = QPushButton(self.frame_addproduct_3)
+        self.addcategoriesproductbutton.setObjectName(u"addcategoriesproductbutton")
+        self.addcategoriesproductbutton.setGeometry(QRect(180, 1067, 108, 38))
+        self.addcategoriesproductbutton.setStyleSheet(u"QPushButton {\n"
+"	border-style: dashed;\n"
+"	border-width: 2px;\n"
+"	border-color: #D9D9D9;\n"
+"	background: none;\n"
+"	font-size: 16px;\n"
+"	color: #D9D9D9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-color: #CD4662;\n"
+"	color: #CD4662;\n"
+"	background-color: #EDEDED;\n"
+"}")
 
         self.verticalLayout_29.addWidget(self.frame_addproduct_3)
 
@@ -3398,7 +3533,7 @@ class Ui_Main(object):
         self.stackedWidget_myorders.setCurrentIndex(2)
         self.stackedWidget_adminmain.setCurrentIndex(1)
         self.stackedWidget_adminproducts.setCurrentIndex(1)
-        self.stackedWidget_allandtype_admin.setCurrentIndex(0)
+        self.stackedWidget_allandtype_admin.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Main)
@@ -3630,24 +3765,26 @@ class Ui_Main(object):
         self.footwearlabel_3.setText(QCoreApplication.translate("Main", u"Foot Wears", None))
         self.footwearnum_3.setText(QCoreApplication.translate("Main", u"40", None))
         self.footwearbutton_3.setText("")
-        self.addproductlabel_3.setText(QCoreApplication.translate("Main", u"Add Product", None))
+        self.addproductlabel.setText(QCoreApplication.translate("Main", u"Add Product", None))
         self.addproductimagelabel_3.setText(QCoreApplication.translate("Main", u"Product's Images", None))
-        self.addimagebutton_13.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addimagebutton_14.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addimagebutton_2.setText(QCoreApplication.translate("Main", u"+", None))
         self.addimagebutton_15.setText(QCoreApplication.translate("Main", u"+", None))
         self.addimagebutton_16.setText(QCoreApplication.translate("Main", u"+", None))
         self.addimagebutton_17.setText(QCoreApplication.translate("Main", u"+", None))
         self.addimagebutton_18.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addproductnamelabel_3.setText(QCoreApplication.translate("Main", u"Product's Name", None))
-        self.addproductdescriptionlabel_3.setText(QCoreApplication.translate("Main", u"Description", None))
-        self.addproductpricelabel_3.setText(QCoreApplication.translate("Main", u"Price", None))
-        self.addproductsizelabel_3.setText(QCoreApplication.translate("Main", u"Size", None))
-        self.addproductoptionlabel_3.setText(QCoreApplication.translate("Main", u"Options", None))
-        self.addproductstocklabel_3.setText(QCoreApplication.translate("Main", u"Stock", None))
-        self.addsizeproductbutton_3.setText(QCoreApplication.translate("Main", u"+", None))
-        self.addoptionsproductbutton_3.setText(QCoreApplication.translate("Main", u"+", None))
-        self.canceladdproductbutton_3.setText(QCoreApplication.translate("Main", u"Cancel", None))
-        self.addproductbutton_3.setText(QCoreApplication.translate("Main", u"Add Product", None))
+        self.addproductnamelabel.setText(QCoreApplication.translate("Main", u"Product's Name", None))
+        self.addproductdescriptionlabel.setText(QCoreApplication.translate("Main", u"Description", None))
+        self.addproductpricelabel.setText(QCoreApplication.translate("Main", u"Price", None))
+        self.addproductsizelabel.setText(QCoreApplication.translate("Main", u"Sizes", None))
+        self.addproductoptionlabel.setText(QCoreApplication.translate("Main", u"Options", None))
+        self.addproductstocklabel.setText(QCoreApplication.translate("Main", u"Stock", None))
+        self.addsizeproductbutton.setText(QCoreApplication.translate("Main", u"+", None))
+        self.addoptionsproductbutton.setText(QCoreApplication.translate("Main", u"+", None))
+        self.canceladdproductbutton.setText(QCoreApplication.translate("Main", u"Cancel", None))
+        self.addproductbutton.setText(QCoreApplication.translate("Main", u"Add Product", None))
+        self.addproductscategorieslabel.setText(QCoreApplication.translate("Main", u"Categories", None))
+        self.addcategoriesproductbutton.setText(QCoreApplication.translate("Main", u"+", None))
         self.editlabel.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel.setText(QCoreApplication.translate("Main", u"Username", None))
         self.fisrtlabel.setText(QCoreApplication.translate("Main", u"First name", None))
