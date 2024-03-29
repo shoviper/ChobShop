@@ -119,9 +119,11 @@ class HomepageWindow(QMainWindow):
         #profile
         self.ui.editprofilebutton.clicked.connect(self.go_to_usereditprofile)
         self.ui.backbutton.clicked.connect(self.go_to_home)
-        self.ui.tobeshipbutton.clicked.connect(self.go_to_order)
-        self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive)
-        self.ui.completebutton.clicked.connect(self.go_to_order_complete)
+        self.ui.tobeshipbutton.clicked.connect(self.go_to_order_ship_fromprofile)
+        self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive_fromprofile)
+        self.ui.completebutton.clicked.connect(self.go_to_order_complete_fromprofile)
+        self.ui.viewallfavbutton.clicked.connect(self.go_to_favorite)
+
 
         #cart
         self.ui.cartbutton.clicked.connect(self.go_to_cart)
@@ -160,6 +162,30 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
+    
+    def go_to_order_ship_fromprofile(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
+        self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
+
+    def go_to_order_receive_fromprofile(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
+        self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
+
+    def go_to_order_complete_fromprofile(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
+        self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+        
 
     def go_to_favorite(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -282,13 +308,14 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
         self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
-
+        self.ui.viewallproductbutton_admin.clicked.connect(self.go_to_productspage_admin)
         self.ui.addproduct_admin.clicked.connect(self.go_to_addproduct_admin)
 
     def go_to_productspage_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
         self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.alltypesproductspage_admin)
         self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminallproductpage)
+
         
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
@@ -296,6 +323,15 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
+        self.ui.producttypesbutton_admin.setStyleSheet(inactive_orderbutton_style)
+        self.ui.allproductbutton_admin.setStyleSheet(active_orderbutton_style)
+
+        self.ui.producttypesbutton_admin.clicked.connect(self.go_to_producttype_admin)
+    def go_to_producttype_admin(self):
+            self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminproducttypespage)
+            self.ui.producttypesbutton_admin.setStyleSheet(active_orderbutton_style)
+            self.ui.allproductbutton_admin.setStyleSheet(inactive_orderbutton_style)
+            self.ui.allproductbutton_admin.clicked.connect(self.go_to_productspage_admin)
 
     def go_to_addproduct_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
