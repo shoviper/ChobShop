@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="settingsnouse">
     <layout class="QVBoxLayout" name="verticalLayout_5"/>
@@ -65,9 +65,9 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-34</y>
-             <width>1123</width>
-             <height>1518</height>
+             <y>0</y>
+             <width>1118</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -313,8 +313,8 @@ image: url(:/pic/realimages/backhomoe.png);</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1123</width>
-             <height>1518</height>
+             <width>1118</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1417,8 +1417,8 @@ image: url(:/pic/realimages/backhomoe.png);</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1123</width>
-             <height>1518</height>
+             <width>82</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1881,7 +1881,7 @@ border: none;</string>
       <string notr="true">background-color: #FAF9F6;</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="homepage">
       <widget class="QScrollArea" name="scrollArea_homepage">
@@ -2388,8 +2388,8 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>67</width>
-            <height>2018</height>
+            <width>85</width>
+            <height>2024</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -3867,8 +3867,8 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>67</width>
-            <height>1518</height>
+            <width>85</width>
+            <height>1524</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -5191,8 +5191,8 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1247</width>
-          <height>1018</height>
+          <width>85</width>
+          <height>1024</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -6500,7 +6500,7 @@ QScrollBar::handle:vertical:hover {
                <x>0</x>
                <y>0</y>
                <width>1006</width>
-               <height>1338</height>
+               <height>1344</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -7196,7 +7196,7 @@ border: none;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -7344,8 +7344,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>998</width>
-                     <height>1518</height>
+                     <width>992</width>
+                     <height>1524</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -7597,8 +7597,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>67</width>
-                     <height>1518</height>
+                     <width>85</width>
+                     <height>1524</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_27">
@@ -7952,9 +7952,9 @@ QScrollBar::handle:vertical:hover {
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>0</y>
-                   <width>67</width>
-                   <height>1218</height>
+                   <y>-637</y>
+                   <width>992</width>
+                   <height>1224</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_29">
@@ -8039,8 +8039,8 @@ QScrollBar::handle:horizontal:hover {
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>1218</width>
-                           <height>218</height>
+                           <width>1224</width>
+                           <height>212</height>
                           </rect>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -8628,6 +8628,46 @@ QComboBox::down-button {
 	color: #F4DBDB;
 }</string>
                      </property>
+                     <item>
+                      <property name="text">
+                       <string>Men</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Women</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Kids</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Top</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Bottom</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Accessory</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Headwear</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Footwear</string>
+                      </property>
+                     </item>
                     </widget>
                     <widget class="QPushButton" name="addcategoriesproductbutton">
                      <property name="geometry">

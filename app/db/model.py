@@ -2,6 +2,8 @@ import persistent
 import datetime
 import BTrees.OOBTree
 
+from .database import *
+
 class Product(persistent.Persistent):
     def __init__(self, id, name, description, price, sizes, options, stock, categories) -> None:
         self.id = id
@@ -34,7 +36,65 @@ class Product(persistent.Persistent):
     
     def __str__(self) -> str:
         return f"id: {self.id}, name: {self.name}, price: {self.price}, description: {self.description}, categories: {self.categories}, stock: {self.stock}, sold: {self.sold}, reviews: {self.reviews}\n"
-    
+
+class ProductDatabase:
+    def __init__(self):
+        self.products = {}
+        self.next_id = 1
+
+    def add_product(self, name, description, price, sizes, options, stock, categories):
+        """
+        Creates a new Product instance and adds it to the database.
+        
+        Returns:
+        - int: The unique ID of the added product.
+        """
+        product_id = self.next_id
+        product = Product(product_id, name, description, price, sizes, options, stock, categories)
+        self.products[product_id] = product
+        self.next_id += 1
+        return product_id
+
+    def get_product(self, product_id):
+        """
+        Retrieves a product by its ID.
+        
+        Returns:
+        - Product: The product instance, or None if not found.
+        """
+        return self.products.get(product_id, None)
+
+    def update_product(self, product_id, **kwargs):
+        """
+        Updates properties of a product.
+        
+        Returns:
+        - bool: True if the product was updated, False if not found.
+        """
+        product = self.products.get(product_id)
+        if product:
+            for key, value in kwargs.items():
+                if hasattr(product, key):
+                    setattr(product, key, value)
+            return True
+        return False
+
+    def remove_product(self, product_id):
+        """
+        Removes a product from the database.
+        
+        Returns:
+        - bool: True if the product was removed, False if not found.
+        """
+        if product_id in self.products:
+            del self.products[product_id]
+            return True
+        else:
+            return False
+        
+    def get_all_products(self):
+        return self.products
+
 class Cart(persistent.Persistent):
     def __init__(self, products) -> None:
         self.products = products

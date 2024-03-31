@@ -19,7 +19,6 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QLineEdit,
     QPlainTextEdit, QPushButton, QScrollArea, QSizePolicy,
     QSpinBox, QStackedWidget, QVBoxLayout, QWidget)
-
 import app.assets.realsourceimg.real
 
 class Ui_Main(object):
@@ -30,7 +29,631 @@ class Ui_Main(object):
         Main.setStyleSheet(u"background-color: #FAF9F6;")
         self.stackedWidget = QStackedWidget(Main)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setGeometry(QRect(-1, -1, 1280, 720))
+        self.stackedWidget.setGeometry(QRect(0, 0, 1280, 720))
+        self.settingsnouse = QWidget()
+        self.settingsnouse.setObjectName(u"settingsnouse")
+        self.verticalLayout_5 = QVBoxLayout(self.settingsnouse)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.stackedWidget.addWidget(self.settingsnouse)
+        self.settings = QWidget()
+        self.settings.setObjectName(u"settings")
+        self.stackedWidget_settings = QStackedWidget(self.settings)
+        self.stackedWidget_settings.setObjectName(u"stackedWidget_settings")
+        self.stackedWidget_settings.setGeometry(QRect(0, 0, 1280, 720))
+        self.settingsmainpage = QWidget()
+        self.settingsmainpage.setObjectName(u"settingsmainpage")
+        self.settingscontainer = QWidget(self.settingsmainpage)
+        self.settingscontainer.setObjectName(u"settingscontainer")
+        self.settingscontainer.setGeometry(QRect(60, 60, 1160, 630))
+        self.settingscontainer.setStyleSheet(u"background: yellow;\n"
+"")
+        self.verticalLayout_6 = QVBoxLayout(self.settingscontainer)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.scrollArea_settings = QScrollArea(self.settingscontainer)
+        self.scrollArea_settings.setObjectName(u"scrollArea_settings")
+        self.scrollArea_settings.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_5 = QWidget()
+        self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1118, 1524))
+        self.verticalLayout_7 = QVBoxLayout(self.scrollAreaWidgetContents_5)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.frame_settings = QFrame(self.scrollAreaWidgetContents_5)
+        self.frame_settings.setObjectName(u"frame_settings")
+        self.frame_settings.setMinimumSize(QSize(0, 1500))
+        self.frame_settings.setFrameShape(QFrame.StyledPanel)
+        self.frame_settings.setFrameShadow(QFrame.Raised)
+        self.accsettingslabel = QLabel(self.frame_settings)
+        self.accsettingslabel.setObjectName(u"accsettingslabel")
+        self.accsettingslabel.setGeometry(QRect(450, 10, 231, 61))
+        self.accsettingslabel.setStyleSheet(u"font-size: 30px;")
+        self.myacclabel = QLabel(self.frame_settings)
+        self.myacclabel.setObjectName(u"myacclabel")
+        self.myacclabel.setGeometry(QRect(30, 50, 131, 61))
+        self.myacclabel.setStyleSheet(u"font-size: 24px;")
+        self.accountbuutton = QPushButton(self.frame_settings)
+        self.accountbuutton.setObjectName(u"accountbuutton")
+        self.accountbuutton.setGeometry(QRect(30, 200, 1051, 61))
+        self.accountbuutton.setStyleSheet(u"background: red;")
+        self.accountbutton = QPushButton(self.frame_settings)
+        self.accountbutton.setObjectName(u"accountbutton")
+        self.accountbutton.setGeometry(QRect(30, 120, 1051, 61))
+        self.accountbutton.setStyleSheet(u"background: red;")
+        self.settingslabel = QLabel(self.frame_settings)
+        self.settingslabel.setObjectName(u"settingslabel")
+        self.settingslabel.setGeometry(QRect(30, 280, 131, 61))
+        self.settingslabel.setStyleSheet(u"font-size: 24px;")
+        self.changepassbutton = QPushButton(self.frame_settings)
+        self.changepassbutton.setObjectName(u"changepassbutton")
+        self.changepassbutton.setGeometry(QRect(30, 350, 1051, 61))
+        self.changepassbutton.setStyleSheet(u"background: red;")
+        self.editprobutton = QPushButton(self.frame_settings)
+        self.editprobutton.setObjectName(u"editprobutton")
+        self.editprobutton.setGeometry(QRect(30, 440, 1051, 61))
+        self.editprobutton.setStyleSheet(u"background: red;")
+        self.helplabel = QLabel(self.frame_settings)
+        self.helplabel.setObjectName(u"helplabel")
+        self.helplabel.setGeometry(QRect(30, 530, 131, 61))
+        self.helplabel.setStyleSheet(u"font-size: 24px;")
+        self.rulebutton = QPushButton(self.frame_settings)
+        self.rulebutton.setObjectName(u"rulebutton")
+        self.rulebutton.setGeometry(QRect(30, 610, 1051, 61))
+        self.rulebutton.setStyleSheet(u"background: red;")
+        self.logoutsettingsbutton = QPushButton(self.frame_settings)
+        self.logoutsettingsbutton.setObjectName(u"logoutsettingsbutton")
+        self.logoutsettingsbutton.setGeometry(QRect(30, 760, 1051, 61))
+        self.logoutsettingsbutton.setStyleSheet(u"background: blue;")
+
+        self.verticalLayout_7.addWidget(self.frame_settings)
+
+        self.scrollArea_settings.setWidget(self.scrollAreaWidgetContents_5)
+
+        self.verticalLayout_6.addWidget(self.scrollArea_settings)
+
+        self.backbutton_settings = QPushButton(self.settingsmainpage)
+        self.backbutton_settings.setObjectName(u"backbutton_settings")
+        self.backbutton_settings.setGeometry(QRect(20, 30, 20, 31))
+        self.backbutton_settings.setStyleSheet(u"border: none;\n"
+"image: url(:/pic/realimages/backhomoe.png);")
+        self.stackedWidget_settings.addWidget(self.settingsmainpage)
+        self.changepasswordpage = QWidget()
+        self.changepasswordpage.setObjectName(u"changepasswordpage")
+        self.backtomainsettingbutton_2 = QPushButton(self.changepasswordpage)
+        self.backtomainsettingbutton_2.setObjectName(u"backtomainsettingbutton_2")
+        self.backtomainsettingbutton_2.setGeometry(QRect(20, 30, 20, 31))
+        self.backtomainsettingbutton_2.setStyleSheet(u"border: none;\n"
+"image: url(:/pic/realimages/backhomoe.png);")
+        self.changepasswordcontainer = QWidget(self.changepasswordpage)
+        self.changepasswordcontainer.setObjectName(u"changepasswordcontainer")
+        self.changepasswordcontainer.setGeometry(QRect(60, 60, 1160, 630))
+        self.changepasswordcontainer.setStyleSheet(u"background: yellow;\n"
+"")
+        self.verticalLayout_10 = QVBoxLayout(self.changepasswordcontainer)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.scrollArea_changepassword = QScrollArea(self.changepasswordcontainer)
+        self.scrollArea_changepassword.setObjectName(u"scrollArea_changepassword")
+        self.scrollArea_changepassword.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_7 = QWidget()
+        self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1118, 1524))
+        self.verticalLayout_13 = QVBoxLayout(self.scrollAreaWidgetContents_7)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.frame_changepassword = QFrame(self.scrollAreaWidgetContents_7)
+        self.frame_changepassword.setObjectName(u"frame_changepassword")
+        self.frame_changepassword.setMinimumSize(QSize(0, 1500))
+        self.frame_changepassword.setFrameShape(QFrame.StyledPanel)
+        self.frame_changepassword.setFrameShadow(QFrame.Raised)
+        self.changepasswordlabel = QLabel(self.frame_changepassword)
+        self.changepasswordlabel.setObjectName(u"changepasswordlabel")
+        self.changepasswordlabel.setGeometry(QRect(450, 10, 241, 61))
+        self.changepasswordlabel.setStyleSheet(u"font-size: 30px;")
+        self.currentpasslabel = QLabel(self.frame_changepassword)
+        self.currentpasslabel.setObjectName(u"currentpasslabel")
+        self.currentpasslabel.setGeometry(QRect(40, 100, 161, 51))
+        self.currentpasslabel.setStyleSheet(u"font-size: 20px;")
+        self.savechangebutton_4 = QPushButton(self.frame_changepassword)
+        self.savechangebutton_4.setObjectName(u"savechangebutton_4")
+        self.savechangebutton_4.setGeometry(QRect(860, 510, 201, 41))
+        self.savechangebutton_4.setStyleSheet(u"color: #FFF;\n"
+"background: #AEC289;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border-radius: 10px;")
+        self.newpasslabel = QLabel(self.frame_changepassword)
+        self.newpasslabel.setObjectName(u"newpasslabel")
+        self.newpasslabel.setGeometry(QRect(40, 270, 161, 51))
+        self.newpasslabel.setStyleSheet(u"font-size: 20px;")
+        self.curpasstextbox = QLineEdit(self.frame_changepassword)
+        self.curpasstextbox.setObjectName(u"curpasstextbox")
+        self.curpasstextbox.setGeometry(QRect(40, 180, 481, 41))
+        self.newpasstextbox = QLineEdit(self.frame_changepassword)
+        self.newpasstextbox.setObjectName(u"newpasstextbox")
+        self.newpasstextbox.setGeometry(QRect(40, 350, 481, 41))
+
+        self.verticalLayout_13.addWidget(self.frame_changepassword)
+
+        self.scrollArea_changepassword.setWidget(self.scrollAreaWidgetContents_7)
+
+        self.verticalLayout_10.addWidget(self.scrollArea_changepassword)
+
+        self.stackedWidget_settings.addWidget(self.changepasswordpage)
+        self.accountpage = QWidget()
+        self.accountpage.setObjectName(u"accountpage")
+        self.backtomainsettingbutton_4 = QPushButton(self.accountpage)
+        self.backtomainsettingbutton_4.setObjectName(u"backtomainsettingbutton_4")
+        self.backtomainsettingbutton_4.setGeometry(QRect(20, 30, 20, 31))
+        self.backtomainsettingbutton_4.setStyleSheet(u"border: none;\n"
+"image: url(:/pic/realimages/backhomoe.png);")
+        self.editprofilecontainer_3 = QWidget(self.accountpage)
+        self.editprofilecontainer_3.setObjectName(u"editprofilecontainer_3")
+        self.editprofilecontainer_3.setGeometry(QRect(60, 60, 1160, 630))
+        self.editprofilecontainer_3.setStyleSheet(u"background: #FAF9F6;")
+        self.textboxeditcontainer_4 = QWidget(self.editprofilecontainer_3)
+        self.textboxeditcontainer_4.setObjectName(u"textboxeditcontainer_4")
+        self.textboxeditcontainer_4.setGeometry(QRect(29, 0, 1101, 600))
+        self.textboxeditcontainer_4.setStyleSheet(u"border-radius: 20px;\n"
+"background: #F4DBDB;")
+        self.profilelabel = QLabel(self.textboxeditcontainer_4)
+        self.profilelabel.setObjectName(u"profilelabel")
+        self.profilelabel.setGeometry(QRect(490, 10, 101, 51))
+        self.profilelabel.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.usernameprofile = QLabel(self.textboxeditcontainer_4)
+        self.usernameprofile.setObjectName(u"usernameprofile")
+        self.usernameprofile.setGeometry(QRect(43, 100, 121, 31))
+        self.usernameprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.fisrtnameprofile = QLabel(self.textboxeditcontainer_4)
+        self.fisrtnameprofile.setObjectName(u"fisrtnameprofile")
+        self.fisrtnameprofile.setGeometry(QRect(43, 200, 121, 31))
+        self.fisrtnameprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.lastnameprofile = QLabel(self.textboxeditcontainer_4)
+        self.lastnameprofile.setObjectName(u"lastnameprofile")
+        self.lastnameprofile.setGeometry(QRect(450, 200, 121, 31))
+        self.lastnameprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.genderprofile = QLabel(self.textboxeditcontainer_4)
+        self.genderprofile.setObjectName(u"genderprofile")
+        self.genderprofile.setGeometry(QRect(43, 300, 121, 31))
+        self.genderprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.birthprofile = QLabel(self.textboxeditcontainer_4)
+        self.birthprofile.setObjectName(u"birthprofile")
+        self.birthprofile.setGeometry(QRect(450, 300, 121, 31))
+        self.birthprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.phoneprofile = QLabel(self.textboxeditcontainer_4)
+        self.phoneprofile.setObjectName(u"phoneprofile")
+        self.phoneprofile.setGeometry(QRect(43, 400, 121, 31))
+        self.phoneprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.emailprofile = QLabel(self.textboxeditcontainer_4)
+        self.emailprofile.setObjectName(u"emailprofile")
+        self.emailprofile.setGeometry(QRect(450, 400, 121, 31))
+        self.emailprofile.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.pictureprofile = QLabel(self.textboxeditcontainer_4)
+        self.pictureprofile.setObjectName(u"pictureprofile")
+        self.pictureprofile.setGeometry(QRect(870, 70, 160, 160))
+        self.pictureprofile.setStyleSheet(u"border: none;\n"
+"border-radius: 80px;\n"
+"background: #cd4662;")
+        self.username = QLabel(self.textboxeditcontainer_4)
+        self.username.setObjectName(u"username")
+        self.username.setGeometry(QRect(50, 140, 165, 41))
+        self.username.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.username.setAlignment(Qt.AlignCenter)
+        self.firstname = QLabel(self.textboxeditcontainer_4)
+        self.firstname.setObjectName(u"firstname")
+        self.firstname.setGeometry(QRect(60, 240, 165, 41))
+        self.firstname.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.firstname.setAlignment(Qt.AlignCenter)
+        self.gender = QLabel(self.textboxeditcontainer_4)
+        self.gender.setObjectName(u"gender")
+        self.gender.setGeometry(QRect(40, 340, 165, 41))
+        self.gender.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.gender.setAlignment(Qt.AlignCenter)
+        self.phone = QLabel(self.textboxeditcontainer_4)
+        self.phone.setObjectName(u"phone")
+        self.phone.setGeometry(QRect(40, 450, 165, 41))
+        self.phone.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.phone.setAlignment(Qt.AlignCenter)
+        self.lastname = QLabel(self.textboxeditcontainer_4)
+        self.lastname.setObjectName(u"lastname")
+        self.lastname.setGeometry(QRect(460, 240, 165, 41))
+        self.lastname.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.lastname.setAlignment(Qt.AlignCenter)
+        self.birthday = QLabel(self.textboxeditcontainer_4)
+        self.birthday.setObjectName(u"birthday")
+        self.birthday.setGeometry(QRect(430, 350, 165, 41))
+        self.birthday.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.birthday.setAlignment(Qt.AlignCenter)
+        self.email = QLabel(self.textboxeditcontainer_4)
+        self.email.setObjectName(u"email")
+        self.email.setGeometry(QRect(430, 450, 165, 41))
+        self.email.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.email.setAlignment(Qt.AlignCenter)
+        self.stackedWidget_settings.addWidget(self.accountpage)
+        self.editprofilesettingspage = QWidget()
+        self.editprofilesettingspage.setObjectName(u"editprofilesettingspage")
+        self.editprofilecontainer_2 = QWidget(self.editprofilesettingspage)
+        self.editprofilecontainer_2.setObjectName(u"editprofilecontainer_2")
+        self.editprofilecontainer_2.setGeometry(QRect(60, 60, 1160, 630))
+        self.editprofilecontainer_2.setStyleSheet(u"background: #FAF9F6;")
+        self.textboxeditcontainer_3 = QWidget(self.editprofilecontainer_2)
+        self.textboxeditcontainer_3.setObjectName(u"textboxeditcontainer_3")
+        self.textboxeditcontainer_3.setGeometry(QRect(300, 0, 830, 600))
+        self.textboxeditcontainer_3.setStyleSheet(u"border-radius: 20px;\n"
+"background: #F4DBDB;")
+        self.editlabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.editlabel_2.setObjectName(u"editlabel_2")
+        self.editlabel_2.setGeometry(QRect(43, 34, 171, 51))
+        self.editlabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.userabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.userabel_2.setObjectName(u"userabel_2")
+        self.userabel_2.setGeometry(QRect(43, 100, 121, 31))
+        self.userabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.fisrtlabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.fisrtlabel_2.setObjectName(u"fisrtlabel_2")
+        self.fisrtlabel_2.setGeometry(QRect(43, 200, 121, 31))
+        self.fisrtlabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.lastlabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.lastlabel_2.setObjectName(u"lastlabel_2")
+        self.lastlabel_2.setGeometry(QRect(450, 200, 121, 31))
+        self.lastlabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.genlabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.genlabel_2.setObjectName(u"genlabel_2")
+        self.genlabel_2.setGeometry(QRect(43, 300, 121, 31))
+        self.genlabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.birthlabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.birthlabel_2.setObjectName(u"birthlabel_2")
+        self.birthlabel_2.setGeometry(QRect(450, 300, 121, 31))
+        self.birthlabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.pholabel_2 = QLabel(self.textboxeditcontainer_3)
+        self.pholabel_2.setObjectName(u"pholabel_2")
+        self.pholabel_2.setGeometry(QRect(43, 400, 121, 31))
+        self.pholabel_2.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.emaillabel_3 = QLabel(self.textboxeditcontainer_3)
+        self.emaillabel_3.setObjectName(u"emaillabel_3")
+        self.emaillabel_3.setGeometry(QRect(450, 400, 121, 31))
+        self.emaillabel_3.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.userbox_2 = QLineEdit(self.textboxeditcontainer_3)
+        self.userbox_2.setObjectName(u"userbox_2")
+        self.userbox_2.setGeometry(QRect(43, 150, 341, 31))
+        self.userbox_2.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.firstnamebox_2 = QLineEdit(self.textboxeditcontainer_3)
+        self.firstnamebox_2.setObjectName(u"firstnamebox_2")
+        self.firstnamebox_2.setGeometry(QRect(43, 250, 341, 31))
+        self.firstnamebox_2.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.genderbox_2 = QLineEdit(self.textboxeditcontainer_3)
+        self.genderbox_2.setObjectName(u"genderbox_2")
+        self.genderbox_2.setGeometry(QRect(43, 350, 341, 31))
+        self.genderbox_2.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.phonebox_2 = QLineEdit(self.textboxeditcontainer_3)
+        self.phonebox_2.setObjectName(u"phonebox_2")
+        self.phonebox_2.setGeometry(QRect(43, 450, 341, 31))
+        self.phonebox_2.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.lastnamebox_2 = QLineEdit(self.textboxeditcontainer_3)
+        self.lastnamebox_2.setObjectName(u"lastnamebox_2")
+        self.lastnamebox_2.setGeometry(QRect(450, 250, 341, 31))
+        self.lastnamebox_2.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.emailbox_2 = QLineEdit(self.textboxeditcontainer_3)
+        self.emailbox_2.setObjectName(u"emailbox_2")
+        self.emailbox_2.setGeometry(QRect(450, 450, 341, 31))
+        self.emailbox_2.setStyleSheet(u"border-radius: 5px;\n"
+"border: 2px solid #CD4662;\n"
+"background: #F4F2EF;\n"
+"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"padding: 0 5px;")
+        self.savechangebutton_3 = QPushButton(self.textboxeditcontainer_3)
+        self.savechangebutton_3.setObjectName(u"savechangebutton_3")
+        self.savechangebutton_3.setGeometry(QRect(590, 530, 201, 41))
+        self.savechangebutton_3.setStyleSheet(u"color: #FFF;\n"
+"background: #AEC289;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border-radius: 10px;")
+        self.deleteaccbutton_2 = QPushButton(self.textboxeditcontainer_3)
+        self.deleteaccbutton_2.setObjectName(u"deleteaccbutton_2")
+        self.deleteaccbutton_2.setGeometry(QRect(350, 530, 201, 41))
+        self.deleteaccbutton_2.setStyleSheet(u"color: #FFF;\n"
+"background: #cd4662;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border-radius: 10px;")
+        self.birthdaydateEdit_2 = QDateEdit(self.textboxeditcontainer_3)
+        self.birthdaydateEdit_2.setObjectName(u"birthdaydateEdit_2")
+        self.birthdaydateEdit_2.setGeometry(QRect(450, 350, 341, 31))
+        self.birthdaydateEdit_2.setStyleSheet(u"QDateTimeEdit {\n"
+"	background-color: #F4F2EF; \n"
+"	font-size: 16px;\n"
+"	border: 2px solid #CD4662; \n"
+"	padding: 5px;\n"
+"	border-radius: 5px; \n"
+"}\n"
+"QDateTimeEdit::down-button, QDateTimeEdit::up-button {\n"
+"	width: 20px; \n"
+"	height: 13px;\n"
+"	background-color: #F4F2EF; \n"
+"	border: 2px solid #CD4662; \n"
+"	font-size: 16px;\n"
+"}\n"
+"QDateTimeEdit::down-button {\n"
+"	subcontrol-origin: border;\n"
+"	subcontrol-position: bottom right;\n"
+"}\n"
+"\n"
+"QDateTimeEdit::up-button {\n"
+"	subcontrol-origin: border;\n"
+"	subcontrol-position: top right;\n"
+"}\n"
+"    \n"
+"QDateTimeEdit::down-button:pressed, QDateTimeEdit::up-button:pressed {\n"
+"	background-color: #CD4662;\n"
+"}\n"
+"    \n"
+"QDateTimeEdit::down-arrow, QDateTimeEdit::up-arrow {\n"
+"	image: url(arrow.png); \n"
+"}")
+        self.birthdaydateEdit_2.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+        self.editprofilepic_2 = QLabel(self.editprofilecontainer_2)
+        self.editprofilepic_2.setObjectName(u"editprofilepic_2")
+        self.editprofilepic_2.setGeometry(QRect(40, 0, 160, 160))
+        self.editprofilepic_2.setStyleSheet(u"border: none;\n"
+"border-radius: 80px;\n"
+"background: #cd4662;")
+        self.editnameprofile_2 = QLabel(self.editprofilecontainer_2)
+        self.editnameprofile_2.setObjectName(u"editnameprofile_2")
+        self.editnameprofile_2.setGeometry(QRect(40, 190, 165, 41))
+        self.editnameprofile_2.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 28px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.editnameprofile_2.setAlignment(Qt.AlignCenter)
+        self.backtomainsettingbutton_3 = QPushButton(self.editprofilesettingspage)
+        self.backtomainsettingbutton_3.setObjectName(u"backtomainsettingbutton_3")
+        self.backtomainsettingbutton_3.setGeometry(QRect(20, 30, 20, 31))
+        self.backtomainsettingbutton_3.setStyleSheet(u"border: none;\n"
+"image: url(:/pic/realimages/backhomoe.png);")
+        self.stackedWidget_settings.addWidget(self.editprofilesettingspage)
+        self.rulepage = QWidget()
+        self.rulepage.setObjectName(u"rulepage")
+        self.backtomainsettingbutton = QPushButton(self.rulepage)
+        self.backtomainsettingbutton.setObjectName(u"backtomainsettingbutton")
+        self.backtomainsettingbutton.setGeometry(QRect(20, 30, 20, 31))
+        self.backtomainsettingbutton.setStyleSheet(u"border: none;\n"
+"image: url(:/pic/realimages/backhomoe.png);")
+        self.ruleofusecontainer = QWidget(self.rulepage)
+        self.ruleofusecontainer.setObjectName(u"ruleofusecontainer")
+        self.ruleofusecontainer.setGeometry(QRect(60, 60, 1160, 630))
+        self.ruleofusecontainer.setStyleSheet(u"background: yellow;\n"
+"")
+        self.verticalLayout_8 = QVBoxLayout(self.ruleofusecontainer)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.scrollArea_ruleofuse = QScrollArea(self.ruleofusecontainer)
+        self.scrollArea_ruleofuse.setObjectName(u"scrollArea_ruleofuse")
+        self.scrollArea_ruleofuse.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_6 = QWidget()
+        self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 82, 1524))
+        self.verticalLayout_9 = QVBoxLayout(self.scrollAreaWidgetContents_6)
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.frame_ruleofuse = QFrame(self.scrollAreaWidgetContents_6)
+        self.frame_ruleofuse.setObjectName(u"frame_ruleofuse")
+        self.frame_ruleofuse.setMinimumSize(QSize(0, 1500))
+        self.frame_ruleofuse.setFrameShape(QFrame.StyledPanel)
+        self.frame_ruleofuse.setFrameShadow(QFrame.Raised)
+        self.ruleofuselabel = QLabel(self.frame_ruleofuse)
+        self.ruleofuselabel.setObjectName(u"ruleofuselabel")
+        self.ruleofuselabel.setGeometry(QRect(450, 10, 231, 61))
+        self.ruleofuselabel.setStyleSheet(u"font-size: 30px;")
+        self.ruleofusecontentlabel = QLabel(self.frame_ruleofuse)
+        self.ruleofusecontentlabel.setObjectName(u"ruleofusecontentlabel")
+        self.ruleofusecontentlabel.setGeometry(QRect(40, 100, 1040, 531))
+
+        self.verticalLayout_9.addWidget(self.frame_ruleofuse)
+
+        self.scrollArea_ruleofuse.setWidget(self.scrollAreaWidgetContents_6)
+
+        self.verticalLayout_8.addWidget(self.scrollArea_ruleofuse)
+
+        self.stackedWidget_settings.addWidget(self.rulepage)
+        self.stackedWidget.addWidget(self.settings)
         self.main = QWidget()
         self.main.setObjectName(u"main")
         self.gridLayoutWidget = QWidget(self.main)
@@ -46,10 +669,14 @@ class Ui_Main(object):
         self.Logolabel = QLabel(self.navbar)
         self.Logolabel.setObjectName(u"Logolabel")
         self.Logolabel.setGeometry(QRect(30, 40, 191, 51))
+        font = QFont()
+        font.setFamilies([u"Supermercado"])
+        font.setBold(True)
+        self.Logolabel.setFont(font)
         self.Logolabel.setStyleSheet(u"font-family: Supermercado;\n"
 "                font-size: 36px;\n"
 "                font-weight: 700;\n"
-"                line-height: normalpx;\n"
+"                line-height: normal;\n"
 "                text-align: center;\n"
 "                color: #000000;")
         self.homebutton = QPushButton(self.navbar)
@@ -436,7 +1063,7 @@ class Ui_Main(object):
         self.scrollArea_cart.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
-        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 67, 2018))
+        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 85, 2024))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents_4)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.frame_cartpage = QFrame(self.scrollAreaWidgetContents_4)
@@ -1131,7 +1758,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage.setWidgetResizable(True)
         self.scrollAreaWidgetContents_9 = QWidget()
         self.scrollAreaWidgetContents_9.setObjectName(u"scrollAreaWidgetContents_9")
-        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 67, 1518))
+        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 85, 1524))
         self.verticalLayout_12 = QVBoxLayout(self.scrollAreaWidgetContents_9)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.frame_productviewpage = QFrame(self.scrollAreaWidgetContents_9)
@@ -1673,7 +2300,7 @@ class Ui_Main(object):
         self.scrollArea_userprofile.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1247, 1018))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 85, 1024))
         self.scrollAreaWidgetContents_3.setStyleSheet(u"")
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -2250,7 +2877,7 @@ class Ui_Main(object):
         self.scrollArea_homepage_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_11 = QWidget()
         self.scrollAreaWidgetContents_11.setObjectName(u"scrollAreaWidgetContents_11")
-        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1338))
+        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1344))
         self.verticalLayout_15 = QVBoxLayout(self.scrollAreaWidgetContents_11)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.frame_homepage_admin = QFrame(self.scrollAreaWidgetContents_11)
@@ -2616,7 +3243,7 @@ class Ui_Main(object):
         self.scrollArea_allproduct_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_17 = QWidget()
         self.scrollAreaWidgetContents_17.setObjectName(u"scrollAreaWidgetContents_17")
-        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 998, 1518))
+        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 992, 1524))
         self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents_17)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
         self.frame_allproduct_3 = QFrame(self.scrollAreaWidgetContents_17)
@@ -2727,7 +3354,7 @@ class Ui_Main(object):
         self.scrollArea_producttype_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_18 = QWidget()
         self.scrollAreaWidgetContents_18.setObjectName(u"scrollAreaWidgetContents_18")
-        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 998, 1518))
+        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 85, 1524))
         self.verticalLayout_27 = QVBoxLayout(self.scrollAreaWidgetContents_18)
         self.verticalLayout_27.setObjectName(u"verticalLayout_27")
         self.frame_producttype_3 = QFrame(self.scrollAreaWidgetContents_18)
@@ -2889,7 +3516,7 @@ class Ui_Main(object):
         self.scrollArea_addproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_19 = QWidget()
         self.scrollAreaWidgetContents_19.setObjectName(u"scrollAreaWidgetContents_19")
-        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, -625, 998, 1218))
+        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, -637, 992, 1224))
         self.verticalLayout_29 = QVBoxLayout(self.scrollAreaWidgetContents_19)
         self.verticalLayout_29.setObjectName(u"verticalLayout_29")
         self.frame_addproduct_3 = QFrame(self.scrollAreaWidgetContents_19)
@@ -2938,7 +3565,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_20 = QWidget()
         self.scrollAreaWidgetContents_20.setObjectName(u"scrollAreaWidgetContents_20")
-        self.scrollAreaWidgetContents_20.setGeometry(QRect(-326, 0, 1218, 218))
+        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1224, 212))
         self.horizontalLayout_6 = QHBoxLayout(self.scrollAreaWidgetContents_20)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.frame_addimageproduct_3 = QFrame(self.scrollAreaWidgetContents_20)
@@ -3232,6 +3859,14 @@ class Ui_Main(object):
 "font-weight: 400;\n"
 "line-height: normal;")
         self.addcategoriesproductcombobox = QComboBox(self.frame_addproduct_3)
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
+        self.addcategoriesproductcombobox.addItem("")
         self.addcategoriesproductcombobox.setObjectName(u"addcategoriesproductcombobox")
         self.addcategoriesproductcombobox.setGeometry(QRect(40, 1067, 108, 38))
         self.addcategoriesproductcombobox.setStyleSheet(u"QComboBox {\n"
@@ -3528,12 +4163,12 @@ class Ui_Main(object):
 
         self.retranslateUi(Main)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         self.stackedWidget_main.setCurrentIndex(0)
-        self.stackedWidget_myorders.setCurrentIndex(2)
+        self.stackedWidget_myorders.setCurrentIndex(0)
         self.stackedWidget_adminmain.setCurrentIndex(1)
         self.stackedWidget_adminproducts.setCurrentIndex(1)
-        self.stackedWidget_allandtype_admin.setCurrentIndex(1)
+        self.stackedWidget_allandtype_admin.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Main)
@@ -3541,6 +4176,98 @@ class Ui_Main(object):
 
     def retranslateUi(self, Main):
         Main.setWindowTitle(QCoreApplication.translate("Main", u"Form", None))
+        self.accsettingslabel.setText(QCoreApplication.translate("Main", u"Account Settings", None))
+        self.myacclabel.setText(QCoreApplication.translate("Main", u"My Account", None))
+        self.accountbuutton.setText(QCoreApplication.translate("Main", u"My Address", None))
+        self.accountbutton.setText(QCoreApplication.translate("Main", u"Account", None))
+        self.settingslabel.setText(QCoreApplication.translate("Main", u"Settings", None))
+        self.changepassbutton.setText(QCoreApplication.translate("Main", u"Change Password", None))
+        self.editprobutton.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
+        self.helplabel.setText(QCoreApplication.translate("Main", u"Help", None))
+        self.rulebutton.setText(QCoreApplication.translate("Main", u"Rules of use", None))
+        self.logoutsettingsbutton.setText(QCoreApplication.translate("Main", u"Log out", None))
+        self.backbutton_settings.setText("")
+        self.backtomainsettingbutton_2.setText("")
+        self.changepasswordlabel.setText(QCoreApplication.translate("Main", u"Change Password", None))
+        self.currentpasslabel.setText(QCoreApplication.translate("Main", u"Current Password", None))
+        self.savechangebutton_4.setText(QCoreApplication.translate("Main", u"Save changes", None))
+        self.newpasslabel.setText(QCoreApplication.translate("Main", u"New Password", None))
+        self.backtomainsettingbutton_4.setText("")
+        self.profilelabel.setText(QCoreApplication.translate("Main", u"Profile", None))
+        self.usernameprofile.setText(QCoreApplication.translate("Main", u"Username", None))
+        self.fisrtnameprofile.setText(QCoreApplication.translate("Main", u"First name", None))
+        self.lastnameprofile.setText(QCoreApplication.translate("Main", u"Last name", None))
+        self.genderprofile.setText(QCoreApplication.translate("Main", u"Gender", None))
+        self.birthprofile.setText(QCoreApplication.translate("Main", u"Birthday", None))
+        self.phoneprofile.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.emailprofile.setText(QCoreApplication.translate("Main", u"Email", None))
+        self.pictureprofile.setText("")
+        self.username.setText(QCoreApplication.translate("Main", u"User1", None))
+        self.firstname.setText(QCoreApplication.translate("Main", u"Firsth name", None))
+        self.gender.setText(QCoreApplication.translate("Main", u"Gender", None))
+        self.phone.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.lastname.setText(QCoreApplication.translate("Main", u"last name", None))
+        self.birthday.setText(QCoreApplication.translate("Main", u"User1", None))
+        self.email.setText(QCoreApplication.translate("Main", u"User1", None))
+        self.editlabel_2.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
+        self.userabel_2.setText(QCoreApplication.translate("Main", u"Username", None))
+        self.fisrtlabel_2.setText(QCoreApplication.translate("Main", u"First name", None))
+        self.lastlabel_2.setText(QCoreApplication.translate("Main", u"Last name", None))
+        self.genlabel_2.setText(QCoreApplication.translate("Main", u"Gender", None))
+        self.birthlabel_2.setText(QCoreApplication.translate("Main", u"Birthday", None))
+        self.pholabel_2.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.emaillabel_3.setText(QCoreApplication.translate("Main", u"Email", None))
+        self.userbox_2.setText("")
+        self.userbox_2.setPlaceholderText(QCoreApplication.translate("Main", u"Username", None))
+        self.firstnamebox_2.setText("")
+        self.firstnamebox_2.setPlaceholderText(QCoreApplication.translate("Main", u"First name", None))
+        self.genderbox_2.setText("")
+        self.genderbox_2.setPlaceholderText(QCoreApplication.translate("Main", u"Gender", None))
+        self.phonebox_2.setText("")
+        self.phonebox_2.setPlaceholderText(QCoreApplication.translate("Main", u"Phone", None))
+        self.lastnamebox_2.setText("")
+        self.lastnamebox_2.setPlaceholderText(QCoreApplication.translate("Main", u"Last name", None))
+        self.emailbox_2.setText("")
+        self.emailbox_2.setPlaceholderText(QCoreApplication.translate("Main", u"Email", None))
+        self.savechangebutton_3.setText(QCoreApplication.translate("Main", u"Save changes", None))
+        self.deleteaccbutton_2.setText(QCoreApplication.translate("Main", u"Delete account", None))
+        self.editprofilepic_2.setText("")
+        self.editnameprofile_2.setText(QCoreApplication.translate("Main", u"User1", None))
+        self.backtomainsettingbutton_3.setText("")
+        self.backtomainsettingbutton.setText("")
+        self.ruleofuselabel.setText(QCoreApplication.translate("Main", u"Rule of use", None))
+        self.ruleofusecontentlabel.setText(QCoreApplication.translate("Main", u"Eligibility: Users must be at least 18 years old or have the consent of a parent or legal guardian to use the app.\n"
+"\n"
+"Account Creation: Users must create an account to access certain features of the app, such as placing orders, tracking shipments, and saving payment methods.\n"
+"\n"
+"Accuracy of Information: Users are responsible for providing accurate and up-to-date information when creating an account, placing orders, and updating their profile.\n"
+"\n"
+"Security: Users are responsible for maintaining the security of their account credentials (username, password, etc.) and must not share this information with others.\n"
+"\n"
+"Prohibited Activities: Users must not engage in any illegal, fraudulent, or unauthorized activities while using the app. This includes but is not limited to hacking, phishing, and unauthorized access to other users' accounts.\n"
+"\n"
+"Intellectual Property: Users must respect the intellectual property rights of others, including copyrights, trademarks, and patents. Any use of copy"
+                        "righted material must be done with proper authorization.\n"
+"\n"
+"Product Listings: Sellers must provide accurate and truthful information about their products, including descriptions, images, and pricing. Any misleading or deceptive practices are prohibited.\n"
+"\n"
+"Payment: Users must provide valid payment information when making purchases through the app. All transactions are subject to the app's payment policies and may be processed securely through a trusted payment gateway.\n"
+"\n"
+"Shipping and Delivery: Users should provide accurate shipping addresses to ensure timely delivery of their orders. The app will provide estimated delivery times, but delays may occur due to unforeseen circumstances such as weather or logistical issues.\n"
+"\n"
+"Returns and Refunds: Users may be eligible for returns and refunds according to the app's return policy. Any returned items must be in their original condition and packaging.\n"
+"\n"
+"User Conduct: Users must conduct themselves in a respectful and courteous manner whe"
+                        "n interacting with other users, sellers, and customer support representatives. Any harassment, bullying, or abusive behavior will not be tolerated.\n"
+"\n"
+"Feedback and Reviews: Users are encouraged to provide honest feedback and reviews about their shopping experience and the products they purchase. However, any reviews containing offensive language, personal attacks, or false information will be removed.\n"
+"\n"
+"Privacy: The app will collect and process personal information according to its privacy policy. Users should review the privacy policy to understand how their data is collected, used, and protected.\n"
+"\n"
+"Updates and Modifications: The app reserves the right to update or modify these rules of use at any time. Users will be notified of any changes, and continued use of the app constitutes acceptance of the revised rules.\n"
+"\n"
+"Termination of Account: The app reserves the right to suspend or terminate user accounts that violate these rules of use or engage in prohibited activities. Users will b"
+                        "e notified of any account suspensions or terminations and may appeal the decision if necessary.", None))
         self.Logolabel.setText(QCoreApplication.translate("Main", u"ChopShop", None))
         self.homebutton.setText(QCoreApplication.translate("Main", u"Home", None))
         self.favbutton.setText(QCoreApplication.translate("Main", u"Favorites", None))
@@ -3784,6 +4511,15 @@ class Ui_Main(object):
         self.canceladdproductbutton.setText(QCoreApplication.translate("Main", u"Cancel", None))
         self.addproductbutton.setText(QCoreApplication.translate("Main", u"Add Product", None))
         self.addproductscategorieslabel.setText(QCoreApplication.translate("Main", u"Categories", None))
+        self.addcategoriesproductcombobox.setItemText(0, QCoreApplication.translate("Main", u"Men", None))
+        self.addcategoriesproductcombobox.setItemText(1, QCoreApplication.translate("Main", u"Women", None))
+        self.addcategoriesproductcombobox.setItemText(2, QCoreApplication.translate("Main", u"Kids", None))
+        self.addcategoriesproductcombobox.setItemText(3, QCoreApplication.translate("Main", u"Top", None))
+        self.addcategoriesproductcombobox.setItemText(4, QCoreApplication.translate("Main", u"Bottom", None))
+        self.addcategoriesproductcombobox.setItemText(5, QCoreApplication.translate("Main", u"Accessory", None))
+        self.addcategoriesproductcombobox.setItemText(6, QCoreApplication.translate("Main", u"Headwear", None))
+        self.addcategoriesproductcombobox.setItemText(7, QCoreApplication.translate("Main", u"Footwear", None))
+
         self.addcategoriesproductbutton.setText(QCoreApplication.translate("Main", u"+", None))
         self.editlabel.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel.setText(QCoreApplication.translate("Main", u"Username", None))

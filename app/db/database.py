@@ -9,6 +9,13 @@ db = ZODB.DB(storage)
 connection = db.open()
 root = connection.root()
 
+
+if not hasattr(root, 'Product'):
+    root.Product = BTree()
+
+if not hasattr(root, 'ProductDatabase'):
+    root.ProductDatabase = ProductDatabase()
+
 if not hasattr(root, 'generalUsers'):
     root.generalUsers = BTree()
 if not hasattr(root, 'adminUsers'):
@@ -31,8 +38,8 @@ def register(username, email, password):
         transaction.commit()
         return True
     
-#-------------------Admin Register------------------------
-#-------------------Not yet tested
+#-------------------------------------------------------------
+
 def registerAdmin(username, shopname, name, lastname, description, address, email, phone, password):
     if shopname in root.adminUsers:
         # print("User already exists")
