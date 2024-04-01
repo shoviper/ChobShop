@@ -9,13 +9,6 @@ db = ZODB.DB(storage)
 connection = db.open()
 root = connection.root()
 
-
-if not hasattr(root, 'Product'):
-    root.Product = BTree()
-
-if not hasattr(root, 'ProductDatabase'):
-    root.ProductDatabase = ProductDatabase()
-
 if not hasattr(root, 'generalUsers'):
     root.generalUsers = BTree()
 if not hasattr(root, 'adminUsers'):

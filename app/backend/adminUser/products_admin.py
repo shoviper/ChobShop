@@ -5,7 +5,14 @@ from BTrees.OOBTree import BTree
 from app.db.model import *
 from app.db.database import *
 
-
+if not hasattr(root, 'Product'):
+    root.Product = BTree()
+if not hasattr(root, 'ProductDatabase'):
+    root.ProductDatabase = ProductDatabase()
+else:
+    print("ProductDatabase already exists")
+    for product_id, product in root.ProductDatabase.products.items():
+        print(product_id, product)
 
 def addproduct(productname, description, price, sizes, options, stock, categories):
     user = root.LoggedInUser.user.username
@@ -19,6 +26,7 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
     if user not in root.adminUsers:
         return False
     else:
+        print("productdb: ", root.ProductDatabase)
 
         # if len(root.adminUsers[user].products) == 0:
         #     print("product: 0")
@@ -43,6 +51,6 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
         print("new_product_id: ", new_product_id)
         
         print("++++++++++++++++++++++++++++++")
-        print("All products: ", root.ProductDatabase.get_all_products())
+        print("All products: ", root.ProductDatabase)
 
     return True

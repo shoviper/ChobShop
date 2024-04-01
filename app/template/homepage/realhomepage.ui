@@ -10,6 +10,18 @@
     <height>720</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -26,1483 +38,10 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="settingsnouse">
     <layout class="QVBoxLayout" name="verticalLayout_5"/>
-   </widget>
-   <widget class="QWidget" name="settings">
-    <widget class="QStackedWidget" name="stackedWidget_settings">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>1280</width>
-       <height>720</height>
-      </rect>
-     </property>
-     <widget class="QWidget" name="settingsmainpage">
-      <widget class="QWidget" name="settingscontainer" native="true">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>60</y>
-         <width>1160</width>
-         <height>630</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: yellow;
-</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
-        <item>
-         <widget class="QScrollArea" name="scrollArea_settings">
-          <property name="widgetResizable">
-           <bool>true</bool>
-          </property>
-          <widget class="QWidget" name="scrollAreaWidgetContents_5">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>1118</width>
-             <height>1524</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_7">
-            <item>
-             <widget class="QFrame" name="frame_settings">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>1500</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <widget class="QLabel" name="accsettingslabel">
-               <property name="geometry">
-                <rect>
-                 <x>450</x>
-                 <y>10</y>
-                 <width>231</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 30px;</string>
-               </property>
-               <property name="text">
-                <string>Account Settings</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="myacclabel">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>50</y>
-                 <width>131</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 24px;</string>
-               </property>
-               <property name="text">
-                <string>My Account</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="accountbuutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>200</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background: red;</string>
-               </property>
-               <property name="text">
-                <string>My Address</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="accountbutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>120</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background: red;</string>
-               </property>
-               <property name="text">
-                <string>Account</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="settingslabel">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>280</y>
-                 <width>131</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 24px;</string>
-               </property>
-               <property name="text">
-                <string>Settings</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="changepassbutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>350</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background: red;</string>
-               </property>
-               <property name="text">
-                <string>Change Password</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="editprobutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>440</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background: red;</string>
-               </property>
-               <property name="text">
-                <string>Edit Profile</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="helplabel">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>530</y>
-                 <width>131</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 24px;</string>
-               </property>
-               <property name="text">
-                <string>Help</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="rulebutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>610</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background: red;</string>
-               </property>
-               <property name="text">
-                <string>Rules of use</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="logoutsettingsbutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>760</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background: blue;</string>
-               </property>
-               <property name="text">
-                <string>Log out</string>
-               </property>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QPushButton" name="backbutton_settings">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>20</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: none;
-image: url(:/pic/realimages/backhomoe.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="changepasswordpage">
-      <widget class="QPushButton" name="backtomainsettingbutton_2">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>20</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: none;
-image: url(:/pic/realimages/backhomoe.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QWidget" name="changepasswordcontainer" native="true">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>60</y>
-         <width>1160</width>
-         <height>630</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: yellow;
-</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
-        <item>
-         <widget class="QScrollArea" name="scrollArea_changepassword">
-          <property name="widgetResizable">
-           <bool>true</bool>
-          </property>
-          <widget class="QWidget" name="scrollAreaWidgetContents_7">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>1118</width>
-             <height>1524</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_13">
-            <item>
-             <widget class="QFrame" name="frame_changepassword">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>1500</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <widget class="QLabel" name="changepasswordlabel">
-               <property name="geometry">
-                <rect>
-                 <x>450</x>
-                 <y>10</y>
-                 <width>241</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 30px;</string>
-               </property>
-               <property name="text">
-                <string>Change Password</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="currentpasslabel">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>100</y>
-                 <width>161</width>
-                 <height>51</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 20px;</string>
-               </property>
-               <property name="text">
-                <string>Current Password</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="savechangebutton_4">
-               <property name="geometry">
-                <rect>
-                 <x>860</x>
-                 <y>510</y>
-                 <width>201</width>
-                 <height>41</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: #FFF;
-background: #AEC289;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-border-radius: 10px;</string>
-               </property>
-               <property name="text">
-                <string>Save changes</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="newpasslabel">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>270</y>
-                 <width>161</width>
-                 <height>51</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 20px;</string>
-               </property>
-               <property name="text">
-                <string>New Password</string>
-               </property>
-              </widget>
-              <widget class="QLineEdit" name="curpasstextbox">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>180</y>
-                 <width>481</width>
-                 <height>41</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLineEdit" name="newpasstextbox">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>350</y>
-                 <width>481</width>
-                 <height>41</height>
-                </rect>
-               </property>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="accountpage">
-      <widget class="QPushButton" name="backtomainsettingbutton_4">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>20</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: none;
-image: url(:/pic/realimages/backhomoe.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QWidget" name="editprofilecontainer_3" native="true">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>60</y>
-         <width>1160</width>
-         <height>630</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: #FAF9F6;</string>
-       </property>
-       <widget class="QWidget" name="textboxeditcontainer_4" native="true">
-        <property name="geometry">
-         <rect>
-          <x>29</x>
-          <y>0</y>
-          <width>1101</width>
-          <height>600</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border-radius: 20px;
-background: #F4DBDB;</string>
-        </property>
-        <widget class="QLabel" name="profilelabel">
-         <property name="geometry">
-          <rect>
-           <x>490</x>
-           <y>10</y>
-           <width>101</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Profile</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="usernameprofile">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>100</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Username</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="fisrtnameprofile">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>200</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>First name</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="lastnameprofile">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>200</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Last name</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="genderprofile">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>300</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Gender</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="birthprofile">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>300</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Birthday</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="phoneprofile">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>400</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Phone</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="emailprofile">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>400</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Email</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="pictureprofile">
-         <property name="geometry">
-          <rect>
-           <x>870</x>
-           <y>70</y>
-           <width>160</width>
-           <height>160</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-radius: 80px;
-background: #cd4662;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLabel" name="username">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>140</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>User1</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="firstname">
-         <property name="geometry">
-          <rect>
-           <x>60</x>
-           <y>240</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Firsth name</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="gender">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>340</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Gender</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="phone">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>450</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Phone</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="lastname">
-         <property name="geometry">
-          <rect>
-           <x>460</x>
-           <y>240</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>last name</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="birthday">
-         <property name="geometry">
-          <rect>
-           <x>430</x>
-           <y>350</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>User1</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="email">
-         <property name="geometry">
-          <rect>
-           <x>430</x>
-           <y>450</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>User1</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="editprofilesettingspage">
-      <widget class="QWidget" name="editprofilecontainer_2" native="true">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>60</y>
-         <width>1160</width>
-         <height>630</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: #FAF9F6;</string>
-       </property>
-       <widget class="QWidget" name="textboxeditcontainer_3" native="true">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>0</y>
-          <width>830</width>
-          <height>600</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border-radius: 20px;
-background: #F4DBDB;</string>
-        </property>
-        <widget class="QLabel" name="editlabel_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>34</y>
-           <width>171</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Edit Profile</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="userabel_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>100</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Username</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="fisrtlabel_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>200</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>First name</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="lastlabel_2">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>200</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Last name</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="genlabel_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>300</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Gender</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="birthlabel_2">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>300</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Birthday</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="pholabel_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>400</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Phone</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="emaillabel_3">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>400</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Email</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="userbox_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>150</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Username</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="firstnamebox_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>250</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>First name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="genderbox_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>350</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Gender</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="phonebox_2">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>450</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Phone</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lastnamebox_2">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>250</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Last name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="emailbox_2">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>450</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Email</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="savechangebutton_3">
-         <property name="geometry">
-          <rect>
-           <x>590</x>
-           <y>530</y>
-           <width>201</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #FFF;
-background: #AEC289;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-border-radius: 10px;</string>
-         </property>
-         <property name="text">
-          <string>Save changes</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="deleteaccbutton_2">
-         <property name="geometry">
-          <rect>
-           <x>350</x>
-           <y>530</y>
-           <width>201</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #FFF;
-background: #cd4662;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-border-radius: 10px;</string>
-         </property>
-         <property name="text">
-          <string>Delete account</string>
-         </property>
-        </widget>
-        <widget class="QDateEdit" name="birthdaydateEdit_2">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>350</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QDateTimeEdit {
-	background-color: #F4F2EF; 
-	font-size: 16px;
-	border: 2px solid #CD4662; 
-	padding: 5px;
-	border-radius: 5px; 
-}
-QDateTimeEdit::down-button, QDateTimeEdit::up-button {
-	width: 20px; 
-	height: 13px;
-	background-color: #F4F2EF; 
-	border: 2px solid #CD4662; 
-	font-size: 16px;
-}
-QDateTimeEdit::down-button {
-	subcontrol-origin: border;
-	subcontrol-position: bottom right;
-}
-
-QDateTimeEdit::up-button {
-	subcontrol-origin: border;
-	subcontrol-position: top right;
-}
-    
-QDateTimeEdit::down-button:pressed, QDateTimeEdit::up-button:pressed {
-	background-color: #CD4662;
-}
-    
-QDateTimeEdit::down-arrow, QDateTimeEdit::up-arrow {
-	image: url(arrow.png); 
-}</string>
-         </property>
-         <property name="locale">
-          <locale language="English" country="UnitedStates"/>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QLabel" name="editprofilepic_2">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>0</y>
-          <width>160</width>
-          <height>160</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border: none;
-border-radius: 80px;
-background: #cd4662;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="editnameprofile_2">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>190</y>
-          <width>165</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-        </property>
-        <property name="text">
-         <string>User1</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QPushButton" name="backtomainsettingbutton_3">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>20</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: none;
-image: url(:/pic/realimages/backhomoe.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="rulepage">
-      <widget class="QPushButton" name="backtomainsettingbutton">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>20</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: none;
-image: url(:/pic/realimages/backhomoe.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QWidget" name="ruleofusecontainer" native="true">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>60</y>
-         <width>1160</width>
-         <height>630</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: yellow;
-</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
-        <item>
-         <widget class="QScrollArea" name="scrollArea_ruleofuse">
-          <property name="widgetResizable">
-           <bool>true</bool>
-          </property>
-          <widget class="QWidget" name="scrollAreaWidgetContents_6">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>82</width>
-             <height>1524</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_9">
-            <item>
-             <widget class="QFrame" name="frame_ruleofuse">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>1500</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <widget class="QLabel" name="ruleofuselabel">
-               <property name="geometry">
-                <rect>
-                 <x>450</x>
-                 <y>10</y>
-                 <width>231</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 30px;</string>
-               </property>
-               <property name="text">
-                <string>Rule of use</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="ruleofusecontentlabel">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>100</y>
-                 <width>1040</width>
-                 <height>531</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Eligibility: Users must be at least 18 years old or have the consent of a parent or legal guardian to use the app.
-
-Account Creation: Users must create an account to access certain features of the app, such as placing orders, tracking shipments, and saving payment methods.
-
-Accuracy of Information: Users are responsible for providing accurate and up-to-date information when creating an account, placing orders, and updating their profile.
-
-Security: Users are responsible for maintaining the security of their account credentials (username, password, etc.) and must not share this information with others.
-
-Prohibited Activities: Users must not engage in any illegal, fraudulent, or unauthorized activities while using the app. This includes but is not limited to hacking, phishing, and unauthorized access to other users' accounts.
-
-Intellectual Property: Users must respect the intellectual property rights of others, including copyrights, trademarks, and patents. Any use of copyrighted material must be done with proper authorization.
-
-Product Listings: Sellers must provide accurate and truthful information about their products, including descriptions, images, and pricing. Any misleading or deceptive practices are prohibited.
-
-Payment: Users must provide valid payment information when making purchases through the app. All transactions are subject to the app's payment policies and may be processed securely through a trusted payment gateway.
-
-Shipping and Delivery: Users should provide accurate shipping addresses to ensure timely delivery of their orders. The app will provide estimated delivery times, but delays may occur due to unforeseen circumstances such as weather or logistical issues.
-
-Returns and Refunds: Users may be eligible for returns and refunds according to the app's return policy. Any returned items must be in their original condition and packaging.
-
-User Conduct: Users must conduct themselves in a respectful and courteous manner when interacting with other users, sellers, and customer support representatives. Any harassment, bullying, or abusive behavior will not be tolerated.
-
-Feedback and Reviews: Users are encouraged to provide honest feedback and reviews about their shopping experience and the products they purchase. However, any reviews containing offensive language, personal attacks, or false information will be removed.
-
-Privacy: The app will collect and process personal information according to its privacy policy. Users should review the privacy policy to understand how their data is collected, used, and protected.
-
-Updates and Modifications: The app reserves the right to update or modify these rules of use at any time. Users will be notified of any changes, and continued use of the app constitutes acceptance of the revised rules.
-
-Termination of Account: The app reserves the right to suspend or terminate user accounts that violate these rules of use or engage in prohibited activities. Users will be notified of any account suspensions or terminations and may appeal the decision if necessary.</string>
-               </property>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </widget>
    </widget>
    <widget class="QWidget" name="main">
     <widget class="QWidget" name="gridLayoutWidget">
@@ -1536,6 +75,7 @@ Termination of Account: The app reserves the right to suspend or terminate user 
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
+           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -2388,8 +928,8 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>85</width>
-            <height>2024</height>
+            <width>67</width>
+            <height>2018</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -3027,7 +1567,7 @@ QPushButton:hover{
         <string notr="true">border: none;</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="tobeshippedpage">
         <widget class="QScrollArea" name="scrollArea_tobeshipped">
@@ -3867,8 +2407,8 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>85</width>
-            <height>1524</height>
+            <width>998</width>
+            <height>1518</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -5157,473 +3697,6 @@ line-height: normal;</string>
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="userprofile">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QScrollArea" name="scrollArea_userprofile">
-       <property name="styleSheet">
-        <string notr="true">QScrollArea {
-	border: none;
-}
-
-QScrollBar:vertical {
-	border: none;
-	background-color: #FAF9F6;
-	width: 15px;
-	border-radius: 7px;
-}
-
-QScrollBar::handle:vertical {
-	background-color: #E1E3E7;
-	border-radius: 7px;
-	min-height: 30px;
-}
-
-QScrollBar::handle:vertical:hover {
-	background-color: #F4DBDB;
-}</string>
-       </property>
-       <property name="widgetResizable">
-        <bool>true</bool>
-       </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents_3">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>85</width>
-          <height>1024</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QFrame" name="frame_userprofile">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>1000</height>
-            </size>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <widget class="QWidget" name="profilecontainer" native="true">
-            <property name="geometry">
-             <rect>
-              <x>42</x>
-              <y>42</y>
-              <width>1151</width>
-              <height>180</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-bottom: 3px solid #CD4662;
-background: #FAF9F6;</string>
-            </property>
-            <widget class="QLabel" name="profilepic">
-             <property name="geometry">
-              <rect>
-               <x>30</x>
-               <y>0</y>
-               <width>140</width>
-               <height>140</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-border-radius: 70px;
-background: #cd4662;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QLabel" name="usernamelabel">
-             <property name="geometry">
-              <rect>
-               <x>250</x>
-               <y>0</y>
-               <width>151</width>
-               <height>41</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>Username</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="favloriteabel">
-             <property name="geometry">
-              <rect>
-               <x>250</x>
-               <y>45</y>
-               <width>151</width>
-               <height>41</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #AEC289;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>3 Favorites</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="editprofilebutton">
-             <property name="geometry">
-              <rect>
-               <x>250</x>
-               <y>90</y>
-               <width>131</width>
-               <height>41</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #CD4662;
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: left;</string>
-             </property>
-             <property name="text">
-              <string>Edit Profile</string>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QPushButton" name="backbutton">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>10</y>
-              <width>20</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border: none;
-image: url(:/pic/realimages/backhomoe.png);</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-           <widget class="QWidget" name="myordercontainer" native="true">
-            <property name="geometry">
-             <rect>
-              <x>40</x>
-              <y>350</y>
-              <width>1151</width>
-              <height>157</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-bottom: 3px solid #CD4662;
-background: #FAF9F6;
-</string>
-            </property>
-            <widget class="QLabel" name="myorderlabel">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>100</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>My Orders</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="tobeshipbutton">
-             <property name="geometry">
-              <rect>
-               <x>250</x>
-               <y>40</y>
-               <width>90</width>
-               <height>90</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">image: url(:/pic/images/newres/tobeshipped.png);
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="tobereceivebutton">
-             <property name="geometry">
-              <rect>
-               <x>550</x>
-               <y>40</y>
-               <width>90</width>
-               <height>90</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">image: url(:/pic/images/newres/toberecieved.png);
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="completebutton">
-             <property name="geometry">
-              <rect>
-               <x>850</x>
-               <y>40</y>
-               <width>90</width>
-               <height>90</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">image: url(:/pic/images/newres/completed.png);
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QWidget" name="favcontainer" native="true">
-            <property name="geometry">
-             <rect>
-              <x>42</x>
-              <y>534</y>
-              <width>1151</width>
-              <height>440</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-bottom: 3px solid #CD4662;
-background: #FAF9F6;</string>
-            </property>
-            <widget class="QWidget" name="product_13" native="true">
-             <property name="geometry">
-              <rect>
-               <x>45</x>
-               <y>70</y>
-               <width>251</width>
-               <height>320</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-             </property>
-             <widget class="QPushButton" name="picproduct1_15">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>30</y>
-                <width>191</width>
-                <height>188</height>
-               </rect>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </widget>
-            <widget class="QLabel" name="favlabel">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>100</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>Favorites</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="product_14" native="true">
-             <property name="geometry">
-              <rect>
-               <x>450</x>
-               <y>70</y>
-               <width>251</width>
-               <height>320</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-             </property>
-             <widget class="QPushButton" name="picproduct1_18">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>30</y>
-                <width>191</width>
-                <height>188</height>
-               </rect>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </widget>
-            <widget class="QWidget" name="product_15" native="true">
-             <property name="geometry">
-              <rect>
-               <x>855</x>
-               <y>70</y>
-               <width>251</width>
-               <height>320</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-             </property>
-             <widget class="QPushButton" name="picproduct1_19">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>30</y>
-                <width>191</width>
-                <height>188</height>
-               </rect>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </widget>
-            <widget class="QPushButton" name="viewallfavbutton">
-             <property name="geometry">
-              <rect>
-               <x>1020</x>
-               <y>0</y>
-               <width>121</width>
-               <height>24</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:  #CD4662;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-border: none;</string>
-             </property>
-             <property name="text">
-              <string>View all Favorites    &gt;</string>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QPushButton" name="openshopbutton">
-            <property name="geometry">
-             <rect>
-              <x>42</x>
-              <y>252</y>
-              <width>1151</width>
-              <height>65</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-radius: 10px;
-background: #F4DBDB;
-color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-            </property>
-            <property name="text">
-             <string>           Open Your Shop</string>
-            </property>
-           </widget>
-           <widget class="QLabel" name="openshoppic">
-            <property name="geometry">
-             <rect>
-              <x>520</x>
-              <y>252</y>
-              <width>49</width>
-              <height>65</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">image: url(:/pic/images/newres/openyourshop.png);
-border: none;
-background: none;</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="adminwidget">
     <widget class="QWidget" name="gridLayoutWidget_2">
      <property name="geometry">
@@ -6500,7 +4573,7 @@ QScrollBar::handle:vertical:hover {
                <x>0</x>
                <y>0</y>
                <width>1006</width>
-               <height>1344</height>
+               <height>1338</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -7308,7 +5381,7 @@ QPushButton:hover{
                </rect>
               </property>
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="adminallproductpage">
                <layout class="QVBoxLayout" name="verticalLayout_24">
@@ -7344,8 +5417,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>992</width>
-                     <height>1524</height>
+                     <width>998</width>
+                     <height>1518</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -7597,8 +5670,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>85</width>
-                     <height>1524</height>
+                     <width>998</width>
+                     <height>1518</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_27">
@@ -7920,11 +5993,17 @@ border: none;</string>
              </widget>
             </widget>
             <widget class="QWidget" name="addproductpage_admin">
-             <layout class="QVBoxLayout" name="verticalLayout_28">
-              <item>
-               <widget class="QScrollArea" name="scrollArea_addproduct_3">
-                <property name="styleSheet">
-                 <string notr="true">QScrollArea {
+             <widget class="QScrollArea" name="scrollArea">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1021</width>
+                <height>601</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QScrollArea {
 	border: none;
 }
 
@@ -7944,70 +6023,551 @@ QScrollBar::handle:vertical {
 QScrollBar::handle:vertical:hover {
 	background-color: #F4DBDB;
 }</string>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_8">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>-480</y>
+                 <width>1006</width>
+                 <height>1400</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>1400</height>
+                </size>
+               </property>
+               <widget class="QFrame" name="frame_addproduct">
+                <property name="geometry">
+                 <rect>
+                  <x>39</x>
+                  <y>11</y>
+                  <width>961</width>
+                  <height>1400</height>
+                 </rect>
                 </property>
-                <property name="widgetResizable">
-                 <bool>true</bool>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>1400</height>
+                 </size>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_19">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>-637</y>
-                   <width>992</width>
-                   <height>1224</height>
-                  </rect>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_29">
-                  <item>
-                   <widget class="QFrame" name="frame_addproduct_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>1200</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background: #FAF9F6</string>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <widget class="QLabel" name="addproductlabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>0</y>
-                       <width>201</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="addproductlabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>890</width>
+                     <height>21</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
 
 font-family: Suwannaphum;
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Add Product</string>
-                     </property>
-                    </widget>
-                    <widget class="QWidget" name="addimageproductcontainer_3" native="true">
-                     <property name="geometry">
-                      <rect>
-                       <x>24</x>
-                       <y>75</y>
-                       <width>910</width>
-                       <height>251</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QScrollArea {
+                   </property>
+                   <property name="text">
+                    <string>Add Product</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="addimageproductcontainer" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>250</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>250</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QScrollArea {
+	border: none;
+	padding-top: 10px;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_9">
+                    <item>
+                     <widget class="QScrollArea" name="scrollArea_addimageproduct">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>240</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>240</height>
+                       </size>
+                      </property>
+                      <property name="widgetResizable">
+                       <bool>true</bool>
+                      </property>
+                      <widget class="QWidget" name="scrollAreaWidgetContents_22">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>1218</width>
+                         <height>210</height>
+                        </rect>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>210</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>210</height>
+                        </size>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_10">
+                        <item>
+                         <widget class="QFrame" name="frame_addimageproduct">
+                          <property name="minimumSize">
+                           <size>
+                            <width>1200</width>
+                            <height>210</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>210</height>
+                           </size>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <widget class="QLabel" name="addproductimagelabel">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>220</width>
+                             <height>31</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                           </property>
+                           <property name="text">
+                            <string>Product's Images</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_5">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_6">
+                           <property name="geometry">
+                            <rect>
+                             <x>201</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_23">
+                           <property name="geometry">
+                            <rect>
+                             <x>402</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_24">
+                           <property name="geometry">
+                            <rect>
+                             <x>603</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_25">
+                           <property name="geometry">
+                            <rect>
+                             <x>804</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_26">
+                           <property name="geometry">
+                            <rect>
+                             <x>1005</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                          </widget>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductnamelabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Product's Name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="addproductnametextbox">
+                   <property name="maximumSize">
+                    <size>
+                     <width>910</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;
+</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductdescriptionlabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Description</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="addproductdescriptiontextbox">
+                   <property name="maximumSize">
+                    <size>
+                     <width>910</width>
+                     <height>117</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;
+</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductpricelabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Price</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="addproductpricespinbox">
+                   <property name="maximumSize">
+                    <size>
+                     <width>281</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QSpinBox {
+	border-radius: 5px;
+	background: #EDEDED;
+	padding: 5px;
+	font-size: 16px;
+}
+QSpinBox::up-button {
+	color: #F4DBDB;
+}</string>
+                   </property>
+                   <property name="locale">
+                    <locale language="English" country="UnitedStates"/>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>10000</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductsizelabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Sizes</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QScrollArea" name="scrollArea_addsizes">
+                   <property name="minimumSize">
+                    <size>
+                     <width>941</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>941</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QScrollArea {
 	border: none;
 }
 
@@ -8027,73 +6587,89 @@ QScrollBar::handle:horizontal {
 QScrollBar::handle:horizontal:hover {
 	background-color: #F4DBDB;
 }</string>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents_10">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>941</width>
+                      <height>60</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>941</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <widget class="QFrame" name="frame_sizes">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>941</width>
+                       <height>58</height>
+                      </rect>
                      </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>941</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_2">
+                      <property name="spacing">
+                       <number>10</number>
+                      </property>
+                      <property name="sizeConstraint">
+                       <enum>QLayout::SetDefaultConstraint</enum>
+                      </property>
+                      <property name="leftMargin">
+                       <number>9</number>
+                      </property>
                       <item>
-                       <widget class="QScrollArea" name="scrollArea_addimageproduct_3">
-                        <property name="widgetResizable">
-                         <bool>true</bool>
+                       <widget class="QPushButton" name="addsizeproductbutton">
+                        <property name="minimumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
                         </property>
-                        <widget class="QWidget" name="scrollAreaWidgetContents_20">
-                         <property name="geometry">
-                          <rect>
-                           <x>0</x>
-                           <y>0</y>
-                           <width>1224</width>
-                           <height>212</height>
-                          </rect>
-                         </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_6">
-                          <item>
-                           <widget class="QFrame" name="frame_addimageproduct_3">
-                            <property name="minimumSize">
-                             <size>
-                              <width>1200</width>
-                              <height>0</height>
-                             </size>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <widget class="QLabel" name="addproductimagelabel_3">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>220</width>
-                               <height>31</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-                             </property>
-                             <property name="text">
-                              <string>Product's Images</string>
-                             </property>
-                            </widget>
-                            <widget class="QPushButton" name="addimagebutton">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>45</y>
-                               <width>151</width>
-                               <height>151</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
+                        <property name="maximumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #D9D9D9;
+	background: none;
+	font-size: 16px;
 	color: #D9D9D9;
 }
 QPushButton:hover {
@@ -8101,309 +6677,165 @@ QPushButton:hover {
 	color: #CD4662;
 	background-color: #EDEDED;
 }</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                            <widget class="QPushButton" name="addimagebutton_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>201</x>
-                               <y>45</y>
-                               <width>151</width>
-                               <height>151</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                            <widget class="QPushButton" name="addimagebutton_15">
-                             <property name="geometry">
-                              <rect>
-                               <x>402</x>
-                               <y>45</y>
-                               <width>151</width>
-                               <height>151</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                            <widget class="QPushButton" name="addimagebutton_16">
-                             <property name="geometry">
-                              <rect>
-                               <x>603</x>
-                               <y>45</y>
-                               <width>151</width>
-                               <height>151</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                            <widget class="QPushButton" name="addimagebutton_17">
-                             <property name="geometry">
-                              <rect>
-                               <x>804</x>
-                               <y>45</y>
-                               <width>151</width>
-                               <height>151</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                            <widget class="QPushButton" name="addimagebutton_18">
-                             <property name="geometry">
-                              <rect>
-                               <x>1005</x>
-                               <y>45</y>
-                               <width>151</width>
-                               <height>151</height>
-                              </rect>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                             </property>
-                             <property name="text">
-                              <string>+</string>
-                             </property>
-                            </widget>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
+                        </property>
+                        <property name="text">
+                         <string>+</string>
+                        </property>
                        </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                      </layout>
                     </widget>
-                    <widget class="QLabel" name="addproductnamelabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>347</y>
-                       <width>220</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
-
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductoptionlabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top:10px;
 font-family: Suwannaphum;
 font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Product's Name</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="addproductdescriptionlabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>443</y>
-                       <width>220</width>
-                       <height>31</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
+                   </property>
+                   <property name="text">
+                    <string>Options</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QScrollArea" name="scrollArea_addoptions">
+                   <property name="minimumSize">
+                    <size>
+                     <width>941</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>941</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QScrollArea {
+	border: none;
+}
 
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Description</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="addproductpricelabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>623</y>
-                       <width>220</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
 
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Price</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="addproductsizelabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>719</y>
-                       <width>220</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
 
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Sizes</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="addproductoptionlabel">
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents_12">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>941</width>
+                      <height>60</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>941</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <widget class="QFrame" name="frame_options">
                      <property name="geometry">
                       <rect>
-                       <x>42</x>
-                       <y>815</y>
-                       <width>220</width>
-                       <height>31</height>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>941</width>
+                       <height>58</height>
                       </rect>
                      </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
+                     <property name="minimumSize">
+                      <size>
+                       <width>941</width>
+                       <height>40</height>
+                      </size>
                      </property>
-                     <property name="text">
-                      <string>Options</string>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
                      </property>
-                    </widget>
-                    <widget class="QLabel" name="addproductstocklabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>921</y>
-                       <width>220</width>
-                       <height>21</height>
-                      </rect>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
                      </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
                      </property>
-                     <property name="text">
-                      <string>Stock</string>
-                     </property>
-                    </widget>
-                    <widget class="QLineEdit" name="addproductnametextbox">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>382</y>
-                       <width>910</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">border-radius: 5px;
-background: #EDEDED;
-padding: 5px;
-font-size: 16px;
-</string>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="addsizeproductbutton">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>754</y>
-                       <width>108</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {
+                     <layout class="QHBoxLayout" name="horizontalLayout_3">
+                      <property name="spacing">
+                       <number>10</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="addoptionproductbutton">
+                        <property name="minimumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
 	border-style: dashed;
 	border-width: 2px;
 	border-color: #D9D9D9;
@@ -8416,50 +6848,342 @@ QPushButton:hover {
 	color: #CD4662;
 	background-color: #EDEDED;
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>+</string>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_2">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>800</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
                     </widget>
-                    <widget class="QPushButton" name="addoptionsproductbutton">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>860</y>
-                       <width>108</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {
-	border-style: dashed;
-	border-width: 2px;
-	border-color: #D9D9D9;
-	background: none;
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductstocklabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top:10px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Stock</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="addproductstockspinbox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>281</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>281</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QSpinBox {
+	border-radius: 5px;
+	background: #EDEDED;
+	padding: 5px;
 	font-size: 16px;
-	color: #D9D9D9;
 }
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
+QSpinBox::up-button {
+	color: #F4DBDB;
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>+</string>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="canceladdproductbutton">
-                     <property name="geometry">
-                      <rect>
-                       <x>498</x>
-                       <y>1140</y>
-                       <width>157</width>
-                       <height>49</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {	
+                   </property>
+                   <property name="locale">
+                    <locale language="English" country="UnitedStates"/>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>1000000</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="addproductscategorieslabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Categories</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="categories_container">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>200</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout">
+                    <item>
+                     <widget class="QFrame" name="frame_categories_gender">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_16">
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_men">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Men</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_women">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Women</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_kids">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Kids</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_categories_wear">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_2">
+                       <item row="0" column="0">
+                        <widget class="QCheckBox" name="checkBox_top">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Top</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QCheckBox" name="checkBox_dress">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Dress</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0">
+                        <widget class="QCheckBox" name="checkBox_headwear">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Headwear</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QCheckBox" name="checkBox_bottom">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Bottom</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QCheckBox" name="checkBox_footwear">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Footwear</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="1">
+                        <widget class="QCheckBox" name="checkBox_accessories">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Accesories</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_addproduct_submit">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QPushButton" name="canceladdproductbutton">
+                    <property name="geometry">
+                     <rect>
+                      <x>502</x>
+                      <y>10</y>
+                      <width>157</width>
+                      <height>49</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {	
 	border-radius: 5px;
 	background: #AEC289;
 	color: #FFF;
@@ -8474,22 +7198,22 @@ QPushButton:hover {
 	background: #F4DBDB;
 	color: #545454;
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>Cancel</string>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="addproductbutton">
-                     <property name="geometry">
-                      <rect>
-                       <x>706</x>
-                       <y>1140</y>
-                       <width>204</width>
-                       <height>49</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {
+                    </property>
+                    <property name="text">
+                     <string>Cancel</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="addproductbutton">
+                    <property name="geometry">
+                     <rect>
+                      <x>710</x>
+                      <y>10</y>
+                      <width>204</width>
+                      <height>49</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
 	border-radius: 5px;
 	background: #CD4662;
 	color: #FFF;
@@ -8504,206 +7228,17 @@ QPushButton:hover {
 	background: #F4DBDB;
 	color: #545454;
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>Add Product</string>
-                     </property>
-                    </widget>
-                    <widget class="QPlainTextEdit" name="addproductdescriptiontextbox">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>490</y>
-                       <width>911</width>
-                       <height>114</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">border-radius: 5px;
-background: #EDEDED;
-padding: 5px;
-font-size: 16px;
-</string>
-                     </property>
-                    </widget>
-                    <widget class="QSpinBox" name="addproductpricespinbox">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>660</y>
-                       <width>281</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QSpinBox {
-	border-radius: 5px;
-	background: #EDEDED;
-	padding: 5px;
-	font-size: 16px;
-}
-QSpinBox::up-button {
-	color: #F4DBDB;
-}</string>
-                     </property>
-                     <property name="locale">
-                      <locale language="English" country="UnitedStates"/>
-                     </property>
-                     <property name="minimum">
-                      <number>1</number>
-                     </property>
-                     <property name="maximum">
-                      <number>10000</number>
-                     </property>
-                    </widget>
-                    <widget class="QSpinBox" name="addproductstockspinbox">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>960</y>
-                       <width>281</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QSpinBox {
-	border-radius: 5px;
-	background: #EDEDED;
-	padding: 5px;
-	font-size: 16px;
-}
-QSpinBox::up-button {
-	color: #F4DBDB;
-}</string>
-                     </property>
-                     <property name="locale">
-                      <locale language="English" country="UnitedStates"/>
-                     </property>
-                     <property name="minimum">
-                      <number>1</number>
-                     </property>
-                     <property name="maximum">
-                      <number>1000000</number>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="addproductscategorieslabel">
-                     <property name="geometry">
-                      <rect>
-                       <x>42</x>
-                       <y>1020</y>
-                       <width>220</width>
-                       <height>31</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Categories</string>
-                     </property>
-                    </widget>
-                    <widget class="QComboBox" name="addcategoriesproductcombobox">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>1067</y>
-                       <width>108</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QComboBox {
-	border-radius: 5px;
-	background: #EDEDED;
-	padding: 5px;
-	font-size: 16px;
-}
-QComboBox::down-button {
-	color: #F4DBDB;
-}</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>Men</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Women</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Kids</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Top</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Bottom</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Accessory</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Headwear</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>Footwear</string>
-                      </property>
-                     </item>
-                    </widget>
-                    <widget class="QPushButton" name="addcategoriesproductbutton">
-                     <property name="geometry">
-                      <rect>
-                       <x>180</x>
-                       <y>1067</y>
-                       <width>108</width>
-                       <height>38</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {
-	border-style: dashed;
-	border-width: 2px;
-	border-color: #D9D9D9;
-	background: none;
-	font-size: 16px;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                     </property>
-                     <property name="text">
-                      <string>+</string>
-                     </property>
-                    </widget>
+                    </property>
+                    <property name="text">
+                     <string>Add Product</string>
+                    </property>
                    </widget>
-                  </item>
-                 </layout>
-                </widget>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
-              </item>
-             </layout>
+              </widget>
+             </widget>
             </widget>
            </widget>
           </widget>
@@ -8713,6 +7248,473 @@ QPushButton:hover {
       </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QWidget" name="userprofile">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QScrollArea" name="scrollArea_userprofile">
+       <property name="styleSheet">
+        <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1247</width>
+          <height>1018</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QFrame" name="frame_userprofile">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QWidget" name="profilecontainer" native="true">
+            <property name="geometry">
+             <rect>
+              <x>42</x>
+              <y>42</y>
+              <width>1151</width>
+              <height>180</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-bottom: 3px solid #CD4662;
+background: #FAF9F6;</string>
+            </property>
+            <widget class="QLabel" name="profilepic">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>0</y>
+               <width>140</width>
+               <height>140</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+border-radius: 70px;
+background: #cd4662;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="usernamelabel">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>0</y>
+               <width>151</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: #000;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Username</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="favloriteabel">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>45</y>
+               <width>151</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: #AEC289;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>3 Favorites</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="editprofilebutton">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>90</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: #CD4662;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: left;</string>
+             </property>
+             <property name="text">
+              <string>Edit Profile</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPushButton" name="backbutton">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>20</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QWidget" name="myordercontainer" native="true">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>350</y>
+              <width>1151</width>
+              <height>157</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-bottom: 3px solid #CD4662;
+background: #FAF9F6;
+</string>
+            </property>
+            <widget class="QLabel" name="myorderlabel">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>My Orders</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="tobeshipbutton">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>40</y>
+               <width>90</width>
+               <height>90</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/pic/images/newres/tobeshipped.png);
+border: none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="tobereceivebutton">
+             <property name="geometry">
+              <rect>
+               <x>550</x>
+               <y>40</y>
+               <width>90</width>
+               <height>90</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/pic/images/newres/toberecieved.png);
+border: none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="completebutton">
+             <property name="geometry">
+              <rect>
+               <x>850</x>
+               <y>40</y>
+               <width>90</width>
+               <height>90</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/pic/images/newres/completed.png);
+border: none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="favcontainer" native="true">
+            <property name="geometry">
+             <rect>
+              <x>42</x>
+              <y>534</y>
+              <width>1151</width>
+              <height>440</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-bottom: 3px solid #CD4662;
+background: #FAF9F6;</string>
+            </property>
+            <widget class="QWidget" name="product_13" native="true">
+             <property name="geometry">
+              <rect>
+               <x>45</x>
+               <y>70</y>
+               <width>251</width>
+               <height>320</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 10px;
+                background: #D9D9D9;
+border:none;</string>
+             </property>
+             <widget class="QPushButton" name="picproduct1_15">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>30</y>
+                <width>191</width>
+                <height>188</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="favlabel">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Favorites</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="product_14" native="true">
+             <property name="geometry">
+              <rect>
+               <x>450</x>
+               <y>70</y>
+               <width>251</width>
+               <height>320</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 10px;
+                background: #D9D9D9;
+border:none;</string>
+             </property>
+             <widget class="QPushButton" name="picproduct1_18">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>30</y>
+                <width>191</width>
+                <height>188</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="product_15" native="true">
+             <property name="geometry">
+              <rect>
+               <x>855</x>
+               <y>70</y>
+               <width>251</width>
+               <height>320</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 10px;
+                background: #D9D9D9;
+border:none;</string>
+             </property>
+             <widget class="QPushButton" name="picproduct1_19">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>30</y>
+                <width>191</width>
+                <height>188</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #FFF;
+border-radius: 0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QPushButton" name="viewallfavbutton">
+             <property name="geometry">
+              <rect>
+               <x>1020</x>
+               <y>0</y>
+               <width>121</width>
+               <height>24</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:  #CD4662;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border: none;</string>
+             </property>
+             <property name="text">
+              <string>View all Favorites    &gt;</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPushButton" name="openshopbutton">
+            <property name="geometry">
+             <rect>
+              <x>42</x>
+              <y>252</y>
+              <width>1151</width>
+              <height>65</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;
+background: #F4DBDB;
+color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+            </property>
+            <property name="text">
+             <string>           Open Your Shop</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="openshoppic">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>252</y>
+              <width>49</width>
+              <height>65</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/pic/images/newres/openyourshop.png);
+border: none;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QWidget" name="editprofile">
     <property name="styleSheet">
@@ -9244,6 +8246,1539 @@ image: url(:/pic/realimages/backhomoe.png);</string>
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="settings">
+    <widget class="QStackedWidget" name="stackedWidget_settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1280</width>
+       <height>720</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="settingsmainpage">
+      <widget class="QWidget" name="settingscontainer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>630</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: yellow;
+</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_settings">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1123</width>
+             <height>1518</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QFrame" name="frame_settings">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1500</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QLabel" name="accsettingslabel">
+               <property name="geometry">
+                <rect>
+                 <x>450</x>
+                 <y>10</y>
+                 <width>231</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 30px;</string>
+               </property>
+               <property name="text">
+                <string>Account Settings</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="myacclabel">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>50</y>
+                 <width>131</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;</string>
+               </property>
+               <property name="text">
+                <string>My Account</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="accountbuutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>200</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: red;</string>
+               </property>
+               <property name="text">
+                <string>My Address</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="accountbutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>120</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: red;</string>
+               </property>
+               <property name="text">
+                <string>Account</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="settingslabel">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>280</y>
+                 <width>131</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;</string>
+               </property>
+               <property name="text">
+                <string>Settings</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="changepassbutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>350</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: red;</string>
+               </property>
+               <property name="text">
+                <string>Change Password</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="editprobutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>440</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: red;</string>
+               </property>
+               <property name="text">
+                <string>Edit Profile</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="helplabel">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>530</y>
+                 <width>131</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;</string>
+               </property>
+               <property name="text">
+                <string>Help</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="rulebutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>610</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: red;</string>
+               </property>
+               <property name="text">
+                <string>Rules of use</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="logoutsettingsbutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>760</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: blue;</string>
+               </property>
+               <property name="text">
+                <string>Log out</string>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="backbutton_settings">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="changepasswordpage">
+      <widget class="QPushButton" name="backtomainsettingbutton_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="changepasswordcontainer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>630</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: yellow;
+</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_changepassword">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1123</width>
+             <height>1518</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <item>
+             <widget class="QFrame" name="frame_changepassword">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1500</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QLabel" name="changepasswordlabel">
+               <property name="geometry">
+                <rect>
+                 <x>450</x>
+                 <y>10</y>
+                 <width>241</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 30px;</string>
+               </property>
+               <property name="text">
+                <string>Change Password</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="currentpasslabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>100</y>
+                 <width>161</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 20px;</string>
+               </property>
+               <property name="text">
+                <string>Current Password</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="savechangebutton_4">
+               <property name="geometry">
+                <rect>
+                 <x>860</x>
+                 <y>510</y>
+                 <width>201</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #FFF;
+background: #AEC289;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+               </property>
+               <property name="text">
+                <string>Save changes</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="newpasslabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>270</y>
+                 <width>161</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 20px;</string>
+               </property>
+               <property name="text">
+                <string>New Password</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="curpasstextbox">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>180</y>
+                 <width>481</width>
+                 <height>41</height>
+                </rect>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="newpasstextbox">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>350</y>
+                 <width>481</width>
+                 <height>41</height>
+                </rect>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="accountpage">
+      <widget class="QPushButton" name="backtomainsettingbutton_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="editprofilecontainer_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>630</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #FAF9F6;</string>
+       </property>
+       <widget class="QWidget" name="textboxeditcontainer_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>29</x>
+          <y>0</y>
+          <width>1101</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 20px;
+background: #F4DBDB;</string>
+        </property>
+        <widget class="QLabel" name="profilelabel">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>10</y>
+           <width>101</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Profile</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="usernameprofile">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>100</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Username</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="fisrtnameprofile">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>200</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>First name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastnameprofile">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>200</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Last name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="genderprofile">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>300</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Gender</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="birthprofile">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>300</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Birthday</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="phoneprofile">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>400</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="emailprofile">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>400</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Email</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pictureprofile">
+         <property name="geometry">
+          <rect>
+           <x>870</x>
+           <y>70</y>
+           <width>160</width>
+           <height>160</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+border-radius: 80px;
+background: #cd4662;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="username">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>140</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>User1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="firstname">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>240</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Firsth name</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="gender">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>340</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Gender</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="phone">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>450</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastname">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>240</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>last name</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="birthday">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>350</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>User1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="email">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>450</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>User1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="editprofilesettingspage">
+      <widget class="QWidget" name="editprofilecontainer_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>630</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #FAF9F6;</string>
+       </property>
+       <widget class="QWidget" name="textboxeditcontainer_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>0</y>
+          <width>830</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 20px;
+background: #F4DBDB;</string>
+        </property>
+        <widget class="QLabel" name="editlabel_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>34</y>
+           <width>171</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Edit Profile</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="userabel_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>100</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Username</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="fisrtlabel_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>200</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>First name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastlabel_2">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>200</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Last name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="genlabel_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>300</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Gender</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="birthlabel_2">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>300</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Birthday</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pholabel_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>400</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="emaillabel_3">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>400</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Email</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="userbox_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>150</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Username</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="firstnamebox_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>250</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>First name</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="genderbox_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>350</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Gender</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="phonebox_2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>450</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lastnamebox_2">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>250</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Last name</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="emailbox_2">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>450</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Email</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="savechangebutton_3">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>530</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #FFF;
+background: #AEC289;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string>Save changes</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="deleteaccbutton_2">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>530</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #FFF;
+background: #cd4662;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string>Delete account</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="birthdaydateEdit_2">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>350</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDateTimeEdit {
+	background-color: #F4F2EF; 
+	font-size: 16px;
+	border: 2px solid #CD4662; 
+	padding: 5px;
+	border-radius: 5px; 
+}
+QDateTimeEdit::down-button, QDateTimeEdit::up-button {
+	width: 20px; 
+	height: 13px;
+	background-color: #F4F2EF; 
+	border: 2px solid #CD4662; 
+	font-size: 16px;
+}
+QDateTimeEdit::down-button {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+}
+
+QDateTimeEdit::up-button {
+	subcontrol-origin: border;
+	subcontrol-position: top right;
+}
+    
+QDateTimeEdit::down-button:pressed, QDateTimeEdit::up-button:pressed {
+	background-color: #CD4662;
+}
+    
+QDateTimeEdit::down-arrow, QDateTimeEdit::up-arrow {
+	image: url(arrow.png); 
+}</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="editprofilepic_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>0</y>
+          <width>160</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;
+border-radius: 80px;
+background: #cd4662;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="editnameprofile_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>190</y>
+          <width>165</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>User1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="backtomainsettingbutton_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="rulepage">
+      <widget class="QPushButton" name="backtomainsettingbutton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="ruleofusecontainer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>630</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: yellow;
+</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_ruleofuse">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_6">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1123</width>
+             <height>1518</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QFrame" name="frame_ruleofuse">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1500</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QLabel" name="ruleofuselabel">
+               <property name="geometry">
+                <rect>
+                 <x>450</x>
+                 <y>10</y>
+                 <width>231</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 30px;</string>
+               </property>
+               <property name="text">
+                <string>Rule of use</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="ruleofusecontentlabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>100</y>
+                 <width>1040</width>
+                 <height>531</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Eligibility: Users must be at least 18 years old or have the consent of a parent or legal guardian to use the app.
+
+Account Creation: Users must create an account to access certain features of the app, such as placing orders, tracking shipments, and saving payment methods.
+
+Accuracy of Information: Users are responsible for providing accurate and up-to-date information when creating an account, placing orders, and updating their profile.
+
+Security: Users are responsible for maintaining the security of their account credentials (username, password, etc.) and must not share this information with others.
+
+Prohibited Activities: Users must not engage in any illegal, fraudulent, or unauthorized activities while using the app. This includes but is not limited to hacking, phishing, and unauthorized access to other users' accounts.
+
+Intellectual Property: Users must respect the intellectual property rights of others, including copyrights, trademarks, and patents. Any use of copyrighted material must be done with proper authorization.
+
+Product Listings: Sellers must provide accurate and truthful information about their products, including descriptions, images, and pricing. Any misleading or deceptive practices are prohibited.
+
+Payment: Users must provide valid payment information when making purchases through the app. All transactions are subject to the app's payment policies and may be processed securely through a trusted payment gateway.
+
+Shipping and Delivery: Users should provide accurate shipping addresses to ensure timely delivery of their orders. The app will provide estimated delivery times, but delays may occur due to unforeseen circumstances such as weather or logistical issues.
+
+Returns and Refunds: Users may be eligible for returns and refunds according to the app's return policy. Any returned items must be in their original condition and packaging.
+
+User Conduct: Users must conduct themselves in a respectful and courteous manner when interacting with other users, sellers, and customer support representatives. Any harassment, bullying, or abusive behavior will not be tolerated.
+
+Feedback and Reviews: Users are encouraged to provide honest feedback and reviews about their shopping experience and the products they purchase. However, any reviews containing offensive language, personal attacks, or false information will be removed.
+
+Privacy: The app will collect and process personal information according to its privacy policy. Users should review the privacy policy to understand how their data is collected, used, and protected.
+
+Updates and Modifications: The app reserves the right to update or modify these rules of use at any time. Users will be notified of any changes, and continued use of the app constitutes acceptance of the revised rules.
+
+Termination of Account: The app reserves the right to suspend or terminate user accounts that violate these rules of use or engage in prohibited activities. Users will be notified of any account suspensions or terminations and may appeal the decision if necessary.</string>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="canceladdproductbutton_2">
+   <property name="geometry">
+    <rect>
+     <x>998</x>
+     <y>761</y>
+     <width>157</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {	
+	border-radius: 5px;
+	background: #AEC289;
+	color: #FFF;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+QPushButton:hover {
+	background: #F4DBDB;
+	color: #545454;
+}</string>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addproductbutton_2">
+   <property name="geometry">
+    <rect>
+     <x>1206</x>
+     <y>761</y>
+     <width>204</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	border-radius: 5px;
+	background: #CD4662;
+	color: #FFF;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+QPushButton:hover {
+	background: #F4DBDB;
+	color: #545454;
+}</string>
+   </property>
+   <property name="text">
+    <string>Add Product</string>
+   </property>
   </widget>
  </widget>
  <resources>

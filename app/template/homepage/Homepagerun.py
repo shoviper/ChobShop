@@ -1,6 +1,7 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QSizePolicy
 from PySide6.QtGui import QPixmap
+from PySide6 import QtCore
 # from Homepage import Ui_MainWindow
 # from .Homepage_newres_ui import *
 from .realhomepage_ui import *
@@ -327,6 +328,7 @@ class HomepageWindow(QMainWindow):
         self.ui.allproductbutton_admin.setStyleSheet(active_orderbutton_style)
 
         self.ui.producttypesbutton_admin.clicked.connect(self.go_to_producttype_admin)
+
     def go_to_producttype_admin(self):
             self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminproducttypespage)
             self.ui.producttypesbutton_admin.setStyleSheet(active_orderbutton_style)
@@ -339,17 +341,108 @@ class HomepageWindow(QMainWindow):
 
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
 
+        self.ui.addsizeproductbutton.clicked.connect(self.add_size)
+        self.size_len = 0
+        self.ui.addoptionproductbutton.clicked.connect(self.add_option)
+        self.option_len = 0
+
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
+
+    def add_size(self):
+        print("add size")
+        addsize_geometry = self.ui.addsizeproductbutton.geometry()
+        x_coordinate = addsize_geometry.x()
+        y_coordinate = addsize_geometry.y()
+        width = addsize_geometry.width()
+        height = addsize_geometry.height()
+        self.ui.addsizeproductbutton.setGeometry(x_coordinate + width + 10, y_coordinate, width, height)
+        self.size_len += 1
+        size = QLineEdit()
+        size.setAlignment(QtCore.Qt.AlignCenter) 
+        size.setObjectName(f"size_{self.size_len}")
+        size.setGeometry(x_coordinate, y_coordinate, width, height)
+        size.setMinimumHeight(38)
+        size.setMinimumWidth(108)
+        size.setMaximumHeight(38)
+        size.setMaximumWidth(108)
+        size.setStyleSheet("border-radius: 5px; background: #EDEDED; padding: 5px; font-size: 16px; text-align: center;")
+
+        frame_layout = self.ui.frame_sizes.layout()
+        frame_layout.insertWidget(self.size_len - 1, size)
+
+    def add_option(self):
+        print("add option")
+        addoption_geometry = self.ui.addoptionproductbutton.geometry()
+        x_coordinate = addoption_geometry.x()
+        y_coordinate = addoption_geometry.y()
+        width = addoption_geometry.width()
+        height = addoption_geometry.height()
+        self.ui.addoptionproductbutton.setGeometry(x_coordinate + width + 10, y_coordinate, width, height)
+        self.option_len += 1
+        option = QLineEdit()
+        option.setAlignment(QtCore.Qt.AlignCenter) 
+        option.setObjectName(f"option_{self.option_len}")
+        option.setGeometry(x_coordinate, y_coordinate, width, height)
+        option.setMinimumHeight(38)
+        option.setMinimumWidth(108)
+        option.setMaximumHeight(38)
+        option.setMaximumWidth(108)
+        option.setStyleSheet("border-radius: 5px; background: #EDEDED; padding: 5px; font-size: 16px; text-align: center;")
+
+        frame_layout = self.ui.frame_options.layout()
+        frame_layout.insertWidget(self.option_len - 1, option)
+
+    def add_categories(self):
+        print("add categories")
+        men = self.ui.checkBox_men.isChecked()
+        women = self.ui.checkBox_women.isChecked()
+        kids = self.ui.checkBox_kids.isChecked()
+        top = self.ui.checkBox_top.isChecked()
+        bottom = self.ui.checkBox_bottom.isChecked()
+        dress = self.ui.checkBox_dress.isChecked()
+        footwear = self.ui.checkBox_footwear.isChecked()
+        headwear = self.ui.checkBox_headwear.isChecked()
+        accessories = self.ui.checkBox_accessories.isChecked()
+
+        categories = []
+
+        if men == True:
+            categories.append("Men")
+        if women == True:
+            categories.append("Women")
+        if kids == True:
+            categories.append("Kids")
+        if top == True:
+            categories.append("Top")
+        if bottom == True:
+            categories.append("Bottom")
+        if dress == True:
+            categories.append("Dress")
+        if footwear == True:
+            categories.append("Footwear")
+        if headwear == True:
+            categories.append("Headwear")
+        if accessories == True:
+            categories.append("Accessories")
+
+        return categories
 
     def add_product(self):
         productname = self.ui.addproductnametextbox.text()
         description = self.ui.addproductdescriptiontextbox.toPlainText()
         price = self.ui.addproductpricespinbox.value()
-        sizes = ["S", "M", "L", "XL"]
-        options = ["Red", "Blue", "Green"]
+        sizes = []
+        options = []
+        for i in range(1, self.size_len + 1):
+            size = self.ui.frame_sizes.findChild(QLineEdit, f"size_{i}")
+            sizes.append(size.text())
+        for i in range(1, self.option_len + 1):
+            option = self.ui.frame_options.findChild(QLineEdit, f"option_{i}")
+            options.append(option.text())
         stock = self.ui.addproductstockspinbox.value()
-        categories = ["men", "top"]
+        categories = self.add_categories()
+
         addproduct(productname, description, price, sizes, options, stock, categories)
 
     def go_to_order(self):
