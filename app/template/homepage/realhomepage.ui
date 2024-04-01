@@ -38,7 +38,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="settingsnouse">
     <layout class="QVBoxLayout" name="verticalLayout_5"/>
@@ -75,7 +75,6 @@
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
-           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -421,7 +420,7 @@ border: none;</string>
       <string notr="true">background-color: #FAF9F6;</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="homepage">
       <widget class="QScrollArea" name="scrollArea_homepage">
@@ -549,7 +548,7 @@ QPushButton:hover {
            <string>New Arrival</string>
           </property>
           <property name="icon">
-           <iconset resource="../../assets/realsourceimg/realpicforuse.qrc">
+           <iconset>
             <normaloff>:/pic/images/newres/newarrival.png</normaloff>:/pic/images/newres/newarrival.png</iconset>
           </property>
           <property name="iconSize">
@@ -590,7 +589,7 @@ QPushButton:hover {
            <string>On Sales</string>
           </property>
           <property name="icon">
-           <iconset resource="../../assets/realsourceimg/realpicforuse.qrc">
+           <iconset>
             <normaloff>:/pic/images/newres/onsales.png</normaloff>:/pic/images/newres/onsales.png</iconset>
           </property>
           <property name="iconSize">
@@ -631,7 +630,7 @@ QPushButton:hover {
            <string>Buy Again</string>
           </property>
           <property name="icon">
-           <iconset resource="../../assets/realsourceimg/realpicforuse.qrc">
+           <iconset>
             <normaloff>:/pic/images/newres/buyagain.png</normaloff>:/pic/images/newres/buyagain.png</iconset>
           </property>
           <property name="iconSize">
@@ -672,7 +671,7 @@ QPushButton:hover {
            <string>Best Selling</string>
           </property>
           <property name="icon">
-           <iconset resource="../../assets/realsourceimg/realpicforuse.qrc">
+           <iconset>
             <normaloff>:/pic/images/newres/bestselling.png</normaloff>:/pic/images/newres/bestselling.png</iconset>
           </property>
           <property name="iconSize">
@@ -928,8 +927,8 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>67</width>
-            <height>2018</height>
+            <width>992</width>
+            <height>2024</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2407,8 +2406,8 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>998</width>
-            <height>1518</height>
+            <width>61</width>
+            <height>1524</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -4573,7 +4572,7 @@ QScrollBar::handle:vertical:hover {
                <x>0</x>
                <y>0</y>
                <width>1006</width>
-               <height>1338</height>
+               <height>1344</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -5239,7 +5238,7 @@ border: none;</string>
                   <string>     Add Product</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="../../assets/realsourceimg/realpicforuse.qrc">
+                  <iconset>
                    <normaloff>:/pic/images/newres/image.png</normaloff>:/pic/images/newres/image.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -5417,8 +5416,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>998</width>
-                     <height>1518</height>
+                     <width>61</width>
+                     <height>1524</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -5670,8 +5669,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>998</width>
-                     <height>1518</height>
+                     <width>992</width>
+                     <height>1524</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_27">
@@ -6031,7 +6030,7 @@ QScrollBar::handle:vertical:hover {
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-480</y>
+                 <y>0</y>
                  <width>1006</width>
                  <height>1400</height>
                 </rect>
@@ -6152,7 +6151,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1218</width>
+                         <width>1224</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -6211,7 +6210,7 @@ line-height: normal;</string>
                             <string>Product's Images</string>
                            </property>
                           </widget>
-                          <widget class="QPushButton" name="addimagebutton_5">
+                          <widget class="QPushButton" name="addimagebutton">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -6236,135 +6235,66 @@ QPushButton:hover {
                            <property name="text">
                             <string>+</string>
                            </property>
-                          </widget>
-                          <widget class="QPushButton" name="addimagebutton_6">
-                           <property name="geometry">
-                            <rect>
-                             <x>201</x>
-                             <y>45</y>
+                           <property name="iconSize">
+                            <size>
                              <width>151</width>
                              <height>151</height>
+                            </size>
+                           </property>
+                          </widget>
+                          <widget class="QLabel" name="img_1">
+                           <property name="geometry">
+                            <rect>
+                             <x>5</x>
+                             <y>50</y>
+                             <width>141</width>
+                             <height>141</height>
                             </rect>
                            </property>
                            <property name="styleSheet">
+                            <string notr="true">image: url(:/pic/product_img/IMG_2025.JPG)</string>
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="delete_pic_button_1">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="geometry">
+                            <rect>
+                             <x>130</x>
+                             <y>30</y>
+                             <width>31</width>
+                             <height>32</height>
+                            </rect>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
+                           <property name="autoFillBackground">
+                            <bool>false</bool>
+                           </property>
+                           <property name="styleSheet">
                             <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
+	border-radius: 25px;
+	border-color: rgb(217, 217, 217);
+	border-width: 2px;
 	background: #FAF9F6;
 	color: #D9D9D9;
 }
 QPushButton:hover {
 	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
+	color: rgb(116,23,17);
+	background-color: rgb(237,106,94);
 }</string>
                            </property>
                            <property name="text">
-                            <string>+</string>
-                           </property>
-                          </widget>
-                          <widget class="QPushButton" name="addimagebutton_23">
-                           <property name="geometry">
-                            <rect>
-                             <x>402</x>
-                             <y>45</y>
-                             <width>151</width>
-                             <height>151</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>+</string>
-                           </property>
-                          </widget>
-                          <widget class="QPushButton" name="addimagebutton_24">
-                           <property name="geometry">
-                            <rect>
-                             <x>603</x>
-                             <y>45</y>
-                             <width>151</width>
-                             <height>151</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>+</string>
-                           </property>
-                          </widget>
-                          <widget class="QPushButton" name="addimagebutton_25">
-                           <property name="geometry">
-                            <rect>
-                             <x>804</x>
-                             <y>45</y>
-                             <width>151</width>
-                             <height>151</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>+</string>
-                           </property>
-                          </widget>
-                          <widget class="QPushButton" name="addimagebutton_26">
-                           <property name="geometry">
-                            <rect>
-                             <x>1005</x>
-                             <y>45</y>
-                             <width>151</width>
-                             <height>151</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>+</string>
+                            <string>X</string>
                            </property>
                           </widget>
                          </widget>
@@ -7283,8 +7213,8 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1247</width>
-          <height>1018</height>
+          <width>61</width>
+          <height>1024</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -8281,8 +8211,8 @@ image: url(:/pic/realimages/backhomoe.png);</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1123</width>
-             <height>1518</height>
+             <width>1118</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -8528,8 +8458,8 @@ image: url(:/pic/realimages/backhomoe.png);</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1123</width>
-             <height>1518</height>
+             <width>1118</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -9632,8 +9562,8 @@ image: url(:/pic/realimages/backhomoe.png);</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1123</width>
-             <height>1518</height>
+             <width>1118</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">

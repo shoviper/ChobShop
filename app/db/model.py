@@ -14,12 +14,16 @@ class Product(persistent.Persistent):
         self.options = options
         self.stock = stock
         self.categories = categories
+        self.img = []
         self.sold = 0
         self.reviews = []
         self.publishedDate = datetime.datetime.now()
 
     def add_review(self, review):
         self.reviews[datetime.datetime.now()] = review
+        
+    def add_img(self, img):
+        self.img.append(img)
 
     def toJSON(self):
         return {
@@ -42,9 +46,11 @@ class ProductDatabase(persistent.Persistent):
         self.products = {}
         self.next_id = 1
 
-    def add_product(self, name, description, price, sizes, options, stock, categories):
+    def add_product(self, name, description, price, sizes, options, stock, categories, img=[]):
         product_id = self.next_id
         product = Product(product_id, name, description, price, sizes, options, stock, categories)
+        for i in img:
+            product.add_img(i)
         self.products[product_id] = product
         self.next_id += 1
         return product_id

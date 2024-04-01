@@ -14,7 +14,7 @@ else:
     for product_id, product in root.ProductDatabase.products.items():
         print(product_id, product)
 
-def addproduct(productname, description, price, sizes, options, stock, categories):
+def addproduct(productname, description, price, sizes, options, stock, categories, img=[]):
     user = root.LoggedInUser.user.username
     print("productname: ", productname)
     print("description: ", description)
@@ -23,6 +23,8 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
     print("options: ", options)
     print("category: ", categories)
     print("stock: ", stock, "\n=====================")
+    
+    
     if user not in root.adminUsers:
         return False
     else:
@@ -45,12 +47,15 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
             stock=stock,
             categories=categories
         )
+        
+        for i in img:
+            root.ProductDatabase.products[new_product_id].add_img(i)
+        
         transaction.commit()
         
-    
-        print("new_product_id: ", new_product_id)
+        # print("new_product_id: ", new_product_id)
         
-        print("++++++++++++++++++++++++++++++")
-        print("All products: ", root.ProductDatabase)
+        # print("++++++++++++++++++++++++++++++")
+        # print("All products: ", root.ProductDatabase)
 
     return True

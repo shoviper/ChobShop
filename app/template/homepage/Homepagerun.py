@@ -1,5 +1,8 @@
+import shutil
+import os
+import xml.etree.ElementTree as ET
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QSizePolicy
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QSizePolicy, QFileDialog
 from PySide6.QtGui import QPixmap
 from PySide6 import QtCore
 # from Homepage import Ui_MainWindow
@@ -345,9 +348,142 @@ class HomepageWindow(QMainWindow):
         self.size_len = 0
         self.ui.addoptionproductbutton.clicked.connect(self.add_option)
         self.option_len = 0
-
+        
+        self.product_img = 1
+        self.ui.img_1.setVisible(False)
+        self.ui.delete_pic_button_1.setVisible(False)
+        self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_1, self.ui.img_1, self.ui.delete_pic_button_1))
+        # self.ui.img_2.setVisible(False)
+        # self.ui.delete_pic_button_2.setVisible(False)
+        # self.ui.delete_pic_button_2.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
+        # self.ui.img_3.setVisible(False)
+        # self.ui.delete_pic_button_3.setVisible(False)
+        # self.ui.delete_pic_button_3.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_3, self.ui.img_3, self.ui.delete_pic_button_3))
+        # self.ui.img_4.setVisible(False)
+        # self.ui.delete_pic_button_4.setVisible(False)
+        # self.ui.delete_pic_button_4.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_4, self.ui.img_4, self.ui.delete_pic_button_4))
+        # self.ui.img_5.setVisible(False)
+        # self.ui.delete_pic_button_5.setVisible(False)
+        # self.ui.delete_pic_button_5.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_5, self.ui.img_5, self.ui.delete_pic_button_5))
+        # self.ui.img_6.setVisible(False)
+        # self.ui.delete_pic_button_6.setVisible(False)
+        # self.ui.delete_pic_button_6.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_6, self.ui.img_6, self.ui.delete_pic_button_6))
+        
+        self.ui.addimagebutton.clicked.connect(self.add_img)
+        # self.ui.addimagebutton.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_1, self.ui.img_1, self.ui.delete_pic_button_1))
+        # self.ui.addimagebutton_2.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
+        # self.ui.addimagebutton_3.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_3, self.ui.img_3, self.ui.delete_pic_button_3))
+        # self.ui.addimagebutton_4.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_4, self.ui.img_4, self.ui.delete_pic_button_4))
+        # self.ui.addimagebutton_5.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_5, self.ui.img_5, self.ui.delete_pic_button_5))
+        # self.ui.addimagebutton_6.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_6, self.ui.img_6, self.ui.delete_pic_button_6))
+        
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
+    
+    def add_img(self):
+        addoption_geometry = self.ui.addimagebutton.geometry()
+        x_coordinate = addoption_geometry.x()
+        y_coordinate = addoption_geometry.y()
+        width = addoption_geometry.width()
+        height = addoption_geometry.height()
+        self.ui.addimagebutton.setGeometry(x_coordinate + 201, y_coordinate, width, height)
+        self.product_img += 1
+        imgbutton = QPushButton()
+        # imgbutton.setAlignment(QtCore.Qt.AlignCenter)
+        imgbutton.setObjectName(f"addimagebutton_{self.option_len}")
+        imgbutton.setGeometry(x_coordinate, y_coordinate, width, height)
+        imgbutton.setMinimumHeight(151)
+        imgbutton.setMinimumWidth(151)
+        imgbutton.setMaximumHeight(151)
+        imgbutton.setMaximumWidth(151)
+        imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
+
+        frame_layout = self.ui.frame_options.layout()
+        frame_layout.insertWidget(self.option_len - 1, imgbutton)
+
+    
+    def add_product_img(self, button, img, delete):
+        fname = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\', "Image files (*.jpg *.png)")
+        
+        if fname:
+            print("fname: ", fname)
+            pixmap = QPixmap(fname[0])
+            
+            if pixmap.width() > pixmap.height():
+                aspect_ratio = pixmap.height() / pixmap.width()
+                label_width = 141
+                label_height = int(label_width * aspect_ratio)
+                img.setFixedSize(label_width, label_height)
+            else:
+                aspect_ratio = pixmap.width() / pixmap.height()
+                label_height = 141
+                label_width = int(label_height * aspect_ratio)
+                img.setFixedSize(label_width, label_height)
+            
+            img.setAlignment(QtCore.Qt.AlignCenter)
+            
+            self.product_img += 1
+            img.setVisible(True)
+            delete.setVisible(True)
+            # button.setVisible(True)
+            img.setPixmap(pixmap)
+            img.setScaledContents(True)
+            
+            self.add_img_to_folder(fname)
+            self.add_img_to_stylesheet(fname)
+            
+    def delete_product_img(self, button, img, delete):
+        img.setVisible(False)
+        button.setVisible(True)
+        self.product_img -= 1
+        delete.setVisible(False)
+        
+    def add_img_to_folder(self, img):
+        # Copy the image file to the product_img folder
+        shutil.copy(img[0], 'app/assets/product_img/')
+        
+        qrc_file_path = 'app/assets/realsourceimg/realpicforuse.qrc'
+        tree = ET.parse(qrc_file_path)
+        root = tree.getroot()
+        
+        # Check if the file already exists in the .qrc file
+        existing_files = [file_elem.text for file_elem in root.findall("./qresource[@prefix='pic']/file")]
+        img_basename = os.path.basename(img[0])
+        if img_basename not in existing_files:
+            # Create a new <file> element with the path of the copied image file
+            new_file_element = ET.Element("file")
+            new_file_element.text = f"../product_img/{img_basename}"
+            
+            # Append the new <file> element to the existing <qresource> element
+            qresource_element = root.find("./qresource[@prefix='pic']")
+            qresource_element.append(new_file_element)
+            
+            # Write the modified XML back to the .qrc file
+            tree.write(qrc_file_path)
+
+        
+    def add_img_to_stylesheet(self, img):
+        # Open the realhomepage_ui.py file for reading
+        file_path = 'app/template/homepage/realhomepage_ui.py'  # Replace with the actual path to your realhomepage_ui.py file
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+
+        # Find the line number where to insert the stylesheet
+        insert_line_number = None
+        for i, line in enumerate(lines):
+            if 'self.img_1.setGeometry(' in line:
+                insert_line_number = i + 1
+                break
+
+        # Insert the new line
+        if insert_line_number is not None:
+            lines.insert(insert_line_number, f'        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/{os.path.basename(img[0])})")\n')
+
+            # Write the modified content back to the file
+            with open(file_path, 'w') as file:
+                file.writelines(lines)
+        else:
+            print("Error: Line to insert stylesheet not found.")
 
     def add_size(self):
         print("add size")
@@ -442,8 +578,10 @@ class HomepageWindow(QMainWindow):
             options.append(option.text())
         stock = self.ui.addproductstockspinbox.value()
         categories = self.add_categories()
+        
 
         addproduct(productname, description, price, sizes, options, stock, categories)
+        print("product added")
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
