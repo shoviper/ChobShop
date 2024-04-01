@@ -352,7 +352,7 @@ class HomepageWindow(QMainWindow):
         self.product_img = 1
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
-        self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_1, self.ui.img_1, self.ui.delete_pic_button_1))
+        self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
         # self.ui.img_2.setVisible(False)
         # self.ui.delete_pic_button_2.setVisible(False)
         # self.ui.delete_pic_button_2.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
@@ -370,7 +370,7 @@ class HomepageWindow(QMainWindow):
         # self.ui.delete_pic_button_6.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_6, self.ui.img_6, self.ui.delete_pic_button_6))
         
         self.ui.addimagebutton.clicked.connect(self.add_img)
-        # self.ui.addimagebutton.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_1, self.ui.img_1, self.ui.delete_pic_button_1))
+        self.ui.addimagebutton.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
         # self.ui.addimagebutton_2.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
         # self.ui.addimagebutton_3.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_3, self.ui.img_3, self.ui.delete_pic_button_3))
         # self.ui.addimagebutton_4.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_4, self.ui.img_4, self.ui.delete_pic_button_4))
@@ -425,7 +425,7 @@ class HomepageWindow(QMainWindow):
             self.product_img += 1
             img.setVisible(True)
             delete.setVisible(True)
-            # button.setVisible(True)
+            button.setVisible(False)
             img.setPixmap(pixmap)
             img.setScaledContents(True)
             

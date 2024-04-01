@@ -20,6 +20,5 @@
     <file>../realimages/exitpic.png</file>
     <file>../realimages/profilepic.png</file>
     <file>../realimages/settingpic.png</file>
-  <file>
-../product_img/chart.png</file></qresource>
+  </qresource>
 </RCC>
