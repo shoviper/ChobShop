@@ -20,8 +20,8 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QDateEdit, QFrame,
     QLineEdit, QPlainTextEdit, QPushButton, QScrollArea,
     QSizePolicy, QSpacerItem, QSpinBox, QStackedWidget,
     QVBoxLayout, QWidget)
-import app.assets.realsourceimg.real
 
+import app.assets.realsourceimg.real
 
 class Ui_Main(object):
     def setupUi(self, Main):
@@ -4543,6 +4543,12 @@ class Ui_Main(object):
         self.img_1 = QLabel(self.frame_addimageproduct)
         self.img_1.setObjectName(u"img_1")
         self.img_1.setGeometry(QRect(5, 50, 141, 141))
+        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/Screenshot 2024-04-02 174038.png)")
+        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/Screenshot 2024-04-02 174038.png)")
+        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/Desktop Wallpaper New Jeans.png)")
+        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/Screenshot (91).png)")
+        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/Screenshot 2023-12-26 205414.png)")
+        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/Screenshot 2024-03-18 224613.png)")
         self.img_1.setStyleSheet(u"image: url(:/pic/product_img/IMG_2025.JPG)")
         self.img_1.setAlignment(Qt.AlignCenter)
         self.delete_pic_button_1 = QPushButton(self.frame_addimageproduct)

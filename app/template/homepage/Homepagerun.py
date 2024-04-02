@@ -424,6 +424,7 @@ class HomepageWindow(QMainWindow):
     
     def add_img(self):
         if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1):
+            print("add img")
             addoption_geometry = self.ui.addimagebutton.geometry()
             x_coordinate = addoption_geometry.x()
             y_coordinate = addoption_geometry.y()
@@ -431,20 +432,14 @@ class HomepageWindow(QMainWindow):
             height = addoption_geometry.height()
             self.ui.addimagebutton.setGeometry(x_coordinate + 201, y_coordinate, width, height)
             self.product_img += 1
-            imgbutton = QPushButton()
-            # imgbutton.setAlignment(QtCore.Qt.AlignCenter)
+            imgbutton = QPushButton(self.ui.frame_addimageproduct)
             imgbutton.setObjectName(f"addimagebutton_{self.option_len}")
             imgbutton.setGeometry(x_coordinate, y_coordinate, width, height)
-            imgbutton.setMinimumHeight(151)
-            imgbutton.setMinimumWidth(151)
-            imgbutton.setMaximumHeight(151)
-            imgbutton.setMaximumWidth(151)
+            imgbutton.setMinimumSize(151, 151)
+            imgbutton.setMaximumSize(151, 151)
             imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
 
-            frame_layout = self.ui.frame_options.layout()
-            frame_layout.insertWidget(self.option_len - 1, imgbutton)
 
-    
     def add_product_img(self, button, img, delete):
         fname = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\', "Image files (*.jpg *.png)")
         
