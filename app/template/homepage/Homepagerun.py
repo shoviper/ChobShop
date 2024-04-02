@@ -508,7 +508,7 @@ class HomepageWindow(QMainWindow):
                 pic.setAlignment(QtCore.Qt.AlignCenter)
                 pic.setVisible(True)
                 delete_butt.setVisible(True)
-                delete_butt.clicked.connect(lambda: self.delete_product_img(button, pic, delete_butt))
+                delete_butt.clicked.connect(lambda: self.delete_product_img(button, pic, delete_butt, fname[0]))
                 pic.setPixmap(pixmap)
                 pic.setScaledContents(True)
                 
@@ -519,55 +519,57 @@ class HomepageWindow(QMainWindow):
                 return True
         return False
             
-    def delete_product_img(self, button, img, delete):
+    def delete_product_img(self, button, img, delete, img_path):
         geometry = button.geometry()
         button.setGeometry(geometry.x() - 201, geometry.y(), 141, 141)
         img.setVisible(False)
         self.product_img -= 1
         delete.setVisible(False)
+
+        img_name = os.path.basename(img_path)
+        img_path = f"app/assets/product_img/{img_name}"
+        try:
+            os.remove(img_path)
+            print(f"Deleted image file: {img_path}")
+        except OSError as e:
+            print(f"Error deleting image file {img_path}: {e}")
+        update_qrc_file(img_name=os.path.basename(img_path))
         
     def add_img_to_folder(self, img):
-        # Copy the image file to the product_img folder
         shutil.copy(img[0], 'app/assets/product_img/')
         
         qrc_file_path = 'app/assets/realsourceimg/realpicforuse.qrc'
         tree = ET.parse(qrc_file_path)
         root = tree.getroot()
         
-        # Check if the file already exists in the .qrc file
         existing_files = [file_elem.text for file_elem in root.findall("./qresource[@prefix='pic']/file")]
         img_basename = os.path.basename(img[0])
         if img_basename not in existing_files:
-            # Create a new <file> element with the path of the copied image file
             new_file_element = ET.Element("file")
             new_file_element.text = f"../product_img/{img_basename}"
             
-            # Append the new <file> element to the existing <qresource> element
             qresource_element = root.find("./qresource[@prefix='pic']")
             qresource_element.append(new_file_element)
             
-            # Write the modified XML back to the .qrc file
             tree.write(qrc_file_path)
-
         
     def add_img_to_stylesheet(self, img):
-        # Open the realhomepage_ui.py file for reading
-        file_path = 'app/template/homepage/realhomepage_ui.py'  # Replace with the actual path to your realhomepage_ui.py file
-        with open(file_path, 'r') as file:
-            lines = file.readlines()
+        file_path = 'app/template/homepage/realhomepage_ui.py'  
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                lines = file.readlines()
+        except UnicodeDecodeError:
+            print("Error: Unable to decode the file with utf-8 encoding.")
 
-        # Find the line number where to insert the stylesheet
         insert_line_number = None
         for i, line in enumerate(lines):
             if 'self.img_1.setGeometry(' in line:
                 insert_line_number = i + 1
                 break
 
-        # Insert the new line
         if insert_line_number is not None:
             lines.insert(insert_line_number, f'        self.img_1.setStyleSheet(u"image: url(:/pic/product_img/{os.path.basename(img[0])})")\n')
 
-            # Write the modified content back to the file
             with open(file_path, 'w') as file:
                 file.writelines(lines)
             # return f"image: url(:/pic/product_img/{os.path.basename(img[0])})"

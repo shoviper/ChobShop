@@ -59,3 +59,22 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
         # print("All products: ", root.ProductDatabase)
 
     return True
+
+
+def update_qrc_file(self, img_name):
+    qrc_file_path = 'app/assets/realsourceimg/realpicforuse.qrc'  
+    try:
+        with open(qrc_file_path, 'r') as file:
+            lines = file.readlines()
+    except IOError as e:
+        print(f"Error reading .qrc file: {e}")
+        return
+
+    updated_lines = [line for line in lines if img_name not in line]
+
+    try:
+        with open(qrc_file_path, 'w') as file:
+            file.writelines(updated_lines)
+        print(f"Updated .qrc file: {qrc_file_path}")
+    except IOError as e:
+        print(f"Error writing .qrc file: {e}")

@@ -1,6 +1,5 @@
 <RCC>
   <qresource prefix="pic">
-    <file>../images/newres/reviews.png</file>
     <file>../images/newres/image.png</file>
     <file>../images/star.png</file>
     <file>../images/baht.png</file>
@@ -20,5 +19,4 @@
     <file>../realimages/exitpic.png</file>
     <file>../realimages/profilepic.png</file>
     <file>../realimages/settingpic.png</file>
-  <file>../product_img/IMG_9834.PNG</file><file>../product_img/IMG_2026.JPG</file><file>../product_img/IMG_2025.JPG</file></qresource>
 </RCC>
