@@ -391,7 +391,7 @@ class HomepageWindow(QMainWindow):
         self.ui.addoptionproductbutton.clicked.connect(self.add_option)
         self.option_len = 0
         
-        self.product_img = 1
+        self.product_img = 0
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
         self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
@@ -425,59 +425,104 @@ class HomepageWindow(QMainWindow):
     def add_img(self):
         if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1):
             print("add img")
+            # self.product_img += 1
             addoption_geometry = self.ui.addimagebutton.geometry()
             x_coordinate = addoption_geometry.x()
             y_coordinate = addoption_geometry.y()
             width = addoption_geometry.width()
             height = addoption_geometry.height()
             self.ui.addimagebutton.setGeometry(x_coordinate + 201, y_coordinate, width, height)
-            self.product_img += 1
             imgbutton = QPushButton(self.ui.frame_addimageproduct)
-            imgbutton.setObjectName(f"addimagebutton_{self.option_len}")
+            imgbutton.setObjectName(f"addimagebutton_{self.product_img}")
             imgbutton.setGeometry(x_coordinate, y_coordinate, width, height)
             imgbutton.setMinimumSize(151, 151)
             imgbutton.setMaximumSize(151, 151)
             imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
 
-
     def add_product_img(self, button, img, delete):
         fname = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\', "Image files (*.jpg *.png)")
-        
-        pixmap = QPixmap(fname[0])
-        if fname and (pixmap.width() != 0 or pixmap.height() != 0):
-            print("fname: ", fname)
-            
-            if pixmap.width() > pixmap.height():
-                aspect_ratio = pixmap.height() / pixmap.width()
-                label_width = 141
-                label_height = int(label_width * aspect_ratio)
-                img.setFixedSize(label_width, label_height)
-            else:
-                aspect_ratio = pixmap.width() / pixmap.height()
-                label_height = 141
-                label_width = int(label_height * aspect_ratio)
-                img.setFixedSize(label_width, label_height)
-            
-            img.setAlignment(QtCore.Qt.AlignCenter)
-            
+        if fname[0]:
             self.product_img += 1
-            img.setVisible(True)
-            delete.setVisible(True)
-            button.setVisible(False)
-            img.setPixmap(pixmap)
-            img.setScaledContents(True)
+            print("self.product_img = ", self.product_img)
             
-            self.add_img_to_folder(fname)
-            self.add_img_to_stylesheet(fname)
+            addoption_geometry2 = self.ui.img_1.geometry()
+            x_coordinate = addoption_geometry2.x()
+            y_coordinate = addoption_geometry2.y()
+            width = addoption_geometry2.width()
+            height = addoption_geometry2.height()
+            
+            imglabel = QLabel(self.ui.frame_addimageproduct)
+            imglabel.setObjectName(f"imglabel_{self.product_img}")
+            print(f"setObjectName(imglabel_{self.product_img}")
+            imglabel.setGeometry(QRect(5, 50, 141, 141))
+            imglabel.setMinimumSize(141, 141)
+            imglabel.setMaximumSize(141, 141)
+            imglabel.setGeometry(x_coordinate + (201*(self.product_img - 1)), y_coordinate, width, height)
+            # imglabel.setStyleSheet(u"image: url(:/pic/product_img/Screen Shot 2565-01-19 at 12.52.21.png)")
+            
+            addoption_geometry3 = self.ui.delete_pic_button_1.geometry()
+            x_coordinate = addoption_geometry3.x()
+            y_coordinate = addoption_geometry3.y()
+            width = addoption_geometry3.width()
+            height = addoption_geometry3.height()
+            
+            delete_img_button = QPushButton(self.ui.frame_addimageproduct)
+            delete_img_button.setObjectName(f"delete_pic_button_{self.product_img}")
+            delete_img_button.setEnabled(True)
+            delete_img_button.setGeometry(QRect(130, 30, 31, 32))
+            delete_img_button.setGeometry(x_coordinate + (201*(self.product_img - 1)), y_coordinate, width, height)
+            delete_img_button.setCursor(QCursor(Qt.PointingHandCursor))
+            delete_img_button.setAutoFillBackground(False)
+            delete_img_button.setStyleSheet(u"QPushButton {\n"
+    "	border-radius: 25px;\n"
+    "	border-color: rgb(217, 217, 217);\n"
+    "	border-width: 2px;\n"
+    "	background: #FAF9F6;\n"
+    "	color: #D9D9D9;\n"
+    "}\n"
+    "QPushButton:hover {\n"
+    "	border-color: #CD4662;\n"
+    "	color: rgb(116,23,17);\n"
+    "	background-color: rgb(237,106,94);\n"
+    "}")
+                
+            pixmap = QPixmap(fname[0])
+            if fname and (pixmap.width() != 0 or pixmap.height() != 0):
+                print("fname: ", fname)
+                
+                print(f"imglabel_{self.product_img}")
+                pic = self.ui.frame_addimageproduct.findChild(QLabel, f"imglabel_{self.product_img}")
+                delete_butt = self.ui.frame_addimageproduct.findChild(QPushButton, f"delete_pic_button_{self.product_img}")
+                
+                if pixmap.width() > pixmap.height():
+                    aspect_ratio = pixmap.height() / pixmap.width()
+                    label_width = 141
+                    label_height = int(label_width * aspect_ratio)
+                    pic.setFixedSize(label_width, label_height)
+                else:
+                    aspect_ratio = pixmap.width() / pixmap.height()
+                    label_height = 141
+                    label_width = int(label_height * aspect_ratio)
+                    pic.setFixedSize(label_width, label_height)
+                
+                pic.setAlignment(QtCore.Qt.AlignCenter)
+                pic.setVisible(True)
+                delete_butt.setVisible(True)
+                delete_butt.clicked.connect(lambda: self.delete_product_img(button, pic, delete_butt))
+                pic.setPixmap(pixmap)
+                pic.setScaledContents(True)
+                
+                
+                self.add_img_to_folder(fname)
+                self.add_img_to_stylesheet(fname)
 
-            return True
+                return True
         return False
             
     def delete_product_img(self, button, img, delete):
-        geometry = self.ui.addimagebutton.geometry()
-        self.ui.addimagebutton.setGeometry(geometry.x() - 201, geometry.y(), 141, 141)
+        geometry = button.geometry()
+        button.setGeometry(geometry.x() - 201, geometry.y(), 141, 141)
         img.setVisible(False)
-        button.setVisible(True)
         self.product_img -= 1
         delete.setVisible(False)
         
@@ -525,6 +570,7 @@ class HomepageWindow(QMainWindow):
             # Write the modified content back to the file
             with open(file_path, 'w') as file:
                 file.writelines(lines)
+            # return f"image: url(:/pic/product_img/{os.path.basename(img[0])})"
         else:
             print("Error: Line to insert stylesheet not found.")
 
