@@ -107,7 +107,7 @@ class HomepageWindow(QMainWindow):
             self.ui.loginsignoutbutton.clicked.connect(self.go_to_userprofile)
             
         #stackmain
-        self.ui.exitbutton.clicked.connect(self.back_to_login)
+        self.ui.logoutsettingsbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
@@ -127,6 +127,26 @@ class HomepageWindow(QMainWindow):
         self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive_fromprofile)
         self.ui.completebutton.clicked.connect(self.go_to_order_complete_fromprofile)
         self.ui.viewallfavbutton.clicked.connect(self.go_to_favorite)
+
+
+        #settings
+        self.ui.settingbutton.clicked.connect(self.go_to_setting)
+        self.ui.backbutton_settings.clicked.connect(self.setting_to_home)
+        self.ui.accountbutton.clicked.connect(self.go_to_account)
+        self.ui.changepassbutton.clicked.connect(self.go_to_changepassword)
+        self.ui.editprobutton.clicked.connect(self.go_to_editprofile)
+        self.ui.rulebutton.clicked.connect(self.go_to_rule)
+        self.ui.backtomainsettingbutton.clicked.connect(self.go_to_setting)
+        self.ui.backtomainsettingbutton_2.clicked.connect(self.go_to_setting)
+        self.ui.backtomainsettingbutton_3.clicked.connect(self.go_to_setting)
+        self.ui.backtomainsettingbutton_4.clicked.connect(self.go_to_setting)
+
+
+
+        #settingsAdmin
+        
+
+
 
 
         #cart
@@ -157,6 +177,28 @@ class HomepageWindow(QMainWindow):
     #     # self.show_goodbye("Log out successful, See you again")
     #     self.close()
     #     self.login.show()
+            
+
+    #settingspage--------------------------------------------------------------------------------------------
+    def go_to_setting(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.settings)
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.settingsmainpage)
+    def setting_to_home(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
+    def go_to_account(self):
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.accountpage)
+    def go_to_changepassword(self):
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.changepasswordpage)
+    def go_to_editprofile(self):
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.editprofilesettingspage)
+    def go_to_rule(self):
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.rulepage)
+    #settingspage--------------------------------------------------------------------------------------------
+        
+    #settingsAdminpage--------------------------------------------------------------------------------------------
+    
+    #settingsAdminpage--------------------------------------------------------------------------------------------
 
     def go_to_home(self):
         print("go to home")
