@@ -370,7 +370,7 @@ class HomepageWindow(QMainWindow):
         # self.ui.delete_pic_button_6.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_6, self.ui.img_6, self.ui.delete_pic_button_6))
         
         self.ui.addimagebutton.clicked.connect(self.add_img)
-        self.ui.addimagebutton.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
+        # self.ui.addimagebutton.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
         # self.ui.addimagebutton_2.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
         # self.ui.addimagebutton_3.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_3, self.ui.img_3, self.ui.delete_pic_button_3))
         # self.ui.addimagebutton_4.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_4, self.ui.img_4, self.ui.delete_pic_button_4))
@@ -381,33 +381,34 @@ class HomepageWindow(QMainWindow):
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
     
     def add_img(self):
-        addoption_geometry = self.ui.addimagebutton.geometry()
-        x_coordinate = addoption_geometry.x()
-        y_coordinate = addoption_geometry.y()
-        width = addoption_geometry.width()
-        height = addoption_geometry.height()
-        self.ui.addimagebutton.setGeometry(x_coordinate + 201, y_coordinate, width, height)
-        self.product_img += 1
-        imgbutton = QPushButton()
-        # imgbutton.setAlignment(QtCore.Qt.AlignCenter)
-        imgbutton.setObjectName(f"addimagebutton_{self.option_len}")
-        imgbutton.setGeometry(x_coordinate, y_coordinate, width, height)
-        imgbutton.setMinimumHeight(151)
-        imgbutton.setMinimumWidth(151)
-        imgbutton.setMaximumHeight(151)
-        imgbutton.setMaximumWidth(151)
-        imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
+        if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1):
+            addoption_geometry = self.ui.addimagebutton.geometry()
+            x_coordinate = addoption_geometry.x()
+            y_coordinate = addoption_geometry.y()
+            width = addoption_geometry.width()
+            height = addoption_geometry.height()
+            self.ui.addimagebutton.setGeometry(x_coordinate + 201, y_coordinate, width, height)
+            self.product_img += 1
+            imgbutton = QPushButton()
+            # imgbutton.setAlignment(QtCore.Qt.AlignCenter)
+            imgbutton.setObjectName(f"addimagebutton_{self.option_len}")
+            imgbutton.setGeometry(x_coordinate, y_coordinate, width, height)
+            imgbutton.setMinimumHeight(151)
+            imgbutton.setMinimumWidth(151)
+            imgbutton.setMaximumHeight(151)
+            imgbutton.setMaximumWidth(151)
+            imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
 
-        frame_layout = self.ui.frame_options.layout()
-        frame_layout.insertWidget(self.option_len - 1, imgbutton)
+            frame_layout = self.ui.frame_options.layout()
+            frame_layout.insertWidget(self.option_len - 1, imgbutton)
 
     
     def add_product_img(self, button, img, delete):
         fname = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\', "Image files (*.jpg *.png)")
         
-        if fname:
+        pixmap = QPixmap(fname[0])
+        if fname and (pixmap.width() != 0 or pixmap.height() != 0):
             print("fname: ", fname)
-            pixmap = QPixmap(fname[0])
             
             if pixmap.width() > pixmap.height():
                 aspect_ratio = pixmap.height() / pixmap.width()
@@ -431,8 +432,13 @@ class HomepageWindow(QMainWindow):
             
             self.add_img_to_folder(fname)
             self.add_img_to_stylesheet(fname)
+
+            return True
+        return False
             
     def delete_product_img(self, button, img, delete):
+        geometry = self.ui.addimagebutton.geometry()
+        self.ui.addimagebutton.setGeometry(geometry.x() - 201, geometry.y(), 141, 141)
         img.setVisible(False)
         button.setVisible(True)
         self.product_img -= 1
