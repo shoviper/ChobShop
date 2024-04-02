@@ -35,7 +35,6 @@ def register(username, email, password):
 
 def registerAdmin(username, shopname, name, lastname, description, address, email, phone, password):
     if shopname in root.adminUsers:
-        # print("User already exists")
         if shopname in root.adminUsers:
             print("Shop's name already exists")
         return False

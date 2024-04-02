@@ -94,7 +94,7 @@ class HomepageWindow(QMainWindow):
         super(HomepageWindow, self).__init__()
         self.ui = Ui_Main()
         self.ui.setupUi(self)
-        # print("root.LoggedInUser.logged_in: ", root.LoggedInUser)
+        print("root.LoggedInUser.logged_in: ", root.LoggedInUser)
         # print("root.LoggedInUser.user.username: ", root.LoggedInUser.user.username)
 
         if root.LoggedInUser.logged_in == False:
@@ -111,6 +111,8 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
+        
+        self.display_product(self.ui.product_1, self.ui.product_homepage_pic_1, self.ui.product_homepage_name_1, self.ui.product_homepage_price_1, 3)
 
         #orderpage
         self.ui.tobeshippedbutton.clicked.connect(self.go_to_order_ship)
@@ -127,8 +129,7 @@ class HomepageWindow(QMainWindow):
         self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive_fromprofile)
         self.ui.completebutton.clicked.connect(self.go_to_order_complete_fromprofile)
         self.ui.viewallfavbutton.clicked.connect(self.go_to_favorite)
-
-
+        
         #settings
         self.ui.settingbutton.clicked.connect(self.go_to_setting)
         self.ui.backbutton_settings.clicked.connect(self.setting_to_home)
@@ -140,9 +141,7 @@ class HomepageWindow(QMainWindow):
         self.ui.backtomainsettingbutton_2.clicked.connect(self.go_to_setting)
         self.ui.backtomainsettingbutton_3.clicked.connect(self.go_to_setting)
         self.ui.backtomainsettingbutton_4.clicked.connect(self.go_to_setting)
-
-
-
+        
         #settingsAdmin
         
 
@@ -208,6 +207,8 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
+        
+        self.display_product(self.ui.product_1, self.ui.product_homepage_pic_1, self.ui.product_homepage_name_1, self.ui.product_homepage_price_1, 3)
     
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -356,6 +357,41 @@ class HomepageWindow(QMainWindow):
         self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
         self.ui.viewallproductbutton_admin.clicked.connect(self.go_to_productspage_admin)
         self.ui.addproduct_admin.clicked.connect(self.go_to_addproduct_admin)
+        
+        # check how many product this user own
+        print("count_products_for_user: ", count_products_for_user(root.LoggedInUser.user.username))
+        num_of_products = count_products_for_user(root.LoggedInUser.user.username)
+        
+        if num_of_products == 0:
+            self.ui.product_23.setVisible(False)
+        else:
+            self.display_product(self.ui.product_23, self.ui.product_label_img_1, self.ui.product_name_1, self.ui.product_price_1, num_of_products)
+
+    def display_product(self, widget, img_label, name_label, price_label, product_id):
+        widget.setVisible(True)
+        img_path = get_first_product_img(root.LoggedInUser.user.username, product_id)
+        print("image path: ", img_path)
+        pixmap = QPixmap(img_path)
+        print("pixmap: ", pixmap)
+        
+        # if pixmap.width() > pixmap.height():
+        #     aspect_ratio = pixmap.height() / pixmap.width()
+        #     label_width = 141
+        #     label_height = int(label_width * aspect_ratio)
+        #     self.ui.product_label_img_1.setFixedSize(label_width, label_height)
+        # else:
+        #     aspect_ratio = pixmap.width() / pixmap.height()
+        #     label_height = 141
+        #     label_width = int(label_height * aspect_ratio)
+        #     self.ui.product_label_img_1.setFixedSize(label_width, label_height)
+        
+        img_label.setAlignment(QtCore.Qt.AlignCenter)
+        img_label.setPixmap(pixmap)
+        img_label.setScaledContents(True)
+        
+        name_label.setText(get_product_name(root.LoggedInUser.user.username, product_id))
+        price_label.setText(f"฿{str(get_product_price(root.LoggedInUser.user.username, product_id))}")
+        
 
     def go_to_productspage_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
@@ -395,37 +431,16 @@ class HomepageWindow(QMainWindow):
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
         self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
-        # self.ui.img_2.setVisible(False)
-        # self.ui.delete_pic_button_2.setVisible(False)
-        # self.ui.delete_pic_button_2.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
-        # self.ui.img_3.setVisible(False)
-        # self.ui.delete_pic_button_3.setVisible(False)
-        # self.ui.delete_pic_button_3.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_3, self.ui.img_3, self.ui.delete_pic_button_3))
-        # self.ui.img_4.setVisible(False)
-        # self.ui.delete_pic_button_4.setVisible(False)
-        # self.ui.delete_pic_button_4.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_4, self.ui.img_4, self.ui.delete_pic_button_4))
-        # self.ui.img_5.setVisible(False)
-        # self.ui.delete_pic_button_5.setVisible(False)
-        # self.ui.delete_pic_button_5.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_5, self.ui.img_5, self.ui.delete_pic_button_5))
-        # self.ui.img_6.setVisible(False)
-        # self.ui.delete_pic_button_6.setVisible(False)
-        # self.ui.delete_pic_button_6.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton_6, self.ui.img_6, self.ui.delete_pic_button_6))
-        
+
         self.ui.addimagebutton.clicked.connect(self.add_img)
-        # self.ui.addimagebutton.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
-        # self.ui.addimagebutton_2.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_2, self.ui.img_2, self.ui.delete_pic_button_2))
-        # self.ui.addimagebutton_3.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_3, self.ui.img_3, self.ui.delete_pic_button_3))
-        # self.ui.addimagebutton_4.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_4, self.ui.img_4, self.ui.delete_pic_button_4))
-        # self.ui.addimagebutton_5.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_5, self.ui.img_5, self.ui.delete_pic_button_5))
-        # self.ui.addimagebutton_6.clicked.connect(lambda: self.add_product_img(self.ui.addimagebutton_6, self.ui.img_6, self.ui.delete_pic_button_6))
-        
+
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
     
     def add_img(self):
         if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1):
             print("add img")
-            # self.product_img += 1
+
             addoption_geometry = self.ui.addimagebutton.geometry()
             x_coordinate = addoption_geometry.x()
             y_coordinate = addoption_geometry.y()
@@ -442,8 +457,8 @@ class HomepageWindow(QMainWindow):
     def add_product_img(self, button, img, delete):
         fname = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\', "Image files (*.jpg *.png)")
         if fname[0]:
+            print("f[0]: ", fname[0])
             self.product_img += 1
-            print("self.product_img = ", self.product_img)
             
             addoption_geometry2 = self.ui.img_1.geometry()
             x_coordinate = addoption_geometry2.x()
@@ -453,13 +468,11 @@ class HomepageWindow(QMainWindow):
             
             imglabel = QLabel(self.ui.frame_addimageproduct)
             imglabel.setObjectName(f"imglabel_{self.product_img}")
-            print(f"setObjectName(imglabel_{self.product_img}")
             imglabel.setGeometry(QRect(5, 50, 141, 141))
             imglabel.setMinimumSize(141, 141)
             imglabel.setMaximumSize(141, 141)
             imglabel.setGeometry(x_coordinate + (201*(self.product_img - 1)), y_coordinate, width, height)
-            # imglabel.setStyleSheet(u"image: url(:/pic/product_img/Screen Shot 2565-01-19 at 12.52.21.png)")
-            
+
             addoption_geometry3 = self.ui.delete_pic_button_1.geometry()
             x_coordinate = addoption_geometry3.x()
             y_coordinate = addoption_geometry3.y()
@@ -485,8 +498,10 @@ class HomepageWindow(QMainWindow):
     "	color: rgb(116,23,17);\n"
     "	background-color: rgb(237,106,94);\n"
     "}")
-                
+            
+            print("fname[0]", fname[0])
             pixmap = QPixmap(fname[0])
+            print("pixmap product: ", pixmap)
             if fname and (pixmap.width() != 0 or pixmap.height() != 0):
                 print("fname: ", fname)
                 
@@ -512,9 +527,11 @@ class HomepageWindow(QMainWindow):
                 pic.setPixmap(pixmap)
                 pic.setScaledContents(True)
                 
-                
-                self.add_img_to_folder(fname)
-                self.add_img_to_stylesheet(fname)
+                img_path = self.add_img_to_folder(fname)
+                img_path = img_path.replace('..', 'app/assets')
+                print("img_path: ", img_path)
+                pic.setProperty("image_path", img_path)
+                # self.add_img_to_stylesheet(fname)
 
                 return True
         return False
@@ -549,9 +566,10 @@ class HomepageWindow(QMainWindow):
             new_file_element.text = f"../product_img/{img_basename}"
             
             qresource_element = root.find("./qresource[@prefix='pic']")
-            qresource_element.append(new_file_element)
+            # qresource_element.append(new_file_element)
             
-            tree.write(qrc_file_path)
+            # tree.write(qrc_file_path)
+            return new_file_element.text
         
     def add_img_to_stylesheet(self, img):
         file_path = 'app/template/homepage/realhomepage_ui.py'  
@@ -661,6 +679,8 @@ class HomepageWindow(QMainWindow):
         price = self.ui.addproductpricespinbox.value()
         sizes = []
         options = []
+        imgs = []
+        
         for i in range(1, self.size_len + 1):
             size = self.ui.frame_sizes.findChild(QLineEdit, f"size_{i}")
             sizes.append(size.text())
@@ -670,9 +690,19 @@ class HomepageWindow(QMainWindow):
         stock = self.ui.addproductstockspinbox.value()
         categories = self.add_categories()
         
+        for i in range(1, self.product_img + 1):
+            img = self.ui.frame_addimageproduct.findChild(QLabel, f"imglabel_{i}")
+            img_path = img.property("image_path")
+            imgs.append(img_path)
 
-        addproduct(productname, description, price, sizes, options, stock, categories)
+        addproduct(productname, description, price, sizes, options, stock, categories, imgs)
         print("product added")
+        self.show_success("Product added successfully")
+        self.go_to_homepage_admin()
+        
+    # click product from admin page
+    def product_click_for_edit(self):
+        pass
 
     def go_to_order(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)

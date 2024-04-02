@@ -5,7 +5,7 @@ import BTrees.OOBTree
 from .database import *
 
 class Product(persistent.Persistent):
-    def __init__(self, id, name, description, price, sizes, options, stock, categories) -> None:
+    def __init__(self, id, name, description, price, sizes, options, stock, categories, img) -> None:
         self.id = id
         self.name = name
         self.description = description
@@ -14,7 +14,7 @@ class Product(persistent.Persistent):
         self.options = options
         self.stock = stock
         self.categories = categories
-        self.img = []
+        self.img = img
         self.sold = 0
         self.reviews = []
         self.publishedDate = datetime.datetime.now()
@@ -22,16 +22,17 @@ class Product(persistent.Persistent):
     def add_review(self, review):
         self.reviews[datetime.datetime.now()] = review
         
-    def add_img(self, img):
-        self.img.append(img)
+    def add_img(self, img_path):
+        self.img.append(img_path)
 
     def toJSON(self):
         return {
+            # "account": self.account,
             "id": self.id,
             "name": self.name,
             "price": self.price,
             "description": self.description,
-            "category": self.category,
+            "category": self.categories,
             "stock": self.stock,
             "sold": self.sold,
             "reviews": self.reviews,
@@ -39,44 +40,53 @@ class Product(persistent.Persistent):
         }
     
     def __str__(self) -> str:
-        return f"id: {self.id}, name: {self.name}, price: {self.price}, description: {self.description}, categories: {self.categories}, stock: {self.stock}, sold: {self.sold}, reviews: {self.reviews}\n"
+        return f"id: {self.id}, name: {self.name}, price: {self.price}, description: {self.description}, categories: {self.categories}, stock: {self.stock}, sold: {self.sold}, reviews: {self.reviews}, img: {self.img}\n"
 
 class ProductDatabase(persistent.Persistent):
     def __init__(self):
         self.products = {}
         self.next_id = 1
 
-    def add_product(self, name, description, price, sizes, options, stock, categories, img=[]):
+    def add_product(self, user, name, description, price, sizes, options, stock, categories, img):
         product_id = self.next_id
-        product = Product(product_id, name, description, price, sizes, options, stock, categories)
-        for i in img:
-            product.add_img(i)
-        self.products[product_id] = product
+        product = Product(product_id, name, description, price, sizes, options, stock, categories, img)
+        if user not in self.products:
+            self.products[user] = []
+        self.products[user].append(product)
         self.next_id += 1
         return product_id
 
-    def get_product(self, product_id):
-        return self.products.get(product_id, None)
+    def get_products_for_user(self, user):
+        return self.products.get(user, [])
 
-    def update_product(self, product_id, **kwargs):
-        product = self.products.get(product_id)
-        if product:
-            for key, value in kwargs.items():
-                if hasattr(product, key):
-                    setattr(product, key, value)
-            return True
+    def get_product(self, user, product_id):
+        user_products = self.products.get(user, [])
+        for product in user_products:
+            if product.id == product_id:
+                return product
+        return None
+
+    def update_product(self, user, product_id, **kwargs):
+        user_products = self.products.get(user, [])
+        for product in user_products:
+            if product.id == product_id:
+                for key, value in kwargs.items():
+                    if hasattr(product, key):
+                        setattr(product, key, value)
+                return True
         return False
 
-    def remove_product(self, product_id):
-        if product_id in self.products:
-            del self.products[product_id]
-            return True
-        else:
-            return False
+    def remove_product(self, user, product_id):
+        user_products = self.products.get(user, [])
+        for i, product in enumerate(user_products):
+            if product.id == product_id:
+                del user_products[i]
+                return True
+        return False
     
     def toJSON(self):
         return {
-            "products": self.products,
+            "products": {user: [p.toJSON() for p in products] for user, products in self.products.items()},
             "next_id": self.next_id
         }
     
@@ -133,7 +143,7 @@ class GeneralUser(persistent.Persistent):
         }
     
     def __str__(self) -> str:
-        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, birthday: {self.birthday}, phone: {self.phone}, admin: {self.admin}"
+        return f"\nusername: {self.username}, \nemail: {self.email}, \nname: {self.name}, \nlastname: {self.lastname}, \naddress: {self.address}, \nbirthday: {self.birthday}, \nphone: {self.phone}, \nadmin: {self.admin}"
 
 class Admin(GeneralUser):
     def __init__(self, username, shopname, name, lastname, description, address, email, phone, password) -> None:
@@ -144,7 +154,7 @@ class Admin(GeneralUser):
         self.description = description
         self.address = address
         self.phone = phone
-        self.products = {}
+        self.products = []
         self.admin = True
 
     def add_product(self, product):
@@ -233,7 +243,7 @@ class LoggedInUser(persistent.Persistent):
         }
     
     def __str__(self) -> str:
-        return f"user: {self.user}, logged_in: {self.logged_in}"
+        return f"\nuser: {self.user}, \nlogged_in: {self.logged_in}"
 
 class Order(persistent.Persistent):
     def __init__(self, products, total) -> None:

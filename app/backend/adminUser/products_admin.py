@@ -13,15 +13,47 @@ else:
     print("ProductDatabase already exists")
     for product_id, product in root.ProductDatabase.products.items():
         print(product_id, product)
+        
+def count_products_for_user(username):
+        user_products = root.ProductDatabase.get_products_for_user(username)
+        return len(user_products)
+    
+def get_products_for_user(username):
+    user_products = root.ProductDatabase.get_products_for_user(username)
+    return user_products
 
-def addproduct(productname, description, price, sizes, options, stock, categories, img=[]):
+def get_first_product_img(username, product_id):
+    user_products = root.ProductDatabase.get_products_for_user(username)
+    for product in user_products:
+        if product.id == product_id:
+            return product.img[0]
+    return None
+
+def get_product_name(username, product_id):
+    user_products = root.ProductDatabase.get_products_for_user(username)
+    for product in user_products:
+        if product.id == product_id:
+            return product.name
+    return None
+
+def get_product_price(username, product_id):
+    user_products = root.ProductDatabase.get_products_for_user(username)
+    for product in user_products:
+        if product.id == product_id:
+            return product.price
+    return None
+    
+
+def addproduct(productname, description, price, sizes, options, stock, categories, img):
     user = root.LoggedInUser.user.username
+    print("user: ", user)
     print("productname: ", productname)
     print("description: ", description)
     print("price: ", price)
     print("sizes: ", sizes)
     print("options: ", options)
     print("category: ", categories)
+    print("img: ", img)
     print("stock: ", stock, "\n=====================")
     
     
@@ -29,34 +61,20 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
         return False
     else:
         print("productdb: ", root.ProductDatabase)
-
-        # if len(root.adminUsers[user].products) == 0:
-        #     print("product: 0")
-        # else:
-        
-        # product = Product(p_id, productname, description, price, sizes, options, stock, categories)
-        # print("product: ", product, product.name)
-        # root.adminUsers[user].products[p_id] = product
         
         new_product_id = root.ProductDatabase.add_product(
+            user=user,
             name=productname,
             description=description,
             price=price,
             sizes=sizes,
             options=options,
             stock=stock,
-            categories=categories
+            categories=categories,
+            img=img
         )
         
-        for i in img:
-            root.ProductDatabase.products[new_product_id].add_img(i)
-        
         transaction.commit()
-        
-        # print("new_product_id: ", new_product_id)
-        
-        # print("++++++++++++++++++++++++++++++")
-        # print("All products: ", root.ProductDatabase)
 
     return True
 
