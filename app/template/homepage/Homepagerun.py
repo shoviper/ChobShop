@@ -112,12 +112,27 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
         
-        self.display_product()
+        # self.display_product()
 
         #orderpage
         self.ui.tobeshippedbutton.clicked.connect(self.go_to_order_ship)
         self.ui.toberecievedbutton.clicked.connect(self.go_to_order_receive)
         self.ui.completedbutton.clicked.connect(self.go_to_order_complete)
+
+        #orderAdmin
+        self.ui.orderstatusbutton_admin.clicked.connect(self.go_to_orderstatus)
+        self.ui.toshipadminbutton.clicked.connect(self.orderstatus_tobeship)
+        self.ui.canceladminvutton.clicked.connect(self.orderstatus_cancel)
+        self.ui.completedadminbutton.clicked.connect(self.orderstatus_complete)
+        self.ui.reviewsadminvutton.clicked.connect(self.orderstatus_review)
+
+        #Adminmainpage
+        self.ui.vieworderstatusbutton_admin.clicked.connect(self.go_to_orderstatus)
+        self.ui.tobeshippedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_tobeship)
+        self.ui.toberevievedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_cancel)
+        self.ui.completedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_complete)
+        self.ui.reviewsbutton_admin.clicked.connect(self.adminmain_to_orderstatus_review)
+            
 
         #editprofile
         self.ui.backbutton_2.clicked.connect(self.go_to_userprofile)
@@ -137,19 +152,32 @@ class HomepageWindow(QMainWindow):
         self.ui.changepassbutton.clicked.connect(self.go_to_changepassword)
         self.ui.editprobutton.clicked.connect(self.go_to_editprofile)
         self.ui.rulebutton.clicked.connect(self.go_to_rule)
+        self.ui.addressbutton.clicked.connect(self.go_to_address)
+        self.ui.editaddressbutton.clicked.connect(self.go_to_editaddress)
         self.ui.backtomainsettingbutton.clicked.connect(self.go_to_setting)
         self.ui.backtomainsettingbutton_2.clicked.connect(self.go_to_setting)
         self.ui.backtomainsettingbutton_3.clicked.connect(self.go_to_setting)
         self.ui.backtomainsettingbutton_4.clicked.connect(self.go_to_setting)
+        self.ui.backtomainsettingbutton_5.clicked.connect(self.go_to_setting)
+        self.ui.backtoeditarresssettingbutton.clicked.connect(self.go_to_address)
         
         #settingsAdmin
-        
-
-
-
+        self.ui.settingbutton_admin.clicked.connect(self.go_to_settingAdmin)
+        self.ui.backbutton_settingsadmin.clicked.connect(self.settingadmin_to_homeadmin)
+        self.ui.shopaccountbutton.clicked.connect(self.go_to_shopaccount)
+        self.ui.editshopbutton.clicked.connect(self.go_to_editshop)
+        self.ui.ruleadminbutton.clicked.connect(self.go_to_ruleshop)
+        self.ui.logoutsettingsadminbutton.clicked.connect(self.back_to_login)
+        self.ui.exitshopbutton.clicked.connect(self.exit_shop)
+        self.ui.backbutton_settingsadmin_6.clicked.connect(self.go_to_settingAdmin)
+        self.ui.backbutton_settingsadmin_2.clicked.connect(self.go_to_settingAdmin)
+        self.ui.backbutton_settingsadmin_7.clicked.connect(self.go_to_settingAdmin)
 
         #cart
         self.ui.cartbutton.clicked.connect(self.go_to_cart)
+        self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
+        # self.ui.removecartbutton.clicked.connect(self.removeorder)
+        self.ui.backtocartbutton.clicked.connect(self.back_to_cart)
 
     #Log out function
     def back_to_login(self):
@@ -178,6 +206,16 @@ class HomepageWindow(QMainWindow):
     #     self.login.show()
             
 
+    #cartpage--------------------------------------------------------------------------------------------
+    def purchase_cartpage(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
+        self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.choosingtypeofpurchase)
+    def back_to_cart(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.cartpage)
+    # def removeorder(self):
+    #cartpage--------------------------------------------------------------------------------------------
+
     #settingspage--------------------------------------------------------------------------------------------
     def go_to_setting(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.settings)
@@ -193,11 +231,113 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.editprofilesettingspage)
     def go_to_rule(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.rulepage)
+    def go_to_address(self):
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.addresssettingspage)
+    def go_to_editaddress(self):
+        self.ui.stackedWidget_settings.setCurrentWidget(self.ui.editaddresssettingspage)
     #settingspage--------------------------------------------------------------------------------------------
         
+
     #settingsAdminpage--------------------------------------------------------------------------------------------
-    
+    def go_to_settingAdmin(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.settings_admin)
+        self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.settingsadminmainpage)
+    def settingadmin_to_homeadmin(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.adminwidget)
+        self.ui.stackedWidget_adminwidget.setCurrentWidget(self.ui.adminmain)
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.homepage_admin)
+    def go_to_shopaccount(self):
+        self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.shopaccountadminpage)
+    def go_to_editshop(self):
+        self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.editshopaccountadminpage)
+    def go_to_ruleshop(self):
+        self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.ruleadminpage)
+    def exit_shop(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
     #settingsAdminpage--------------------------------------------------------------------------------------------
+
+
+    #orderAdminspage--------------------------------------------------------------------------------------------
+    def go_to_orderstatus(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+    def orderstatus_tobeship(self):
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
+        self.ui.toshipadminbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+    def orderstatus_cancel(self):
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.canceladminpage)
+        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(active_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+    def orderstatus_complete(self):
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.completeadminpage)
+        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+    def orderstatus_review(self):
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.reviewsadminpage)
+        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(active_orderbutton_style)
+    #orderAdminspage--------------------------------------------------------------------------------------------
+
+    def adminmain_to_orderstatus_tobeship(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
+        self.ui.toshipadminbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+    def adminmain_to_orderstatus_cancel(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.canceladminpage)
+        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(active_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+    def adminmain_to_orderstatus_complete(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.completeadminpage)
+        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(active_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+    def adminmain_to_orderstatus_review(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
+        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.reviewsadminpage)
+        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
+        self.ui.reviewsadminvutton.setStyleSheet(active_orderbutton_style)
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+
+
 
     def go_to_home(self):
         print("go to home")

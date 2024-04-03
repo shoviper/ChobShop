@@ -109,7 +109,7 @@ QScrollBar::handle:vertical:hover {
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>0</y>
+             <y>-23</y>
              <width>1127</width>
              <height>1018</height>
             </rect>
@@ -175,41 +175,11 @@ line-height: normal;</string>
                 <string>My Account</string>
                </property>
               </widget>
-              <widget class="QPushButton" name="accountadminbutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>140</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-                background-color: #D9D9D9;
-border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-            }
-
-QPushButton:hover {
-                background-color: #F4DBDB;
-                color: black;
-            }</string>
-               </property>
-               <property name="text">
-                <string>Account</string>
-               </property>
-              </widget>
               <widget class="QLabel" name="settingslabel_4">
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>300</y>
+                 <y>210</y>
                  <width>131</width>
                  <height>61</height>
                 </rect>
@@ -226,71 +196,11 @@ line-height: normal;</string>
                 <string>Settings</string>
                </property>
               </widget>
-              <widget class="QPushButton" name="changepassadminbutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>370</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-                background-color: #D9D9D9;
-border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-            }
-
-QPushButton:hover {
-                background-color: #F4DBDB;
-                color: black;
-            }</string>
-               </property>
-               <property name="text">
-                <string>Change Password</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="editproadminbutton">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>460</y>
-                 <width>1051</width>
-                 <height>61</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-                background-color: #D9D9D9;
-border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-            }
-
-QPushButton:hover {
-                background-color: #F4DBDB;
-                color: black;
-            }</string>
-               </property>
-               <property name="text">
-                <string>Edit Profile</string>
-               </property>
-              </widget>
               <widget class="QLabel" name="helplabel_4">
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>620</y>
+                 <y>350</y>
                  <width>131</width>
                  <height>61</height>
                 </rect>
@@ -311,7 +221,7 @@ line-height: normal;</string>
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>690</y>
+                 <y>420</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -341,7 +251,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>920</y>
+                 <y>650</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -371,7 +281,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>230</y>
+                 <y>140</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -401,7 +311,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>830</y>
+                 <y>550</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -431,7 +341,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>550</y>
+                 <y>280</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -646,174 +556,6 @@ line-height: normal;</string>
           <string>Email</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="shopnamebox_3">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>150</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Shop's name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="firstnamebox_admin_3">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>250</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>First name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="phonebox_admin_3">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>450</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Phone</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lastnamebox_admin_3">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>350</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Last name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="emailbox_admin_3">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>450</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Email</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="descriptionbox_admin_3">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>150</y>
-           <width>341</width>
-           <height>81</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Description</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="shopdescriptionlabel_3">
          <property name="geometry">
           <rect>
@@ -834,34 +576,6 @@ line-height: normal;</string>
          </property>
          <property name="text">
           <string>Description</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="addressbox_admin_3">
-         <property name="geometry">
-          <rect>
-           <x>450</x>
-           <y>300</y>
-           <width>341</width>
-           <height>81</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Address</string>
          </property>
         </widget>
         <widget class="QLabel" name="shoplogolabel_3">
@@ -1599,7 +1313,7 @@ image: url(:/pic/realimages/backhomoe.png);</string>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="changepasswordadminpage">
+     <widget class="QWidget" name="nouse_4">
       <widget class="QPushButton" name="backbutton_settingsadmin_4">
        <property name="geometry">
         <rect>
@@ -1829,7 +1543,7 @@ padding: 0 5px;</string>
        </layout>
       </widget>
      </widget>
-     <widget class="QWidget" name="accountadminpage">
+     <widget class="QWidget" name="nouse_3">
       <widget class="QPushButton" name="backbutton_settingsadmin_5">
        <property name="geometry">
         <rect>
@@ -2247,7 +1961,7 @@ line-height: normal;</string>
        </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="editprofileadminsettingspage">
+     <widget class="QWidget" name="nouse_5">
       <widget class="QPushButton" name="backbutton_settingsadmin_3">
        <property name="geometry">
         <rect>
@@ -2811,7 +2525,6 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
-           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -3875,10 +3588,35 @@ line-height: normal;</string>
                 <string>B 500</string>
                </property>
               </widget>
-              <widget class="QPushButton" name="checkstatuscartbutton">
+              <widget class="QPushButton" name="purchasecartbutton">
                <property name="geometry">
                 <rect>
                  <x>757</x>
+                 <y>210</y>
+                 <width>156</width>
+                 <height>42</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #FFF;
+background-color: #AEC289;
+border: none;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border-radius: 5px;</string>
+               </property>
+               <property name="text">
+                <string>Purchase</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="removecartbutton">
+               <property name="geometry">
+                <rect>
+                 <x>580</x>
                  <y>210</y>
                  <width>156</width>
                  <height>42</height>
@@ -3897,7 +3635,7 @@ line-height: normal;
 border-radius: 5px;</string>
                </property>
                <property name="text">
-                <string>Check Status</string>
+                <string>Remove</string>
                </property>
               </widget>
              </widget>
@@ -6461,6 +6199,630 @@ line-height: normal;</string>
      </widget>
     </widget>
    </widget>
+   <widget class="QWidget" name="purchasepage">
+    <widget class="QStackedWidget" name="stackedWidget_purchase">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1280</width>
+       <height>720</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="choosingtypeofpurchase">
+      <widget class="QPushButton" name="backtocartbutton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="textboxeditcontainer_11" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1101</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 20px;
+background: #F4DBDB;</string>
+       </property>
+       <widget class="QLabel" name="addressdisplaylabel_2">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>10</y>
+          <width>160</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Address</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="soiaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>180</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Soi</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="fisrtnameaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>80</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>First name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lastnameaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>80</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Last name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="homenumaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>180</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Home number</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="phoneaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>130</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Phone</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="streetaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>180</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Street</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="streetaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>180</y>
+          <width>165</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Street</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="firstnameaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>80</y>
+          <width>165</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Firsth name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="phoneaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>120</y>
+          <width>165</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Phone</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lastnameaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>70</y>
+          <width>165</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>last name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="homenumaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>170</y>
+          <width>165</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Home number</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="soiaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>170</y>
+          <width>165</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Soi</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="districtaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>230</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>District</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="provinceaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>230</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Province</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="countryaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>230</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Country</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="zipcodeaddress_2">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>240</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Zip Code</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="districtaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>220</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>District</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="provinceaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>220</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Province</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="countryaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>230</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Country</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="zipcodeaddressdisplay_2">
+        <property name="geometry">
+         <rect>
+          <x>890</x>
+          <y>230</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+        </property>
+        <property name="text">
+         <string>Zip Code</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>400</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Order</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>520</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choose Payment Method</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>580</y>
+         <width>89</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Promptpay</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>580</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cash on delivery</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>640</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Purchase</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="promppaymethod">
+      <widget class="QPushButton" name="backtochoosingtypebutton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>16</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
    <widget class="QWidget" name="adminwidget">
     <widget class="QWidget" name="gridLayoutWidget_2">
      <property name="geometry">
@@ -7290,7 +7652,7 @@ border: none;</string>
             <x>250</x>
             <y>110</y>
             <width>1031</width>
-            <height>611</height>
+            <height>3000</height>
            </rect>
           </property>
           <property name="currentIndex">
@@ -7335,7 +7697,7 @@ QScrollBar::handle:vertical:hover {
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-428</y>
+               <y>0</y>
                <width>1006</width>
                <height>1338</height>
               </rect>
@@ -8089,7 +8451,7 @@ QPushButton:hover{
              <string notr="true">background-color: #FAF9F6;</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="tobeshipadminpage">
              <widget class="QWidget" name="shipordercontainer_2" native="true">
@@ -8875,7 +9237,7 @@ border-radius: 5px;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -9637,7 +9999,7 @@ QScrollBar::handle:vertical:hover {
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>0</y>
+                 <y>-799</y>
                  <width>1006</width>
                  <height>1400</height>
                 </rect>
@@ -10777,6 +11139,2370 @@ QPushButton:hover {
               </widget>
              </widget>
             </widget>
+            <widget class="QWidget" name="editproductspage_admin">
+             <widget class="QScrollArea" name="scrollArea_editproduct">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1021</width>
+                <height>601</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_21">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>-610</y>
+                 <width>1006</width>
+                 <height>1400</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>1400</height>
+                </size>
+               </property>
+               <widget class="QFrame" name="frame_editproduct">
+                <property name="geometry">
+                 <rect>
+                  <x>39</x>
+                  <y>11</y>
+                  <width>961</width>
+                  <height>1400</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>1400</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <item>
+                  <widget class="QLabel" name="editproductlabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>890</width>
+                     <height>21</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Edit Product</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="editproductimagecontainer" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>250</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>250</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QScrollArea {
+	border: none;
+	padding-top: 10px;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <item>
+                     <widget class="QScrollArea" name="scrollArea_addimageproduct_3">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>240</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>240</height>
+                       </size>
+                      </property>
+                      <property name="widgetResizable">
+                       <bool>true</bool>
+                      </property>
+                      <widget class="QWidget" name="scrollAreaWidgetContents_24">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>1218</width>
+                         <height>210</height>
+                        </rect>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>210</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>210</height>
+                        </size>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_14">
+                        <item>
+                         <widget class="QFrame" name="frame_addimageproduct_3">
+                          <property name="minimumSize">
+                           <size>
+                            <width>1200</width>
+                            <height>210</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>210</height>
+                           </size>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <widget class="QLabel" name="addproductimagelabel_3">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>220</width>
+                             <height>31</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                           </property>
+                           <property name="text">
+                            <string>Product's Images</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_3">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>45</y>
+                             <width>151</width>
+                             <height>151</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>+</string>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>151</width>
+                             <height>151</height>
+                            </size>
+                           </property>
+                          </widget>
+                          <widget class="QLabel" name="img_3">
+                           <property name="geometry">
+                            <rect>
+                             <x>5</x>
+                             <y>50</y>
+                             <width>141</width>
+                             <height>141</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">image: url(:/pic/product_img/IMG_2025.JPG)</string>
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="delete_pic_button_3">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="geometry">
+                            <rect>
+                             <x>130</x>
+                             <y>30</y>
+                             <width>31</width>
+                             <height>32</height>
+                            </rect>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
+                           <property name="autoFillBackground">
+                            <bool>false</bool>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+	border-radius: 25px;
+	border-color: rgb(217, 217, 217);
+	border-width: 2px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: rgb(116,23,17);
+	background-color: rgb(237,106,94);
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>X</string>
+                           </property>
+                          </widget>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductnamelabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Product's Name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="editproductnametextbox">
+                   <property name="maximumSize">
+                    <size>
+                     <width>910</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;
+</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductdescriptionlabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Description</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="editproductdescriptiontextbox_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>910</width>
+                     <height>117</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;
+</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductpricelabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Price</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="editproductpricespinbox">
+                   <property name="maximumSize">
+                    <size>
+                     <width>281</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QSpinBox {
+	border-radius: 5px;
+	background: #EDEDED;
+	padding: 5px;
+	font-size: 16px;
+}
+QSpinBox::up-button {
+	color: #F4DBDB;
+}</string>
+                   </property>
+                   <property name="locale">
+                    <locale language="English" country="UnitedStates"/>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>10000</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductsizelabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Sizes</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QScrollArea" name="scrollArea_addsizes_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>941</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>941</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents_25">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>941</width>
+                      <height>60</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>941</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <widget class="QFrame" name="frame_sizes_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>941</width>
+                       <height>58</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>941</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_15">
+                      <property name="spacing">
+                       <number>10</number>
+                      </property>
+                      <property name="sizeConstraint">
+                       <enum>QLayout::SetDefaultConstraint</enum>
+                      </property>
+                      <property name="leftMargin">
+                       <number>9</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="addsizeproductbutton_3">
+                        <property name="minimumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #D9D9D9;
+	background: none;
+	font-size: 16px;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_7">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductoptionlabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top:10px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Options</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QScrollArea" name="scrollArea_addoptions_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>941</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>941</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents_26">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>941</width>
+                      <height>60</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>941</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <widget class="QFrame" name="frame_options_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>941</width>
+                       <height>58</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>941</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_16">
+                      <property name="spacing">
+                       <number>10</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="addoptionproductbutton_3">
+                        <property name="minimumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>108</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #D9D9D9;
+	background: none;
+	font-size: 16px;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_8">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>800</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductstocklabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top:10px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Stock</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="editproductstockspinbox_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>281</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>281</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QSpinBox {
+	border-radius: 5px;
+	background: #EDEDED;
+	padding: 5px;
+	font-size: 16px;
+}
+QSpinBox::up-button {
+	color: #F4DBDB;
+}</string>
+                   </property>
+                   <property name="locale">
+                    <locale language="English" country="UnitedStates"/>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>1000000</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="editproductcategorieslabel_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                   </property>
+                   <property name="text">
+                    <string>Categories</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="categories_container_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>200</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_17">
+                    <item>
+                     <widget class="QFrame" name="frame_categories_gender_3">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_20">
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_men_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Men</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_women_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Women</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_kids_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Kids</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_categories_wear_3">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_4">
+                       <item row="0" column="0">
+                        <widget class="QCheckBox" name="checkBox_top_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Top</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QCheckBox" name="checkBox_dress_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Dress</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0">
+                        <widget class="QCheckBox" name="checkBox_headwear_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Headwear</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QCheckBox" name="checkBox_bottom_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Bottom</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QCheckBox" name="checkBox_footwear_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Footwear</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="1">
+                        <widget class="QCheckBox" name="checkBox_accessories_3">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Accesories</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_addproduct_submit_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QPushButton" name="canceladdproductbutton_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>482</x>
+                      <y>10</y>
+                      <width>204</width>
+                      <height>49</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	border-radius: 5px;
+	background: #CD4662;
+	color: #FFF;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+QPushButton:hover {
+	background: #F4DBDB;
+	color: #545454;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Delete Product</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="addproductbutton_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>710</x>
+                      <y>10</y>
+                      <width>204</width>
+                      <height>49</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	border-radius: 5px;
+	background: #CD4662;
+	color: #FFF;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+QPushButton:hover {
+	background: #F4DBDB;
+	color: #545454;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Add Product</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="nouse_2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <widget class="QScrollArea" name="scrollArea_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>1021</width>
+              <height>1500</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_13">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1021</width>
+               <height>1500</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <widget class="QFrame" name="frame_addproduct_2">
+              <property name="geometry">
+               <rect>
+                <x>39</x>
+                <y>11</y>
+                <width>961</width>
+                <height>1400</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1400</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_17">
+               <item>
+                <widget class="QLabel" name="addproductlabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>890</width>
+                   <height>21</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Add Product</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="addimageproductcontainer_2" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>250</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>250</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QScrollArea {
+	border: none;
+	padding-top: 10px;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <item>
+                   <widget class="QScrollArea" name="scrollArea_addimageproduct_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>240</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>240</height>
+                     </size>
+                    </property>
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents_23">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>1218</width>
+                       <height>210</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>210</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>210</height>
+                      </size>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_12">
+                      <item>
+                       <widget class="QFrame" name="frame_addimageproduct_2">
+                        <property name="minimumSize">
+                         <size>
+                          <width>1200</width>
+                          <height>210</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>210</height>
+                         </size>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <widget class="QLabel" name="addproductimagelabel_2">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>0</y>
+                           <width>220</width>
+                           <height>31</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                         </property>
+                         <property name="text">
+                          <string>Product's Images</string>
+                         </property>
+                        </widget>
+                        <widget class="QPushButton" name="addimagebutton_2">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>45</y>
+                           <width>151</width>
+                           <height>151</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>+</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>151</width>
+                           <height>151</height>
+                          </size>
+                         </property>
+                        </widget>
+                        <widget class="QLabel" name="img_2">
+                         <property name="geometry">
+                          <rect>
+                           <x>5</x>
+                           <y>50</y>
+                           <width>141</width>
+                           <height>141</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">image: url(:/pic/product_img/IMG_2025.JPG)</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                        <widget class="QPushButton" name="delete_pic_button_2">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="geometry">
+                          <rect>
+                           <x>130</x>
+                           <y>30</y>
+                           <width>31</width>
+                           <height>32</height>
+                          </rect>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="autoFillBackground">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {
+	border-radius: 25px;
+	border-color: rgb(217, 217, 217);
+	border-width: 2px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: rgb(116,23,17);
+	background-color: rgb(237,106,94);
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>X</string>
+                         </property>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductnamelabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Product's Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="addproductnametextbox_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>910</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;
+</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductdescriptionlabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Description</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPlainTextEdit" name="addproductdescriptiontextbox_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>910</width>
+                   <height>117</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;
+</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductpricelabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Price</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="addproductpricespinbox_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>281</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QSpinBox {
+	border-radius: 5px;
+	background: #EDEDED;
+	padding: 5px;
+	font-size: 16px;
+}
+QSpinBox::up-button {
+	color: #F4DBDB;
+}</string>
+                 </property>
+                 <property name="locale">
+                  <locale language="English" country="UnitedStates"/>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>10000</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductsizelabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Sizes</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="scrollArea_addsizes_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>941</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>941</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents_14">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>941</width>
+                    <height>60</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>941</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1000</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <widget class="QFrame" name="frame_sizes_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>941</width>
+                     <height>58</height>
+                    </rect>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>941</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <property name="spacing">
+                     <number>10</number>
+                    </property>
+                    <property name="sizeConstraint">
+                     <enum>QLayout::SetDefaultConstraint</enum>
+                    </property>
+                    <property name="leftMargin">
+                     <number>9</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="addsizeproductbutton_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>108</width>
+                        <height>38</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>108</width>
+                        <height>38</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #D9D9D9;
+	background: none;
+	font-size: 16px;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductoptionlabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top:10px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Options</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="scrollArea_addoptions_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>941</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>941</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents_15">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>941</width>
+                    <height>60</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>941</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1000</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <widget class="QFrame" name="frame_options_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>941</width>
+                     <height>58</height>
+                    </rect>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>941</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <property name="spacing">
+                     <number>10</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="addoptionproductbutton_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>108</width>
+                        <height>38</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>108</width>
+                        <height>38</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #D9D9D9;
+	background: none;
+	font-size: 16px;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_6">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>800</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductstocklabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top:10px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Stock</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="addproductstockspinbox_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>281</width>
+                   <height>38</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>281</width>
+                   <height>38</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QSpinBox {
+	border-radius: 5px;
+	background: #EDEDED;
+	padding: 5px;
+	font-size: 16px;
+}
+QSpinBox::up-button {
+	color: #F4DBDB;
+}</string>
+                 </property>
+                 <property name="locale">
+                  <locale language="English" country="UnitedStates"/>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>1000000</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="addproductscategorieslabel_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #000;
+padding-top: 20px;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                 </property>
+                 <property name="text">
+                  <string>Categories</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="categories_container_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <item>
+                   <widget class="QFrame" name="frame_categories_gender_2">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_18">
+                     <item>
+                      <widget class="QCheckBox" name="checkBox_men_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Men</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="checkBox_women_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Women</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="checkBox_kids_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Kids</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_categories_wear_2">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_3">
+                     <item row="0" column="0">
+                      <widget class="QCheckBox" name="checkBox_top_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Top</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QCheckBox" name="checkBox_dress_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Dress</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QCheckBox" name="checkBox_headwear_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Headwear</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QCheckBox" name="checkBox_bottom_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Bottom</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QCheckBox" name="checkBox_footwear_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Footwear</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QCheckBox" name="checkBox_accessories_2">
+                       <property name="styleSheet">
+                        <string notr="true">QCheckBox {
+	font-size: 16px;
+}
+QCheckBox::indicator {
+	width: 15px;
+	height: 15px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Accesories</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_addproduct_submit_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QPushButton" name="canceladdproductbutton_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>502</x>
+                    <y>10</y>
+                    <width>157</width>
+                    <height>49</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {	
+	border-radius: 5px;
+	background: #AEC289;
+	color: #FFF;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+QPushButton:hover {
+	background: #F4DBDB;
+	color: #545454;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Cancel</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="addproductbutton_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>710</x>
+                    <y>10</y>
+                    <width>204</width>
+                    <height>49</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+	border-radius: 5px;
+	background: #CD4662;
+	color: #FFF;
+	text-align: center;
+	font-family: Suwannaphum;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+QPushButton:hover {
+	background: #F4DBDB;
+	color: #545454;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Add Product</string>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
            </widget>
           </widget>
          </widget>
@@ -10820,7 +13546,7 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>67</width>
+          <width>1247</width>
           <height>1018</height>
          </rect>
         </property>
@@ -11252,6 +13978,655 @@ background: none;</string>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="reviewpage">
+    <widget class="QWidget" name="settingscontainer_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>60</y>
+       <width>1160</width>
+       <height>630</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: #FAF9F6;
+	width: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: #F4DBDB;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_21">
+      <item>
+       <widget class="QScrollArea" name="scrollArea_settings_2">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_27">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1127</width>
+           <height>1318</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_22">
+          <item>
+           <widget class="QFrame" name="frame_settings_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>1300</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="accsettingslabel_2">
+             <property name="geometry">
+              <rect>
+               <x>417</x>
+               <y>10</y>
+               <width>290</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #545454;
+                text-align: center;
+                font-family: Suwannaphum;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Review</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="myacclabel_2">
+             <property name="geometry">
+              <rect>
+               <x>48</x>
+               <y>70</y>
+               <width>181</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Product's Name</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="settingslabel_2">
+             <property name="geometry">
+              <rect>
+               <x>48</x>
+               <y>140</y>
+               <width>131</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Size</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="helplabel_2">
+             <property name="geometry">
+              <rect>
+               <x>48</x>
+               <y>210</y>
+               <width>131</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Color</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="logoutsettingsbutton_2">
+             <property name="geometry">
+              <rect>
+               <x>810</x>
+               <y>1220</y>
+               <width>251</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+                background-color: #cd4662;
+border: none;
+color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;
+            }
+
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }
+
+</string>
+             </property>
+             <property name="text">
+              <string>Submit</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="addimageproductcontainer_4" native="true">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>280</y>
+               <width>951</width>
+               <height>250</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>250</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>250</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollArea {
+	border: none;
+	padding-top: 10px;
+}
+
+QScrollBar:horizontal {
+	border: none;
+	background-color: #FAF9F6;
+	height: 15px;
+	border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: #E1E3E7;
+	border-radius: 7px;
+	min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background-color: #F4DBDB;
+}</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <item>
+               <widget class="QScrollArea" name="scrollArea_addimageproduct_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>240</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>240</height>
+                 </size>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_28">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1218</width>
+                   <height>210</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>210</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>210</height>
+                  </size>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_19">
+                  <item>
+                   <widget class="QFrame" name="frame_addimageproduct_4">
+                    <property name="minimumSize">
+                     <size>
+                      <width>1200</width>
+                      <height>210</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>210</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QLabel" name="addproductimagelabel_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>220</width>
+                       <height>31</height>
+                      </rect>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+                     </property>
+                     <property name="text">
+                      <string>Product's Images</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="addimagebutton_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>45</y>
+                       <width>151</width>
+                       <height>151</height>
+                      </rect>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+	border: 3px dashed #D9D9D9;
+	font-size: 46px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: #CD4662;
+	background-color: #EDEDED;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>+</string>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>151</width>
+                       <height>151</height>
+                      </size>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="img_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>5</x>
+                       <y>50</y>
+                       <width>141</width>
+                       <height>141</height>
+                      </rect>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">image: url(:/pic/product_img/IMG_2025.JPG)</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="delete_pic_button_4">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>130</x>
+                       <y>30</y>
+                       <width>31</width>
+                       <height>32</height>
+                      </rect>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+	border-radius: 25px;
+	border-color: rgb(217, 217, 217);
+	border-width: 2px;
+	background: #FAF9F6;
+	color: #D9D9D9;
+}
+QPushButton:hover {
+	border-color: #CD4662;
+	color: rgb(116,23,17);
+	background-color: rgb(237,106,94);
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>X</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QLabel" name="myacclabel_3">
+             <property name="geometry">
+              <rect>
+               <x>48</x>
+               <y>570</y>
+               <width>201</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Customer's Name</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="myacclabel_5">
+             <property name="geometry">
+              <rect>
+               <x>48</x>
+               <y>640</y>
+               <width>181</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Quality</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="myacclabel_6">
+             <property name="geometry">
+              <rect>
+               <x>48</x>
+               <y>710</y>
+               <width>181</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+             </property>
+             <property name="text">
+              <string>Review Detail</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="curpasstextbox_2">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>80</y>
+               <width>681</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="curpasstextbox_4">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>150</y>
+               <width>681</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="curpasstextbox_5">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>220</y>
+               <width>681</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="curpasstextbox_6">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>580</y>
+               <width>681</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="curpasstextbox_7">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>650</y>
+               <width>681</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="curpasstextbox_8">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>720</y>
+               <width>681</width>
+               <height>461</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="backbutton_settings_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>20</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="editprofile">
     <property name="styleSheet">
@@ -11840,7 +15215,7 @@ QScrollBar::handle:vertical:hover {
              <x>0</x>
              <y>0</y>
              <width>1127</width>
-             <height>768</height>
+             <height>868</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -11849,7 +15224,7 @@ QScrollBar::handle:vertical:hover {
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>750</height>
+                <height>850</height>
                </size>
               </property>
               <property name="frameShape">
@@ -11938,7 +15313,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>210</y>
+                 <y>310</y>
                  <width>131</width>
                  <height>61</height>
                 </rect>
@@ -11959,7 +15334,7 @@ line-height: normal;</string>
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>280</y>
+                 <y>470</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -11989,7 +15364,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>370</y>
+                 <y>380</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -12019,7 +15394,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>440</y>
+                 <y>540</y>
                  <width>131</width>
                  <height>61</height>
                 </rect>
@@ -12040,7 +15415,7 @@ line-height: normal;</string>
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>510</y>
+                 <y>610</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -12070,7 +15445,7 @@ QPushButton:hover {
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>650</y>
+                 <y>740</y>
                  <width>1051</width>
                  <height>61</height>
                 </rect>
@@ -12096,6 +15471,36 @@ QPushButton:hover {
                 <string>Log out</string>
                </property>
               </widget>
+              <widget class="QPushButton" name="addressbutton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>230</y>
+                 <width>1051</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+                background-color: #D9D9D9;
+border: none;
+color: #000;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+            }
+
+QPushButton:hover {
+                background-color: #F4DBDB;
+                color: black;
+            }</string>
+               </property>
+               <property name="text">
+                <string>Address</string>
+               </property>
+              </widget>
              </widget>
             </item>
            </layout>
@@ -12105,6 +15510,1193 @@ QPushButton:hover {
        </layout>
       </widget>
       <widget class="QPushButton" name="backbutton_settings">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="addresssettingspage">
+      <widget class="QWidget" name="editprofilecontainer_4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #FAF9F6;</string>
+       </property>
+       <widget class="QWidget" name="textboxeditcontainer_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>29</x>
+          <y>0</y>
+          <width>1101</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 20px;
+background: #F4DBDB;</string>
+        </property>
+        <widget class="QLabel" name="addressdisplaylabel">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>10</y>
+           <width>160</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Address</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="soiaddress">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>180</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Soi</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="fisrtnameaddress">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>80</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>First name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastnameaddress">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>80</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Last name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="homenumaddress">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>180</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Home number</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="phoneaddress">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="streetaddress">
+         <property name="geometry">
+          <rect>
+           <x>620</x>
+           <y>180</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Street</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="streetaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>710</x>
+           <y>180</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Street</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="firstnameaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>80</y>
+           <width>165</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Firsth name</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="phoneaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>120</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastnameaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>70</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>last name</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="homenumaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>170</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Home number</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="soiaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>170</y>
+           <width>165</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Soi</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="districtaddress">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>230</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>District</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="provinceaddress">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>230</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Province</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="countryaddress">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>230</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Country</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="zipcodeaddress">
+         <property name="geometry">
+          <rect>
+           <x>750</x>
+           <y>240</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Zip Code</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="districtaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>220</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>District</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="provinceaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>220</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Province</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="countryaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>230</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Country</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="zipcodeaddressdisplay">
+         <property name="geometry">
+          <rect>
+           <x>890</x>
+           <y>230</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Zip Code</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="editaddressbutton">
+         <property name="geometry">
+          <rect>
+           <x>860</x>
+           <y>300</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #FFF;
+background: #AEC289;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="backtomainsettingbutton_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>20</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+image: url(:/pic/realimages/backhomoe.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="editaddresssettingspage">
+      <widget class="QWidget" name="editprofilecontainer_5" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>1160</width>
+         <height>631</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #FAF9F6;</string>
+       </property>
+       <widget class="QWidget" name="textboxeditcontainer_6" native="true">
+        <property name="geometry">
+         <rect>
+          <x>29</x>
+          <y>0</y>
+          <width>1101</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 20px;
+background: #F4DBDB;</string>
+        </property>
+        <widget class="QLabel" name="editaddrlabel">
+         <property name="geometry">
+          <rect>
+           <x>449</x>
+           <y>10</y>
+           <width>191</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Edit Address</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="soieditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>230</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Soi</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="firstnameeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>80</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>First name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastnameeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>80</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Last name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="homenumeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>180</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Home number</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="phoneeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="streeteditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>280</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Street</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="districteditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>330</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>District</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="provinceeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>380</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Province</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="countryeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>430</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Country</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="zipcodeeditaddr">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>480</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Zip Code</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="savechangeeditaddrbutton">
+         <property name="geometry">
+          <rect>
+           <x>870</x>
+           <y>540</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #FFF;
+background: #AEC289;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string>Save Changes</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="firstnameeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>80</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Firstname</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lastnameeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>740</x>
+           <y>80</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Lastname</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="phoneeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>130</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="homenumeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>180</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Home number</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="soieditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>230</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Soi</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="streeteditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>280</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Street</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="districteditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>330</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>District</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="provinceeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>380</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Province</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="countryeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>430</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Country</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="zipcodeeditaddrbox">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>480</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 5px;
+border: 2px solid #CD4662;
+background: #F4F2EF;
+color: #545454;
+font-family: Suwannaphum;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Zip code</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="cleardataeditaddrbutton">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>540</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #FFF;
+background: #cd4662;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string>Clear Data</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="backtoeditarresssettingbutton">
        <property name="geometry">
         <rect>
          <x>20</x>
