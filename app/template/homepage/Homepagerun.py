@@ -112,7 +112,7 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
         
-        self.display_product(self.ui.product_1, self.ui.product_homepage_pic_1, self.ui.product_homepage_name_1, self.ui.product_homepage_price_1, 3)
+        self.display_product()
 
         #orderpage
         self.ui.tobeshippedbutton.clicked.connect(self.go_to_order_ship)
@@ -208,7 +208,7 @@ class HomepageWindow(QMainWindow):
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
         
-        self.display_product(self.ui.product_1, self.ui.product_homepage_pic_1, self.ui.product_homepage_name_1, self.ui.product_homepage_price_1, 3)
+        self.display_product()
     
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -365,33 +365,113 @@ class HomepageWindow(QMainWindow):
         if num_of_products == 0:
             self.ui.product_23.setVisible(False)
         else:
-            self.display_product(self.ui.product_23, self.ui.product_label_img_1, self.ui.product_name_1, self.ui.product_price_1, num_of_products)
+            self.display_product(True)
 
-    def display_product(self, widget, img_label, name_label, price_label, product_id):
-        widget.setVisible(True)
-        img_path = get_first_product_img(root.LoggedInUser.user.username, product_id)
-        print("image path: ", img_path)
-        pixmap = QPixmap(img_path)
-        print("pixmap: ", pixmap)
-        
-        # if pixmap.width() > pixmap.height():
-        #     aspect_ratio = pixmap.height() / pixmap.width()
-        #     label_width = 141
-        #     label_height = int(label_width * aspect_ratio)
-        #     self.ui.product_label_img_1.setFixedSize(label_width, label_height)
-        # else:
-        #     aspect_ratio = pixmap.width() / pixmap.height()
-        #     label_height = 141
-        #     label_width = int(label_height * aspect_ratio)
-        #     self.ui.product_label_img_1.setFixedSize(label_width, label_height)
-        
-        img_label.setAlignment(QtCore.Qt.AlignCenter)
-        img_label.setPixmap(pixmap)
-        img_label.setScaledContents(True)
-        
-        name_label.setText(get_product_name(root.LoggedInUser.user.username, product_id))
-        price_label.setText(f"฿{str(get_product_price(root.LoggedInUser.user.username, product_id))}")
-        
+    def display_product(self, admin=False):
+        # widget.setVisible(True)
+        products = []
+        if root.LoggedInUser.logged_in == False or admin == False:
+            products = get_all_products()
+        else:
+            products = get_products_for_user(root.LoggedInUser.user.username)
+
+        product_widgets = []
+        column = 1
+        row = 2
+
+        for product in products:
+            if column > 5:
+                column = 1
+                row += 2
+            print("row: ", row)
+            print("column: ", column)
+            print("product: ", product)
+            img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
+            print("image path: ", img_path)
+            pixmap = QPixmap(img_path)
+            print("pixmap: ", pixmap)
+
+            verticalSpacer = QSpacerItem(20, 100, QSizePolicy.Minimum, QSizePolicy.Expanding)
+            self.ui.gridLayout_products_admin.addItem(verticalSpacer, row - 1, column, 1, 1)
+            product_widget = QWidget(self.ui.frame_products_admin)
+            product_widget.setObjectName(u"product_widget")
+            product_widget.setMinimumSize(QSize(251, 320))
+            product_widget.setMaximumSize(QSize(251, 320))
+            product_widget.setStyleSheet(u"border-radius: 10px;\n"
+            "background: #D9D9D9;\n"
+            "padding: 28px;")
+            product_gridLayout = QGridLayout(product_widget)
+            product_gridLayout.setObjectName(u"product_gridLayout")
+            productdetails_frame = QFrame(product_widget)
+            productdetails_frame.setObjectName(u"productdetails_frame")
+            productdetails_frame.setMinimumSize(QSize(191, 71))
+            productdetails_frame.setMaximumSize(QSize(191, 71))
+            productdetails_frame.setStyleSheet(u"padding: 0;\n"
+            "margin: 0;")
+            productdetails_frame.setFrameShape(QFrame.StyledPanel)
+            productdetails_frame.setFrameShadow(QFrame.Raised)
+            productsold_label = QLabel(productdetails_frame)
+            productsold_label.setObjectName(u"productsold_label")
+            productsold_label.setGeometry(QRect(100, 40, 91, 22))
+            productsold_label.setMinimumSize(QSize(83, 22))
+            productsold_label.setMaximumSize(QSize(16777215, 1000000))
+            productsold_label.setLayoutDirection(Qt.LeftToRight)
+            productsold_label.setStyleSheet(u"font-size: 12px;\n"
+            "padding: 0;")
+            productsold_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+            productprice_button = QPushButton(productdetails_frame)
+            productprice_button.setObjectName(u"productprice_button")
+            productprice_button.setGeometry(QRect(-4, 40, 83, 22))
+            productprice_button.setMinimumSize(QSize(83, 22))
+            productprice_button.setMaximumSize(QSize(16777215, 16777215))
+            productprice_button.setLayoutDirection(Qt.LeftToRight)
+            productprice_button.setStyleSheet(u"font-size: 20px;\n"
+            "color: #CD4662;\n"
+            "text-align: left;\n"
+            "padding: 0;")
+            picproduct1_17 = QPushButton(product_widget)
+            picproduct1_17.setObjectName(u"picproduct1_17")
+            picproduct1_17.setMinimumSize(QSize(191, 188))
+            picproduct1_17.setMaximumSize(QSize(191, 188))
+            picproduct1_17.setStyleSheet(u"background-color: #FFF;\n"
+            "image: url(:/pic/product_img/102165.jpg);\n"
+            "border-radius: 0px;\n"
+            "padding: 0;")
+            product_gridLayout.addWidget(picproduct1_17, 0, 0, 1, 1)
+            icon4 = QIcon()
+            icon4.addFile(u":/pic/images/newres/baht.png", QSize(), QIcon.Normal, QIcon.Off)
+            productprice_button.setIcon(icon4)
+            productprice_button.setIconSize(QSize(19, 19))
+            productname_label = QLabel(productdetails_frame)
+            productname_label.setObjectName(u"productname_label")
+            productname_label.setGeometry(QRect(0, 2, 121, 21))
+            productname_label.setMinimumSize(QSize(0, 0))
+            productname_label.setMaximumSize(QSize(16777215, 16777215))
+            productname_label.setStyleSheet(u"font-size: 16px;\n"
+            "padding: 0;")
+
+            product_gridLayout.addWidget(productdetails_frame, 1, 0, 1, 1)
+
+            self.ui.gridLayout_products_admin.addWidget(product_widget, row, column, 1, 1)
+
+            if column < 4 and row % 2 == 0:
+                column += 1
+                product_horizontalSpacer = QSpacerItem(58, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+                self.ui.gridLayout_products_admin.addItem(product_horizontalSpacer, row, column, 1, 1)
+            
+            product_widgets.append(product_widget)
+            column += 1
+
+        for i, product_widget in enumerate(product_widgets):
+            productsold_label = product_widget.findChild(QLabel, "productsold_label")
+            productprice_button = product_widget.findChild(QPushButton, "productprice_button")
+            productname_label = product_widget.findChild(QLabel, "productname_label")
+            picproduct1_17 = product_widget.findChild(QPushButton, "picproduct1_17")
+            productname_label.setText(get_product_name(root.LoggedInUser.user.username, products[i].id))
+            productprice_button.setText(f"฿{str(get_product_price(root.LoggedInUser.user.username, products[i].id))}")
+            productsold_label.setText(f"{products[i].sold} sold")
+            img_path = get_first_product_img(root.LoggedInUser.user.username, products[i].id)
+            picproduct1_17.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
 
     def go_to_productspage_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
@@ -430,7 +510,7 @@ class HomepageWindow(QMainWindow):
         self.product_img = 0
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
-        self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1))
+        # self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1,))
 
         self.ui.addimagebutton.clicked.connect(self.add_img)
 
@@ -487,17 +567,17 @@ class HomepageWindow(QMainWindow):
             delete_img_button.setCursor(QCursor(Qt.PointingHandCursor))
             delete_img_button.setAutoFillBackground(False)
             delete_img_button.setStyleSheet(u"QPushButton {\n"
-    "	border-radius: 25px;\n"
-    "	border-color: rgb(217, 217, 217);\n"
-    "	border-width: 2px;\n"
-    "	background: #FAF9F6;\n"
-    "	color: #D9D9D9;\n"
-    "}\n"
-    "QPushButton:hover {\n"
-    "	border-color: #CD4662;\n"
-    "	color: rgb(116,23,17);\n"
-    "	background-color: rgb(237,106,94);\n"
-    "}")
+            "	border-radius: 25px;\n"
+            "	border-color: rgb(217, 217, 217);\n"
+            "	border-width: 2px;\n"
+            "	background: #FAF9F6;\n"
+            "	color: #D9D9D9;\n"
+            "}\n"
+            "QPushButton:hover {\n"
+            "	border-color: #CD4662;\n"
+            "	color: rgb(116,23,17);\n"
+            "	background-color: rgb(237,106,94);\n"
+            "}")
             
             print("fname[0]", fname[0])
             pixmap = QPixmap(fname[0])
@@ -550,7 +630,7 @@ class HomepageWindow(QMainWindow):
             print(f"Deleted image file: {img_path}")
         except OSError as e:
             print(f"Error deleting image file {img_path}: {e}")
-        update_qrc_file(img_name=os.path.basename(img_path))
+        update_qrc_file(img_name)
         
     def add_img_to_folder(self, img):
         shutil.copy(img[0], 'app/assets/product_img/')

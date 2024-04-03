@@ -22,6 +22,13 @@ def get_products_for_user(username):
     user_products = root.ProductDatabase.get_products_for_user(username)
     return user_products
 
+def get_all_products():
+    all_products = []
+    for user, products in root.ProductDatabase.products.items():
+        for product in products:
+            all_products.append(product)
+    return all_products
+
 def get_first_product_img(username, product_id):
     user_products = root.ProductDatabase.get_products_for_user(username)
     for product in user_products:
@@ -79,7 +86,7 @@ def addproduct(productname, description, price, sizes, options, stock, categorie
     return True
 
 
-def update_qrc_file(self, img_name):
+def update_qrc_file(img_name):
     qrc_file_path = 'app/assets/realsourceimg/realpicforuse.qrc'  
     try:
         with open(qrc_file_path, 'r') as file:

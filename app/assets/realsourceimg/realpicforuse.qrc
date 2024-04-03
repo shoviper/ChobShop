@@ -3,6 +3,7 @@
     <file>../images/newres/image.png</file>
     <file>../images/star.png</file>
     <file>../images/baht.png</file>
+    <file>../images/newres/baht.png</file>
     <file>../images/newres/rightarrow_pink.png</file>
     <file>../images/newres/bestselling.png</file>
     <file>../images/newres/buyagain.png</file>
@@ -19,5 +20,6 @@
     <file>../realimages/exitpic.png</file>
     <file>../realimages/profilepic.png</file>
     <file>../realimages/settingpic.png</file>
-  <file>../product_img/102165.jpg</file></qresource>
+    <file>../product_img/102165.jpg</file>
+  </qresource>
 </RCC>
