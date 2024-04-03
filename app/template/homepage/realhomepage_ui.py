@@ -17,10 +17,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QDateEdit, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QLayout,
-    QLineEdit, QPlainTextEdit, QPushButton, QRadioButton,
-    QScrollArea, QSizePolicy, QSpacerItem, QSpinBox,
-    QStackedWidget, QVBoxLayout, QWidget)
-
+    QLineEdit, QListView, QPlainTextEdit, QPushButton,
+    QRadioButton, QScrollArea, QSizePolicy, QSpacerItem,
+    QSpinBox, QStackedWidget, QVBoxLayout, QWidget)
 import app.assets.realsourceimg.real
 
 class Ui_Main(object):
@@ -5905,8 +5904,8 @@ class Ui_Main(object):
         self.scrollAreaWidgetContents_29 = QWidget()
         self.scrollAreaWidgetContents_29.setObjectName(u"scrollAreaWidgetContents_29")
         self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1318))
-        self.verticalLayout_33 = QVBoxLayout(self.scrollAreaWidgetContents_29)
-        self.verticalLayout_33.setObjectName(u"verticalLayout_33")
+        self.verticalLayout_331 = QVBoxLayout(self.scrollAreaWidgetContents_29)
+        self.verticalLayout_331.setObjectName(u"verticalLayout_331")
         self.frame_productviewpage_2 = QFrame(self.scrollAreaWidgetContents_29)
         self.frame_productviewpage_2.setObjectName(u"frame_productviewpage_2")
         self.frame_productviewpage_2.setMinimumSize(QSize(0, 1300))
@@ -6262,7 +6261,7 @@ class Ui_Main(object):
 "font-weight: 400;\n"
 "line-height: normal;")
 
-        self.verticalLayout_33.addWidget(self.frame_productviewpage_2)
+        self.verticalLayout_331.addWidget(self.frame_productviewpage_2)
 
         self.scrollArea_productviewpage_2.setWidget(self.scrollAreaWidgetContents_29)
         self.stackedWidget_adminproducts.addWidget(self.showproductforadmin)
@@ -9088,9 +9087,9 @@ class Ui_Main(object):
 
         self.stackedWidget.setCurrentIndex(2)
         self.stackedWidget_main.setCurrentIndex(0)
-        self.stackedWidget_myorders.setCurrentIndex(2)
-        self.stackedWidget_adminmain.setCurrentIndex(0)
-        self.stackedWidget_orderadmin.setCurrentIndex(3)
+        self.stackedWidget_myorders.setCurrentIndex(1)
+        self.stackedWidget_adminmain.setCurrentIndex(2)
+        self.stackedWidget_orderadmin.setCurrentIndex(2)
         self.stackedWidget_adminproducts.setCurrentIndex(0)
         self.stackedWidget_allandtype_admin.setCurrentIndex(1)
 
