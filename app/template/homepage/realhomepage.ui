@@ -110,7 +110,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>1018</height>
             </rect>
            </property>
@@ -2525,7 +2525,6 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
-           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -4911,7 +4910,7 @@ QScrollBar::handle:vertical:hover {
             <x>0</x>
             <y>0</y>
             <width>85</width>
-            <height>1518</height>
+            <height>718</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -7872,7 +7871,7 @@ QScrollBar::handle:vertical:hover {
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-491</y>
+               <y>0</y>
                <width>1006</width>
                <height>1118</height>
               </rect>
@@ -9600,7 +9599,7 @@ QScrollBar::handle:vertical:hover {
                    <property name="geometry">
                     <rect>
                      <x>0</x>
-                     <y>-18</y>
+                     <y>0</y>
                      <width>998</width>
                      <height>471</height>
                     </rect>
@@ -14475,7 +14474,7 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>85</width>
+          <width>1247</width>
           <height>1018</height>
          </rect>
         </property>
@@ -14951,7 +14950,7 @@ QScrollBar::handle:vertical:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>85</width>
+           <width>1127</width>
            <height>1318</height>
           </rect>
          </property>
@@ -16143,7 +16142,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>868</height>
             </rect>
            </property>
