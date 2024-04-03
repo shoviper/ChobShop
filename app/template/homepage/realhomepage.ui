@@ -109,8 +109,8 @@ QScrollBar::handle:vertical:hover {
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-117</y>
-             <width>1127</width>
+             <y>0</y>
+             <width>85</width>
              <height>1018</height>
             </rect>
            </property>
@@ -1194,7 +1194,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
+             <width>85</width>
              <height>1518</height>
             </rect>
            </property>
@@ -1374,7 +1374,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
+             <width>85</width>
              <height>1518</height>
             </rect>
            </property>
@@ -2525,6 +2525,7 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
+           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -3405,7 +3406,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>998</width>
+            <width>85</width>
             <height>2018</height>
            </rect>
           </property>
@@ -4908,9 +4909,9 @@ QScrollBar::handle:vertical:hover {
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-125</y>
-            <width>998</width>
-            <height>718</height>
+            <y>0</y>
+            <width>85</width>
+            <height>1518</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -7871,9 +7872,9 @@ QScrollBar::handle:vertical:hover {
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>0</y>
+               <y>-491</y>
                <width>1006</width>
-               <height>1338</height>
+               <height>1118</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -7882,7 +7883,7 @@ QScrollBar::handle:vertical:hover {
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>1320</height>
+                  <height>1100</height>
                  </size>
                 </property>
                 <property name="frameShape">
@@ -8318,66 +8319,99 @@ border: none;</string>
                    <x>40</x>
                    <y>570</y>
                    <width>913</width>
-                   <height>800</height>
+                   <height>440</height>
                   </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>913</width>
+                   <height>440</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">border-bottom: 3px solid #CD4662;
 background: #FAF9F6;
 height: auto;</string>
                  </property>
-                 <widget class="QFrame" name="frame">
-                  <property name="geometry">
-                   <rect>
-                    <x>0</x>
-                    <y>0</y>
-                    <width>909</width>
-                    <height>49</height>
-                   </rect>
+                 <layout class="QVBoxLayout" name="verticalLayout_33">
+                  <property name="spacing">
+                   <number>6</number>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">border: none;</string>
+                  <property name="leftMargin">
+                   <number>0</number>
                   </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                  <property name="topMargin">
+                   <number>0</number>
                   </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                  <property name="rightMargin">
+                   <number>0</number>
                   </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_4">
-                   <item>
-                    <widget class="QLabel" name="productslabel_admin">
-                     <property name="styleSheet">
-                      <string notr="true">color: #000;
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="frame">
+                    <property name="minimumSize">
+                     <size>
+                      <width>909</width>
+                      <height>49</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>909</width>
+                      <height>49</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border: none;</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_4">
+                     <item>
+                      <widget class="QLabel" name="productslabel_admin">
+                       <property name="styleSheet">
+                        <string notr="true">color: #000;
 border: none;
 font-family: Suwannaphum;
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
-                     </property>
-                     <property name="text">
-                      <string>Products</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <spacer name="horizontalSpacer_3">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>618</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="viewallproductbutton_admin">
-                     <property name="styleSheet">
-                      <string notr="true">color:  #CD4662;
+                       </property>
+                       <property name="text">
+                        <string>Products</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_3">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>618</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="viewallproductbutton_admin">
+                       <property name="styleSheet">
+                        <string notr="true">color:  #CD4662;
 text-align: center;
 font-family: Suwannaphum;
 font-size: 16px;
@@ -8385,34 +8419,42 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 border: none;</string>
-                     </property>
-                     <property name="text">
-                      <string>View all Products    &gt;</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                 <widget class="QFrame" name="frame_products_admin">
-                  <property name="geometry">
-                   <rect>
-                    <x>0</x>
-                    <y>50</y>
-                    <width>917</width>
-                    <height>671</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">border: none;</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_products_admin"/>
-                 </widget>
+                       </property>
+                       <property name="text">
+                        <string>View all Products    &gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_products_admin">
+                    <property name="minimumSize">
+                     <size>
+                      <width>913</width>
+                      <height>380</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>913</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border: none;</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_products_admin"/>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                 <widget class="QPushButton" name="addproduct_admin">
                  <property name="geometry">
@@ -9411,7 +9453,7 @@ border-radius: 5px;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -9558,18 +9600,18 @@ QScrollBar::handle:vertical:hover {
                    <property name="geometry">
                     <rect>
                      <x>0</x>
-                     <y>0</y>
+                     <y>-18</y>
                      <width>998</width>
-                     <height>1518</height>
+                     <height>471</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
                     <item>
-                     <widget class="QFrame" name="frame_allproduct_3">
+                     <widget class="QFrame" name="frame_allproducts_admin">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>1500</height>
+                        <height>453</height>
                        </size>
                       </property>
                       <property name="frameShape">
@@ -9578,198 +9620,6 @@ QScrollBar::handle:vertical:hover {
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QWidget" name="product_48" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>26</x>
-                         <y>43</y>
-                         <width>251</width>
-                         <height>320</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-                       </property>
-                       <widget class="QPushButton" name="picproduct1_48">
-                        <property name="geometry">
-                         <rect>
-                          <x>30</x>
-                          <y>30</y>
-                          <width>191</width>
-                          <height>188</height>
-                         </rect>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                       </widget>
-                      </widget>
-                      <widget class="QWidget" name="product_49" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>695</x>
-                         <y>400</y>
-                         <width>251</width>
-                         <height>320</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-                       </property>
-                       <widget class="QPushButton" name="picproduct1_49">
-                        <property name="geometry">
-                         <rect>
-                          <x>30</x>
-                          <y>30</y>
-                          <width>191</width>
-                          <height>188</height>
-                         </rect>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                       </widget>
-                      </widget>
-                      <widget class="QWidget" name="product_50" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>360</x>
-                         <y>43</y>
-                         <width>251</width>
-                         <height>320</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-                       </property>
-                       <widget class="QPushButton" name="picproduct1_50">
-                        <property name="geometry">
-                         <rect>
-                          <x>30</x>
-                          <y>30</y>
-                          <width>191</width>
-                          <height>188</height>
-                         </rect>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                       </widget>
-                      </widget>
-                      <widget class="QWidget" name="product_51" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>695</x>
-                         <y>43</y>
-                         <width>251</width>
-                         <height>320</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-                       </property>
-                       <widget class="QPushButton" name="picproduct1_51">
-                        <property name="geometry">
-                         <rect>
-                          <x>30</x>
-                          <y>30</y>
-                          <width>191</width>
-                          <height>188</height>
-                         </rect>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                       </widget>
-                      </widget>
-                      <widget class="QWidget" name="product_52" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>360</x>
-                         <y>400</y>
-                         <width>251</width>
-                         <height>320</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-                       </property>
-                       <widget class="QPushButton" name="picproduct1_52">
-                        <property name="geometry">
-                         <rect>
-                          <x>30</x>
-                          <y>30</y>
-                          <width>191</width>
-                          <height>188</height>
-                         </rect>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                       </widget>
-                      </widget>
-                      <widget class="QWidget" name="product_53" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>26</x>
-                         <y>400</y>
-                         <width>251</width>
-                         <height>320</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-radius: 10px;
-                background: #D9D9D9;
-border:none;</string>
-                       </property>
-                       <widget class="QPushButton" name="picproduct1_53">
-                        <property name="geometry">
-                         <rect>
-                          <x>30</x>
-                          <y>30</y>
-                          <width>191</width>
-                          <height>188</height>
-                         </rect>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                       </widget>
-                      </widget>
                      </widget>
                     </item>
                    </layout>
@@ -10173,7 +10023,7 @@ QScrollBar::handle:vertical:hover {
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-799</y>
+                 <y>0</y>
                  <width>1006</width>
                  <height>1400</height>
                 </rect>
@@ -14625,7 +14475,7 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1247</width>
+          <width>85</width>
           <height>1018</height>
          </rect>
         </property>
@@ -15101,7 +14951,7 @@ QScrollBar::handle:vertical:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1127</width>
+           <width>85</width>
            <height>1318</height>
           </rect>
          </property>
@@ -16293,7 +16143,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
+             <width>85</width>
              <height>868</height>
             </rect>
            </property>
@@ -17854,7 +17704,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
+             <width>85</width>
              <height>1518</height>
             </rect>
            </property>
@@ -19029,7 +18879,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
+             <width>85</width>
              <height>1518</height>
             </rect>
            </property>

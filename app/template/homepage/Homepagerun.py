@@ -132,6 +132,7 @@ class HomepageWindow(QMainWindow):
         self.ui.toberevievedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_cancel)
         self.ui.completedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_complete)
         self.ui.reviewsbutton_admin.clicked.connect(self.adminmain_to_orderstatus_review)
+        self.img_button_clicked = False
             
 
         #editprofile
@@ -266,6 +267,8 @@ class HomepageWindow(QMainWindow):
         self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
+        self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
     def orderstatus_tobeship(self):
         self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
         self.ui.toshipadminbutton.setStyleSheet(active_orderbutton_style)
@@ -348,7 +351,7 @@ class HomepageWindow(QMainWindow):
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
         
-        self.display_product()
+        # self.display_product()
     
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -477,7 +480,7 @@ class HomepageWindow(QMainWindow):
         if registerAdmin(username, shopname, firstname, lastname, description, address, email, phone, password):
             print("Admin registered successfully")
             self.show_success("Admin registered successfully")
-            self.go_to_home()
+            self.go_to_homepage_admin()
         else:
             print("Admin registration failed")
             self.show_error("Admin registration failed")
@@ -494,20 +497,25 @@ class HomepageWindow(QMainWindow):
         self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
+        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
         self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
         self.ui.viewallproductbutton_admin.clicked.connect(self.go_to_productspage_admin)
         self.ui.addproduct_admin.clicked.connect(self.go_to_addproduct_admin)
         
         # check how many product this user own
-        print("count_products_for_user: ", count_products_for_user(root.LoggedInUser.user.username))
         num_of_products = count_products_for_user(root.LoggedInUser.user.username)
-        
-        if num_of_products == 0:
-            self.ui.product_23.setVisible(False)
-        else:
-            self.display_product(True)
+        if num_of_products > 0:
+            self.display_product(True, "homepage_admin")
 
-    def display_product(self, admin=False):
+    def display_product(self, admin, widget):
+        if widget == "homepage_admin":
+            self.curr_widget = self.ui.frame_products_admin
+            self.curr_layout = self.ui.gridLayout_products_admin
+        elif widget == "allproducts_admin":
+            self.curr_widget = self.ui.frame_allproducts_admin
+            self.curr_layout = QGridLayout()
+            self.curr_widget.setLayout(self.curr_layout)
+
         # widget.setVisible(True)
         products = []
         if root.LoggedInUser.logged_in == False or admin == False:
@@ -517,23 +525,22 @@ class HomepageWindow(QMainWindow):
 
         product_widgets = []
         column = 1
-        row = 2
+        row = 1
 
         for product in products:
-            if column > 5:
+            if column > 3:
                 column = 1
-                row += 2
-            print("row: ", row)
-            print("column: ", column)
-            print("product: ", product)
-            img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
-            print("image path: ", img_path)
-            pixmap = QPixmap(img_path)
-            print("pixmap: ", pixmap)
+                row += 1
+                self.ui.frame_homepage_admin.setMinimumHeight(1100 + (320 * (row - 1))) 
+                self.ui.productcontainer_admin.setMinimumHeight(440 + (320 * (row - 1)))
+                self.curr_widget.setMinimumHeight(380 + (320 * (row - 1))) 
 
-            verticalSpacer = QSpacerItem(20, 100, QSizePolicy.Minimum, QSizePolicy.Expanding)
-            self.ui.gridLayout_products_admin.addItem(verticalSpacer, row - 1, column, 1, 1)
-            product_widget = QWidget(self.ui.frame_products_admin)
+            img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
+            # print("image path: ", img_path)
+            pixmap = QPixmap(img_path)
+            # print("pixmap: ", pixmap)
+
+            product_widget = QWidget(self.curr_widget)
             product_widget.setObjectName(u"product_widget")
             product_widget.setMinimumSize(QSize(251, 320))
             product_widget.setMaximumSize(QSize(251, 320))
@@ -592,14 +599,10 @@ class HomepageWindow(QMainWindow):
 
             product_gridLayout.addWidget(productdetails_frame, 1, 0, 1, 1)
 
-            self.ui.gridLayout_products_admin.addWidget(product_widget, row, column, 1, 1)
+            self.curr_layout.addWidget(product_widget, row, column, 1, 1)
 
-            if column < 4 and row % 2 == 0:
-                column += 1
-                product_horizontalSpacer = QSpacerItem(58, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-                self.ui.gridLayout_products_admin.addItem(product_horizontalSpacer, row, column, 1, 1)
-            
             product_widgets.append(product_widget)
+            
             column += 1
 
         for i, product_widget in enumerate(product_widgets):
@@ -618,17 +621,24 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.alltypesproductspage_admin)
         self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminallproductpage)
 
+        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
+        self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
+        self.ui.viewallproductbutton_admin.clicked.connect(self.go_to_productspage_admin)
+        self.ui.addproduct_admin.clicked.connect(self.go_to_addproduct_admin)
         
+        self.ui.productsbutton_admin.setStyleSheet(active_button_style)
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.productsbutton_admin.setStyleSheet(active_button_style)
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
-        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
         self.ui.producttypesbutton_admin.setStyleSheet(inactive_orderbutton_style)
         self.ui.allproductbutton_admin.setStyleSheet(active_orderbutton_style)
 
         self.ui.producttypesbutton_admin.clicked.connect(self.go_to_producttype_admin)
+        
+        num_of_products = count_products_for_user(root.LoggedInUser.user.username)
+        if num_of_products > 0:
+            self.display_product(True, "allproducts_admin")
 
     def go_to_producttype_admin(self):
             self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminproducttypespage)
@@ -646,11 +656,10 @@ class HomepageWindow(QMainWindow):
         self.size_len = 0
         self.ui.addoptionproductbutton.clicked.connect(self.add_option)
         self.option_len = 0
-        
+
         self.product_img = 0
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
-        # self.ui.delete_pic_button_1.clicked.connect(lambda: self.delete_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1,))
 
         self.ui.addimagebutton.clicked.connect(self.add_img)
 
@@ -658,7 +667,7 @@ class HomepageWindow(QMainWindow):
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
     
     def add_img(self):
-        if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1):
+        if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1) and not self.img_button_clicked:
             print("add img")
 
             addoption_geometry = self.ui.addimagebutton.geometry()
@@ -673,6 +682,7 @@ class HomepageWindow(QMainWindow):
             imgbutton.setMinimumSize(151, 151)
             imgbutton.setMaximumSize(151, 151)
             imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
+            self.img_button_clicked = True
 
     def add_product_img(self, button, img, delete):
         fname = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\', "Image files (*.jpg *.png)")
@@ -838,6 +848,7 @@ class HomepageWindow(QMainWindow):
 
     def add_option(self):
         print("add option")
+        print("option len: ", self.option_len)
         addoption_geometry = self.ui.addoptionproductbutton.geometry()
         x_coordinate = addoption_geometry.x()
         y_coordinate = addoption_geometry.y()
@@ -894,6 +905,7 @@ class HomepageWindow(QMainWindow):
         return categories
 
     def add_product(self):
+        self.addproduct_admin_clear()
         productname = self.ui.addproductnametextbox.text()
         description = self.ui.addproductdescriptiontextbox.toPlainText()
         price = self.ui.addproductpricespinbox.value()
@@ -919,6 +931,42 @@ class HomepageWindow(QMainWindow):
         print("product added")
         self.show_success("Product added successfully")
         self.go_to_homepage_admin()
+
+    def addproduct_admin_clear(self):
+        self.ui.addproductnametextbox.clear()
+        self.ui.addproductdescriptiontextbox.clear()
+        self.ui.addproductpricespinbox.setValue(0)
+        self.ui.addproductstockspinbox.setValue(0)
+        self.ui.addsizeproductbutton.setGeometry(10, 10, 108, 38)
+        for i in range(1, self.size_len):
+            size = self.ui.frame_sizes.findChild(QLineEdit, f"size_{i}")
+            size.setParent(None)
+            size.deleteLater()
+        self.size_len = 0
+        self.ui.addoptionproductbutton.setGeometry(10, 10, 108, 38)
+        for i in range(1, self.option_len):
+            option = self.ui.frame_options.findChild(QLineEdit, f"option_{i}")
+            option.setParent(None)
+            option.deleteLater()
+        self.option_len = 0
+        self.ui.addimagebutton.setGeometry(0, 45, 151, 151)
+        for i in range(1, self.product_img):
+            img = self.ui.frame_addimageproduct.findChild(QLabel, f"imglabel_{i}")
+            img.setParent(None)
+            img.deleteLater()
+            delete = self.ui.frame_addimageproduct.findChild(QPushButton, f"delete_pic_button_{i}")
+            delete.setParent(None)
+            delete.deleteLater()
+        self.product_img = 0
+        self.ui.checkBox_men.setChecked(False)
+        self.ui.checkBox_women.setChecked(False)
+        self.ui.checkBox_kids.setChecked(False)
+        self.ui.checkBox_top.setChecked(False)
+        self.ui.checkBox_bottom.setChecked(False)
+        self.ui.checkBox_dress.setChecked(False)
+        self.ui.checkBox_footwear.setChecked(False)
+        self.ui.checkBox_headwear.setChecked(False)
+        self.ui.checkBox_accessories.setChecked(False)
         
     # click product from admin page
     def product_click_for_edit(self):
