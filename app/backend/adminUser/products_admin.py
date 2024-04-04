@@ -155,6 +155,12 @@ def delete_product(username, product_id):
         return True
     return False
 
+def delete_product_by_id(product_id):
+    if root.ProductDatabase.remove_product_by_id(product_id):
+        transaction.commit()
+        return True
+    return False
+
 def addproduct(productname, description, price, sizes, options, stock, categories, img):
     user = root.LoggedInUser.user.username
     print("user: ", user)
@@ -207,3 +213,39 @@ def update_qrc_file(img_name):
         print(f"Updated .qrc file: {qrc_file_path}")
     except IOError as e:
         print(f"Error writing .qrc file: {e}")
+        
+        
+# ----------------------------- CART --------------------------------
+
+def addToCart(product_id):
+    user = root.LoggedInUser.user.username
+    root.LoggedInUser.user.add_to_cart_by_product_id(product_id, 1)
+    transaction.commit()
+    return True
+
+def get_user_cart_product_id():
+    user = root.LoggedInUser.user.username
+    cart = root.LoggedInUser.user.cart
+    cart_products_id = []
+    for product_id, quantity in cart:
+        cart_products_id.append([product_id, quantity])
+    return cart_products_id
+
+def removeFromCart(product_id):
+    user = root.LoggedInUser.user.username
+    root.LoggedInUser.user.remove_from_cart_by_product_id(product_id)
+    transaction.commit()
+    return True
+
+
+
+    
+    
+# def get_cart():
+#     user = root.LoggedInUser.user.username
+#     cart = root.LoggedInUser.user.cart
+#     cart_products = []
+#     for product_id, quantity in cart.items():
+#         product = get_product_by_id(product_id)
+#         cart_products.append((product, quantity))
+#     return cart_products

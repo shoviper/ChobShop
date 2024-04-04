@@ -96,6 +96,15 @@ class ProductDatabase(persistent.Persistent):
                 return True
         
         return False
+    
+    def remove_product_by_id(self, product_id):
+        for user, products in self.products.items():
+            for i, product in enumerate(products):
+                if product.id == product_id:
+                    del products[i]
+                    print("product removed")
+                    return True
+        return False
 
     
     def toJSON(self):
@@ -158,8 +167,60 @@ class GeneralUser(persistent.Persistent):
     
     def __str__(self) -> str:
         return f"\nusername: {self.username}, \nemail: {self.email}, \nname: {self.name}, \nlastname: {self.lastname}, \naddress: {self.address}, \nbirthday: {self.birthday}, \nphone: {self.phone}, \nadmin: {self.admin}"
+    
+class Customer(GeneralUser):
+    def __init__(self, username, email, password) -> None:
+        super().__init__(username, email, password)
+        self.favorites = []
+        self.cart = []
+        self.orders = []
+        self.reviews = None
+        self.admin = False
 
-class Admin(GeneralUser):
+    def add_to_cart_by_product_id(self, product_id, quantity):            
+        for item in self.cart:
+            if item[0] == product_id:
+                item[1] += quantity
+                return 
+        self.cart.append([product_id, quantity])
+                
+    def remove_from_cart_by_product_id(self, product_id):
+        for item in self.cart:
+            if item[0] == product_id:
+                self.cart.remove(item)
+                return
+
+    def add_to_fav(self, product):
+        self.favorites.append(product)
+
+    def remove_from_fav(self, product):
+        if product in self.favorites:
+            self.favorites.remove(product)
+
+    def add_review(self, product, review):
+        self.reviews[product] = review
+
+    def add_order(self, order):
+        self.orders[order] = datetime.datetime.now()
+
+    def toJSON(self):
+        return {
+            "username": self.username,
+            "email": self.email,
+            "name": self.name,
+            "lastname": self.lastname,
+            "address": self.address,
+            "phone": self.phone,
+            "admin": self.admin,
+            "cart": self.cart,
+            "orders": self.orders,
+        }
+    
+    def __str__(self) -> str:
+        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
+
+
+class Admin(Customer):
     def __init__(self, username, shopname, name, lastname, description, address, email, phone, password) -> None:
         super().__init__(username, email, password)
         self.shopname = shopname
@@ -223,57 +284,50 @@ class Admin(GeneralUser):
     
     def __str__(self) -> str:
         return super().__str__()
+
+class CustomerDatabase(persistent.Persistent):
+    def __init__(self):
+        self.customers = {}
+        self.next_id = 1
+
+    def add_customer(self, username, email, password):
+        customer = Customer(username, email, password)
+        self.customers[username] = customer
+        return customer
+
+    def get_customer(self, username):
+        return self.customers.get(username, None)
+
+    def update_customer(self, username, **kwargs):
+        customer = self.customers.get(username, None)
+        if customer:
+            for key, value in kwargs.items():
+                if hasattr(customer, key):
+                    setattr(customer, key, value)
+            return True
+        return False
+
+    def remove_customer(self, username):
+        if username in self.customers:
+            del self.customers[username]
+            return True
+        return False
     
-class Customer(GeneralUser):
-    def __init__(self, username, email, password) -> None:
-        super().__init__(username, email, password)
-        self.favorites = []
-        self.cart = []
-        self.orders = []
-        self.reviews = None
-        self.admin = False
-
-    def add_to_cart(self, product, quantity):
-        if product in self.cart:
-            self.cart[product] += quantity
-        else:
-            self.cart[product] = quantity
-
-    def remove_from_cart(self, product, quantity):
-        if product in self.cart:
-            if self.cart[product] > quantity:
-                self.cart[product] -= quantity
-            else:
-                del self.cart[product]
-
-    def add_to_fav(self, product):
-        self.favorites.append(product)
-
-    def remove_from_fav(self, product):
-        if product in self.favorites:
-            self.favorites.remove(product)
-
-    def add_review(self, product, review):
-        self.reviews[product] = review
-
-    def add_order(self, order):
-        self.orders[order] = datetime.datetime.now()
-
+    def add_to_cart(self, username, product, quantity):
+        customer = self.customers.get(username, None)
+        if customer:
+            customer.add_to_cart(product, quantity)
+            return True
+        return False
+    
     def toJSON(self):
         return {
-            "username": self.username,
-            "email": self.email,
-            "name": self.name,
-            "lastname": self.lastname,
-            "address": self.address,
-            "phone": self.phone,
-            "admin": self.admin,
-            "cart": self.cart,
-            "orders": self.orders,
+            "customers": {username: customer.toJSON() for username, customer in self.customers.items()},
+            "next_id": self.next_id
         }
     
     def __str__(self) -> str:
-        return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
+        return f"customers: {self.customers}, next_id: {self.next_id}"
 
 class LoggedInUser(persistent.Persistent):
     def __init__(self, user=None) -> None:

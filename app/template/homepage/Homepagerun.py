@@ -2,6 +2,7 @@ import shutil
 import os
 import xml.etree.ElementTree as ET
 import sys
+import functools
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QSizePolicy, QFileDialog
 from PySide6.QtGui import QPixmap
 from PySide6 import QtCore
@@ -117,8 +118,6 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         self.ui.orderbutton.clicked.connect(self.go_to_order)
         
-        
-        
         # self.display_product()
         
         print("-----------Print All Product This User Sell----------------")
@@ -127,13 +126,12 @@ class HomepageWindow(QMainWindow):
             print("product name and id: ", (get_product_name(root.LoggedInUser.user.username, i.id)), i.id)
         print("-----------------------------------------------------------")
         
-        print("-----------Print This User's Cart----------------")
+        # delete product by id
+        # delete_product_by_id(2)
 
-        # for i in get_cart(root.LoggedInUser.user.username):
-        #     print("product name and id: ", (get_product_name(root.LoggedInUser.user.username, i)), i)
-        print("-----------------------------------------------------------")
+        self.print_cart()
         
-
+        
         #orderpage
         self.ui.tobeshippedbutton.clicked.connect(self.go_to_order_ship)
         self.ui.toberecievedbutton.clicked.connect(self.go_to_order_receive)
@@ -196,9 +194,15 @@ class HomepageWindow(QMainWindow):
 
         #cart
         self.ui.cartbutton.clicked.connect(self.go_to_cart)
-        self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
+        # self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
         # self.ui.removecartbutton.clicked.connect(self.removeorder)
-        # self.ui.backtocartbutton.clicked.connect(self.back_to_cart)
+        self.ui.backtocartbutton.clicked.connect(self.back_to_cart)
+        
+        # purchase page
+        self.ui.purchasebutton.clicked.connect(self.purchase_final)
+        self.ui.purchasebutton_2.clicked.connect(self.go_to_home)
+        self.ui.purchasebutton_3.clicked.connect(self.go_to_home)
+        
 
     #Log out function
     def back_to_login(self):
@@ -225,16 +229,67 @@ class HomepageWindow(QMainWindow):
     #     # self.show_goodbye("Log out successful, See you again")
     #     self.close()
     #     self.login.show()
+    
+    def purchase_final(self):
+        if not (self.ui.promptpaybutton.isChecked() or self.ui.creditcardbutton.isChecked() or self.ui.cashdeliverybutton.isChecked() or self.ui.pickupstorebutton.isChecked()):
+            self.show_error("Please choose payment method")
+            return
+
+        if self.ui.promptpaybutton.isChecked():
+            print("Promptpay")
+            self.go_to_promtpay()
+        else:
+            self.show_success("Purchase successful")
+            print("Purchase successful")
+            self.print_cart()
+            self.go_to_purchase_complete()
+            
+    def go_to_promtpay(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
+        self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.promppaymethod)
+        
+        self.ui.purchasebutton_2.clicked.connect(lambda: self.go_to_purchase_complete())
+        
+        
+    def go_to_purchase_complete(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
+        self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.purchasecomplete)
+        
+        self.ui.purchasebutton_3.clicked.connect(lambda: self.go_to_home())
             
 
     #cartpage--------------------------------------------------------------------------------------------
-    def purchase_cartpage(self, page):
+    
+    def purchase_cartpage(self, page, id=None):
+        self.ui.listWidget.clear()
+        self.ui.promptpaybutton.setChecked(False)
+        self.ui.creditcardbutton.setChecked(False)
+        self.ui.cashdeliverybutton.setChecked(False)
+        self.ui.pickupstorebutton.setChecked(False)
+        
         self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
         self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.choosingtypeofpurchase)
+        
+        self.ui.firstnameaddressdisplay_2.setText(root.LoggedInUser.user.name)
+        self.ui.lastnameaddressdisplay_2.setText(root.LoggedInUser.user.lastname)
+        self.ui.phoneaddressdisplay_2.setText(root.LoggedInUser.user.phone)
+        
         if page == "productpage":
-            self.ui.backtocartbutton.clicked.connect(self.go_to_productpage)
+            self.ui.backtocartbutton.clicked.connect(lambda: self.go_to_productpage(id))
+            self.ui.totalprice.setText(f"{str(get_product_price_by_id(id))}")
+            item = f"{get_product_name_by_id(id)} x 1 -------> {get_product_price_by_id(id)}"
+            self.ui.listWidget.addItem(item)
+            
         else:
-            self.ui.backtocartbutton.clicked.connect(self.go_to_cart)
+            self.ui.backtocartbutton.clicked.connect(lambda: self.go_to_cart)
+            self.ui.totalprice.setText(f"{str(self.add_total_price_in_cart())}")
+
+            for i in get_user_cart_product_id():
+                item = f"{get_product_name_by_id(i[0])} x {i[1]} -------> {get_product_price_by_id(i[0])}"
+                self.ui.listWidget.addItem(item)
+        
+            
+            
     def back_to_cart(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.cartpage)
@@ -365,6 +420,8 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)        
 
     def go_to_productpage(self, id):
+        print("id: ", id)
+        print("product name: ", get_product_name_by_id(id))
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.productviewpage)
         self.ui.productname.setText(get_product_name_by_id(id))
@@ -379,12 +436,18 @@ class HomepageWindow(QMainWindow):
         
         # ----------------------- not done -----------------------
         if len(get_product_img_by_id(id)) > 1:
-            self.ui.picpress1.setPixmap(QPixmap(get_product_img_by_id(id)[1]))
-            self.ui.picpress1.setScaledContents(True)
+            self.ui.mainpic.setPixmap(QPixmap(get_product_img_by_id(id)[0]))
+            self.ui.mainpic.setScaledContents(True)
         # --------------------------------------------------------
         
-        self.ui.addtocartbutton.clicked.connect(lambda: self.add_to_cart(id))
-        self.ui.buynowbutton.clicked.connect(lambda: self.purchase_cartpage("productpage"))
+        # try:
+        #     self.ui.addtocartbutton.clicked.disconnect()
+        # except TypeError:
+        #     pass
+        
+        self.ui.addtocartbutton.clicked.connect(self.add_to_cart(id))
+        # self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
+        self.ui.buynowbutton.clicked.connect(lambda: self.purchase_cartpage("productpage", id))
 
 
     def go_to_home(self):
@@ -404,16 +467,26 @@ class HomepageWindow(QMainWindow):
             self.display_product(False, "homepage_customer")
             # self.display_product_main(get_random_product_id())
             
-            
+    def print_cart(self):
+        print("------------------CART------------------")
+        for i in get_user_cart_product_id():
+            print("products in cart and id: ", (get_product_name_by_id(i[0])), i[1])
+            print("Total product price in cart: ", self.add_total_price_in_cart())
+        print("---------------------------------------")
+    
+    def add_total_price_in_cart(self):
+        total_price = 0
+        for i in get_user_cart_product_id():
+            total_price += (i[1] * (get_product_price_by_id(i[0])))
+        return total_price
             
     def add_to_cart(self, id):
         user = root.LoggedInUser.user.username
         if addToCart(id):
+            transaction.commit()
             self.show_success("Product added to cart")
             print("Product added to cart")
-            # print cart
-            for i in get_cart(user):
-                print("product name and id: ", (get_product_name(user, i)), i)
+            self.print_cart()
             self.go_to_productpage(id)
             
             
@@ -422,17 +495,39 @@ class HomepageWindow(QMainWindow):
     #     self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.choosingtypeofpurchase)
     #     self.ui.backtocartbutton.clicked.connect(self.go_to_cart)
     
+    def remove_item_from_cart(self, product_id):
+        if removeFromCart(product_id):
+            transaction.commit()
+            self.show_success("Product removed from cart")
+            print("Product removed from cart")
+            self.print_cart()
+        else:
+            self.show_error("Product remove failed")
+            print("Product remove failed")
+            self.print_cart()
+    
     def go_to_cart(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.cartpage)
         
         # get cart
         user = root.LoggedInUser.user.username
-        cart_products = get_cart(user)
-        for i in cart_products:
-            print("product name and id: ", (get_product_name(user, i)), i)
+        cart_products = get_user_cart_product_id()
         
-        self.ui.cartorderpic.setPixmap(QPixmap(get_first_img_for_product(cart_products[0])))
-    
+        self.print_cart()
+        
+        for i in cart_products:
+            self.ui.shopnameforcart.setText(get_shopname_by_product_id(i[0]))
+            self.ui.productcartname.setText(get_product_name_by_id(i[0]))
+            self.ui.productcartdescrip.setText(get_product_description_by_id(i[0]))
+            self.ui.totalpricecartnumlabel.setText(str(get_product_price_by_id(i[0]) * i[1]))
+            self.ui.productnum.setText(f"{i[1]} piece")
+            self.ui.cartorderpic.setPixmap(QPixmap(get_first_img_for_product(i[0])))
+            self.ui.cartorderpic.setScaledContents(True)
+            
+            self.ui.removecartbutton.clicked.connect(lambda: self.remove_item_from_cart(i[0]))
+            self.ui.purchasecartbutton.clicked.connect(lambda: self.purchase_cartpage("cartpage"))
+            
+        
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
@@ -588,18 +683,23 @@ class HomepageWindow(QMainWindow):
             self.display_product(True, "homepage_admin")
 
     def display_product(self, admin, widget):
+        print("display product")
         if widget == "homepage_admin":
+            print("homepage_admin")
             self.curr_widget = self.ui.frame_products_admin
             self.curr_layout = self.ui.gridLayout_products_admin
         elif widget == "allproducts_admin":
+            print("allproducts_admin")
             self.curr_widget = self.ui.frame_allproducts_admin
             self.curr_layout = QGridLayout()
             self.curr_widget.setLayout(self.curr_layout)
         elif widget == "homepage_customer":
+            print("homepage_customer")
             self.curr_widget = self.ui.frame_homepage_product
             self.curr_layout = QGridLayout()
             self.curr_widget.setLayout(self.curr_layout)
         # widget.setVisible(True)
+        
         products = []
         if root.LoggedInUser.logged_in == False or admin == False:
             products = get_all_products()
@@ -614,6 +714,7 @@ class HomepageWindow(QMainWindow):
         row = 1
 
         for product in products:
+            # print("product: ", product)
             if column > 3:
                 column = 1
                 row += 1
@@ -702,11 +803,19 @@ class HomepageWindow(QMainWindow):
             productprice_button = product_widget.findChild(QPushButton, "productprice_button")
             productname_label = product_widget.findChild(QLabel, "productname_label")
             picproduct1_17 = product_widget.findChild(QPushButton, "picproduct1_17")
+            
             productname_label.setText(get_product_name_by_id(products[i].id))
             productprice_button.setText(f"฿{str(get_product_price_by_id(products[i].id))}")
             productsold_label.setText(f"{products[i].sold} sold")
             img_path = get_product_img_by_id(products[i].id)[0]
             picproduct1_17.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
+
+            # picproduct1_17.clicked.connect(functools.partial(self.go_to_productpage(products[i].id)))
+            picproduct1_17.clicked.connect(functools.partial(self.go_to_productpage, products[i].id))
+            # go_to_productpage(products[i].id)
+            
+        # self.curr_widget.update()
+        # self.curr_widget.adjustSize()
 
     def go_to_productspage_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
