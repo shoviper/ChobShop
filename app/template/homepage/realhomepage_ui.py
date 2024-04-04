@@ -75,7 +75,7 @@ class Ui_Main(object):
         self.scrollArea_settingsadmin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_16 = QWidget()
         self.scrollAreaWidgetContents_16.setObjectName(u"scrollAreaWidgetContents_16")
-        self.scrollAreaWidgetContents_16.setGeometry(QRect(0, 0, 1121, 1024))
+        self.scrollAreaWidgetContents_16.setGeometry(QRect(0, 0, 1127, 1018))
         self.verticalLayout_28 = QVBoxLayout(self.scrollAreaWidgetContents_16)
         self.verticalLayout_28.setObjectName(u"verticalLayout_28")
         self.frame_settingsadmin = QFrame(self.scrollAreaWidgetContents_16)
@@ -595,7 +595,7 @@ class Ui_Main(object):
         self.scrollArea_ruleofuse_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_19 = QWidget()
         self.scrollAreaWidgetContents_19.setObjectName(u"scrollAreaWidgetContents_19")
-        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_30 = QVBoxLayout(self.scrollAreaWidgetContents_19)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
         self.frame_ruleofuse_3 = QFrame(self.scrollAreaWidgetContents_19)
@@ -674,7 +674,7 @@ class Ui_Main(object):
         self.scrollArea_changepassword_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_20 = QWidget()
         self.scrollAreaWidgetContents_20.setObjectName(u"scrollAreaWidgetContents_20")
-        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_32 = QVBoxLayout(self.scrollAreaWidgetContents_20)
         self.verticalLayout_32.setObjectName(u"verticalLayout_32")
         self.frame_changepassword_3 = QFrame(self.scrollAreaWidgetContents_20)
@@ -1391,7 +1391,7 @@ class Ui_Main(object):
         self.scrollArea_homepage.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -267, 1006, 1000))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1006, 1000))
         self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 1000))
         self.frame_homepage = QFrame(self.scrollAreaWidgetContents)
         self.frame_homepage.setObjectName(u"frame_homepage")
@@ -1521,14 +1521,14 @@ class Ui_Main(object):
         self.product_homepage_pic_1 = QLabel(self.product_1)
         self.product_homepage_pic_1.setObjectName(u"product_homepage_pic_1")
         self.product_homepage_pic_1.setGeometry(QRect(30, 30, 191, 191))
+        self.product_homepage_name_1 = QLabel(self.product_1)
+        self.product_homepage_name_1.setObjectName(u"product_homepage_name_1")
+        self.product_homepage_name_1.setGeometry(QRect(10, 250, 231, 20))
+        self.product_homepage_name_1.setAlignment(Qt.AlignCenter)
         self.product_homepage_price_1 = QLabel(self.product_1)
         self.product_homepage_price_1.setObjectName(u"product_homepage_price_1")
         self.product_homepage_price_1.setGeometry(QRect(10, 270, 231, 20))
         self.product_homepage_price_1.setAlignment(Qt.AlignCenter)
-        self.product_homepage_name_1 = QPushButton(self.product_1)
-        self.product_homepage_name_1.setObjectName(u"product_homepage_name_1")
-        self.product_homepage_name_1.setGeometry(QRect(10, 250, 231, 20))
-        self.product_homepage_name_1.setCursor(QCursor(Qt.PointingHandCursor))
         self.product_2 = QWidget(self.frame_homepage)
         self.product_2.setObjectName(u"product_2")
         self.product_2.setGeometry(QRect(720, 500, 251, 320))
@@ -1610,7 +1610,7 @@ class Ui_Main(object):
         self.scrollArea_cart.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
-        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 61, 2024))
+        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 998, 2018))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents_4)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.frame_cartpage = QFrame(self.scrollAreaWidgetContents_4)
@@ -2318,7 +2318,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage.setWidgetResizable(True)
         self.scrollAreaWidgetContents_9 = QWidget()
         self.scrollAreaWidgetContents_9.setObjectName(u"scrollAreaWidgetContents_9")
-        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, -137, 992, 724))
+        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 998, 718))
         self.verticalLayout_12 = QVBoxLayout(self.scrollAreaWidgetContents_9)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.frame_productviewpage = QFrame(self.scrollAreaWidgetContents_9)
@@ -2372,7 +2372,6 @@ class Ui_Main(object):
         self.buynowbutton = QPushButton(self.productcontainer_2)
         self.buynowbutton.setObjectName(u"buynowbutton")
         self.buynowbutton.setGeometry(QRect(726, 420, 141, 44))
-        self.buynowbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.buynowbutton.setStyleSheet(u"border-radius: 5px;\n"
 "background-color: #CD4662;\n"
 "color: #FFF;\n"
@@ -2386,7 +2385,6 @@ class Ui_Main(object):
         self.addtocartbutton = QPushButton(self.productcontainer_2)
         self.addtocartbutton.setObjectName(u"addtocartbutton")
         self.addtocartbutton.setGeometry(QRect(534, 420, 141, 44))
-        self.addtocartbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.addtocartbutton.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4DBDB;\n"
@@ -2425,7 +2423,6 @@ class Ui_Main(object):
         self.viewshopbutton = QPushButton(self.productcontainer_2)
         self.viewshopbutton.setObjectName(u"viewshopbutton")
         self.viewshopbutton.setGeometry(QRect(210, 620, 221, 31))
-        self.viewshopbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.viewshopbutton.setStyleSheet(u"color: #FFF;\n"
 "background-color: #AEC289;\n"
 "text-align: center;\n"
@@ -2503,7 +2500,6 @@ class Ui_Main(object):
         self.sbutton = QPushButton(self.productcontainer_2)
         self.sbutton.setObjectName(u"sbutton")
         self.sbutton.setGeometry(QRect(534, 190, 75, 24))
-        self.sbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.sbutton.setStyleSheet(u"color:#545454;\n"
 "font-family: Suwannaphum;\n"
 "background: #D9D9D9;\n"
@@ -2514,7 +2510,6 @@ class Ui_Main(object):
         self.mbutton = QPushButton(self.productcontainer_2)
         self.mbutton.setObjectName(u"mbutton")
         self.mbutton.setGeometry(QRect(620, 190, 75, 24))
-        self.mbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.mbutton.setStyleSheet(u"color:#545454;\n"
 "font-family: Suwannaphum;\n"
 "background: #D9D9D9;\n"
@@ -2525,7 +2520,6 @@ class Ui_Main(object):
         self.lbutton = QPushButton(self.productcontainer_2)
         self.lbutton.setObjectName(u"lbutton")
         self.lbutton.setGeometry(QRect(706, 190, 75, 24))
-        self.lbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.lbutton.setStyleSheet(u"color:#545454;\n"
 "font-family: Suwannaphum;\n"
 "background: #D9D9D9;\n"
@@ -2536,7 +2530,6 @@ class Ui_Main(object):
         self.xlbutton = QPushButton(self.productcontainer_2)
         self.xlbutton.setObjectName(u"xlbutton")
         self.xlbutton.setGeometry(QRect(792, 190, 75, 24))
-        self.xlbutton.setCursor(QCursor(Qt.PointingHandCursor))
         self.xlbutton.setStyleSheet(u"color:#545454;\n"
 "font-family: Suwannaphum;\n"
 "background: #D9D9D9;\n"
@@ -2741,7 +2734,7 @@ class Ui_Main(object):
 "image: url(:/pic/realimages/backhomoe.png);")
         self.textboxeditcontainer_11 = QWidget(self.choosingtypeofpurchase)
         self.textboxeditcontainer_11.setObjectName(u"textboxeditcontainer_11")
-        self.textboxeditcontainer_11.setGeometry(QRect(60, 10, 1101, 171))
+        self.textboxeditcontainer_11.setGeometry(QRect(60, 60, 1101, 171))
         self.textboxeditcontainer_11.setStyleSheet(u"border-radius: 20px;\n"
 "background: #F4DBDB;")
         self.addressdisplaylabel_2 = QLabel(self.textboxeditcontainer_11)
@@ -2757,7 +2750,7 @@ class Ui_Main(object):
         self.addressdisplaylabel_2.setAlignment(Qt.AlignCenter)
         self.soiaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.soiaddress_2.setObjectName(u"soiaddress_2")
-        self.soiaddress_2.setGeometry(QRect(350, 90, 121, 31))
+        self.soiaddress_2.setGeometry(QRect(340, 90, 31, 31))
         self.soiaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2777,7 +2770,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.lastnameaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.lastnameaddress_2.setObjectName(u"lastnameaddress_2")
-        self.lastnameaddress_2.setGeometry(QRect(320, 60, 121, 31))
+        self.lastnameaddress_2.setGeometry(QRect(340, 60, 101, 31))
         self.lastnameaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2797,7 +2790,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.phoneaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.phoneaddress_2.setObjectName(u"phoneaddress_2")
-        self.phoneaddress_2.setGeometry(QRect(600, 60, 121, 31))
+        self.phoneaddress_2.setGeometry(QRect(590, 60, 61, 31))
         self.phoneaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2807,7 +2800,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.streetaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.streetaddress_2.setObjectName(u"streetaddress_2")
-        self.streetaddress_2.setGeometry(QRect(600, 90, 121, 31))
+        self.streetaddress_2.setGeometry(QRect(590, 90, 61, 31))
         self.streetaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2817,7 +2810,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.streetaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.streetaddressdisplay_2.setObjectName(u"streetaddressdisplay_2")
-        self.streetaddressdisplay_2.setGeometry(QRect(700, 90, 165, 31))
+        self.streetaddressdisplay_2.setGeometry(QRect(700, 90, 201, 31))
         self.streetaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2825,10 +2818,10 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
-        self.streetaddressdisplay_2.setAlignment(Qt.AlignCenter)
+        self.streetaddressdisplay_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.firstnameaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.firstnameaddressdisplay_2.setObjectName(u"firstnameaddressdisplay_2")
-        self.firstnameaddressdisplay_2.setGeometry(QRect(120, 60, 165, 31))
+        self.firstnameaddressdisplay_2.setGeometry(QRect(180, 60, 121, 31))
         self.firstnameaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2839,7 +2832,7 @@ class Ui_Main(object):
         self.firstnameaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.phoneaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.phoneaddressdisplay_2.setObjectName(u"phoneaddressdisplay_2")
-        self.phoneaddressdisplay_2.setGeometry(QRect(700, 60, 165, 31))
+        self.phoneaddressdisplay_2.setGeometry(QRect(700, 60, 201, 31))
         self.phoneaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2847,10 +2840,10 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
-        self.phoneaddressdisplay_2.setAlignment(Qt.AlignCenter)
+        self.phoneaddressdisplay_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.lastnameaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.lastnameaddressdisplay_2.setObjectName(u"lastnameaddressdisplay_2")
-        self.lastnameaddressdisplay_2.setGeometry(QRect(440, 60, 121, 31))
+        self.lastnameaddressdisplay_2.setGeometry(QRect(450, 60, 101, 31))
         self.lastnameaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2861,7 +2854,7 @@ class Ui_Main(object):
         self.lastnameaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.homenumaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.homenumaddressdisplay_2.setObjectName(u"homenumaddressdisplay_2")
-        self.homenumaddressdisplay_2.setGeometry(QRect(170, 90, 165, 31))
+        self.homenumaddressdisplay_2.setGeometry(QRect(180, 90, 141, 31))
         self.homenumaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2872,7 +2865,7 @@ class Ui_Main(object):
         self.homenumaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.soiaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.soiaddressdisplay_2.setObjectName(u"soiaddressdisplay_2")
-        self.soiaddressdisplay_2.setGeometry(QRect(430, 90, 101, 31))
+        self.soiaddressdisplay_2.setGeometry(QRect(450, 90, 31, 31))
         self.soiaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2893,7 +2886,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.provinceaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.provinceaddress_2.setObjectName(u"provinceaddress_2")
-        self.provinceaddress_2.setGeometry(QRect(310, 120, 121, 31))
+        self.provinceaddress_2.setGeometry(QRect(340, 120, 81, 31))
         self.provinceaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2903,7 +2896,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.countryaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.countryaddress_2.setObjectName(u"countryaddress_2")
-        self.countryaddress_2.setGeometry(QRect(560, 120, 121, 31))
+        self.countryaddress_2.setGeometry(QRect(590, 120, 71, 31))
         self.countryaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2913,7 +2906,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.zipcodeaddress_2 = QLabel(self.textboxeditcontainer_11)
         self.zipcodeaddress_2.setObjectName(u"zipcodeaddress_2")
-        self.zipcodeaddress_2.setGeometry(QRect(790, 120, 121, 31))
+        self.zipcodeaddress_2.setGeometry(QRect(820, 120, 81, 31))
         self.zipcodeaddress_2.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2923,7 +2916,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.districtaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.districtaddressdisplay_2.setObjectName(u"districtaddressdisplay_2")
-        self.districtaddressdisplay_2.setGeometry(QRect(170, 120, 91, 31))
+        self.districtaddressdisplay_2.setGeometry(QRect(180, 120, 71, 31))
         self.districtaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2934,7 +2927,7 @@ class Ui_Main(object):
         self.districtaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.provinceaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.provinceaddressdisplay_2.setObjectName(u"provinceaddressdisplay_2")
-        self.provinceaddressdisplay_2.setGeometry(QRect(430, 120, 91, 31))
+        self.provinceaddressdisplay_2.setGeometry(QRect(450, 120, 91, 31))
         self.provinceaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2945,7 +2938,7 @@ class Ui_Main(object):
         self.provinceaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.countryaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.countryaddressdisplay_2.setObjectName(u"countryaddressdisplay_2")
-        self.countryaddressdisplay_2.setGeometry(QRect(670, 120, 91, 31))
+        self.countryaddressdisplay_2.setGeometry(QRect(700, 120, 81, 31))
         self.countryaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2956,7 +2949,7 @@ class Ui_Main(object):
         self.countryaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.zipcodeaddressdisplay_2 = QLabel(self.textboxeditcontainer_11)
         self.zipcodeaddressdisplay_2.setObjectName(u"zipcodeaddressdisplay_2")
-        self.zipcodeaddressdisplay_2.setGeometry(QRect(900, 120, 91, 31))
+        self.zipcodeaddressdisplay_2.setGeometry(QRect(920, 120, 91, 31))
         self.zipcodeaddressdisplay_2.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -2967,7 +2960,7 @@ class Ui_Main(object):
         self.zipcodeaddressdisplay_2.setAlignment(Qt.AlignCenter)
         self.orderlabel = QLabel(self.choosingtypeofpurchase)
         self.orderlabel.setObjectName(u"orderlabel")
-        self.orderlabel.setGeometry(QRect(70, 190, 121, 41))
+        self.orderlabel.setGeometry(QRect(60, 240, 121, 41))
         self.orderlabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2977,7 +2970,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.choosemethodlabel = QLabel(self.choosingtypeofpurchase)
         self.choosemethodlabel.setObjectName(u"choosemethodlabel")
-        self.choosemethodlabel.setGeometry(QRect(70, 470, 271, 41))
+        self.choosemethodlabel.setGeometry(QRect(60, 500, 271, 41))
         self.choosemethodlabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2985,35 +2978,39 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.promptpay = QRadioButton(self.choosingtypeofpurchase)
-        self.promptpay.setObjectName(u"promptpay")
-        self.promptpay.setGeometry(QRect(70, 520, 101, 20))
-        self.promptpay.setStyleSheet(u" QCheckBox {\n"
-"                color: #CD4662;\n"
-"				\n"
+        self.promptpaybutton = QRadioButton(self.choosingtypeofpurchase)
+        self.promptpaybutton.setObjectName(u"promptpaybutton")
+        self.promptpaybutton.setGeometry(QRect(60, 560, 131, 31))
+        self.promptpaybutton.setStyleSheet(u"QRadioButton::indicator {\n"
+"                width: 20px;\n"
+"                height: 20px;\n"
 "            }\n"
-"                           \n"
-"            QCheckBox::indicator {\n"
-"                border-radius: 3px;\n"
-"                background-color: #F4DBDB;\n"
-"                width: 26px;\n"
-"                height: 26px;\n"
-"                border: none;\n"
+"            QRadioButton {\n"
+"                color: #333;\n"
+"                font-size: 20px;\n"
 "            }\n"
-"\n"
-"            QCheckBox::indicator:checked {\n"
-"                background-color: #CD4662;\n"
-"            }\n"
-"            QCheckBox::indicator:unchecked {\n"
-"                background-color: #F4DBDB;\n"
-"            }\n"
-"font-size: 20px;")
+"            QRadioButton::indicator:checked {\n"
+"                background-color: #2196F3;\n"
+"                border: 1px solid #2196F3;\n"
+"            }")
         self.cashdeliverybutton = QRadioButton(self.choosingtypeofpurchase)
         self.cashdeliverybutton.setObjectName(u"cashdeliverybutton")
-        self.cashdeliverybutton.setGeometry(QRect(200, 520, 141, 20))
+        self.cashdeliverybutton.setGeometry(QRect(380, 560, 171, 31))
+        self.cashdeliverybutton.setStyleSheet(u"QRadioButton::indicator {\n"
+"                width: 20px;\n"
+"                height: 20px;\n"
+"            }\n"
+"            QRadioButton {\n"
+"                color: #333;\n"
+"                font-size: 20px;\n"
+"            }\n"
+"            QRadioButton::indicator:checked {\n"
+"                background-color: #2196F3;\n"
+"                border: 1px solid #2196F3;\n"
+"            }")
         self.purchasebutton = QPushButton(self.choosingtypeofpurchase)
         self.purchasebutton.setObjectName(u"purchasebutton")
-        self.purchasebutton.setGeometry(QRect(1010, 640, 151, 41))
+        self.purchasebutton.setGeometry(QRect(1000, 660, 151, 41))
         self.purchasebutton.setStyleSheet(u"color: #FFF;\n"
 "background-color: #AEC289;\n"
 "text-align: center;\n"
@@ -3026,27 +3023,57 @@ class Ui_Main(object):
 "border-radius: 10px;")
         self.listView = QListView(self.choosingtypeofpurchase)
         self.listView.setObjectName(u"listView")
-        self.listView.setGeometry(QRect(70, 240, 1091, 221))
-        self.orderlabel_2 = QLabel(self.choosingtypeofpurchase)
-        self.orderlabel_2.setObjectName(u"orderlabel_2")
-        self.orderlabel_2.setGeometry(QRect(840, 570, 151, 41))
-        self.orderlabel_2.setStyleSheet(u"color: #000;\n"
+        self.listView.setGeometry(QRect(60, 300, 1091, 191))
+        self.totalpricelabel = QLabel(self.choosingtypeofpurchase)
+        self.totalpricelabel.setObjectName(u"totalpricelabel")
+        self.totalpricelabel.setGeometry(QRect(880, 610, 121, 41))
+        self.totalpricelabel.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.orderlabel_price = QLabel(self.choosingtypeofpurchase)
-        self.orderlabel_price.setObjectName(u"orderlabel_price")
-        self.orderlabel_price.setGeometry(QRect(1010, 570, 151, 41))
-        self.orderlabel_price.setStyleSheet(u"color: #000;\n"
+        self.totalprice = QLabel(self.choosingtypeofpurchase)
+        self.totalprice.setObjectName(u"totalprice")
+        self.totalprice.setGeometry(QRect(1040, 610, 71, 41))
+        self.totalprice.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
+        self.creditcardbutton = QRadioButton(self.choosingtypeofpurchase)
+        self.creditcardbutton.setObjectName(u"creditcardbutton")
+        self.creditcardbutton.setGeometry(QRect(220, 560, 131, 31))
+        self.creditcardbutton.setStyleSheet(u"QRadioButton::indicator {\n"
+"                width: 20px;\n"
+"                height: 20px;\n"
+"            }\n"
+"            QRadioButton {\n"
+"                color: #333;\n"
+"                font-size: 20px;\n"
+"            }\n"
+"            QRadioButton::indicator:checked {\n"
+"                background-color: #2196F3;\n"
+"                border: 1px solid #2196F3;\n"
+"            }")
+        self.pickupstorebutton = QRadioButton(self.choosingtypeofpurchase)
+        self.pickupstorebutton.setObjectName(u"pickupstorebutton")
+        self.pickupstorebutton.setGeometry(QRect(580, 560, 201, 31))
+        self.pickupstorebutton.setStyleSheet(u"QRadioButton::indicator {\n"
+"                width: 20px;\n"
+"                height: 20px;\n"
+"            }\n"
+"            QRadioButton {\n"
+"                color: #333;\n"
+"                font-size: 20px;\n"
+"            }\n"
+"            QRadioButton::indicator:checked {\n"
+"                background-color: #2196F3;\n"
+"                border: 1px solid #2196F3;\n"
+"            }")
         self.stackedWidget_purchase.addWidget(self.choosingtypeofpurchase)
         self.purchasecomplete = QWidget()
         self.purchasecomplete.setObjectName(u"purchasecomplete")
@@ -3093,7 +3120,7 @@ class Ui_Main(object):
 "image: url(:/pic/realimages/backhomoe.png);")
         self.orderlabel_6 = QLabel(self.promppaymethod)
         self.orderlabel_6.setObjectName(u"orderlabel_6")
-        self.orderlabel_6.setGeometry(QRect(480, 40, 151, 41))
+        self.orderlabel_6.setGeometry(QRect(480, 40, 121, 41))
         self.orderlabel_6.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -3103,7 +3130,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.orderlabel_7 = QLabel(self.promppaymethod)
         self.orderlabel_7.setObjectName(u"orderlabel_7")
-        self.orderlabel_7.setGeometry(QRect(650, 40, 151, 41))
+        self.orderlabel_7.setGeometry(QRect(650, 40, 71, 41))
         self.orderlabel_7.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -3113,7 +3140,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.orderlabel_8 = QLabel(self.promppaymethod)
         self.orderlabel_8.setObjectName(u"orderlabel_8")
-        self.orderlabel_8.setGeometry(QRect(440, 110, 321, 181))
+        self.orderlabel_8.setGeometry(QRect(200, 110, 331, 271))
         self.orderlabel_8.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -3121,9 +3148,10 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
+        self.orderlabel_8.setAlignment(Qt.AlignCenter)
         self.editproductimagecontainer_2 = QWidget(self.promppaymethod)
         self.editproductimagecontainer_2.setObjectName(u"editproductimagecontainer_2")
-        self.editproductimagecontainer_2.setGeometry(QRect(190, 280, 941, 250))
+        self.editproductimagecontainer_2.setGeometry(QRect(500, 400, 181, 250))
         self.editproductimagecontainer_2.setMinimumSize(QSize(0, 250))
         self.editproductimagecontainer_2.setMaximumSize(QSize(16777215, 250))
         self.editproductimagecontainer_2.setStyleSheet(u"QScrollArea {\n"
@@ -3156,14 +3184,14 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_30 = QWidget()
         self.scrollAreaWidgetContents_30.setObjectName(u"scrollAreaWidgetContents_30")
-        self.scrollAreaWidgetContents_30.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_30.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_30.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_30.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_21 = QHBoxLayout(self.scrollAreaWidgetContents_30)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
         self.frame_addimageproduct_5 = QFrame(self.scrollAreaWidgetContents_30)
         self.frame_addimageproduct_5.setObjectName(u"frame_addimageproduct_5")
-        self.frame_addimageproduct_5.setMinimumSize(QSize(1200, 210))
+        self.frame_addimageproduct_5.setMinimumSize(QSize(0, 210))
         self.frame_addimageproduct_5.setMaximumSize(QSize(16777215, 210))
         self.frame_addimageproduct_5.setFrameShape(QFrame.StyledPanel)
         self.frame_addimageproduct_5.setFrameShadow(QFrame.Raised)
@@ -3224,7 +3252,7 @@ class Ui_Main(object):
 
         self.purchasebutton_2 = QPushButton(self.promppaymethod)
         self.purchasebutton_2.setObjectName(u"purchasebutton_2")
-        self.purchasebutton_2.setGeometry(QRect(990, 580, 151, 41))
+        self.purchasebutton_2.setGeometry(QRect(920, 670, 151, 41))
         self.purchasebutton_2.setStyleSheet(u"color: #FFF;\n"
 "background-color: #AEC289;\n"
 "text-align: center;\n"
@@ -3235,6 +3263,17 @@ class Ui_Main(object):
 "line-height: normal;\n"
 "border: none;\n"
 "border-radius: 10px;")
+        self.orderlabel_11 = QLabel(self.promppaymethod)
+        self.orderlabel_11.setObjectName(u"orderlabel_11")
+        self.orderlabel_11.setGeometry(QRect(650, 100, 441, 271))
+        self.orderlabel_11.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.orderlabel_11.setAlignment(Qt.AlignCenter)
         self.stackedWidget_purchase.addWidget(self.promppaymethod)
         self.stackedWidget.addWidget(self.purchasepage)
         self.adminwidget = QWidget()
@@ -3640,7 +3679,7 @@ class Ui_Main(object):
         self.scrollArea_homepage_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_11 = QWidget()
         self.scrollAreaWidgetContents_11.setObjectName(u"scrollAreaWidgetContents_11")
-        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1124))
+        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1118))
         self.verticalLayout_15 = QVBoxLayout(self.scrollAreaWidgetContents_11)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.frame_homepage_admin = QFrame(self.scrollAreaWidgetContents_11)
@@ -4454,7 +4493,7 @@ class Ui_Main(object):
         self.scrollArea_allproduct_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_17 = QWidget()
         self.scrollAreaWidgetContents_17.setObjectName(u"scrollAreaWidgetContents_17")
-        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 61, 477))
+        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 67, 471))
         self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents_17)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
         self.frame_allproducts_admin = QFrame(self.scrollAreaWidgetContents_17)
@@ -4499,7 +4538,7 @@ class Ui_Main(object):
         self.scrollArea_producttype_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_18 = QWidget()
         self.scrollAreaWidgetContents_18.setObjectName(u"scrollAreaWidgetContents_18")
-        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 992, 1524))
+        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 998, 1518))
         self.verticalLayout_27 = QVBoxLayout(self.scrollAreaWidgetContents_18)
         self.verticalLayout_27.setObjectName(u"verticalLayout_27")
         self.frame_producttype_3 = QFrame(self.scrollAreaWidgetContents_18)
@@ -4718,7 +4757,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct.setWidgetResizable(True)
         self.scrollAreaWidgetContents_22 = QWidget()
         self.scrollAreaWidgetContents_22.setObjectName(u"scrollAreaWidgetContents_22")
-        self.scrollAreaWidgetContents_22.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_22.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_22.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_22.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_10 = QHBoxLayout(self.scrollAreaWidgetContents_22)
@@ -5352,7 +5391,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_24 = QWidget()
         self.scrollAreaWidgetContents_24.setObjectName(u"scrollAreaWidgetContents_24")
-        self.scrollAreaWidgetContents_24.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_24.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_24.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_24.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_14 = QHBoxLayout(self.scrollAreaWidgetContents_24)
@@ -5910,7 +5949,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_29 = QWidget()
         self.scrollAreaWidgetContents_29.setObjectName(u"scrollAreaWidgetContents_29")
-        self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1324))
+        self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1318))
         self.verticalLayout_331 = QVBoxLayout(self.scrollAreaWidgetContents_29)
         self.verticalLayout_331.setObjectName(u"verticalLayout_331")
         self.frame_productviewpage_2 = QFrame(self.scrollAreaWidgetContents_29)
@@ -6360,7 +6399,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_23 = QWidget()
         self.scrollAreaWidgetContents_23.setObjectName(u"scrollAreaWidgetContents_23")
-        self.scrollAreaWidgetContents_23.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_23.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_23.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_23.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_12 = QHBoxLayout(self.scrollAreaWidgetContents_23)
@@ -6942,7 +6981,7 @@ class Ui_Main(object):
         self.scrollArea_userprofile.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1241, 1024))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1247, 1018))
         self.scrollAreaWidgetContents_3.setStyleSheet(u"")
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -7148,7 +7187,7 @@ class Ui_Main(object):
         self.scrollArea_settings_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_27 = QWidget()
         self.scrollAreaWidgetContents_27.setObjectName(u"scrollAreaWidgetContents_27")
-        self.scrollAreaWidgetContents_27.setGeometry(QRect(0, 0, 1121, 1324))
+        self.scrollAreaWidgetContents_27.setGeometry(QRect(0, 0, 1127, 1318))
         self.verticalLayout_22 = QVBoxLayout(self.scrollAreaWidgetContents_27)
         self.verticalLayout_22.setObjectName(u"verticalLayout_22")
         self.frame_settings_2 = QFrame(self.scrollAreaWidgetContents_27)
@@ -7250,7 +7289,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_28 = QWidget()
         self.scrollAreaWidgetContents_28.setObjectName(u"scrollAreaWidgetContents_28")
-        self.scrollAreaWidgetContents_28.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_28.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_28.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_28.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_19 = QHBoxLayout(self.scrollAreaWidgetContents_28)
@@ -7725,7 +7764,7 @@ class Ui_Main(object):
         self.scrollArea_settings.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1121, 874))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1127, 868))
         self.verticalLayout_7 = QVBoxLayout(self.scrollAreaWidgetContents_5)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.frame_settings = QFrame(self.scrollAreaWidgetContents_5)
@@ -8463,7 +8502,7 @@ class Ui_Main(object):
         self.scrollArea_changepassword.setWidgetResizable(True)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_13 = QVBoxLayout(self.scrollAreaWidgetContents_7)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.frame_changepassword = QFrame(self.scrollAreaWidgetContents_7)
@@ -9016,7 +9055,7 @@ class Ui_Main(object):
         self.scrollArea_ruleofuse.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_9 = QVBoxLayout(self.scrollAreaWidgetContents_6)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.frame_ruleofuse = QFrame(self.scrollAreaWidgetContents_6)
@@ -9094,10 +9133,10 @@ class Ui_Main(object):
 
         self.stackedWidget.setCurrentIndex(2)
         self.stackedWidget_main.setCurrentIndex(0)
-        self.stackedWidget_myorders.setCurrentIndex(2)
+        self.stackedWidget_myorders.setCurrentIndex(1)
         self.stackedWidget_adminmain.setCurrentIndex(2)
         self.stackedWidget_orderadmin.setCurrentIndex(2)
-        self.stackedWidget_adminproducts.setCurrentIndex(3)
+        self.stackedWidget_adminproducts.setCurrentIndex(0)
         self.stackedWidget_allandtype_admin.setCurrentIndex(1)
 
 
@@ -9255,8 +9294,8 @@ class Ui_Main(object):
         self.bestsellingbutton.setText(QCoreApplication.translate("Main", u"Best Selling", None))
         self.suggestlabel.setText(QCoreApplication.translate("Main", u"Suggestions", None))
         self.product_homepage_pic_1.setText("")
-        self.product_homepage_price_1.setText("")
         self.product_homepage_name_1.setText("")
+        self.product_homepage_price_1.setText("")
         self.picproduct1_4.setText("")
         self.picproduct1_5.setText("")
         self.picproduct1_11.setText("")
@@ -9330,9 +9369,9 @@ class Ui_Main(object):
         self.productprice.setText(QCoreApplication.translate("Main", u"100", None))
         self.sizelabel.setText(QCoreApplication.translate("Main", u"Size", None))
         self.sbutton.setText(QCoreApplication.translate("Main", u"S", None))
-        self.mbutton.setText(QCoreApplication.translate("Main", u"M", None))
-        self.lbutton.setText(QCoreApplication.translate("Main", u"L", None))
-        self.xlbutton.setText(QCoreApplication.translate("Main", u"XL", None))
+        self.mbutton.setText(QCoreApplication.translate("Main", u"m", None))
+        self.lbutton.setText(QCoreApplication.translate("Main", u"l", None))
+        self.xlbutton.setText(QCoreApplication.translate("Main", u"xl", None))
         self.optionslabel.setText(QCoreApplication.translate("Main", u"Options", None))
         self.redoptpic.setText(QCoreApplication.translate("Main", u"Red", None))
         self.blueoptpic.setText(QCoreApplication.translate("Main", u"Blue", None))
@@ -9374,11 +9413,13 @@ class Ui_Main(object):
         self.zipcodeaddressdisplay_2.setText(QCoreApplication.translate("Main", u"Zip Code", None))
         self.orderlabel.setText(QCoreApplication.translate("Main", u"Order", None))
         self.choosemethodlabel.setText(QCoreApplication.translate("Main", u"Choose Payment Method", None))
-        self.promptpay.setText(QCoreApplication.translate("Main", u"Promptpay", None))
+        self.promptpaybutton.setText(QCoreApplication.translate("Main", u"Promptpay", None))
         self.cashdeliverybutton.setText(QCoreApplication.translate("Main", u"Cash on delivery", None))
         self.purchasebutton.setText(QCoreApplication.translate("Main", u"Purchase", None))
-        self.orderlabel_2.setText(QCoreApplication.translate("Main", u"Total Price:", None))
-        self.orderlabel_price.setText(QCoreApplication.translate("Main", u"10000", None))
+        self.totalpricelabel.setText(QCoreApplication.translate("Main", u"Total Price:", None))
+        self.totalprice.setText(QCoreApplication.translate("Main", u"10000", None))
+        self.creditcardbutton.setText(QCoreApplication.translate("Main", u"Credit Card", None))
+        self.pickupstorebutton.setText(QCoreApplication.translate("Main", u"Pick up at the store", None))
         self.orderlabel_9.setText(QCoreApplication.translate("Main", u"Complete Picture", None))
         self.orderlabel_10.setText(QCoreApplication.translate("Main", u"Thanks for purchasing", None))
         self.purchasebutton_3.setText(QCoreApplication.translate("Main", u"Back to home", None))
@@ -9391,6 +9432,7 @@ class Ui_Main(object):
         self.img_5.setText("")
         self.delete_pic_button_5.setText(QCoreApplication.translate("Main", u"X", None))
         self.purchasebutton_2.setText(QCoreApplication.translate("Main", u"Submit", None))
+        self.orderlabel_11.setText(QCoreApplication.translate("Main", u"Rule Promppay", None))
         self.backbutton_adminregister.setText("")
         self.shopregisterationlabel.setText(QCoreApplication.translate("Main", u"Shop Registeration", None))
         self.shopnamelabel.setText(QCoreApplication.translate("Main", u"Shop's name", None))
