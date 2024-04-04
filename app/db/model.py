@@ -55,9 +55,20 @@ class ProductDatabase(persistent.Persistent):
         self.products[user].append(product)
         self.next_id += 1
         return product_id
+    
+    def get_user_from_product(self, product_id):
+        for user, products in self.products.items():
+            for product in products:
+                if product.id == product_id:
+                    return user
+        return None
 
     def get_products_for_user(self, user):
         return self.products.get(user, [])
+    
+    def get_products_id_for_user(self, user):
+        user_products = self.products.get(user, [])
+        return [product.id for product in user_products]
 
     def get_product(self, user, product_id):
         user_products = self.products.get(user, [])
@@ -81,8 +92,11 @@ class ProductDatabase(persistent.Persistent):
         for i, product in enumerate(user_products):
             if product.id == product_id:
                 del user_products[i]
+                print("product removed")
                 return True
+        
         return False
+
     
     def toJSON(self):
         return {
@@ -155,6 +169,10 @@ class Admin(GeneralUser):
         self.address = address
         self.phone = phone
         self.products = []
+        self.favorites = []
+        self.cart = []
+        self.orders = []
+        self.reviews = None
         self.admin = True
 
     def add_product(self, product):
@@ -163,6 +181,32 @@ class Admin(GeneralUser):
     def remove_product(self, product):
         if product in self.products:
             del self.products[product.id]
+            
+    def add_to_cart(self, product, quantity):
+        if product in self.cart:
+            self.cart[product] += quantity
+        else:
+            self.cart[product] = quantity
+
+    def remove_from_cart(self, product, quantity):
+        if product in self.cart:
+            if self.cart[product] > quantity:
+                self.cart[product] -= quantity
+            else:
+                del self.cart[product]
+
+    def add_to_fav(self, product):
+        self.favorites.append(product)
+
+    def remove_from_fav(self, product):
+        if product in self.favorites:
+            self.favorites.remove(product)
+
+    def add_review(self, product, review):
+        self.reviews[product] = review
+
+    def add_order(self, order):
+        self.orders[order] = datetime.datetime.now()
 
     def toJSON(self):
         return {

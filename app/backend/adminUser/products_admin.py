@@ -4,6 +4,7 @@ import transaction
 from BTrees.OOBTree import BTree
 from app.db.model import *
 from app.db.database import *
+import random as r
 
 if not hasattr(root, 'Product'):
     root.Product = BTree()
@@ -29,6 +30,104 @@ def get_all_products():
             all_products.append(product)
     return all_products
 
+def get_shopname_by_product_id(product_id):
+    for user, products in root.ProductDatabase.products.items():
+        for product in products:
+            if product.id == product_id:
+                return user
+    return None
+
+
+def get_all_product_name_and_id():
+    all_products = get_all_products()
+    product_name_and_id = []
+    for product in all_products:
+        product_name_and_id.append((product.name, product.id))
+    return product_name_and_id
+
+def get_random_product_id():
+    all_products = get_all_products()
+    random_product = r.choice(all_products)
+    return random_product.id
+
+def get_product_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product
+    return None
+
+def get_first_img_for_product(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.img[0]
+    return None
+
+def get_product_name_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.name
+    return None
+
+def get_product_price_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.price
+    return None
+
+def get_product_description_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.description
+    return None
+
+def get_product_sizes_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.sizes
+    return None
+
+def get_product_stock_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.stock
+    return None
+
+def get_product_options_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.options
+    return None
+
+def get_product_categories_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.categories
+    return None
+
+def get_product_publishedDate_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.publishedDate
+    return None
+
+def get_product_reviews_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.reviews
+    return None
+
+def get_product_sold_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.sold
+    return None
+
+def get_product_img_by_id(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.img
+    return None
+
 def get_first_product_img(username, product_id):
     user_products = root.ProductDatabase.get_products_for_user(username)
     for product in user_products:
@@ -50,6 +149,11 @@ def get_product_price(username, product_id):
             return product.price
     return None
     
+def delete_product(username, product_id):
+    if root.ProductDatabase.remove_product(root.LoggedInUser.user.username, product_id):
+        transaction.commit()
+        return True
+    return False
 
 def addproduct(productname, description, price, sizes, options, stock, categories, img):
     user = root.LoggedInUser.user.username
