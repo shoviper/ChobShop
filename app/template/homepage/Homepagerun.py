@@ -362,22 +362,7 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
-
-    # def display_product_main(self, id):
-
-    #     self.ui.product_homepage_name_1.setText(get_product_name_by_id(id))
-    #     self.ui.product_homepage_price_1.setText(f"฿{str(get_product_price_by_id(id))}")
-    #     img_path = get_first_img_for_product(id)
-    #     pixmap = QPixmap(img_path)
-    #     self.ui.product_homepage_pic_1.setPixmap(pixmap)
-    #     # self.ui.product_homepage_pic_1.setStyleSheet(f"background-image: url({img_path}); border-radius: 0px; padding: 0;")
-    #     self.ui.product_homepage_pic_1.setScaledContents(True)
-        
-    #     # Setup button for each product
-    #     # self.ui.product_homepage_name_1.clicked.connect(lambda: self.go_to_productpage(id))
-        
-        
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)        
 
     def go_to_productpage(self, id):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -619,8 +604,6 @@ class HomepageWindow(QMainWindow):
         if root.LoggedInUser.logged_in == False or admin == False:
             products = get_all_products()
             products = r.sample(products, len(products))
-            for product in products:
-                print("products if: ", product.name)
             # print("products if: ", products)
         else:
             products = get_products_for_user(root.LoggedInUser.user.username)
