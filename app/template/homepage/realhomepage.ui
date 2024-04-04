@@ -2525,6 +2525,7 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
+           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -2911,15 +2912,21 @@ QScrollBar::handle:vertical:hover {
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-289</y>
           <width>1006</width>
-          <height>1000</height>
+          <height>900</height>
          </rect>
         </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
-          <height>1000</height>
+          <width>1006</width>
+          <height>900</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1006</width>
+          <height>16777215</height>
          </size>
         </property>
         <widget class="QFrame" name="frame_homepage">
@@ -2928,13 +2935,19 @@ QScrollBar::handle:vertical:hover {
            <x>0</x>
            <y>0</y>
            <width>1031</width>
-           <height>1000</height>
+           <height>900</height>
           </rect>
          </property>
          <property name="minimumSize">
           <size>
-           <width>0</width>
-           <height>1000</height>
+           <width>1031</width>
+           <height>900</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1031</width>
+           <height>16777215</height>
           </size>
          </property>
          <property name="frameShape">
@@ -3153,219 +3166,33 @@ QPushButton:hover {
            <string>Suggestions</string>
           </property>
          </widget>
-         <widget class="QWidget" name="product_1" native="true">
+         <widget class="QFrame" name="frame_homepage_product">
           <property name="geometry">
            <rect>
             <x>60</x>
-            <y>500</y>
-            <width>251</width>
-            <height>320</height>
+            <y>460</y>
+            <width>911</width>
+            <height>380</height>
            </rect>
           </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;
-                background: #D9D9D9;</string>
+          <property name="minimumSize">
+           <size>
+            <width>911</width>
+            <height>380</height>
+           </size>
           </property>
-          <widget class="QLabel" name="product_homepage_pic_1">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>30</y>
-             <width>191</width>
-             <height>191</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-          <widget class="QLabel" name="product_homepage_name_1">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>250</y>
-             <width>231</width>
-             <height>20</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="product_homepage_price_1">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>270</y>
-             <width>231</width>
-             <height>20</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="product_2" native="true">
-          <property name="geometry">
-           <rect>
-            <x>720</x>
-            <y>500</y>
-            <width>251</width>
-            <height>320</height>
-           </rect>
+          <property name="maximumSize">
+           <size>
+            <width>911</width>
+            <height>16777215</height>
+           </size>
           </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;
-                background: #D9D9D9;</string>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
           </property>
-          <widget class="QPushButton" name="picproduct1_4">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>30</y>
-             <width>191</width>
-             <height>188</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="product_3" native="true">
-          <property name="geometry">
-           <rect>
-            <x>390</x>
-            <y>500</y>
-            <width>251</width>
-            <height>320</height>
-           </rect>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;
-                background: #D9D9D9;</string>
-          </property>
-          <widget class="QPushButton" name="picproduct1_5">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>30</y>
-             <width>191</width>
-             <height>188</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="product_6" native="true">
-          <property name="geometry">
-           <rect>
-            <x>720</x>
-            <y>900</y>
-            <width>251</width>
-            <height>320</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;
-                background: #D9D9D9;</string>
-          </property>
-          <widget class="QPushButton" name="picproduct1_11">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>30</y>
-             <width>191</width>
-             <height>188</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="product_5" native="true">
-          <property name="geometry">
-           <rect>
-            <x>60</x>
-            <y>900</y>
-            <width>251</width>
-            <height>320</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;
-                background: #D9D9D9;</string>
-          </property>
-          <widget class="QPushButton" name="picproduct1_10">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>30</y>
-             <width>191</width>
-             <height>188</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="product_4" native="true">
-          <property name="geometry">
-           <rect>
-            <x>390</x>
-            <y>900</y>
-            <width>251</width>
-            <height>320</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;
-                background: #D9D9D9;</string>
-          </property>
-          <widget class="QPushButton" name="picproduct1_9">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>30</y>
-             <width>191</width>
-             <height>188</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: #FFF;
-border-radius: 0px;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
          </widget>
         </widget>
        </widget>
@@ -3405,7 +3232,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>998</width>
+            <width>67</width>
             <height>2018</height>
            </rect>
           </property>
@@ -4909,7 +4736,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>998</width>
+            <width>67</width>
             <height>718</height>
            </rect>
           </property>
@@ -6878,7 +6705,7 @@ QScrollBar::handle:horizontal:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1218</width>
+             <width>163</width>
              <height>210</height>
             </rect>
            </property>
@@ -14562,7 +14389,7 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1247</width>
+          <width>67</width>
           <height>1018</height>
          </rect>
         </property>

@@ -364,18 +364,18 @@ class HomepageWindow(QMainWindow):
         self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
-    def display_product_main(self, id):
+    # def display_product_main(self, id):
 
-        self.ui.product_homepage_name_1.setText(get_product_name_by_id(id))
-        self.ui.product_homepage_price_1.setText(f"฿{str(get_product_price_by_id(id))}")
-        img_path = get_first_img_for_product(id)
-        pixmap = QPixmap(img_path)
-        self.ui.product_homepage_pic_1.setPixmap(pixmap)
-        # self.ui.product_homepage_pic_1.setStyleSheet(f"background-image: url({img_path}); border-radius: 0px; padding: 0;")
-        self.ui.product_homepage_pic_1.setScaledContents(True)
+    #     self.ui.product_homepage_name_1.setText(get_product_name_by_id(id))
+    #     self.ui.product_homepage_price_1.setText(f"฿{str(get_product_price_by_id(id))}")
+    #     img_path = get_first_img_for_product(id)
+    #     pixmap = QPixmap(img_path)
+    #     self.ui.product_homepage_pic_1.setPixmap(pixmap)
+    #     # self.ui.product_homepage_pic_1.setStyleSheet(f"background-image: url({img_path}); border-radius: 0px; padding: 0;")
+    #     self.ui.product_homepage_pic_1.setScaledContents(True)
         
-        # Setup button for each product
-        self.ui.product_homepage_name_1.clicked.connect(lambda: self.go_to_productpage(id))
+    #     # Setup button for each product
+    #     # self.ui.product_homepage_name_1.clicked.connect(lambda: self.go_to_productpage(id))
         
         
 
@@ -415,7 +415,8 @@ class HomepageWindow(QMainWindow):
         print("total_num_of_products: ", total_num_of_products)
         print("all products name and id: \n", get_all_product_name_and_id())
         if total_num_of_products > 0:
-            self.display_product_main(6)
+            # self.display_product_main(6)
+            self.display_product(False, "homepage_customer")
             # self.display_product_main(get_random_product_id())
             
             
@@ -609,11 +610,17 @@ class HomepageWindow(QMainWindow):
             self.curr_widget = self.ui.frame_allproducts_admin
             self.curr_layout = QGridLayout()
             self.curr_widget.setLayout(self.curr_layout)
-
+        elif widget == "homepage_customer":
+            self.curr_widget = self.ui.frame_homepage_product
+            self.curr_layout = QGridLayout()
+            self.curr_widget.setLayout(self.curr_layout)
         # widget.setVisible(True)
         products = []
         if root.LoggedInUser.logged_in == False or admin == False:
             products = get_all_products()
+            products = r.sample(products, len(products))
+            for product in products:
+                print("products if: ", product.name)
             # print("products if: ", products)
         else:
             products = get_products_for_user(root.LoggedInUser.user.username)
@@ -627,14 +634,18 @@ class HomepageWindow(QMainWindow):
             if column > 3:
                 column = 1
                 row += 1
-                self.ui.frame_homepage_admin.setMinimumHeight(1100 + (320 * (row - 1))) 
-                self.ui.productcontainer_admin.setMinimumHeight(440 + (320 * (row - 1)))
+                if widget == "homepage_admin":
+                    self.ui.frame_homepage_admin.setMinimumHeight(1100 + (320 * (row - 1))) 
+                elif widget == "allproducts_admin":
+                    self.ui.productcontainer_admin.setMinimumHeight(440 + (320 * (row - 1)))
+                elif widget == "homepage_customer":
+                    self.ui.frame_homepage.setMinimumHeight(900 + (320 * (row - 1)))
+                    self.ui.scrollAreaWidgetContents.setMinimumHeight(900 + (320 * (row - 1)))
                 self.curr_widget.setMinimumHeight(380 + (320 * (row - 1))) 
 
-            img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
-            print("product.id: ", product.id)
+            # img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
             # print("image path: ", img_path)
-            pixmap = QPixmap(img_path)
+            # pixmap = QPixmap(img_path)
             # print("pixmap: ", pixmap)
 
             product_widget = QWidget(self.curr_widget)
@@ -703,14 +714,15 @@ class HomepageWindow(QMainWindow):
             column += 1
 
         for i, product_widget in enumerate(product_widgets):
+            # print(products[i].)
             productsold_label = product_widget.findChild(QLabel, "productsold_label")
             productprice_button = product_widget.findChild(QPushButton, "productprice_button")
             productname_label = product_widget.findChild(QLabel, "productname_label")
             picproduct1_17 = product_widget.findChild(QPushButton, "picproduct1_17")
-            productname_label.setText(get_product_name(root.LoggedInUser.user.username, products[i].id))
-            productprice_button.setText(f"฿{str(get_product_price(root.LoggedInUser.user.username, products[i].id))}")
+            productname_label.setText(get_product_name_by_id(products[i].id))
+            productprice_button.setText(f"฿{str(get_product_price_by_id(products[i].id))}")
             productsold_label.setText(f"{products[i].sold} sold")
-            img_path = get_first_product_img(root.LoggedInUser.user.username, products[i].id)
+            img_path = get_product_img_by_id(products[i].id)[0]
             picproduct1_17.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
 
     def go_to_productspage_admin(self):
