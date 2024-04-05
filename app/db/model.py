@@ -178,12 +178,19 @@ class Customer(GeneralUser):
         self.reviews = None
         self.admin = False
 
-    def add_to_cart_by_product_id(self, product_id, quantity):
+    # def add_to_cart_by_product_id(self, product_id, quantity):
+    #     for item in self.cart:
+    #         if item[0] == product_id:
+    #             item[1] += quantity
+    #         else:
+    #             self.cart.append([product_id, quantity])
+                
+    def add_to_cart_by_product_id(self, product_id, quantity):            
         for item in self.cart:
             if item[0] == product_id:
                 item[1] += quantity
-            else:
-                self.cart.append([product_id, quantity])
+                return
+        self.cart.append([product_id, quantity])
                 
     def remove_from_cart_by_product_id(self, product_id):
         for item in self.cart:
@@ -221,7 +228,7 @@ class Customer(GeneralUser):
         return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
 
 
-class Admin(Customer):
+class Admin(GeneralUser):
     def __init__(self, username, shopname, name, lastname, description, address, email, phone, password) -> None:
         super().__init__(username, email, password)
         self.shopname = shopname
@@ -231,10 +238,6 @@ class Admin(Customer):
         self.address = address
         self.phone = phone
         self.products = []
-        self.favorites = []
-        self.cart = []
-        self.orders = []
-        self.reviews = None
         self.admin = True
 
     def add_product(self, product):
@@ -243,19 +246,6 @@ class Admin(Customer):
     def remove_product(self, product):
         if product in self.products:
             del self.products[product.id]
-            
-    def add_to_cart(self, product, quantity):
-        if product in self.cart:
-            self.cart[product] += quantity
-        else:
-            self.cart[product] = quantity
-
-    def remove_from_cart(self, product, quantity):
-        if product in self.cart:
-            if self.cart[product] > quantity:
-                self.cart[product] -= quantity
-            else:
-                del self.cart[product]
 
     def add_to_fav(self, product):
         self.favorites.append(product)

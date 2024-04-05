@@ -227,17 +227,21 @@ def addToCart(product_id):
     user = root.LoggedInUser.user
     try:
         user.add_to_cart_by_product_id(product_id, 1)
+        # print("Added to carttttttt")
         transaction.commit()
         return True
     except Exception as e:
         print("Error adding to cart: ", e)
         return False
 
+
 def get_user_cart_product_id():
     cart = root.LoggedInUser.user.cart
+    # print("cart: ", cart) 
     cart_products_id = []
     for product_id, quantity in cart:
         cart_products_id.append([product_id, quantity])
+    # print("cart_products_id: ", cart_products_id)
     return cart_products_id
     # return [[1,2], [2,3], [3,4]]
 
@@ -249,6 +253,7 @@ def removeFromCart(product_id):
 
 
 
+    
     
     
 # def get_cart():

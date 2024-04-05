@@ -127,7 +127,7 @@ class HomepageWindow(QMainWindow):
         print("-----------------------------------------------------------")
         
         # delete product by id
-        # delete_product_by_id(2)
+        delete_product_by_id(2)
 
         self.print_cart()
         
@@ -446,7 +446,7 @@ class HomepageWindow(QMainWindow):
         self.ui.productname.setText(get_product_name_by_id(id))
         self.ui.productprice.setText(f"{str(get_product_price_by_id(id))}")
         img_path = get_first_img_for_product(id)
-        print(img_path)
+        print("get_first_img_for_product", img_path)
         pixmap = QPixmap(img_path)
         self.ui.mainpic.setPixmap(pixmap)
         self.ui.mainpic.setScaledContents(True)
@@ -462,10 +462,27 @@ class HomepageWindow(QMainWindow):
         #          ||
         #          V
         
-        self.current_index = 0
+        try:
+            self.ui.prevpicbutton.clicked.disconnect()
+        except RuntimeError:
+            pass  # Do nothing if no connections were present
+        try:
+            self.ui.nextpicbutton.clicked.disconnect()
+        except RuntimeError:
+            pass  # Do nothing if no connections were present
         
-        self.ui.prevpicbutton.clicked.connect(functools.partial(self.change_pic, id, "prev"))
-        self.ui.nextpicbutton.clicked.connect(functools.partial(self.change_pic, id, "next"))
+        if len(get_product_img_by_id(id)) > 1:
+            self.ui.prevpicbutton.show()
+            self.ui.nextpicbutton.show()
+            self.current_index = 0
+            
+            self.ui.prevpicbutton.clicked.connect(functools.partial(self.change_pic, id, "prev"))
+            self.ui.nextpicbutton.clicked.connect(functools.partial(self.change_pic, id, "next"))
+        else:
+            self.ui.prevpicbutton.hide()
+            self.ui.nextpicbutton.hide()
+
+        
 
 
         # display size
@@ -556,31 +573,47 @@ class HomepageWindow(QMainWindow):
         # except TypeError:
         #     pass
         
+        try:
+            self.ui.addtocartbutton.clicked.disconnect()
+        except RuntimeError:
+            pass 
+        try:
+            self.ui.buynowbutton.clicked.disconnect()
+        except RuntimeError:
+            pass 
+        
         self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
         self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "productpage", id))
 
     def change_pic(self, id, direction):
-        print("===========change pic===========")
-        print(id)
+        print("===========changing pic===========")
+        print("product id: ", id)
         img_paths = get_product_img_by_id(id)
         print("img_paths: ", img_paths)
+        
+        print("current index: ", self.current_index)
 
         if direction == "prev":
+            print("prev")
+            print("current index: ", self.current_index)
             if self.current_index == 0:
                 self.current_index = len(img_paths)
             self.current_index -= 1
             print("prev (curr ind): ", self.current_index)
         elif direction == "next":
+            print("next")
+            print("current index: ", self.current_index)
             if self.current_index == len(img_paths) - 1:
                 self.current_index = -1
             self.current_index += 1
             print("next (curr ind): ", self.current_index)
+            
         print("curr index: ",self.current_index)
         next_img_path = img_paths[self.current_index]
         print("next_img_path: ", next_img_path)
         self.ui.mainpic.setPixmap(QPixmap(next_img_path))
         self.ui.mainpic.setScaledContents(True)
-        img_paths = []
+        # img_paths = []
         print("===========change pic===========")
 
     def go_to_home(self):
@@ -619,7 +652,7 @@ class HomepageWindow(QMainWindow):
         if addToCart(id):
             self.show_success("Product added to cart")
             print("Product added to cart")
-            # self.print_cart()
+            self.print_cart()
             self.go_to_productpage(id)
             
             
