@@ -121,9 +121,9 @@ class HomepageWindow(QMainWindow):
         # self.display_product()
         
         print("-----------Print All Product This User Sell----------------")
-        print("root.LoggedInUser.logged_in: ", root.LoggedInUser.logged_in)
-        for i in get_products_for_user(root.LoggedInUser.user.username):
-            print("product name and id: ", (get_product_name(root.LoggedInUser.user.username, i.id)), i.id)
+        # print("root.LoggedInUser.logged_in: ", root.LoggedInUser.logged_in)
+        # for i in get_products_for_user(root.LoggedInUser.user.username):
+        #     print("product name and id: ", (get_product_name(root.LoggedInUser.user.username, i.id)), i.id)
         print("-----------------------------------------------------------")
         
         # delete product by id

@@ -43,7 +43,7 @@ from app.template.profile.profileeditrun import *
 #-------------------------Run the folder signup#-------------------------
 
 #-------------------------Run the folder homepage#------------------------
-# For running HomepageWindow
+# # For running HomepageWindow
 class Main(HomepageWindow):
     def __init__(self):
         super().__init__()
