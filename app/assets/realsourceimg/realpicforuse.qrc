@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="pic">
+    <file>../realimages/fav.png</file>
+    <file>../realimages/addtofav.png</file>
     <file>../images/newres/image.png</file>
     <file>../images/star.png</file>
     <file>../images/baht.png</file>

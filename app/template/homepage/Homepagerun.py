@@ -194,7 +194,7 @@ class HomepageWindow(QMainWindow):
 
         #cart
         self.ui.cartbutton.clicked.connect(self.go_to_cart)
-        # self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
+        self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
         # self.ui.removecartbutton.clicked.connect(self.removeorder)
         self.ui.backtocartbutton.clicked.connect(self.back_to_cart)
         
