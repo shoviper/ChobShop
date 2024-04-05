@@ -5,6 +5,7 @@ from BTrees.OOBTree import BTree
 from app.db.model import *
 from app.db.database import *
 import random as r
+import datetime
 
 if not hasattr(root, 'Product'):
     root.Product = BTree()
@@ -34,9 +35,37 @@ def get_shopname_by_product_id(product_id):
     for user, products in root.ProductDatabase.products.items():
         for product in products:
             if product.id == product_id:
-                return user
+                return root.adminUsers[user].shopname
     return None
 
+def get_shop_allproducts_by_product_id(product_id):
+    for user, products in root.ProductDatabase.products.items():
+        for product in products:
+            if product.id == product_id:
+                return products
+    return None
+
+def get_shop_date_registered_by_product_id(product_id):
+    for user, products in root.ProductDatabase.products.items():
+        for product in products:
+            if product.id == product_id:
+                return root.adminUsers[user].dateregistered
+    return None
+
+def get_shop_reviews_by_product_id(product_id):
+    review = 0
+    shopname = get_shopname_by_product_id(product_id)
+    shopowner = ""
+    for admin in root.adminUsers:
+        if root.adminUsers[admin].shopname == shopname:
+            shopowner = root.adminUsers[admin].username
+            break
+    for product in root.adminUsers[shopowner].products:
+        review += product.reviews
+    len_products = len(root.adminUsers[shopowner].products)
+    if len_products == 0:
+        return 0
+    return review // len_products
 
 def get_all_product_name_and_id():
     all_products = get_all_products()

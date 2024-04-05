@@ -236,9 +236,9 @@ class Admin(GeneralUser):
         self.lastname = lastname
         self.description = description
         self.address = address
-        self.phone = phone
         self.products = []
         self.admin = True
+        self.dateregistered = datetime.datetime.now()
 
     def add_product(self, product):
         self.products[product.id] = product

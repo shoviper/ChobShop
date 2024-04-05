@@ -193,8 +193,9 @@ class HomepageWindow(QMainWindow):
         self.ui.backbutton_settingsadmin_7.clicked.connect(self.go_to_settingAdmin)
 
         #cart
-        self.ui.cartbutton.clicked.connect(self.go_to_cart)
-        self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
+        self.addedproduct_cart = []
+        self.ui.cartbutton.clicked.connect(functools.partial(self.go_to_cart))
+        # self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
         # self.ui.removecartbutton.clicked.connect(self.removeorder)
         self.ui.backtocartbutton.clicked.connect(self.back_to_cart)
         
@@ -281,7 +282,7 @@ class HomepageWindow(QMainWindow):
             self.ui.listWidget.addItem(item)
             
         else:
-            self.ui.backtocartbutton.clicked.connect(lambda: self.go_to_cart)
+            self.ui.backtocartbutton.clicked.connect(functools.partial(self.go_to_cart))
             self.ui.totalprice.setText(f"{str(self.add_total_price_in_cart())}")
 
             for i in get_user_cart_product_id():
@@ -438,7 +439,7 @@ class HomepageWindow(QMainWindow):
         self.ui.orderbutton.clicked.connect(self.go_to_order)
         # self.ui.messbutton.clicked.connect(self.go_to_message)
         self.ui.settingbutton.clicked.connect(self.go_to_setting)
-        self.ui.cartbutton.clicked.connect(self.go_to_cart)
+        # self.ui.cartbutton.clicked.connect(self.go_to_cart)
         self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
         self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         # self.ui.viewshopbutton.clicked.connect(self.go_to_shoppage)
@@ -446,22 +447,18 @@ class HomepageWindow(QMainWindow):
         self.ui.productname.setText(get_product_name_by_id(id))
         self.ui.productprice.setText(f"{str(get_product_price_by_id(id))}")
         img_path = get_first_img_for_product(id)
-        print("get_first_img_for_product", img_path)
         pixmap = QPixmap(img_path)
         self.ui.mainpic.setPixmap(pixmap)
         self.ui.mainpic.setScaledContents(True)
         self.ui.numberofsold.setText(f"{str(get_product_sold_by_id(id))} Sold")
         
         self.ui.shopname.setText(get_shopname_by_product_id(id))
+        shopproduct_len = str(len(get_products_for_user(get_shopname_by_product_id(id))))
+        self.ui.numproduct_3.setText(shopproduct_len)
+        self.ui.numreview_3.setText(str(get_shop_reviews_by_product_id(id)))
+        self.ui.descriptioninfolabel_productviewpage.setText(get_product_description_by_id(id))
         
-        # ----------------------- not done -----------------------
-        # if len(get_product_img_by_id(id)) > 1:
-        #     self.ui.mainpic.setPixmap(QPixmap(get_product_img_by_id(id)[0]))
-        #     self.ui.mainpic.setScaledContents(True)
-        # --------------------------------------------------------
-        #          ||
-        #          V
-        
+        # click next and prev image button
         try:
             self.ui.prevpicbutton.clicked.disconnect()
         except RuntimeError:
@@ -481,8 +478,6 @@ class HomepageWindow(QMainWindow):
         else:
             self.ui.prevpicbutton.hide()
             self.ui.nextpicbutton.hide()
-
-        
 
 
         # display size
@@ -581,6 +576,7 @@ class HomepageWindow(QMainWindow):
             self.ui.buynowbutton.clicked.disconnect()
         except RuntimeError:
             pass 
+
         
         self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
         self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "productpage", id))
@@ -637,9 +633,10 @@ class HomepageWindow(QMainWindow):
             
     def print_cart(self):
         print("------------------CART------------------")
-        for i in get_user_cart_product_id():
-            print("products in cart and id: ", (get_product_name_by_id(i[0])), i[1])
-            print("Total product price in cart: ", self.add_total_price_in_cart())
+        if root.LoggedInUser.logged_in:
+            for i in get_user_cart_product_id():
+                print("products in cart and id: ", (get_product_name_by_id(i[0])), i[1])
+                print("Total product price in cart: ", self.add_total_price_in_cart())
         print("---------------------------------------")
     
     def add_total_price_in_cart(self):
@@ -681,18 +678,289 @@ class HomepageWindow(QMainWindow):
         
         self.print_cart()
         
-        for i in cart_products:
-            self.ui.shopnameforcart.setText(get_shopname_by_product_id(i[0]))
-            self.ui.productcartname.setText(get_product_name_by_id(i[0]))
-            self.ui.productcartdescrip.setText(get_product_description_by_id(i[0]))
-            self.ui.totalpricecartnumlabel.setText(str(get_product_price_by_id(i[0]) * i[1]))
-            self.ui.productnum.setText(f"{i[1]} piece")
-            self.ui.cartorderpic.setPixmap(QPixmap(get_first_img_for_product(i[0])))
-            self.ui.cartorderpic.setScaledContents(True)
+        self.display_cart(cart_products)
+        
+        # for i in cart_products:
+        #     self.ui.shopnameforcart.setText(get_shopname_by_product_id(i[0]))
+        #     self.ui.productcartname.setText(get_product_name_by_id(i[0]))
+        #     self.ui.productcartdescrip.setText(get_product_description_by_id(i[0]))
+        #     self.ui.totalpricecartnumlabel.setText(str(get_product_price_by_id(i[0]) * i[1]))
+        #     self.ui.productnum.setText(f"{i[1]} piece")
+        #     self.ui.cartorderpic.setPixmap(QPixmap(get_first_img_for_product(i[0])))
+        #     self.ui.cartorderpic.setScaledContents(True)
             
-            self.ui.removecartbutton.clicked.connect(lambda: self.remove_item_from_cart(i[0]))
-            self.ui.purchasecartbutton.clicked.connect(lambda: self.purchase_cartpage("cartpage"))
+        #     self.ui.removecartbutton.clicked.connect(lambda: self.remove_item_from_cart(i[0]))
+        #     self.ui.purchasecartbutton.clicked.connect(lambda: self.purchase_cartpage("cartpage"))
         self.current_index = 0
+
+    def display_cart(self, cart_products):
+        row = len(cart_products) - 1
+
+        products_to_remove = []
+
+        for product in cart_products:
+            for add in self.addedproduct_cart:
+                if add == product:
+                    products_to_remove.append(product)
+        for product in products_to_remove:
+            cart_products.remove(product)
+
+
+        for product in cart_products:
+            row += 1
+            if row > 1:
+                self.ui.scrollAreaWidgetContents_4.setMinimumHeight(400 * row)
+            self.ui.frame_cartpage.setMinimumHeight(400 * row)
+            self.ui.frame_cartshop.setMinimumHeight(289 * row)
+
+            self.cartshopcontainer = QWidget(self.ui.frame_cartshop)
+            self.cartshopcontainer.setObjectName(f"cartshopcontainer_{product[0]}")
+            self.cartshopcontainer.setMinimumSize(QSize(891, 270))
+            self.cartshopcontainer.setMaximumSize(QSize(891, 270))
+            self.cartshopcontainer.setStyleSheet(u"border-bottom: 2px solid #CD4662;\n"
+    "background: #FAF9F6;\n"
+    "")
+            self.gridLayout_cartshopcontainer = QGridLayout(self.cartshopcontainer)
+            self.gridLayout_cartshopcontainer.setObjectName(u"gridLayout_cartshopcontainer")
+            self.gridLayout_cartshopcontainer.setHorizontalSpacing(25)
+            self.gridLayout_cartshopcontainer.setVerticalSpacing(15)
+            self.gridLayout_cartshopcontainer.setContentsMargins(20, 0, 0, 0)
+            self.frame_cartshopinfo = QFrame(self.cartshopcontainer)
+            self.frame_cartshopinfo.setObjectName(u"frame_cartshopinfo")
+            self.frame_cartshopinfo.setMinimumSize(QSize(651, 135))
+            self.frame_cartshopinfo.setMaximumSize(QSize(651, 135))
+            self.frame_cartshopinfo.setStyleSheet(u"border: none;")
+            self.frame_cartshopinfo.setFrameShape(QFrame.StyledPanel)
+            self.frame_cartshopinfo.setFrameShadow(QFrame.Raised)
+            self.gridLayout_cartshopinfo = QGridLayout(self.frame_cartshopinfo)
+            self.gridLayout_cartshopinfo.setObjectName(u"gridLayout_cartshopinfo")
+            self.gridLayout_cartshopinfo.setHorizontalSpacing(10)
+            self.gridLayout_cartshopinfo.setVerticalSpacing(32)
+            self.gridLayout_cartshopinfo.setContentsMargins(0, 0, 0, 0)
+            self.horizontalSpacer_12 = QSpacerItem(70, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopinfo.addItem(self.horizontalSpacer_12, 0, 4, 1, 1)
+
+            self.totalpricecartnumlabel = QLabel(self.frame_cartshopinfo)
+            self.totalpricecartnumlabel.setObjectName(u"totalpricecartnumlabel")
+            self.totalpricecartnumlabel.setMinimumSize(QSize(69, 22))
+            self.totalpricecartnumlabel.setMaximumSize(QSize(100, 22))
+            self.totalpricecartnumlabel.setStyleSheet(u"border: none;\n"
+    "color: #cd4662;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            self.gridLayout_cartshopinfo.addWidget(self.totalpricecartnumlabel, 2, 3, 1, 2)
+
+            self.horizontalSpacer_11 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopinfo.addItem(self.horizontalSpacer_11, 1, 4, 1, 1)
+
+            self.totalpricecartlabel = QLabel(self.frame_cartshopinfo)
+            self.totalpricecartlabel.setObjectName(u"totalpricecartlabel")
+            self.totalpricecartlabel.setMinimumSize(QSize(80, 28))
+            self.totalpricecartlabel.setMaximumSize(QSize(80, 28))
+            self.totalpricecartlabel.setStyleSheet(u"border: none;\n"
+    "color: #000;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            self.gridLayout_cartshopinfo.addWidget(self.totalpricecartlabel, 2, 1, 1, 1)
+
+            # self.horizontalSpacer_10 = QSpacerItem(178, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            # self.gridLayout_cartshopinfo.addItem(self.horizontalSpacer_10, 1, 1, 1, 3)
+
+            self.productcartname = QLabel(self.frame_cartshopinfo)
+            self.productcartname.setObjectName(u"productcartname")
+            self.productcartname.setMinimumSize(QSize(391, 28))
+            self.productcartname.setMaximumSize(QSize(391, 28))
+            self.productcartname.setStyleSheet(u"border: none;\n"
+    "color: #000;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            self.gridLayout_cartshopinfo.addWidget(self.productcartname, 0, 0, 1, 1)
+
+            self.horizontalSpacer_9 = QSpacerItem(178, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopinfo.addItem(self.horizontalSpacer_9, 0, 1, 1, 3)
+
+            self.productcartdescrip = QLabel(self.frame_cartshopinfo)
+            self.productcartdescrip.setObjectName(u"productcartdescrip")
+            self.productcartdescrip.setMinimumSize(QSize(391, 28))
+            self.productcartdescrip.setMaximumSize(QSize(391, 28))
+            self.productcartdescrip.wordWrap = False
+            self.productcartdescrip.setStyleSheet(u"border: none;\n"
+    "color: #545454;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            self.gridLayout_cartshopinfo.addWidget(self.productcartdescrip, 1, 0, 1, 1)
+
+            self.productnum = QLabel(self.frame_cartshopinfo)
+            self.productnum.setObjectName(u"productnum")
+            self.productnum.setMinimumSize(QSize(391, 28))
+            self.productnum.setMaximumSize(QSize(391, 28))
+            self.productnum.setStyleSheet(u"border: none;\n"
+    "color: #545454;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            self.gridLayout_cartshopinfo.addWidget(self.productnum, 2, 0, 1, 1)
+
+            # self.horizontalSpacer_37 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            # self.gridLayout_cartshopinfo.addItem(self.horizontalSpacer_37, 2, 2, 1, 1)
+
+
+            self.gridLayout_cartshopcontainer.addWidget(self.frame_cartshopinfo, 1, 2, 1, 3)
+
+            self.horizontalSpacer_14 = QSpacerItem(31, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopcontainer.addItem(self.horizontalSpacer_14, 0, 1, 1, 1)
+
+            self.horizontalSpacer_15 = QSpacerItem(656, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopcontainer.addItem(self.horizontalSpacer_15, 0, 2, 1, 3)
+
+            self.cartorderpic = QLabel(self.cartshopcontainer)
+            self.cartorderpic.setObjectName(u"cartorderpic")
+            self.cartorderpic.setMinimumSize(QSize(135, 135))
+            self.cartorderpic.setMaximumSize(QSize(135, 135))
+            self.cartorderpic.setStyleSheet(u"border: none;\n"
+    "border-radius: 70px;\n"
+    "background: #cd4662;")
+
+            self.gridLayout_cartshopcontainer.addWidget(self.cartorderpic, 1, 0, 1, 1)
+
+            self.horizontalSpacer_13 = QSpacerItem(31, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopcontainer.addItem(self.horizontalSpacer_13, 1, 1, 1, 1)
+
+            self.shopnameforcart = QLabel(self.cartshopcontainer)
+            self.shopnameforcart.setObjectName(u"shopnameforcart")
+            self.shopnameforcart.setStyleSheet(u"border: none;\n"
+    "color: #000;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 20px;\n"
+    "font-style: normal;\n"
+    "font-weight: 700;\n"
+    "line-height: normal;")
+
+            self.gridLayout_cartshopcontainer.addWidget(self.shopnameforcart, 0, 0, 1, 1)
+
+            self.horizontalSpacer_16 = QSpacerItem(31, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopcontainer.addItem(self.horizontalSpacer_16, 2, 1, 1, 1)
+
+            self.horizontalSpacer_17 = QSpacerItem(294, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            self.gridLayout_cartshopcontainer.addItem(self.horizontalSpacer_17, 2, 2, 1, 1)
+
+            self.removecartbutton = QPushButton(self.cartshopcontainer)
+            self.removecartbutton.setObjectName(u"removecartbutton")
+            self.removecartbutton.setText("Remove")
+            self.removecartbutton.setMinimumSize(QSize(156, 42))
+            self.removecartbutton.setMaximumSize(QSize(156, 42))
+            self.removecartbutton.setStyleSheet(u"color: #FFF;\n"
+    "background-color: #cd4662;\n"
+    "border: none;\n"
+    "text-align: center;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 700;\n"
+    "line-height: normal;\n"
+    "border-radius: 5px;")
+
+            self.gridLayout_cartshopcontainer.addWidget(self.removecartbutton, 2, 3, 1, 1)
+
+            self.verticalSpacer = QSpacerItem(20, 76, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+            self.gridLayout_cartshopcontainer.addItem(self.verticalSpacer, 2, 0, 1, 1)
+
+            self.purchasecartbutton = QPushButton(self.cartshopcontainer)
+            self.purchasecartbutton.setObjectName(u"purchasecartbutton")
+            self.purchasecartbutton.setText("Purchase")
+            self.purchasecartbutton.setMinimumSize(QSize(156, 42))
+            self.purchasecartbutton.setMaximumSize(QSize(156, 42))
+            self.purchasecartbutton.setStyleSheet(u"color: #FFF;\n"
+    "background-color: #AEC289;\n"
+    "border: none;\n"
+    "text-align: center;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 700;\n"
+    "line-height: normal;\n"
+    "border-radius: 5px;")
+
+            self.gridLayout_cartshopcontainer.addWidget(self.purchasecartbutton, 2, 4, 1, 1)
+            self.ui.verticalLayout_cartshop.addWidget(self.cartshopcontainer)
+
+
+            # setText
+            self.shopnameforcart.setText(get_shopname_by_product_id(product[0]))
+            self.productcartname.setText(get_product_name_by_id(product[0]))
+            self.productcartdescrip.setText(get_product_description_by_id(product[0]))
+            self.totalpricecartlabel.setText("Total Price:")
+            self.totalpricecartnumlabel.setText("฿ " + str(get_product_price_by_id(product[0]) * product[1]))
+            self.productnum.setText(f"{product[1]} piece")
+            self.cartorderpic.setPixmap(QPixmap(get_first_img_for_product(product[0])))
+            self.cartorderpic.setScaledContents(True)
+
+            # remove and purchase button
+            self.removecartbutton.clicked.connect(functools.partial(self.remove_item_from_cart, product[0], row))
+
+        for i in cart_products:
+            self.addedproduct_cart.append(i)
+        # print("addedproduct_cart: ", self.addedproduct_cart)
+
+    def remove_item_from_cart(self, product_id, curr_row):
+        if removeFromCart(product_id):
+            transaction.commit()
+            self.show_success("Product removed from cart")
+            print("Product removed from cart")
+            self.print_cart()
+
+            cartshopcontainer = self.findChild(QWidget, f"cartshopcontainer_{product_id}")
+            cartshopcontainer.deleteLater()
+            if curr_row > 1:
+                self.ui.scrollAreaWidgetContents_4.setMinimumHeight(400 * (curr_row - 1))
+                self.ui.frame_cartpage.setMinimumHeight(400 * (curr_row - 1))
+                self.ui.frame_cartshop.setMinimumHeight(289 * (curr_row - 2))
+
+                geometry = self.ui.scrollAreaWidgetContents_4.geometry()
+                self.ui.scrollAreaWidgetContents_4.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                geometry = self.ui.frame_cartpage.geometry()
+                self.ui.frame_cartpage.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                geometry = self.ui.frame_cartshop.geometry()
+                self.ui.frame_cartshop.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 289  * (curr_row - 2)))
+                geometry = self.ui.purchaseallcartbutton.geometry()
+                self.ui.purchaseallcartbutton.setGeometry(QRect(geometry.x, geometry.y - 400, geometry.width, geometry.height))
+
+
+            self.go_to_cart()
+        else:
+            self.show_error("Product remove failed")
+            print("Product remove failed")
+            self.print_cart()
         
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
