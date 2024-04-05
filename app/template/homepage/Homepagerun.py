@@ -300,6 +300,7 @@ class HomepageWindow(QMainWindow):
     def go_to_setting(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.settings)
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.settingsmainpage)
+        self.current_index = 0
     def setting_to_home(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
@@ -421,10 +422,27 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton_admin.setStyleSheet(inactive_button_style)        
 
     def go_to_productpage(self, id):
+        print("==============go to product page==============")
         print("id: ", id)
-        # print("product name: ", get_product_name_by_id(id))
+
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.productviewpage)
+
+        self.ui.homebutton.setStyleSheet(inactive_button_style)
+        self.ui.favbutton.setStyleSheet(inactive_button_style)
+        self.ui.orderbutton.setStyleSheet(inactive_button_style)
+        self.ui.messbutton.setStyleSheet(inactive_button_style)
+
+        self.ui.homebutton.clicked.connect(self.go_to_home)
+        self.ui.favbutton.clicked.connect(self.go_to_favorite)
+        self.ui.orderbutton.clicked.connect(self.go_to_order)
+        # self.ui.messbutton.clicked.connect(self.go_to_message)
+        self.ui.settingbutton.clicked.connect(self.go_to_setting)
+        self.ui.cartbutton.clicked.connect(self.go_to_cart)
+        self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
+        self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
+        # self.ui.viewshopbutton.clicked.connect(self.go_to_shoppage)
+
         self.ui.productname.setText(get_product_name_by_id(id))
         self.ui.productprice.setText(f"{str(get_product_price_by_id(id))}")
         img_path = get_first_img_for_product(id)
@@ -437,10 +455,18 @@ class HomepageWindow(QMainWindow):
         self.ui.shopname.setText(get_shopname_by_product_id(id))
         
         # ----------------------- not done -----------------------
-        if len(get_product_img_by_id(id)) > 1:
-            self.ui.mainpic.setPixmap(QPixmap(get_product_img_by_id(id)[0]))
-            self.ui.mainpic.setScaledContents(True)
+        # if len(get_product_img_by_id(id)) > 1:
+        #     self.ui.mainpic.setPixmap(QPixmap(get_product_img_by_id(id)[0]))
+        #     self.ui.mainpic.setScaledContents(True)
         # --------------------------------------------------------
+        #          ||
+        #          V
+        
+        self.current_index = 0
+        
+        self.ui.prevpicbutton.clicked.connect(functools.partial(self.change_pic, id, "prev"))
+        self.ui.nextpicbutton.clicked.connect(functools.partial(self.change_pic, id, "next"))
+
 
         # display size
         size_widget = []
@@ -529,29 +555,33 @@ class HomepageWindow(QMainWindow):
         #     self.ui.addtocartbutton.clicked.disconnect()
         # except TypeError:
         #     pass
-        self.current_index = 0
-        self.ui.prevpicbutton.clicked.connect(lambda: self.change_pic(id, "prev"))
-        self.ui.nextpicbutton.clicked.connect(lambda: self.change_pic(id, "next"))
         
         self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
         self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "productpage", id))
 
     def change_pic(self, id, direction):
+        print("===========change pic===========")
+        print(id)
         img_paths = get_product_img_by_id(id)
-        if not img_paths:
-            return  # No images found
+        print("img_paths: ", img_paths)
 
-        # Calculate the next index based on the direction
         if direction == "prev":
-            self.current_index = (self.current_index - 1) % len(img_paths)
+            if self.current_index == 0:
+                self.current_index = len(img_paths)
+            self.current_index -= 1
+            print("prev (curr ind): ", self.current_index)
         elif direction == "next":
-            self.current_index = (self.current_index + 1) % len(img_paths)
-
+            if self.current_index == len(img_paths) - 1:
+                self.current_index = -1
+            self.current_index += 1
+            print("next (curr ind): ", self.current_index)
+        print("curr index: ",self.current_index)
         next_img_path = img_paths[self.current_index]
-
+        print("next_img_path: ", next_img_path)
         self.ui.mainpic.setPixmap(QPixmap(next_img_path))
         self.ui.mainpic.setScaledContents(True)
-
+        img_paths = []
+        print("===========change pic===========")
 
     def go_to_home(self):
         print("go to home")
@@ -569,6 +599,8 @@ class HomepageWindow(QMainWindow):
             # self.display_product_main(6)
             self.display_product(False, "homepage_customer")
             # self.display_product_main(get_random_product_id())
+
+        self.current_index = 0
             
     def print_cart(self):
         print("------------------CART------------------")
@@ -627,7 +659,7 @@ class HomepageWindow(QMainWindow):
             
             self.ui.removecartbutton.clicked.connect(lambda: self.remove_item_from_cart(i[0]))
             self.ui.purchasecartbutton.clicked.connect(lambda: self.purchase_cartpage("cartpage"))
-            
+        self.current_index = 0
         
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -662,12 +694,16 @@ class HomepageWindow(QMainWindow):
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
 
+        self.current_index = 0
+
     def go_to_userprofile(self):
         print("go to profile")
         self.ui.stackedWidget.setCurrentWidget(self.ui.userprofile)
         # self.ui.usernamelabel.setText(root.LoggedInUser.user.username.title())
         self.ui.usernamelabel.setText(root.LoggedInUser.user.username)
         self.ui.openshopbutton.clicked.connect(self.go_to_adminregister)
+
+        self.current_index = 0
 
     def go_to_usereditprofile(self):
         print("go to edit profile")
@@ -869,15 +905,15 @@ class HomepageWindow(QMainWindow):
             "color: #CD4662;\n"
             "text-align: left;\n"
             "padding: 0;")
-            picproduct1_17 = QPushButton(product_widget)
-            picproduct1_17.setObjectName(u"picproduct1_17")
-            picproduct1_17.setMinimumSize(QSize(191, 188))
-            picproduct1_17.setMaximumSize(QSize(191, 188))
-            picproduct1_17.setStyleSheet(u"background-color: #FFF;\n"
+            picproduct = QPushButton(product_widget)
+            picproduct.setObjectName(f"picproduct_{product.id}")
+            picproduct.setMinimumSize(QSize(191, 188))
+            picproduct.setMaximumSize(QSize(191, 188))
+            picproduct.setStyleSheet(u"background-color: #FFF;\n"
             "image: url(:/pic/product_img/102165.jpg);\n"
             "border-radius: 0px;\n"
             "padding: 0;")
-            product_gridLayout.addWidget(picproduct1_17, 0, 0, 1, 1)
+            product_gridLayout.addWidget(picproduct, 0, 0, 1, 1)
             icon4 = QIcon()
             icon4.addFile(u":/pic/images/newres/baht.png", QSize(), QIcon.Normal, QIcon.Off)
             productprice_button.setIcon(icon4)
@@ -903,16 +939,20 @@ class HomepageWindow(QMainWindow):
             productsold_label = product_widget.findChild(QLabel, "productsold_label")
             productprice_button = product_widget.findChild(QPushButton, "productprice_button")
             productname_label = product_widget.findChild(QLabel, "productname_label")
-            picproduct1_17 = product_widget.findChild(QPushButton, "picproduct1_17")
+            picproduct = product_widget.findChild(QPushButton, f"picproduct_{products[i].id}")
             
             productname_label.setText(get_product_name_by_id(products[i].id))
             productprice_button.setText(f"฿{str(get_product_price_by_id(products[i].id))}")
             productsold_label.setText(f"{products[i].sold} sold")
             img_path = get_product_img_by_id(products[i].id)[0]
-            picproduct1_17.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
+            picproduct.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
 
-            # picproduct1_17.clicked.connect(functools.partial(self.go_to_productpage(products[i].id)))
-            picproduct1_17.clicked.connect(functools.partial(self.go_to_productpage, products[i].id))
+            # picproduct.clicked.connect(functools.partial(self.go_to_productpage(products[i].id)))
+            clicked_button = self.sender()
+            if picproduct == clicked_button:
+                self.current_index = 0
+                print("current index: pic product", self.current_index)
+            picproduct.clicked.connect(functools.partial(self.go_to_productpage, products[i].id))
             # go_to_productpage(products[i].id)
             
         # self.curr_widget.update()
@@ -1280,6 +1320,8 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(active_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
+
+        self.current_index = 0
 
     def go_to_order_ship(self):
         self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
