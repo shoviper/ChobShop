@@ -126,10 +126,10 @@ class HomepageWindow(QMainWindow):
         #     print("product name and id: ", (get_product_name(root.LoggedInUser.user.username, i.id)), i.id)
         print("-----------------------------------------------------------")
         
-        # delete product by id
-        delete_product_by_id(2)
+        # # delete product by id
+        # delete_product_by_id(2)
 
-        self.print_cart()
+        # self.print_cart()
         
         
         #orderpage
@@ -198,13 +198,22 @@ class HomepageWindow(QMainWindow):
         # self.ui.purchasecartbutton.clicked.connect(self.purchase_cartpage)
         # self.ui.removecartbutton.clicked.connect(self.removeorder)
         self.ui.backtocartbutton.clicked.connect(self.back_to_cart)
+        self.button_bug_fix(self.ui.purchaseallcartbutton)
+        
+        self.ui.purchaseallcartbutton.clicked.connect(functools.partial(self.purchase_cartpage, "cartpage"))
+    
         
         # purchase page
         self.ui.purchasebutton.clicked.connect(self.purchase_final)
         self.ui.purchasebutton_2.clicked.connect(self.go_to_home)
         self.ui.purchasebutton_3.clicked.connect(self.go_to_home)
         
-
+    def button_bug_fix(self, button):
+        try:
+            button.clicked.disconnect()
+        except RuntimeError:
+            pass  
+    
     #Log out function
     def back_to_login(self):
         if root.LoggedInUser.logged_in == True:
@@ -260,7 +269,7 @@ class HomepageWindow(QMainWindow):
             
 
     #cartpage--------------------------------------------------------------------------------------------
-    
+
     def purchase_cartpage(self, page, id=None):
         self.ui.listWidget.clear()
         self.ui.promptpaybutton.setChecked(False)
@@ -276,6 +285,7 @@ class HomepageWindow(QMainWindow):
         self.ui.phoneaddressdisplay_2.setText(root.LoggedInUser.user.phone)
         
         if page == "productpage":
+            self.button_bug_fix(self.ui.backtocartbutton)
             self.ui.backtocartbutton.clicked.connect(functools.partial(self.go_to_productpage, id))
             self.ui.totalprice.setText(f"{str(get_product_price_by_id(id))}")
             item = f"{get_product_name_by_id(id)} x 1 -------> {get_product_price_by_id(id)}"
@@ -307,16 +317,89 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
     def go_to_account(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.accountpage)
+        
+        self.ui.username.setText(root.LoggedInUser.user.username)
+        self.ui.email.setText(root.LoggedInUser.user.email)
+        self.ui.phone.setText(root.LoggedInUser.user.phone)
+        self.ui.lastname.setText(root.LoggedInUser.user.lastname)
+        self.ui.gender.setText(root.LoggedInUser.user.gender)
+        self.ui.firstname.setText(root.LoggedInUser.user.name)
+        self.ui.birthday.setText(root.LoggedInUser.user.birthday)
+        
     def go_to_changepassword(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.changepasswordpage)
+        
+        self.ui.savechangebutton_4.clicked.connect(self.save_change_password)
+        
     def go_to_editprofile(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.editprofilesettingspage)
+        
+        self.ui.userbox_2.setText(root.LoggedInUser.user.username)
+        
+        if root.LoggedInUser.user.name is not None:
+            self.ui.firstnamebox_2.setText(root.LoggedInUser.user.name)
+        if root.LoggedInUser.user.lastname is not None:
+            self.ui.lastnamebox_2.setText(root.LoggedInUser.user.lastname)
+        if root.LoggedInUser.user.gender is not None:
+            self.ui.genderbox_2.setText(root.LoggedInUser.user.gender)
+        if root.LoggedInUser.user.birthday is not None:
+            birthday_date = QDate.fromString(root.LoggedInUser.user.birthday, "yyyy-MM-dd")
+            self.ui.birthdaydateEdit_2.setDate(birthday_date)
+        if root.LoggedInUser.user.phone is not None:
+            self.ui.phonebox_2.setText(root.LoggedInUser.user.phone)
+        if root.LoggedInUser.user.email is not None:
+            self.ui.emailbox_2.setText(root.LoggedInUser.user.email)
+        
+        self.ui.savechangebutton_3.clicked.connect(self.save_edit_profile)
+        self.ui.deleteaccbutton_2.clicked.connect(self.delete_account)
     def go_to_rule(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.rulepage)
     def go_to_address(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.addresssettingspage)
     def go_to_editaddress(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.editaddresssettingspage)
+        
+        self.ui.savechangeeditaddrbutton.clicked.connect(self.save_edit_address)
+        
+    def save_change_password(self):
+        if changePassword(root.LoggedInUser.user.username, self.ui.curpasstextbox.text(), self.ui.newpasstextbox.text()):
+            self.show_success("Password changed")
+            self.ui.curpasstextbox.clear()
+            self.ui.newpasstextbox.clear()
+        else:
+            self.show_error("Incorrect password")
+
+        
+    def delete_account(self):
+        if self.show_yes_no("Are you sure you want to delete your account?") == QMessageBox.Yes:
+            deleteProfile(root.LoggedInUser.user.username)
+            self.show_goodbye("Account deleted")
+            self.back_to_login()
+        
+    def save_edit_profile(self):
+        # root.LoggedInUser.user.name = self.ui.firstnamebox_2.text()
+        # root.LoggedInUser.user.lastname = self.ui.lastnamebox_2.text()
+        # root.LoggedInUser.user.gender = self.ui.genderbox_2.text()
+        # root.LoggedInUser.user.birthday = self.ui.birthdaydateEdit_2.text()
+        # root.LoggedInUser.user.phone = self.ui.phonebox_2.text()
+        # root.LoggedInUser.user.email = self.ui.emailbox_2.text()
+        
+        if self.show_yes_no("Are you sure you want to save changes?") == QMessageBox.Yes:
+            birthday_date = self.ui.birthdaydateEdit_2.date()
+            birthday_date_str = birthday_date.toString("yyyy-MM-dd")
+            if editProfile(root.LoggedInUser.user.username, self.ui.firstnamebox_2.text(), self.ui.lastnamebox_2.text(), self.ui.genderbox_2.text(), birthday_date_str, self.ui.emailbox_2.text(), self.ui.phonebox_2.text()):
+                self.show_success("Changes saved")
+            else:
+                self.show_error("Changes not saved")
+        else:
+            self.show_error("Changes not saved")
+        
+    def save_edit_address(self):
+        root.LoggedInUser.user.name = self.ui.firstnameeditaddrbox.text()
+        root.LoggedInUser.user.lastname = self.ui.lastnameeditaddrbox.text()
+        root.LoggedInUser.user.phone = self.ui.phoneeditaddrbox.text()
+        
+        # root.LoggedInUser.user.address = self.ui.editaddress.text()
     #settingspage--------------------------------------------------------------------------------------------
         
 
@@ -338,8 +421,8 @@ class HomepageWindow(QMainWindow):
         changeLoggedinUserToCustomer(root.LoggedInUser.user.username)
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
+        self.display_product(True, "homepage_customer")
     #settingsAdminpage--------------------------------------------------------------------------------------------
-
 
     #orderAdminspage--------------------------------------------------------------------------------------------
     def go_to_orderstatus(self):
@@ -441,7 +524,7 @@ class HomepageWindow(QMainWindow):
         self.ui.settingbutton.clicked.connect(self.go_to_setting)
         # self.ui.cartbutton.clicked.connect(self.go_to_cart)
         self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
-        self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
+        # self.ui.loginsignoutbutton.clicked.connect(self.back_to_login)
         # self.ui.viewshopbutton.clicked.connect(self.go_to_shoppage)
 
         self.ui.productname.setText(get_product_name_by_id(id))
@@ -962,6 +1045,11 @@ class HomepageWindow(QMainWindow):
             print("Product remove failed")
             self.print_cart()
         
+    def purchase_all_cart(self):                
+        self.button_bug_fix(self.ui.buynowbutton)
+        
+        self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "cartpage"))
+    
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
@@ -1253,11 +1341,157 @@ class HomepageWindow(QMainWindow):
             if picproduct == clicked_button:
                 self.current_index = 0
                 print("current index: pic product", self.current_index)
-            picproduct.clicked.connect(functools.partial(self.go_to_productpage, products[i].id))
+            if widget == "allproducts_admin" or widget == "homepage_admin":
+                picproduct.clicked.connect(functools.partial(self.go_to_showproductforadmin, products[i].id))
+            else:
+                picproduct.clicked.connect(functools.partial(self.go_to_productpage, products[i].id))
             # go_to_productpage(products[i].id)
             
         # self.curr_widget.update()
         # self.curr_widget.adjustSize()
+        
+    def go_to_showproductforadmin(self, id):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
+        self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.showproductforadmin)
+        
+        self.ui.productsbutton_admin.setStyleSheet(active_button_style)
+        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
+        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
+        
+        self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
+        self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
+        
+        self.ui.productname_2.setText(get_product_name_by_id(id))
+        self.ui.productprice_2.setText(f"{str(get_product_price_by_id(id))}")
+        img_path = get_first_img_for_product(id)
+        print("get_first_img_for_product", img_path)
+        pixmap = QPixmap(img_path)
+        self.ui.mainpic_2.setPixmap(pixmap)
+        self.ui.mainpic_2.setScaledContents(True)
+        self.ui.numberofsold_2.setText(f"{str(get_product_sold_by_id(id))} Sold")
+        
+        self.button_bug_fix(self.ui.nextpicrightsidebutton_2)
+        self.button_bug_fix(self.ui.nextpicrightsidebutton)
+
+        
+        if len(get_product_img_by_id(id)) > 1:
+            self.ui.nextpicrightsidebutton_2.show()
+            self.ui.nextpicrightsidebutton.show()
+            self.current_index = 0
+            
+            self.ui.nextpicrightsidebutton_2.clicked.connect(functools.partial(self.change_pic, id, "prev"))
+            self.ui.nextpicrightsidebutton.clicked.connect(functools.partial(self.change_pic, id, "next"))
+        else:
+            self.ui.nextpicrightsidebutton_2.hide()
+            self.ui.nextpicrightsidebutton.hide()
+            
+            
+        # ------------------------------------- SU SU WS --------------------------------
+        # # display size
+        # size_widget = []
+        # column = 1
+        # row = 1
+        # while self.ui.gridLayout_size_productviewpage.count():
+        #     item = self.ui.gridLayout_size_productviewpage.takeAt(0)
+        #     widget = item.widget()
+        #     if widget:
+        #         widget.deleteLater()
+        # if get_product_sizes_by_id(id) != []:
+        #     sizes = get_product_sizes_by_id(id)
+        #     for size in sizes:
+        #         if column > 4:
+        #             horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        #             self.ui.gridLayout_size_productviewpage.addItem(horizontalSpacer, row, column, 1, 1)
+        #             column = 1
+        #             row += 1
+        #         sbutton = QPushButton(self.ui.frame_size_productviewpage)
+        #         sbutton.setObjectName(f"sbutton_{size}")
+        #         sbutton.setText(size)
+        #         sbutton.setMinimumSize(QSize(70, 21))
+        #         sbutton.setMaximumSize(QSize(70, 21))
+        #         sbutton.setStyleSheet(u"QPushButton {	\n"
+        #         "	color:#545454;\n"
+        #         "	font-family: Suwannaphum;\n"
+        #         "	background: #F4F2EF;\n"
+        #         "	font-size: 16px;\n"
+        #         "	font-style: normal;\n"
+        #         "	font-weight: 400;\n"
+        #         "	line-height: normal;\n"
+        #         "	border-radius: 5px;\n"
+        #         "	border: 1px solid #545454;\n"
+        #         "}\n"
+        #         "QPushButton:hover {\n"
+        #         "	background: #F4DBDB;\n"
+        #         "}")
+
+        #         self.ui.gridLayout_size_productviewpage.addWidget(sbutton, row, column, 1, 1)
+        #         column += 1
+        #     horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        #     self.ui.gridLayout_size_productviewpage.addItem(horizontalSpacer, row, column + 1, 1, 1)
+        
+        # display options
+        # column = 1
+        # row = 1
+        # while self.ui.gridLayout_option_productviewpage.count():
+        #     item = self.ui.gridLayout_option_productviewpage.takeAt(0)
+        #     widget = item.widget()
+        #     if widget:
+        #         widget.deleteLater()
+        # if get_product_options_by_id(id) != []:
+        #     options = get_product_options_by_id(id)
+        #     for opt in options:
+        #         if column > 3:
+        #             horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        #             self.ui.gridLayout_option_productviewpage.addItem(horizontalSpacer, row, column, 1, 1)
+        #             column = 1
+        #             row += 1
+        #         optbutton = QPushButton(self.ui.frame_size_productviewpage)
+        #         optbutton.setObjectName(f"optbutton_{opt}")
+        #         optbutton.setText(opt)
+        #         optbutton.setMinimumSize(QSize(100, 25))
+        #         optbutton.setMaximumSize(QSize(100, 25))
+        #         optbutton.setStyleSheet(u"QPushButton {	\n"
+        #         "	color:#545454;\n"
+        #         "	font-family: Suwannaphum;\n"
+        #         "	background: #F4F2EF;\n"
+        #         "	font-size: 16px;\n"
+        #         "	font-style: normal;\n"
+        #         "	font-weight: 400;\n"
+        #         "	line-height: normal;\n"
+        #         "	border-radius: 5px;\n"
+        #         "	border: 1px solid #545454;\n"
+        #         "}\n"
+        #         "QPushButton:hover {\n"
+        #         "	background: #F4DBDB;\n"
+        #         "}")
+
+        #         self.ui.gridLayout_option_productviewpage.addWidget(optbutton, row, column, 1, 1)
+        #         column += 1
+        #     horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        #     self.ui.gridLayout_option_productviewpage.addItem(horizontalSpacer, row, column + 1, 1, 1) 
+
+        # --------------------------------------------------------------------------------
+
+        
+        self.button_bug_fix(self.ui.editproductbutton)
+        self.button_bug_fix(self.ui.deleteproductbutton)
+        
+        self.ui.editproductbutton.clicked.connect(functools.partial(self.go_to_editproductspage_admin, id))
+        self.ui.deleteproductbutton.clicked.connect(functools.partial(self.delete_product, id))
+        
+    
+    def go_to_editproductspage_admin(self, id):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
+        self.ui.stackedWidget_adminproducts.setCurrentWidget(self.ui.editproductspage_admin)
+
+
+        self.button_bug_fix(self.ui.addproductbutton_4)
+        self.ui.addproductbutton_4.clicked.connect(functools.partial(self.edit_product, id))
+        
+        
+    def edit_product(self, id):
+        pass
 
     def go_to_productspage_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
@@ -1318,10 +1552,11 @@ class HomepageWindow(QMainWindow):
             y_coordinate = addoption_geometry.y()
             width = addoption_geometry.width()
             height = addoption_geometry.height()
-            self.ui.addimagebutton.setGeometry(x_coordinate + 201, y_coordinate, width, height)
+            self.ui.addimagebutton.setGeometry(x_coordinate + (201 * self.product_img), y_coordinate, width, height)
+            
             imgbutton = QPushButton(self.ui.frame_addimageproduct)
             imgbutton.setObjectName(f"addimagebutton_{self.product_img}")
-            imgbutton.setGeometry(x_coordinate, y_coordinate, width, height)
+            imgbutton.setGeometry(x_coordinate + (201 * self.product_img), y_coordinate, width, height)
             imgbutton.setMinimumSize(151, 151)
             imgbutton.setMaximumSize(151, 151)
             imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
@@ -1404,7 +1639,6 @@ class HomepageWindow(QMainWindow):
                 img_path = img_path.replace('..', 'app/assets')
                 print("img_path: ", img_path)
                 pic.setProperty("image_path", img_path)
-                # self.add_img_to_stylesheet(fname)
 
                 return True
         return False
@@ -1611,6 +1845,23 @@ class HomepageWindow(QMainWindow):
         self.ui.checkBox_headwear.setChecked(False)
         self.ui.checkBox_accessories.setChecked(False)
         
+    def delete_product(self, product_id):
+        if self.show_yes_no("Are you sure?") == QMessageBox.Yes:
+            if delete_product_by_id(product_id):
+                transaction.commit()
+                self.show_success("Product deleted")
+                total_num_of_products = len(get_all_products())
+                
+                if total_num_of_products > 0:
+                    self.display_product(False, "homepage_customer")
+                    
+                print("Product deleted")
+            else:
+                self.show_error("Product delete failed")
+                print("Product delete failed")
+
+        
+    
     # click product from admin page
     def product_click_for_edit(self):
         pass

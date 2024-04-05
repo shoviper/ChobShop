@@ -228,7 +228,7 @@ class Customer(GeneralUser):
         return f"username: {self.username}, email: {self.email}, name: {self.name}, lastname: {self.lastname}, address: {self.address}, phone: {self.phone}, admin: {self.admin},cart: {self.cart}, orders: {self.orders}"
 
 
-class Admin(GeneralUser):
+class Admin(Customer):
     def __init__(self, username, shopname, name, lastname, description, address, email, phone, password) -> None:
         super().__init__(username, email, password)
         self.shopname = shopname
