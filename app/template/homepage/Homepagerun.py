@@ -275,7 +275,7 @@ class HomepageWindow(QMainWindow):
         self.ui.phoneaddressdisplay_2.setText(root.LoggedInUser.user.phone)
         
         if page == "productpage":
-            self.ui.backtocartbutton.clicked.connect(lambda: self.go_to_productpage(id))
+            self.ui.backtocartbutton.clicked.connect(functools.partial(self.go_to_productpage, id))
             self.ui.totalprice.setText(f"{str(get_product_price_by_id(id))}")
             item = f"{get_product_name_by_id(id)} x 1 -------> {get_product_price_by_id(id)}"
             self.ui.listWidget.addItem(item)
@@ -333,6 +333,7 @@ class HomepageWindow(QMainWindow):
     def go_to_ruleshop(self):
         self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.ruleadminpage)
     def exit_shop(self):
+        changeLoggedinUserToCustomer(root.LoggedInUser.user.username)
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
     #settingsAdminpage--------------------------------------------------------------------------------------------
@@ -421,12 +422,13 @@ class HomepageWindow(QMainWindow):
 
     def go_to_productpage(self, id):
         print("id: ", id)
-        print("product name: ", get_product_name_by_id(id))
+        # print("product name: ", get_product_name_by_id(id))
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.productviewpage)
         self.ui.productname.setText(get_product_name_by_id(id))
         self.ui.productprice.setText(f"{str(get_product_price_by_id(id))}")
         img_path = get_first_img_for_product(id)
+        print(img_path)
         pixmap = QPixmap(img_path)
         self.ui.mainpic.setPixmap(pixmap)
         self.ui.mainpic.setScaledContents(True)
@@ -439,15 +441,116 @@ class HomepageWindow(QMainWindow):
             self.ui.mainpic.setPixmap(QPixmap(get_product_img_by_id(id)[0]))
             self.ui.mainpic.setScaledContents(True)
         # --------------------------------------------------------
+
+        # display size
+        size_widget = []
+        column = 1
+        row = 1
+        while self.ui.gridLayout_size_productviewpage.count():
+            item = self.ui.gridLayout_size_productviewpage.takeAt(0)
+            widget = item.widget()
+            if widget:
+                widget.deleteLater()
+        if get_product_sizes_by_id(id) != []:
+            sizes = get_product_sizes_by_id(id)
+            for size in sizes:
+                if column > 4:
+                    horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+                    self.ui.gridLayout_size_productviewpage.addItem(horizontalSpacer, row, column, 1, 1)
+                    column = 1
+                    row += 1
+                sbutton = QPushButton(self.ui.frame_size_productviewpage)
+                sbutton.setObjectName(f"sbutton_{size}")
+                sbutton.setText(size)
+                sbutton.setMinimumSize(QSize(70, 21))
+                sbutton.setMaximumSize(QSize(70, 21))
+                sbutton.setStyleSheet(u"QPushButton {	\n"
+                "	color:#545454;\n"
+                "	font-family: Suwannaphum;\n"
+                "	background: #F4F2EF;\n"
+                "	font-size: 16px;\n"
+                "	font-style: normal;\n"
+                "	font-weight: 400;\n"
+                "	line-height: normal;\n"
+                "	border-radius: 5px;\n"
+                "	border: 1px solid #545454;\n"
+                "}\n"
+                "QPushButton:hover {\n"
+                "	background: #F4DBDB;\n"
+                "}")
+
+                self.ui.gridLayout_size_productviewpage.addWidget(sbutton, row, column, 1, 1)
+                column += 1
+            horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+            self.ui.gridLayout_size_productviewpage.addItem(horizontalSpacer, row, column + 1, 1, 1)
         
+        # display options
+        column = 1
+        row = 1
+        while self.ui.gridLayout_option_productviewpage.count():
+            item = self.ui.gridLayout_option_productviewpage.takeAt(0)
+            widget = item.widget()
+            if widget:
+                widget.deleteLater()
+        if get_product_options_by_id(id) != []:
+            options = get_product_options_by_id(id)
+            for opt in options:
+                if column > 3:
+                    horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+                    self.ui.gridLayout_option_productviewpage.addItem(horizontalSpacer, row, column, 1, 1)
+                    column = 1
+                    row += 1
+                optbutton = QPushButton(self.ui.frame_size_productviewpage)
+                optbutton.setObjectName(f"optbutton_{opt}")
+                optbutton.setText(opt)
+                optbutton.setMinimumSize(QSize(100, 25))
+                optbutton.setMaximumSize(QSize(100, 25))
+                optbutton.setStyleSheet(u"QPushButton {	\n"
+                "	color:#545454;\n"
+                "	font-family: Suwannaphum;\n"
+                "	background: #F4F2EF;\n"
+                "	font-size: 16px;\n"
+                "	font-style: normal;\n"
+                "	font-weight: 400;\n"
+                "	line-height: normal;\n"
+                "	border-radius: 5px;\n"
+                "	border: 1px solid #545454;\n"
+                "}\n"
+                "QPushButton:hover {\n"
+                "	background: #F4DBDB;\n"
+                "}")
+
+                self.ui.gridLayout_option_productviewpage.addWidget(optbutton, row, column, 1, 1)
+                column += 1
+            horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+            self.ui.gridLayout_option_productviewpage.addItem(horizontalSpacer, row, column + 1, 1, 1) 
+
         # try:
         #     self.ui.addtocartbutton.clicked.disconnect()
         # except TypeError:
         #     pass
+        self.current_index = 0
+        self.ui.prevpicbutton.clicked.connect(lambda: self.change_pic(id, "prev"))
+        self.ui.nextpicbutton.clicked.connect(lambda: self.change_pic(id, "next"))
         
-        self.ui.addtocartbutton.clicked.connect(self.add_to_cart(id))
-        # self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
-        self.ui.buynowbutton.clicked.connect(lambda: self.purchase_cartpage("productpage", id))
+        self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
+        self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "productpage", id))
+
+    def change_pic(self, id, direction):
+        img_paths = get_product_img_by_id(id)
+        if not img_paths:
+            return  # No images found
+
+        # Calculate the next index based on the direction
+        if direction == "prev":
+            self.current_index = (self.current_index - 1) % len(img_paths)
+        elif direction == "next":
+            self.current_index = (self.current_index + 1) % len(img_paths)
+
+        next_img_path = img_paths[self.current_index]
+
+        self.ui.mainpic.setPixmap(QPixmap(next_img_path))
+        self.ui.mainpic.setScaledContents(True)
 
 
     def go_to_home(self):
@@ -481,12 +584,10 @@ class HomepageWindow(QMainWindow):
         return total_price
             
     def add_to_cart(self, id):
-        user = root.LoggedInUser.user.username
         if addToCart(id):
-            transaction.commit()
             self.show_success("Product added to cart")
             print("Product added to cart")
-            self.print_cart()
+            # self.print_cart()
             self.go_to_productpage(id)
             
             

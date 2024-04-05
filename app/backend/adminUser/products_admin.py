@@ -56,6 +56,12 @@ def get_product_by_id(product_id):
             return product
     return None
 
+def get_img_for_product(product_id):
+    for product in get_all_products():
+        if product.id == product_id:
+            return product.img
+    return None
+
 def get_first_img_for_product(product_id):
     for product in get_all_products():
         if product.id == product_id:
@@ -218,18 +224,22 @@ def update_qrc_file(img_name):
 # ----------------------------- CART --------------------------------
 
 def addToCart(product_id):
-    user = root.LoggedInUser.user.username
-    root.LoggedInUser.user.add_to_cart_by_product_id(product_id, 1)
-    transaction.commit()
-    return True
+    user = root.LoggedInUser.user
+    try:
+        user.add_to_cart_by_product_id(product_id, 1)
+        transaction.commit()
+        return True
+    except Exception as e:
+        print("Error adding to cart: ", e)
+        return False
 
 def get_user_cart_product_id():
-    user = root.LoggedInUser.user.username
     cart = root.LoggedInUser.user.cart
     cart_products_id = []
     for product_id, quantity in cart:
         cart_products_id.append([product_id, quantity])
     return cart_products_id
+    # return [[1,2], [2,3], [3,4]]
 
 def removeFromCart(product_id):
     user = root.LoggedInUser.user.username

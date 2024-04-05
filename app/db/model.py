@@ -32,6 +32,7 @@ class Product(persistent.Persistent):
             "name": self.name,
             "price": self.price,
             "description": self.description,
+            "sizes": self.sizes,
             "category": self.categories,
             "stock": self.stock,
             "sold": self.sold,
@@ -177,12 +178,12 @@ class Customer(GeneralUser):
         self.reviews = None
         self.admin = False
 
-    def add_to_cart_by_product_id(self, product_id, quantity):            
+    def add_to_cart_by_product_id(self, product_id, quantity):
         for item in self.cart:
             if item[0] == product_id:
                 item[1] += quantity
-                return 
-        self.cart.append([product_id, quantity])
+            else:
+                self.cart.append([product_id, quantity])
                 
     def remove_from_cart_by_product_id(self, product_id):
         for item in self.cart:
@@ -283,7 +284,7 @@ class Admin(Customer):
         }
     
     def __str__(self) -> str:
-        return super().__str__()
+        return f"username: {self.username}, shopname: {self.shopname}, name: {self.name}, lastname: {self.lastname}, description: {self.description}, address: {self.address}, email: {self.email}, phone: {self.phone}, admin: {self.admin}"
 
 class CustomerDatabase(persistent.Persistent):
     def __init__(self):

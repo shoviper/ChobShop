@@ -16,3 +16,8 @@ def changeLoggedinUser(username):
     root.LoggedInUser.user = root.adminUsers[username]
     transaction.commit()
     return True
+
+def changeLoggedinUserToCustomer(username):
+    root.LoggedInUser.user = root.customerUsers[username]
+    transaction.commit()
+    return True
