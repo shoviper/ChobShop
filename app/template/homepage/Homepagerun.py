@@ -157,7 +157,6 @@ class HomepageWindow(QMainWindow):
         self.ui.backbutton_2.clicked.connect(self.go_to_userprofile)
 
         #profile
-        self.ui.editprofilebutton.clicked.connect(self.go_to_usereditprofile)
         self.ui.backbutton.clicked.connect(self.go_to_home)
         self.ui.tobeshipbutton.clicked.connect(self.go_to_order_ship_fromprofile)
         self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive_fromprofile)
@@ -201,12 +200,11 @@ class HomepageWindow(QMainWindow):
         self.button_bug_fix(self.ui.purchaseallcartbutton)
         
         self.ui.purchaseallcartbutton.clicked.connect(functools.partial(self.purchase_cartpage, "cartpage"))
-    
         
         # purchase page
         # self.ui.purchasebutton.clicked.connect(self.purchase_final)
         self.ui.purchasebutton_2.clicked.connect(self.go_to_home)
-        self.ui.purchasebutton_3.clicked.connect(self.go_to_home)
+        # self.ui.purchasebutton_3.clicked.connect(self.go_to_home)
         
     def button_bug_fix(self, button):
         try:
@@ -239,13 +237,15 @@ class HomepageWindow(QMainWindow):
     #     # self.show_goodbye("Log out successful, See you again")
     #     self.close()
     #     self.login.show()
+
     
     def purchase_final(self, page, id=None):
-        if not (self.ui.promptpaybutton.isChecked() or self.ui.creditcardbutton.isChecked() or self.ui.cashdeliverybutton.isChecked() or self.ui.pickupstorebutton.isChecked()):
+        if not (self.ui.promptpaybutton.isChecked() or self.ui.cashdeliverybutton.isChecked() or self.ui.pickupstorebutton.isChecked()):
             self.show_error("Please choose payment method")
             return
 
         if self.ui.promptpaybutton.isChecked():
+            self.ui.promptpaybutton.setChecked(False)
             print("Promptpay")
             self.go_to_promtpay(page, id)
         else:
@@ -261,7 +261,7 @@ class HomepageWindow(QMainWindow):
         self.ui.purchasebutton_2.clicked.connect(lambda: self.go_to_purchase_complete())
         
         self.button_bug_fix(self.ui.backtochoosingtypebutton)
-        self.ui.backtochoosingtypebutton.clicked.connect(functools.partial(self.purchase_final, page, id))
+        self.ui.backtochoosingtypebutton.clicked.connect(functools.partial(self.purchase_cartpage, page, id))
         
         
         if page == "cartpage":
@@ -279,11 +279,13 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
         self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.purchasecomplete)
         
+        self.purchaseClicked = True
+        
         self.ui.orderlabel_9.setText("")
         img_path = "app/assets/images/success.png"
         self.ui.orderlabel_9.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
         
-        self.ui.purchasebutton_3.clicked.connect(lambda: self.go_to_home())
+        self.ui.backtohomebutton.clicked.connect(lambda: self.go_to_home())
             
 
     #cartpage--------------------------------------------------------------------------------------------
@@ -291,7 +293,7 @@ class HomepageWindow(QMainWindow):
     def purchase_cartpage(self, page, id=None, curr_row=None):
         self.ui.listWidget.clear()
         self.ui.promptpaybutton.setChecked(False)
-        self.ui.creditcardbutton.setChecked(False)
+        # self.ui.creditcardbutton.setChecked(False)
         self.ui.cashdeliverybutton.setChecked(False)
         self.ui.pickupstorebutton.setChecked(False)
         
@@ -301,6 +303,7 @@ class HomepageWindow(QMainWindow):
         self.ui.firstnameaddressdisplay_2.setText(root.LoggedInUser.user.name)
         self.ui.lastnameaddressdisplay_2.setText(root.LoggedInUser.user.lastname)
         self.ui.phoneaddressdisplay_2.setText(root.LoggedInUser.user.phone)
+        self.ui.homenumaddressdisplay_2.setText(root.LoggedInUser.user.address)
         
         if page == "productpage":
             self.button_bug_fix(self.ui.backtocartbutton)
@@ -347,9 +350,10 @@ class HomepageWindow(QMainWindow):
                 self.ui.listWidget.addItem(item)
         
             
+        self.purchaseClicked = False
         self.button_bug_fix(self.ui.purchasebutton)
         self.ui.purchasebutton.clicked.connect(functools.partial(self.purchase_final, page, id))
-            
+        
             
     def back_to_cart(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -406,8 +410,30 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.rulepage)
     def go_to_address(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.addresssettingspage)
+        
+        if root.LoggedInUser.user.name is not None:
+            self.ui.firstnameaddressdisplay_3.setText(root.LoggedInUser.user.name)
+        if root.LoggedInUser.user.lastname is not None:
+            self.ui.lastnameaddressdisplay_3.setText(root.LoggedInUser.user.lastname)
+        if root.LoggedInUser.user.phone is not None:
+            self.ui.phoneaddressdisplay_3.setText(root.LoggedInUser.user.phone)
+            
+        if root.LoggedInUser.user.address is not None:
+            self.ui.addressaddressdisplay_3.setText(root.LoggedInUser.user.address)
+        else:
+            self.ui.addressaddressdisplay_3.setText("No address set")
+        
     def go_to_editaddress(self):
         self.ui.stackedWidget_settings.setCurrentWidget(self.ui.editaddresssettingspage)
+        
+        if root.LoggedInUser.user.name is not None:
+            self.ui.firstnameeditaddrbox.setText(root.LoggedInUser.user.name)
+        if root.LoggedInUser.user.lastname is not None:
+            self.ui.lastnameeditaddrbox.setText(root.LoggedInUser.user.lastname)
+        if root.LoggedInUser.user.phone is not None:
+            self.ui.phoneeditaddrbox.setText(root.LoggedInUser.user.phone)
+        if root.LoggedInUser.user.address is not None:
+            self.ui.addresseditaddrbox.setText(root.LoggedInUser.user.address)
         
         self.ui.savechangeeditaddrbutton.clicked.connect(self.save_edit_address)
         
@@ -445,11 +471,22 @@ class HomepageWindow(QMainWindow):
             self.show_error("Changes not saved")
         
     def save_edit_address(self):
-        root.LoggedInUser.user.name = self.ui.firstnameeditaddrbox.text()
-        root.LoggedInUser.user.lastname = self.ui.lastnameeditaddrbox.text()
-        root.LoggedInUser.user.phone = self.ui.phoneeditaddrbox.text()
-        
+        # root.LoggedInUser.user.name = self.ui.firstnameeditaddrbox.text()
+        # root.LoggedInUser.user.lastname = self.ui.lastnameeditaddrbox.text()
+        # root.LoggedInUser.user.phone = self.ui.phoneeditaddrbox.text()
         # root.LoggedInUser.user.address = self.ui.editaddress.text()
+        
+        if self.show_yes_no("Are you sure you want to save changes?") == QMessageBox.Yes:
+            if editAddress(root.LoggedInUser.user.username, self.ui.addresseditaddrbox.text()):
+                self.show_success("Changes saved")
+                self.go_to_address()
+            else:
+                self.show_error("Changes not saved")
+                
+        else:
+            self.show_error("Changes not saved")
+            self.go_to_address()
+        
     #settingspage--------------------------------------------------------------------------------------------
         
 
@@ -655,8 +692,7 @@ class HomepageWindow(QMainWindow):
         else:
             self.ui.prevpicbutton.hide()
             self.ui.nextpicbutton.hide()
-
-
+            
         # display size
         self.selectedSizeButton = None
         self.selectedSizeText = ""
@@ -1225,33 +1261,34 @@ class HomepageWindow(QMainWindow):
         print("product_id", product_id)
         self.purchase_cartpage("cartpage_oneitem", product_id, curr_row)
         
-        if removeFromCart(product_id):
-            transaction.commit()
-            # self.show_success("Product removed from cart")
-            print("Product removed from cart")
-            self.print_cart()
+        if self.purchaseClicked:
+            if removeFromCart(product_id):
+                transaction.commit()
+                # self.show_success("Product removed from cart")
+                print("Product removed from cart")
+                self.print_cart()
 
-            cartshopcontainer = self.findChild(QWidget, f"cartshopcontainer_{product_id}")
-            cartshopcontainer.deleteLater()
-            if curr_row > 1:
-                self.ui.scrollAreaWidgetContents_4.setMinimumHeight(400 * (curr_row - 1))
-                self.ui.frame_cartpage.setMinimumHeight(400 * (curr_row - 1))
-                self.ui.frame_cartshop.setMinimumHeight(289 * (curr_row - 2))
+                cartshopcontainer = self.findChild(QWidget, f"cartshopcontainer_{product_id}")
+                cartshopcontainer.deleteLater()
+                if curr_row > 1:
+                    self.ui.scrollAreaWidgetContents_4.setMinimumHeight(400 * (curr_row - 1))
+                    self.ui.frame_cartpage.setMinimumHeight(400 * (curr_row - 1))
+                    self.ui.frame_cartshop.setMinimumHeight(289 * (curr_row - 2))
 
-                geometry = self.ui.scrollAreaWidgetContents_4.geometry()
-                self.ui.scrollAreaWidgetContents_4.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
-                geometry = self.ui.frame_cartpage.geometry()
-                self.ui.frame_cartpage.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
-                geometry = self.ui.frame_cartshop.geometry()
-                self.ui.frame_cartshop.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 289  * (curr_row - 2)))
-                geometry = self.ui.purchaseallcartbutton.geometry()
-                self.ui.purchaseallcartbutton.setGeometry(QRect(geometry.x, geometry.y - 400, geometry.width, geometry.height))
+                    geometry = self.ui.scrollAreaWidgetContents_4.geometry()
+                    self.ui.scrollAreaWidgetContents_4.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                    geometry = self.ui.frame_cartpage.geometry()
+                    self.ui.frame_cartpage.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                    geometry = self.ui.frame_cartshop.geometry()
+                    self.ui.frame_cartshop.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 289  * (curr_row - 2)))
+                    geometry = self.ui.purchaseallcartbutton.geometry()
+                    self.ui.purchaseallcartbutton.setGeometry(QRect(geometry.x, geometry.y - 400, geometry.width, geometry.height))
 
-            self.go_to_cart()
-        else:
-            self.show_error("Product remove failed")
-            print("Product remove failed")
-            self.print_cart()
+                self.go_to_cart()
+            else:
+                self.show_error("Product remove failed")
+                print("Product remove failed")
+                self.print_cart()
         
         
     def remove_item_from_cart(self, product_id, curr_row):
@@ -1490,6 +1527,8 @@ class HomepageWindow(QMainWindow):
                 elif widget == "homepage_customer":
                     self.ui.frame_homepage.setMinimumHeight(900 + (320 * (row - 1)))
                     self.ui.scrollAreaWidgetContents.setMinimumHeight(900 + (320 * (row - 1)))
+                elif widget == "allproducts_customer":
+                    self.ui.productcontainer_admin_3.setMinimumHeight(440 + (320 * (row - 1))) #widget
                 self.curr_widget.setMinimumHeight(380 + (320 * (row - 1))) 
 
             # img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
@@ -1570,7 +1609,7 @@ class HomepageWindow(QMainWindow):
             picproduct = product_widget.findChild(QPushButton, f"picproduct_{products[i].id}")
             
             productname_label.setText(get_product_name_by_id(products[i].id))
-            productprice_button.setText(f"฿{str(get_product_price_by_id(products[i].id))}")
+            productprice_button.setText(f"{str(get_product_price_by_id(products[i].id))}")
             productsold_label.setText(f"{products[i].sold} sold")
             img_path = get_product_img_by_id(products[i].id)[0]
             picproduct.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
@@ -1588,6 +1627,28 @@ class HomepageWindow(QMainWindow):
             
         # self.curr_widget.update()
         # self.curr_widget.adjustSize()
+        
+    def go_to_viewshop(self, username):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.viewshoppage)
+        
+        self.ui.homebutton.setStyleSheet(inactive_button_style)
+        self.ui.favbutton.setStyleSheet(inactive_button_style)
+        self.ui.orderbutton.setStyleSheet(inactive_button_style)
+        self.ui.messbutton.setStyleSheet(inactive_button_style)
+        
+        self.ui.shopnamelabel_admin_2.setText(get_shopname_by_product_id(username))
+        shopproduct_len = str(len(get_products_for_user(get_shopname_by_product_id(username))))
+        self.ui.numproducts_2.setText(shopproduct_len)
+        self.ui.numreviews_2.setText(str(get_shop_reviews_by_product_id(username)))
+        self.ui.descriptioninfolabel_productviewpage.setText(get_product_description_by_id(username))
+        
+        num_of_products = count_products_for_user(root.LoggedInUser.user.username)
+        if num_of_products > 0:
+            self.display_product(True, "allproducts_customer")
+            
+        
+        
         
     def go_to_showproductforadmin(self, id):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
@@ -1730,7 +1791,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.editproductnametextbox.setText(get_product_name_by_id(id))
         self.ui.editproductdescriptiontextbox_3.setText(get_product_description_by_id(id))
-        self.ui.editproductpricetextbox.setText(str(get_product_price_by_id(id)))
+        self.ui.editproductpricespinbox.setText(str(get_product_price_by_id(id)))
         self.ui.editproductpricespinbox.setValue(get_product_price_by_id(id))
         self.ui.editproductstockspinbox_3.setValue(get_product_stock_by_id(id))
         categories = get_product_categories_by_id(id)
@@ -1863,7 +1924,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
 
-        self.ui.addsizeproductbutton.clicked.connect(self.add_size)
+        self.ui.addsizeproductbutton.clicked.connect(functools.partial(self.add_size))
         self.size_len = 0
         self.ui.addoptionproductbutton.clicked.connect(self.add_option)
         self.option_len = 0
@@ -1872,28 +1933,15 @@ class HomepageWindow(QMainWindow):
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
 
-        self.ui.addimagebutton.clicked.connect(self.add_img)
+        self.ui.addimgbutton.clicked.connect(self.add_img)
 
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
     
     def add_img(self):
-        if self.add_product_img(self.ui.addimagebutton, self.ui.img_1, self.ui.delete_pic_button_1) and not self.img_button_clicked:
+        if self.add_product_img(self.ui.addimgbutton, self.ui.img_1, self.ui.delete_pic_button_1) and not self.img_button_clicked:
             print("add img")
 
-            addoption_geometry = self.ui.addimagebutton.geometry()
-            x_coordinate = addoption_geometry.x()
-            y_coordinate = addoption_geometry.y()
-            width = addoption_geometry.width()
-            height = addoption_geometry.height()
-            self.ui.addimagebutton.setGeometry(x_coordinate + (201 * self.product_img), y_coordinate, width, height)
-            
-            imgbutton = QPushButton(self.ui.frame_addimageproduct)
-            imgbutton.setObjectName(f"addimagebutton_{self.product_img}")
-            imgbutton.setGeometry(x_coordinate + (201 * self.product_img), y_coordinate, width, height)
-            imgbutton.setMinimumSize(151, 151)
-            imgbutton.setMaximumSize(151, 151)
-            imgbutton.setStyleSheet("border: 3px dashed #D9D9D9; font-size: 46px; background: #FAF9F6; color: #D9D9D9;")
             self.img_button_clicked = True
 
     def add_product_img(self, button, img, delete):

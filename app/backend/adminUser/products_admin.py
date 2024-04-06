@@ -279,4 +279,3 @@ def removeFromCart(product_id):
     root.LoggedInUser.user.remove_from_cart_by_product_id(product_id)
     transaction.commit()
     return True
-

@@ -110,8 +110,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1018</height>
+             <width>1121</width>
+             <height>1024</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_28">
@@ -1329,8 +1329,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>85</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -1509,8 +1509,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>85</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_32">
@@ -3023,9 +3023,9 @@ QScrollBar::handle:vertical:hover {
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-10</y>
+          <y>0</y>
           <width>1006</width>
-          <height>1118</height>
+          <height>1124</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_35">
@@ -3817,7 +3817,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>1013</width>
+            <width>1007</width>
             <height>593</height>
            </rect>
           </property>
@@ -3873,7 +3873,30 @@ QScrollBar::handle:vertical:hover {
             <property name="verticalSpacing">
              <number>35</number>
             </property>
-            <item row="1" column="0" colspan="3">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="cartlabel">
+              <property name="minimumSize">
+               <size>
+                <width>911</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>911</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 24px;
+font-weight: 700;</string>
+              </property>
+              <property name="text">
+               <string>Cart</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
              <widget class="QFrame" name="frame_cartshop">
               <property name="minimumSize">
                <size>
@@ -3912,6 +3935,19 @@ QScrollBar::handle:vertical:hover {
               </layout>
              </widget>
             </item>
+            <item row="2" column="1">
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>2</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item row="3" column="0">
              <spacer name="horizontalSpacer_36">
               <property name="orientation">
@@ -3925,43 +3961,7 @@ QScrollBar::handle:vertical:hover {
               </property>
              </spacer>
             </item>
-            <item row="0" column="0" colspan="3">
-             <widget class="QLabel" name="cartlabel">
-              <property name="minimumSize">
-               <size>
-                <width>911</width>
-                <height>21</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>911</width>
-                <height>21</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">font-size: 24px;
-font-weight: 700;</string>
-              </property>
-              <property name="text">
-               <string>Cart</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <spacer name="verticalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>2</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="3" column="2">
+            <item row="3" column="1">
              <widget class="QPushButton" name="purchaseallcartbutton">
               <property name="minimumSize">
                <size>
@@ -3989,37 +3989,6 @@ border-radius: 5px;</string>
               </property>
               <property name="text">
                <string>Purchase all</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QPushButton" name="deleteallcartbutton">
-              <property name="minimumSize">
-               <size>
-                <width>156</width>
-                <height>42</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>156</width>
-                <height>42</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: #FFF;
-background-color: #CD4662;
-border: none;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-border-radius: 5px;</string>
-              </property>
-              <property name="text">
-               <string>Delete all</string>
               </property>
              </widget>
             </item>
@@ -5291,8 +5260,8 @@ QScrollBar::handle:vertical:hover {
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-174</y>
-            <width>998</width>
+            <y>-398</y>
+            <width>992</width>
             <height>1300</height>
            </rect>
           </property>
@@ -5508,29 +5477,6 @@ line-height: normal;</string>
                </property>
                <property name="text">
                 <string>10,000 followers</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="viewshopbutton">
-               <property name="geometry">
-                <rect>
-                 <x>210</x>
-                 <y>620</y>
-                 <width>221</width>
-                 <height>31</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: #FFF;
-background-color: #AEC289;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-               </property>
-               <property name="text">
-                <string>View Shop</string>
                </property>
               </widget>
               <widget class="QLabel" name="star1">
@@ -7749,7 +7695,7 @@ border: none;</string>
            </rect>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="homepage_admin">
            <widget class="QScrollArea" name="scrollArea_homepage_admin">
@@ -7792,7 +7738,7 @@ QScrollBar::handle:vertical:hover {
                <x>0</x>
                <y>0</y>
                <width>1006</width>
-               <height>1118</height>
+               <height>1124</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -9371,7 +9317,7 @@ border-radius: 5px;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -9483,7 +9429,7 @@ QPushButton:hover{
                </rect>
               </property>
               <property name="currentIndex">
-               <number>1</number>
+               <number>0</number>
               </property>
               <widget class="QWidget" name="adminallproductpage">
                <layout class="QVBoxLayout" name="verticalLayout_24">
@@ -9519,8 +9465,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>67</width>
-                     <height>471</height>
+                     <width>992</width>
+                     <height>477</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -9580,8 +9526,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>998</width>
-                     <height>1518</height>
+                     <width>992</width>
+                     <height>1524</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_27">
@@ -10062,7 +10008,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1218</width>
+                         <width>1224</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -11241,7 +11187,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1218</width>
+                         <width>1224</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -12372,7 +12318,7 @@ QScrollBar::handle:vertical:hover {
                  <x>0</x>
                  <y>0</y>
                  <width>998</width>
-                 <height>1318</height>
+                 <height>1324</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_33">
@@ -14080,7 +14026,7 @@ QScrollBar::handle:horizontal:hover {
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>1218</width>
+                       <width>1224</width>
                        <height>210</height>
                       </rect>
                      </property>
@@ -15140,8 +15086,8 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1247</width>
-          <height>1018</height>
+          <width>1241</width>
+          <height>1024</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -15235,29 +15181,6 @@ line-height: normal;</string>
              </property>
              <property name="text">
               <string>3 Favorites</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="editprofilebutton">
-             <property name="geometry">
-              <rect>
-               <x>250</x>
-               <y>90</y>
-               <width>131</width>
-               <height>41</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #CD4662;
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: left;</string>
-             </property>
-             <property name="text">
-              <string>Edit Profile</string>
              </property>
             </widget>
            </widget>
@@ -15616,8 +15539,8 @@ QScrollBar::handle:vertical:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1127</width>
-           <height>1318</height>
+           <width>1121</width>
+           <height>1324</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -15823,7 +15746,7 @@ QScrollBar::handle:horizontal:hover {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1218</width>
+                   <width>1224</width>
                    <height>210</height>
                   </rect>
                  </property>
@@ -16808,8 +16731,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>868</height>
+             <width>1121</width>
+             <height>874</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -17790,8 +17713,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>85</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -18965,8 +18888,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>1121</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">

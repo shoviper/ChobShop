@@ -97,3 +97,12 @@ def editShopProfile(self, username, name=None, lastname=None, description=None, 
     
     transaction.commit()
     return True
+
+def editAddress(username, address):
+    if username not in root.customerUsers:
+        print("username not in root.customerUsers:")
+        return False
+    user = root.customerUsers[username]
+    user.address = address
+    transaction.commit()
+    return True

@@ -153,6 +153,7 @@ class GeneralUser(persistent.Persistent):
         self.birthday = None
         self.phone = None
         self.admin = False
+        self.profile_img = None
 
     def toJSON(self):
         return {
@@ -332,6 +333,8 @@ class Order(persistent.Persistent):
         self.products = products
         self.total = total
         self.status = "Processing"
+        self.tracking_number = None
+        self.order_id = None
         self.date = datetime.datetime.now()
 
     def cancel_order(self):
