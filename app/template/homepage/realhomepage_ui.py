@@ -21,8 +21,8 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QDateEdit, QFrame,
     QPushButton, QRadioButton, QScrollArea, QSizePolicy,
     QSpacerItem, QSpinBox, QStackedWidget, QVBoxLayout,
     QWidget)
-
 import app.assets.realsourceimg.real
+
 
 class Ui_Main(object):
     def setupUi(self, Main):
@@ -77,7 +77,7 @@ class Ui_Main(object):
         self.scrollArea_settingsadmin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_16 = QWidget()
         self.scrollAreaWidgetContents_16.setObjectName(u"scrollAreaWidgetContents_16")
-        self.scrollAreaWidgetContents_16.setGeometry(QRect(0, 0, 1127, 1018))
+        self.scrollAreaWidgetContents_16.setGeometry(QRect(0, 0, 1121, 1024))
         self.verticalLayout_28 = QVBoxLayout(self.scrollAreaWidgetContents_16)
         self.verticalLayout_28.setObjectName(u"verticalLayout_28")
         self.frame_settingsadmin = QFrame(self.scrollAreaWidgetContents_16)
@@ -232,19 +232,9 @@ class Ui_Main(object):
         self.textboxeditcontainer_10.setGeometry(QRect(29, 0, 1101, 600))
         self.textboxeditcontainer_10.setStyleSheet(u"border-radius: 20px;\n"
 "background: #F4DBDB;")
-        self.shopregisterationlabel_3 = QLabel(self.textboxeditcontainer_10)
-        self.shopregisterationlabel_3.setObjectName(u"shopregisterationlabel_3")
-        self.shopregisterationlabel_3.setGeometry(QRect(43, 34, 281, 51))
-        self.shopregisterationlabel_3.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
         self.shopnamelabel_3 = QLabel(self.textboxeditcontainer_10)
         self.shopnamelabel_3.setObjectName(u"shopnamelabel_3")
-        self.shopnamelabel_3.setGeometry(QRect(43, 100, 141, 31))
+        self.shopnamelabel_3.setGeometry(QRect(40, 260, 141, 31))
         self.shopnamelabel_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -254,7 +244,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.fisrtnamelabel_admin_3 = QLabel(self.textboxeditcontainer_10)
         self.fisrtnamelabel_admin_3.setObjectName(u"fisrtnamelabel_admin_3")
-        self.fisrtnamelabel_admin_3.setGeometry(QRect(43, 200, 121, 31))
+        self.fisrtnamelabel_admin_3.setGeometry(QRect(40, 310, 121, 31))
         self.fisrtnamelabel_admin_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -264,7 +254,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.lastnamelabel_admin_3 = QLabel(self.textboxeditcontainer_10)
         self.lastnamelabel_admin_3.setObjectName(u"lastnamelabel_admin_3")
-        self.lastnamelabel_admin_3.setGeometry(QRect(40, 300, 121, 31))
+        self.lastnamelabel_admin_3.setGeometry(QRect(450, 310, 121, 31))
         self.lastnamelabel_admin_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -274,7 +264,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.addresslabel_admin_3 = QLabel(self.textboxeditcontainer_10)
         self.addresslabel_admin_3.setObjectName(u"addresslabel_admin_3")
-        self.addresslabel_admin_3.setGeometry(QRect(450, 250, 121, 31))
+        self.addresslabel_admin_3.setGeometry(QRect(40, 360, 121, 31))
         self.addresslabel_admin_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -284,7 +274,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.phonelabel_admin_3 = QLabel(self.textboxeditcontainer_10)
         self.phonelabel_admin_3.setObjectName(u"phonelabel_admin_3")
-        self.phonelabel_admin_3.setGeometry(QRect(43, 400, 121, 31))
+        self.phonelabel_admin_3.setGeometry(QRect(820, 260, 71, 31))
         self.phonelabel_admin_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -294,7 +284,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.emaillabel_admin_3 = QLabel(self.textboxeditcontainer_10)
         self.emaillabel_admin_3.setObjectName(u"emaillabel_admin_3")
-        self.emaillabel_admin_3.setGeometry(QRect(450, 400, 121, 31))
+        self.emaillabel_admin_3.setGeometry(QRect(40, 540, 61, 31))
         self.emaillabel_admin_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -304,7 +294,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.shopdescriptionlabel_3 = QLabel(self.textboxeditcontainer_10)
         self.shopdescriptionlabel_3.setObjectName(u"shopdescriptionlabel_3")
-        self.shopdescriptionlabel_3.setGeometry(QRect(450, 100, 141, 31))
+        self.shopdescriptionlabel_3.setGeometry(QRect(450, 260, 141, 31))
         self.shopdescriptionlabel_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -314,7 +304,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.shoplogolabel_3 = QLabel(self.textboxeditcontainer_10)
         self.shoplogolabel_3.setObjectName(u"shoplogolabel_3")
-        self.shoplogolabel_3.setGeometry(QRect(470, 50, 171, 41))
+        self.shoplogolabel_3.setGeometry(QRect(470, 10, 181, 41))
         self.shoplogolabel_3.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
@@ -325,10 +315,81 @@ class Ui_Main(object):
         self.shoplogolabel_3.setAlignment(Qt.AlignCenter)
         self.editshoppic_3 = QLabel(self.textboxeditcontainer_10)
         self.editshoppic_3.setObjectName(u"editshoppic_3")
-        self.editshoppic_3.setGeometry(QRect(870, 80, 160, 160))
+        self.editshoppic_3.setGeometry(QRect(480, 70, 160, 160))
         self.editshoppic_3.setStyleSheet(u"border: none;\n"
 "border-radius: 80px;\n"
 "background: #cd4662;")
+        self.shopdescriptionlabel_4 = QLabel(self.textboxeditcontainer_10)
+        self.shopdescriptionlabel_4.setObjectName(u"shopdescriptionlabel_4")
+        self.shopdescriptionlabel_4.setGeometry(QRect(610, 260, 141, 31))
+        self.shopdescriptionlabel_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.phonelabel_admin_4 = QLabel(self.textboxeditcontainer_10)
+        self.phonelabel_admin_4.setObjectName(u"phonelabel_admin_4")
+        self.phonelabel_admin_4.setGeometry(QRect(930, 260, 151, 31))
+        self.phonelabel_admin_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.emaillabel_admin_4 = QLabel(self.textboxeditcontainer_10)
+        self.emaillabel_admin_4.setObjectName(u"emaillabel_admin_4")
+        self.emaillabel_admin_4.setGeometry(QRect(220, 540, 341, 31))
+        self.emaillabel_admin_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.fisrtnamelabel_admin_4 = QLabel(self.textboxeditcontainer_10)
+        self.fisrtnamelabel_admin_4.setObjectName(u"fisrtnamelabel_admin_4")
+        self.fisrtnamelabel_admin_4.setGeometry(QRect(220, 310, 131, 31))
+        self.fisrtnamelabel_admin_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.lastnamelabel_admin_4 = QLabel(self.textboxeditcontainer_10)
+        self.lastnamelabel_admin_4.setObjectName(u"lastnamelabel_admin_4")
+        self.lastnamelabel_admin_4.setGeometry(QRect(610, 310, 131, 31))
+        self.lastnamelabel_admin_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.shopnamelabel_4 = QLabel(self.textboxeditcontainer_10)
+        self.shopnamelabel_4.setObjectName(u"shopnamelabel_4")
+        self.shopnamelabel_4.setGeometry(QRect(220, 260, 151, 31))
+        self.shopnamelabel_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.addresslabel_admin_4 = QLabel(self.textboxeditcontainer_10)
+        self.addresslabel_admin_4.setObjectName(u"addresslabel_admin_4")
+        self.addresslabel_admin_4.setGeometry(QRect(220, 360, 791, 161))
+        self.addresslabel_admin_4.setStyleSheet(u"color: #000;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.addresslabel_admin_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.backbutton_settingsadmin_7 = QPushButton(self.shopaccountadminpage)
         self.backbutton_settingsadmin_7.setObjectName(u"backbutton_settingsadmin_7")
         self.backbutton_settingsadmin_7.setGeometry(QRect(20, 30, 20, 31))
@@ -597,7 +658,7 @@ class Ui_Main(object):
         self.scrollArea_ruleofuse_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_19 = QWidget()
         self.scrollAreaWidgetContents_19.setObjectName(u"scrollAreaWidgetContents_19")
-        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 85, 1518))
+        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 1121, 1524))
         self.verticalLayout_30 = QVBoxLayout(self.scrollAreaWidgetContents_19)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
         self.frame_ruleofuse_3 = QFrame(self.scrollAreaWidgetContents_19)
@@ -676,7 +737,7 @@ class Ui_Main(object):
         self.scrollArea_changepassword_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_20 = QWidget()
         self.scrollAreaWidgetContents_20.setObjectName(u"scrollAreaWidgetContents_20")
-        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 85, 1518))
+        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1121, 1524))
         self.verticalLayout_32 = QVBoxLayout(self.scrollAreaWidgetContents_20)
         self.verticalLayout_32.setObjectName(u"verticalLayout_32")
         self.frame_changepassword_3 = QFrame(self.scrollAreaWidgetContents_20)
@@ -1557,7 +1618,7 @@ class Ui_Main(object):
         self.scrollArea_cart.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
-        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 1013, 593))
+        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 76, 593))
         self.scrollAreaWidgetContents_4.setMinimumSize(QSize(0, 320))
         self.frame_cartpage = QFrame(self.scrollAreaWidgetContents_4)
         self.frame_cartpage.setObjectName(u"frame_cartpage")
@@ -2217,7 +2278,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage.setWidgetResizable(True)
         self.scrollAreaWidgetContents_9 = QWidget()
         self.scrollAreaWidgetContents_9.setObjectName(u"scrollAreaWidgetContents_9")
-        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, -300, 998, 1300))
+        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 992, 1300))
         self.scrollAreaWidgetContents_9.setMinimumSize(QSize(0, 1300))
         self.verticalLayout_12 = QVBoxLayout(self.scrollAreaWidgetContents_9)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
@@ -2941,7 +3002,7 @@ class Ui_Main(object):
         self.purchasecomplete.setObjectName(u"purchasecomplete")
         self.orderlabel_9 = QLabel(self.purchasecomplete)
         self.orderlabel_9.setObjectName(u"orderlabel_9")
-        self.orderlabel_9.setGeometry(QRect(490, 80, 321, 181))
+        self.orderlabel_9.setGeometry(QRect(430, 80, 321, 181))
         self.orderlabel_9.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -2951,7 +3012,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.orderlabel_10 = QLabel(self.purchasecomplete)
         self.orderlabel_10.setObjectName(u"orderlabel_10")
-        self.orderlabel_10.setGeometry(QRect(470, 340, 241, 51))
+        self.orderlabel_10.setGeometry(QRect(460, 340, 240, 51))
         self.orderlabel_10.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -3002,119 +3063,18 @@ class Ui_Main(object):
 "line-height: normal;")
         self.orderlabel_8 = QLabel(self.promppaymethod)
         self.orderlabel_8.setObjectName(u"orderlabel_8")
-        self.orderlabel_8.setGeometry(QRect(200, 110, 331, 271))
+        self.orderlabel_8.setGeometry(QRect(430, 100, 350, 350))
         self.orderlabel_8.setStyleSheet(u"color: #000;\n"
-"\n"
+"background: red;\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
         self.orderlabel_8.setAlignment(Qt.AlignCenter)
-        self.editproductimagecontainer_2 = QWidget(self.promppaymethod)
-        self.editproductimagecontainer_2.setObjectName(u"editproductimagecontainer_2")
-        self.editproductimagecontainer_2.setGeometry(QRect(500, 400, 181, 250))
-        self.editproductimagecontainer_2.setMinimumSize(QSize(0, 250))
-        self.editproductimagecontainer_2.setMaximumSize(QSize(16777215, 250))
-        self.editproductimagecontainer_2.setStyleSheet(u"QScrollArea {\n"
-"	border: none;\n"
-"	padding-top: 10px;\n"
-"}\n"
-"\n"
-"QScrollBar:horizontal {\n"
-"	border: none;\n"
-"	background-color: #FAF9F6;\n"
-"	height: 15px;\n"
-"	border-radius: 7px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:horizontal {\n"
-"	background-color: #E1E3E7;\n"
-"	border-radius: 7px;\n"
-"	min-width: 30px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:horizontal:hover {\n"
-"	background-color: #F4DBDB;\n"
-"}")
-        self.horizontalLayout_20 = QHBoxLayout(self.editproductimagecontainer_2)
-        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
-        self.scrollArea_addimageproduct_5 = QScrollArea(self.editproductimagecontainer_2)
-        self.scrollArea_addimageproduct_5.setObjectName(u"scrollArea_addimageproduct_5")
-        self.scrollArea_addimageproduct_5.setMinimumSize(QSize(0, 240))
-        self.scrollArea_addimageproduct_5.setMaximumSize(QSize(16777215, 240))
-        self.scrollArea_addimageproduct_5.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_30 = QWidget()
-        self.scrollAreaWidgetContents_30.setObjectName(u"scrollAreaWidgetContents_30")
-        self.scrollAreaWidgetContents_30.setGeometry(QRect(0, 0, 100, 210))
-        self.scrollAreaWidgetContents_30.setMinimumSize(QSize(0, 210))
-        self.scrollAreaWidgetContents_30.setMaximumSize(QSize(16777215, 210))
-        self.horizontalLayout_21 = QHBoxLayout(self.scrollAreaWidgetContents_30)
-        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
-        self.frame_addimageproduct_5 = QFrame(self.scrollAreaWidgetContents_30)
-        self.frame_addimageproduct_5.setObjectName(u"frame_addimageproduct_5")
-        self.frame_addimageproduct_5.setMinimumSize(QSize(0, 210))
-        self.frame_addimageproduct_5.setMaximumSize(QSize(16777215, 210))
-        self.frame_addimageproduct_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_addimageproduct_5.setFrameShadow(QFrame.Raised)
-        self.addproductimagelabel_5 = QLabel(self.frame_addimageproduct_5)
-        self.addproductimagelabel_5.setObjectName(u"addproductimagelabel_5")
-        self.addproductimagelabel_5.setGeometry(QRect(0, 0, 220, 31))
-        self.addproductimagelabel_5.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 20px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.addimagebutton_5 = QPushButton(self.frame_addimageproduct_5)
-        self.addimagebutton_5.setObjectName(u"addimagebutton_5")
-        self.addimagebutton_5.setGeometry(QRect(0, 45, 151, 151))
-        self.addimagebutton_5.setStyleSheet(u"QPushButton {\n"
-"	border: 3px dashed #D9D9D9;\n"
-"	font-size: 46px;\n"
-"	background: #FAF9F6;\n"
-"	color: #D9D9D9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"	border-color: #CD4662;\n"
-"	color: #CD4662;\n"
-"	background-color: #EDEDED;\n"
-"}")
-        self.addimagebutton_5.setIconSize(QSize(151, 151))
-        self.img_5 = QLabel(self.frame_addimageproduct_5)
-        self.img_5.setObjectName(u"img_5")
-        self.img_5.setGeometry(QRect(5, 50, 141, 141))
-        self.img_5.setStyleSheet(u"image: url(:/pic/product_img/IMG_2025.JPG)")
-        self.img_5.setAlignment(Qt.AlignCenter)
-        self.delete_pic_button_5 = QPushButton(self.frame_addimageproduct_5)
-        self.delete_pic_button_5.setObjectName(u"delete_pic_button_5")
-        self.delete_pic_button_5.setEnabled(True)
-        self.delete_pic_button_5.setGeometry(QRect(130, 30, 31, 32))
-        self.delete_pic_button_5.setCursor(QCursor(Qt.PointingHandCursor))
-        self.delete_pic_button_5.setAutoFillBackground(False)
-        self.delete_pic_button_5.setStyleSheet(u"QPushButton {\n"
-"	border-radius: 25px;\n"
-"	border-color: rgb(217, 217, 217);\n"
-"	border-width: 2px;\n"
-"	background: #FAF9F6;\n"
-"	color: #D9D9D9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"	border-color: #CD4662;\n"
-"	color: rgb(116,23,17);\n"
-"	background-color: rgb(237,106,94);\n"
-"}")
-
-        self.horizontalLayout_21.addWidget(self.frame_addimageproduct_5)
-
-        self.scrollArea_addimageproduct_5.setWidget(self.scrollAreaWidgetContents_30)
-
-        self.horizontalLayout_20.addWidget(self.scrollArea_addimageproduct_5)
-
         self.purchasebutton_2 = QPushButton(self.promppaymethod)
         self.purchasebutton_2.setObjectName(u"purchasebutton_2")
-        self.purchasebutton_2.setGeometry(QRect(920, 670, 151, 41))
+        self.purchasebutton_2.setGeometry(QRect(890, 630, 151, 41))
         self.purchasebutton_2.setStyleSheet(u"color: #FFF;\n"
 "background-color: #AEC289;\n"
 "text-align: center;\n"
@@ -3127,7 +3087,7 @@ class Ui_Main(object):
 "border-radius: 10px;")
         self.orderlabel_11 = QLabel(self.promppaymethod)
         self.orderlabel_11.setObjectName(u"orderlabel_11")
-        self.orderlabel_11.setGeometry(QRect(650, 100, 441, 271))
+        self.orderlabel_11.setGeometry(QRect(380, 480, 441, 31))
         self.orderlabel_11.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -3136,6 +3096,39 @@ class Ui_Main(object):
 "font-weight: 400;\n"
 "line-height: normal;")
         self.orderlabel_11.setAlignment(Qt.AlignCenter)
+        self.orderlabel_12 = QLabel(self.promppaymethod)
+        self.orderlabel_12.setObjectName(u"orderlabel_12")
+        self.orderlabel_12.setGeometry(QRect(420, 520, 361, 31))
+        self.orderlabel_12.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.orderlabel_12.setAlignment(Qt.AlignCenter)
+        self.orderlabel_13 = QLabel(self.promppaymethod)
+        self.orderlabel_13.setObjectName(u"orderlabel_13")
+        self.orderlabel_13.setGeometry(QRect(420, 550, 321, 31))
+        self.orderlabel_13.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.orderlabel_13.setAlignment(Qt.AlignCenter)
+        self.orderlabel_14 = QLabel(self.promppaymethod)
+        self.orderlabel_14.setObjectName(u"orderlabel_14")
+        self.orderlabel_14.setGeometry(QRect(420, 580, 241, 31))
+        self.orderlabel_14.setStyleSheet(u"color: #000;\n"
+"\n"
+"font-family: Suwannaphum;\n"
+"font-size: 20px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;")
+        self.orderlabel_14.setAlignment(Qt.AlignCenter)
         self.stackedWidget_purchase.addWidget(self.promppaymethod)
         self.stackedWidget.addWidget(self.purchasepage)
         self.adminwidget = QWidget()
@@ -3541,7 +3534,7 @@ class Ui_Main(object):
         self.scrollArea_homepage_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_11 = QWidget()
         self.scrollAreaWidgetContents_11.setObjectName(u"scrollAreaWidgetContents_11")
-        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1118))
+        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1124))
         self.verticalLayout_15 = QVBoxLayout(self.scrollAreaWidgetContents_11)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.frame_homepage_admin = QFrame(self.scrollAreaWidgetContents_11)
@@ -4355,7 +4348,7 @@ class Ui_Main(object):
         self.scrollArea_allproduct_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_17 = QWidget()
         self.scrollAreaWidgetContents_17.setObjectName(u"scrollAreaWidgetContents_17")
-        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 67, 471))
+        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 61, 477))
         self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents_17)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
         self.frame_allproducts_admin = QFrame(self.scrollAreaWidgetContents_17)
@@ -4400,7 +4393,7 @@ class Ui_Main(object):
         self.scrollArea_producttype_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_18 = QWidget()
         self.scrollAreaWidgetContents_18.setObjectName(u"scrollAreaWidgetContents_18")
-        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 67, 1518))
+        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 992, 1524))
         self.verticalLayout_27 = QVBoxLayout(self.scrollAreaWidgetContents_18)
         self.verticalLayout_27.setObjectName(u"verticalLayout_27")
         self.frame_producttype_3 = QFrame(self.scrollAreaWidgetContents_18)
@@ -4619,7 +4612,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct.setWidgetResizable(True)
         self.scrollAreaWidgetContents_22 = QWidget()
         self.scrollAreaWidgetContents_22.setObjectName(u"scrollAreaWidgetContents_22")
-        self.scrollAreaWidgetContents_22.setGeometry(QRect(0, 0, 1218, 210))
+        self.scrollAreaWidgetContents_22.setGeometry(QRect(0, 0, 1224, 210))
         self.scrollAreaWidgetContents_22.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_22.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_10 = QHBoxLayout(self.scrollAreaWidgetContents_22)
@@ -5253,7 +5246,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_24 = QWidget()
         self.scrollAreaWidgetContents_24.setObjectName(u"scrollAreaWidgetContents_24")
-        self.scrollAreaWidgetContents_24.setGeometry(QRect(0, 0, 1218, 210))
+        self.scrollAreaWidgetContents_24.setGeometry(QRect(0, 0, 1224, 210))
         self.scrollAreaWidgetContents_24.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_24.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_14 = QHBoxLayout(self.scrollAreaWidgetContents_24)
@@ -5811,7 +5804,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_29 = QWidget()
         self.scrollAreaWidgetContents_29.setObjectName(u"scrollAreaWidgetContents_29")
-        self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1318))
+        self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1324))
         self.verticalLayout_331 = QVBoxLayout(self.scrollAreaWidgetContents_29)
         self.verticalLayout_331.setObjectName(u"verticalLayout_331")
         self.frame_productviewpage_2 = QFrame(self.scrollAreaWidgetContents_29)
@@ -6506,7 +6499,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_23 = QWidget()
         self.scrollAreaWidgetContents_23.setObjectName(u"scrollAreaWidgetContents_23")
-        self.scrollAreaWidgetContents_23.setGeometry(QRect(0, 0, 1218, 210))
+        self.scrollAreaWidgetContents_23.setGeometry(QRect(0, 0, 1224, 210))
         self.scrollAreaWidgetContents_23.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_23.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_12 = QHBoxLayout(self.scrollAreaWidgetContents_23)
@@ -7088,7 +7081,7 @@ class Ui_Main(object):
         self.scrollArea_userprofile.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 85, 1018))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1241, 1024))
         self.scrollAreaWidgetContents_3.setStyleSheet(u"")
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -7294,7 +7287,7 @@ class Ui_Main(object):
         self.scrollArea_settings_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_27 = QWidget()
         self.scrollAreaWidgetContents_27.setObjectName(u"scrollAreaWidgetContents_27")
-        self.scrollAreaWidgetContents_27.setGeometry(QRect(0, 0, 85, 1318))
+        self.scrollAreaWidgetContents_27.setGeometry(QRect(0, 0, 1121, 1324))
         self.verticalLayout_22 = QVBoxLayout(self.scrollAreaWidgetContents_27)
         self.verticalLayout_22.setObjectName(u"verticalLayout_22")
         self.frame_settings_2 = QFrame(self.scrollAreaWidgetContents_27)
@@ -7396,7 +7389,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_28 = QWidget()
         self.scrollAreaWidgetContents_28.setObjectName(u"scrollAreaWidgetContents_28")
-        self.scrollAreaWidgetContents_28.setGeometry(QRect(0, 0, 1218, 210))
+        self.scrollAreaWidgetContents_28.setGeometry(QRect(0, 0, 1224, 210))
         self.scrollAreaWidgetContents_28.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_28.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_19 = QHBoxLayout(self.scrollAreaWidgetContents_28)
@@ -7871,7 +7864,7 @@ class Ui_Main(object):
         self.scrollArea_settings.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 85, 868))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1121, 874))
         self.verticalLayout_7 = QVBoxLayout(self.scrollAreaWidgetContents_5)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.frame_settings = QFrame(self.scrollAreaWidgetContents_5)
@@ -8042,237 +8035,111 @@ class Ui_Main(object):
         self.addresssettingspage.setObjectName(u"addresssettingspage")
         self.editprofilecontainer_4 = QWidget(self.addresssettingspage)
         self.editprofilecontainer_4.setObjectName(u"editprofilecontainer_4")
-        self.editprofilecontainer_4.setGeometry(QRect(60, 60, 1160, 371))
+        self.editprofilecontainer_4.setGeometry(QRect(60, 60, 1160, 321))
         self.editprofilecontainer_4.setStyleSheet(u"background: #FAF9F6;")
-        self.textboxeditcontainer_5 = QWidget(self.editprofilecontainer_4)
-        self.textboxeditcontainer_5.setObjectName(u"textboxeditcontainer_5")
-        self.textboxeditcontainer_5.setGeometry(QRect(29, 0, 1101, 361))
-        self.textboxeditcontainer_5.setStyleSheet(u"border-radius: 20px;\n"
+        self.textboxeditcontainer_12 = QWidget(self.editprofilecontainer_4)
+        self.textboxeditcontainer_12.setObjectName(u"textboxeditcontainer_12")
+        self.textboxeditcontainer_12.setGeometry(QRect(29, 0, 1101, 321))
+        self.textboxeditcontainer_12.setStyleSheet(u"border-radius: 20px;\n"
 "background: #F4DBDB;")
-        self.addressdisplaylabel = QLabel(self.textboxeditcontainer_5)
-        self.addressdisplaylabel.setObjectName(u"addressdisplaylabel")
-        self.addressdisplaylabel.setGeometry(QRect(470, 10, 160, 51))
-        self.addressdisplaylabel.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.addressdisplaylabel.setAlignment(Qt.AlignCenter)
-        self.soiaddress = QLabel(self.textboxeditcontainer_5)
-        self.soiaddress.setObjectName(u"soiaddress")
-        self.soiaddress.setGeometry(QRect(370, 180, 121, 31))
-        self.soiaddress.setStyleSheet(u"color: #000;\n"
+        self.addressdisplaylabel_3 = QLabel(self.textboxeditcontainer_12)
+        self.addressdisplaylabel_3.setObjectName(u"addressdisplaylabel_3")
+        self.addressdisplaylabel_3.setGeometry(QRect(470, 10, 160, 51))
+        self.addressdisplaylabel_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
 "font-style: normal;\n"
-"font-weight: 400;\n"
+"font-weight: 700;\n"
 "line-height: normal;")
-        self.fisrtnameaddress = QLabel(self.textboxeditcontainer_5)
-        self.fisrtnameaddress.setObjectName(u"fisrtnameaddress")
-        self.fisrtnameaddress.setGeometry(QRect(30, 80, 121, 31))
-        self.fisrtnameaddress.setStyleSheet(u"color: #000;\n"
+        self.addressdisplaylabel_3.setAlignment(Qt.AlignCenter)
+        self.fisrtnameaddress_3 = QLabel(self.textboxeditcontainer_12)
+        self.fisrtnameaddress_3.setObjectName(u"fisrtnameaddress_3")
+        self.fisrtnameaddress_3.setGeometry(QRect(30, 60, 121, 31))
+        self.fisrtnameaddress_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.lastnameaddress = QLabel(self.textboxeditcontainer_5)
-        self.lastnameaddress.setObjectName(u"lastnameaddress")
-        self.lastnameaddress.setGeometry(QRect(370, 80, 121, 31))
-        self.lastnameaddress.setStyleSheet(u"color: #000;\n"
+        self.lastnameaddress_3 = QLabel(self.textboxeditcontainer_12)
+        self.lastnameaddress_3.setObjectName(u"lastnameaddress_3")
+        self.lastnameaddress_3.setGeometry(QRect(340, 60, 101, 31))
+        self.lastnameaddress_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.homenumaddress = QLabel(self.textboxeditcontainer_5)
-        self.homenumaddress.setObjectName(u"homenumaddress")
-        self.homenumaddress.setGeometry(QRect(30, 180, 161, 31))
-        self.homenumaddress.setStyleSheet(u"color: #000;\n"
+        self.addressaddress_3 = QLabel(self.textboxeditcontainer_12)
+        self.addressaddress_3.setObjectName(u"addressaddress_3")
+        self.addressaddress_3.setGeometry(QRect(30, 100, 161, 31))
+        self.addressaddress_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.phoneaddress = QLabel(self.textboxeditcontainer_5)
-        self.phoneaddress.setObjectName(u"phoneaddress")
-        self.phoneaddress.setGeometry(QRect(30, 130, 121, 31))
-        self.phoneaddress.setStyleSheet(u"color: #000;\n"
+        self.phoneaddress_3 = QLabel(self.textboxeditcontainer_12)
+        self.phoneaddress_3.setObjectName(u"phoneaddress_3")
+        self.phoneaddress_3.setGeometry(QRect(590, 60, 61, 31))
+        self.phoneaddress_3.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
+"font-size: 20px;;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.streetaddress = QLabel(self.textboxeditcontainer_5)
-        self.streetaddress.setObjectName(u"streetaddress")
-        self.streetaddress.setGeometry(QRect(620, 180, 121, 31))
-        self.streetaddress.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.streetaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.streetaddressdisplay.setObjectName(u"streetaddressdisplay")
-        self.streetaddressdisplay.setGeometry(QRect(710, 180, 165, 41))
-        self.streetaddressdisplay.setStyleSheet(u"color: #000;\n"
+        self.firstnameaddressdisplay_3 = QLabel(self.textboxeditcontainer_12)
+        self.firstnameaddressdisplay_3.setObjectName(u"firstnameaddressdisplay_3")
+        self.firstnameaddressdisplay_3.setGeometry(QRect(180, 60, 121, 31))
+        self.firstnameaddressdisplay_3.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
-        self.streetaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.firstnameaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.firstnameaddressdisplay.setObjectName(u"firstnameaddressdisplay")
-        self.firstnameaddressdisplay.setGeometry(QRect(170, 80, 165, 31))
-        self.firstnameaddressdisplay.setStyleSheet(u"color: #000;\n"
+        self.firstnameaddressdisplay_3.setAlignment(Qt.AlignCenter)
+        self.phoneaddressdisplay_3 = QLabel(self.textboxeditcontainer_12)
+        self.phoneaddressdisplay_3.setObjectName(u"phoneaddressdisplay_3")
+        self.phoneaddressdisplay_3.setGeometry(QRect(700, 60, 201, 31))
+        self.phoneaddressdisplay_3.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
-        self.firstnameaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.phoneaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.phoneaddressdisplay.setObjectName(u"phoneaddressdisplay")
-        self.phoneaddressdisplay.setGeometry(QRect(130, 120, 165, 41))
-        self.phoneaddressdisplay.setStyleSheet(u"color: #000;\n"
+        self.phoneaddressdisplay_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.lastnameaddressdisplay_3 = QLabel(self.textboxeditcontainer_12)
+        self.lastnameaddressdisplay_3.setObjectName(u"lastnameaddressdisplay_3")
+        self.lastnameaddressdisplay_3.setGeometry(QRect(450, 60, 101, 31))
+        self.lastnameaddressdisplay_3.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
-        self.phoneaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.lastnameaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.lastnameaddressdisplay.setObjectName(u"lastnameaddressdisplay")
-        self.lastnameaddressdisplay.setGeometry(QRect(490, 70, 165, 41))
-        self.lastnameaddressdisplay.setStyleSheet(u"color: #000;\n"
+        self.lastnameaddressdisplay_3.setAlignment(Qt.AlignCenter)
+        self.addressaddressdisplay_3 = QLabel(self.textboxeditcontainer_12)
+        self.addressaddressdisplay_3.setObjectName(u"addressaddressdisplay_3")
+        self.addressaddressdisplay_3.setGeometry(QRect(180, 100, 871, 141))
+        self.addressaddressdisplay_3.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 20px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
-        self.lastnameaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.homenumaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.homenumaddressdisplay.setObjectName(u"homenumaddressdisplay")
-        self.homenumaddressdisplay.setGeometry(QRect(180, 170, 165, 41))
-        self.homenumaddressdisplay.setStyleSheet(u"color: #000;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.homenumaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.soiaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.soiaddressdisplay.setObjectName(u"soiaddressdisplay")
-        self.soiaddressdisplay.setGeometry(QRect(430, 170, 165, 41))
-        self.soiaddressdisplay.setStyleSheet(u"color: #000;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.soiaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.districtaddress = QLabel(self.textboxeditcontainer_5)
-        self.districtaddress.setObjectName(u"districtaddress")
-        self.districtaddress.setGeometry(QRect(30, 230, 121, 31))
-        self.districtaddress.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.provinceaddress = QLabel(self.textboxeditcontainer_5)
-        self.provinceaddress.setObjectName(u"provinceaddress")
-        self.provinceaddress.setGeometry(QRect(270, 230, 121, 31))
-        self.provinceaddress.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.countryaddress = QLabel(self.textboxeditcontainer_5)
-        self.countryaddress.setObjectName(u"countryaddress")
-        self.countryaddress.setGeometry(QRect(500, 230, 121, 31))
-        self.countryaddress.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.zipcodeaddress = QLabel(self.textboxeditcontainer_5)
-        self.zipcodeaddress.setObjectName(u"zipcodeaddress")
-        self.zipcodeaddress.setGeometry(QRect(750, 240, 121, 31))
-        self.zipcodeaddress.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.districtaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.districtaddressdisplay.setObjectName(u"districtaddressdisplay")
-        self.districtaddressdisplay.setGeometry(QRect(130, 220, 91, 41))
-        self.districtaddressdisplay.setStyleSheet(u"color: #000;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.districtaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.provinceaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.provinceaddressdisplay.setObjectName(u"provinceaddressdisplay")
-        self.provinceaddressdisplay.setGeometry(QRect(380, 220, 91, 41))
-        self.provinceaddressdisplay.setStyleSheet(u"color: #000;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.provinceaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.countryaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.countryaddressdisplay.setObjectName(u"countryaddressdisplay")
-        self.countryaddressdisplay.setGeometry(QRect(610, 230, 91, 41))
-        self.countryaddressdisplay.setStyleSheet(u"color: #000;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.countryaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.zipcodeaddressdisplay = QLabel(self.textboxeditcontainer_5)
-        self.zipcodeaddressdisplay.setObjectName(u"zipcodeaddressdisplay")
-        self.zipcodeaddressdisplay.setGeometry(QRect(890, 230, 91, 41))
-        self.zipcodeaddressdisplay.setStyleSheet(u"color: #000;\n"
-"text-align: center;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
-"font-style: normal;\n"
-"font-weight: 700;\n"
-"line-height: normal;")
-        self.zipcodeaddressdisplay.setAlignment(Qt.AlignCenter)
-        self.editaddressbutton = QPushButton(self.textboxeditcontainer_5)
+        self.addressaddressdisplay_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.editaddressbutton = QPushButton(self.textboxeditcontainer_12)
         self.editaddressbutton.setObjectName(u"editaddressbutton")
-        self.editaddressbutton.setGeometry(QRect(860, 300, 201, 41))
+        self.editaddressbutton.setGeometry(QRect(860, 260, 201, 41))
         self.editaddressbutton.setStyleSheet(u"color: #FFF;\n"
 "background: #AEC289;\n"
 "text-align: center;\n"
@@ -8292,11 +8159,11 @@ class Ui_Main(object):
         self.editaddresssettingspage.setObjectName(u"editaddresssettingspage")
         self.editprofilecontainer_5 = QWidget(self.editaddresssettingspage)
         self.editprofilecontainer_5.setObjectName(u"editprofilecontainer_5")
-        self.editprofilecontainer_5.setGeometry(QRect(60, 60, 1160, 631))
+        self.editprofilecontainer_5.setGeometry(QRect(60, 60, 1160, 571))
         self.editprofilecontainer_5.setStyleSheet(u"background: #FAF9F6;")
         self.textboxeditcontainer_6 = QWidget(self.editprofilecontainer_5)
         self.textboxeditcontainer_6.setObjectName(u"textboxeditcontainer_6")
-        self.textboxeditcontainer_6.setGeometry(QRect(29, 0, 1101, 601))
+        self.textboxeditcontainer_6.setGeometry(QRect(29, 0, 1101, 571))
         self.textboxeditcontainer_6.setStyleSheet(u"border-radius: 20px;\n"
 "background: #F4DBDB;")
         self.editaddrlabel = QLabel(self.textboxeditcontainer_6)
@@ -8310,16 +8177,6 @@ class Ui_Main(object):
 "font-weight: 700;\n"
 "line-height: normal;")
         self.editaddrlabel.setAlignment(Qt.AlignCenter)
-        self.soieditaddr = QLabel(self.textboxeditcontainer_6)
-        self.soieditaddr.setObjectName(u"soieditaddr")
-        self.soieditaddr.setGeometry(QRect(30, 230, 121, 31))
-        self.soieditaddr.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
         self.firstnameeditaddr = QLabel(self.textboxeditcontainer_6)
         self.firstnameeditaddr.setObjectName(u"firstnameeditaddr")
         self.firstnameeditaddr.setGeometry(QRect(30, 80, 121, 31))
@@ -8340,10 +8197,10 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.homenumeditaddr = QLabel(self.textboxeditcontainer_6)
-        self.homenumeditaddr.setObjectName(u"homenumeditaddr")
-        self.homenumeditaddr.setGeometry(QRect(30, 180, 161, 31))
-        self.homenumeditaddr.setStyleSheet(u"color: #000;\n"
+        self.addresseditaddr = QLabel(self.textboxeditcontainer_6)
+        self.addresseditaddr.setObjectName(u"addresseditaddr")
+        self.addresseditaddr.setGeometry(QRect(30, 180, 161, 31))
+        self.addresseditaddr.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
 "font-size: 24px;\n"
@@ -8360,59 +8217,9 @@ class Ui_Main(object):
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.streeteditaddr = QLabel(self.textboxeditcontainer_6)
-        self.streeteditaddr.setObjectName(u"streeteditaddr")
-        self.streeteditaddr.setGeometry(QRect(30, 280, 121, 31))
-        self.streeteditaddr.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.districteditaddr = QLabel(self.textboxeditcontainer_6)
-        self.districteditaddr.setObjectName(u"districteditaddr")
-        self.districteditaddr.setGeometry(QRect(30, 330, 121, 31))
-        self.districteditaddr.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.provinceeditaddr = QLabel(self.textboxeditcontainer_6)
-        self.provinceeditaddr.setObjectName(u"provinceeditaddr")
-        self.provinceeditaddr.setGeometry(QRect(30, 380, 121, 31))
-        self.provinceeditaddr.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.countryeditaddr = QLabel(self.textboxeditcontainer_6)
-        self.countryeditaddr.setObjectName(u"countryeditaddr")
-        self.countryeditaddr.setGeometry(QRect(30, 430, 121, 31))
-        self.countryeditaddr.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
-        self.zipcodeeditaddr = QLabel(self.textboxeditcontainer_6)
-        self.zipcodeeditaddr.setObjectName(u"zipcodeeditaddr")
-        self.zipcodeeditaddr.setGeometry(QRect(30, 480, 121, 31))
-        self.zipcodeeditaddr.setStyleSheet(u"color: #000;\n"
-"\n"
-"font-family: Suwannaphum;\n"
-"font-size: 24px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;")
         self.savechangeeditaddrbutton = QPushButton(self.textboxeditcontainer_6)
         self.savechangeeditaddrbutton.setObjectName(u"savechangeeditaddrbutton")
-        self.savechangeeditaddrbutton.setGeometry(QRect(870, 540, 201, 41))
+        self.savechangeeditaddrbutton.setGeometry(QRect(880, 510, 201, 41))
         self.savechangeeditaddrbutton.setStyleSheet(u"color: #FFF;\n"
 "background: #AEC289;\n"
 "text-align: center;\n"
@@ -8462,10 +8269,10 @@ class Ui_Main(object):
 "font-weight: 400;\n"
 "line-height: normal;\n"
 "padding: 0 5px;")
-        self.homenumeditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.homenumeditaddrbox.setObjectName(u"homenumeditaddrbox")
-        self.homenumeditaddrbox.setGeometry(QRect(220, 180, 341, 31))
-        self.homenumeditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
+        self.addresseditaddrbox = QLineEdit(self.textboxeditcontainer_6)
+        self.addresseditaddrbox.setObjectName(u"addresseditaddrbox")
+        self.addresseditaddrbox.setGeometry(QRect(220, 180, 861, 311))
+        self.addresseditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
 "border: 2px solid #CD4662;\n"
 "background: #F4F2EF;\n"
 "color: #545454;\n"
@@ -8475,87 +8282,10 @@ class Ui_Main(object):
 "font-weight: 400;\n"
 "line-height: normal;\n"
 "padding: 0 5px;")
-        self.soieditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.soieditaddrbox.setObjectName(u"soieditaddrbox")
-        self.soieditaddrbox.setGeometry(QRect(220, 230, 341, 31))
-        self.soieditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"padding: 0 5px;")
-        self.streeteditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.streeteditaddrbox.setObjectName(u"streeteditaddrbox")
-        self.streeteditaddrbox.setGeometry(QRect(220, 280, 341, 31))
-        self.streeteditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"padding: 0 5px;")
-        self.districteditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.districteditaddrbox.setObjectName(u"districteditaddrbox")
-        self.districteditaddrbox.setGeometry(QRect(220, 330, 341, 31))
-        self.districteditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"padding: 0 5px;")
-        self.provinceeditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.provinceeditaddrbox.setObjectName(u"provinceeditaddrbox")
-        self.provinceeditaddrbox.setGeometry(QRect(220, 380, 341, 31))
-        self.provinceeditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"padding: 0 5px;")
-        self.countryeditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.countryeditaddrbox.setObjectName(u"countryeditaddrbox")
-        self.countryeditaddrbox.setGeometry(QRect(220, 430, 341, 31))
-        self.countryeditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"padding: 0 5px;")
-        self.zipcodeeditaddrbox = QLineEdit(self.textboxeditcontainer_6)
-        self.zipcodeeditaddrbox.setObjectName(u"zipcodeeditaddrbox")
-        self.zipcodeeditaddrbox.setGeometry(QRect(220, 480, 341, 31))
-        self.zipcodeeditaddrbox.setStyleSheet(u"border-radius: 5px;\n"
-"border: 2px solid #CD4662;\n"
-"background: #F4F2EF;\n"
-"color: #545454;\n"
-"font-family: Suwannaphum;\n"
-"font-size: 16px;\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"line-height: normal;\n"
-"padding: 0 5px;")
+        self.addresseditaddrbox.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.cleardataeditaddrbutton = QPushButton(self.textboxeditcontainer_6)
         self.cleardataeditaddrbutton.setObjectName(u"cleardataeditaddrbutton")
-        self.cleardataeditaddrbutton.setGeometry(QRect(650, 540, 201, 41))
+        self.cleardataeditaddrbutton.setGeometry(QRect(650, 510, 201, 41))
         self.cleardataeditaddrbutton.setStyleSheet(u"color: #FFF;\n"
 "background: #cd4662;\n"
 "text-align: center;\n"
@@ -8609,7 +8339,7 @@ class Ui_Main(object):
         self.scrollArea_changepassword.setWidgetResizable(True)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 85, 1518))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1121, 1524))
         self.verticalLayout_13 = QVBoxLayout(self.scrollAreaWidgetContents_7)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.frame_changepassword = QFrame(self.scrollAreaWidgetContents_7)
@@ -8701,11 +8431,11 @@ class Ui_Main(object):
 "image: url(:/pic/realimages/backhomoe.png);")
         self.editprofilecontainer_3 = QWidget(self.accountpage)
         self.editprofilecontainer_3.setObjectName(u"editprofilecontainer_3")
-        self.editprofilecontainer_3.setGeometry(QRect(60, 60, 1160, 630))
+        self.editprofilecontainer_3.setGeometry(QRect(60, 60, 1160, 441))
         self.editprofilecontainer_3.setStyleSheet(u"background: #FAF9F6;")
         self.textboxeditcontainer_4 = QWidget(self.editprofilecontainer_3)
         self.textboxeditcontainer_4.setObjectName(u"textboxeditcontainer_4")
-        self.textboxeditcontainer_4.setGeometry(QRect(29, 0, 1101, 600))
+        self.textboxeditcontainer_4.setGeometry(QRect(29, 0, 1101, 441))
         self.textboxeditcontainer_4.setStyleSheet(u"border-radius: 20px;\n"
 "background: #F4DBDB;")
         self.profilelabel = QLabel(self.textboxeditcontainer_4)
@@ -8721,7 +8451,7 @@ class Ui_Main(object):
         self.profilelabel.setAlignment(Qt.AlignCenter)
         self.usernameprofile = QLabel(self.textboxeditcontainer_4)
         self.usernameprofile.setObjectName(u"usernameprofile")
-        self.usernameprofile.setGeometry(QRect(763, 350, 121, 31))
+        self.usernameprofile.setGeometry(QRect(60, 270, 121, 31))
         self.usernameprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8731,7 +8461,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.fisrtnameprofile = QLabel(self.textboxeditcontainer_4)
         self.fisrtnameprofile.setObjectName(u"fisrtnameprofile")
-        self.fisrtnameprofile.setGeometry(QRect(40, 270, 121, 31))
+        self.fisrtnameprofile.setGeometry(QRect(400, 270, 121, 31))
         self.fisrtnameprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8741,7 +8471,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.lastnameprofile = QLabel(self.textboxeditcontainer_4)
         self.lastnameprofile.setObjectName(u"lastnameprofile")
-        self.lastnameprofile.setGeometry(QRect(230, 460, 121, 31))
+        self.lastnameprofile.setGeometry(QRect(770, 270, 121, 31))
         self.lastnameprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8751,7 +8481,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.genderprofile = QLabel(self.textboxeditcontainer_4)
         self.genderprofile.setObjectName(u"genderprofile")
-        self.genderprofile.setGeometry(QRect(43, 490, 121, 31))
+        self.genderprofile.setGeometry(QRect(400, 330, 111, 31))
         self.genderprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8761,7 +8491,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.birthprofile = QLabel(self.textboxeditcontainer_4)
         self.birthprofile.setObjectName(u"birthprofile")
-        self.birthprofile.setGeometry(QRect(450, 300, 121, 31))
+        self.birthprofile.setGeometry(QRect(60, 330, 101, 31))
         self.birthprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8771,7 +8501,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.phoneprofile = QLabel(self.textboxeditcontainer_4)
         self.phoneprofile.setObjectName(u"phoneprofile")
-        self.phoneprofile.setGeometry(QRect(43, 400, 121, 31))
+        self.phoneprofile.setGeometry(QRect(770, 330, 71, 31))
         self.phoneprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8781,7 +8511,7 @@ class Ui_Main(object):
 "line-height: normal;")
         self.emailprofile = QLabel(self.textboxeditcontainer_4)
         self.emailprofile.setObjectName(u"emailprofile")
-        self.emailprofile.setGeometry(QRect(450, 400, 121, 31))
+        self.emailprofile.setGeometry(QRect(60, 390, 61, 31))
         self.emailprofile.setStyleSheet(u"color: #000;\n"
 "\n"
 "font-family: Suwannaphum;\n"
@@ -8797,77 +8527,77 @@ class Ui_Main(object):
 "background: #cd4662;")
         self.username = QLabel(self.textboxeditcontainer_4)
         self.username.setObjectName(u"username")
-        self.username.setGeometry(QRect(770, 390, 165, 41))
+        self.username.setGeometry(QRect(180, 270, 121, 31))
         self.username.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
         self.username.setAlignment(Qt.AlignCenter)
         self.firstname = QLabel(self.textboxeditcontainer_4)
         self.firstname.setObjectName(u"firstname")
-        self.firstname.setGeometry(QRect(780, 490, 165, 41))
+        self.firstname.setGeometry(QRect(520, 270, 165, 31))
         self.firstname.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
         self.firstname.setAlignment(Qt.AlignCenter)
         self.gender = QLabel(self.textboxeditcontainer_4)
         self.gender.setObjectName(u"gender")
-        self.gender.setGeometry(QRect(40, 530, 165, 41))
+        self.gender.setGeometry(QRect(514, 330, 151, 31))
         self.gender.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
         self.gender.setAlignment(Qt.AlignCenter)
         self.phone = QLabel(self.textboxeditcontainer_4)
         self.phone.setObjectName(u"phone")
-        self.phone.setGeometry(QRect(40, 450, 165, 41))
+        self.phone.setGeometry(QRect(870, 330, 165, 31))
         self.phone.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
         self.phone.setAlignment(Qt.AlignCenter)
         self.lastname = QLabel(self.textboxeditcontainer_4)
         self.lastname.setObjectName(u"lastname")
-        self.lastname.setGeometry(QRect(240, 500, 165, 41))
+        self.lastname.setGeometry(QRect(890, 270, 165, 31))
         self.lastname.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
         self.lastname.setAlignment(Qt.AlignCenter)
         self.birthday = QLabel(self.textboxeditcontainer_4)
         self.birthday.setObjectName(u"birthday")
-        self.birthday.setGeometry(QRect(430, 350, 165, 41))
+        self.birthday.setGeometry(QRect(164, 330, 151, 31))
         self.birthday.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
         self.birthday.setAlignment(Qt.AlignCenter)
         self.email = QLabel(self.textboxeditcontainer_4)
         self.email.setObjectName(u"email")
-        self.email.setGeometry(QRect(430, 450, 165, 41))
+        self.email.setGeometry(QRect(140, 390, 281, 31))
         self.email.setStyleSheet(u"color: #000;\n"
 "text-align: center;\n"
 "font-family: Suwannaphum;\n"
-"font-size: 28px;\n"
+"font-size: 24px;\n"
 "font-style: normal;\n"
 "font-weight: 700;\n"
 "line-height: normal;")
@@ -9162,7 +8892,7 @@ class Ui_Main(object):
         self.scrollArea_ruleofuse.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 85, 1518))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 1121, 1524))
         self.verticalLayout_9 = QVBoxLayout(self.scrollAreaWidgetContents_6)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.frame_ruleofuse = QFrame(self.scrollAreaWidgetContents_6)
@@ -9241,9 +8971,9 @@ class Ui_Main(object):
         self.stackedWidget.setCurrentIndex(2)
         self.stackedWidget_main.setCurrentIndex(0)
         self.stackedWidget_myorders.setCurrentIndex(2)
-        self.stackedWidget_adminmain.setCurrentIndex(3)
+        self.stackedWidget_adminmain.setCurrentIndex(2)
         self.stackedWidget_orderadmin.setCurrentIndex(0)
-        self.stackedWidget_adminproducts.setCurrentIndex(0)
+        self.stackedWidget_adminproducts.setCurrentIndex(2)
         self.stackedWidget_allandtype_admin.setCurrentIndex(1)
 
 
@@ -9262,7 +8992,6 @@ class Ui_Main(object):
         self.shopaccountbutton.setText(QCoreApplication.translate("Main", u"Shop Account", None))
         self.exitshopbutton.setText(QCoreApplication.translate("Main", u"Exit Shop", None))
         self.editshopbutton.setText(QCoreApplication.translate("Main", u"Edit Shop", None))
-        self.shopregisterationlabel_3.setText(QCoreApplication.translate("Main", u"Shop Registeration", None))
         self.shopnamelabel_3.setText(QCoreApplication.translate("Main", u"Shop's name", None))
         self.fisrtnamelabel_admin_3.setText(QCoreApplication.translate("Main", u"First name", None))
         self.lastnamelabel_admin_3.setText(QCoreApplication.translate("Main", u"Last name", None))
@@ -9270,11 +8999,18 @@ class Ui_Main(object):
         self.phonelabel_admin_3.setText(QCoreApplication.translate("Main", u"Phone", None))
         self.emaillabel_admin_3.setText(QCoreApplication.translate("Main", u"Email", None))
         self.shopdescriptionlabel_3.setText(QCoreApplication.translate("Main", u"Description", None))
-        self.shoplogolabel_3.setText(QCoreApplication.translate("Main", u"Shop's Logo", None))
+        self.shoplogolabel_3.setText(QCoreApplication.translate("Main", u"Shop Profile", None))
         self.editshoppic_3.setText("")
+        self.shopdescriptionlabel_4.setText(QCoreApplication.translate("Main", u"Description", None))
+        self.phonelabel_admin_4.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.emaillabel_admin_4.setText(QCoreApplication.translate("Main", u"Email", None))
+        self.fisrtnamelabel_admin_4.setText(QCoreApplication.translate("Main", u"First name", None))
+        self.lastnamelabel_admin_4.setText(QCoreApplication.translate("Main", u"Last name", None))
+        self.shopnamelabel_4.setText(QCoreApplication.translate("Main", u"Shop's name", None))
+        self.addresslabel_admin_4.setText(QCoreApplication.translate("Main", u"Address", None))
         self.backbutton_settingsadmin_7.setText("")
         self.backbutton_settingsadmin_6.setText("")
-        self.shopregisterationlabel_2.setText(QCoreApplication.translate("Main", u"Shop Registeration", None))
+        self.shopregisterationlabel_2.setText(QCoreApplication.translate("Main", u"Edit Shop Profile", None))
         self.shopnamelabel_2.setText(QCoreApplication.translate("Main", u"Shop's name", None))
         self.fisrtnamelabel_admin_2.setText(QCoreApplication.translate("Main", u"First name", None))
         self.lastnamelabel_admin_2.setText(QCoreApplication.translate("Main", u"Last name", None))
@@ -9507,12 +9243,11 @@ class Ui_Main(object):
         self.orderlabel_6.setText(QCoreApplication.translate("Main", u"Total Price:", None))
         self.orderlabel_7.setText(QCoreApplication.translate("Main", u"10000", None))
         self.orderlabel_8.setText(QCoreApplication.translate("Main", u"QR Code Picture", None))
-        self.addproductimagelabel_5.setText(QCoreApplication.translate("Main", u"Evidence Picture", None))
-        self.addimagebutton_5.setText(QCoreApplication.translate("Main", u"+", None))
-        self.img_5.setText("")
-        self.delete_pic_button_5.setText(QCoreApplication.translate("Main", u"X", None))
         self.purchasebutton_2.setText(QCoreApplication.translate("Main", u"Submit", None))
-        self.orderlabel_11.setText(QCoreApplication.translate("Main", u"Rule Promppay", None))
+        self.orderlabel_11.setText(QCoreApplication.translate("Main", u"Instruction", None))
+        self.orderlabel_12.setText(QCoreApplication.translate("Main", u"1. Open your mobile banking application", None))
+        self.orderlabel_13.setText(QCoreApplication.translate("Main", u"2. Scan the Qr Code above and pay", None))
+        self.orderlabel_14.setText(QCoreApplication.translate("Main", u"3. Press the submit button", None))
         self.backbutton_adminregister.setText("")
         self.shopregisterationlabel.setText(QCoreApplication.translate("Main", u"Shop Registeration", None))
         self.shopnamelabel.setText(QCoreApplication.translate("Main", u"Shop's name", None))
@@ -9827,40 +9562,22 @@ class Ui_Main(object):
         self.logoutsettingsbutton.setText(QCoreApplication.translate("Main", u"Log out", None))
         self.addressbutton.setText(QCoreApplication.translate("Main", u"Address", None))
         self.backbutton_settings.setText("")
-        self.addressdisplaylabel.setText(QCoreApplication.translate("Main", u"Address", None))
-        self.soiaddress.setText(QCoreApplication.translate("Main", u"Soi", None))
-        self.fisrtnameaddress.setText(QCoreApplication.translate("Main", u"First name", None))
-        self.lastnameaddress.setText(QCoreApplication.translate("Main", u"Last name", None))
-        self.homenumaddress.setText(QCoreApplication.translate("Main", u"Home number", None))
-        self.phoneaddress.setText(QCoreApplication.translate("Main", u"Phone", None))
-        self.streetaddress.setText(QCoreApplication.translate("Main", u"Street", None))
-        self.streetaddressdisplay.setText(QCoreApplication.translate("Main", u"Street", None))
-        self.firstnameaddressdisplay.setText(QCoreApplication.translate("Main", u"Firsth name", None))
-        self.phoneaddressdisplay.setText(QCoreApplication.translate("Main", u"Phone", None))
-        self.lastnameaddressdisplay.setText(QCoreApplication.translate("Main", u"last name", None))
-        self.homenumaddressdisplay.setText(QCoreApplication.translate("Main", u"Home number", None))
-        self.soiaddressdisplay.setText(QCoreApplication.translate("Main", u"Soi", None))
-        self.districtaddress.setText(QCoreApplication.translate("Main", u"District", None))
-        self.provinceaddress.setText(QCoreApplication.translate("Main", u"Province", None))
-        self.countryaddress.setText(QCoreApplication.translate("Main", u"Country", None))
-        self.zipcodeaddress.setText(QCoreApplication.translate("Main", u"Zip Code", None))
-        self.districtaddressdisplay.setText(QCoreApplication.translate("Main", u"District", None))
-        self.provinceaddressdisplay.setText(QCoreApplication.translate("Main", u"Province", None))
-        self.countryaddressdisplay.setText(QCoreApplication.translate("Main", u"Country", None))
-        self.zipcodeaddressdisplay.setText(QCoreApplication.translate("Main", u"Zip Code", None))
+        self.addressdisplaylabel_3.setText(QCoreApplication.translate("Main", u"Address", None))
+        self.fisrtnameaddress_3.setText(QCoreApplication.translate("Main", u"First name", None))
+        self.lastnameaddress_3.setText(QCoreApplication.translate("Main", u"Last name", None))
+        self.addressaddress_3.setText(QCoreApplication.translate("Main", u"Address", None))
+        self.phoneaddress_3.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.firstnameaddressdisplay_3.setText(QCoreApplication.translate("Main", u"Firsth name", None))
+        self.phoneaddressdisplay_3.setText(QCoreApplication.translate("Main", u"Phone", None))
+        self.lastnameaddressdisplay_3.setText(QCoreApplication.translate("Main", u"last name", None))
+        self.addressaddressdisplay_3.setText(QCoreApplication.translate("Main", u"Address", None))
         self.editaddressbutton.setText(QCoreApplication.translate("Main", u"Edit", None))
         self.backtomainsettingbutton_5.setText("")
         self.editaddrlabel.setText(QCoreApplication.translate("Main", u"Edit Address", None))
-        self.soieditaddr.setText(QCoreApplication.translate("Main", u"Soi", None))
         self.firstnameeditaddr.setText(QCoreApplication.translate("Main", u"First name", None))
         self.lastnameeditaddr.setText(QCoreApplication.translate("Main", u"Last name", None))
-        self.homenumeditaddr.setText(QCoreApplication.translate("Main", u"Home number", None))
+        self.addresseditaddr.setText(QCoreApplication.translate("Main", u"Address", None))
         self.phoneeditaddr.setText(QCoreApplication.translate("Main", u"Phone", None))
-        self.streeteditaddr.setText(QCoreApplication.translate("Main", u"Street", None))
-        self.districteditaddr.setText(QCoreApplication.translate("Main", u"District", None))
-        self.provinceeditaddr.setText(QCoreApplication.translate("Main", u"Province", None))
-        self.countryeditaddr.setText(QCoreApplication.translate("Main", u"Country", None))
-        self.zipcodeeditaddr.setText(QCoreApplication.translate("Main", u"Zip Code", None))
         self.savechangeeditaddrbutton.setText(QCoreApplication.translate("Main", u"Save Changes", None))
         self.firstnameeditaddrbox.setText("")
         self.firstnameeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Firstname", None))
@@ -9868,20 +9585,8 @@ class Ui_Main(object):
         self.lastnameeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Lastname", None))
         self.phoneeditaddrbox.setText("")
         self.phoneeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Phone", None))
-        self.homenumeditaddrbox.setText("")
-        self.homenumeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Home number", None))
-        self.soieditaddrbox.setText("")
-        self.soieditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Soi", None))
-        self.streeteditaddrbox.setText("")
-        self.streeteditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Street", None))
-        self.districteditaddrbox.setText("")
-        self.districteditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"District", None))
-        self.provinceeditaddrbox.setText("")
-        self.provinceeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Province", None))
-        self.countryeditaddrbox.setText("")
-        self.countryeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Country", None))
-        self.zipcodeeditaddrbox.setText("")
-        self.zipcodeeditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Zip code", None))
+        self.addresseditaddrbox.setText("")
+        self.addresseditaddrbox.setPlaceholderText(QCoreApplication.translate("Main", u"Address", None))
         self.cleardataeditaddrbutton.setText(QCoreApplication.translate("Main", u"Clear Data", None))
         self.backtoeditarresssettingbutton.setText("")
         self.backtomainsettingbutton_2.setText("")
@@ -9902,12 +9607,12 @@ class Ui_Main(object):
         self.emailprofile.setText(QCoreApplication.translate("Main", u"Email", None))
         self.pictureprofile.setText("")
         self.username.setText(QCoreApplication.translate("Main", u"User1", None))
-        self.firstname.setText(QCoreApplication.translate("Main", u"Firsth name", None))
+        self.firstname.setText(QCoreApplication.translate("Main", u"First name", None))
         self.gender.setText(QCoreApplication.translate("Main", u"Gender", None))
         self.phone.setText(QCoreApplication.translate("Main", u"Phone", None))
         self.lastname.setText(QCoreApplication.translate("Main", u"last name", None))
-        self.birthday.setText(QCoreApplication.translate("Main", u"User1", None))
-        self.email.setText(QCoreApplication.translate("Main", u"User1", None))
+        self.birthday.setText(QCoreApplication.translate("Main", u"bday", None))
+        self.email.setText(QCoreApplication.translate("Main", u"email", None))
         self.editlabel_2.setText(QCoreApplication.translate("Main", u"Edit Profile", None))
         self.userabel_2.setText(QCoreApplication.translate("Main", u"Username", None))
         self.fisrtlabel_2.setText(QCoreApplication.translate("Main", u"First name", None))

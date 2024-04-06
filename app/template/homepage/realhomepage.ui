@@ -110,8 +110,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1018</height>
+             <width>1121</width>
+             <height>1024</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_28">
@@ -1329,8 +1329,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>1121</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -1509,8 +1509,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>1121</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_32">
@@ -3378,7 +3378,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>82</width>
+            <width>76</width>
             <height>593</height>
            </rect>
           </property>
@@ -4822,7 +4822,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>67</width>
+            <width>992</width>
             <height>1300</height>
            </rect>
           </property>
@@ -6505,7 +6505,7 @@ line-height: normal;</string>
       <widget class="QLabel" name="orderlabel_9">
        <property name="geometry">
         <rect>
-         <x>490</x>
+         <x>430</x>
          <y>80</y>
          <width>321</width>
          <height>181</height>
@@ -6527,9 +6527,9 @@ line-height: normal;</string>
       <widget class="QLabel" name="orderlabel_10">
        <property name="geometry">
         <rect>
-         <x>470</x>
+         <x>460</x>
          <y>340</y>
-         <width>241</width>
+         <width>240</width>
          <height>51</height>
         </rect>
        </property>
@@ -7620,7 +7620,7 @@ border: none;</string>
            </rect>
           </property>
           <property name="currentIndex">
-           <number>3</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="homepage_admin">
            <widget class="QScrollArea" name="scrollArea_homepage_admin">
@@ -7663,7 +7663,7 @@ QScrollBar::handle:vertical:hover {
                <x>0</x>
                <y>0</y>
                <width>1006</width>
-               <height>1118</height>
+               <height>1124</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -9242,7 +9242,7 @@ border-radius: 5px;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -9390,8 +9390,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>67</width>
-                     <height>471</height>
+                     <width>61</width>
+                     <height>477</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -9451,8 +9451,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>998</width>
-                     <height>1518</height>
+                     <width>992</width>
+                     <height>1524</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_27">
@@ -9933,7 +9933,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1218</width>
+                         <width>1224</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -11112,7 +11112,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1218</width>
+                         <width>1224</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -12142,7 +12142,7 @@ QScrollBar::handle:vertical:hover {
                  <x>0</x>
                  <y>0</y>
                  <width>998</width>
-                 <height>1318</height>
+                 <height>1324</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_33">
@@ -13850,7 +13850,7 @@ QScrollBar::handle:horizontal:hover {
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>1218</width>
+                       <width>1224</width>
                        <height>210</height>
                       </rect>
                      </property>
@@ -14910,8 +14910,8 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1247</width>
-          <height>1018</height>
+          <width>1241</width>
+          <height>1024</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -15386,8 +15386,8 @@ QScrollBar::handle:vertical:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1127</width>
-           <height>1318</height>
+           <width>1121</width>
+           <height>1324</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -15593,7 +15593,7 @@ QScrollBar::handle:horizontal:hover {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1218</width>
+                   <width>1224</width>
                    <height>210</height>
                   </rect>
                  </property>
@@ -16578,8 +16578,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>868</height>
+             <width>1121</width>
+             <height>874</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -17560,8 +17560,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>1121</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -18735,8 +18735,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1127</width>
-             <height>1518</height>
+             <width>1121</width>
+             <height>1524</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">

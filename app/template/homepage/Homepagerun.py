@@ -204,7 +204,7 @@ class HomepageWindow(QMainWindow):
     
         
         # purchase page
-        self.ui.purchasebutton.clicked.connect(self.purchase_final)
+        # self.ui.purchasebutton.clicked.connect(self.purchase_final)
         self.ui.purchasebutton_2.clicked.connect(self.go_to_home)
         self.ui.purchasebutton_3.clicked.connect(self.go_to_home)
         
@@ -240,30 +240,48 @@ class HomepageWindow(QMainWindow):
     #     self.close()
     #     self.login.show()
     
-    def purchase_final(self):
+    def purchase_final(self, page, id=None):
         if not (self.ui.promptpaybutton.isChecked() or self.ui.creditcardbutton.isChecked() or self.ui.cashdeliverybutton.isChecked() or self.ui.pickupstorebutton.isChecked()):
             self.show_error("Please choose payment method")
             return
 
         if self.ui.promptpaybutton.isChecked():
             print("Promptpay")
-            self.go_to_promtpay()
+            self.go_to_promtpay(page, id)
         else:
             self.show_success("Purchase successful")
             print("Purchase successful")
             self.print_cart()
             self.go_to_purchase_complete()
             
-    def go_to_promtpay(self):
+    def go_to_promtpay(self, page, id=None):
         self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
         self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.promppaymethod)
         
         self.ui.purchasebutton_2.clicked.connect(lambda: self.go_to_purchase_complete())
         
+        self.button_bug_fix(self.ui.backtochoosingtypebutton)
+        self.ui.backtochoosingtypebutton.clicked.connect(functools.partial(self.purchase_final, page, id))
+        
+        
+        if page == "cartpage":
+            self.ui.orderlabel_7.setText(f"{str(self.add_total_price_in_cart())}")
+        else:
+            self.ui.orderlabel_7.setText(f"{str(get_product_price_by_id(id))}")
+            
+        self.ui.orderlabel_8.setText("")
+        
+        img_path = "app/assets/images/promptpay.jpg"
+        self.ui.orderlabel_8.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
+        
         
     def go_to_purchase_complete(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
         self.ui.stackedWidget_purchase.setCurrentWidget(self.ui.purchasecomplete)
+        
+        self.ui.orderlabel_9.setText("")
+        img_path = "app/assets/images/success.png"
+        self.ui.orderlabel_9.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
         
         self.ui.purchasebutton_3.clicked.connect(lambda: self.go_to_home())
             
@@ -299,6 +317,9 @@ class HomepageWindow(QMainWindow):
                 item = f"{get_product_name_by_id(i[0])} x {i[1]} -------> {get_product_price_by_id(i[0])}"
                 self.ui.listWidget.addItem(item)
         
+            
+        self.button_bug_fix(self.ui.purchasebutton)
+        self.ui.purchasebutton.clicked.connect(functools.partial(self.purchase_final, page, id))
             
             
     def back_to_cart(self):
