@@ -402,33 +402,11 @@ QPushButton:hover {
          <string notr="true">border-radius: 20px;
 background: #F4DBDB;</string>
         </property>
-        <widget class="QLabel" name="shopregisterationlabel_3">
-         <property name="geometry">
-          <rect>
-           <x>43</x>
-           <y>34</y>
-           <width>281</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Shop Registeration</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="shopnamelabel_3">
          <property name="geometry">
           <rect>
-           <x>43</x>
-           <y>100</y>
+           <x>40</x>
+           <y>260</y>
            <width>141</width>
            <height>31</height>
           </rect>
@@ -449,8 +427,8 @@ line-height: normal;</string>
         <widget class="QLabel" name="fisrtnamelabel_admin_3">
          <property name="geometry">
           <rect>
-           <x>43</x>
-           <y>200</y>
+           <x>40</x>
+           <y>310</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -471,8 +449,8 @@ line-height: normal;</string>
         <widget class="QLabel" name="lastnamelabel_admin_3">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>300</y>
+           <x>450</x>
+           <y>310</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -493,8 +471,8 @@ line-height: normal;</string>
         <widget class="QLabel" name="addresslabel_admin_3">
          <property name="geometry">
           <rect>
-           <x>450</x>
-           <y>250</y>
+           <x>40</x>
+           <y>360</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -515,9 +493,9 @@ line-height: normal;</string>
         <widget class="QLabel" name="phonelabel_admin_3">
          <property name="geometry">
           <rect>
-           <x>43</x>
-           <y>400</y>
-           <width>121</width>
+           <x>820</x>
+           <y>260</y>
+           <width>71</width>
            <height>31</height>
           </rect>
          </property>
@@ -537,9 +515,9 @@ line-height: normal;</string>
         <widget class="QLabel" name="emaillabel_admin_3">
          <property name="geometry">
           <rect>
-           <x>450</x>
-           <y>400</y>
-           <width>121</width>
+           <x>40</x>
+           <y>540</y>
+           <width>61</width>
            <height>31</height>
           </rect>
          </property>
@@ -560,7 +538,7 @@ line-height: normal;</string>
          <property name="geometry">
           <rect>
            <x>450</x>
-           <y>100</y>
+           <y>260</y>
            <width>141</width>
            <height>31</height>
           </rect>
@@ -582,8 +560,8 @@ line-height: normal;</string>
          <property name="geometry">
           <rect>
            <x>470</x>
-           <y>50</y>
-           <width>171</width>
+           <y>10</y>
+           <width>181</width>
            <height>41</height>
           </rect>
          </property>
@@ -597,7 +575,7 @@ font-weight: 700;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>Shop's Logo</string>
+          <string>Shop Profile</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -606,8 +584,8 @@ line-height: normal;</string>
         <widget class="QLabel" name="editshoppic_3">
          <property name="geometry">
           <rect>
-           <x>870</x>
-           <y>80</y>
+           <x>480</x>
+           <y>70</y>
            <width>160</width>
            <height>160</height>
           </rect>
@@ -619,6 +597,163 @@ background: #cd4662;</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="shopdescriptionlabel_4">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>260</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Description</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="phonelabel_admin_4">
+         <property name="geometry">
+          <rect>
+           <x>930</x>
+           <y>260</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Phone</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="emaillabel_admin_4">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>540</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Email</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="fisrtnamelabel_admin_4">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>310</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>First name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lastnamelabel_admin_4">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>310</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Last name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="shopnamelabel_4">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>260</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Shop's name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="addresslabel_admin_4">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>360</y>
+           <width>791</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000;
+text-align: center;
+font-family: Suwannaphum;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;</string>
+         </property>
+         <property name="text">
+          <string>Address</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
          </property>
         </widget>
        </widget>
@@ -703,7 +838,7 @@ font-weight: 700;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>Shop Registeration</string>
+          <string>Edit Shop Profile</string>
          </property>
         </widget>
         <widget class="QLabel" name="shopnamelabel_2">
@@ -1194,7 +1329,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>1518</height>
             </rect>
            </property>
@@ -1374,7 +1509,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>1518</height>
             </rect>
            </property>
@@ -2525,7 +2660,6 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
-           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -3244,7 +3378,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>1013</width>
+            <width>82</width>
             <height>593</height>
            </rect>
           </property>
@@ -4687,8 +4821,8 @@ QScrollBar::handle:vertical:hover {
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-300</y>
-            <width>998</width>
+            <y>0</y>
+            <width>67</width>
             <height>1300</height>
            </rect>
           </property>
@@ -6503,15 +6637,15 @@ line-height: normal;</string>
       <widget class="QLabel" name="orderlabel_8">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>110</y>
-         <width>331</width>
-         <height>271</height>
+         <x>430</x>
+         <y>100</y>
+         <width>350</width>
+         <height>350</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">color: #000;
-
+background: red;
 font-family: Suwannaphum;
 font-size: 24px;
 font-style: normal;
@@ -6525,232 +6659,11 @@ line-height: normal;</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QWidget" name="editproductimagecontainer_2" native="true">
-       <property name="geometry">
-        <rect>
-         <x>500</x>
-         <y>400</y>
-         <width>181</width>
-         <height>250</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>250</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>250</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QScrollArea {
-	border: none;
-	padding-top: 10px;
-}
-
-QScrollBar:horizontal {
-	border: none;
-	background-color: #FAF9F6;
-	height: 15px;
-	border-radius: 7px;
-}
-
-QScrollBar::handle:horizontal {
-	background-color: #E1E3E7;
-	border-radius: 7px;
-	min-width: 30px;
-}
-
-QScrollBar::handle:horizontal:hover {
-	background-color: #F4DBDB;
-}</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_20">
-        <item>
-         <widget class="QScrollArea" name="scrollArea_addimageproduct_5">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>240</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>240</height>
-           </size>
-          </property>
-          <property name="widgetResizable">
-           <bool>true</bool>
-          </property>
-          <widget class="QWidget" name="scrollAreaWidgetContents_30">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>100</width>
-             <height>210</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>210</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>210</height>
-            </size>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_21">
-            <item>
-             <widget class="QFrame" name="frame_addimageproduct_5">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>210</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>210</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <widget class="QLabel" name="addproductimagelabel_5">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>220</width>
-                 <height>31</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-               </property>
-               <property name="text">
-                <string>Evidence Picture</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="addimagebutton_5">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>45</y>
-                 <width>151</width>
-                 <height>151</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-               </property>
-               <property name="text">
-                <string>+</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>151</width>
-                 <height>151</height>
-                </size>
-               </property>
-              </widget>
-              <widget class="QLabel" name="img_5">
-               <property name="geometry">
-                <rect>
-                 <x>5</x>
-                 <y>50</y>
-                 <width>141</width>
-                 <height>141</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">image: url(:/pic/product_img/IMG_2025.JPG)</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="delete_pic_button_5">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>130</x>
-                 <y>30</y>
-                 <width>31</width>
-                 <height>32</height>
-                </rect>
-               </property>
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
-               </property>
-               <property name="autoFillBackground">
-                <bool>false</bool>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-	border-radius: 25px;
-	border-color: rgb(217, 217, 217);
-	border-width: 2px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: rgb(116,23,17);
-	background-color: rgb(237,106,94);
-}</string>
-               </property>
-               <property name="text">
-                <string>X</string>
-               </property>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QPushButton" name="purchasebutton_2">
        <property name="geometry">
         <rect>
-         <x>920</x>
-         <y>670</y>
+         <x>890</x>
+         <y>630</y>
          <width>151</width>
          <height>41</height>
         </rect>
@@ -6774,10 +6687,10 @@ border-radius: 10px;</string>
       <widget class="QLabel" name="orderlabel_11">
        <property name="geometry">
         <rect>
-         <x>650</x>
-         <y>100</y>
+         <x>380</x>
+         <y>480</y>
          <width>441</width>
-         <height>271</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -6790,7 +6703,82 @@ font-weight: 400;
 line-height: normal;</string>
        </property>
        <property name="text">
-        <string>Rule Promppay</string>
+        <string>Instruction</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="orderlabel_12">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>520</y>
+         <width>361</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+       </property>
+       <property name="text">
+        <string>1. Open your mobile banking application</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="orderlabel_13">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>550</y>
+         <width>321</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+       </property>
+       <property name="text">
+        <string>2. Scan the Qr Code above and pay</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="orderlabel_14">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>580</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000;
+
+font-family: Suwannaphum;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;</string>
+       </property>
+       <property name="text">
+        <string>3. Press the submit button</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9463,7 +9451,7 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>67</width>
+                     <width>998</width>
                      <height>1518</height>
                     </rect>
                    </property>
@@ -14922,7 +14910,7 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>85</width>
+          <width>1247</width>
           <height>1018</height>
          </rect>
         </property>
@@ -15398,7 +15386,7 @@ QScrollBar::handle:vertical:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>85</width>
+           <width>1127</width>
            <height>1318</height>
           </rect>
          </property>
@@ -16590,7 +16578,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>868</height>
             </rect>
            </property>
@@ -16910,26 +16898,26 @@ image: url(:/pic/realimages/backhomoe.png);</string>
          <x>60</x>
          <y>60</y>
          <width>1160</width>
-         <height>371</height>
+         <height>321</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">background: #FAF9F6;</string>
        </property>
-       <widget class="QWidget" name="textboxeditcontainer_5" native="true">
+       <widget class="QWidget" name="textboxeditcontainer_12" native="true">
         <property name="geometry">
          <rect>
           <x>29</x>
           <y>0</y>
           <width>1101</width>
-          <height>361</height>
+          <height>321</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">border-radius: 20px;
 background: #F4DBDB;</string>
         </property>
-        <widget class="QLabel" name="addressdisplaylabel">
+        <widget class="QLabel" name="addressdisplaylabel_3">
          <property name="geometry">
           <rect>
            <x>470</x>
@@ -16942,7 +16930,7 @@ background: #F4DBDB;</string>
           <string notr="true">color: #000;
 
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -16954,33 +16942,11 @@ line-height: normal;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="soiaddress">
-         <property name="geometry">
-          <rect>
-           <x>370</x>
-           <y>180</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Soi</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="fisrtnameaddress">
+        <widget class="QLabel" name="fisrtnameaddress_3">
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>80</y>
+           <y>60</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -16989,7 +16955,7 @@ line-height: normal;</string>
           <string notr="true">color: #000;
 
 font-family: Suwannaphum;
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
@@ -16998,12 +16964,12 @@ line-height: normal;</string>
           <string>First name</string>
          </property>
         </widget>
-        <widget class="QLabel" name="lastnameaddress">
+        <widget class="QLabel" name="lastnameaddress_3">
          <property name="geometry">
           <rect>
-           <x>370</x>
-           <y>80</y>
-           <width>121</width>
+           <x>340</x>
+           <y>60</y>
+           <width>101</width>
            <height>31</height>
           </rect>
          </property>
@@ -17011,7 +16977,7 @@ line-height: normal;</string>
           <string notr="true">color: #000;
 
 font-family: Suwannaphum;
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
@@ -17020,11 +16986,11 @@ line-height: normal;</string>
           <string>Last name</string>
          </property>
         </widget>
-        <widget class="QLabel" name="homenumaddress">
+        <widget class="QLabel" name="addressaddress_3">
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>180</y>
+           <y>100</y>
            <width>161</width>
            <height>31</height>
           </rect>
@@ -17033,21 +16999,21 @@ line-height: normal;</string>
           <string notr="true">color: #000;
 
 font-family: Suwannaphum;
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>Home number</string>
+          <string>Address</string>
          </property>
         </widget>
-        <widget class="QLabel" name="phoneaddress">
+        <widget class="QLabel" name="phoneaddress_3">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>130</y>
-           <width>121</width>
+           <x>590</x>
+           <y>60</y>
+           <width>61</width>
            <height>31</height>
           </rect>
          </property>
@@ -17055,7 +17021,7 @@ line-height: normal;</string>
           <string notr="true">color: #000;
 
 font-family: Suwannaphum;
-font-size: 24px;
+font-size: 20px;;
 font-style: normal;
 font-weight: 400;
 line-height: normal;</string>
@@ -17064,67 +17030,20 @@ line-height: normal;</string>
           <string>Phone</string>
          </property>
         </widget>
-        <widget class="QLabel" name="streetaddress">
+        <widget class="QLabel" name="firstnameaddressdisplay_3">
          <property name="geometry">
           <rect>
-           <x>620</x>
-           <y>180</y>
+           <x>180</x>
+           <y>60</y>
            <width>121</width>
            <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Street</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="streetaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>710</x>
-           <y>180</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Street</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="firstnameaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>170</x>
-           <y>80</y>
-           <width>165</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
+font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -17136,20 +17055,20 @@ line-height: normal;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="phoneaddressdisplay">
+        <widget class="QLabel" name="phoneaddressdisplay_3">
          <property name="geometry">
           <rect>
-           <x>130</x>
-           <y>120</y>
-           <width>165</width>
-           <height>41</height>
+           <x>700</x>
+           <y>60</y>
+           <width>201</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -17158,23 +17077,23 @@ line-height: normal;</string>
           <string>Phone</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="lastnameaddressdisplay">
+        <widget class="QLabel" name="lastnameaddressdisplay_3">
          <property name="geometry">
           <rect>
-           <x>490</x>
-           <y>70</y>
-           <width>165</width>
-           <height>41</height>
+           <x>450</x>
+           <y>60</y>
+           <width>101</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -17186,249 +17105,36 @@ line-height: normal;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="homenumaddressdisplay">
+        <widget class="QLabel" name="addressaddressdisplay_3">
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>170</y>
-           <width>165</width>
-           <height>41</height>
+           <y>100</y>
+           <width>871</width>
+           <height>141</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>Home number</string>
+          <string>Address</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="soiaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>430</x>
-           <y>170</y>
-           <width>165</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Soi</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="districtaddress">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>230</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>District</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="provinceaddress">
-         <property name="geometry">
-          <rect>
-           <x>270</x>
-           <y>230</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Province</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="countryaddress">
-         <property name="geometry">
-          <rect>
-           <x>500</x>
-           <y>230</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Country</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="zipcodeaddress">
-         <property name="geometry">
-          <rect>
-           <x>750</x>
-           <y>240</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Zip Code</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="districtaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>130</x>
-           <y>220</y>
-           <width>91</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>District</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="provinceaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>380</x>
-           <y>220</y>
-           <width>91</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Province</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="countryaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>610</x>
-           <y>230</y>
-           <width>91</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Country</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="zipcodeaddressdisplay">
-         <property name="geometry">
-          <rect>
-           <x>890</x>
-           <y>230</y>
-           <width>91</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Zip Code</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
          </property>
         </widget>
         <widget class="QPushButton" name="editaddressbutton">
          <property name="geometry">
           <rect>
            <x>860</x>
-           <y>300</y>
+           <y>260</y>
            <width>201</width>
            <height>41</height>
           </rect>
@@ -17475,7 +17181,7 @@ image: url(:/pic/realimages/backhomoe.png);</string>
          <x>60</x>
          <y>60</y>
          <width>1160</width>
-         <height>631</height>
+         <height>571</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -17487,7 +17193,7 @@ image: url(:/pic/realimages/backhomoe.png);</string>
           <x>29</x>
           <y>0</y>
           <width>1101</width>
-          <height>601</height>
+          <height>571</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -17517,28 +17223,6 @@ line-height: normal;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="soieditaddr">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>230</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Soi</string>
          </property>
         </widget>
         <widget class="QLabel" name="firstnameeditaddr">
@@ -17585,7 +17269,7 @@ line-height: normal;</string>
           <string>Last name</string>
          </property>
         </widget>
-        <widget class="QLabel" name="homenumeditaddr">
+        <widget class="QLabel" name="addresseditaddr">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -17604,7 +17288,7 @@ font-weight: 400;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>Home number</string>
+          <string>Address</string>
          </property>
         </widget>
         <widget class="QLabel" name="phoneeditaddr">
@@ -17629,121 +17313,11 @@ line-height: normal;</string>
           <string>Phone</string>
          </property>
         </widget>
-        <widget class="QLabel" name="streeteditaddr">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>280</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Street</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="districteditaddr">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>330</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>District</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="provinceeditaddr">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>380</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Province</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="countryeditaddr">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>430</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Country</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="zipcodeeditaddr">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>480</y>
-           <width>121</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Zip Code</string>
-         </property>
-        </widget>
         <widget class="QPushButton" name="savechangeeditaddrbutton">
          <property name="geometry">
           <rect>
-           <x>870</x>
-           <y>540</y>
+           <x>880</x>
+           <y>510</y>
            <width>201</width>
            <height>41</height>
           </rect>
@@ -17850,13 +17424,13 @@ padding: 0 5px;</string>
           <string>Phone</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="homenumeditaddrbox">
+        <widget class="QLineEdit" name="addresseditaddrbox">
          <property name="geometry">
           <rect>
            <x>220</x>
            <y>180</y>
-           <width>341</width>
-           <height>31</height>
+           <width>861</width>
+           <height>311</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -17874,183 +17448,18 @@ padding: 0 5px;</string>
          <property name="text">
           <string/>
          </property>
-         <property name="placeholderText">
-          <string>Home number</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="soieditaddrbox">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>230</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
          </property>
          <property name="placeholderText">
-          <string>Soi</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="streeteditaddrbox">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>280</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Street</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="districteditaddrbox">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>330</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>District</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="provinceeditaddrbox">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>380</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Province</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="countryeditaddrbox">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>430</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Country</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="zipcodeeditaddrbox">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>480</y>
-           <width>341</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 5px;
-border: 2px solid #CD4662;
-background: #F4F2EF;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 0 5px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>Zip code</string>
+          <string>Address</string>
          </property>
         </widget>
         <widget class="QPushButton" name="cleardataeditaddrbutton">
          <property name="geometry">
           <rect>
            <x>650</x>
-           <y>540</y>
+           <y>510</y>
            <width>201</width>
            <height>41</height>
           </rect>
@@ -18151,7 +17560,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>1518</height>
             </rect>
            </property>
@@ -18344,7 +17753,7 @@ image: url(:/pic/realimages/backhomoe.png);</string>
          <x>60</x>
          <y>60</y>
          <width>1160</width>
-         <height>630</height>
+         <height>441</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -18356,7 +17765,7 @@ image: url(:/pic/realimages/backhomoe.png);</string>
           <x>29</x>
           <y>0</y>
           <width>1101</width>
-          <height>600</height>
+          <height>441</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -18391,8 +17800,8 @@ line-height: normal;</string>
         <widget class="QLabel" name="usernameprofile">
          <property name="geometry">
           <rect>
-           <x>763</x>
-           <y>350</y>
+           <x>60</x>
+           <y>270</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -18413,7 +17822,7 @@ line-height: normal;</string>
         <widget class="QLabel" name="fisrtnameprofile">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>400</x>
            <y>270</y>
            <width>121</width>
            <height>31</height>
@@ -18435,8 +17844,8 @@ line-height: normal;</string>
         <widget class="QLabel" name="lastnameprofile">
          <property name="geometry">
           <rect>
-           <x>230</x>
-           <y>460</y>
+           <x>770</x>
+           <y>270</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -18457,9 +17866,9 @@ line-height: normal;</string>
         <widget class="QLabel" name="genderprofile">
          <property name="geometry">
           <rect>
-           <x>43</x>
-           <y>490</y>
-           <width>121</width>
+           <x>400</x>
+           <y>330</y>
+           <width>111</width>
            <height>31</height>
           </rect>
          </property>
@@ -18479,9 +17888,9 @@ line-height: normal;</string>
         <widget class="QLabel" name="birthprofile">
          <property name="geometry">
           <rect>
-           <x>450</x>
-           <y>300</y>
-           <width>121</width>
+           <x>60</x>
+           <y>330</y>
+           <width>101</width>
            <height>31</height>
           </rect>
          </property>
@@ -18501,9 +17910,9 @@ line-height: normal;</string>
         <widget class="QLabel" name="phoneprofile">
          <property name="geometry">
           <rect>
-           <x>43</x>
-           <y>400</y>
-           <width>121</width>
+           <x>770</x>
+           <y>330</y>
+           <width>71</width>
            <height>31</height>
           </rect>
          </property>
@@ -18523,9 +17932,9 @@ line-height: normal;</string>
         <widget class="QLabel" name="emailprofile">
          <property name="geometry">
           <rect>
-           <x>450</x>
-           <y>400</y>
-           <width>121</width>
+           <x>60</x>
+           <y>390</y>
+           <width>61</width>
            <height>31</height>
           </rect>
          </property>
@@ -18563,17 +17972,17 @@ background: #cd4662;</string>
         <widget class="QLabel" name="username">
          <property name="geometry">
           <rect>
-           <x>770</x>
-           <y>390</y>
-           <width>165</width>
-           <height>41</height>
+           <x>180</x>
+           <y>270</y>
+           <width>121</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -18588,23 +17997,23 @@ line-height: normal;</string>
         <widget class="QLabel" name="firstname">
          <property name="geometry">
           <rect>
-           <x>780</x>
-           <y>490</y>
+           <x>520</x>
+           <y>270</y>
            <width>165</width>
-           <height>41</height>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>Firsth name</string>
+          <string>First name</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -18613,17 +18022,17 @@ line-height: normal;</string>
         <widget class="QLabel" name="gender">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>530</y>
-           <width>165</width>
-           <height>41</height>
+           <x>514</x>
+           <y>330</y>
+           <width>151</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -18638,17 +18047,17 @@ line-height: normal;</string>
         <widget class="QLabel" name="phone">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>450</y>
+           <x>870</x>
+           <y>330</y>
            <width>165</width>
-           <height>41</height>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -18663,17 +18072,17 @@ line-height: normal;</string>
         <widget class="QLabel" name="lastname">
          <property name="geometry">
           <rect>
-           <x>240</x>
-           <y>500</y>
+           <x>890</x>
+           <y>270</y>
            <width>165</width>
-           <height>41</height>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
@@ -18688,23 +18097,23 @@ line-height: normal;</string>
         <widget class="QLabel" name="birthday">
          <property name="geometry">
           <rect>
-           <x>430</x>
-           <y>350</y>
-           <width>165</width>
-           <height>41</height>
+           <x>164</x>
+           <y>330</y>
+           <width>151</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>User1</string>
+          <string>bday</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -18713,23 +18122,23 @@ line-height: normal;</string>
         <widget class="QLabel" name="email">
          <property name="geometry">
           <rect>
-           <x>430</x>
-           <y>450</y>
-           <width>165</width>
-           <height>41</height>
+           <x>140</x>
+           <y>390</y>
+           <width>281</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color: #000;
 text-align: center;
 font-family: Suwannaphum;
-font-size: 28px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;</string>
          </property>
          <property name="text">
-          <string>User1</string>
+          <string>email</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -19326,7 +18735,7 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
+             <width>1127</width>
              <height>1518</height>
             </rect>
            </property>
