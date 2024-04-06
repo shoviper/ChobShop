@@ -413,8 +413,37 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.homepage_admin)
     def go_to_shopaccount(self):
         self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.shopaccountadminpage)
+        
+        # self.ui.username.setText(root.LoggedInUser.user.username)
+        # self.ui.email.setText(root.LoggedInUser.user.email)
+        # self.ui.phone.setText(root.LoggedInUser.user.phone)
+        # self.ui.lastname.setText(root.LoggedInUser.user.lastname)
+        # self.ui.gender.setText(root.LoggedInUser.user.gender)
+        # self.ui.firstname.setText(root.LoggedInUser.user.name)
+        # self.ui.birthday.setText(root.LoggedInUser.user.birthday)
+        
     def go_to_editshop(self):
         self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.editshopaccountadminpage)
+        
+        self.ui.shopnamebox_2.setText(root.LoggedInUser.user.shopname)
+        
+        if root.LoggedInUser.user.name is not None:
+            self.ui.firstnamebox_admin_2.setText(root.LoggedInUser.user.name)
+        if root.LoggedInUser.user.lastname is not None:
+            self.ui.lastnamebox_admin_2.setText(root.LoggedInUser.user.lastname)
+        if root.LoggedInUser.user.description is not None:
+            self.ui.descriptionbox_admin_2.setText(root.LoggedInUser.user.description)
+        if root.LoggedInUser.user.address is not None:
+            self.ui.addressbox_admin_2.setText(root.LoggedInUser.user.address)
+        if root.LoggedInUser.user.phone is not None:
+            self.ui.phonebox_admin_2.setText(root.LoggedInUser.user.phone)
+        if root.LoggedInUser.user.email is not None:
+            self.ui.emailbox_admin_2.setText(root.LoggedInUser.user.email)
+            
+        self.ui.adminregisterbutton_2.clicked.connect(self.save_edit_shop)
+        # self.ui.deleteaccbutton_5.clicked.connect(self.delete_account)
+    
+        
     def go_to_ruleshop(self):
         self.ui.stackedWidget_settingadmin.setCurrentWidget(self.ui.ruleadminpage)
     def exit_shop(self):
@@ -422,6 +451,21 @@ class HomepageWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.homepage)
         self.display_product(True, "homepage_customer")
+        
+    def save_edit_shop(self):
+        if self.show_yes_no("Are you sure you want to save changes?") == QMessageBox.Yes:
+            if editShopProfile(root.LoggedInUser.user.username, self.ui.firstnamebox_admin_2.text(), self.ui.lastnamebox_admin_2.text(), self.ui.descriptionbox_admin_2.text(), self.ui.addressbox_admin_2.text(), self.ui.phonebox_admin_2.text(), self.ui.emailbox_admin_2.text()):
+                self.show_success("Changes saved")
+            else:
+                self.show_error("Changes not saved")
+        else:
+            self.show_error("Changes not saved")
+            
+    def delete_shop_account(self):
+        if self.show_yes_no("Are you sure you want to delete your account?") == QMessageBox.Yes:
+            deleteShopProfile(root.LoggedInUser.user.username)
+            self.show_goodbye("Account deleted")
+            self.back_to_login()
     #settingsAdminpage--------------------------------------------------------------------------------------------
 
     #orderAdminspage--------------------------------------------------------------------------------------------
