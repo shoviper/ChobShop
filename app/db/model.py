@@ -1,6 +1,7 @@
 import persistent
 import datetime
 import BTrees.OOBTree
+import uuid
 
 from .database import *
 
@@ -77,6 +78,15 @@ class ProductDatabase(persistent.Persistent):
             if product.id == product_id:
                 return product
         return None
+    
+    def drecrease_stock(self, user, product_id, quantity):
+        user_products = self.products.get(user, [])
+        for product in user_products:
+            if product.id == product_id:
+                product.stock -= quantity
+                product.sold += quantity
+                return True
+        return False
 
     def update_product(self, user, product_id, **kwargs):
         user_products = self.products.get(user, [])
@@ -191,6 +201,16 @@ class Customer(GeneralUser):
             if item[0] == product_id:
                 self.cart.remove(item)
                 return
+            
+    def generate_tracking_number(self):
+        # Generate a unique tracking number using UUID and timestamp
+        unique_id = uuid.uuid4()
+        timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        return f"{timestamp}-{unique_id}"
+            
+    def add_to_order(self, product_id, quantity, size, option):
+        self.remove_from_cart_by_product_id(product_id)
+        self.orders.append([product_id, quantity, size, option, self.generate_tracking_number()])
 
     def add_to_fav(self, product):
         self.favorites.append(product)
@@ -329,6 +349,7 @@ class LoggedInUser(persistent.Persistent):
         return f"\nuser: {self.user}, \nlogged_in: {self.logged_in}"
 
 class Order(persistent.Persistent):
+    last_order_id = 0
     def __init__(self, products, total) -> None:
         self.products = products
         self.total = total
@@ -336,6 +357,18 @@ class Order(persistent.Persistent):
         self.tracking_number = None
         self.order_id = None
         self.date = datetime.datetime.now()
+        
+    def generate_tracking_number(self):
+        # Generate a unique tracking number using UUID and timestamp
+        unique_id = uuid.uuid4()
+        timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        return f"{timestamp}-{unique_id}"
+    
+    @classmethod
+    def get_next_order_id(cls):
+        cls.last_order_id += 1  # Increment the last_order_id
+        return cls.last_order_id  # Return the new order_id
+    
 
     def cancel_order(self):
         self.status = "Cancelled"

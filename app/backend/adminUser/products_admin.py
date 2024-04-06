@@ -279,3 +279,25 @@ def removeFromCart(product_id):
     root.LoggedInUser.user.remove_from_cart_by_product_id(product_id)
     transaction.commit()
     return True
+
+
+# -------------------------------------------------------------
+
+def addToOrder(product_id, quantity, size, option):
+    user = root.LoggedInUser.user
+    user.add_to_order(product_id, quantity, size, option)
+    transaction.commit()
+    return True
+
+def get_user_order():
+    order = root.LoggedInUser.user.orders
+    order_products_id = []
+    for product_id, quantity, s, o, t in order:
+        order_products_id.append([product_id, quantity, s, o, t])
+    return order_products_id
+
+
+def decrese_from_stock(product_id, quantity):
+    if root.ProductDatabase.drecrease_stock(product_id, quantity):
+        transaction.commit()
+        return True

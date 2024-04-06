@@ -286,6 +286,19 @@ class HomepageWindow(QMainWindow):
         self.ui.orderlabel_9.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
         
         self.ui.backtohomebutton.clicked.connect(lambda: self.go_to_home())
+        
+        # add to order
+        for i in get_user_cart():
+            addToOrder(i[0], i[1], i[2], i[3])
+            
+        print("Order added")
+        # print order
+        for i in get_user_order():
+            print("Order: ", i)
+        
+        # genetate order id
+        # order_id = getOrderID()
+        # self.ui.orderlabel_10.setText(f"Order ID: {order_id}")
             
 
     #cartpage--------------------------------------------------------------------------------------------
@@ -319,10 +332,10 @@ class HomepageWindow(QMainWindow):
             product_details = []
             self.ui.totalprice.setText(f"{str((get_product_price_by_id(curr_product[0])*curr_product[1]))}")
 
-            if curr_product[2] is not "":
+            if curr_product[2] != "":
                 product_details.append(curr_product[2])
 
-            if curr_product[3] is not "":
+            if curr_product[3] != "":
                 product_details.append(curr_product[3]) 
 
             details_str = f" ({', '.join(product_details)})" if product_details else ""
@@ -338,10 +351,10 @@ class HomepageWindow(QMainWindow):
             for i in get_user_cart():
                 product_details = []
 
-                if i[2] is not "":
+                if i[2] != "":
                     product_details.append(i[2])
 
-                if i[3] is not "":
+                if i[3] != "":
                     product_details.append(i[3]) 
 
                 details_str = f" ({', '.join(product_details)})" if product_details else ""
@@ -1230,10 +1243,10 @@ class HomepageWindow(QMainWindow):
             
             product_details = []
 
-            if product[2] is not "":
+            if product[2] != "":
                 product_details.append(product[2])
 
-            if product[3] is not "":
+            if product[3] != "":
                 product_details.append(product[3])
 
             details_str = f" ({', '.join(product_details)})" if product_details else ""
@@ -1326,12 +1339,37 @@ class HomepageWindow(QMainWindow):
         
         self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "cartpage"))
     
+    def check_status_ship(self, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText(f"Tracking ID: {message}")
+        msg.setWindowTitle("Order Status")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec()
+    
+    def order_ship(self, pic, shopname, productname, productdescrip, totalprice, productnum, button=None):
+        for i in get_user_order():
+            img_path = get_product_img_by_id(i[0])[0]
+            break
+        pic.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
+        shopname.setText(get_shopname_by_product_id(i[0]))
+        productname.setText(get_product_name_by_id(i[0]))
+        productdescrip.setText(get_product_description_by_id(i[0]))
+        totalprice.setText(str(get_product_price_by_id(i[0]) * i[1]))
+        productnum.setText(f"{i[1]} piece")
+        
+        if button != None:
+            msg = i[4]
+            button.clicked.connect(functools.partial(self.check_status_ship, msg))
+    
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
         self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
+        
+        self.order_ship(self.ui.cartorderpic_2, self.ui.shopnameforcart_2, self.ui.productcartname_2, self.ui.productcartdescrip_2, self.ui.totalpricecartnumlabel_2, self.ui.productnum_2, self.ui.checkstatusshipbutton)
 
     def go_to_order_receive_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -1340,6 +1378,8 @@ class HomepageWindow(QMainWindow):
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
+        
+        self.order_ship(self.ui.cartorderpic_3, self.ui.shopnameforcart_3, self.ui.productcartname_3, self.ui.productcartdescrip_3, self.ui.totalpricecartnumlabel_3, self.ui.productnum_3, self.ui.checkstatusreceivebutton)
 
     def go_to_order_complete_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -1348,6 +1388,12 @@ class HomepageWindow(QMainWindow):
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+        
+        self.ui.buyagaincompletebutton.hide()
+        self.ui.givereviewcompletebutton.hide()
+        
+        self.order_ship(self.ui.cartorderpic_4, self.ui.shopnameforcart_4, self.ui.productcartname_4, self.ui.productcartdescrip_4, self.ui.totalpricecartnumlabel_4, self.ui.productnum_4)
+        
         
 
     def go_to_favorite(self):
@@ -2257,6 +2303,8 @@ class HomepageWindow(QMainWindow):
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(active_button_style)
         self.ui.messbutton.setStyleSheet(inactive_button_style)
+        
+        self.go_to_order_ship()
 
         self.current_index = 0
 
@@ -2265,18 +2313,27 @@ class HomepageWindow(QMainWindow):
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.tobeshippedpage)
+        
+        self.order_ship(self.ui.cartorderpic_2, self.ui.shopnameforcart_2, self.ui.productcartname_2, self.ui.productcartdescrip_2, self.ui.totalpricecartnumlabel_2, self.ui.productnum_2, self.ui.checkstatusshipbutton)
 
     def go_to_order_receive(self):
         self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
+        
+        self.order_ship(self.ui.cartorderpic_3, self.ui.shopnameforcart_3, self.ui.productcartname_3, self.ui.productcartdescrip_3, self.ui.totalpricecartnumlabel_3, self.ui.productnum_3, self.ui.checkstatusreceivebutton)
 
     def go_to_order_complete(self):
         self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+        
+        self.ui.buyagaincompletebutton.hide()
+        self.ui.givereviewcompletebutton.hide()
+        
+        self.order_ship(self.ui.cartorderpic_4, self.ui.shopnameforcart_4, self.ui.productcartname_4, self.ui.productcartdescrip_4, self.ui.totalpricecartnumlabel_4, self.ui.productnum_4)
 
 
     def show_success(self, message):
