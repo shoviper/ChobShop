@@ -177,20 +177,13 @@ class Customer(GeneralUser):
         self.orders = []
         self.reviews = None
         self.admin = False
-
-    # def add_to_cart_by_product_id(self, product_id, quantity):
-    #     for item in self.cart:
-    #         if item[0] == product_id:
-    #             item[1] += quantity
-    #         else:
-    #             self.cart.append([product_id, quantity])
                 
-    def add_to_cart_by_product_id(self, product_id, quantity):            
+    def add_to_cart_by_product_id(self, product_id, quantity, size, option):
         for item in self.cart:
             if item[0] == product_id:
                 item[1] += quantity
                 return
-        self.cart.append([product_id, quantity])
+        self.cart.append([product_id, quantity, size, option])
                 
     def remove_from_cart_by_product_id(self, product_id):
         for item in self.cart:
@@ -374,4 +367,3 @@ class Category(persistent.Persistent):
     
     def __str__(self) -> str:
         return f"product: {self.product}, category: {self.category}"
-    

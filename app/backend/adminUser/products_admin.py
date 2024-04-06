@@ -252,11 +252,11 @@ def update_qrc_file(img_name):
         
 # ----------------------------- CART --------------------------------
 
-def addToCart(product_id):
+def addToCart(product_id, size, option):
+    print("size and option: ", size, option)
     user = root.LoggedInUser.user
     try:
-        user.add_to_cart_by_product_id(product_id, 1)
-        # print("Added to carttttttt")
+        user.add_to_cart_by_product_id(product_id, 1, size, option)
         transaction.commit()
         return True
     except Exception as e:
@@ -264,12 +264,12 @@ def addToCart(product_id):
         return False
 
 
-def get_user_cart_product_id():
+def get_user_cart():
     cart = root.LoggedInUser.user.cart
     # print("cart: ", cart) 
     cart_products_id = []
-    for product_id, quantity in cart:
-        cart_products_id.append([product_id, quantity])
+    for product_id, quantity, s, o in cart:
+        cart_products_id.append([product_id, quantity, s, o])
     # print("cart_products_id: ", cart_products_id)
     return cart_products_id
     # return [[1,2], [2,3], [3,4]]
@@ -280,16 +280,3 @@ def removeFromCart(product_id):
     transaction.commit()
     return True
 
-
-
-    
-    
-    
-# def get_cart():
-#     user = root.LoggedInUser.user.username
-#     cart = root.LoggedInUser.user.cart
-#     cart_products = []
-#     for product_id, quantity in cart.items():
-#         product = get_product_by_id(product_id)
-#         cart_products.append((product, quantity))
-#     return cart_products

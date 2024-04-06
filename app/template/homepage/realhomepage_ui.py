@@ -23,7 +23,6 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QDateEdit, QFrame,
     QWidget)
 import app.assets.realsourceimg.real
 
-
 class Ui_Main(object):
     def setupUi(self, Main):
         if not Main.objectName():
@@ -77,7 +76,7 @@ class Ui_Main(object):
         self.scrollArea_settingsadmin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_16 = QWidget()
         self.scrollAreaWidgetContents_16.setObjectName(u"scrollAreaWidgetContents_16")
-        self.scrollAreaWidgetContents_16.setGeometry(QRect(0, 0, 1121, 1024))
+        self.scrollAreaWidgetContents_16.setGeometry(QRect(0, 0, 1127, 1018))
         self.verticalLayout_28 = QVBoxLayout(self.scrollAreaWidgetContents_16)
         self.verticalLayout_28.setObjectName(u"verticalLayout_28")
         self.frame_settingsadmin = QFrame(self.scrollAreaWidgetContents_16)
@@ -658,7 +657,7 @@ class Ui_Main(object):
         self.scrollArea_ruleofuse_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_19 = QWidget()
         self.scrollAreaWidgetContents_19.setObjectName(u"scrollAreaWidgetContents_19")
-        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_19.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_30 = QVBoxLayout(self.scrollAreaWidgetContents_19)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
         self.frame_ruleofuse_3 = QFrame(self.scrollAreaWidgetContents_19)
@@ -737,7 +736,7 @@ class Ui_Main(object):
         self.scrollArea_changepassword_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_20 = QWidget()
         self.scrollAreaWidgetContents_20.setObjectName(u"scrollAreaWidgetContents_20")
-        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_20.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_32 = QVBoxLayout(self.scrollAreaWidgetContents_20)
         self.verticalLayout_32.setObjectName(u"verticalLayout_32")
         self.frame_changepassword_3 = QFrame(self.scrollAreaWidgetContents_20)
@@ -1427,6 +1426,215 @@ class Ui_Main(object):
         self.stackedWidget_main.setGeometry(QRect(250, 110, 1031, 611))
         self.stackedWidget_main.setMinimumSize(QSize(1031, 611))
         self.stackedWidget_main.setStyleSheet(u"background-color: #FAF9F6;")
+        self.viewshoppage = QWidget()
+        self.viewshoppage.setObjectName(u"viewshoppage")
+        self.scrollArea_homepage_admin_2 = QScrollArea(self.viewshoppage)
+        self.scrollArea_homepage_admin_2.setObjectName(u"scrollArea_homepage_admin_2")
+        self.scrollArea_homepage_admin_2.setGeometry(QRect(0, 0, 1021, 611))
+        self.scrollArea_homepage_admin_2.setStyleSheet(u"QScrollArea {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"	border: none;\n"
+"	background-color: #FAF9F6;\n"
+"	width: 15px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical {\n"
+"	background-color: #E1E3E7;\n"
+"	border-radius: 7px;\n"
+"	min-height: 30px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover {\n"
+"	background-color: #F4DBDB;\n"
+"}")
+        self.scrollArea_homepage_admin_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_30 = QWidget()
+        self.scrollAreaWidgetContents_30.setObjectName(u"scrollAreaWidgetContents_30")
+        self.scrollAreaWidgetContents_30.setGeometry(QRect(0, 0, 1006, 1118))
+        self.verticalLayout_35 = QVBoxLayout(self.scrollAreaWidgetContents_30)
+        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
+        self.frame_homepage_admin_2 = QFrame(self.scrollAreaWidgetContents_30)
+        self.frame_homepage_admin_2.setObjectName(u"frame_homepage_admin_2")
+        self.frame_homepage_admin_2.setMinimumSize(QSize(0, 1100))
+        self.frame_homepage_admin_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_homepage_admin_2.setFrameShadow(QFrame.Raised)
+        self.homepage_admin_container_3 = QWidget(self.frame_homepage_admin_2)
+        self.homepage_admin_container_3.setObjectName(u"homepage_admin_container_3")
+        self.homepage_admin_container_3.setGeometry(QRect(40, 24, 913, 221))
+        self.homepage_admin_container_3.setStyleSheet(u"border-radius: 10px;\n"
+"background: #F4F2EF;")
+        self.profilepic_admin_2 = QLabel(self.homepage_admin_container_3)
+        self.profilepic_admin_2.setObjectName(u"profilepic_admin_2")
+        self.profilepic_admin_2.setGeometry(QRect(47, 50, 130, 130))
+        self.profilepic_admin_2.setStyleSheet(u"border: none;\n"
+"border-radius: 65px;\n"
+"background: #cd4662;")
+        self.shopnamelabel_admin_2 = QLabel(self.homepage_admin_container_3)
+        self.shopnamelabel_admin_2.setObjectName(u"shopnamelabel_admin_2")
+        self.shopnamelabel_admin_2.setGeometry(QRect(213, 93, 171, 41))
+        self.shopnamelabel_admin_2.setStyleSheet(u"border: none;\n"
+"color: #000;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 32px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+        self.numreviews_2 = QLabel(self.homepage_admin_container_3)
+        self.numreviews_2.setObjectName(u"numreviews_2")
+        self.numreviews_2.setGeometry(QRect(480, 50, 49, 16))
+        self.numreviews_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numreviews_2.setAlignment(Qt.AlignCenter)
+        self.numreviewlabel_2 = QLabel(self.homepage_admin_container_3)
+        self.numreviewlabel_2.setObjectName(u"numreviewlabel_2")
+        self.numreviewlabel_2.setGeometry(QRect(560, 50, 61, 16))
+        self.numreviewlabel_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numproducts_2 = QLabel(self.homepage_admin_container_3)
+        self.numproducts_2.setObjectName(u"numproducts_2")
+        self.numproducts_2.setGeometry(QRect(480, 140, 49, 16))
+        self.numproducts_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numproducts_2.setAlignment(Qt.AlignCenter)
+        self.numproductslebel_2 = QLabel(self.homepage_admin_container_3)
+        self.numproductslebel_2.setObjectName(u"numproductslebel_2")
+        self.numproductslebel_2.setGeometry(QRect(560, 140, 61, 16))
+        self.numproductslebel_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numsolds_2 = QLabel(self.homepage_admin_container_3)
+        self.numsolds_2.setObjectName(u"numsolds_2")
+        self.numsolds_2.setGeometry(QRect(680, 50, 49, 16))
+        self.numsolds_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numsolds_2.setAlignment(Qt.AlignCenter)
+        self.numyearregisteredlabel_2 = QLabel(self.homepage_admin_container_3)
+        self.numyearregisteredlabel_2.setObjectName(u"numyearregisteredlabel_2")
+        self.numyearregisteredlabel_2.setGeometry(QRect(760, 140, 121, 21))
+        self.numyearregisteredlabel_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numyearregisteredlabel_2.setAlignment(Qt.AlignCenter)
+        self.numsoldslabel_2 = QLabel(self.homepage_admin_container_3)
+        self.numsoldslabel_2.setObjectName(u"numsoldslabel_2")
+        self.numsoldslabel_2.setGeometry(QRect(750, 50, 49, 16))
+        self.numsoldslabel_2.setStyleSheet(u"color: #545454;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numsoldslabel_2.setAlignment(Qt.AlignCenter)
+        self.numyearregistered_2 = QLabel(self.homepage_admin_container_3)
+        self.numyearregistered_2.setObjectName(u"numyearregistered_2")
+        self.numyearregistered_2.setGeometry(QRect(680, 140, 49, 16))
+        self.numyearregistered_2.setStyleSheet(u"color: #CD4662;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+        self.numyearregistered_2.setAlignment(Qt.AlignCenter)
+        self.productcontainer_admin_3 = QWidget(self.frame_homepage_admin_2)
+        self.productcontainer_admin_3.setObjectName(u"productcontainer_admin_3")
+        self.productcontainer_admin_3.setGeometry(QRect(40, 570, 913, 440))
+        self.productcontainer_admin_3.setMinimumSize(QSize(913, 440))
+        self.productcontainer_admin_3.setMaximumSize(QSize(16777215, 16777215))
+        self.productcontainer_admin_3.setStyleSheet(u"border-bottom: 3px solid #CD4662;\n"
+"background: #FAF9F6;\n"
+"height: auto;")
+        self.verticalLayout_36 = QVBoxLayout(self.productcontainer_admin_3)
+        self.verticalLayout_36.setSpacing(6)
+        self.verticalLayout_36.setObjectName(u"verticalLayout_36")
+        self.verticalLayout_36.setContentsMargins(0, 0, 0, 5)
+        self.frame_4 = QFrame(self.frame_homepage_admin_2)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(40, 270, 909, 49))
+        self.frame_4.setMinimumSize(QSize(909, 49))
+        self.frame_4.setMaximumSize(QSize(909, 49))
+        self.frame_4.setStyleSheet(u"border: none;")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_21 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
+        self.productslabel_admin_4 = QLabel(self.frame_4)
+        self.productslabel_admin_4.setObjectName(u"productslabel_admin_4")
+        self.productslabel_admin_4.setStyleSheet(u"color: #000;\n"
+"border: none;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 24px;\n"
+"font-style: normal;\n"
+"font-weight: 700;\n"
+"line-height: normal;")
+
+        self.horizontalLayout_21.addWidget(self.productslabel_admin_4)
+
+        self.horizontalSpacer_10 = QSpacerItem(618, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_21.addItem(self.horizontalSpacer_10)
+
+        self.viewallproductbutton_admin_2 = QPushButton(self.frame_4)
+        self.viewallproductbutton_admin_2.setObjectName(u"viewallproductbutton_admin_2")
+        self.viewallproductbutton_admin_2.setStyleSheet(u"color:  #CD4662;\n"
+"text-align: center;\n"
+"font-family: Suwannaphum;\n"
+"font-size: 16px;\n"
+"font-style: normal;\n"
+"font-weight: 400;\n"
+"line-height: normal;\n"
+"border: none;")
+
+        self.horizontalLayout_21.addWidget(self.viewallproductbutton_admin_2)
+
+        self.frame_products_admin_2 = QFrame(self.frame_homepage_admin_2)
+        self.frame_products_admin_2.setObjectName(u"frame_products_admin_2")
+        self.frame_products_admin_2.setGeometry(QRect(40, 340, 913, 435))
+        self.frame_products_admin_2.setMinimumSize(QSize(913, 380))
+        self.frame_products_admin_2.setMaximumSize(QSize(913, 16777215))
+        self.frame_products_admin_2.setStyleSheet(u"border: none;")
+        self.frame_products_admin_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_products_admin_2.setFrameShadow(QFrame.Raised)
+        self.gridLayout_products_admin_2 = QGridLayout(self.frame_products_admin_2)
+        self.gridLayout_products_admin_2.setObjectName(u"gridLayout_products_admin_2")
+
+        self.verticalLayout_35.addWidget(self.frame_homepage_admin_2)
+
+        self.scrollArea_homepage_admin_2.setWidget(self.scrollAreaWidgetContents_30)
+        self.stackedWidget_main.addWidget(self.viewshoppage)
         self.homepage = QWidget()
         self.homepage.setObjectName(u"homepage")
         self.scrollArea_homepage = QScrollArea(self.homepage)
@@ -1618,7 +1826,7 @@ class Ui_Main(object):
         self.scrollArea_cart.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
-        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 76, 593))
+        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 82, 593))
         self.scrollAreaWidgetContents_4.setMinimumSize(QSize(0, 320))
         self.frame_cartpage = QFrame(self.scrollAreaWidgetContents_4)
         self.frame_cartpage.setObjectName(u"frame_cartpage")
@@ -2278,7 +2486,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage.setWidgetResizable(True)
         self.scrollAreaWidgetContents_9 = QWidget()
         self.scrollAreaWidgetContents_9.setObjectName(u"scrollAreaWidgetContents_9")
-        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 992, 1300))
+        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 67, 1300))
         self.scrollAreaWidgetContents_9.setMinimumSize(QSize(0, 1300))
         self.verticalLayout_12 = QVBoxLayout(self.scrollAreaWidgetContents_9)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
@@ -3364,19 +3572,6 @@ class Ui_Main(object):
         self.searchcontainer_adminmain.setObjectName(u"searchcontainer_adminmain")
         self.searchcontainer_adminmain.setGeometry(QRect(250, 0, 1031, 109))
         self.searchcontainer_adminmain.setStyleSheet(u"background-color: #FAF9F6;")
-        self.searchbox_admin = QLineEdit(self.searchcontainer_adminmain)
-        self.searchbox_admin.setObjectName(u"searchbox_admin")
-        self.searchbox_admin.setGeometry(QRect(50, 50, 746, 31))
-        self.searchbox_admin.setStyleSheet(u"				border-radius: 15px;\n"
-"                background-color: #EDEDED;\n"
-"                color: #CD4662;\n"
-"                font-family: Suwannaphum;\n"
-"                font-size: 16px;\n"
-"                font-style: normal;\n"
-"                font-weight: 400;\n"
-"                line-height: normal;\n"
-"				padding-left: 20px;\n"
-"")
         self.loginsignoutbutton_admin = QPushButton(self.searchcontainer_adminmain)
         self.loginsignoutbutton_admin.setObjectName(u"loginsignoutbutton_admin")
         self.loginsignoutbutton_admin.setGeometry(QRect(900, 50, 71, 31))
@@ -3534,7 +3729,7 @@ class Ui_Main(object):
         self.scrollArea_homepage_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_11 = QWidget()
         self.scrollAreaWidgetContents_11.setObjectName(u"scrollAreaWidgetContents_11")
-        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1124))
+        self.scrollAreaWidgetContents_11.setGeometry(QRect(0, 0, 1006, 1118))
         self.verticalLayout_15 = QVBoxLayout(self.scrollAreaWidgetContents_11)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.frame_homepage_admin = QFrame(self.scrollAreaWidgetContents_11)
@@ -4348,7 +4543,7 @@ class Ui_Main(object):
         self.scrollArea_allproduct_admin.setWidgetResizable(True)
         self.scrollAreaWidgetContents_17 = QWidget()
         self.scrollAreaWidgetContents_17.setObjectName(u"scrollAreaWidgetContents_17")
-        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 61, 477))
+        self.scrollAreaWidgetContents_17.setGeometry(QRect(0, 0, 67, 471))
         self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents_17)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
         self.frame_allproducts_admin = QFrame(self.scrollAreaWidgetContents_17)
@@ -4393,7 +4588,7 @@ class Ui_Main(object):
         self.scrollArea_producttype_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_18 = QWidget()
         self.scrollAreaWidgetContents_18.setObjectName(u"scrollAreaWidgetContents_18")
-        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 992, 1524))
+        self.scrollAreaWidgetContents_18.setGeometry(QRect(0, 0, 998, 1518))
         self.verticalLayout_27 = QVBoxLayout(self.scrollAreaWidgetContents_18)
         self.verticalLayout_27.setObjectName(u"verticalLayout_27")
         self.frame_producttype_3 = QFrame(self.scrollAreaWidgetContents_18)
@@ -4612,7 +4807,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct.setWidgetResizable(True)
         self.scrollAreaWidgetContents_22 = QWidget()
         self.scrollAreaWidgetContents_22.setObjectName(u"scrollAreaWidgetContents_22")
-        self.scrollAreaWidgetContents_22.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_22.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_22.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_22.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_10 = QHBoxLayout(self.scrollAreaWidgetContents_22)
@@ -5188,7 +5383,7 @@ class Ui_Main(object):
         self.scrollArea_editproduct.setWidgetResizable(True)
         self.scrollAreaWidgetContents_21 = QWidget()
         self.scrollAreaWidgetContents_21.setObjectName(u"scrollAreaWidgetContents_21")
-        self.scrollAreaWidgetContents_21.setGeometry(QRect(0, 0, 1006, 1400))
+        self.scrollAreaWidgetContents_21.setGeometry(QRect(0, -799, 1006, 1400))
         self.scrollAreaWidgetContents_21.setMinimumSize(QSize(0, 1400))
         self.frame_editproduct = QFrame(self.scrollAreaWidgetContents_21)
         self.frame_editproduct.setObjectName(u"frame_editproduct")
@@ -5246,7 +5441,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_24 = QWidget()
         self.scrollAreaWidgetContents_24.setObjectName(u"scrollAreaWidgetContents_24")
-        self.scrollAreaWidgetContents_24.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_24.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_24.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_24.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_14 = QHBoxLayout(self.scrollAreaWidgetContents_24)
@@ -5804,7 +5999,7 @@ class Ui_Main(object):
         self.scrollArea_productviewpage_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_29 = QWidget()
         self.scrollAreaWidgetContents_29.setObjectName(u"scrollAreaWidgetContents_29")
-        self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1324))
+        self.scrollAreaWidgetContents_29.setGeometry(QRect(0, 0, 998, 1318))
         self.verticalLayout_331 = QVBoxLayout(self.scrollAreaWidgetContents_29)
         self.verticalLayout_331.setObjectName(u"verticalLayout_331")
         self.frame_productviewpage_2 = QFrame(self.scrollAreaWidgetContents_29)
@@ -6499,7 +6694,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_23 = QWidget()
         self.scrollAreaWidgetContents_23.setObjectName(u"scrollAreaWidgetContents_23")
-        self.scrollAreaWidgetContents_23.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_23.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_23.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_23.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_12 = QHBoxLayout(self.scrollAreaWidgetContents_23)
@@ -7081,7 +7276,7 @@ class Ui_Main(object):
         self.scrollArea_userprofile.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1241, 1024))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 67, 1018))
         self.scrollAreaWidgetContents_3.setStyleSheet(u"")
         self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -7287,7 +7482,7 @@ class Ui_Main(object):
         self.scrollArea_settings_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_27 = QWidget()
         self.scrollAreaWidgetContents_27.setObjectName(u"scrollAreaWidgetContents_27")
-        self.scrollAreaWidgetContents_27.setGeometry(QRect(0, 0, 1121, 1324))
+        self.scrollAreaWidgetContents_27.setGeometry(QRect(0, 0, 1127, 1318))
         self.verticalLayout_22 = QVBoxLayout(self.scrollAreaWidgetContents_27)
         self.verticalLayout_22.setObjectName(u"verticalLayout_22")
         self.frame_settings_2 = QFrame(self.scrollAreaWidgetContents_27)
@@ -7389,7 +7584,7 @@ class Ui_Main(object):
         self.scrollArea_addimageproduct_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_28 = QWidget()
         self.scrollAreaWidgetContents_28.setObjectName(u"scrollAreaWidgetContents_28")
-        self.scrollAreaWidgetContents_28.setGeometry(QRect(0, 0, 1224, 210))
+        self.scrollAreaWidgetContents_28.setGeometry(QRect(0, 0, 1218, 210))
         self.scrollAreaWidgetContents_28.setMinimumSize(QSize(0, 210))
         self.scrollAreaWidgetContents_28.setMaximumSize(QSize(16777215, 210))
         self.horizontalLayout_19 = QHBoxLayout(self.scrollAreaWidgetContents_28)
@@ -7864,7 +8059,7 @@ class Ui_Main(object):
         self.scrollArea_settings.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1121, 874))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1127, 868))
         self.verticalLayout_7 = QVBoxLayout(self.scrollAreaWidgetContents_5)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.frame_settings = QFrame(self.scrollAreaWidgetContents_5)
@@ -8339,7 +8534,7 @@ class Ui_Main(object):
         self.scrollArea_changepassword.setWidgetResizable(True)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_13 = QVBoxLayout(self.scrollAreaWidgetContents_7)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.frame_changepassword = QFrame(self.scrollAreaWidgetContents_7)
@@ -8892,7 +9087,7 @@ class Ui_Main(object):
         self.scrollArea_ruleofuse.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 1121, 1524))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 1127, 1518))
         self.verticalLayout_9 = QVBoxLayout(self.scrollAreaWidgetContents_6)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.frame_ruleofuse = QFrame(self.scrollAreaWidgetContents_6)
@@ -8969,11 +9164,11 @@ class Ui_Main(object):
         self.retranslateUi(Main)
 
         self.stackedWidget.setCurrentIndex(2)
-        self.stackedWidget_main.setCurrentIndex(0)
+        self.stackedWidget_main.setCurrentIndex(1)
         self.stackedWidget_myorders.setCurrentIndex(2)
-        self.stackedWidget_adminmain.setCurrentIndex(2)
+        self.stackedWidget_adminmain.setCurrentIndex(0)
         self.stackedWidget_orderadmin.setCurrentIndex(0)
-        self.stackedWidget_adminproducts.setCurrentIndex(2)
+        self.stackedWidget_adminproducts.setCurrentIndex(1)
         self.stackedWidget_allandtype_admin.setCurrentIndex(1)
 
 
@@ -9130,6 +9325,18 @@ class Ui_Main(object):
         self.loginsignoutbutton.setText(QCoreApplication.translate("Main", u"Log In", None))
         self.cartbutton.setText("")
         self.profilebutton.setText("")
+        self.profilepic_admin_2.setText("")
+        self.shopnamelabel_admin_2.setText(QCoreApplication.translate("Main", u"Username", None))
+        self.numreviews_2.setText(QCoreApplication.translate("Main", u"4/5", None))
+        self.numreviewlabel_2.setText(QCoreApplication.translate("Main", u"Reviews", None))
+        self.numproducts_2.setText(QCoreApplication.translate("Main", u"1000", None))
+        self.numproductslebel_2.setText(QCoreApplication.translate("Main", u"Products", None))
+        self.numsolds_2.setText(QCoreApplication.translate("Main", u"30000", None))
+        self.numyearregisteredlabel_2.setText(QCoreApplication.translate("Main", u"Years Registered", None))
+        self.numsoldslabel_2.setText(QCoreApplication.translate("Main", u"Sold", None))
+        self.numyearregistered_2.setText(QCoreApplication.translate("Main", u"2", None))
+        self.productslabel_admin_4.setText(QCoreApplication.translate("Main", u"Products", None))
+        self.viewallproductbutton_admin_2.setText(QCoreApplication.translate("Main", u"View all Products    >", None))
         self.stylelabbutton.setText(QCoreApplication.translate("Main", u"Style Lab", None))
         self.newarrivalbutton.setText(QCoreApplication.translate("Main", u"New Arrival", None))
         self.onsalesbutton.setText(QCoreApplication.translate("Main", u"On Sales", None))
@@ -9274,7 +9481,6 @@ class Ui_Main(object):
         self.addressbox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Address", None))
         self.editshoppic.setText("")
         self.shoplogolabel.setText(QCoreApplication.translate("Main", u"Shop's Logo", None))
-        self.searchbox_admin.setPlaceholderText(QCoreApplication.translate("Main", u"Search..", None))
         self.loginsignoutbutton_admin.setText(QCoreApplication.translate("Main", u"Log In", None))
         self.profilebutton_admin.setText("")
         self.Logolabel_admin.setText(QCoreApplication.translate("Main", u"ChopShop", None))

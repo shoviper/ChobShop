@@ -288,7 +288,7 @@ class HomepageWindow(QMainWindow):
 
     #cartpage--------------------------------------------------------------------------------------------
 
-    def purchase_cartpage(self, page, id=None):
+    def purchase_cartpage(self, page, id=None, curr_row=None):
         self.ui.listWidget.clear()
         self.ui.promptpaybutton.setChecked(False)
         self.ui.creditcardbutton.setChecked(False)
@@ -309,12 +309,41 @@ class HomepageWindow(QMainWindow):
             item = f"{get_product_name_by_id(id)} x 1 -------> {get_product_price_by_id(id)}"
             self.ui.listWidget.addItem(item)
             
+        elif page == "cartpage_oneitem":
+            self.ui.backtocartbutton.clicked.connect(functools.partial(self.go_to_cart))
+            product_in_cart = get_user_cart()
+            curr_product = product_in_cart[curr_row-1]
+            product_details = []
+            self.ui.totalprice.setText(f"{str((get_product_price_by_id(curr_product[0])*curr_product[1]))}")
+
+            if curr_product[2] is not "":
+                product_details.append(curr_product[2])
+
+            if curr_product[3] is not "":
+                product_details.append(curr_product[3]) 
+
+            details_str = f" ({', '.join(product_details)})" if product_details else ""
+            
+            item = f"{get_product_name_by_id(curr_product[0])} {details_str}, x {curr_product[1]} -------> {get_product_price_by_id(curr_product[0])}"
+            self.ui.listWidget.addItem(item)
+
+            
         else:
             self.ui.backtocartbutton.clicked.connect(functools.partial(self.go_to_cart))
             self.ui.totalprice.setText(f"{str(self.add_total_price_in_cart())}")
 
-            for i in get_user_cart_product_id():
-                item = f"{get_product_name_by_id(i[0])} x {i[1]} -------> {get_product_price_by_id(i[0])}"
+            for i in get_user_cart():
+                product_details = []
+
+                if i[2] is not "":
+                    product_details.append(i[2])
+
+                if i[3] is not "":
+                    product_details.append(i[3]) 
+
+                details_str = f" ({', '.join(product_details)})" if product_details else ""
+                
+                item = f"{get_product_name_by_id(i[0])} {details_str}, x {i[1]} -------> {get_product_price_by_id(i[0])}"
                 self.ui.listWidget.addItem(item)
         
             
@@ -629,6 +658,9 @@ class HomepageWindow(QMainWindow):
 
 
         # display size
+        self.selectedSizeButton = None
+        self.selectedSizeText = ""
+        
         size_widget = []
         column = 1
         row = 1
@@ -664,13 +696,30 @@ class HomepageWindow(QMainWindow):
                 "QPushButton:hover {\n"
                 "	background: #F4DBDB;\n"
                 "}")
+                
+                self.button_bug_fix(sbutton)
+                sbutton.clicked.connect(functools.partial(self.buttonSizeClicked, sbutton))
+        
 
                 self.ui.gridLayout_size_productviewpage.addWidget(sbutton, row, column, 1, 1)
                 column += 1
             horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
             self.ui.gridLayout_size_productviewpage.addItem(horizontalSpacer, row, column + 1, 1, 1)
+            
+        # -----------------------------------------------------------------------------------------
         
+        
+        
+        
+        
+        
+        
+        # -----------------------------------------------------------------------------------------
         # display options
+        
+        self.selectedOptionButton = None
+        self.selectedOptionText = ""
+        
         column = 1
         row = 1
         while self.ui.gridLayout_option_productviewpage.count():
@@ -705,17 +754,16 @@ class HomepageWindow(QMainWindow):
                 "QPushButton:hover {\n"
                 "	background: #F4DBDB;\n"
                 "}")
+                
+                
+                self.button_bug_fix(optbutton)
+                optbutton.clicked.connect(functools.partial(self.buttonOptionClicked, optbutton))
 
                 self.ui.gridLayout_option_productviewpage.addWidget(optbutton, row, column, 1, 1)
                 column += 1
             horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
             self.ui.gridLayout_option_productviewpage.addItem(horizontalSpacer, row, column + 1, 1, 1) 
 
-        # try:
-        #     self.ui.addtocartbutton.clicked.disconnect()
-        # except TypeError:
-        #     pass
-        
         try:
             self.ui.addtocartbutton.clicked.disconnect()
         except RuntimeError:
@@ -728,6 +776,82 @@ class HomepageWindow(QMainWindow):
         
         self.ui.addtocartbutton.clicked.connect(functools.partial(self.add_to_cart, id))
         self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "productpage", id))
+
+    def buttonSizeClicked(self, button):
+        # Reset the previously selected button's style if it exists and is not the current button
+        if self.selectedSizeButton and self.selectedSizeButton != button:
+            self.selectedSizeButton.setStyleSheet(u"QPushButton {	\n"
+                                              "	color:#545454;\n"
+                                              "	font-family: Suwannaphum;\n"
+                                              "	background: #F4F2EF;\n"
+                                              "	font-size: 16px;\n"
+                                              "	font-style: normal;\n"
+                                              "	font-weight: 400;\n"
+                                              "	line-height: normal;\n"
+                                              "	border-radius: 5px;\n"
+                                              "	border: 1px solid #545454;\n"
+                                              "}\n"
+                                              "QPushButton:hover {\n"
+                                              "	background: #F4DBDB;\n"
+                                              "}")
+        
+        # Apply the selected style to the new button
+        button.setStyleSheet(u"QPushButton {	\n"
+                             "	color:#545454;\n"
+                             "	font-family: Suwannaphum;\n"
+                             "	background: #F4DBDB;\n"  # Use the hover background color
+                             "	font-size: 16px;\n"
+                             "	font-style: normal;\n"
+                             "	font-weight: 400;\n"
+                             "	line-height: normal;\n"
+                             "	border-radius: 5px;\n"
+                             "	border: 1px solid #545454;\n"
+                             "}")
+        
+        # Update the selectedButton attribute to reference the newly clicked button
+        self.selectedSizeButton = button
+        self.selectedSizeText = button.text()
+        
+        print(f"Selected size: {self.selectedSizeText}")
+        
+    
+    def buttonOptionClicked(self, button):
+        # Reset the previously selected button's style if it exists and is not the current button
+        if self.selectedOptionButton and self.selectedOptionButton != button:
+            self.selectedOptionButton.setStyleSheet(u"QPushButton {	\n"
+                                              "	color:#545454;\n"
+                                              "	font-family: Suwannaphum;\n"
+                                              "	background: #F4F2EF;\n"
+                                              "	font-size: 16px;\n"
+                                              "	font-style: normal;\n"
+                                              "	font-weight: 400;\n"
+                                              "	line-height: normal;\n"
+                                              "	border-radius: 5px;\n"
+                                              "	border: 1px solid #545454;\n"
+                                              "}\n"
+                                              "QPushButton:hover {\n"
+                                              "	background: #F4DBDB;\n"
+                                              "}")
+        
+        # Apply the selected style to the new button
+        button.setStyleSheet(u"QPushButton {	\n"
+                             "	color:#545454;\n"
+                             "	font-family: Suwannaphum;\n"
+                             "	background: #F4DBDB;\n"  # Use the hover background color
+                             "	font-size: 16px;\n"
+                             "	font-style: normal;\n"
+                             "	font-weight: 400;\n"
+                             "	line-height: normal;\n"
+                             "	border-radius: 5px;\n"
+                             "	border: 1px solid #545454;\n"
+                             "}")
+        
+        # Update the selectedButton attribute to reference the newly clicked button
+        self.selectedOptionButton = button
+        self.selectedOptionText = button.text()
+        
+        print(f"Selected option: {self.selectedOptionText}")
+    
 
     def change_pic(self, id, direction):
         print("===========changing pic===========")
@@ -782,24 +906,27 @@ class HomepageWindow(QMainWindow):
     def print_cart(self):
         print("------------------CART------------------")
         if root.LoggedInUser.logged_in:
-            for i in get_user_cart_product_id():
+            for i in get_user_cart():
                 print("products in cart and id: ", (get_product_name_by_id(i[0])), i[1])
+                print("product size: ", i[2])
+                print("product option: ", i[3])
                 print("Total product price in cart: ", self.add_total_price_in_cart())
         print("---------------------------------------")
     
     def add_total_price_in_cart(self):
         total_price = 0
-        for i in get_user_cart_product_id():
+        for i in get_user_cart():
             total_price += (i[1] * (get_product_price_by_id(i[0])))
         return total_price
-            
+
     def add_to_cart(self, id):
-        if addToCart(id):
+        
+        if addToCart(id, self.selectedSizeText, self.selectedOptionText):
             self.show_success("Product added to cart")
             print("Product added to cart")
             self.print_cart()
             self.go_to_productpage(id)
-            
+
             
     # def go_to_buy(self):
     #     self.ui.stackedWidget.setCurrentWidget(self.ui.purchasepage)
@@ -822,7 +949,7 @@ class HomepageWindow(QMainWindow):
         
         # get cart
         user = root.LoggedInUser.user.username
-        cart_products = get_user_cart_product_id()
+        cart_products = get_user_cart()
         
         self.print_cart()
         
@@ -1064,8 +1191,20 @@ class HomepageWindow(QMainWindow):
 
 
             # setText
+            
+            product_details = []
+
+            if product[2] is not "":
+                product_details.append(product[2])
+
+            if product[3] is not "":
+                product_details.append(product[3])
+
+            details_str = f" ({', '.join(product_details)})" if product_details else ""
+
+            self.productcartname.setText(f"{get_product_name_by_id(product[0])}{details_str}")
+            
             self.shopnameforcart.setText(get_shopname_by_product_id(product[0]))
-            self.productcartname.setText(get_product_name_by_id(product[0]))
             self.productcartdescrip.setText(get_product_description_by_id(product[0]))
             self.totalpricecartlabel.setText("Total Price:")
             self.totalpricecartnumlabel.setText("฿ " + str(get_product_price_by_id(product[0]) * product[1]))
@@ -1074,12 +1213,47 @@ class HomepageWindow(QMainWindow):
             self.cartorderpic.setScaledContents(True)
 
             # remove and purchase button
+            self.purchasecartbutton.clicked.connect(functools.partial(self.purchase_item_from_cart, product[0], row))
             self.removecartbutton.clicked.connect(functools.partial(self.remove_item_from_cart, product[0], row))
 
         for i in cart_products:
             self.addedproduct_cart.append(i)
         # print("addedproduct_cart: ", self.addedproduct_cart)
+        
+    def purchase_item_from_cart(self, product_id, curr_row):
+        print("curr_row", curr_row)
+        print("product_id", product_id)
+        self.purchase_cartpage("cartpage_oneitem", product_id, curr_row)
+        
+        if removeFromCart(product_id):
+            transaction.commit()
+            # self.show_success("Product removed from cart")
+            print("Product removed from cart")
+            self.print_cart()
 
+            cartshopcontainer = self.findChild(QWidget, f"cartshopcontainer_{product_id}")
+            cartshopcontainer.deleteLater()
+            if curr_row > 1:
+                self.ui.scrollAreaWidgetContents_4.setMinimumHeight(400 * (curr_row - 1))
+                self.ui.frame_cartpage.setMinimumHeight(400 * (curr_row - 1))
+                self.ui.frame_cartshop.setMinimumHeight(289 * (curr_row - 2))
+
+                geometry = self.ui.scrollAreaWidgetContents_4.geometry()
+                self.ui.scrollAreaWidgetContents_4.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                geometry = self.ui.frame_cartpage.geometry()
+                self.ui.frame_cartpage.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                geometry = self.ui.frame_cartshop.geometry()
+                self.ui.frame_cartshop.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 289  * (curr_row - 2)))
+                geometry = self.ui.purchaseallcartbutton.geometry()
+                self.ui.purchaseallcartbutton.setGeometry(QRect(geometry.x, geometry.y - 400, geometry.width, geometry.height))
+
+            self.go_to_cart()
+        else:
+            self.show_error("Product remove failed")
+            print("Product remove failed")
+            self.print_cart()
+        
+        
     def remove_item_from_cart(self, product_id, curr_row):
         if removeFromCart(product_id):
             transaction.commit()
