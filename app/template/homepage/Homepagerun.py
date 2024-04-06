@@ -1727,7 +1727,102 @@ class HomepageWindow(QMainWindow):
 
         self.button_bug_fix(self.ui.addproductbutton_4)
         self.ui.addproductbutton_4.clicked.connect(functools.partial(self.edit_product, id))
-        
+
+        self.ui.editproductnametextbox.setText(get_product_name_by_id(id))
+        self.ui.editproductdescriptiontextbox_3.setText(get_product_description_by_id(id))
+        self.ui.editproductpricetextbox.setText(str(get_product_price_by_id(id)))
+        self.ui.editproductpricespinbox.setValue(get_product_price_by_id(id))
+        self.ui.editproductstockspinbox_3.setValue(get_product_stock_by_id(id))
+        categories = get_product_categories_by_id(id)
+        if "Men" in categories:
+            self.ui.checkBox_men_3.setChecked(True)
+        if "Women" in categories:
+            self.ui.checkBox_women_3.setChecked(True)
+        if "Kids" in categories:
+            self.ui.checkBox_kids_3.setChecked(True)
+        if "Top" in categories:
+            self.ui.checkBox_top_3.setChecked(True)
+        if "Bottom" in categories:
+            self.ui.checkBox_bottom_3.setChecked(True)
+        if "Dress" in categories:
+            self.ui.checkBox_dress_3.setChecked(True)
+        if "Footwear" in categories:
+            self.ui.checkBox_footwear_3.setChecked(True)
+        if "Headwear" in categories:
+            self.ui.checkBox_headwear_3.setChecked(True)
+        if "Accessories" in categories:
+            self.ui.checkBox_accessories_3.setChecked(True)
+
+        sizes = get_product_sizes_by_id(id)  
+        if sizes != []:
+            size_len = len(sizes)
+            for i in range(size_len - 1):
+                self.frame_sizes_3 = QFrame(self.scrollAreaWidgetContents_25)
+                self.frame_sizes_3.setObjectName(f"frame_sizes_{id}_{sizes[i]}")
+                self.frame_sizes_3.setGeometry(QRect(0, 0, 941, 58))
+                self.frame_sizes_3.setMinimumSize(QSize(941, 40))
+                self.frame_sizes_3.setMaximumSize(QSize(16777215, 16777215))
+                self.frame_sizes_3.setFrameShape(QFrame.StyledPanel)
+                self.frame_sizes_3.setFrameShadow(QFrame.Raised)
+                self.horizontalLayout_15 = QHBoxLayout(self.frame_sizes_3)
+                self.horizontalLayout_15.setSpacing(10)
+                self.horizontalLayout_15.setObjectName(f"horizontalLayout_{id}_{sizes[i]}")
+                self.horizontalLayout_15.setSizeConstraint(QLayout.SetDefaultConstraint)
+                self.horizontalLayout_15.setContentsMargins(9, -1, -1, -1)
+                self.frame_size_each = QFrame(self.frame_sizes_3)
+                self.frame_size_each.setObjectName(f"frame_size_each_{id}_{sizes[i]}")
+                self.frame_size_each.setMinimumSize(QSize(155, 38))
+                self.frame_size_each.setMaximumSize(QSize(155, 38))
+                self.frame_size_each.setStyleSheet(u"boder-radius: 5px;")
+                self.frame_size_each.setFrameShape(QFrame.StyledPanel)
+                self.frame_size_each.setFrameShadow(QFrame.Raised)
+                self.horizontalLayout_size_each = QHBoxLayout(self.frame_size_each)
+                self.horizontalLayout_size_each.setSpacing(0)
+                self.horizontalLayout_size_each.setObjectName(f"horizontalLayout_size_each_{id}_{sizes[i]}")
+                self.horizontalLayout_size_each.setContentsMargins(0, 0, 0, 0)
+                self.size_1 = QLineEdit(self.frame_size_each)
+                self.size_1.setObjectName(f"size_{id}_{sizes[i]}")
+                self.size_1.setMinimumSize(QSize(108, 38))
+                self.size_1.setMaximumSize(QSize(108, 38))
+                self.size_1.setStyleSheet(u"border-radius: 5px;\n"
+        "background: #EDEDED;\n"
+        "padding: 5px;\n"
+        "font-size: 16px;")
+
+                self.horizontalLayout_size_each.addWidget(self.size_1)
+
+                self.deletesizebutton = QPushButton(self.frame_size_each)
+                self.deletesizebutton.setObjectName(f"deletesizebutton__{id}_{sizes[i]}")
+                self.deletesizebutton.setMinimumSize(QSize(55, 38))
+                self.deletesizebutton.setMaximumSize(QSize(55, 38))
+                self.deletesizebutton.setStyleSheet(u"background: #CD4662;\n"
+        "border-radius: 5px;\n"
+        "padding: 5px;\n"
+        "border: none;")
+                icon7 = QIcon()
+                icon7.addFile(u":/pic/images/newres/trashcan.png", QSize(), QIcon.Normal, QIcon.Off)
+                self.deletesizebutton.setIcon(icon7)
+                self.deletesizebutton.setIconSize(QSize(30, 30))
+
+                self.horizontalLayout_size_each.addWidget(self.deletesizebutton)
+
+                self.deletesizebutton.raise_()
+                self.size_1.raise_()
+
+                self.horizontalLayout_15.addWidget(self.frame_size_each) 
+
+                self.deletesizebutton.clicked.connect(functools.partial(self.delete_size, id, i))
+
+            self.ui.addsizeproductbutton_3.clicked.connect(self.add_size)
+
+    def delete_size(self, id, size):
+        print("delete size")
+        frame_size = self.findChild(QFrame, f"frame_sizes_{id}_{size}")
+        frame_size.deleteLater()
+        self.delete_size(id, size)
+        transaction.commit()
+        self.show_success("Size deleted")
+        print("Size deleted")
         
     def edit_product(self, id):
         pass
@@ -1940,9 +2035,12 @@ class HomepageWindow(QMainWindow):
         else:
             print("Error: Line to insert stylesheet not found.")
 
-    def add_size(self):
+    def add_size(self, page=""):
         print("add size")
-        addsize_geometry = self.ui.addsizeproductbutton.geometry()
+        if page == "edit":
+            addsize_geometry = self.ui.addsizeproductbutton_3.geometry()
+        else:
+            addsize_geometry = self.ui.addsizeproductbutton.geometry()
         x_coordinate = addsize_geometry.x()
         y_coordinate = addsize_geometry.y()
         width = addsize_geometry.width()

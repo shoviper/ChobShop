@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QDateEdit, QFrame,
     QPushButton, QRadioButton, QScrollArea, QSizePolicy,
     QSpacerItem, QSpinBox, QStackedWidget, QVBoxLayout,
     QWidget)
+
 import app.assets.realsourceimg.real
 
 class Ui_Main(object):
@@ -5383,7 +5384,7 @@ class Ui_Main(object):
         self.scrollArea_editproduct.setWidgetResizable(True)
         self.scrollAreaWidgetContents_21 = QWidget()
         self.scrollAreaWidgetContents_21.setObjectName(u"scrollAreaWidgetContents_21")
-        self.scrollAreaWidgetContents_21.setGeometry(QRect(0, -799, 1006, 1400))
+        self.scrollAreaWidgetContents_21.setGeometry(QRect(0, -534, 1006, 1400))
         self.scrollAreaWidgetContents_21.setMinimumSize(QSize(0, 1400))
         self.frame_editproduct = QFrame(self.scrollAreaWidgetContents_21)
         self.frame_editproduct.setObjectName(u"frame_editproduct")
@@ -5648,6 +5649,48 @@ class Ui_Main(object):
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
         self.horizontalLayout_15.setSizeConstraint(QLayout.SetDefaultConstraint)
         self.horizontalLayout_15.setContentsMargins(9, -1, -1, -1)
+        self.frame_size_each = QFrame(self.frame_sizes_3)
+        self.frame_size_each.setObjectName(u"frame_size_each")
+        self.frame_size_each.setMinimumSize(QSize(155, 38))
+        self.frame_size_each.setMaximumSize(QSize(155, 38))
+        self.frame_size_each.setStyleSheet(u"boder-radius: 5px;")
+        self.frame_size_each.setFrameShape(QFrame.StyledPanel)
+        self.frame_size_each.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_size_each = QHBoxLayout(self.frame_size_each)
+        self.horizontalLayout_size_each.setSpacing(0)
+        self.horizontalLayout_size_each.setObjectName(u"horizontalLayout_size_each")
+        self.horizontalLayout_size_each.setContentsMargins(0, 0, 0, 0)
+        self.size_1 = QLineEdit(self.frame_size_each)
+        self.size_1.setObjectName(u"size_1")
+        self.size_1.setMinimumSize(QSize(108, 38))
+        self.size_1.setMaximumSize(QSize(108, 38))
+        self.size_1.setStyleSheet(u"border-radius: 5px;\n"
+"background: #EDEDED;\n"
+"padding: 5px;\n"
+"font-size: 16px;")
+
+        self.horizontalLayout_size_each.addWidget(self.size_1)
+
+        self.deletesizebutton = QPushButton(self.frame_size_each)
+        self.deletesizebutton.setObjectName(u"deletesizebutton")
+        self.deletesizebutton.setMinimumSize(QSize(55, 38))
+        self.deletesizebutton.setMaximumSize(QSize(55, 38))
+        self.deletesizebutton.setStyleSheet(u"background: #CD4662;\n"
+"border-radius: 5px;\n"
+"padding: 5px;\n"
+"border: none;")
+        icon7 = QIcon()
+        icon7.addFile(u":/pic/images/newres/trashcan.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.deletesizebutton.setIcon(icon7)
+        self.deletesizebutton.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_size_each.addWidget(self.deletesizebutton)
+
+        self.deletesizebutton.raise_()
+        self.size_1.raise_()
+
+        self.horizontalLayout_15.addWidget(self.frame_size_each)
+
         self.addsizeproductbutton_3 = QPushButton(self.frame_sizes_3)
         self.addsizeproductbutton_3.setObjectName(u"addsizeproductbutton_3")
         self.addsizeproductbutton_3.setMinimumSize(QSize(108, 38))
@@ -9166,9 +9209,9 @@ class Ui_Main(object):
         self.stackedWidget.setCurrentIndex(2)
         self.stackedWidget_main.setCurrentIndex(1)
         self.stackedWidget_myorders.setCurrentIndex(2)
-        self.stackedWidget_adminmain.setCurrentIndex(0)
+        self.stackedWidget_adminmain.setCurrentIndex(2)
         self.stackedWidget_orderadmin.setCurrentIndex(0)
-        self.stackedWidget_adminproducts.setCurrentIndex(1)
+        self.stackedWidget_adminproducts.setCurrentIndex(2)
         self.stackedWidget_allandtype_admin.setCurrentIndex(1)
 
 
@@ -9596,6 +9639,7 @@ class Ui_Main(object):
         self.editproductdescriptionlabel_3.setText(QCoreApplication.translate("Main", u"Description", None))
         self.editproductpricelabel_3.setText(QCoreApplication.translate("Main", u"Price", None))
         self.editproductsizelabel_3.setText(QCoreApplication.translate("Main", u"Sizes", None))
+        self.deletesizebutton.setText("")
         self.addsizeproductbutton_3.setText(QCoreApplication.translate("Main", u"+", None))
         self.editproductoptionlabel.setText(QCoreApplication.translate("Main", u"Options", None))
         self.addoptionproductbutton_3.setText(QCoreApplication.translate("Main", u"+", None))

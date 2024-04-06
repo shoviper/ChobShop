@@ -2660,6 +2660,7 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
+           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -8063,7 +8064,7 @@ border: none;</string>
            </rect>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="homepage_admin">
            <widget class="QScrollArea" name="scrollArea_homepage_admin">
@@ -9685,7 +9686,7 @@ border-radius: 5px;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -11434,7 +11435,7 @@ QScrollBar::handle:vertical:hover {
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-799</y>
+                 <y>-534</y>
                  <width>1006</width>
                  <height>1400</height>
                 </rect>
@@ -11983,6 +11984,107 @@ QScrollBar::handle:horizontal:hover {
                       <property name="leftMargin">
                        <number>9</number>
                       </property>
+                      <item>
+                       <widget class="QFrame" name="frame_size_each">
+                        <property name="minimumSize">
+                         <size>
+                          <width>155</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>155</width>
+                          <height>38</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">boder-radius: 5px;</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_size_each">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="size_1">
+                           <property name="minimumSize">
+                            <size>
+                             <width>108</width>
+                             <height>38</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>108</width>
+                             <height>38</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-radius: 5px;
+background: #EDEDED;
+padding: 5px;
+font-size: 16px;</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="deletesizebutton">
+                           <property name="minimumSize">
+                            <size>
+                             <width>55</width>
+                             <height>38</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>55</width>
+                             <height>38</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">background: #CD4662;
+border-radius: 5px;
+padding: 5px;
+border: none;</string>
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="icon">
+                            <iconset resource="../../assets/realsourceimg/realpicforuse.qrc">
+                             <normaloff>:/pic/images/newres/trashcan.png</normaloff>:/pic/images/newres/trashcan.png</iconset>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>30</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                        <zorder>deletesizebutton</zorder>
+                        <zorder>size_1</zorder>
+                       </widget>
+                      </item>
                       <item>
                        <widget class="QPushButton" name="addsizeproductbutton_3">
                         <property name="minimumSize">
