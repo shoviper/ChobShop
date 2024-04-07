@@ -110,8 +110,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1121</width>
-             <height>1024</height>
+             <width>1127</width>
+             <height>1018</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_28">
@@ -1329,8 +1329,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
-             <height>1524</height>
+             <width>1127</width>
+             <height>1518</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -1509,8 +1509,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
-             <height>1524</height>
+             <width>1127</width>
+             <height>1518</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_32">
@@ -2660,6 +2660,7 @@ line-height: normal;</string>
           <font>
            <family>Supermercado</family>
            <pointsize>-1</pointsize>
+           <weight>87</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -3025,7 +3026,7 @@ QScrollBar::handle:vertical:hover {
           <x>0</x>
           <y>0</y>
           <width>1006</width>
-          <height>1124</height>
+          <height>1118</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_35">
@@ -3817,7 +3818,7 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>1007</width>
+            <width>1013</width>
             <height>593</height>
            </rect>
           </property>
@@ -4421,7 +4422,7 @@ QPushButton:hover{
         <string notr="true">border: none;</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tobeshippedpage">
         <widget class="QScrollArea" name="scrollArea_tobeshipped">
@@ -4463,14 +4464,14 @@ QScrollBar::handle:vertical:hover {
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>1016</width>
-            <height>500</height>
+            <width>1031</width>
+            <height>471</height>
            </rect>
           </property>
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>500</height>
+            <height>300</height>
            </size>
           </property>
           <widget class="QFrame" name="frame_tobeshipped">
@@ -4479,8 +4480,20 @@ QScrollBar::handle:vertical:hover {
              <x>0</x>
              <y>0</y>
              <width>1031</width>
-             <height>471</height>
+             <height>300</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>1031</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1031</width>
+             <height>16777215</height>
+            </size>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -4488,196 +4501,14 @@ QScrollBar::handle:vertical:hover {
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QWidget" name="shipordercontainer" native="true">
-            <property name="geometry">
-             <rect>
-              <x>41</x>
-              <y>0</y>
-              <width>912</width>
-              <height>269</height>
-             </rect>
+           <layout class="QVBoxLayout" name="verticalLayout_shiporder">
+            <property name="leftMargin">
+             <number>60</number>
             </property>
-            <property name="styleSheet">
-             <string notr="true">border-bottom: 1px solid #CD4662;
-background: #FAF9F6;
-</string>
+            <property name="topMargin">
+             <number>0</number>
             </property>
-            <widget class="QLabel" name="shopnameforcart_2">
-             <property name="geometry">
-              <rect>
-               <x>43</x>
-               <y>0</y>
-               <width>131</width>
-               <height>41</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>Shop's name</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="cartorderpic_2">
-             <property name="geometry">
-              <rect>
-               <x>43</x>
-               <y>51</y>
-               <width>134</width>
-               <height>134</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-border-radius: 70px;
-background: #cd4662;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QLabel" name="productcartname_2">
-             <property name="geometry">
-              <rect>
-               <x>240</x>
-               <y>51</y>
-               <width>672</width>
-               <height>28</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>Product's name</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="productcartdescrip_2">
-             <property name="geometry">
-              <rect>
-               <x>240</x>
-               <y>104</y>
-               <width>672</width>
-               <height>28</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>Description</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="productnum_2">
-             <property name="geometry">
-              <rect>
-               <x>240</x>
-               <y>157</y>
-               <width>672</width>
-               <height>28</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #545454;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>1 piece</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="totalpricecartlabel_2">
-             <property name="geometry">
-              <rect>
-               <x>700</x>
-               <y>157</y>
-               <width>81</width>
-               <height>28</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #000;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>Total Price:</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="totalpricecartnumlabel_2">
-             <property name="geometry">
-              <rect>
-               <x>850</x>
-               <y>157</y>
-               <width>49</width>
-               <height>28</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: none;
-color: #cd4662;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-             </property>
-             <property name="text">
-              <string>B 500</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="checkstatusshipbutton">
-             <property name="geometry">
-              <rect>
-               <x>757</x>
-               <y>210</y>
-               <width>156</width>
-               <height>42</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: #FFF;
-background-color: #cd4662;
-border: none;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-border-radius: 5px;</string>
-             </property>
-             <property name="text">
-              <string>Check Status</string>
-             </property>
-            </widget>
-           </widget>
+           </layout>
           </widget>
          </widget>
         </widget>
@@ -5195,31 +5026,6 @@ border-radius: 5px;</string>
               <string>Buy again</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="givereviewcompletebutton">
-             <property name="geometry">
-              <rect>
-               <x>560</x>
-               <y>210</y>
-               <width>156</width>
-               <height>42</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: #FFF;
-background-color: #cd4662;
-border: none;
-text-align: center;
-font-family: Suwannaphum;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-border-radius: 5px;</string>
-             </property>
-             <property name="text">
-              <string>Give Review</string>
-             </property>
-            </widget>
            </widget>
           </widget>
          </widget>
@@ -5260,8 +5066,8 @@ QScrollBar::handle:vertical:hover {
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-398</y>
-            <width>992</width>
+            <y>0</y>
+            <width>67</width>
             <height>1300</height>
            </rect>
           </property>
@@ -7738,7 +7544,7 @@ QScrollBar::handle:vertical:hover {
                <x>0</x>
                <y>0</y>
                <width>1006</width>
-               <height>1124</height>
+               <height>1118</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -9465,8 +9271,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>992</width>
-                     <height>477</height>
+                     <width>998</width>
+                     <height>471</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -9526,8 +9332,8 @@ QScrollBar::handle:vertical:hover {
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>992</width>
-                     <height>1524</height>
+                     <width>67</width>
+                     <height>1518</height>
                     </rect>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_27">
@@ -10008,7 +9814,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1224</width>
+                         <width>1218</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -11187,7 +10993,7 @@ QScrollBar::handle:horizontal:hover {
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>1224</width>
+                         <width>1218</width>
                          <height>210</height>
                         </rect>
                        </property>
@@ -12318,7 +12124,7 @@ QScrollBar::handle:vertical:hover {
                  <x>0</x>
                  <y>0</y>
                  <width>998</width>
-                 <height>1324</height>
+                 <height>1318</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_33">
@@ -14026,7 +13832,7 @@ QScrollBar::handle:horizontal:hover {
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>1224</width>
+                       <width>1218</width>
                        <height>210</height>
                       </rect>
                      </property>
@@ -15086,8 +14892,8 @@ QScrollBar::handle:vertical:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1241</width>
-          <height>1024</height>
+          <width>67</width>
+          <height>1018</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -15539,8 +15345,8 @@ QScrollBar::handle:vertical:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1121</width>
-           <height>1324</height>
+           <width>1127</width>
+           <height>1318</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -15746,7 +15552,7 @@ QScrollBar::handle:horizontal:hover {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1224</width>
+                   <width>1218</width>
                    <height>210</height>
                   </rect>
                  </property>
@@ -16731,8 +16537,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1121</width>
-             <height>874</height>
+             <width>1127</width>
+             <height>868</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -17713,8 +17519,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>85</width>
-             <height>1524</height>
+             <width>1127</width>
+             <height>1518</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -18888,8 +18694,8 @@ QScrollBar::handle:vertical:hover {
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1121</width>
-             <height>1524</height>
+             <width>1127</width>
+             <height>1518</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">

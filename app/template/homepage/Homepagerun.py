@@ -116,7 +116,7 @@ class HomepageWindow(QMainWindow):
         self.ui.logoutsettingsbutton.clicked.connect(self.back_to_login)
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
-        self.ui.orderbutton.clicked.connect(self.go_to_order)
+        self.ui.orderbutton.clicked.connect(self.go_to_order_ship)
         
         # self.display_product()
         
@@ -133,9 +133,9 @@ class HomepageWindow(QMainWindow):
         
         
         #orderpage
-        self.ui.tobeshippedbutton.clicked.connect(self.go_to_order_ship)
-        self.ui.toberecievedbutton.clicked.connect(self.go_to_order_receive)
-        self.ui.completedbutton.clicked.connect(self.go_to_order_complete)
+        # self.ui.tobeshippedbutton.clicked.connect(functools.partial(self.go_to_order_ship))
+        # self.ui.toberecievedbutton.clicked.connect(self.go_to_order_receive)
+        # self.ui.completedbutton.clicked.connect(self.go_to_order_complete)
 
         #orderAdmin
         self.ui.orderstatusbutton_admin.clicked.connect(self.go_to_orderstatus)
@@ -663,7 +663,7 @@ class HomepageWindow(QMainWindow):
 
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
-        self.ui.orderbutton.clicked.connect(self.go_to_order)
+        # self.ui.orderbutton.clicked.connect(functools.partial(self.go_to_order_ship))
         # self.ui.messbutton.clicked.connect(self.go_to_message)
         self.ui.settingbutton.clicked.connect(self.go_to_setting)
         # self.ui.cartbutton.clicked.connect(self.go_to_cart)
@@ -943,8 +943,6 @@ class HomepageWindow(QMainWindow):
         self.ui.messbutton.setStyleSheet(inactive_button_style)
         
         total_num_of_products = len(get_all_products())
-        print("total_num_of_products: ", total_num_of_products)
-        print("all products name and id: \n", get_all_product_name_and_id())
         if total_num_of_products > 0:
             # self.display_product_main(6)
             self.display_product(False, "homepage_customer")
@@ -1079,9 +1077,9 @@ class HomepageWindow(QMainWindow):
 
             self.gridLayout_cartshopinfo.addWidget(self.totalpricecartnumlabel, 2, 3, 1, 2)
 
-            self.horizontalSpacer_11 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+            horizontalSpacer_11 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-            self.gridLayout_cartshopinfo.addItem(self.horizontalSpacer_11, 1, 4, 1, 1)
+            self.gridLayout_cartshopinfo.addItem(horizontalSpacer_11, 1, 4, 1, 1)
 
             self.totalpricecartlabel = QLabel(self.frame_cartshopinfo)
             self.totalpricecartlabel.setObjectName(u"totalpricecartlabel")
@@ -1319,13 +1317,13 @@ class HomepageWindow(QMainWindow):
                 self.ui.frame_cartshop.setMinimumHeight(289 * (curr_row - 2))
 
                 geometry = self.ui.scrollAreaWidgetContents_4.geometry()
-                self.ui.scrollAreaWidgetContents_4.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                self.ui.scrollAreaWidgetContents_4.setGeometry(QRect(geometry.x(), geometry.y(), geometry.width(), 400 * (curr_row - 1)))
                 geometry = self.ui.frame_cartpage.geometry()
-                self.ui.frame_cartpage.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 400 * (curr_row - 1)))
+                self.ui.frame_cartpage.setGeometry(QRect(geometry.x(), geometry.y(), geometry.width(), 400 * (curr_row - 1)))
                 geometry = self.ui.frame_cartshop.geometry()
-                self.ui.frame_cartshop.setGeometry(QRect(geometry.x, geometry.y, geometry.width, 289  * (curr_row - 2)))
+                self.ui.frame_cartshop.setGeometry(QRect(geometry.x(), geometry.y(), geometry.width(), 289  * (curr_row - 2)))
                 geometry = self.ui.purchaseallcartbutton.geometry()
-                self.ui.purchaseallcartbutton.setGeometry(QRect(geometry.x, geometry.y - 400, geometry.width, geometry.height))
+                self.ui.purchaseallcartbutton.setGeometry(QRect(geometry.x(), geometry.y() - 400, geometry.width(), geometry.height))
 
 
             self.go_to_cart()
@@ -1347,20 +1345,184 @@ class HomepageWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Ok)
         msg.exec()
     
-    def order_ship(self, pic, shopname, productname, productdescrip, totalprice, productnum, button=None):
-        for i in get_user_order():
-            img_path = get_product_img_by_id(i[0])[0]
-            break
-        pic.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
-        shopname.setText(get_shopname_by_product_id(i[0]))
-        productname.setText(get_product_name_by_id(i[0]))
-        productdescrip.setText(get_product_description_by_id(i[0]))
-        totalprice.setText(str(get_product_price_by_id(i[0]) * i[1]))
-        productnum.setText(f"{i[1]} piece")
+    def order_ship(self):
+        print("order_ship called")
+        # for i in get_user_order():
+        #     img_path = get_first_img_for_product(i[0])
+        #     break
+        # pic.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
+        # shopname.setText(get_shopname_by_product_id(i[0]))
+        # productname.setText(get_product_name_by_id(i[0]))
+        # productdescrip.setText(get_product_description_by_id(i[0]))
+        # totalprice.setText(str(get_product_price_by_id(i[0]) * i[1]))
+        # productnum.setText(f"{i[1]} piece")
         
-        if button != None:
-            msg = i[4]
-            button.clicked.connect(functools.partial(self.check_status_ship, msg))
+        # if button != None:
+        #     msg = i[4]
+        #     button.clicked.connect(functools.partial(self.check_status_ship, msg))
+        product_order = get_user_order()
+        print("product_order: ", product_order)
+        
+        for count, i in enumerate(product_order, start=1):
+            print("i: ", i, "count:", count)
+            img_path = get_first_img_for_product(i[0])
+            print(img_path)
+
+            self.ui.frame_tobeshipped.setMinimumHeight(300 * count)
+            self.ui.scrollAreaWidgetContents_tobeshipped.setMinimumHeight(300 * count)
+
+            shipordercontainer = QWidget(self.ui.frame_tobeshipped)
+            shipordercontainer.setObjectName(f"shipordercontainer_{count}")
+            shipordercontainer.setMinimumSize(QSize(912, 269))
+            shipordercontainer.setMaximumSize(QSize(912, 269))
+            shipordercontainer.setStyleSheet(u"border-bottom: 1px solid #CD4662;\n"
+    "background: #FAF9F6;\n"
+    "")
+            gridLayout_shipordercontainer = QGridLayout(shipordercontainer)
+            gridLayout_shipordercontainer.setObjectName(u"gridLayout_shipordercontainer")
+            gridLayout_shipordercontainer.setHorizontalSpacing(26)
+            gridLayout_shipordercontainer.setVerticalSpacing(6)
+            gridLayout_shipordercontainer.setContentsMargins(23, 10, -1, 15)
+            shopnameforcart_2 = QLabel(shipordercontainer)
+            shopnameforcart_2.setObjectName(u"shopnameforcart_2")
+            shopnameforcart_2.setMinimumSize(QSize(131, 41))
+            shopnameforcart_2.setMaximumSize(QSize(131, 41))
+            shopnameforcart_2.setStyleSheet(u"border: none;\n"
+    "color: #000;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 20px;\n"
+    "font-style: normal;\n"
+    "font-weight: 700;\n"
+    "line-height: normal;")
+
+            gridLayout_shipordercontainer.addWidget(shopnameforcart_2, 0, 0, 1, 1)
+
+            horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            gridLayout_shipordercontainer.addItem(horizontalSpacer_11, 0, 1, 1, 1)
+
+            horizontalSpacer_12 = QSpacerItem(691, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            gridLayout_shipordercontainer.addItem(horizontalSpacer_12, 0, 2, 1, 5)
+
+            cartorderpic_2 = QLabel(shipordercontainer)
+            cartorderpic_2.setObjectName(u"cartorderpic_2")
+            cartorderpic_2.setMinimumSize(QSize(134, 134))
+            cartorderpic_2.setMaximumSize(QSize(134, 134))
+            cartorderpic_2.setStyleSheet(u"border: none;\n"
+    "border-radius: 70px;\n"
+    "background: #cd4662;")
+
+            gridLayout_shipordercontainer.addWidget(cartorderpic_2, 1, 0, 3, 1)
+
+            productcartname_2 = QLabel(shipordercontainer)
+            productcartname_2.setObjectName(u"productcartname_2")
+            productcartname_2.setMinimumSize(QSize(672, 28))
+            productcartname_2.setMaximumSize(QSize(672, 28))
+            productcartname_2.setStyleSheet(u"border: none;\n"
+    "color: #000;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            gridLayout_shipordercontainer.addWidget(productcartname_2, 1, 2, 1, 5)
+
+            productcartdescrip_2 = QLabel(shipordercontainer)
+            productcartdescrip_2.setObjectName(u"productcartdescrip_2")
+            productcartdescrip_2.setMinimumSize(QSize(672, 28))
+            productcartdescrip_2.setMaximumSize(QSize(672, 28))
+            productcartdescrip_2.setStyleSheet(u"border: none;\n"
+    "color: #545454;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            gridLayout_shipordercontainer.addWidget(productcartdescrip_2, 2, 2, 1, 5)
+
+            productnum_2 = QLabel(shipordercontainer)
+            productnum_2.setObjectName(u"productnum_2")
+            productnum_2.setMinimumSize(QSize(461, 28))
+            productnum_2.setMaximumSize(QSize(461, 28))
+            productnum_2.setStyleSheet(u"border: none;\n"
+    "color: #545454;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            gridLayout_shipordercontainer.addWidget(productnum_2, 3, 2, 1, 1)
+
+            totalpricecartlabel_2 = QLabel(shipordercontainer)
+            totalpricecartlabel_2.setObjectName(u"totalpricecartlabel_2")
+            totalpricecartlabel_2.setMinimumSize(QSize(81, 28))
+            totalpricecartlabel_2.setStyleSheet(u"border: none;\n"
+    "color: #000;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            gridLayout_shipordercontainer.addWidget(totalpricecartlabel_2, 3, 3, 1, 2)
+
+            horizontalSpacer_9 = QSpacerItem(33, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            gridLayout_shipordercontainer.addItem(horizontalSpacer_9, 3, 5, 1, 1)
+
+            totalpricecartnumlabel_2 = QLabel(shipordercontainer)
+            totalpricecartnumlabel_2.setObjectName(u"totalpricecartnumlabel_2")
+            totalpricecartnumlabel_2.setMinimumSize(QSize(71, 28))
+            totalpricecartnumlabel_2.setMaximumSize(QSize(71, 28))
+            totalpricecartnumlabel_2.setStyleSheet(u"border: none;\n"
+    "color: #cd4662;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 400;\n"
+    "line-height: normal;")
+
+            gridLayout_shipordercontainer.addWidget(totalpricecartnumlabel_2, 3, 6, 1, 1)
+
+            horizontalSpacer_13 = QSpacerItem(665, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+            gridLayout_shipordercontainer.addItem(horizontalSpacer_13, 4, 0, 1, 4)
+
+            checkstatusshipbutton = QPushButton(shipordercontainer)
+            checkstatusshipbutton.setObjectName(u"checkstatusshipbutton")
+            checkstatusshipbutton.setText("Check Status")
+            checkstatusshipbutton.clicked.connect(functools.partial(self.check_status_ship, i[4]))
+            checkstatusshipbutton.setMinimumSize(QSize(156, 42))
+            checkstatusshipbutton.setMaximumSize(QSize(156, 42))
+            checkstatusshipbutton.setStyleSheet(u"color: #FFF;\n"
+    "background-color: #cd4662;\n"
+    "border: none;\n"
+    "text-align: center;\n"
+    "font-family: Suwannaphum;\n"
+    "font-size: 16px;\n"
+    "font-style: normal;\n"
+    "font-weight: 700;\n"
+    "line-height: normal;\n"
+    "border-radius: 5px;")
+
+            gridLayout_shipordercontainer.addWidget(checkstatusshipbutton, 4, 4, 1, 3)
+
+            self.ui.verticalLayout_shiporder.addWidget(shipordercontainer)
+
+            # setText
+            shopnameforcart_2.setText(get_shopname_by_product_id(i[0]))
+            productcartname_2.setText(get_product_name_by_id(i[0]))
+            productcartdescrip_2.setText(get_product_description_by_id(i[0]))
+            productnum_2.setText(f"{i[1]} piece")
+            totalpricecartlabel_2.setText("Total Price:")
+            totalpricecartnumlabel_2.setText("฿ " + str(get_product_price_by_id(i[0]) * i[1]))
+            cartorderpic_2.setPixmap(QPixmap(img_path))
+            cartorderpic_2.setScaledContents(True)
+            
     
     def go_to_order_ship_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -1369,7 +1531,7 @@ class HomepageWindow(QMainWindow):
         self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         
-        self.order_ship(self.ui.cartorderpic_2, self.ui.shopnameforcart_2, self.ui.productcartname_2, self.ui.productcartdescrip_2, self.ui.totalpricecartnumlabel_2, self.ui.productnum_2, self.ui.checkstatusshipbutton)
+        # self.order_ship()
 
     def go_to_order_receive_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -1379,7 +1541,7 @@ class HomepageWindow(QMainWindow):
         self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
         
-        self.order_ship(self.ui.cartorderpic_3, self.ui.shopnameforcart_3, self.ui.productcartname_3, self.ui.productcartdescrip_3, self.ui.totalpricecartnumlabel_3, self.ui.productnum_3, self.ui.checkstatusreceivebutton)
+        # self.order_ship()
 
     def go_to_order_complete_fromprofile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.main)
@@ -1392,7 +1554,7 @@ class HomepageWindow(QMainWindow):
         self.ui.buyagaincompletebutton.hide()
         self.ui.givereviewcompletebutton.hide()
         
-        self.order_ship(self.ui.cartorderpic_4, self.ui.shopnameforcart_4, self.ui.productcartname_4, self.ui.productcartdescrip_4, self.ui.totalpricecartnumlabel_4, self.ui.productnum_4)
+        # self.order_ship()
         
         
 
@@ -2302,19 +2464,19 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton.setStyleSheet(inactive_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(active_button_style)
-        self.ui.messbutton.setStyleSheet(inactive_button_style)
         
-        self.go_to_order_ship()
+        # self.go_to_order_ship()
 
         self.current_index = 0
 
     def go_to_order_ship(self):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
         self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.tobeshippedpage)
         
-        self.order_ship(self.ui.cartorderpic_2, self.ui.shopnameforcart_2, self.ui.productcartname_2, self.ui.productcartdescrip_2, self.ui.totalpricecartnumlabel_2, self.ui.productnum_2, self.ui.checkstatusshipbutton)
+        self.order_ship()
 
     def go_to_order_receive(self):
         self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
@@ -2322,7 +2484,7 @@ class HomepageWindow(QMainWindow):
         self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
         
-        self.order_ship(self.ui.cartorderpic_3, self.ui.shopnameforcart_3, self.ui.productcartname_3, self.ui.productcartdescrip_3, self.ui.totalpricecartnumlabel_3, self.ui.productnum_3, self.ui.checkstatusreceivebutton)
+        # self.order_ship(self.ui.cartorderpic_3, self.ui.shopnameforcart_3, self.ui.productcartname_3, self.ui.productcartdescrip_3, self.ui.totalpricecartnumlabel_3, self.ui.productnum_3, self.ui.checkstatusreceivebutton)
 
     def go_to_order_complete(self):
         self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
@@ -2333,7 +2495,7 @@ class HomepageWindow(QMainWindow):
         self.ui.buyagaincompletebutton.hide()
         self.ui.givereviewcompletebutton.hide()
         
-        self.order_ship(self.ui.cartorderpic_4, self.ui.shopnameforcart_4, self.ui.productcartname_4, self.ui.productcartdescrip_4, self.ui.totalpricecartnumlabel_4, self.ui.productnum_4)
+        # self.order_ship(self.ui.cartorderpic_4, self.ui.shopnameforcart_4, self.ui.productcartname_4, self.ui.productcartdescrip_4, self.ui.totalpricecartnumlabel_4, self.ui.productnum_4)
 
 
     def show_success(self, message):

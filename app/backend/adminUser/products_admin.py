@@ -296,7 +296,6 @@ def get_user_order():
         order_products_id.append([product_id, quantity, s, o, t])
     return order_products_id
 
-
 def decrese_from_stock(product_id, quantity):
     if root.ProductDatabase.drecrease_stock(product_id, quantity):
         transaction.commit()
