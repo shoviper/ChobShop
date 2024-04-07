@@ -276,49 +276,6 @@ class Admin(GeneralUser):
     def __str__(self) -> str:
         return f"username: {self.username}, shopname: {self.shopname}, name: {self.name}, lastname: {self.lastname}, description: {self.description}, address: {self.address}, email: {self.email}, phone: {self.phone}, admin: {self.admin}"
 
-class CustomerDatabase(persistent.Persistent):
-    def __init__(self):
-        self.customers = {}
-        self.next_id = 1
-
-    def add_customer(self, username, email, password):
-        customer = Customer(username, email, password)
-        self.customers[username] = customer
-        return customer
-
-    def get_customer(self, username):
-        return self.customers.get(username, None)
-
-    def update_customer(self, username, **kwargs):
-        customer = self.customers.get(username, None)
-        if customer:
-            for key, value in kwargs.items():
-                if hasattr(customer, key):
-                    setattr(customer, key, value)
-            return True
-        return False
-
-    def remove_customer(self, username):
-        if username in self.customers:
-            del self.customers[username]
-            return True
-        return False
-    
-    def add_to_cart(self, username, product, quantity):
-        customer = self.customers.get(username, None)
-        if customer:
-            customer.add_to_cart(product, quantity)
-            return True
-        return False
-    
-    def toJSON(self):
-        return {
-            "customers": {username: customer.toJSON() for username, customer in self.customers.items()},
-            "next_id": self.next_id
-        }
-    
-    def __str__(self) -> str:
-        return f"customers: {self.customers}, next_id: {self.next_id}"
 
 class LoggedInUser(persistent.Persistent):
     def __init__(self, user=None) -> None:
@@ -334,6 +291,19 @@ class LoggedInUser(persistent.Persistent):
     def __str__(self) -> str:
         return f"\nuser: {self.user}, \nlogged_in: {self.logged_in}"
 
+class Category(persistent.Persistent):
+    def __init__(self, product, category) -> None:
+        self.category = category
+        self.product = product
+
+    def toJSON(self):
+        return {
+            "product": self.product,
+            "category": self.category
+        }
+    
+    def __str__(self) -> str:
+        return f"product: {self.product}, category: {self.category}"
 # class Order(persistent.Persistent):
 #     last_order_id = 0
 #     def __init__(self, products, total) -> None:
@@ -363,16 +333,3 @@ class LoggedInUser(persistent.Persistent):
 #     def __str__(self) -> str:
 #         return f"products: {self.products}, total: {self.total}, status: {self.status}, date: {self.date}"
     
-class Category(persistent.Persistent):
-    def __init__(self, product, category) -> None:
-        self.category = category
-        self.product = product
-
-    def toJSON(self):
-        return {
-            "product": self.product,
-            "category": self.category
-        }
-    
-    def __str__(self) -> str:
-        return f"product: {self.product}, category: {self.category}"
