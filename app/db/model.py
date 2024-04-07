@@ -210,7 +210,7 @@ class Customer(GeneralUser):
             
     def add_to_order(self, product_id, quantity, size, option):
         self.remove_from_cart_by_product_id(product_id)
-        self.orders.append([product_id, quantity, size, option, self.generate_tracking_number()])
+        self.orders.append([product_id, quantity, size, option, "", "Processing"])
 
     def add_to_fav(self, product):
         self.favorites.append(product)
@@ -253,20 +253,6 @@ class Admin(GeneralUser):
         self.products = []
         self.admin = True
         self.dateregistered = datetime.datetime.now()
-
-    def add_product(self, product):
-        self.products[product.id] = product
-
-    def remove_product(self, product):
-        if product in self.products:
-            del self.products[product.id]
-
-    def add_to_fav(self, product):
-        self.favorites.append(product)
-
-    def remove_from_fav(self, product):
-        if product in self.favorites:
-            self.favorites.remove(product)
 
     def add_review(self, product, review):
         self.reviews[product] = review
@@ -348,47 +334,34 @@ class LoggedInUser(persistent.Persistent):
     def __str__(self) -> str:
         return f"\nuser: {self.user}, \nlogged_in: {self.logged_in}"
 
-class Order(persistent.Persistent):
-    last_order_id = 0
-    def __init__(self, products, total) -> None:
-        self.products = products
-        self.total = total
-        self.status = "Processing"
-        self.tracking_number = None
-        self.order_id = None
-        self.date = datetime.datetime.now()
-        
-    def generate_tracking_number(self):
-        # Generate a unique tracking number using UUID and timestamp
-        unique_id = uuid.uuid4()
-        timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        return f"{timestamp}-{unique_id}"
+# class Order(persistent.Persistent):
+#     last_order_id = 0
+#     def __init__(self, products, total) -> None:
+#         self.products = products
+#         self.total = total
+#         self.status = "Processing"
+#         self.tracking_number = None
+#         self.order_id = None
+#         self.date = datetime.datetime.now()
     
-    @classmethod
-    def get_next_order_id(cls):
-        cls.last_order_id += 1  # Increment the last_order_id
-        return cls.last_order_id  # Return the new order_id
+#     @classmethod
+#     def get_next_order_id(cls):
+#         cls.last_order_id += 1  # Increment the last_order_id
+#         return cls.last_order_id  # Return the new order_id
+
+#     def ship_order(self):
+#         self.status = "Shipped"
+
+#     def toJSON(self):
+#         return {
+#             "products": self.products,
+#             "total": self.total,
+#             "status": self.status,
+#             "date": self.date
+#         }
     
-
-    def cancel_order(self):
-        self.status = "Cancelled"
-
-    def ship_order(self):
-        self.status = "Shipped"
-
-    def complete_order(self):
-        self.status = "Completed"
-
-    def toJSON(self):
-        return {
-            "products": self.products,
-            "total": self.total,
-            "status": self.status,
-            "date": self.date
-        }
-    
-    def __str__(self) -> str:
-        return f"products: {self.products}, total: {self.total}, status: {self.status}, date: {self.date}"
+#     def __str__(self) -> str:
+#         return f"products: {self.products}, total: {self.total}, status: {self.status}, date: {self.date}"
     
 class Category(persistent.Persistent):
     def __init__(self, product, category) -> None:

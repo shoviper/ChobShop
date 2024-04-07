@@ -7,6 +7,8 @@ from app.db.database import *
 import random as r
 import datetime
 
+if not hasattr(root, 'Order'):
+    root.Order = BTree()
 if not hasattr(root, 'Product'):
     root.Product = BTree()
 if not hasattr(root, 'ProductDatabase'):
@@ -292,11 +294,46 @@ def addToOrder(product_id, quantity, size, option):
 def get_user_order():
     order = root.LoggedInUser.user.orders
     order_products_id = []
-    for product_id, quantity, s, o, t in order:
-        order_products_id.append([product_id, quantity, s, o, t])
+    for product_id, quantity, s, o, t, status in order:
+        order_products_id.append([product_id, quantity, s, o, t, status])
     return order_products_id
 
 def decrese_from_stock(product_id, quantity):
     if root.ProductDatabase.drecrease_stock(product_id, quantity):
         transaction.commit()
         return True
+    
+def get_all_orders():
+    all_orders = []
+    for user in root.customerUsers:
+        for order in root.customerUsers[user].orders:
+            all_orders.append(order)
+    return all_orders
+
+def get_order_by_adminname(admin_name):
+    all_orders = get_all_orders()
+    shop_product = get_products_for_user(admin_name)
+    shop_orders = []
+    for order in all_orders:
+        for product in shop_product:
+            if order[0] == product.id:
+                shop_orders.append(order)
+    return shop_orders
+
+def get_user_by_order(order):
+    for user in root.customerUsers:
+        for user_order in root.customerUsers[user].orders:
+            if user_order == order:
+                return user
+    return None
+
+def add_tracking_no(track, order):
+    for user in root.customerUsers:
+        for user_order in root.customerUsers[user].orders:
+            print("user_order: ", user_order)
+            if user_order[0] == order[0] and user_order[1] == order[1] and user_order[2] == order[2] and user_order[3] == order[3]:
+                user_order[4] = track
+                user_order[5] = "Shipped"
+                transaction.commit()
+                return user_order[4]
+    return None

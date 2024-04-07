@@ -3,7 +3,7 @@ import os
 import xml.etree.ElementTree as ET
 import sys
 import functools
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QSizePolicy, QFileDialog
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QSizePolicy, QFileDialog, QInputDialog
 from PySide6.QtGui import QPixmap
 from PySide6 import QtCore
 # from Homepage import Ui_MainWindow
@@ -138,18 +138,12 @@ class HomepageWindow(QMainWindow):
         # self.ui.completedbutton.clicked.connect(self.go_to_order_complete)
 
         #orderAdmin
-        self.ui.orderstatusbutton_admin.clicked.connect(self.go_to_orderstatus)
+        self.ui.orderstatusbutton_admin.clicked.connect(self.orderstatus_tobeship)
         self.ui.toshipadminbutton.clicked.connect(self.orderstatus_tobeship)
-        self.ui.canceladminvutton.clicked.connect(self.orderstatus_cancel)
-        self.ui.completedadminbutton.clicked.connect(self.orderstatus_complete)
-        self.ui.reviewsadminvutton.clicked.connect(self.orderstatus_review)
 
         #Adminmainpage
-        self.ui.vieworderstatusbutton_admin.clicked.connect(self.go_to_orderstatus)
-        self.ui.tobeshippedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_tobeship)
-        self.ui.toberevievedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_cancel)
-        self.ui.completedbutton_admin.clicked.connect(self.adminmain_to_orderstatus_complete)
-        self.ui.reviewsbutton_admin.clicked.connect(self.adminmain_to_orderstatus_review)
+        # self.ui.orderstatusbutton_admin.clicked.connect(self.orderstatus_tobeship)
+        # self.ui.toshipadminbutton.clicked.connect(self.adminmain_to_orderstatus_tobeship)
         self.img_button_clicked = False
             
 
@@ -158,10 +152,10 @@ class HomepageWindow(QMainWindow):
 
         #profile
         self.ui.backbutton.clicked.connect(self.go_to_home)
-        self.ui.tobeshipbutton.clicked.connect(self.go_to_order_ship_fromprofile)
-        self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive_fromprofile)
-        self.ui.completebutton.clicked.connect(self.go_to_order_complete_fromprofile)
-        self.ui.viewallfavbutton.clicked.connect(self.go_to_favorite)
+        # self.ui.tobeshippedbutton.clicked.connect(self.go_to_order_ship_fromprofile)
+        # self.ui.tobereceivebutton.clicked.connect(self.go_to_order_receive_fromprofile)
+        self.ui.completebutton.clicked.connect(self.go_to_order_ship_fromprofile)
+        # self.ui.viewallfavbutton.clicked.connect(self.go_to_favorite)
         
         #settings
         self.ui.settingbutton.clicked.connect(self.go_to_setting)
@@ -570,84 +564,41 @@ class HomepageWindow(QMainWindow):
 
     #orderAdminspage--------------------------------------------------------------------------------------------
     def go_to_orderstatus(self):
-        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
+        print("go to order status")
         self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
         self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
+        self.orderstatus_tobeship()
+        
     def orderstatus_tobeship(self):
+        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
         self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
         self.ui.toshipadminbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
-    def orderstatus_cancel(self):
-        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.canceladminpage)
-        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(active_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
+        self.order_ship(True, "tobeship")
     def orderstatus_complete(self):
         self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.completeadminpage)
         self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(active_orderbutton_style)
         self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
-    def orderstatus_review(self):
-        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.reviewsadminpage)
-        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(active_orderbutton_style)
+
+
+    def display_orderstatus(self, page):
+        if page == "tobeship":
+            self.ui.tobeshipadminpage.clear()
+            
     #orderAdminspage--------------------------------------------------------------------------------------------
 
     def adminmain_to_orderstatus_tobeship(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
         self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.tobeshipadminpage)
         self.ui.toshipadminbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
-    def adminmain_to_orderstatus_cancel(self):
-        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
-        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.canceladminpage)
-        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(active_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
-    def adminmain_to_orderstatus_complete(self):
-        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
-        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.completeadminpage)
-        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
-    def adminmain_to_orderstatus_review(self):
-        self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.orderstatus_admin)
-        self.ui.stackedWidget_orderadmin.setCurrentWidget(self.ui.reviewsadminpage)
-        self.ui.toshipadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.canceladminvutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedadminbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.reviewsadminvutton.setStyleSheet(active_orderbutton_style)
-        self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.orderstatusbutton_admin.setStyleSheet(active_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)        
+        self.order_ship(True, "tobeship")
 
     def go_to_productpage(self, id):
         print("==============go to product page==============")
@@ -659,12 +610,10 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton.setStyleSheet(inactive_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
-        self.ui.messbutton.setStyleSheet(inactive_button_style)
 
         self.ui.homebutton.clicked.connect(self.go_to_home)
         self.ui.favbutton.clicked.connect(self.go_to_favorite)
         # self.ui.orderbutton.clicked.connect(functools.partial(self.go_to_order_ship))
-        # self.ui.messbutton.clicked.connect(self.go_to_message)
         self.ui.settingbutton.clicked.connect(self.go_to_setting)
         # self.ui.cartbutton.clicked.connect(self.go_to_cart)
         self.ui.profilebutton.clicked.connect(self.go_to_userprofile)
@@ -940,7 +889,6 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton.setStyleSheet(active_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
-        self.ui.messbutton.setStyleSheet(inactive_button_style)
         
         total_num_of_products = len(get_all_products())
         if total_num_of_products > 0:
@@ -1337,30 +1285,53 @@ class HomepageWindow(QMainWindow):
         
         self.ui.buynowbutton.clicked.connect(functools.partial(self.purchase_cartpage, "cartpage"))
     
-    def check_status_ship(self, message):
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Information)
-        msg.setText(f"Tracking ID: {message}")
-        msg.setWindowTitle("Order Status")
-        msg.setStandardButtons(QMessageBox.Ok)
-        msg.exec()
+    def check_status_ship(self, message, status, order=[], admin=False):
+        self.input_trackno = False
+        self.word = "word"
+        if not admin:
+            print("not admin")
+            if status == "Processing":
+                self.word = "is being processed"
+            elif status == "Shipped":
+                self.word = f"Tracking number: {message}"
+        else:
+            print("admin")
+            if status == "Processing":
+                self.input_trackno = True
+            elif status == "Shipped":
+                self.word = f"Tracking number: {message}"
+
+        if self.input_trackno:
+            text, ok_pressed = QInputDialog.getText(self, "Input tracking no.", "Enter:")
+            if ok_pressed:
+                tracking = add_tracking_no(text, order)
+                print("tracking: ", tracking)
+                order[5] = "Shipped"
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setText(self.word)
+            msg.setWindowTitle("Order Status")
+            msg.setStandardButtons(QMessageBox.Ok)
+            msg.exec()
     
-    def order_ship(self):
+    def order_ship(self, admin=False, page=""):
         print("order_ship called")
-        # for i in get_user_order():
-        #     img_path = get_first_img_for_product(i[0])
-        #     break
-        # pic.setStyleSheet(f"background-color: #FFF; image: url({img_path}); border-radius: 0px; padding: 0;")
-        # shopname.setText(get_shopname_by_product_id(i[0]))
-        # productname.setText(get_product_name_by_id(i[0]))
-        # productdescrip.setText(get_product_description_by_id(i[0]))
-        # totalprice.setText(str(get_product_price_by_id(i[0]) * i[1]))
-        # productnum.setText(f"{i[1]} piece")
+        if admin and page == "tobeship":
+            product_order = get_order_by_adminname(root.LoggedInUser.user.username)
+            curr_frame_tobeship = self.ui.frame_tobeshipped_2
+            curr_scroll = self.ui.scrollAreaWidgetContents_tobeshipped_2
+            curr_vertical = self.ui.verticalLayout_shiporder_2
+        else:
+            product_order = get_user_order()
+            curr_frame_tobeship = self.ui.frame_tobeshipped
+            curr_scroll = self.ui.scrollAreaWidgetContents_tobeshipped
+            curr_vertical = self.ui.verticalLayout_shiporder
+
         
-        # if button != None:
-        #     msg = i[4]
-        #     button.clicked.connect(functools.partial(self.check_status_ship, msg))
-        product_order = get_user_order()
+        for i in reversed(range(curr_frame_tobeship.layout().count())):
+            curr_frame_tobeship.layout().itemAt(i).widget().setParent(None)
+            
         print("product_order: ", product_order)
         
         for count, i in enumerate(product_order, start=1):
@@ -1368,10 +1339,10 @@ class HomepageWindow(QMainWindow):
             img_path = get_first_img_for_product(i[0])
             print(img_path)
 
-            self.ui.frame_tobeshipped.setMinimumHeight(300 * count)
-            self.ui.scrollAreaWidgetContents_tobeshipped.setMinimumHeight(300 * count)
+            curr_frame_tobeship.setMinimumHeight(300 * count)
+            curr_scroll.setMinimumHeight(300 * count)
 
-            shipordercontainer = QWidget(self.ui.frame_tobeshipped)
+            shipordercontainer = QWidget(curr_frame_tobeship)
             shipordercontainer.setObjectName(f"shipordercontainer_{count}")
             shipordercontainer.setMinimumSize(QSize(912, 269))
             shipordercontainer.setMaximumSize(QSize(912, 269))
@@ -1494,8 +1465,6 @@ class HomepageWindow(QMainWindow):
 
             checkstatusshipbutton = QPushButton(shipordercontainer)
             checkstatusshipbutton.setObjectName(u"checkstatusshipbutton")
-            checkstatusshipbutton.setText("Check Status")
-            checkstatusshipbutton.clicked.connect(functools.partial(self.check_status_ship, i[4]))
             checkstatusshipbutton.setMinimumSize(QSize(156, 42))
             checkstatusshipbutton.setMaximumSize(QSize(156, 42))
             checkstatusshipbutton.setStyleSheet(u"color: #FFF;\n"
@@ -1511,17 +1480,29 @@ class HomepageWindow(QMainWindow):
 
             gridLayout_shipordercontainer.addWidget(checkstatusshipbutton, 4, 4, 1, 3)
 
-            self.ui.verticalLayout_shiporder.addWidget(shipordercontainer)
+            curr_vertical.addWidget(shipordercontainer)
 
             # setText
-            shopnameforcart_2.setText(get_shopname_by_product_id(i[0]))
+            if not admin:
+                shopnameforcart_2.setText(get_shopname_by_product_id(i[0]))
+                if i[4] == "":
+                    checkstatusshipbutton.clicked.connect(functools.partial(self.check_status_ship, i[4], i[5]))
+                else:
+                    checkstatusshipbutton.clicked.connect(functools.partial(self.check_status_ship, i[4], i[5]))
+            else:
+                order_customer = get_user_by_order(i)
+                shopnameforcart_2.setText(order_customer)
+                if i[4] == "":
+                    checkstatusshipbutton.clicked.connect(functools.partial(self.check_status_ship, i[4], i[5] ,i ,True))
             productcartname_2.setText(get_product_name_by_id(i[0]))
-            productcartdescrip_2.setText(get_product_description_by_id(i[0]))
+            productcartdescrip_2.setText(f"Size:  {i[2]}   | Option:  {i[3]}")
             productnum_2.setText(f"{i[1]} piece")
             totalpricecartlabel_2.setText("Total Price:")
             totalpricecartnumlabel_2.setText("฿ " + str(get_product_price_by_id(i[0]) * i[1]))
             cartorderpic_2.setPixmap(QPixmap(img_path))
             cartorderpic_2.setScaledContents(True)
+            checkstatusshipbutton.setText("Check Status")
+
             
     
     def go_to_order_ship_fromprofile(self):
@@ -1531,28 +1512,28 @@ class HomepageWindow(QMainWindow):
         self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
         self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
         
-        # self.order_ship()
+        self.order_ship()
 
-    def go_to_order_receive_fromprofile(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
-        self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
+    # def go_to_order_receive_fromprofile(self):
+    #     self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+    #     self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
+    #     self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
+    #     self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
         
         # self.order_ship()
 
-    def go_to_order_complete_fromprofile(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.main)
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
-        self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+    # def go_to_order_complete_fromprofile(self):
+    #     self.ui.stackedWidget.setCurrentWidget(self.ui.main)
+    #     self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
+    #     self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
+    #     self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
         
-        self.ui.buyagaincompletebutton.hide()
-        self.ui.givereviewcompletebutton.hide()
+    #     self.ui.buyagaincompletebutton.hide()
+    #     self.ui.givereviewcompletebutton.hide()
         
         # self.order_ship()
         
@@ -1565,7 +1546,8 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton.setStyleSheet(inactive_button_style)
         self.ui.favbutton.setStyleSheet(active_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
-        self.ui.messbutton.setStyleSheet(inactive_button_style)
+
+        self.display_product(False, "allproducts_customer")
 
         self.current_index = 0
 
@@ -1680,7 +1662,6 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton_admin.setStyleSheet(active_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
         self.ui.productsbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
         self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
@@ -1706,6 +1687,11 @@ class HomepageWindow(QMainWindow):
         elif widget == "homepage_customer":
             print("homepage_customer")
             self.curr_widget = self.ui.frame_homepage_product
+            self.curr_layout = QGridLayout()
+            self.curr_widget.setLayout(self.curr_layout)
+        elif widget == "allproducts_customer":
+            print("allproducts_customer")
+            self.curr_widget = self.ui.frame_allproducts
             self.curr_layout = QGridLayout()
             self.curr_widget.setLayout(self.curr_layout)
         # widget.setVisible(True)
@@ -1736,7 +1722,8 @@ class HomepageWindow(QMainWindow):
                     self.ui.frame_homepage.setMinimumHeight(900 + (320 * (row - 1)))
                     self.ui.scrollAreaWidgetContents.setMinimumHeight(900 + (320 * (row - 1)))
                 elif widget == "allproducts_customer":
-                    self.ui.productcontainer_admin_3.setMinimumHeight(440 + (320 * (row - 1))) #widget
+                    self.ui.frame_favpage.setMinimumHeight(500 + (320 * (row - 1))) #widget
+                    self.ui.scrollAreaWidgetContents_2.setMinimumHeight(500 + (320 * (row - 1))) #widget
                 self.curr_widget.setMinimumHeight(380 + (320 * (row - 1))) 
 
             # img_path = get_first_product_img(root.LoggedInUser.user.username, product.id)
@@ -1843,7 +1830,6 @@ class HomepageWindow(QMainWindow):
         self.ui.homebutton.setStyleSheet(inactive_button_style)
         self.ui.favbutton.setStyleSheet(inactive_button_style)
         self.ui.orderbutton.setStyleSheet(inactive_button_style)
-        self.ui.messbutton.setStyleSheet(inactive_button_style)
         
         self.ui.shopnamelabel_admin_2.setText(get_shopname_by_product_id(username))
         shopproduct_len = str(len(get_products_for_user(get_shopname_by_product_id(username))))
@@ -1865,7 +1851,6 @@ class HomepageWindow(QMainWindow):
         self.ui.productsbutton_admin.setStyleSheet(active_button_style)
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
         
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
         self.ui.productsbutton_admin.clicked.connect(self.go_to_productspage_admin)
@@ -2109,22 +2094,12 @@ class HomepageWindow(QMainWindow):
         self.ui.productsbutton_admin.setStyleSheet(active_button_style)
         self.ui.homebutton_admin.setStyleSheet(inactive_button_style)
         self.ui.orderstatusbutton_admin.setStyleSheet(inactive_button_style)
-        self.ui.messbutton_admin.setStyleSheet(inactive_button_style)
 
-        self.ui.producttypesbutton_admin.setStyleSheet(inactive_orderbutton_style)
         self.ui.allproductbutton_admin.setStyleSheet(active_orderbutton_style)
-
-        self.ui.producttypesbutton_admin.clicked.connect(self.go_to_producttype_admin)
         
         num_of_products = count_products_for_user(root.LoggedInUser.user.username)
         if num_of_products > 0:
             self.display_product(True, "allproducts_admin")
-
-    def go_to_producttype_admin(self):
-            self.ui.stackedWidget_allandtype_admin.setCurrentWidget(self.ui.adminproducttypespage)
-            self.ui.producttypesbutton_admin.setStyleSheet(active_orderbutton_style)
-            self.ui.allproductbutton_admin.setStyleSheet(inactive_orderbutton_style)
-            self.ui.allproductbutton_admin.clicked.connect(self.go_to_productspage_admin)
 
     def go_to_addproduct_admin(self):
         self.ui.stackedWidget_adminmain.setCurrentWidget(self.ui.productspage_admin)
@@ -2471,29 +2446,26 @@ class HomepageWindow(QMainWindow):
 
     def go_to_order_ship(self):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.myorderspage)
-        self.ui.tobeshippedbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
         self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.tobeshippedpage)
         
         self.order_ship()
 
-    def go_to_order_receive(self):
-        self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
+    # def go_to_order_receive(self):
+    #     self.ui.toberecievedbutton.setStyleSheet(active_orderbutton_style)
+    #     self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.completedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.toberecievedpage)
         
         # self.order_ship(self.ui.cartorderpic_3, self.ui.shopnameforcart_3, self.ui.productcartname_3, self.ui.productcartdescrip_3, self.ui.totalpricecartnumlabel_3, self.ui.productnum_3, self.ui.checkstatusreceivebutton)
 
-    def go_to_order_complete(self):
-        self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
-        self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
-        self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
+    # def go_to_order_complete(self):
+    #     self.ui.completedbutton.setStyleSheet(active_orderbutton_style)
+    #     self.ui.tobeshippedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.toberecievedbutton.setStyleSheet(inactive_orderbutton_style)
+    #     self.ui.stackedWidget_myorders.setCurrentWidget(self.ui.completedpage)
         
-        self.ui.buyagaincompletebutton.hide()
-        self.ui.givereviewcompletebutton.hide()
+    #     self.ui.buyagaincompletebutton.hide()
+    #     self.ui.givereviewcompletebutton.hide()
         
         # self.order_ship(self.ui.cartorderpic_4, self.ui.shopnameforcart_4, self.ui.productcartname_4, self.ui.productcartdescrip_4, self.ui.totalpricecartnumlabel_4, self.ui.productnum_4)
 
