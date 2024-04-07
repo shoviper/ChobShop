@@ -2106,8 +2106,10 @@ class HomepageWindow(QMainWindow):
 
         self.ui.homebutton_admin.clicked.connect(self.go_to_homepage_admin)
 
+        self.button_bug_fix(self.ui.addsizeproductbutton)
         self.ui.addsizeproductbutton.clicked.connect(functools.partial(self.add_size))
         self.size_len = 0
+        self.button_bug_fix(self.ui.addoptionproductbutton)
         self.ui.addoptionproductbutton.clicked.connect(self.add_option)
         self.option_len = 0
 
@@ -2115,8 +2117,10 @@ class HomepageWindow(QMainWindow):
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
 
+        self.button_bug_fix(self.ui.addimagebutton_5)
         self.ui.addimagebutton_5.clicked.connect(self.add_img)
-
+        
+        self.button_bug_fix(self.ui.addproductbutton)
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
     
