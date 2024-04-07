@@ -2116,10 +2116,7 @@ class HomepageWindow(QMainWindow):
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
 
-        self.button_bug_fix(self.ui.addimgbutton)
         self.ui.addimgbutton.clicked.connect(self.add_img)
-        
-        self.button_bug_fix(self.ui.addproductbutton)
 
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
