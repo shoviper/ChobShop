@@ -2353,7 +2353,7 @@ class HomepageWindow(QMainWindow):
         return categories
 
     def add_product(self):
-        # self.addproduct_admin_clear()
+        self.addproduct_admin_clear()
         productname = self.ui.addproductnametextbox.text()
         description = self.ui.addproductdescriptiontextbox.toPlainText()
         price = self.ui.addproductpricespinbox.value()
