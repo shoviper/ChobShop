@@ -6693,7 +6693,7 @@ border: none;</string>
            </rect>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="homepage_admin">
            <widget class="QScrollArea" name="scrollArea_homepage_admin">
@@ -7764,7 +7764,7 @@ border-radius: 5px;</string>
              <string notr="true">background: #FAF9F6</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="alltypesproductspage_admin">
              <widget class="QWidget" name="productcontainernav_admin" native="true">
@@ -8483,38 +8483,6 @@ line-height: normal;</string>
                             <string>Product's Images</string>
                            </property>
                           </widget>
-                          <widget class="QPushButton" name="addimagebutton">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>45</y>
-                             <width>151</width>
-                             <height>151</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>+</string>
-                           </property>
-                           <property name="iconSize">
-                            <size>
-                             <width>151</width>
-                             <height>151</height>
-                            </size>
-                           </property>
-                          </widget>
                           <widget class="QLabel" name="img_1">
                            <property name="geometry">
                             <rect>
@@ -8568,6 +8536,24 @@ QPushButton:hover {
                            </property>
                            <property name="text">
                             <string>X</string>
+                           </property>
+                          </widget>
+                          <widget class="QPushButton" name="addimagebutton_5">
+                           <property name="geometry">
+                            <rect>
+                             <x>190</x>
+                             <y>2</y>
+                             <width>75</width>
+                             <height>31</height>
+                            </rect>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-radius: 5px;
+background: #F4DBDB;
+font-size: 14;</string>
+                           </property>
+                           <property name="text">
+                            <string>Add Image</string>
                            </property>
                           </widget>
                          </widget>
@@ -9482,7 +9468,7 @@ QScrollBar::handle:vertical:hover {
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>0</y>
+                 <y>-51</y>
                  <width>1006</width>
                  <height>1400</height>
                 </rect>
@@ -9541,221 +9527,6 @@ line-height: normal;</string>
                    <property name="text">
                     <string>Edit Product</string>
                    </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="editproductimagecontainer" native="true">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>250</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>250</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QScrollArea {
-	border: none;
-	padding-top: 10px;
-}
-
-QScrollBar:horizontal {
-	border: none;
-	background-color: #FAF9F6;
-	height: 15px;
-	border-radius: 7px;
-}
-
-QScrollBar::handle:horizontal {
-	background-color: #E1E3E7;
-	border-radius: 7px;
-	min-width: 30px;
-}
-
-QScrollBar::handle:horizontal:hover {
-	background-color: #F4DBDB;
-}</string>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_13">
-                    <item>
-                     <widget class="QScrollArea" name="scrollArea_addimageproduct_3">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>240</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>240</height>
-                       </size>
-                      </property>
-                      <property name="widgetResizable">
-                       <bool>true</bool>
-                      </property>
-                      <widget class="QWidget" name="scrollAreaWidgetContents_24">
-                       <property name="geometry">
-                        <rect>
-                         <x>0</x>
-                         <y>0</y>
-                         <width>1218</width>
-                         <height>210</height>
-                        </rect>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>210</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>210</height>
-                        </size>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_14">
-                        <item>
-                         <widget class="QFrame" name="frame_addimageproduct_3">
-                          <property name="minimumSize">
-                           <size>
-                            <width>1200</width>
-                            <height>210</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>210</height>
-                           </size>
-                          </property>
-                          <property name="frameShape">
-                           <enum>QFrame::StyledPanel</enum>
-                          </property>
-                          <property name="frameShadow">
-                           <enum>QFrame::Raised</enum>
-                          </property>
-                          <widget class="QLabel" name="addproductimagelabel_3">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>0</y>
-                             <width>220</width>
-                             <height>31</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">color: #000;
-
-font-family: Suwannaphum;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-                           </property>
-                           <property name="text">
-                            <string>Product's Images</string>
-                           </property>
-                          </widget>
-                          <widget class="QPushButton" name="addimagebutton_3">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>45</y>
-                             <width>151</width>
-                             <height>151</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border: 3px dashed #D9D9D9;
-	font-size: 46px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: #CD4662;
-	background-color: #EDEDED;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>+</string>
-                           </property>
-                           <property name="iconSize">
-                            <size>
-                             <width>151</width>
-                             <height>151</height>
-                            </size>
-                           </property>
-                          </widget>
-                          <widget class="QLabel" name="img_3">
-                           <property name="geometry">
-                            <rect>
-                             <x>5</x>
-                             <y>50</y>
-                             <width>141</width>
-                             <height>141</height>
-                            </rect>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">image: url(:/pic/product_img/IMG_2025.JPG)</string>
-                           </property>
-                           <property name="text">
-                            <string/>
-                           </property>
-                           <property name="alignment">
-                            <set>Qt::AlignCenter</set>
-                           </property>
-                          </widget>
-                          <widget class="QPushButton" name="delete_pic_button_3">
-                           <property name="enabled">
-                            <bool>true</bool>
-                           </property>
-                           <property name="geometry">
-                            <rect>
-                             <x>130</x>
-                             <y>30</y>
-                             <width>31</width>
-                             <height>32</height>
-                            </rect>
-                           </property>
-                           <property name="cursor">
-                            <cursorShape>PointingHandCursor</cursorShape>
-                           </property>
-                           <property name="autoFillBackground">
-                            <bool>false</bool>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QPushButton {
-	border-radius: 25px;
-	border-color: rgb(217, 217, 217);
-	border-width: 2px;
-	background: #FAF9F6;
-	color: #D9D9D9;
-}
-QPushButton:hover {
-	border-color: #CD4662;
-	color: rgb(116,23,17);
-	background-color: rgb(237,106,94);
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>X</string>
-                           </property>
-                          </widget>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </widget>
-                    </item>
-                   </layout>
                   </widget>
                  </item>
                  <item>

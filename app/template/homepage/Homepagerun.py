@@ -1981,9 +1981,8 @@ class HomepageWindow(QMainWindow):
 
         self.button_bug_fix(self.ui.addproductbutton_4)
         self.ui.addproductbutton_4.clicked.connect(functools.partial(self.edit_product, id))
-
         self.ui.editproductnametextbox.setText(get_product_name_by_id(id))
-        self.ui.editproductdescriptiontextbox_3.setText(get_product_description_by_id(id))
+        self.ui.editproductdescriptiontextbox_3.setPlainText(get_product_description_by_id(id))
         self.ui.editproductpricespinbox.setText(str(get_product_price_by_id(id)))
         self.ui.editproductpricespinbox.setValue(get_product_price_by_id(id))
         self.ui.editproductstockspinbox_3.setValue(get_product_stock_by_id(id))
@@ -2116,13 +2115,13 @@ class HomepageWindow(QMainWindow):
         self.ui.img_1.setVisible(False)
         self.ui.delete_pic_button_1.setVisible(False)
 
-        self.ui.addimgbutton.clicked.connect(self.add_img)
+        self.ui.addimagebutton_5.clicked.connect(self.add_img)
 
         self.ui.addproductbutton.clicked.connect(self.add_product)
         self.ui.canceladdproductbutton.clicked.connect(self.go_to_homepage_admin)
     
     def add_img(self):
-        if self.add_product_img(self.ui.addimgbutton, self.ui.img_1, self.ui.delete_pic_button_1) and not self.img_button_clicked:
+        if self.add_product_img(self.ui.addimagebutton_5, self.ui.img_1, self.ui.delete_pic_button_1) and not self.img_button_clicked:
             print("add img")
 
             self.img_button_clicked = True
