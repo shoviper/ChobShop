@@ -4,5 +4,5 @@ Including ZODB as database.
 
 Project's members
 1. Suriya Chaobay
-2. Inthat Sappiphat
+2. Inthat Sappipat
 3. Thanyanit Poothong
